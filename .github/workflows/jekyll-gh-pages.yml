@@ -34,7 +34,7 @@ jobs:
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./docs
-          destination: ./_site
+          destination: ./d2s-editor/_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
 
