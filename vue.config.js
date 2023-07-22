@@ -1,3 +1,3 @@
 module.exports = {
-  outputDir : './d2s-editor/docs'
+  outputDir : './docs/d2s-editor'
 }
