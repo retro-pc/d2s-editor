@@ -2,7 +2,6 @@
   "name": "ds2-editor",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/spg-stany/d2s-editor",
   "scripts": {
     "serve": "vue-cli-service serve --skip-plugins @vue/cli-plugin-eslint",
     "build": "vue-cli-service build --skip-plugins @vue/cli-plugin-eslint",
