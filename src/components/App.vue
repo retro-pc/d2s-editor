@@ -76,7 +76,6 @@
                         <input type="file" name="d2sFile" @change="onFileChange" id="d2sFile" accept=".d2s">
                         <label class="custom-file-label" for="d2sFile">*.d2s</label>
                       </div>
-
                       <!-- <div>    
                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">Create New</button>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -94,55 +93,118 @@
                   </div>
 
                   <nav class="navbar navbar-expand-md navbar-light">
-                        <!-- <a class="navbar-brand" href="/">Create new</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon"></span>
-                        </button> -->
-
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                          <ul class="navbar-nav mr-auto">
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Create new</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Amazon
-                              </a>
-                              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarGeneral">
-                                <a class="dropdown-item" href="#" @click="newChar(0)">Amazon</a>
-                                <div class="dropdown-divider"></div>
-                                <h6 class="dropdown-header">Builds</h6>
-                                <a class="dropdown-item" href="#">Physical Bowazon</a>
-                                <a class="dropdown-item" href="#">Physical Bowazon(Faith)</a>
-                                <a class="dropdown-item" href="#">Physical Bowazon(Mavina)</a>
-                                <a class="dropdown-item" href="#">Exploding Arrow</a>
-                                <a class="dropdown-item" href="#">Freezing Arrow</a>
-                                <a class="dropdown-item" href="#">Freezing Arrow(Mavina)</a>
-                                <a class="dropdown-item" href="#">Ligthing Fury</a>
-                                <a class="dropdown-item" href="#">Poison Javelin</a>
-                                <a class="dropdown-item" href="#">Elemental Spearzon</a>
-                              </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Assassin
-                              </a>
-                              <div class="dropdown-menu" aria-labelledby="navbarGeneral">
-                                <a class="dropdown-item" href="#" @click="newChar(6)">Assassin</a>
-                                <div class="dropdown-divider"></div>
-                                <h6 class="dropdown-header">Builds</h6>
-                                <a class="dropdown-item" href="#">1</a>
-                                <a class="dropdown-item" href="#">2</a>
-                                <a class="dropdown-item" href="#">3</a>
-                              </div>
-                            </li>
-
-                          </ul>
-                        </div>
-                      </nav>
+                    <a class="navbar-brand" href="/">Create new</a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Create new</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Amazon
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarGeneral">
+                            <a class="dropdown-item" href="#" @click="newChar(0)">Amazon</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Builds</h6>
+                            <a class="dropdown-item" href="#">Physical Bowazon</a>
+                            <a class="dropdown-item" href="#">Elemental Bowazon</a>
+                            <a class="dropdown-item" href="#">Exploding Arrow</a>
+                            <a class="dropdown-item" href="#">Freezing Arrow</a>
+                            <a class="dropdown-item" href="#">Freezing Arrow(Mavina)</a>
+                            <a class="dropdown-item" href="#">Ligthing Fury</a>
+                            <a class="dropdown-item" href="#">Poison</a>
+                            <a class="dropdown-item" href="#">Spearzon</a>
+                          </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Assassin
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarGeneral">
+                            <a class="dropdown-item" href="#" @click="newChar(6)">Assassin</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Builds</h6>
+                            <a class="dropdown-item" href="#">1</a>
+                            <a class="dropdown-item" href="#">2</a>
+                            <a class="dropdown-item" href="#">3</a>
+                          </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Barbarian
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarGeneral">
+                            <a class="dropdown-item" href="#" @click="newChar(4)">Barbarian</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Builds</h6>
+                            <a class="dropdown-item" href="#">1</a>
+                            <a class="dropdown-item" href="#">2</a>
+                            <a class="dropdown-item" href="#">3</a>
+                          </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Druid
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarGeneral">
+                            <a class="dropdown-item" href="#" @click="newChar(5)">Druid</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Builds</h6>
+                            <a class="dropdown-item" href="#">1</a>
+                            <a class="dropdown-item" href="#">2</a>
+                            <a class="dropdown-item" href="#">3</a>
+                          </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Necromancer
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarGeneral">
+                            <a class="dropdown-item" href="#" @click="newChar(2)">Necromancer</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Builds</h6>
+                            <a class="dropdown-item" href="#">1</a>
+                            <a class="dropdown-item" href="#">2</a>
+                            <a class="dropdown-item" href="#">3</a>
+                          </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Paladin
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarGeneral">
+                            <a class="dropdown-item" href="#" @click="newChar(3)">Paladin</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Builds</h6>
+                            <a class="dropdown-item" href="#">1</a>
+                            <a class="dropdown-item" href="#">2</a>
+                            <a class="dropdown-item" href="#">3</a>
+                          </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Sorceress
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarGeneral">
+                            <a class="dropdown-item" href="#" @click="newChar(1)">Sorceress</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Builds</h6>
+                            <a class="dropdown-item" href="#">1</a>
+                            <a class="dropdown-item" href="#">2</a>
+                            <a class="dropdown-item" href="#">3</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
 
                   <div v-if="save != null">
                     <ul class="nav nav-tabs" id="tabs">
