@@ -123,12 +123,7 @@
                             Assassin
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(6)">Assassin</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <a class="dropdown-item" href="#">1</a>
-                            <a class="dropdown-item" href="#">2</a>
-                            <a class="dropdown-item" href="#">3</a>
+                            <a class="dropdown-item" href="#" @click="newChar(60)">Assassin</a>
                           </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -137,12 +132,7 @@
                             Barbarian
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(4)">Barbarian</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <a class="dropdown-item" href="#">1</a>
-                            <a class="dropdown-item" href="#">2</a>
-                            <a class="dropdown-item" href="#">3</a>
+                            <a class="dropdown-item" href="#" @click="newChar(40)">Barbarian</a>
                           </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -151,12 +141,7 @@
                             Druid
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(5)">Druid</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <a class="dropdown-item" href="#">1</a>
-                            <a class="dropdown-item" href="#">2</a>
-                            <a class="dropdown-item" href="#">3</a>
+                            <a class="dropdown-item" href="#" @click="newChar(50)">Druid</a>
                           </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -165,12 +150,7 @@
                             Necromancer
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(2)">Necromancer</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <a class="dropdown-item" href="#">1</a>
-                            <a class="dropdown-item" href="#">2</a>
-                            <a class="dropdown-item" href="#">3</a>
+                            <a class="dropdown-item" href="#" @click="newChar(20)">Necromancer</a>
                           </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -179,12 +159,7 @@
                             Paladin
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(3)">Paladin</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <a class="dropdown-item" href="#">1</a>
-                            <a class="dropdown-item" href="#">2</a>
-                            <a class="dropdown-item" href="#">3</a>
+                            <a class="dropdown-item" href="#" @click="newChar(30)">Paladin</a>
                           </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -193,12 +168,7 @@
                             Sorceress
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(1)">Sorceress</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <a class="dropdown-item" href="#">1</a>
-                            <a class="dropdown-item" href="#">2</a>
-                            <a class="dropdown-item" href="#">3</a>
+                            <a class="dropdown-item" href="#" @click="newChar(10)">Sorceress</a>
                           </div>
                         </li>
                       </ul>
