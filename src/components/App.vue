@@ -107,14 +107,14 @@
                             <a class="dropdown-item" href="#" @click="newChar(0)">Amazon</a>
                             <div class="dropdown-divider"></div>
                             <h6 class="dropdown-header">Builds</h6>
-                            <a class="dropdown-item" href="#">Physical Bowazon</a>
-                            <a class="dropdown-item" href="#">Elemental Bowazon</a>
-                            <a class="dropdown-item" href="#">Exploding Arrow</a>
-                            <a class="dropdown-item" href="#">Freezing Arrow</a>
-                            <a class="dropdown-item" href="#">Freezing Arrow(Mavina)</a>
-                            <a class="dropdown-item" href="#">Ligthing Fury</a>
-                            <a class="dropdown-item" href="#">Poison</a>
-                            <a class="dropdown-item" href="#">Spearzon</a>
+                            <a class="dropdown-item" href="#" @click="newChar(1)">Physical Bowazon</a>
+                            <a class="dropdown-item" href="#" @click="newChar(2)">Elemental Bowazon</a>
+                            <a class="dropdown-item" href="#" @click="newChar(3)">Elemental Bowazon(Mavina)</a>
+                            <a class="dropdown-item" href="#" @click="newChar(4)">Exploding Arrow</a>
+                            <a class="dropdown-item" href="#" @click="newChar(5)">Freezing Arrow</a>
+                            <a class="dropdown-item" href="#" @click="newChar(6)">Ligthing Fury</a>
+                            <a class="dropdown-item" href="#" @click="newChar(7)">Poison</a>
+                            <a class="dropdown-item" href="#" @click="newChar(8)">Spearzon</a>
                           </div>
                         </li>
                         <li class="nav-item dropdown">
