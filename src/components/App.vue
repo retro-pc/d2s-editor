@@ -124,6 +124,9 @@
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarGeneral">
                             <a class="dropdown-item" href="#" @click="newChar(60)">Assassin</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Builds</h6>
+                            <a class="dropdown-item" href="#" @click="newChar(61)">Phoenix Strike</a>
                           </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -133,6 +136,10 @@
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarGeneral">
                             <a class="dropdown-item" href="#" @click="newChar(40)">Barbarian</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Builds</h6>
+                            <a class="dropdown-item" href="#" @click="newChar(41)">Whirlwind</a>
+                            <a class="dropdown-item" href="#" @click="newChar(42)">Double Throw</a>
                           </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -142,6 +149,9 @@
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarGeneral">
                             <a class="dropdown-item" href="#" @click="newChar(50)">Druid</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Builds</h6>
+                            <a class="dropdown-item" href="#" @click="newChar(51)">Fire</a>
                           </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -151,6 +161,9 @@
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarGeneral">
                             <a class="dropdown-item" href="#" @click="newChar(20)">Necromancer</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Builds</h6>
+                            <a class="dropdown-item" href="#" @click="newChar(21)">Poison</a>
                           </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -160,6 +173,10 @@
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarGeneral">
                             <a class="dropdown-item" href="#" @click="newChar(30)">Paladin</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Builds</h6>
+                            <a class="dropdown-item" href="#" @click="newChar(31)">Blessed Hammer</a>
+                            <a class="dropdown-item" href="#" @click="newChar(32)">Fist of the Heavens</a>
                           </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -169,6 +186,13 @@
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarGeneral">
                             <a class="dropdown-item" href="#" @click="newChar(10)">Sorceress</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Builds</h6>
+                            <a class="dropdown-item" href="#" @click="newChar(11)">Blizzard(Life)</a>
+                            <a class="dropdown-item" href="#" @click="newChar(12)">Blizzard(Mana)</a>
+                            <a class="dropdown-item" href="#" @click="newChar(13)">Fire</a>
+                            <a class="dropdown-item" href="#" @click="newChar(14)">Nova</a>
+                            <a class="dropdown-item" href="#" @click="newChar(15)">Enchant Bow</a>
                           </div>
                         </li>
                       </ul>
@@ -527,6 +551,7 @@
           this.shareItem(e.item);
         } else if(e.type == 'copy') {
           this.clipboard = JSON.parse(JSON.stringify(e.item));
+          navigator.clipboard.writeText(JSON.stringify(e.item));
         } else if(e.type == 'update') {
           d2s.enhanceItems([e.item], window.constants.constants);
           this.setPropertiesOnItem(e.item);
