@@ -111,10 +111,9 @@
                             <a class="dropdown-item" href="#" @click="newChar(2)">Elemental Bowazon</a>
                             <a class="dropdown-item" href="#" @click="newChar(3)">Elemental Bowazon(Mavina)</a>
                             <a class="dropdown-item" href="#" @click="newChar(4)">Exploding Arrow</a>
-                            <a class="dropdown-item" href="#" @click="newChar(5)">Freezing Arrow</a>
-                            <a class="dropdown-item" href="#" @click="newChar(6)">Ligthing Fury</a>
-                            <a class="dropdown-item" href="#" @click="newChar(7)">Poison</a>
-                            <a class="dropdown-item" href="#" @click="newChar(8)">Spearzon</a>
+                            <a class="dropdown-item" href="#" @click="newChar(5)">Ligthing Fury</a>
+                            <a class="dropdown-item" href="#" @click="newChar(6)">Poison</a>
+                            <a class="dropdown-item" href="#" @click="newChar(7)">Spearzon</a>
                           </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -188,7 +187,7 @@
                             <a class="dropdown-item" href="#" @click="newChar(10)">Sorceress</a>
                             <div class="dropdown-divider"></div>
                             <h6 class="dropdown-header">Builds</h6>
-                            <a class="dropdown-item" href="#" @click="newChar(11)">Blizzard(Life)</a>
+                            <a class="dropdown-item" href="#" @click="newChar(11)">Blizzard</a>
                             <a class="dropdown-item" href="#" @click="newChar(12)">Blizzard(Mana)</a>
                             <a class="dropdown-item" href="#" @click="newChar(13)">Fire</a>
                             <a class="dropdown-item" href="#" @click="newChar(14)">Nova</a>
