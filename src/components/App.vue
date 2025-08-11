@@ -42,11 +42,13 @@
               <Item v-if="preview?.type" :item="preview" clazz="item-edit"></Item>
             </div>
             <label for="Item">Item</label>
-            <multiselect v-model="previewModel" :options="itempack" label="key" valueProp="value" :searchable="true" @update:model-value="setPreviewItem"/>
+            <multiselect v-model="previewModel" :options="itempack" label="key" valueProp="value" :searchable="true"
+              @update:model-value="setPreviewItem" />
             <div v-if="baseOptions">
               <label>Base</label>
-              <multiselect v-model="baseModel" :options="baseOptions" label="label" valueProp="value" :searchable="true" @update:model-value="setBase"/>
-            </div>  
+              <multiselect v-model="baseModel" :options="baseOptions" label="label" valueProp="value" :searchable="true"
+                @update:model-value="setBase" />
+            </div>
           </div>
           <div class="modal-footer">
             <input style="display:none;" type="file" name="d2iFile" @change="onItemFileChange" id="d2iFile">
@@ -62,7 +64,7 @@
     <div class="container-fluid">
 
       <div class="row">
-        <div class="offset-lg-2 col-lg-8 mt-2">
+        <div class="offset-lg-1 col-lg-10 ">
           <div class="card bg-light">
             <div class="card-body">
               <div class="alert alert-primary" role="alert">
@@ -75,10 +77,11 @@
                   <div class="form-group">
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" name="d2sFile" multiple @change="onFileChange" id="d2sFile" accept=".d2s,.d2i">
-                        <label class="custom-file-label" for="d2sFile">*.d2s,*.d2i</label>
+                        <input type="file" name="d2sFile" class="custom-file-input" multiple @change="onFileChange"
+                          id="d2sFile" accept=".d2s,.d2i">
+                        <label class="custom-file-label load-save-label" for="d2sFile">*.d2s,*.d2i</label>
                       </div>
-                      <!-- <div>    
+                      <!-- <div>
                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">Create New</button>
                         <div class="dropdown-menu dropdown-menu-right">
                           <button class="dropdown-item" type="button" @click="newChar(0)">Amazon</button>
@@ -101,8 +104,8 @@
                           <a class="nav-link" href="#">Create new</a>
                         </li>
                         <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Amazon
                           </a>
                           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarGeneral">
@@ -119,8 +122,8 @@
                           </div>
                         </li>
                         <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Assassin
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarGeneral">
@@ -131,8 +134,8 @@
                           </div>
                         </li>
                         <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Barbarian
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarGeneral">
@@ -144,8 +147,8 @@
                           </div>
                         </li>
                         <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Druid
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarGeneral">
@@ -156,8 +159,8 @@
                           </div>
                         </li>
                         <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Necromancer
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarGeneral">
@@ -168,8 +171,8 @@
                           </div>
                         </li>
                         <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Paladin
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarGeneral">
@@ -181,8 +184,8 @@
                           </div>
                         </li>
                         <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Sorceress
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarGeneral">
@@ -203,29 +206,72 @@
                   <div v-if="save != null">
                     <ul class="nav nav-tabs" id="tabs">
                       <li class="nav-item">
-                        <a class="nav-link active" id="stats-tab" data-toggle="tab" data-target="#stats-content" role="tab"
-                          type="button">Stats</a>
+                        <a class="nav-link active" id="items-tab" data-toggle="tab" data-target="#items-content"
+                          role="tab" type="button">Equipment</a>
                       </li>
                       <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="waypoints-tab" data-toggle="tab" data-target="#waypoints-content" role="tab"
-                          type="button">Waypoints</a>
-                      </li>
-                      <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="quests-tab" data-toggle="tab" data-target="#quests-content" role="tab"
-                          type="button">Quests</a>
+                        <a class="nav-link" id="stats-tab" data-toggle="tab" data-target="#stats-content" role="tab"
+                          type="button">Character</a>
                       </li>
                       <li class="nav-item" role="presentation">
                         <a class="nav-link" id="skills-tab" data-toggle="tab" data-target="#skills-content" role="tab"
                           type="button">Skills</a>
                       </li>
                       <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="items-tab" data-toggle="tab" data-target="#items-content" role="tab"
-                          type="button">Items</a>
+                        <a class="nav-link" id="quests-tab" data-toggle="tab" data-target="#quests-content" role="tab"
+                          type="button">Quests</a>
                       </li>
-
+                      <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="waypoints-tab" data-toggle="tab" data-target="#waypoints-content"
+                          role="tab" type="button">Waypoints</a>
+                      </li>
                     </ul>
                     <div class="tab-content" id="tabs-content">
-                      <div class="tab-pane show active" id="stats-content" role="tabpanel">
+                      <div class="tab-pane show active" id="items-content" role="tabpanel">
+                        <div v-for="(notification, idx) in notifications" :key="idx" :class="notification.alert"
+                          role="alert">
+                          {{ notification.message }}
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="col-auto equipment-inventory-col">
+                            <Equipped :items.sync="equipped" @item-selected="onSelect" @item-event="onEvent"
+                              :id="'Equipped'" :contextMenu="$refs.contextMenu">
+                            </Equipped>
+                            <!-- <Grid v-if="activeTab == 1 || activeTab == 10" :width="grid.inv.w" :height="grid.inv.h" :page="1"
+                              :items.sync="inventory" @item-selected="onSelect" @item-event="onEvent" :id="'InventoryGrid'" :contextMenu="$refs.contextMenu">
+                            </Grid> -->
+                            <Stash :items.sync="stash" @item-selected="onSelect" @item-event="onEvent" :id="'Stash'"
+                              :contextMenu="$refs.contextMenu">
+                            </Stash>
+                            <Mercenary :items.sync="mercenary" @item-selected="onSelect"
+                              :contextMenu="$refs.contextMenu">
+                            </Mercenary>
+                            <div class="cube">
+                              <Grid class="cube__grid" :width="grid.cube.w" :height="grid.cube.h" :page="8"
+                                :items.sync="cube" @item-selected="onSelect" @item-event="onEvent" :id="'CubeGrid'"
+                                :contextMenu="$refs.contextMenu">
+                              </Grid>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="col">
+                              <div class="row mb-3 justify-content-end">
+                                <button type="button" class="btn btn-primary" :disabled="!clipboard"
+                                  @click="paste()">Paste</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                  data-target="#LoadItem">Load
+                                  Item</button>
+                              </div>
+                            </div>
+                            <ItemEditor v-if="selected" :id="'Selected'" :item.sync="selected" :location="location"
+                              ref="editor" @item-event="onEvent"></ItemEditor>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane" id="stats-content" role="tabpanel">
                         <Stats v-bind:save.sync="save" />
                       </div>
                       <div class="tab-pane" id="waypoints-content" role="tabpanel">
@@ -237,106 +283,19 @@
                       <div class="tab-pane" id="skills-content" role="tabpanel">
                         <Skills v-bind:save.sync="save" />
                       </div>
-                      <div class="tab-pane" id="items-content" role="tabpanel">
-                        <div v-for="(notification, idx) in notifications" :key="idx" :class="notification.alert" role="alert">
-                          {{ notification.message }}
-                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="row mt-3">
-                          <div class="btn-group offset-md-3 col-md-6" role="group">
-                            <button type="button" class="btn btn-secondary" :class="{ active: activeTab == 1 }"
-                              @click="changeTab(1)">Equipped</button>
-                            <button type="button" class="btn btn-secondary" :class="{ active: activeTab == 3 }"
-                              @click="changeTab(3)">Stash</button>     
-                            <button type="button" class="btn btn-secondary" :class="{ active: activeTab == 8 }"
-                              @click="changeTab(8)">Cube</button>
-                            <button type="button" class="btn btn-secondary" :class="{ active: activeTab == 9 }"
-                              @click="changeTab(9)">Mercenary</button>
-                            <button type="button" class="btn btn-secondary" :class="{ active: activeTab == 10 }"
-                              @click="changeTab(10)">All</button>
-                          </div>
-                          <div class="col-md-3">
-                            <div class="float-right">
-                              <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"></button>
-                              <div class="dropdown-menu dropdown-menu-right">
-                                <div class="p-3 form-group">
-                                  <div class="form-row">
-                                    <div class="col-md-12">
-                                      <label>Inventory</label>
-                                      <div class="input-group">
-                                        <input type="number" min="1" max="20" class="form-control" v-model.number="grid.inv.w"
-                                          @input="gridChange">
-                                        <div class="input-group-prepend input-group-append">
-                                          <div class="input-group-text">,</div>
-                                        </div>
-                                        <input type="number" min="1" max="20" class="form-control" v-model.number="grid.inv.h"
-                                          @input="gridChange">
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="form-row">
-                                    <div class="col-md-12">
-                                      <label>Stash</label>
-                                      <div class="input-group">
-                                        <input type="number" min="1" max="20" class="form-control" v-model.number="grid.stash.w"
-                                          @input="gridChange">
-                                        <div class="input-group-prepend input-group-append">
-                                          <div class="input-group-text">,</div>
-                                        </div>
-                                        <input type="number" min="1" max="20" class="form-control" v-model.number="grid.stash.h"
-                                          @input="gridChange">
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="form-row">
-                                    <div class="col-md-12">
-                                      <label>Cube</label>
-                                      <div class="input-group">
-                                        <input type="number" min="1" max="20" class="form-control" v-model.number="grid.cube.w"
-                                          @input="gridChange">
-                                        <div class="input-group-prepend input-group-append">
-                                          <div class="input-group-text">,</div>
-                                        </div>
-                                        <input type="number" min="1" max="20" class="form-control" v-model.number="grid.cube.h"
-                                          @input="gridChange">
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <button type="button" class="btn btn-primary" :disabled="!clipboard"
-                                @click="paste()">Paste</button>
-                              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#LoadItem">Load
-                                Item</button>
-                            </div>
-                          </div>
-                        </div>
-
-                        <Equipped v-if="activeTab == 1 || activeTab == 10" :items.sync="equipped" @item-selected="onSelect" @item-event="onEvent" :id="'Equipped'" :contextMenu="$refs.contextMenu">
-                        </Equipped>
-                        <Grid v-if="activeTab == 1 || activeTab == 10" :width="grid.inv.w" :height="grid.inv.h" :page="1"
-                          :items.sync="inventory" @item-selected="onSelect" @item-event="onEvent" :id="'InventoryGrid'" :contextMenu="$refs.contextMenu">
-                        </Grid>
-                        <Stash v-if="activeTab == 3 || activeTab == 10" :items.sync="stash" @item-selected="onSelect" @item-event="onEvent" :id="'Stash'" :contextMenu="$refs.contextMenu">
-                        </Stash>
-                        <!-- 
-                        <Grid v-if="activeTab == 4 || activeTab == 10" :width="grid.stash.w" :height="grid.stash.h" :page="4"
-                          :items.sync="stash(0)" @item-selected="onSelect" @item-event="onEvent" :id="'StashSharedGrid'" :contextMenu="$refs.contextMenu"></Grid>  
-                        <Grid v-if="activeTab == 5 || activeTab == 10" :width="grid.stash.w" :height="grid.stash.h" :page="5"
-                          :items.sync="stash(1)" @item-selected="onSelect" @item-event="onEvent" :id="'StashSharedGrid'" :contextMenu="$refs.contextMenu"></Grid>  
-                        <Grid v-if="activeTab == 6 || activeTab == 10" :width="grid.stash.w" :height="grid.stash.h" :page="6"
-                          :items.sync="stash(2)" @item-selected="onSelect" @item-event="onEvent" :id="'StashSharedGrid'" :contextMenu="$refs.contextMenu"></Grid>   
-                        <Grid v-if="activeTab == 7 || activeTab == 10" :width="grid.stash.w" :height="grid.stash.h" :page="7"
-                          :items.sync="stash(3)" @item-selected="onSelect" @item-event="onEvent" :id="'StashSharedGrid'" :contextMenu="$refs.contextMenu"></Grid>    
-                        -->
-                        <Grid v-if="activeTab == 8 || activeTab == 10" :width="grid.cube.w" :height="grid.cube.h" :page="8"
-                          :items.sync="cube" @item-selected="onSelect" @item-event="onEvent" :id="'CubeGrid'" :contextMenu="$refs.contextMenu">
-                        </Grid>
-                        <Mercenary v-if="activeTab == 9 || activeTab == 10" :items.sync="mercenary" @item-selected="onSelect" :contextMenu="$refs.contextMenu">
-                        </Mercenary>
-                        <ItemEditor v-if="selected" :id="'Selected'" :item.sync="selected" :location="location" ref="editor" @item-event="onEvent"></ItemEditor>
+                    </div>
+                    <div v-if="save != null">
+                      <div class="row">
+                        <button type="button" @click="unlockHell" class="btn btn-primary">Unlock Hell</button>
+                        <button type="button" @click="unlockAllWPs" class="btn btn-primary">Unlock All WPs</button>
+                        <button type="button" @click="setLvl99" class="btn btn-primary">Set Level 99</button>
+                        <button type="button" @click="setAllSkills20" class="btn btn-primary">Set All Skills 20</button>
+                        <button type="button" @click="unlockQs" class="btn btn-primary">Complete Skill/Stat Qs</button>
+                        <button type="button" @click="maxGold" class="btn btn-primary">Max Gold</button>
+                      </div>
+                      <div class="row mt-3">
+                        <button type="button" id="d2" class="btn btn-primary" @click="saveFile(0x60)">Save D2</button>
+                        <button type="button" id="d2r" class="btn btn-primary" @click="saveFile(0x63)">Save D2R</button>
                       </div>
                     </div>
                   </div>
@@ -344,18 +303,6 @@
                 </fieldset>
 
                 <div id="errors">
-                </div>
-                <br />
-                <div v-if="save != null">
-                  <button type="button" @click="unlockHell" class="btn btn-primary">Unlock Hell</button>
-                  <button type="button" @click="unlockAllWPs" class="btn btn-primary">Unlock All WPs</button>
-                  <button type="button" @click="setLvl99" class="btn btn-primary">Set Level 99</button>
-                  <button type="button" @click="setAllSkills20" class="btn btn-primary">Set All Skills 20</button>
-                  <button type="button" @click="unlockQs" class="btn btn-primary">Complete Skill/Stat Qs</button>
-                  <button type="button" @click="maxGold" class="btn btn-primary">Max Gold</button>
-                  <br /><br />
-                  <button type="button" id="d2" class="btn btn-primary" @click="saveFile(0x60)">Save D2</button>
-                  <button type="button" id="d2r" class="btn btn-primary" @click="saveFile(0x63)">Save D2R</button>
                 </div>
               </form>
             </div>
@@ -389,7 +336,7 @@
   // import { constants as constants96 } from '@dschu012/d2s/lib/data/versions/96_constant_data';
   // import { constants as constants99 } from '@dschu012/d2s/lib/data/versions/99_constant_data';
   import * as d2stash from '@dschu012/d2s/lib/d2/stash';
- 
+
   export default {
     components: {
       Item,
@@ -445,7 +392,7 @@
         this.grid = JSON.parse(localStorage.getItem('grid'));
       }
 
-      //TODO: requreid additional fields in constants 
+      //TODO: requreid additional fields in constants
       // https://github.com/dschu012/d2s/pull/77
       // d2s.setConstantData(96, constants96); //1.10-1.14d
       // d2s.setConstantData(97, constants96); //alpha? (D2R)
@@ -471,8 +418,8 @@
     computed: {
       equipped() {
         return this.save.items.filter(
-          item => item.location_id === 1,
-        );
+          item => item.location_id === 1 || item.location_id === 0 && item.alt_position_id === 1
+        )
       },
       inventory() {
         return this.save.items.filter(
@@ -567,10 +514,10 @@
       },
       onSelect(e) {
         this.selected = e;
-        this.updateLocation(this.selected);
+        //this.updateLocation(this.selected);
       },
       findIndex(list, i) {
-        return list.findIndex(item => 
+        return list.findIndex(item =>
           item.location_id == i.location_id
           && item.equipped_id == i.equipped_id
           && item.position_x == i.position_x
@@ -642,7 +589,7 @@
           } else {
             this.paste(e.item);
           }
-        } 
+        }
       },
       onMove(item, e) {
         if(!this.canPlaceItem(item, e.location.storage_page, e.location.x, e.location.y)) {
@@ -822,7 +769,7 @@
           item.socketed = 0;
         }
 
-        if (!item.magic_attributes) item.magic_attributes = [];    
+        if (!item.magic_attributes) item.magic_attributes = [];
         item.src = await utils.b64PNGFromDC6(item);
         if (!item.socketed_items) {
           return;
@@ -836,7 +783,7 @@
           item.runeword_id = 48;
         } else if (item.runeword_id > 2783) {
           item.runeword_id -= 2588;
-        } 
+        }
       },
       newChar(index) {
         let bytes = utils.b64ToArrayBuffer(CharPack[index]);
@@ -856,7 +803,7 @@
             });
           } else if (filename.includes("")) {
             this.stashData = null;
-            d2stash.read(bytes).then(response => {   
+            d2stash.read(bytes).then(response => {
               this.stashData = response;
               for (var i = 0; i < this.stashData.pageCount; i++) {
                 [... this.stashData.pages[i].items].forEach(item => { this.setPropertiesOnItem(item)})}
@@ -988,9 +935,9 @@
           link.remove();
         });
       },
-      async addBasesToItemPack(items, category) {
+      async addBasesToItemPack(constants, category) {
         let newItems = [];
-        for (const item of Object.entries(items)) {
+        for (const item of Object.entries(constants)) {
           const value = item[1];
           newItems.push({
             //code
@@ -1005,7 +952,7 @@
           });
         }
         d2s.enhanceItems(newItems, window.constants);
-        for (const item of newItems) {  
+        for (const item of newItems) {
           //let bytes = await d2s.writeItem(item, 0x63, window.constants);
           //let base64 = utils.arrayBufferToBase64(bytes);
           this.itempack.push({
@@ -1018,39 +965,39 @@
       },
       async addRunewordToItemPack(constants, category) {
         let newItems = [];
-        for (const c of constants.filter(i => i !== null)) {
+        for (const item of constants.filter(i => i !== null)) {
           let socketedItems = [];
-          for (const r of c.r) {
+          for (const r of item.r) {
             socketedItems.push({type: r, simple_item: 1, identified: 1, location_id: 6})
           }
           newItems.push({
-            runeword_id: c.id,
-            runeword_name: c.n,
+            runeword_id: item.id,
+            runeword_name: item.n,
             given_runeword: 1,
             quality: 3,
             level: 90,
             ethereal: 0,
             socketed: 1,
             identified: 1,
-            types: c.types,
+            types: item.types,
             total_nr_of_sockets: socketedItems.length,
             nr_of_items_in_sockets: socketedItems.length,
             simple_item: 0,
             socketed_items: socketedItems,
-            runeword_attributes: d2s.compactAttributes(c.m, window.constants),
+            runeword_attributes: d2s.generateFixedMods(item.m, window.constants),
           });
         }
-        //d2s.enhanceItems(newItems, window.constants);
-        for (const item of newItems) {  
+        d2s.enhanceItems(newItems, window.constants);
+        for (const item of newItems) {
           this.itempack.push({
             key: `[${category}]/${item.runeword_name}`,
             value: {item: item}
           });
         }
       },
-      async addSetToItemPack(items, category) {
+      async addSetToItemPack(constants, category) {
         let newItems = [];
-        for (const item of items) {
+        for (const item of constants) {
           if (item.c) {
             newItems.push({
               //code
@@ -1062,21 +1009,27 @@
               set_name: item.n,
               ethereal: 0,
               identified: 1,
-              magic_attributes: d2s.compactAttributes(item.m, window.constants)
+              //set_attributes: 
+              magic_attributes: d2s.generateFixedMods(item.m, window.constants)
             });
           }
         }
         d2s.enhanceItems(newItems, window.constants);
-        for (const item of newItems) {     
+        for (const item of newItems) {
+          let socketIndex = item.magic_attributes.findIndex(i => i.name == "item_numsockets");
+          if (socketIndex > 0) {
+            item.socketed =  true;
+            item.total_nr_of_sockets = item.magic_attributes[socketIndex].value;
+          }
           this.itempack.push({
             key: `[${category}]/${item.set_name}`,
             value: {item: item}
           });
         }
       },
-      async addUniqToItemPack(items, category) {
+      async addUniqToItemPack(constants, category) {
         let newItems = [];
-        for (const item of items) {
+        for (const item of constants) {
           if (item.c) {
             newItems.push({
               //code
@@ -1088,21 +1041,26 @@
               unique_name: item.n,
               ethereal: 0,
               identified: 1,
-              magic_attributes: d2s.compactAttributes(item.m, window.constants)
+              magic_attributes: d2s.generateFixedMods(item.m, window.constants)
             });
           }
         }
         d2s.enhanceItems(newItems, window.constants);
-        for (const item of newItems) {     
+        for (const item of newItems) {
+          let socketIndex = item.magic_attributes.findIndex(i => i.name == "item_numsockets");
+          if (socketIndex > 0) {
+            item.socketed =  true;
+            item.total_nr_of_sockets = item.magic_attributes[socketIndex].value;
+          }
           this.itempack.push({
             key: `[${category}]/${item.unique_name}`,
             value: {item: item}
           });
         }
       },
-      async addOtherToItemPack(items, category) {
+      async addOtherToItemPack(constants, category) {
         let newItems = [];
-        for (const item of Object.entries(items)) {
+        for (const item of Object.entries(constants)) {
           const value = item[1];
           newItems.push({
             //code
@@ -1114,7 +1072,7 @@
           });
         }
         d2s.enhanceItems(newItems, window.constants);
-        for (const item of newItems) {  
+        for (const item of newItems) {
           this.itempack.push({
             key: `[${category}]/${item.categories[0]}/${item.type_name}`,
             value: {item: item}
@@ -1134,7 +1092,10 @@
         bases = Object.keys(constants).filter(id => {
           const c = constants[id];
           if (item.given_runeword == 1 && c.gemsockets < item.total_nr_of_sockets) return false;
-          return c.spawnable && itemGroups[item.types[0]].concat(itemGroups[item.types[1]]).concat(itemGroups[item.types[2]]).includes(c.type)
+          return c.spawnable && [...itemGroups[item.types[0]] || [],
+                                ...itemGroups[item.types[1]] || [],
+                                ...itemGroups[item.types[2]] || []]
+                                .includes(c.type)
         }).sort((a, b) => constants[a].level < constants[b].level);
         return bases;
       },

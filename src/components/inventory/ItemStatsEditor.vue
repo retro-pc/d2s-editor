@@ -1,18 +1,13 @@
 <template>
-  <div>
+  <div style="padding-top: 20px;">
     <div v-for="(stat, statIdx) in itemStats" :key="statIdx" class="form-row">
-      <div class="col-md-4">
-        <div class="form-row">
-          <div class="col-md-1">
-            <button type="button" class="btn btn-link red" @click="removeStat(statIdx)">&times;</button>
-          </div>
-          <div class="col-md-11">
-            <multiselect v-model.number="stat.id" :options="stats_options" :searchable="true" :canDeselect="false" :canClear="false" :required="true" @update:model-value="onItemModified"/>
-          </div>
-        </div>
+      <div class="col-md-auto">
+        <button type="button" class="btn btn-link red" @click="removeStat(statIdx)">&times;</button>
       </div>
-
-      <div v-for="valIdx in numValues(stat.id)" class="col-md-2">
+      <div class="col-md-3" style="padding-top: 5px;">
+        <multiselect v-model.number="stat.id" :options="stats_options" :searchable="true" :canDeselect="false" :canClear="false" :required="true" @update:model-value="onItemModified"/>
+      </div>
+      <div v-for="valIdx in numValues(stat.id)" class="col-md-2" style="padding-top: 5px;">
         <template v-if="isClass(stat.id, valIdx)">
           <multiselect v-model.number="stat.values[valIdx-1]" :options="classes.map(charClass => ({value: charClass.id, label: charClass.co}))" :searchable="true" :canDeselect="false" :canClear="false" @update:model-value="onItemModified"/>
         </template>
@@ -125,19 +120,21 @@ export default {
     },
     numValues(id) {
       let stat = this.stats[id];
-      if (stat.np) {
-        return stat.np
+      if (stat) {
+        if (stat.np) {
+          return stat.np
+        }
+        if (stat.dF == 14 || stat.e == 2) {
+          return 3;
+        }
+        if (stat.e == 3) {
+          return 4;
+        }
+        if (stat.sP) {
+          return 2;
+        }
+        return 1;
       }
-      if (stat.dF == 14 || stat.e == 2) {
-        return 3;
-      }
-      if (stat.e == 3) {
-        return 4;
-      }
-      if (stat.sP) {
-        return 2;
-      }
-      return 1;
     }
   }
 }  

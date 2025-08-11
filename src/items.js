@@ -24,6 +24,8 @@ export const itemGroups = {
   tkni: ['tkni'],
   taxe: ['taxe'],
   jave: ['jave'],
+  h2h: ['h2h', 'h2h2'],
+  pala: ['pala', 'ashd'],
 }
 
 export const itemTypeNames = {
