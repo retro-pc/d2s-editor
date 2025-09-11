@@ -3,31 +3,6 @@
   <div @click.native="rootClick">
     <link v-if="theme == 'd2'" href="css/theme.css" rel="stylesheet" />
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="octicon octicon-clippy navbar-brand">
-        <i class="fa fa-fw fa-github"></i>
-        <a href="https://github.com/dschu012">dschu012</a> / <a class="font-weight-bold"
-          href="https://github.com/dschu012/d2s-editor">d2s-editor</a>
-      </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <!-- <li class="nav-item" v-if="theme !== 'd2'">
-            <a class="nav-link" href="#" @click="setTheme('d2')">Change Theme</a>
-          </li>
-          <li class="nav-item" v-if="theme === 'd2'">
-            <a class="nav-link" href="#" @click="setTheme('dark')">Change Theme</a>
-          </li> -->
-        </ul>
-      </div>
-    </nav>
-
     <div class="modal" tabindex="-1" role="dialog" id="LoadItem">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -62,20 +37,36 @@
     </div>
 
     <div class="container-fluid">
-
       <div class="row">
         <div class="offset-lg-1 col-lg-10 ">
           <div class="card bg-light">
             <div class="card-body">
               <div class="alert alert-primary" role="alert">
-                This editor is still a work in progress. Some things may not work. Found a bug? <a
-                  href="https://github.com/dschu012/d2s-editor/issues/new">Report it.</a>
+                This editor is still a work in progress. Some things may not work.
               </div>
-
               <form id="d2sForm">
                 <fieldset>
                   <div class="form-group">
                     <div class="input-group">
+                      <select id="open-mod" v-model="$work_mod.value" name="open-mod" title="Workspace Mod" @change="changeMod()">
+                        <option value="diablo2">Diablo2</option>
+                        <option value="blizzless">Blizzless</option>
+                        <option value="blizzless_beta">Blizzless Beta</option>
+                      </select>
+                      <select
+                        id="work-version"
+                        v-model="$work_version.value"
+                        name="work-version"
+                        title="Workspace Version"
+                        @change="changeMod()"
+                      >
+                        <!-- <option v-if="$work_mod.value == 'diablo2'" value="96">LOD 1.10-1.14d</option> -->
+                        <!-- <option v-if="$work_mod.value == 'diablo2'" value="97">D2R Alpha</option> -->
+                        <!-- <option v-if="$work_mod.value == 'diablo2'" value="98">D2R 2.4</option> -->
+                        
+                        <!-- <option v-if="$work_mod.value == 'blizzless'" value="98">Beta</option> -->
+                        <option value="99">D2R 2.5+</option>
+                      </select>
                       <div class="custom-file">
                         <input type="file" name="d2sFile" class="custom-file-input" multiple @change="onFileChange"
                           id="d2sFile" accept=".d2s,.d2i">
@@ -112,13 +103,22 @@
                             <a class="dropdown-item" href="#" @click="newChar(0)">Amazon</a>
                             <div class="dropdown-divider"></div>
                             <h6 class="dropdown-header">Builds</h6>
-                            <a class="dropdown-item" href="#" @click="newChar(1)">Physical Bowazon</a>
-                            <a class="dropdown-item" href="#" @click="newChar(2)">Elemental Bowazon</a>
-                            <a class="dropdown-item" href="#" @click="newChar(3)">Elemental Bowazon(Mavina)</a>
-                            <a class="dropdown-item" href="#" @click="newChar(4)">Exploding Arrow</a>
-                            <a class="dropdown-item" href="#" @click="newChar(5)">Ligthing Fury</a>
-                            <a class="dropdown-item" href="#" @click="newChar(6)">Poison</a>
-                            <a class="dropdown-item" href="#" @click="newChar(7)">Spearzon</a>
+                            <div v-if="$work_mod.value == 'diablo2'">
+                              <a class="dropdown-item" href="#" @click="newChar(1)">Bowazon(Physical)</a>
+                              <a class="dropdown-item" href="#" @click="newChar(2)">Bowazon(Elemental)</a>
+                              <a class="dropdown-item" href="#" @click="newChar(3)">Bowazon(Mavina)</a>
+                              <a class="dropdown-item" href="#" @click="newChar(4)">Exploding Arrow</a>
+                              <a class="dropdown-item" href="#" @click="newChar(5)">Ligthing Fury</a>
+                              <a class="dropdown-item" href="#" @click="newChar(6)">Poison</a>
+                              <a class="dropdown-item" href="#" @click="newChar(7)">Spearzon</a>
+                            </div>
+                            <div v-if="$work_mod.value == 'blizzless_beta'">
+                              <a class="dropdown-item" href="#" @click="newChar(1)">Poison</a>
+                              <a class="dropdown-item" href="#" @click="newChar(2)">Spearzon</a>
+                              <a class="dropdown-item" href="#" @click="newChar(3)">Cold</a>
+                              <a class="dropdown-item" href="#" @click="newChar(4)">Bowazon</a>
+                              <a class="dropdown-item" href="#" @click="newChar(5)">FemaleKnight</a>
+                            </div>
                           </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -130,7 +130,17 @@
                             <a class="dropdown-item" href="#" @click="newChar(60)">Assassin</a>
                             <div class="dropdown-divider"></div>
                             <h6 class="dropdown-header">Builds</h6>
-                            <a class="dropdown-item" href="#" @click="newChar(61)">Phoenix Strike</a>
+                            <div v-if="$work_mod.value == 'diablo2'">
+                              <a class="dropdown-item" href="#" @click="newChar(61)">Phoenix</a>
+                            </div>
+                            <div v-if="$work_mod.value == 'blizzless_beta'">
+                              <a class="dropdown-item" href="#" @click="newChar(61)">BladeSin</a>
+                              <a class="dropdown-item" href="#" @click="newChar(62)">FireTrapper</a>
+                              <a class="dropdown-item" href="#" @click="newChar(63)">Phoenix</a>
+                              <a class="dropdown-item" href="#" @click="newChar(64)">Trapper</a>
+                              <a class="dropdown-item" href="#" @click="newChar(65)">Kicker</a>
+                              <a class="dropdown-item" href="#" @click="newChar(66)">BladeFury</a>
+                            </div>
                           </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -142,8 +152,16 @@
                             <a class="dropdown-item" href="#" @click="newChar(40)">Barbarian</a>
                             <div class="dropdown-divider"></div>
                             <h6 class="dropdown-header">Builds</h6>
-                            <a class="dropdown-item" href="#" @click="newChar(41)">Whirlwind</a>
-                            <a class="dropdown-item" href="#" @click="newChar(42)">Double Throw</a>
+                            <div v-if="$work_mod.value == 'diablo2'">
+                              <a class="dropdown-item" href="#" @click="newChar(41)">Whirlwind</a>
+                              <a class="dropdown-item" href="#" @click="newChar(42)">Double Throw</a>
+                            </div>
+                            <div v-if="$work_mod.value == 'blizzless_beta'">
+                              <a class="dropdown-item" href="#" @click="newChar(41)">Whirlwind</a>
+                              <a class="dropdown-item" href="#" @click="newChar(42)">WC</a>
+                              <a class="dropdown-item" href="#" @click="newChar(43)">Thrower</a>
+                              <a class="dropdown-item" href="#" @click="newChar(44)">Berserk</a>
+                            </div>
                           </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -155,7 +173,14 @@
                             <a class="dropdown-item" href="#" @click="newChar(50)">Druid</a>
                             <div class="dropdown-divider"></div>
                             <h6 class="dropdown-header">Builds</h6>
-                            <a class="dropdown-item" href="#" @click="newChar(51)">Fire</a>
+                            <div v-if="$work_mod.value == 'diablo2'">
+                              <a class="dropdown-item" href="#" @click="newChar(51)">Fire</a>
+                            </div>
+                            <div v-if="$work_mod.value == 'blizzless_beta'">
+                               <a class="dropdown-item" href="#" @click="newChar(51)">Fire</a>
+                               <a class="dropdown-item" href="#" @click="newChar(52)">Shoсkwave</a>
+                               <a class="dropdown-item" href="#" @click="newChar(53)">Rabies</a> 
+                            </div>
                           </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -167,7 +192,14 @@
                             <a class="dropdown-item" href="#" @click="newChar(20)">Necromancer</a>
                             <div class="dropdown-divider"></div>
                             <h6 class="dropdown-header">Builds</h6>
-                            <a class="dropdown-item" href="#" @click="newChar(21)">Poison</a>
+                            <div v-if="$work_mod.value == 'diablo2'">
+                              <a class="dropdown-item" href="#" @click="newChar(21)">Poison</a>
+                            </div>
+                            <div v-if="$work_mod.value == 'blizzless_beta'">
+                              <a class="dropdown-item" href="#" @click="newChar(21)">Poison</a>
+                              <a class="dropdown-item" href="#" @click="newChar(22)">Ultra</a>
+                              <a class="dropdown-item" href="#" @click="newChar(23)">Coroner</a>
+                            </div>
                           </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -179,8 +211,14 @@
                             <a class="dropdown-item" href="#" @click="newChar(30)">Paladin</a>
                             <div class="dropdown-divider"></div>
                             <h6 class="dropdown-header">Builds</h6>
-                            <a class="dropdown-item" href="#" @click="newChar(31)">Blessed Hammer</a>
-                            <a class="dropdown-item" href="#" @click="newChar(32)">Fist of the Heavens</a>
+                            <div v-if="$work_mod.value == 'diablo2'">
+                              <a class="dropdown-item" href="#" @click="newChar(31)">Hammerdin</a>
+                              <a class="dropdown-item" href="#" @click="newChar(32)">Fist of the Heavens</a>
+                            </div>
+                            <div v-if="$work_mod.value == 'blizzless_beta'">
+                              <a class="dropdown-item" href="#" @click="newChar(31)">Hammerdin</a>
+                              <a class="dropdown-item" href="#" @click="newChar(32)">Auradin</a>
+                            </div>
                           </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -192,11 +230,20 @@
                             <a class="dropdown-item" href="#" @click="newChar(10)">Sorceress</a>
                             <div class="dropdown-divider"></div>
                             <h6 class="dropdown-header">Builds</h6>
-                            <a class="dropdown-item" href="#" @click="newChar(11)">Blizzard</a>
-                            <a class="dropdown-item" href="#" @click="newChar(12)">Blizzard(Mana)</a>
-                            <a class="dropdown-item" href="#" @click="newChar(13)">Fire</a>
-                            <a class="dropdown-item" href="#" @click="newChar(14)">Nova</a>
-                            <a class="dropdown-item" href="#" @click="newChar(15)">Enchant Bow</a>
+                            <div v-if="$work_mod.value == 'diablo2'">
+                              <a class="dropdown-item" href="#" @click="newChar(11)">Blizzard</a>
+                              <a class="dropdown-item" href="#" @click="newChar(12)">Blizzard(Mana)</a>
+                              <a class="dropdown-item" href="#" @click="newChar(13)">Fire</a>
+                              <a class="dropdown-item" href="#" @click="newChar(14)">Nova</a>
+                              <a class="dropdown-item" href="#" @click="newChar(15)">Enchant Bow</a>
+                            </div>
+                            <div v-if="$work_mod.value == 'blizzless_beta'">
+                              <a class="dropdown-item" href="#" @click="newChar(11)">Enchantress</a>
+                              <a class="dropdown-item" href="#" @click="newChar(12)">Rogue</a>
+                              <a class="dropdown-item" href="#" @click="newChar(13)">Fire</a>
+                              <a class="dropdown-item" href="#" @click="newChar(14)">Nova</a>
+                              <a class="dropdown-item" href="#" @click="newChar(15)">Blizzard</a>
+                            </div>
                           </div>
                         </li>
                       </ul>
@@ -294,8 +341,10 @@
                         <button type="button" @click="maxGold" class="btn btn-primary">Max Gold</button>
                       </div>
                       <div class="row mt-3">
-                        <button type="button" id="d2" class="btn btn-primary" @click="saveFile(0x60)">Save D2</button>
-                        <button type="button" id="d2r" class="btn btn-primary" @click="saveFile(0x63)">Save D2R</button>
+                        <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x60)">Save D2</button> -->
+                        <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x63)">Save D2R</button> -->
+                        <button type="button" id="d2r" class="btn btn-primary" @click="saveFile($work_mod.value, $work_version.value)">Save</button>
+                        <button type="button" id="d2r-blizz" class="btn btn-primary" @click="saveFile('blizzless', $work_version.value)">Save Blizzless</button>
                       </div>
                     </div>
                   </div>
@@ -335,7 +384,6 @@
   // import * as d2s from '@dschu012/d2s';
   // import { constants as constants96 } from '@dschu012/d2s/lib/data/versions/96_constant_data';
   // import { constants as constants99 } from '@dschu012/d2s/lib/data/versions/99_constant_data';
-  import * as d2stash from '@dschu012/d2s/lib/d2/stash';
 
   export default {
     components: {
@@ -365,53 +413,16 @@
         clipboard: null,
         load: null,
         notifications: [],
-        grid: { inv: { w: 10, h: 4 }, stash: { w: 10, h: 10 }, cube: { w: 3, h: 4 } },
+        grid: { inv: { w: 10, h: 4 }, cube: { w: 3, h: 4 } },
         location: {},
         theme: localStorage.getItem('theme')
       };
     },
     async mounted() {
-      if (window.palettes == undefined) {
-        window.palettes = {};
-        window.palettes["ACT1"] = [];
-        let response = await fetch(`data/global/palette/ACT1/pal.dat`);
-        let buffer = new Uint8Array(await response.arrayBuffer());
-        for (let i = 0; i < 256; i += 1) {
-          window.palettes["ACT1"].push([buffer[i * 3 + 2], buffer[i * 3 + 1], buffer[i * 3]]);
-        }
-        for (const [k, v] of Object.entries(utils.colormaps)) {
-          response = await fetch(v);
-          buffer = new Uint8Array(await response.arrayBuffer());
-          window.palettes[k] = [];
-          for (let i = 0; i < Object.keys(utils.colors).length; i += 1) {
-            window.palettes[k].push(buffer.slice(0 + (i * 256), 256 + (i * 256)));
-          }
-        }
-      }
       if (localStorage.grid) {
         this.grid = JSON.parse(localStorage.getItem('grid'));
       }
-
-      //TODO: requreid additional fields in constants
-      // https://github.com/dschu012/d2s/pull/77
-      // d2s.setConstantData(96, constants96); //1.10-1.14d
-      // d2s.setConstantData(97, constants96); //alpha? (D2R)
-      // d2s.setConstantData(98, constants96); //2.4 (D2R)
-      // d2s.setConstantData(99, constants99); //2.5+ (D2R)
-      // window.constants = constants99;
-
-      d2s.setConstantData(96, window.constants_96.constants); //1.10-1.14d
-      d2s.setConstantData(97, window.constants_96.constants); //alpha? (D2R)
-      d2s.setConstantData(98, window.constants_96.constants); //2.4 (D2R)
-      d2s.setConstantData(99, window.constants_99.constants); //2.5+ (D2R)
-      window.constants = window.constants_99.constants;
-
-      this.addRunewordToItemPack(window.constants.runewords, "Runewords");
-      this.addUniqToItemPack(window.constants.unq_items, "Uniques");
-      this.addSetToItemPack(window.constants.set_items, "Sets");
-      this.addBasesToItemPack(window.constants.armor_items, "Armor");
-      this.addBasesToItemPack(window.constants.weapon_items, "Weapons");
-      this.addOtherToItemPack(window.constants.other_items, "Misc");
+      this.changeMod();
     },
     filters: {
     },
@@ -440,6 +451,11 @@
         }
         return stash;
       },
+      stashGrid() {
+        return this.$work_mod.value === 'blizzless'
+          ? { w: 16, h: 13 }
+          : { w: 10, h: 10 };
+      },
       cube() {
         return this.save.items.filter(
           item => item.location_id === 0 && item.alt_position_id === 4,
@@ -450,6 +466,43 @@
       },
     },
     methods: {
+      async getPaletteData() {
+        let a1PaletteBuffer;
+        const colorMapBuffers = {};
+        const a1PalettePath = utils.getA1PalettePath(this.$work_mod.value, this.$work_version.value);
+        let response = await fetch(a1PalettePath);
+        a1PaletteBuffer = new Uint8Array(await response.arrayBuffer());
+        const colormapPaths = utils.getColormapPaths(this.$work_mod.value, this.$work_version.value);
+        for (const [index, colorMapPath] of Object.entries(colormapPaths)) {
+          response = await fetch(colorMapPath);
+          colorMapBuffers[index] = new Uint8Array(await response.arrayBuffer());
+        }
+        utils.fillPalettes(this.$palettes.value, a1PaletteBuffer, colorMapBuffers);
+      },
+      // Uses globalProperties $work_mod & $work_version as input
+      changeMod(failSafe = true) {
+        let succeed = true;
+        try {
+          // Safety check
+          this.$getWorkConstantData();
+        } catch (e) {
+          succeed = false;
+          if (failSafe) {
+            this.$work_mod.value = 'diablo2'; // Fallback
+            this.$work_version.value = 99; // Fallback
+          } else {
+            return false;
+          }
+        }
+        this.save = null;
+        this.preview = null;
+        this.stashData = null;
+        this.getPaletteData();
+        this.addItemsToItemPack();
+        // console.log('Changing mod to ' + this.$work_mod.value + this.$work_version.value);
+        // console.log(this.$d2s.getConstantData(this.$work_mod.value, this.$work_version.value));
+        return succeed;
+      },
       stash(i) {
         if (i == 0) {
           return this.save.items.filter(item => item.location_id === 0 && item.alt_position_id === 5,);
@@ -531,7 +584,7 @@
         this.location = null;
       },
       async shareItem(item) {
-        let bytes = await d2s.writeItem(item, 0x63);
+        let bytes = await this.$d2s.writeItem(item, this.$work_mod.value, this.$work_version.value);
         let base64 = utils.arrayBufferToBase64(bytes);
         navigator.clipboard.writeText(base64);
         this.notifications.push({ alert: "alert alert-info", message: `Item data copied to clipboard. Use load from string to share it with someone.` });
@@ -543,8 +596,8 @@
           this.clipboard = JSON.parse(JSON.stringify(e.item));
           navigator.clipboard.writeText(JSON.stringify(e.item));
         } else if(e.type == 'update') {
-          d2s.enhanceItems([e.item], window.constants);
-          this.setPropertiesOnItem(e.item);
+          this.$d2s.enhanceItems([e.item], this.$work_mod.value, this.$work_version.value);
+          this.resolveInventoryImage(e.item);
         } else if(e.type == 'delete') {
           let idx = this.findIndex(this.save.items, e.item);
           if(idx != -1) {
@@ -559,7 +612,7 @@
         } else if(e.type == 'move') {
           let element = document.getElementById(e.id);
           element.style.backgroundColor = ""; element.style.width = ""; element.style.height = "";
-          if(window.uuid == e.uuid) {
+          if (this.$uuid == e.uuid) {
             let idx = this.findIndex(this.save.items, e.item);
             this.onMove(this.save.items[idx], e);
           } else {
@@ -616,9 +669,12 @@
         }
         return true;
       },
-      async readItem(bytes, version) {
-        this.preview = await d2s.readItem(bytes, version);
-        await this.setPropertiesOnItem(this.preview);
+      async setBase(e) {
+        if (this.baseModel) {
+          this.preview.type = this.baseModel;
+          await this.$d2s.enhanceItems([this.preview], this.$work_mod.value, this.$work_version.value);
+          await this.resolveInventoryImage(this.preview);
+        }
       },
       async setPreviewItem(e) {
         this.baseOptions = null;
@@ -626,7 +682,7 @@
         if (this.previewModel) {
           if (this.previewModel.base64) {
             let bytes = utils.b64ToArrayBuffer(this.previewModel.base64);
-            this.preview = await d2s.readItem(bytes, 0x63);
+            this.preview = await this.$d2s.readItem(bytes, this.$work_mod.value, this.$work_version.value);
           } else if (this.previewModel.item) {
             this.preview = this.previewModel.item;
             if (this.preview?.given_runeword) {
@@ -634,18 +690,16 @@
               return;
             }
         }
-          await this.setPropertiesOnItem(this.preview);
-        }
-      },
-      async setBase(e) {
-        if (this.baseModel) {
-          this.preview.type = this.baseModel;
-          await d2s.enhanceItems([this.preview], window.constants);
-          await this.setPropertiesOnItem(this.preview);
+          await this.resolveInventoryImage(this.preview);
         }
       },
       async onItemFileLoad(event) {
-        this.readItem(event.target.result, 0x60);
+        this.previewModel = {
+          base64: utils.arrayBufferToBase64(event.target.result),
+          // mod: this.$work_mod.value,
+          // version: this.$work_version.value,
+        };
+        this.setPreviewItem();
       },
       onItemFileChange(event) {
         let reader = new FileReader();
@@ -658,7 +712,9 @@
           let b64 = prompt("Please enter your base64 string for item.");
           if (b64 && this.preview) {
             let bytes = utils.b64ToArrayBuffer(b64);
-            await this.readItem(bytes, 0x63);
+            //await this.readItem(bytes, 0x63);
+            this.preview = await this.$d2s.readItem(bytes, mod, version);
+            await this.resolveInventoryImage(this.preview);
             this.paste(this.preview);
           }
         } catch(e) {
@@ -696,8 +752,8 @@
             }
           }
         }
-        for (var i = 0; i < this.grid.stash.w; i++) {
-          for (var j = 0; j < this.grid.stash.h; j++) {
+        for (var i = 0; i < this.stashGrid.w; i++) {
+          for (var j = 0; j < this.stashGrid.h; j++) {
             if (this.canPlaceItem(item, 5, i, j)) {
               return [0, 0, i, j, 5];
             }
@@ -717,7 +773,7 @@
         if (loc == 4) {
           bounds = this.grid.cube;
         } else if (loc == 5) {
-          bounds = this.grid.stash;
+          bounds = this.stashGrid;
         } else {
           bounds = this.grid.inv;
         }
@@ -752,58 +808,72 @@
         if (a[1] >= b[3] || b[1] >= a[3]) return false;
         return true;
       },
-      setPropertiesOnSave() {
-        let that = this;
-        [... this.save.items, ... this.save.merc_items, ... this.save.corpse_items, this.save.golem_item].forEach(item => {
-          that.setPropertiesOnItem(item);
-        });
+      async resolveInventoryImages() {
+        const allItems = [...this.save.items, ...this.save.merc_items, ...this.save.corpse_items, this.save.golem_item];
+        const promises = allItems.map(async function (item) {
+          return this.resolveInventoryImage(item);
+        }, this);
+        return Promise.all(promises);
       },
-      async setPropertiesOnItem(item) {
+      async resolveInventoryImage(item) {
         if (!item) {
           return;
         }
-        //TODO remove after https://github.com/dschu012/d2s/pull/77
-        if (item.total_nr_of_sockets > 0) {
-          item.socketed = 1;
-        } else {
-          item.socketed = 0;
-        }
-
-        if (!item.magic_attributes) item.magic_attributes = [];
-        item.src = await utils.b64PNGFromDC6(item);
+        item.src = await utils.getInventoryImage(item, this.$work_mod.value, this.$work_version.value, this.$palettes.value);
         if (!item.socketed_items) {
           return;
         }
-        if (!item.socketed_attributes) item.socketed_attributes = [];
-        for(let i = 0; i < item.socketed_items.length; i++) {
-          item.socketed_items[i].src = await utils.b64PNGFromDC6(item.socketed_items[i]);
-          item.socketed_items[i].magic_attributes.forEach((it, idx) => { if (item.socketed_attributes.findIndex(x => x.id == it.id) == -1) item.socketed_attributes.push(it) });
-        }
-        if (item.runeword_id == 2718) {
-          item.runeword_id = 48;
-        } else if (item.runeword_id > 2783) {
-          item.runeword_id -= 2588;
+        for (let i = 0; i < item.socketed_items.length; i++) {
+          utils.getInventoryImage(item.socketed_items[i], this.$work_mod.value, this.$work_version.value, this.$palettes.value)
+            .then((img) => {
+              if (img && item.socketed_items[i]) {
+                // Recheck cause it's async, and user may have used unsocket all button in the meanwhile
+                item.socketed_items[i].src = img;
+                //item.socketed_items[i].magic_attributes.forEach((it, idx) => { if (item.socketed_attributes.findIndex(x => x.id == it.id) == -1) item.socketed_attributes.push(it) });
+              }
+            });
         }
       },
+      addItemsToItemPack() {
+        const constants = this.$getWorkConstantData();
+        // Regenerate item pack
+        this.itempack = [];
+        this.itempack.push(...ItemPack);
+        this.addRunewordToItemPack(constants.runewords, "Runewords");
+        this.addUniqToItemPack(constants.unq_items, "Uniques");
+        this.addSetToItemPack(constants.set_items, "Sets");
+        this.addBasesToItemPack(constants.armor_items, "Armor");
+        this.addBasesToItemPack(constants.weapon_items, "Weapons");
+        this.addOtherToItemPack(constants.other_items, "Misc");
+        //this.resolveInventoryImages();  
+      },     
       newChar(index) {
-        let bytes = utils.b64ToArrayBuffer(CharPack[index]);
+        let bytes = [];
+        if (this.$work_mod.value == 'diablo2') {
+          bytes = utils.b64ToArrayBuffer(CharPack.diablo2[index]);
+        } else if (this.$work_mod.value == 'blizzless') {
+          bytes = utils.b64ToArrayBuffer(CharPack.blizzless[index]);
+        } else if (this.$work_mod.value == 'blizzless_beta') {
+          bytes = utils.b64ToArrayBuffer(CharPack.blizzless_beta[index]);
+        }
         this.readBuffer(bytes);
       },
       onFileLoad(event) {
         this.readBuffer(event.target.result, event.target.filename);
       },
       readBuffer(bytes, filename) {
+        //this.addItemsToItemPack();
         if (filename) {
           if (filename.includes(".d2s")) {
             this.save = null;
-            d2s.read(bytes).then(response => {
+            this.$d2s.read(bytes, this.$work_mod.value).then(response => {
               this.save = response;
               this.save.header.name = filename.split('.')[0];
-              this.setPropertiesOnSave();
+              this.resolveInventoryImages();
             });
           } else if (filename.includes("")) {
             this.stashData = null;
-            d2stash.read(bytes).then(response => {
+            this.$d2s.readStash(bytes, this.$work_mod.value).then(response => {
               this.stashData = response;
               for (var i = 0; i < this.stashData.pageCount; i++) {
                 [... this.stashData.pages[i].items].forEach(item => { this.setPropertiesOnItem(item)})}
@@ -814,18 +884,19 @@
           this.save = null;
           this.selected = null;
           this.stashData = null;
-          d2s.read(bytes).then(response => {
+          this.$d2s.read(bytes, this.$work_mod.value).then(response => {
             that.save = response;
-            this.setPropertiesOnSave();
+            that.resolveInventoryImages();
           })
         }
+        
       },
       saveFileStash() {
         if (this.stashData != null) {
           let link = document.createElement('a');
           link.style.display = 'none';
           document.body.appendChild(link);
-          d2stash.write(this.stashData).then(function (response) {
+          this.$d2s.writeStash(this.stashData, this.$work_mod.value, this.$work_version.value).then(function (response) {
             let blob = new Blob([response], { type: "octet/stream" });
             link.href = window.URL.createObjectURL(blob);
             link.download = 'SharedStashSoftCoreV2.d2i';
@@ -921,13 +992,14 @@
           s.points = 20;
         }
       },
-      saveFile(version) {
+      saveFile(mod, version) {
         this.save.header.version = version;
         let link = document.createElement('a');
         let that = this;
         link.style.display = 'none';
         document.body.appendChild(link);
-        d2s.write(this.save).then(function (response) {
+        this.$d2s.write(this.save, mod, version)
+        .then(function (response) {
           let blob = new Blob([response], { type: "octet/stream" });
           link.href = window.URL.createObjectURL(blob);
           link.download = that.save.header.name + '.d2s';
@@ -943,7 +1015,7 @@
             //code
             type: item[0],
             quality: 2,
-            level: 41,
+            level: value.lvl,
             inv_width: value.iw,
             inv_height: value.ih,
             categories: value.c,
@@ -951,7 +1023,7 @@
             identified: 1
           });
         }
-        d2s.enhanceItems(newItems, window.constants);
+        this.$d2s.enhanceItems(newItems, this.$work_mod.value, this.$work_version.value);
         for (const item of newItems) {
           //let bytes = await d2s.writeItem(item, 0x63, window.constants);
           //let base64 = utils.arrayBufferToBase64(bytes);
@@ -975,7 +1047,7 @@
             runeword_name: item.n,
             given_runeword: 1,
             quality: 3,
-            level: 90,
+            level: 90, //todo
             ethereal: 0,
             socketed: 1,
             identified: 1,
@@ -984,10 +1056,10 @@
             nr_of_items_in_sockets: socketedItems.length,
             simple_item: 0,
             socketed_items: socketedItems,
-            runeword_attributes: d2s.generateFixedMods(item.m, window.constants),
+            runeword_attributes: this.$d2s.generateFixedMods(item.m, this.$getWorkConstantData()),
           });
         }
-        d2s.enhanceItems(newItems, window.constants);
+        this.$d2s.enhanceItems(newItems, this.$work_mod.value, this.$work_version.value);
         for (const item of newItems) {
           this.itempack.push({
             key: `[${category}]/${item.runeword_name}`,
@@ -1010,16 +1082,17 @@
               ethereal: 0,
               identified: 1,
               //set_attributes: 
-              magic_attributes: d2s.generateFixedMods(item.m, window.constants)
+              magic_attributes: this.$d2s.generateFixedMods(item.m, this.$getWorkConstantData())
             });
           }
         }
-        d2s.enhanceItems(newItems, window.constants);
+        this.$d2s.enhanceItems(newItems, this.$work_mod.value, this.$work_version.value);
         for (const item of newItems) {
           let socketIndex = item.magic_attributes.findIndex(i => i.name == "item_numsockets");
           if (socketIndex > 0) {
             item.socketed =  true;
             item.total_nr_of_sockets = item.magic_attributes[socketIndex].value;
+            item.magic_attributes.splice(socketIndex, 1);
           }
           this.itempack.push({
             key: `[${category}]/${item.set_name}`,
@@ -1041,16 +1114,17 @@
               unique_name: item.n,
               ethereal: 0,
               identified: 1,
-              magic_attributes: d2s.generateFixedMods(item.m, window.constants)
+              magic_attributes: this.$d2s.generateFixedMods(item.m, this.$getWorkConstantData())
             });
           }
         }
-        d2s.enhanceItems(newItems, window.constants);
+        this.$d2s.enhanceItems(newItems, this.$work_mod.value, this.$work_version.value);
         for (const item of newItems) {
           let socketIndex = item.magic_attributes.findIndex(i => i.name == "item_numsockets");
           if (socketIndex > 0) {
             item.socketed =  true;
             item.total_nr_of_sockets = item.magic_attributes[socketIndex].value;
+            item.magic_attributes.splice(socketIndex, 1);
           }
           this.itempack.push({
             key: `[${category}]/${item.unique_name}`,
@@ -1071,7 +1145,7 @@
             identified: 1
           });
         }
-        d2s.enhanceItems(newItems, window.constants);
+        this.$d2s.enhanceItems(newItems, this.$work_mod.value, this.$work_version.value);
         for (const item of newItems) {
           this.itempack.push({
             key: `[${category}]/${item.categories[0]}/${item.type_name}`,
@@ -1081,7 +1155,7 @@
       },
       getBasesOptions(item) {
         let bases = [];
-        const constants = {...window.constants.armor_items, ...window.constants.weapon_items};
+        const constants = {...this.$getWorkConstantData().armor_items, ...this.$getWorkConstantData().weapon_items};
         bases = this.findBasesInConstants(item, constants);
         return Object.entries(constants)
             .filter((entry) => bases.includes(entry[0]))
