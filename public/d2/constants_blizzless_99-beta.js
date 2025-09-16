@@ -10,7 +10,7 @@ export let constants_blizzless_99_beta = {
                 "%+d to Passive and Magic Skills",
                 "%+d to Javelin and Spear Skills"
             ],
-            "co": "(!Amazon Only!)",
+            "co": "(Amazon Only)",
             "s": {
                 "lpl": 8,
                 "mpl": 6,
@@ -39116,7 +39116,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 407,
             "n": "Amn Rune",
-            "i": "invrAmn",
+            "i": "invramn",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39130,7 +39130,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 408,
             "n": "Ber Rune",
-            "i": "invrBer",
+            "i": "invrber",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39144,7 +39144,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 409,
             "n": "Cham Rune",
-            "i": "invrCham",
+            "i": "invrcham",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39158,7 +39158,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 410,
             "n": "Dol Rune",
-            "i": "invrDol",
+            "i": "invrdol",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39172,7 +39172,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 411,
             "n": "Eld Rune",
-            "i": "invrEld",
+            "i": "invreld",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39186,7 +39186,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 412,
             "n": "El Rune",
-            "i": "invrEl",
+            "i": "invrel",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39200,7 +39200,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 413,
             "n": "Eth Rune",
-            "i": "invrEth",
+            "i": "invreth",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39214,7 +39214,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 414,
             "n": "Fal Rune",
-            "i": "invrFal",
+            "i": "invrfal",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39228,7 +39228,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 415,
             "n": "Gul Rune",
-            "i": "invrGul",
+            "i": "invrgul",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39242,7 +39242,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 416,
             "n": "Hel Rune",
-            "i": "invrHel",
+            "i": "invrhel",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39256,7 +39256,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 417,
             "n": "Io Rune",
-            "i": "invrIo",
+            "i": "invrio",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39270,7 +39270,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 418,
             "n": "Ist Rune",
-            "i": "invrIst",
+            "i": "invrist",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39284,7 +39284,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 419,
             "n": "Ith Rune",
-            "i": "invrIth",
+            "i": "invrith",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39298,7 +39298,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 420,
             "n": "Jah Rune",
-            "i": "invrJo",
+            "i": "invrjo",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39312,7 +39312,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 421,
             "n": "Ko Rune",
-            "i": "invrKo",
+            "i": "invrko",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39326,7 +39326,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 422,
             "n": "Lem Rune",
-            "i": "invrLem",
+            "i": "invrlem",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39340,7 +39340,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 423,
             "n": "Lo Rune",
-            "i": "invrLo",
+            "i": "invrlo",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39354,7 +39354,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 424,
             "n": "Lum Rune",
-            "i": "invrLum",
+            "i": "invrlum",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39368,7 +39368,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 425,
             "n": "Mal Rune",
-            "i": "invrMal",
+            "i": "invrmal",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39382,7 +39382,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 426,
             "n": "Nef Rune",
-            "i": "invrNef",
+            "i": "invrnef",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39396,7 +39396,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 427,
             "n": "Ohm Rune",
-            "i": "invrOhm",
+            "i": "invrohm",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39410,7 +39410,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 428,
             "n": "Ort Rune",
-            "i": "invrOrt",
+            "i": "invrort",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39424,7 +39424,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 429,
             "n": "Pul Rune",
-            "i": "invrPul",
+            "i": "invrpul",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39438,7 +39438,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 430,
             "n": "Ral Rune",
-            "i": "invrRal",
+            "i": "invrral",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39452,7 +39452,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 431,
             "n": "Shael Rune",
-            "i": "invrShae",
+            "i": "invrshae",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39466,7 +39466,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 432,
             "n": "Sol Rune",
-            "i": "invrSol",
+            "i": "invrsol",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39480,7 +39480,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 433,
             "n": "Sur Rune",
-            "i": "invrSur",
+            "i": "invrsur",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39494,7 +39494,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 434,
             "n": "Tal Rune",
-            "i": "invrTal",
+            "i": "invrtal",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39508,7 +39508,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 435,
             "n": "Thul Rune",
-            "i": "invrThul",
+            "i": "invrthul",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39522,7 +39522,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 436,
             "n": "Tir Rune",
-            "i": "invrTir",
+            "i": "invrtir",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39536,7 +39536,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 437,
             "n": "Um Rune",
-            "i": "invrUm",
+            "i": "invrum",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39550,7 +39550,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 438,
             "n": "Vex Rune",
-            "i": "invrVex",
+            "i": "invrvex",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -39564,7 +39564,7 @@ export let constants_blizzless_99_beta = {
         {
             "id": 439,
             "n": "Zod Rune",
-            "i": "invrZod",
+            "i": "invrzod",
             "c": "bg1",
             "lvl": "1",
             "m": [
@@ -58966,7 +58966,7 @@ export let constants_blizzless_99_beta = {
             "n": "El Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrEl",
+            "i": "invrel",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -59025,7 +59025,7 @@ export let constants_blizzless_99_beta = {
             "n": "Eld Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrEld",
+            "i": "invreld",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -59074,7 +59074,7 @@ export let constants_blizzless_99_beta = {
             "n": "Tir Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrTir",
+            "i": "invrtir",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -59118,7 +59118,7 @@ export let constants_blizzless_99_beta = {
             "n": "Nef Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrNef",
+            "i": "invrnef",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -59162,7 +59162,7 @@ export let constants_blizzless_99_beta = {
             "n": "Eth Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrEth",
+            "i": "invreth",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -59206,7 +59206,7 @@ export let constants_blizzless_99_beta = {
             "n": "Ith Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrIth",
+            "i": "invrith",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -59250,7 +59250,7 @@ export let constants_blizzless_99_beta = {
             "n": "Tal Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrTal",
+            "i": "invrtal",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -59295,7 +59295,7 @@ export let constants_blizzless_99_beta = {
             "n": "Ral Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrRal",
+            "i": "invrral",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -59339,7 +59339,7 @@ export let constants_blizzless_99_beta = {
             "n": "Ort Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrOrt",
+            "i": "invrort",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -59383,7 +59383,7 @@ export let constants_blizzless_99_beta = {
             "n": "Thul Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrThul",
+            "i": "invrthul",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -59428,7 +59428,7 @@ export let constants_blizzless_99_beta = {
             "n": "Amn Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrAmn",
+            "i": "invramn",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -59472,7 +59472,7 @@ export let constants_blizzless_99_beta = {
             "n": "Sol Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrSol",
+            "i": "invrsol",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -59516,7 +59516,7 @@ export let constants_blizzless_99_beta = {
             "n": "Shael Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrShae",
+            "i": "invrshae",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -59560,7 +59560,7 @@ export let constants_blizzless_99_beta = {
             "n": "Dol Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrDol",
+            "i": "invrdol",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -59604,7 +59604,7 @@ export let constants_blizzless_99_beta = {
             "n": "Hel Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrHel",
+            "i": "invrhel",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -59648,7 +59648,7 @@ export let constants_blizzless_99_beta = {
             "n": "Io Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrIo",
+            "i": "invrio",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -59692,7 +59692,7 @@ export let constants_blizzless_99_beta = {
             "n": "Lum Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrLum",
+            "i": "invrlum",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -59736,7 +59736,7 @@ export let constants_blizzless_99_beta = {
             "n": "Ko Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrKo",
+            "i": "invrko",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -59780,7 +59780,7 @@ export let constants_blizzless_99_beta = {
             "n": "Fal Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrFal",
+            "i": "invrfal",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -59824,7 +59824,7 @@ export let constants_blizzless_99_beta = {
             "n": "Lem Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrLem",
+            "i": "invrlem",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -59868,7 +59868,7 @@ export let constants_blizzless_99_beta = {
             "n": "Pul Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrPul",
+            "i": "invrpul",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -59917,7 +59917,7 @@ export let constants_blizzless_99_beta = {
             "n": "Um Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrUm",
+            "i": "invrum",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -59961,7 +59961,7 @@ export let constants_blizzless_99_beta = {
             "n": "Mal Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrMal",
+            "i": "invrmal",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -60005,7 +60005,7 @@ export let constants_blizzless_99_beta = {
             "n": "Ist Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrIst",
+            "i": "invrist",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -60049,7 +60049,7 @@ export let constants_blizzless_99_beta = {
             "n": "Gul Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrGul",
+            "i": "invrgul",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -60093,7 +60093,7 @@ export let constants_blizzless_99_beta = {
             "n": "Vex Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrVex",
+            "i": "invrvex",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -60137,7 +60137,7 @@ export let constants_blizzless_99_beta = {
             "n": "Ohm Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrOhm",
+            "i": "invrohm",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -60181,7 +60181,7 @@ export let constants_blizzless_99_beta = {
             "n": "Lo Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrLo",
+            "i": "invrlo",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -60225,7 +60225,7 @@ export let constants_blizzless_99_beta = {
             "n": "Sur Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrSur",
+            "i": "invrsur",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -60269,7 +60269,7 @@ export let constants_blizzless_99_beta = {
             "n": "Ber Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrBer",
+            "i": "invrber",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -60313,7 +60313,7 @@ export let constants_blizzless_99_beta = {
             "n": "Jah Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrJo",
+            "i": "invrjo",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -60357,7 +60357,7 @@ export let constants_blizzless_99_beta = {
             "n": "Cham Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrCham",
+            "i": "invrcham",
             "iw": 1,
             "ih": 1,
             "it": 0,
@@ -60401,7 +60401,7 @@ export let constants_blizzless_99_beta = {
             "n": "Zod Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrZod",
+            "i": "invrzod",
             "iw": 1,
             "ih": 1,
             "it": 0,
