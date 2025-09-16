@@ -127,7 +127,7 @@ export default {
         // return `data/${mod}/version_${version}/global/items/${item.inv_file}.png`; // lowend is enough and lighter
       // } else {
           // Try building the SD image dataURL
-          const dc6FilePath = `data/${mod}/version_${version}/global/items/${item.inv_file}.dc6`;
+          const dc6FilePath = `data/${mod}/version_${version}/global/items/${item.inv_file}.dc6`.toLowerCase();
           const response = await fetch(dc6FilePath, { signal: AbortSignal.timeout(10000) });
           if (response.status !== 200) {
             return null;
