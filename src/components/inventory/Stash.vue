@@ -28,11 +28,11 @@
             @click="changeTab(4)">Shared
         </button>
     </div>
-    <div class="stash-bg">
+    <div class="stash-bg":class="{'stash-bg-big': $work_mod.value !== 'diablo2'}">
       <Grid
           v-if="activeTab == 1"
-          :width="grid.stash.w"
-          :height="grid.stash.h"
+          :width="stashGrid.w"
+          :height="stashGrid.h"
           :page="1"
           :items.sync="stash(0)"
           @item-selected="onSelect"
@@ -42,8 +42,8 @@
           class="y-0"></Grid>
       <Grid
           v-if="activeTab == 2"
-          :width="grid.stash.w"
-          :height="grid.stash.h"
+          :width="stashGrid.w"
+          :height="stashGrid.h"
           :page="2"
           :items.sync="stash(1)"
           @item-selected="onSelect"
@@ -53,8 +53,8 @@
           class="y-0"></Grid>
       <Grid
           v-if="activeTab == 3"
-          :width="grid.stash.w"
-          :height="grid.stash.h"
+          :width="stashGrid.w"
+          :height="stashGrid.h"
           :page="3"
           :items.sync="stash(2)"
           @item-selected="onSelect"
@@ -64,8 +64,8 @@
           class="y-0"></Grid>
       <Grid
           v-if="activeTab == 4"
-          :width="grid.stash.w"
-          :height="grid.stash.h"
+          :width="stashGrid.w"
+          :height="stashGrid.h"
           :page="4"
           :items.sync="stash(3)"
           @item-selected="onSelect"
@@ -92,7 +92,7 @@ export default {
   data() {
     return {
       activeTab: 1,
-      grid: {stash: {w: 10, h: 10}},
+      gameMode: 'd2r-blizz'
     };
   },
   props: {
@@ -100,7 +100,13 @@ export default {
     id: String,
     contextMenu: Object,
   },
-  computed: {},
+  computed: {
+    stashGrid() {
+      return this.$work_mod.value === 'blizzless'
+          ? { w: 16, h: 13 }
+          : { w: 10, h: 10 };
+    }
+  },
   methods: {
     onSelect(item) {
       this.$emit('item-selected', item);

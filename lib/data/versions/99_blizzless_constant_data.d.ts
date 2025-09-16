@@ -1958,6 +1958,33 @@ export declare let constants: {
         sA: number;
         so: number;
         dF: number;
+        dP: string;
+        cB?: undefined;
+        cS?: undefined;
+        dN?: undefined;
+        dg?: undefined;
+        dgF?: undefined;
+        dgP?: undefined;
+        o?: undefined;
+        os?: undefined;
+        vS?: undefined;
+        np?: undefined;
+        dR?: undefined;
+        dE?: undefined;
+        sP?: undefined;
+        e?: undefined;
+        dV?: undefined;
+        d2?: undefined;
+        op?: undefined;
+        ob?: undefined;
+    } | {
+        id: number;
+        s: string;
+        sS: number;
+        sB: number;
+        sA: number;
+        so: number;
+        dF: number;
         dV: number;
         dP: string;
         dN: string;
@@ -2323,6 +2350,22 @@ export declare let constants: {
             min: number;
             max: number;
         })[];
+    } | {
+        id: number;
+        types: string[];
+        r: string[];
+        m: ({
+            prop: string;
+            p: number;
+            min: number;
+            max: number;
+        } | {
+            prop: string;
+            min: number;
+            max: number;
+            p?: undefined;
+        })[];
+        n?: undefined;
     } | null)[];
     set_items: ({
         id: number;
@@ -18694,6 +18737,94 @@ export declare let constants: {
             nodurability: number;
             ig: never[];
             c: string[];
+        };
+        "04r": {
+            iq: number;
+            n: string;
+            hi: number;
+            gt: number;
+            i: string;
+            iw: number;
+            ih: number;
+            it: number;
+            type: string;
+            gemsockets: number;
+            spawnable: number;
+            nodurability: number;
+            ig: never[];
+            eq1n: string;
+            c: string[];
+            m: ({
+                prop: string;
+                min: number;
+                max: number;
+            }[] | null)[];
+        };
+        "14r": {
+            iq: number;
+            n: string;
+            hi: number;
+            gt: number;
+            i: string;
+            iw: number;
+            ih: number;
+            it: number;
+            type: string;
+            gemsockets: number;
+            spawnable: number;
+            nodurability: number;
+            ig: never[];
+            eq1n: string;
+            c: string[];
+            m: ({
+                prop: string;
+                min: number;
+                max: number;
+            }[] | null)[];
+        };
+        "29r": {
+            iq: number;
+            n: string;
+            hi: number;
+            gt: number;
+            i: string;
+            iw: number;
+            ih: number;
+            it: number;
+            type: string;
+            gemsockets: number;
+            spawnable: number;
+            nodurability: number;
+            ig: never[];
+            eq1n: string;
+            c: string[];
+            m: ({
+                prop: string;
+                min: number;
+                max: number;
+            }[] | null)[];
+        };
+        "32r": {
+            iq: number;
+            n: string;
+            hi: number;
+            gt: number;
+            i: string;
+            iw: number;
+            ih: number;
+            it: number;
+            type: string;
+            gemsockets: number;
+            spawnable: number;
+            nodurability: number;
+            ig: never[];
+            eq1n: string;
+            c: string[];
+            m: ({
+                prop: string;
+                min: number;
+                max: number;
+            }[] | null)[];
         };
     };
 };

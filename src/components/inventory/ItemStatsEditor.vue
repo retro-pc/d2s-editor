@@ -39,15 +39,15 @@ export default {
   },
   data() {
     return {
-      stats: window.constants.magical_properties,
-      stats_options: window.constants.magical_properties
+      stats: this.$getWorkConstantData().magical_properties,
+      stats_options: this.$getWorkConstantData().magical_properties
         .filter(stat => stat && stat.s)
         .map(stat => ({value: stat.id, label: stat.s, desc: stat.dP || ""})),
-      skills_options: window.constants.skills
+      skills_options: this.$getWorkConstantData().skills
         .filter((skill) => skill && skill.s)
         .map((skill) => ({ value: skill.id, label: `${skill.s}${skill.id > 5 && !skill.c ? " (item)" : ""}` }))
         .sort((a, b) => { return a.label.localeCompare(b.label) }),
-      classes: window.constants.classes,
+      classes: this.$getWorkConstantData().classes,
     }
   },
   methods: {

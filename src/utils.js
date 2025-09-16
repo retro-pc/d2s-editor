@@ -22,18 +22,128 @@ const colors = {
   bwht: 20,
 };
 
-const colormaps = {
-  1: 'data/global/items/palette/grey.dat',
-  2: 'data/global/items/palette/grey2.dat',
-  5: 'data/global/items/palette/greybrown.dat',
-  6: 'data/global/items/palette/invgrey.dat',
-  7: 'data/global/items/palette/invgrey2.dat',
-  8: 'data/global/items/palette/invgreybrown.dat',
-};
+function fillPalettes(palettes, a1PaletteBuffer, colorMapBuffers) {
+  for (const property in palettes) {
+    delete palettes[property];
+  }
+  palettes['ACT1'] = [];
+
+  for (let i = 0; i < 256; i += 1) {
+    palettes['ACT1'].push([a1PaletteBuffer[i * 3 + 2], a1PaletteBuffer[i * 3 + 1], a1PaletteBuffer[i * 3]]);
+  }
+  for (const [index, colorMapBuffer] of Object.entries(colorMapBuffers)) {
+    palettes[index] = [];
+    for (let i = 0; i < Object.keys(colors).length; i += 1) {
+      palettes[index].push(colorMapBuffer.slice(0 + i * 256, 256 + i * 256));
+    }
+  }
+}
+
+function b64PNGFromDC6(item, dc6, palettes) {
+  let idx = 32;
+  const width = dc6[idx] | dc6[idx + 1] << 8 | dc6[idx + 2] << 16 | dc6[idx + 2] << 24;
+  idx = 36;
+  const height = dc6[idx] | dc6[idx + 1] << 8 | dc6[idx + 2] << 16 | dc6[idx + 2] << 24;
+  idx = 56;
+  const length = dc6[idx] | dc6[idx + 1] << 8 | dc6[idx + 2] << 16 | dc6[idx + 2] << 24;
+  let x = 0, y = height - 1;
+  const indexed = [];
+  if (width == 0 || height == 0) {
+    return null;
+  }
+  for (let i = 0; i < height; i += 1) {
+    indexed[i] = Array(width).fill(255);
+  }
+  for (let i = 0; i < length;) {
+    let b = dc6[60 + i++];
+    if (b === 0x80) { //eol
+      x = 0, y--;
+    } else if (b & 0x80) {
+      x += b & 0x7F; //transparent repeat for N bytes
+    } else {
+      //read N bytes
+      for (let j = 0; j < b; j++) {
+        indexed[y][x++] = dc6[60 + i++];
+      }
+    }
+  }
+  let canvas = document.createElement('canvas'),
+    context = canvas.getContext('2d'),
+    data = context.createImageData(width, height);
+  canvas.height = height;
+  canvas.width = width;
+  for (let y = 0; y < height; y += 1) {
+    for (let x = 0; x < width; x += 1) {
+      let paletteIdx = indexed[y][x];
+      const offset = (y * width + x) * 4;
+      if (paletteIdx === 255) { //transparent
+        continue;
+      }
+      if (item.transform_color && item.inv_transform) {
+        let transformIdx = colors[item.transform_color];
+        if (transformIdx >= 0 && palettes[item.inv_transform]) {
+          paletteIdx = palettes[item.inv_transform][transformIdx][paletteIdx];
+        }
+      }
+      const rgb = palettes['ACT1'][paletteIdx];
+      data.data[offset] = rgb[0];
+      data.data[offset + 1] = rgb[1];
+      data.data[offset + 2] = rgb[2];
+      data.data[offset + 3] = 255;
+    }
+  }
+
+  // put data to context at (0, 0)
+  context.putImageData(data, 0, 0);
+
+  // output image
+  //var img = new Image();
+  var src = canvas.toDataURL('image/png');
+  canvas.remove();
+  return src;
+}
 
 export default {
   colors: colors,
-  colormaps: colormaps,
+  getA1PalettePath(mod, version) {
+    return `data/${mod}/version_${version}/global/palette/act1/pal.dat`;
+  },
+  getColormapPaths(mod, version) {
+    return {
+      1: `data/${mod}/version_${version}/global/items/palette/grey.dat`,
+      2: `data/${mod}/version_${version}/global/items/palette/grey2.dat`,
+      5: `data/${mod}/version_${version}/global/items/palette/greybrown.dat`,
+      6: `data/${mod}/version_${version}/global/items/palette/invgrey.dat`,
+      7: `data/${mod}/version_${version}/global/items/palette/invgrey2.dat`,
+      8: `data/${mod}/version_${version}/global/items/palette/invgreybrown.dat`,
+    };
+  },
+  fillPalettes,
+  b64PNGFromDC6,
+  async getInventoryImage(item, mod, version, palettes) {
+    if (item.inv_file && item.inv_file != 'D2R_Jank') {
+      // if (!item.transform_color || !item.inv_color) {
+        // Just return the URL
+        // return `data/${mod}/version_${version}/global/items/${item.inv_file}.png`; // lowend is enough and lighter
+      // } else {
+          // Try building the SD image dataURL
+          const dc6FilePath = `data/${mod}/version_${version}/global/items/${item.inv_file}.dc6`;
+          const response = await fetch(dc6FilePath, { signal: AbortSignal.timeout(10000) });
+          if (response.status !== 200) {
+            return null;
+          }
+          const dc6 = new Uint8Array(await response.arrayBuffer());
+          if (dc6) {
+            // const start = Date.now()
+            const imageDataUrl = b64PNGFromDC6(item, dc6, palettes);
+            // const elapsed = Date.now() - start
+            // console.log(`Needed ${elapsed}ms to generate PNG: "${dc6FilePath}"`)
+            return imageDataUrl;
+          }
+      // }
+    }
+    return null;    
+  },
   b64ToArrayBuffer(base64) {
     var bin = window.atob(base64);
     var len = bin.length;
@@ -43,6 +153,7 @@ export default {
     }
     return bytes.buffer;
   },
+
   arrayBufferToBase64(buffer) {
     var binary = '';
     var bytes = new Uint8Array( buffer );
@@ -51,74 +162,6 @@ export default {
       binary += String.fromCharCode( bytes[ i ] );
     }
     return window.btoa(binary);
-  },
-  async b64PNGFromDC6(item) {
-    const response = await fetch(`data/global/items/${item.inv_file}.dc6`.toLowerCase(), { signal: AbortSignal.timeout(1500) });
-    if (response.status !== 200) {
-      return null;
-    }
-    const dc6 = new Uint8Array(await response.arrayBuffer());
-    let idx = 32;
-    const width = dc6[idx] | dc6[idx + 1] << 8 | dc6[idx + 2] << 16 | dc6[idx + 2] << 24;
-    idx = 36;
-    const height = dc6[idx] | dc6[idx + 1] << 8 | dc6[idx + 2] << 16 | dc6[idx + 2] << 24;
-    idx = 56;
-    const length = dc6[idx] | dc6[idx + 1] << 8 | dc6[idx + 2] << 16 | dc6[idx + 2] << 24;
-    let x = 0, y = height - 1;
-    const indexed = [];
-    if (width == 0 || height == 0) {
-      return null;
-    }
-    for (let i = 0; i < height; i += 1) {
-      indexed[i] = Array(width).fill(255);
-    }
-    for (let i = 0; i < length;) {
-      let b = dc6[60 + i++];
-      if (b === 0x80) { //eol
-        x = 0, y--;
-      } else if (b & 0x80) {
-        x += b & 0x7F; //transparent repeat for N bytes
-      } else {
-        //read N bytes
-        for (let j = 0; j < b; j++) {
-          indexed[y][x++] = dc6[60 + i++];
-        }
-      }
-    }
-    let canvas = document.createElement('canvas'),
-      context = canvas.getContext('2d'),
-      data = context.createImageData(width, height);
-    canvas.height = height;
-    canvas.width = width;
-    for (let y = 0; y < height; y += 1) {
-      for (let x = 0; x < width; x += 1) {
-        let paletteIdx = indexed[y][x];
-        const offset = (y * width + x) * 4;
-        if (paletteIdx === 255) { //transparent
-          continue;
-        }
-        if (item.transform_color && item.inv_transform) {
-          let transformIdx = colors[item.transform_color];
-          if (transformIdx >= 0 && window.palettes[item.inv_transform]) {
-            paletteIdx = window.palettes[item.inv_transform][transformIdx][paletteIdx];
-          }
-        }
-        const rgb = window.palettes["ACT1"][paletteIdx];
-        data.data[offset] = rgb[0];
-        data.data[offset + 1] = rgb[1];
-        data.data[offset + 2] = rgb[2];
-        data.data[offset + 3] = 255;
-      }
-    }
-
-    // put data to context at (0, 0)
-    context.putImageData(data, 0, 0);
-
-    // output image
-    //var img = new Image();
-    var src = canvas.toDataURL('image/png');
-    canvas.remove();
-    return src;
   },
   shift(number, shift) {
     return number * Math.pow(2, shift);

@@ -130,6 +130,7 @@
       itemName(item) {
         if (!item.type) return;
         let name = item.type_name;
+        const constants = this.$getWorkConstantData();
         if (item.magic_prefix) {
           let magic_prefix_name = constants.magic_prefixes[item.magic_prefix]
           ? constants.magic_prefixes[item.magic_prefix].n
