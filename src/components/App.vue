@@ -104,13 +104,20 @@
                             <div v-if="$work_mod.value == 'diablo2'">
                               <div class="dropdown-divider"></div>
                               <h6 class="dropdown-header">Builds</h6>
-                              <a class="dropdown-item" href="#" @click="newChar(1)">Physical Bowazon</a>
-                              <a class="dropdown-item" href="#" @click="newChar(2)">Elemental Bowazon</a>
-                              <a class="dropdown-item" href="#" @click="newChar(3)">Elemental Bowazon(Mavina)</a>
+                              <a class="dropdown-item" href="#" @click="newChar(1)">Bowazon(Physical)</a>
+                              <a class="dropdown-item" href="#" @click="newChar(2)">Bowazon(Elemental)</a>
+                              <a class="dropdown-item" href="#" @click="newChar(3)">Bowazon(Mavina)</a>
                               <a class="dropdown-item" href="#" @click="newChar(4)">Exploding Arrow</a>
                               <a class="dropdown-item" href="#" @click="newChar(5)">Ligthing Fury</a>
                               <a class="dropdown-item" href="#" @click="newChar(6)">Poison</a>
                               <a class="dropdown-item" href="#" @click="newChar(7)">Spearzon</a>
+                            </div>
+                            <div v-if="$work_mod.value == 'blizzless_beta'">
+                              <a class="dropdown-item" href="#" @click="newChar(1)">Poison</a>
+                              <a class="dropdown-item" href="#" @click="newChar(2)">Spearzon</a>
+                              <a class="dropdown-item" href="#" @click="newChar(3)">Cold</a>
+                              <a class="dropdown-item" href="#" @click="newChar(4)">Bowazon</a>
+                              <a class="dropdown-item" href="#" @click="newChar(5)">FemaleKnight</a>
                             </div>
                           </div>
                         </li>
@@ -124,7 +131,15 @@
                             <div v-if="$work_mod.value == 'diablo2'">
                               <div class="dropdown-divider"></div>
                               <h6 class="dropdown-header">Builds</h6>
-                              <a class="dropdown-item" href="#" @click="newChar(61)">Phoenix Strike</a>
+                              <a class="dropdown-item" href="#" @click="newChar(61)">Phoenix</a>
+                            </div>
+                            <div v-if="$work_mod.value == 'blizzless_beta'">
+                              <a class="dropdown-item" href="#" @click="newChar(61)">BladeSin</a>
+                              <a class="dropdown-item" href="#" @click="newChar(62)">FireTrapper</a>
+                              <a class="dropdown-item" href="#" @click="newChar(63)">Phoenix</a>
+                              <a class="dropdown-item" href="#" @click="newChar(64)">Trapper</a>
+                              <a class="dropdown-item" href="#" @click="newChar(65)">Kicker</a>
+                              <a class="dropdown-item" href="#" @click="newChar(66)">BladeFury</a>
                             </div>
                           </div>
                         </li>
@@ -141,6 +156,12 @@
                               <a class="dropdown-item" href="#" @click="newChar(41)">Whirlwind</a>
                               <a class="dropdown-item" href="#" @click="newChar(42)">Double Throw</a>
                             </div>
+                            <div v-if="$work_mod.value == 'blizzless_beta'">
+                              <a class="dropdown-item" href="#" @click="newChar(41)">Whirlwind</a>
+                              <a class="dropdown-item" href="#" @click="newChar(42)">WC</a>
+                              <a class="dropdown-item" href="#" @click="newChar(43)">Thrower</a>
+                              <a class="dropdown-item" href="#" @click="newChar(44)">Berserk</a>
+                            </div>
                           </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -154,7 +175,12 @@
                               <div class="dropdown-divider"></div>
                               <h6 class="dropdown-header">Builds</h6>
                               <a class="dropdown-item" href="#" @click="newChar(51)">Fire</a>
-                            </div>  
+                            </div>
+                            <div v-if="$work_mod.value == 'blizzless_beta'">
+                               <a class="dropdown-item" href="#" @click="newChar(51)">Fire</a>
+                               <a class="dropdown-item" href="#" @click="newChar(52)">Shoсkwave</a>
+                               <a class="dropdown-item" href="#" @click="newChar(53)">Rabies</a> 
+                            </div>
                           </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -169,6 +195,11 @@
                               <h6 class="dropdown-header">Builds</h6>
                               <a class="dropdown-item" href="#" @click="newChar(21)">Poison</a>
                             </div>
+                            <div v-if="$work_mod.value == 'blizzless_beta'">
+                              <a class="dropdown-item" href="#" @click="newChar(21)">Poison</a>
+                              <a class="dropdown-item" href="#" @click="newChar(22)">Ultra</a>
+                              <a class="dropdown-item" href="#" @click="newChar(23)">Coroner</a>
+                            </div>
                           </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -181,8 +212,12 @@
                             <div v-if="$work_mod.value == 'diablo2'">
                               <div class="dropdown-divider"></div>
                               <h6 class="dropdown-header">Builds</h6>
-                              <a class="dropdown-item" href="#" @click="newChar(31)">Blessed Hammer</a>
+                              <a class="dropdown-item" href="#" @click="newChar(31)">Hammerdin</a>
                               <a class="dropdown-item" href="#" @click="newChar(32)">Fist of the Heavens</a>
+                            </div>
+                            <div v-if="$work_mod.value == 'blizzless_beta'">
+                              <a class="dropdown-item" href="#" @click="newChar(31)">Hammerdin</a>
+                              <a class="dropdown-item" href="#" @click="newChar(32)">Auradin</a>
                             </div>
                           </div>
                         </li>
@@ -201,6 +236,13 @@
                               <a class="dropdown-item" href="#" @click="newChar(13)">Fire</a>
                               <a class="dropdown-item" href="#" @click="newChar(14)">Nova</a>
                               <a class="dropdown-item" href="#" @click="newChar(15)">Enchant Bow</a>
+                            </div>
+                            <div v-if="$work_mod.value == 'blizzless_beta'">
+                              <a class="dropdown-item" href="#" @click="newChar(11)">Enchantress</a>
+                              <a class="dropdown-item" href="#" @click="newChar(12)">Rogue</a>
+                              <a class="dropdown-item" href="#" @click="newChar(13)">Fire</a>
+                              <a class="dropdown-item" href="#" @click="newChar(14)">Nova</a>
+                              <a class="dropdown-item" href="#" @click="newChar(15)">Blizzard</a>
                             </div>
                           </div>
                         </li>
@@ -809,6 +851,8 @@
           bytes = utils.b64ToArrayBuffer(CharPack.diablo2[index]);
         } else if (this.$work_mod.value == 'blizzless') {
           bytes = utils.b64ToArrayBuffer(CharPack.blizzless[index]);
+        } else if (this.$work_mod.value == 'blizzless_beta') {
+          bytes = utils.b64ToArrayBuffer(CharPack.blizzless_beta[index]);
         }
         this.readBuffer(bytes);
       },
