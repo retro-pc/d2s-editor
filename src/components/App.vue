@@ -101,9 +101,9 @@
                           </a>
                           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarGeneral">
                             <a class="dropdown-item" href="#" @click="newChar(0)">Amazon</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Builds</h6>
                             <div v-if="$work_mod.value == 'diablo2'">
-                              <div class="dropdown-divider"></div>
-                              <h6 class="dropdown-header">Builds</h6>
                               <a class="dropdown-item" href="#" @click="newChar(1)">Bowazon(Physical)</a>
                               <a class="dropdown-item" href="#" @click="newChar(2)">Bowazon(Elemental)</a>
                               <a class="dropdown-item" href="#" @click="newChar(3)">Bowazon(Mavina)</a>
@@ -128,9 +128,9 @@
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarGeneral">
                             <a class="dropdown-item" href="#" @click="newChar(60)">Assassin</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Builds</h6>
                             <div v-if="$work_mod.value == 'diablo2'">
-                              <div class="dropdown-divider"></div>
-                              <h6 class="dropdown-header">Builds</h6>
                               <a class="dropdown-item" href="#" @click="newChar(61)">Phoenix</a>
                             </div>
                             <div v-if="$work_mod.value == 'blizzless_beta'">
@@ -150,9 +150,9 @@
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarGeneral">
                             <a class="dropdown-item" href="#" @click="newChar(40)">Barbarian</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Builds</h6>
                             <div v-if="$work_mod.value == 'diablo2'">
-                              <div class="dropdown-divider"></div>
-                              <h6 class="dropdown-header">Builds</h6>
                               <a class="dropdown-item" href="#" @click="newChar(41)">Whirlwind</a>
                               <a class="dropdown-item" href="#" @click="newChar(42)">Double Throw</a>
                             </div>
@@ -171,9 +171,9 @@
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarGeneral">
                             <a class="dropdown-item" href="#" @click="newChar(50)">Druid</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Builds</h6>
                             <div v-if="$work_mod.value == 'diablo2'">
-                              <div class="dropdown-divider"></div>
-                              <h6 class="dropdown-header">Builds</h6>
                               <a class="dropdown-item" href="#" @click="newChar(51)">Fire</a>
                             </div>
                             <div v-if="$work_mod.value == 'blizzless_beta'">
@@ -190,9 +190,9 @@
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarGeneral">
                             <a class="dropdown-item" href="#" @click="newChar(20)">Necromancer</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Builds</h6>
                             <div v-if="$work_mod.value == 'diablo2'">
-                              <div class="dropdown-divider"></div>
-                              <h6 class="dropdown-header">Builds</h6>
                               <a class="dropdown-item" href="#" @click="newChar(21)">Poison</a>
                             </div>
                             <div v-if="$work_mod.value == 'blizzless_beta'">
@@ -209,9 +209,9 @@
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarGeneral">
                             <a class="dropdown-item" href="#" @click="newChar(30)">Paladin</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Builds</h6>
                             <div v-if="$work_mod.value == 'diablo2'">
-                              <div class="dropdown-divider"></div>
-                              <h6 class="dropdown-header">Builds</h6>
                               <a class="dropdown-item" href="#" @click="newChar(31)">Hammerdin</a>
                               <a class="dropdown-item" href="#" @click="newChar(32)">Fist of the Heavens</a>
                             </div>
@@ -228,9 +228,9 @@
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarGeneral">
                             <a class="dropdown-item" href="#" @click="newChar(10)">Sorceress</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Builds</h6>
                             <div v-if="$work_mod.value == 'diablo2'">
-                              <div class="dropdown-divider"></div>
-                              <h6 class="dropdown-header">Builds</h6>
                               <a class="dropdown-item" href="#" @click="newChar(11)">Blizzard</a>
                               <a class="dropdown-item" href="#" @click="newChar(12)">Blizzard(Mana)</a>
                               <a class="dropdown-item" href="#" @click="newChar(13)">Fire</a>
@@ -344,6 +344,7 @@
                         <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x60)">Save D2</button> -->
                         <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x63)">Save D2R</button> -->
                         <button type="button" id="d2r" class="btn btn-primary" @click="saveFile($work_mod.value, $work_version.value)">Save</button>
+                        <button type="button" id="d2r-blizz" class="btn btn-primary" @click="saveFile('blizzless', $work_version.value)">Save Blizzless</button>
                       </div>
                     </div>
                   </div>
@@ -497,6 +498,7 @@
         this.preview = null;
         this.stashData = null;
         this.getPaletteData();
+        this.addItemsToItemPack();
         // console.log('Changing mod to ' + this.$work_mod.value + this.$work_version.value);
         // console.log(this.$d2s.getConstantData(this.$work_mod.value, this.$work_version.value));
         return succeed;
@@ -836,14 +838,14 @@
         const constants = this.$getWorkConstantData();
         // Regenerate item pack
         this.itempack = [];
-        this.itempack = ItemPack;
+        this.itempack.push(...ItemPack);
         this.addRunewordToItemPack(constants.runewords, "Runewords");
         this.addUniqToItemPack(constants.unq_items, "Uniques");
         this.addSetToItemPack(constants.set_items, "Sets");
         this.addBasesToItemPack(constants.armor_items, "Armor");
         this.addBasesToItemPack(constants.weapon_items, "Weapons");
         this.addOtherToItemPack(constants.other_items, "Misc");
-        this.resolveInventoryImages();  
+        //this.resolveInventoryImages();  
       },     
       newChar(index) {
         let bytes = [];
@@ -860,13 +862,14 @@
         this.readBuffer(event.target.result, event.target.filename);
       },
       readBuffer(bytes, filename) {
+        //this.addItemsToItemPack();
         if (filename) {
           if (filename.includes(".d2s")) {
             this.save = null;
             this.$d2s.read(bytes, this.$work_mod.value).then(response => {
               this.save = response;
               this.save.header.name = filename.split('.')[0];
-              this.addItemsToItemPack();
+              this.resolveInventoryImages();
             });
           } else if (filename.includes("")) {
             this.stashData = null;
@@ -883,9 +886,10 @@
           this.stashData = null;
           this.$d2s.read(bytes, this.$work_mod.value).then(response => {
             that.save = response;
-            this.addItemsToItemPack();
+            that.resolveInventoryImages();
           })
         }
+        
       },
       saveFileStash() {
         if (this.stashData != null) {
