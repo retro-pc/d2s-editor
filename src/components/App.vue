@@ -1092,6 +1092,7 @@
           if (socketIndex > 0) {
             item.socketed =  true;
             item.total_nr_of_sockets = item.magic_attributes[socketIndex].value;
+            item.magic_attributes.splice(socketIndex, 1);
           }
           this.itempack.push({
             key: `[${category}]/${item.set_name}`,
@@ -1123,6 +1124,7 @@
           if (socketIndex > 0) {
             item.socketed =  true;
             item.total_nr_of_sockets = item.magic_attributes[socketIndex].value;
+            item.magic_attributes.splice(socketIndex, 1);
           }
           this.itempack.push({
             key: `[${category}]/${item.unique_name}`,

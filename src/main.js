@@ -9,7 +9,7 @@ import * as d2s from '../lib/d2';
 // import { constants_diablo2_97 } from '../public/d2/constants_diablo2_97.js';
 // import { constants_diablo2_98 } from '../public/d2/constants_diablo2_98.js';
 import { constants_diablo2_99 } from '../public/d2/constants_diablo2_99.js';
-import { constants_blizzless_99_beta } from '../public/d2/constants_blizzless_99-beta.js';
+import { constants_blizzless_beta_99 } from '../public/d2/constants_blizzless_beta_99.js';
 import { constants_blizzless_99 } from '../public/d2/constants_blizzless_99.js';
 
 import App from './components/App.vue';
@@ -24,7 +24,7 @@ app.config.globalProperties.$d2s = d2s;
 // d2s.setConstantData('diablo2', 0x61, constants_diablo2_97); //alpha (D2R)
 // d2s.setConstantData('diablo2', 0x62, constants_diablo2_98); //2.4 (D2R)
 d2s.setConstantData('diablo2', 0x63, constants_diablo2_99); //2.5+ (D2R)
-d2s.setConstantData('blizzless_beta', 0x63, constants_blizzless_99_beta);
+d2s.setConstantData('blizzless_beta', 0x63, constants_blizzless_beta_99);
 d2s.setConstantData('blizzless', 0x63, constants_blizzless_99); //2.5+ (D2R)
 
 const work_mod = ref('blizzless');
