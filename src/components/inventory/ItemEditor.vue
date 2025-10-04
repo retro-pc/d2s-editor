@@ -1,16 +1,20 @@
 <template>
   <div class="item-editor">
-    <div class="form-row item-action-bar">
-      <div class="col-md-12">
+    <div class="form-row item-action-bar d-flex justify-content-between align-items-center">
+      <div v-if="item">
         <button type="button" class="btn btn-primary" @click="onEvent('share')">Share</button>
         <button type="button" class="btn btn-primary" @click="onEvent('copy')">Copy</button>
-        <span v-if="item.location_id != 6">
+        <span v-if="item && item.location_id != 6">
           <button type="button" class="btn btn-danger" @click="onEvent('delete')">Delete</button>
         </span>
       </div>
+      <div>
+        <button type="button" class="btn btn-primary" :disabled="$root.clipboard == null" @click="$root.paste()">Paste</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#LoadItem">Load Item</button>
+      </div>
     </div>
 
-    <div class="form-row header">
+    <div class="form-row header" v-if="item">
       <div class="item-preview">
         <Item :item.sync="item" clazz="item-edit"></Item>
         <!-- <Item :item="item" clazz="item-edit" @update:item="item = $event" /> -->
@@ -75,7 +79,7 @@
       </ul>
     </div>
 
-    <div v-if="!item.simple_item" class="item-stats">
+    <div v-if="item && !item.simple_item" class="item-stats">
       <div v-if="item.magic_attributes" class="item-magic-stats">
         <div>Item Stats</div>
         <ItemStatsEditor :id="id + 'Magic'" v-model:item-stats="item.magic_attributes"

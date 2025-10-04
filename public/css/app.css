@@ -506,7 +506,10 @@ ul {
   padding: 20px;
 }
 .item-editor {
-  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #00000011;
 }
 
 .item-stats .form-row {

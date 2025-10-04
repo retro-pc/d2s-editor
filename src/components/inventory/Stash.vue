@@ -1,78 +1,55 @@
 <template>
   <div class="stash">
-    <div
-          class="btn-group"
-          role="group">
+    <div class="btn-group" role="group">
+      <template v-if="!hidePersonal">
         <button
-            type="button"
-            class="btn btn-secondary"
-            :class="{ active: activeTab == 1 }"
-            @click="changeTab(1)">Personal
-        </button>
+          type="button"
+          class="btn btn-secondary"
+          :class="{ active: activeTab == 1 }"
+          @click="changeTab(1)">Personal</button>
         <button
-            type="button"
-            class="btn btn-secondary"
-            :class="{ active: activeTab == 2 }"
-            @click="changeTab(2)">Shared
-        </button>
+          v-for="i in sharedCount"
+          :key="`shared-tab-${i}`"
+          type="button"
+          class="btn btn-secondary"
+          :class="{ active: activeTab == (i + 1) }"
+          @click="changeTab(i + 1)">Shared</button>
+      </template>
+      <template v-else>
         <button
-            type="button"
-            class="btn btn-secondary"
-            :class="{ active: activeTab == 3 }"
-            @click="changeTab(3)">Shared
-        </button>
-        <button
-            type="button"
-            class="btn btn-secondary"
-            :class="{ active: activeTab == 4 }"
-            @click="changeTab(4)">Shared
-        </button>
+          v-for="i in sharedCount"
+          :key="`shared-only-tab-${i}`"
+          type="button"
+          class="btn btn-secondary"
+          :class="{ active: activeTab == i }"
+          @click="changeTab(i)">Shared</button>
+      </template>
     </div>
-    <div class="stash-bg":class="{'stash-bg-big': $work_mod.value !== 'diablo2'}">
+    <div class="stash-bg" :class="{'stash-bg-big': $work_mod.value !== 'diablo2'}">
       <Grid
-          v-if="activeTab == 1"
-          :width="stashGrid.w"
-          :height="stashGrid.h"
-          :page="1"
-          :items.sync="stash(0)"
-          @item-selected="onSelect"
-          @item-event="onEvent"
-          :id="'Grid'"
-          :contextMenu=contextMenu
-          class="y-0"></Grid>
+        v-if="!hidePersonal && activeTab == 1"
+        :width="stashGrid.w"
+        :height="stashGrid.h"
+        :page="1"
+        :items.sync="stash(0)"
+        @item-selected="onSelect"
+        @item-event="onEvent"
+        :id="'Grid'"
+        :contextMenu="contextMenu"
+        class="y-0"></Grid>
       <Grid
-          v-if="activeTab == 2"
-          :width="stashGrid.w"
-          :height="stashGrid.h"
-          :page="2"
-          :items.sync="stash(1)"
-          @item-selected="onSelect"
-          @item-event="onEvent"
-          :id="'Grid'"
-          :contextMenu=contextMenu
-          class="y-0"></Grid>
-      <Grid
-          v-if="activeTab == 3"
-          :width="stashGrid.w"
-          :height="stashGrid.h"
-          :page="3"
-          :items.sync="stash(2)"
-          @item-selected="onSelect"
-          @item-event="onEvent"
-          :id="'Grid'"
-          :contextMenu=contextMenu
-          class="y-0"></Grid>
-      <Grid
-          v-if="activeTab == 4"
-          :width="stashGrid.w"
-          :height="stashGrid.h"
-          :page="4"
-          :items.sync="stash(3)"
-          @item-selected="onSelect"
-          @item-event="onEvent"
-          :id="'Grid'"
-          :contextMenu=contextMenu
-          class="y-0"></Grid>
+        v-for="i in sharedCount"
+        :key="`grid-${i}`"
+        v-show="(hidePersonal ? activeTab == i : activeTab == (i + 1))"
+        :width="stashGrid.w"
+        :height="stashGrid.h"
+        :page="hidePersonal ? i : (i + 1)"
+        :items.sync="stash(i)"
+        @item-selected="onSelect"
+        @item-event="onEvent"
+        :id="'Grid'"
+        :contextMenu="contextMenu"
+        class="y-0"></Grid>
     </div>
   </div>
 </template>
@@ -99,6 +76,8 @@ export default {
     items: Object,
     id: String,
     contextMenu: Object,
+    hidePersonal: Boolean,
+    sharedCount: Number,
   },
   computed: {
     stashGrid() {

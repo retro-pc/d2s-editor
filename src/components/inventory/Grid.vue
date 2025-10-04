@@ -7,7 +7,7 @@
           v-on:dragleave="dragleave($event, w, h)" @contextmenu.prevent.stop="gridRC($event, w, h)">
       </div>
     </div>
-    <Item v-for="(item, idx) in items" :key="idx" :item.sync="item" @click.native="onSelect(item)" @contextmenu.prevent.stop="itemRC($event, item)"/>
+    <Item v-for="(item, idx) in items" :key="idx" :item.sync="item" @select="onSelect(item)" @contextmenu.prevent.stop="itemRC($event, item)"/>
   </div>
 </template>
 
