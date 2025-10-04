@@ -894,9 +894,15 @@
               this.save = response;
               this.save.header.name = filename.split('.')[0];
               this.resolveInventoryImages().then(() => { if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] inventory images resolved') });
+              if (this.$message) {
+                this.$message.success(`Character save opened successfully: \"${this.save.header.name}\"`);
+              }
             })
             .catch(err => {
               if (localStorage.getItem('isDebug') == '1') console.error('[readBuffer] d2s parse error:', err);
+              if (this.$message) {
+                this.$message.error(`Failed to open character save: ${err && err.message ? err.message : 'Unknown error'}`);
+              }
             });
           } else if (lower.endsWith(".d2i")) {
             if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] detected .d2i');
@@ -915,9 +921,15 @@
               for (var i = 0; i < this.stashData.pageCount; i++) {
                 [... this.stashData.pages[i].items].forEach(item => { this.setPropertiesOnItem(item)})
               }
+              if (this.$message) {
+                this.$message.success(`Shared stash opened successfully (${this.stashData.pageCount} pages)`);
+              }
             })
             .catch(err => {
               if (localStorage.getItem('isDebug') == '1') console.error('[readBuffer] d2i parse error:', err);
+              if (this.$message) {
+                this.$message.error(`Failed to open shared stash: ${err && err.message ? err.message : 'Unknown error'}`);
+              }
             })
           }
         } else {
@@ -931,9 +943,15 @@
             if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] d2s parsed OK (no filename)');
             that.save = response;
             that.resolveInventoryImages().then(() => { if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] inventory images resolved') });
+            if (that.$message) {
+              that.$message.success('Character save opened successfully');
+            }
           })
           .catch(err => {
             if (localStorage.getItem('isDebug') == '1') console.error('[readBuffer] d2s parse error (no filename):', err);
+            if (that.$message) {
+              that.$message.error(`Failed to open character save: ${err && err.message ? err.message : 'Unknown error'}`);
+            }
           })
         }
         
@@ -976,6 +994,9 @@
           };
           reader.onerror = (e) => {
             if (localStorage.getItem('isDebug') == '1') console.error('[onFileChange] FileReader error for', file.name, e);
+          if (this.$message) {
+            this.$message.error(`Failed to read file: ${file && file.name ? file.name : 'Unknown file'}`);
+          }
           };
           reader.readAsArrayBuffer(file);
         }
