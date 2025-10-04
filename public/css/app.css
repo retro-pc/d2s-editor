@@ -506,10 +506,11 @@ ul {
   padding: 20px;
 }
 .item-editor {
-  border: 1px solid #ccc;
+  border: 1px solid #111;
   padding: 10px;
   border-radius: 5px;
-  background-color: #00000011;
+  background-color: #00000022;
+  margin-top: 37px;
 }
 
 .item-stats .form-row {
@@ -621,13 +622,14 @@ ul {
     background: url(../img/hd-stash.png) no-repeat;
 }
 .stash-bg-big{
-  background-image: url(../img/hd-stash-big.png);
-  padding: 10px 20px 10px 0;
+  background-image: url(../img/hd-stash-big-2.png);
+  padding: 0;
+  border: 10px solid #000000 !important;
   background-size: 100% 100%;
   margin-bottom: 20px;
   .d2p-InventoryGrid {
     position: relative;
-    left: 10px;
+    left: 0px;
     width: 512px;
     height: 416px;
 

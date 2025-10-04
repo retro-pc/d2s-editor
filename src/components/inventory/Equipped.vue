@@ -50,16 +50,14 @@
       <div
           class="btn-group"
           role="group">
-        <button
-            type="button"
-            class="tab btn btn-secondary"
+        <a-button
+            class="tab"
             :class="{ active: !alt_displayed }"
-            @click="setAltDisplayed(false)">I</button>
-        <button
-            type="button"
-            class="tab btn btn-secondary"
+            @click="setAltDisplayed(false)">I</a-button>
+        <a-button
+            class="tab"
             :class="{ active: alt_displayed }"
-            @click="setAltDisplayed(true)">II</button>
+            @click="setAltDisplayed(true)">II</a-button>
       </div>
     </span>
       <span
@@ -96,16 +94,14 @@
       <div
           class="btn-group"
           role="group">
-        <button
-            type="button"
-            class="tab btn btn-secondary"
+        <a-button
+            class="tab"
             :class="{ active: !alt_displayed }"
-            @click="setAltDisplayed(false)">I</button>
-        <button
-            type="button"
-            class="tab btn btn-secondary"
+            @click="setAltDisplayed(false)">I</a-button>
+        <a-button
+            class="tab"
             :class="{ active: alt_displayed }"
-            @click="setAltDisplayed(true)">II</button>
+            @click="setAltDisplayed(true)">II</a-button>
       </div>
     </span>
       <span

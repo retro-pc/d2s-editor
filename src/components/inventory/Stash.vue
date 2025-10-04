@@ -2,27 +2,24 @@
   <div class="stash">
     <div class="btn-group" role="group">
       <template v-if="!hidePersonal">
-        <button
-          type="button"
-          class="btn btn-secondary"
+        <a-button
+          type="default"
           :class="{ active: activeTab == 1 }"
-          @click="changeTab(1)">Personal</button>
-        <button
+          @click="changeTab(1)">Personal</a-button>
+        <a-button
           v-for="i in sharedCount"
           :key="`shared-tab-${i}`"
-          type="button"
-          class="btn btn-secondary"
+          type="default"
           :class="{ active: activeTab == (i + 1) }"
-          @click="changeTab(i + 1)">Shared</button>
+          @click="changeTab(i + 1)">Shared</a-button>
       </template>
       <template v-else>
-        <button
+        <a-button
           v-for="i in sharedCount"
           :key="`shared-only-tab-${i}`"
-          type="button"
-          class="btn btn-secondary"
+          type="default"
           :class="{ active: activeTab == i }"
-          @click="changeTab(i)">Shared</button>
+          @click="changeTab(i)">Shared</a-button>
       </template>
     </div>
     <div class="stash-bg" :class="{'stash-bg-big': $work_mod.value !== 'diablo2'}">

@@ -1,6 +1,7 @@
 <template>
-  <ContextMenu :ref="'contextMenu'" @option-clicked="optionClicked"></ContextMenu>
-  <div @click.native="rootClick">
+  <a-config-provider :theme="{ algorithm: antdTheme.darkAlgorithm }">
+    <ContextMenu :ref="'contextMenu'" @option-clicked="optionClicked"></ContextMenu>
+    <div class="dark-theme" @click.native="rootClick">
     <link v-if="theme == 'd2'" href="css/theme.css" rel="stylesheet" />
 
     <div class="modal" tabindex="-1" role="dialog" id="LoadItem">
@@ -8,9 +9,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">Select an Item</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+            <a-button type="text" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a-button>
           </div>
           <div class="modal-body">
             <div class="row d-flex justify-content-center mt-3 pl-5 pr-5">
@@ -27,10 +26,10 @@
           </div>
           <div class="modal-footer">
             <input style="display:none;" type="file" name="d2iFile" @change="onItemFileChange" id="d2iFile">
-            <label for="d2iFile" class="mb-0 btn btn-primary">Load From File</label>
-            <button type="button" class="btn btn-primary" @click="loadBase64Item">Load From String</button>
-            <button type="button" class="btn btn-primary" @click="loadItem">Load</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <label for="d2iFile" class="mb-0"><a-button type="primary">Load From File</a-button></label>
+            <a-button type="primary" @click="loadBase64Item">Load From String</a-button>
+            <a-button type="primary" @click="loadItem">Load</a-button>
+            <a-button type="default" data-dismiss="modal">Close</a-button>
           </div>
         </div>
       </div>
@@ -48,32 +47,33 @@
                 <fieldset>
                   <div class="form-group">
                     <div class="input-group">
-                      <select id="open-mod" v-model="$work_mod.value" name="open-mod" title="Workspace Mod" @change="changeMod()">
-                        <option value="diablo2">Diablo2</option>
-                        <option value="blizzless">Blizzless</option>
-                        <option value="blizzless_beta">Blizzless Beta</option>
-                      </select>
-                      <select
+                      <a-select id="open-mod" v-model:value="$work_mod.value" name="open-mod" title="Workspace Mod" @change="changeMod()" style="min-width: 160px">
+                        <a-select-option value="diablo2">Diablo2</a-select-option>
+                        <a-select-option value="blizzless">Blizzless</a-select-option>
+                        <a-select-option value="blizzless_beta">Blizzless Beta</a-select-option>
+                      </a-select>
+                      <a-select
                         id="work-version"
-                        v-model="$work_version.value"
+                        v-model:value="$work_version.value"
                         name="work-version"
                         title="Workspace Version"
                         @change="changeMod()"
+                        style="min-width: 160px"
                       >
                         <!-- <option v-if="$work_mod.value == 'diablo2'" value="96">LOD 1.10-1.14d</option> -->
                         <!-- <option v-if="$work_mod.value == 'diablo2'" value="97">D2R Alpha</option> -->
                         <!-- <option v-if="$work_mod.value == 'diablo2'" value="98">D2R 2.4</option> -->
                         
                         <!-- <option v-if="$work_mod.value == 'blizzless'" value="98">Beta</option> -->
-                        <option value="99">D2R 2.5+</option>
-                      </select>
+                        <a-select-option value="99">D2R 2.5+</a-select-option>
+                      </a-select>
                       <div class="custom-file">
-                        <input type="file" name="d2sFile" class="custom-file-input" multiple @change="onFileChange"
-                          id="d2sFile" accept=".d2s,.d2i">
-                        <label class="custom-file-label load-save-label" for="d2sFile">*.d2s,*.d2i</label>
+                        <a-upload :before-upload="() => false" :multiple="true" :show-upload-list="false" accept=".d2s,.d2i" @change="onAntUploadChange">
+                          <a-button type="primary">Open D2S / D2I</a-button>
+                        </a-upload>
                       </div>
                       <div class="input-group-append">
-                        <button type="button" class="btn btn-primary" @click="pasteBase64Save">Paste as base64</button>
+                        <a-button type="primary" @click="pasteBase64Save">Paste as base64</a-button>
                       </div>
                       <!-- <div>
                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">Create New</button>
@@ -154,9 +154,7 @@
                         <div v-for="(notification, idx) in notifications" :key="idx" :class="notification.alert"
                           role="alert">
                           {{ notification.message }}
-                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
+                          <a-button type="text" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></a-button>
                         </div>
                         <div class="row mt-3">
                           <div class="col-auto equipment-inventory-col">
@@ -203,18 +201,19 @@
                     </div>
           <div v-if="save != null">
                       <div class="row" v-if="!isStashOnly">
-                        <button type="button" @click="unlockHell" class="btn btn-primary">Unlock Hell</button>
-                        <button type="button" @click="unlockAllWPs" class="btn btn-primary">Unlock All WPs</button>
-                        <button type="button" @click="setLvl99" class="btn btn-primary">Set Level 99</button>
-                        <button type="button" @click="setAllSkills20" class="btn btn-primary">Set All Skills 20</button>
-                        <button type="button" @click="unlockQs" class="btn btn-primary">Complete Skill/Stat Qs</button>
-                        <button type="button" @click="maxGold" class="btn btn-primary">Max Gold</button>
+                        <a-button type="primary" @click="unlockHell">Unlock Hell</a-button>
+                        <a-button type="primary" @click="unlockAllWPs">Unlock All WPs</a-button>
+                        <a-button type="primary" @click="setLvl99">Set Level 99</a-button>
+                        <a-button type="primary" @click="setAllSkills20">Set All Skills 20</a-button>
+                        <a-button type="primary" @click="unlockQs">Complete Skill/Stat Qs</a-button>
+                        <a-button type="primary" @click="maxGold">Max Gold</a-button>
                       </div>
                       <div class="row mt-3 ml-1">
                         <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x60)">Save D2</button> -->
                         <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x63)">Save D2R</button> -->
-                        <button type="button" id="d2r" class="btn btn-primary" @click="saveFile($work_mod.value, $work_version.value)">Save</button>
-                        <button type="button" id="d2r-blizz" class="btn btn-primary" @click="saveFile('blizzless', $work_version.value)">Save Blizzless</button>
+                        <!-- <a-button type="primary" id="d2r" @click="saveFile($work_mod.value, $work_version.value)">Save</a-button> -->
+                        <a-button type="primary" id="d2r-blizz" @click="saveFile('blizzless', $work_version.value)">Save file</a-button>
+                        <a-button type="primary" id="d2r-base64" @click="outputBase64Save($work_mod.value, $work_version.value)">Output as base64</a-button>
                       </div>
                     </div>
                   </div>
@@ -230,6 +229,7 @@
       </div>
     </div>
   </div>
+  </a-config-provider>
 </template>
 
 <script>
@@ -244,6 +244,7 @@
   import Mercenary from './Mercenary.vue';
   import ItemEditor from './inventory/ItemEditor.vue';
   import Stash from './inventory/Stash.vue';
+  import { theme as antdTheme } from 'ant-design-vue';
 
   import ItemPack from '../d2/ItemPack.js';
   import CharPack from '../d2/CharPack.js';
@@ -271,6 +272,7 @@
     },
     data() {
       return {
+        antdTheme: antdTheme,
         save: null,
         stashData: null,
         activeTab: 1,
@@ -354,6 +356,66 @@
       },
     },
     methods: {
+      onAntUploadChange({ fileList }) {
+        if (!fileList || !fileList.length) return;
+        const list = fileList.slice(0, 2);
+        list.forEach(f => {
+          const file = f.originFileObj || f;
+          if (!file) return;
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            try {
+              const buf = e.target.result;
+              this.readBuffer(buf, file.name);
+            } catch (err) {
+              // noop, readBuffer handles messaging
+            }
+          };
+          reader.readAsArrayBuffer(file);
+        });
+      },
+      async copyBase64OrPrompt(text) {
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(text);
+          } else {
+            window.prompt('Base64 save string (copy it):', text);
+          }
+        } catch (e) {
+          window.prompt('Base64 save string (copy it):', text);
+        }
+      },
+      async outputBase64Save(mod, version) {
+        try {
+          if (this.isStashOnly && this.stashData) {
+            const response = await this.$d2s.writeStash(this.stashData, this.$work_mod.value, this.$work_version.value);
+            const b64 = utils.arrayBufferToBase64(response);
+            await this.copyBase64OrPrompt(b64);
+            if (this.$message) {
+              this.$message.success('Shared stash base64 is copied to clipboard');
+            }
+            return;
+          }
+          if (!this.save) {
+            if (this.$message) {
+              this.$message.error('No save is loaded');
+            }
+            return;
+          }
+          this.save.header.version = version;
+          const response = await this.$d2s.write(this.save, mod, version);
+          const b64 = utils.arrayBufferToBase64(response);
+          await this.copyBase64OrPrompt(b64);
+          if (this.$message) {
+            this.$message.success('Character save base64 is copied to clipboard');
+          }
+        } catch (e) {
+          if (this.$message) {
+            this.$message.error('Failed to build base64');
+          }
+          if (localStorage.getItem('isDebug') == '1') console.error('[outputBase64Save] error', e);
+        }
+      },
       onCreateMenuClick({ key }) {
         const idx = parseInt(key);
         if (!isNaN(idx)) {
@@ -1252,3 +1314,30 @@
     },
   };
 </script>
+
+<style>
+.dark-theme {
+  background-color: #141414;
+  color: #e8e8e8;
+}
+.dark-theme .card.bg-light {
+  background-color: #1f1f1f;
+}
+.dark-theme .alert.alert-primary {
+  background-color: #2a2a2a;
+  border-color: #3a3a3a;
+  color: #e6f7ff;
+}
+.dark-theme .modal-content {
+  background-color: #1f1f1f;
+  color: #e8e8e8;
+}
+.dark-theme .nav-tabs .nav-link {
+  color: #bfbfbf;
+}
+.dark-theme .nav-tabs .nav-link.active {
+  color: #fff;
+  background-color: #262626;
+  border-color: #434343 #434343 #262626;
+}
+</style>

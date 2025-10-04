@@ -2,11 +2,11 @@
   <div class="form-row">
     <div class="col-md-4" v-for="(difficulty, i) in difficulties" :key="i">
       <ul>
-        <li><label><input class="form-check-input" type="checkbox" @input="updateDiff(difficulty)" v-model="difficulty.all" :key="difficulty.key"/>{{difficulty.label}}</label></li>
+        <li><a-checkbox @change="() => updateDiff(difficulty)" v-model:checked="difficulty.all" :key="difficulty.key">{{difficulty.label}}</a-checkbox></li>
         <ul class="col-md-offset-1" v-for="(act, j) in difficulty.acts" :key="j">
-          <li><label><input class="form-check-input" type="checkbox" @input="updateAct(difficulty, act)" v-model="act.all" :key="act.key"/>{{ act.label }}</label></li>
+          <li><a-checkbox @change="() => updateAct(difficulty, act)" v-model:checked="act.all" :key="act.key">{{ act.label }}</a-checkbox></li>
           <ul class="col-md-offset-2" v-for="(waypoint, k) in act.waypoints" :key="j">
-            <li><label><input class="form-check-input" type="checkbox" @input="updateWP(difficulty, act, waypoint)" v-model="save.header.waypoints[difficulty.key][act.key][waypoint.key]" :key="waypoint.key"/>{{ waypoint.label }}</label></li>
+            <li><a-checkbox @change="() => updateWP(difficulty, act, waypoint)" v-model:checked="save.header.waypoints[difficulty.key][act.key][waypoint.key]" :key="waypoint.key">{{ waypoint.label }}</a-checkbox></li>
           </ul>
         </ul>
       </ul>

@@ -2,15 +2,15 @@
   <div class="item-editor">
     <div class="form-row item-action-bar d-flex justify-content-between align-items-center">
       <div v-if="item">
-        <button type="button" class="btn btn-primary" @click="onEvent('share')">Share</button>
-        <button type="button" class="btn btn-primary" @click="onEvent('copy')">Copy</button>
+        <a-button type="primary" @click="onEvent('share')">Share</a-button>
+        <a-button type="primary" @click="onEvent('copy')">Copy</a-button>
         <span v-if="item && item.location_id != 6">
-          <button type="button" class="btn btn-danger" @click="onEvent('delete')">Delete</button>
+          <a-button type="primary" danger @click="onEvent('delete')">Delete</a-button>
         </span>
       </div>
       <div>
-        <button type="button" class="btn btn-primary" :disabled="$root.clipboard == null" @click="$root.paste()">Paste</button>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#LoadItem">Load Item</button>
+        <a-button type="primary" :disabled="$root.clipboard == null" @click="$root.paste()">Paste</a-button>
+        <a-button type="primary" data-toggle="modal" data-target="#LoadItem">Load Item</a-button>
       </div>
     </div>
 
@@ -24,8 +24,7 @@
         <span v-if="!item.simple_item">
           <li>
             <label>Item Level:</label>
-            <input class="edit-box" type="number" v-model.number="item.level" min="1" max="99"
-              @input="onEvent('update')" />
+            <a-input-number class="edit-box" v-model:value="item.level" :min="1" :max="99" @update:value="() => onEvent('update')" />
           </li>
           <li>
             <label>Quality:</label>
@@ -57,23 +56,17 @@
         </li>
         <li v-if="item.defense_rating">
           <label>Defense:</label>
-          <input class="edit-box" type="number" v-model.number="item.defense_rating" min="1" max="999"
-            @input="onEvent('update')" />
+          <a-input-number class="edit-box" v-model:value="item.defense_rating" :min="1" :max="999" @update:value="() => onEvent('update')" />
         </li>
         <li v-if="getItemMaxSockets() > 0 && !item.given_runeword">
           <!-- <div>{{getItemMaxSockets()}}</div> -->
           <!--  :max="getItemMaxSockets()" -->
           <label>Sockets:</label>
-          <input class="edit-box" type="number" v-model.number="item.total_nr_of_sockets" min="0"
-            @input="onEvent('update')" />
+          <a-input-number class="edit-box" v-model:value="item.total_nr_of_sockets" :min="0" @update:value="() => onEvent('update')" />
         </li>
         <li v-if="itemCanEthereal(item.type)">
           <div class="form-check form-check-inline">
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox" v-model.number="item.ethereal" :true-value="1"
-                :false-value="0" @change="onEvent('update')">
-              Ethereal
-            </label>
+            <a-checkbox v-model:checked="item.ethereal" :true-value="1" :false-value="0" @change="onEvent('update')">Ethereal</a-checkbox>
           </div>
         </li>
       </ul>
