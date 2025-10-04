@@ -304,6 +304,9 @@ export default {
     contextMenu: Object,
   },
   methods: {
+    onEvent(e) {
+      this.$emit('item-event', e);
+    },
     setAltDisplayed(value) {
       this.alt_displayed = value;
     },
