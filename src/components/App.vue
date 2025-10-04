@@ -72,6 +72,9 @@
                           id="d2sFile" accept=".d2s,.d2i">
                         <label class="custom-file-label load-save-label" for="d2sFile">*.d2s,*.d2i</label>
                       </div>
+                      <div class="input-group-append">
+                        <button type="button" class="btn btn-primary" @click="pasteBase64Save">Paste as base64</button>
+                      </div>
                       <!-- <div>
                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">Create New</button>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -422,7 +425,8 @@
       if (localStorage.grid) {
         this.grid = JSON.parse(localStorage.getItem('grid'));
       }
-      this.changeMod();
+      await this.changeMod();
+      await this.initFromQuery();
     },
     filters: {
     },
@@ -480,7 +484,7 @@
         utils.fillPalettes(this.$palettes.value, a1PaletteBuffer, colorMapBuffers);
       },
       // Uses globalProperties $work_mod & $work_version as input
-      changeMod(failSafe = true) {
+      async changeMod(failSafe = true) {
         let succeed = true;
         try {
           // Safety check
@@ -497,7 +501,7 @@
         this.save = null;
         this.preview = null;
         this.stashData = null;
-        this.getPaletteData();
+        await this.getPaletteData();
         this.addItemsToItemPack();
         // console.log('Changing mod to ' + this.$work_mod.value + this.$work_version.value);
         // console.log(this.$d2s.getConstantData(this.$work_mod.value, this.$work_version.value));
@@ -879,6 +883,42 @@
       onFileLoad(event) {
         this.readBuffer(event.target.result, event.target.filename);
       },
+      async readBufferAuto(bytes) {
+        // Try to read as character first, then as shared stash
+        this.save = null;
+        this.selected = null;
+        this.stashData = null;
+        try {
+          const response = await this.$d2s.read(bytes, this.$work_mod.value);
+          this.save = response;
+          await this.resolveInventoryImages();
+          if (this.$message) {
+            this.$message.success('Character save opened successfully');
+          }
+          return;
+        } catch (e1) {
+          // Fallback to stash parsing
+        }
+        try {
+          const response = await this.$d2s.readStash(bytes, this.$work_mod.value);
+          if (!this.save) {
+            // Ensure UI renders stash even without a loaded character
+            this.save = { items: [], merc_items: [], corpse_items: [], golem_item: null, header: {} };
+          }
+          this.stashData = response;
+          for (var i = 0; i < this.stashData.pageCount; i++) {
+            [... this.stashData.pages[i].items].forEach(item => { this.setPropertiesOnItem(item)});
+          }
+          if (this.$message) {
+            this.$message.success(`Shared stash opened successfully (${this.stashData.pageCount} pages)`);
+          }
+          return;
+        } catch (e2) {
+          if (this.$message) {
+            this.$message.error('Provided base64 is not a valid D2S or D2I file');
+          }
+        }
+      },
       readBuffer(bytes, filename) {
         //this.addItemsToItemPack();
         const byteLen = bytes && (bytes.byteLength ?? bytes.length ?? 0);
@@ -955,6 +995,68 @@
           })
         }
         
+      },
+      async initFromQuery() {
+        try {
+          const search = window.location.search || '';
+          const match = search.match(/[?&]s=([^&]*)/);
+          if (!match) return;
+          const encoded = match[1];
+          // Preserve '+' as plus, only decode percent-encoding
+          const decoded = decodeURIComponent(encoded.replace(/\+/g, '%2B'));
+          const raw = decoded.trim();
+          const cleaned = raw.replace(/\s+/g, '').replace(/^data:.*?;base64,/, '');
+          let normalized = cleaned.replace(/-/g, '+').replace(/_/g, '/');
+          const pad = normalized.length % 4;
+          if (pad === 2) normalized += '==';
+          else if (pad === 3) normalized += '=';
+          let bytes;
+          try {
+            bytes = utils.b64ToArrayBuffer(normalized);
+          } catch (e) {
+            if (this.$message) {
+              this.$message.error('Query parameter "s" is not valid base64');
+            }
+            return;
+          }
+          await this.readBufferAuto(bytes);
+        } catch (err) {
+          if (this.$message) {
+            this.$message.error('Failed to process query parameter "s"');
+          }
+        }
+      },
+      async pasteBase64Save() {
+        try {
+          if (!navigator.clipboard || !navigator.clipboard.readText) {
+            if (this.$message) {
+              this.$message.error('Clipboard API is not available');
+            }
+            return;
+          }
+          const raw = (await navigator.clipboard.readText() || '').trim();
+          if (!raw) {
+            if (this.$message) {
+              this.$message.error('Clipboard is empty');
+            }
+            return;
+          }
+          const b64 = raw.replace(/\s+/g, '').replace(/^data:.*?;base64,/, '');
+          let bytes;
+          try {
+            bytes = utils.b64ToArrayBuffer(b64);
+          } catch (e) {
+            if (this.$message) {
+              this.$message.error('Clipboard does not contain valid base64 data');
+            }
+            return;
+          }
+          await this.readBufferAuto(bytes);
+        } catch (err) {
+          if (this.$message) {
+            this.$message.error(`Failed to open data from clipboard: ${err && err.message ? err.message : 'Unknown error'}`);
+          }
+        }
       },
       saveFileStash() {
         if (this.stashData != null) {
