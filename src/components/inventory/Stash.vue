@@ -96,7 +96,7 @@ export default {
     };
   },
   props: {
-    items: Array,
+    items: Object,
     id: String,
     contextMenu: Object,
   },
@@ -110,6 +110,9 @@ export default {
   methods: {
     onSelect(item) {
       this.$emit('item-selected', item);
+    },
+    onEvent(e) {
+      this.$emit('item-event', e);
     },
     stash(i) {
       if (this.items.pages[i] == null) return [];
