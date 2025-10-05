@@ -1,6 +1,7 @@
 <template>
-  <ContextMenu :ref="'contextMenu'" @option-clicked="optionClicked"></ContextMenu>
-  <div @click.native="rootClick">
+  <a-config-provider :theme="{ algorithm: antdTheme.darkAlgorithm }">
+    <ContextMenu :ref="'contextMenu'" @option-clicked="optionClicked"></ContextMenu>
+    <div class="dark-theme" @click.native="rootClick">
     <link v-if="theme == 'd2'" href="css/theme.css" rel="stylesheet" />
 
     <div class="modal" tabindex="-1" role="dialog" id="LoadItem">
@@ -8,9 +9,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">Select an Item</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+            <a-button type="text" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a-button>
           </div>
           <div class="modal-body">
             <div class="row d-flex justify-content-center mt-3 pl-5 pr-5">
@@ -26,11 +25,11 @@
             </div>
           </div>
           <div class="modal-footer">
-            <input style="display:none;" type="file" name="d2iFile" @change="onItemFileChange" id="d2iFile">
-            <label for="d2iFile" class="mb-0 btn btn-primary">Load From File</label>
-            <button type="button" class="btn btn-primary" @click="loadBase64Item">Load From String</button>
-            <button type="button" class="btn btn-primary" @click="loadItem">Load</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <input style="display:none;" type="file" name="d2iFile" @change="onItemFileChange" id="d2iFile" ref="d2iFile">
+            <a-button type="primary" @click="$refs.d2iFile && $refs.d2iFile.click()">Load From File</a-button>
+            <a-button type="primary" @click="loadBase64Item">Load From String</a-button>
+            <a-button type="primary" :disabled="!preview" @click="loadItem">Load</a-button>
+            <a-button type="default" data-dismiss="modal">Close</a-button>
           </div>
         </div>
       </div>
@@ -46,229 +45,128 @@
               </div>
               <form id="d2sForm">
                 <fieldset>
-                  <div class="form-group">
-                    <div class="input-group">
-                      <select id="open-mod" v-model="$work_mod.value" name="open-mod" title="Workspace Mod" @change="changeMod()">
-                        <option value="diablo2">Diablo2</option>
-                        <option value="blizzless">Blizzless</option>
-                        <option value="blizzless_beta">Blizzless Beta</option>
-                      </select>
-                      <select
-                        id="work-version"
-                        v-model="$work_version.value"
-                        name="work-version"
-                        title="Workspace Version"
-                        @change="changeMod()"
-                      >
-                        <!-- <option v-if="$work_mod.value == 'diablo2'" value="96">LOD 1.10-1.14d</option> -->
-                        <!-- <option v-if="$work_mod.value == 'diablo2'" value="97">D2R Alpha</option> -->
-                        <!-- <option v-if="$work_mod.value == 'diablo2'" value="98">D2R 2.4</option> -->
-                        
-                        <!-- <option v-if="$work_mod.value == 'blizzless'" value="98">Beta</option> -->
-                        <option value="99">D2R 2.5+</option>
-                      </select>
-                      <div class="custom-file">
-                        <input type="file" name="d2sFile" class="custom-file-input" multiple @change="onFileChange"
-                          id="d2sFile" accept=".d2s,.d2i">
-                        <label class="custom-file-label load-save-label" for="d2sFile">*.d2s,*.d2i</label>
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <h5 class="mt-1 mb-2">Create</h5>
+                      <a-dropdown>
+                        <a-button type="primary">Create new</a-button>
+                        <template #overlay>
+                          <a-menu @click="onCreateMenuClick">
+                            <a-menu-item key="0">Amazon</a-menu-item>
+                            <a-menu-item key="10">Sorceress</a-menu-item>
+                            <a-menu-item key="20">Necromancer</a-menu-item>
+                            <a-menu-item key="30">Paladin</a-menu-item>
+                            <a-menu-item key="40">Barbarian</a-menu-item>
+                            <a-menu-item key="50">Druid</a-menu-item>
+                            <a-menu-item key="60">Assassin</a-menu-item>
+                          </a-menu>
+                        </template>
+                      </a-dropdown>
+                    </div>
+                    <div class="col-md-6">
+                      <h5 class="mt-1 mb-2">Open</h5>
+                      <div class="form-group">
+                        <Flex gap="6" align="center" justify="left">
+                          <a-select
+                            id="open-mod"
+                            v-model:value="$work_mod.value"
+                            name="open-mod"
+                            title="Workspace Mod"
+                            @change="changeMod()"
+                            style="min-width: 120px"
+                            class="flex-1"
+                          >
+                            <a-select-option value="diablo2">Diablo2</a-select-option>
+                            <a-select-option value="blizzless">Blizzless</a-select-option>
+                            <a-select-option value="blizzless_beta">Blizzless Beta</a-select-option>
+                          </a-select>
+                          <a-select
+                            id="work-version"
+                            v-model:value="$work_version.value"
+                            name="work-version"
+                            title="Workspace Version"
+                            @change="changeMod()"
+                            style="min-width: 80px"
+                            class="flex-1"
+                          >
+                            <!-- <option v-if="$work_mod.value == 'diablo2'" value="96">LOD 1.10-1.14d</option> -->
+                            <!-- <option v-if="$work_mod.value == 'diablo2'" value="97">D2R Alpha</option> -->
+                            <!-- <option v-if="$work_mod.value == 'diablo2'" value="98">D2R 2.4</option> -->
+                            
+                            <!-- <option v-if="$work_mod.value == 'blizzless'" value="98">Beta</option> -->
+                            <a-select-option value="99">D2R 2.5+</a-select-option>
+                          </a-select>
+                          <div class="flex-1">
+                            <a-upload :before-upload="() => false" :multiple="true" :show-upload-list="false" accept=".d2s,.d2i" @change="onAntUploadChange">
+                              <a-button type="primary">Open D2S / D2I</a-button>
+                            </a-upload>
+                          </div>
+                          <div class="flex-1">
+                            <a-button type="primary" @click="pasteBase64Save">Paste as base64</a-button>
+                          </div>
+                        </Flex>
                       </div>
-                      <!-- <div>
-                       <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">Create New</button>
-                        <div class="dropdown-menu dropdown-menu-right">
-                          <button class="dropdown-item" type="button" @click="newChar(0)">Amazon</button>
-                          <button class="dropdown-item" type="button" @click="newChar(1)">Sorceress</button>
-                          <button class="dropdown-item" type="button" @click="newChar(2)">Necromancer</button>
-                          <button class="dropdown-item" type="button" @click="newChar(3)">Paladin</button>
-                          <button class="dropdown-item" type="button" @click="newChar(4)">Barbarian</button>
-                          <button class="dropdown-item" type="button" @click="newChar(5)">Druid</button>
-                          <button class="dropdown-item" type="button" @click="newChar(6)">Assassin</button>
-                        </div>
-                      </div>
-                      <div class="input-group-append"><span>&nbsp;</span></div> -->
                     </div>
                   </div>
 
-                  <nav class="navbar navbar-expand-md navbar-light">
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Create new</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Amazon
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(0)">Amazon</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <div v-if="$work_mod.value == 'diablo2'">
-                              <a class="dropdown-item" href="#" @click="newChar(1)">Bowazon(Physical)</a>
-                              <a class="dropdown-item" href="#" @click="newChar(2)">Bowazon(Elemental)</a>
-                              <a class="dropdown-item" href="#" @click="newChar(3)">Bowazon(Mavina)</a>
-                              <a class="dropdown-item" href="#" @click="newChar(4)">Exploding Arrow</a>
-                              <a class="dropdown-item" href="#" @click="newChar(5)">Ligthing Fury</a>
-                              <a class="dropdown-item" href="#" @click="newChar(6)">Poison</a>
-                              <a class="dropdown-item" href="#" @click="newChar(7)">Spearzon</a>
-                            </div>
-                            <div v-if="$work_mod.value == 'blizzless_beta'">
-                              <a class="dropdown-item" href="#" @click="newChar(1)">Poison</a>
-                              <a class="dropdown-item" href="#" @click="newChar(2)">Spearzon</a>
-                              <a class="dropdown-item" href="#" @click="newChar(3)">Cold</a>
-                              <a class="dropdown-item" href="#" @click="newChar(4)">Bowazon</a>
-                              <a class="dropdown-item" href="#" @click="newChar(5)">FemaleKnight</a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Assassin
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(60)">Assassin</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <div v-if="$work_mod.value == 'diablo2'">
-                              <a class="dropdown-item" href="#" @click="newChar(61)">Phoenix</a>
-                            </div>
-                            <div v-if="$work_mod.value == 'blizzless_beta'">
-                              <a class="dropdown-item" href="#" @click="newChar(61)">BladeSin</a>
-                              <a class="dropdown-item" href="#" @click="newChar(62)">FireTrapper</a>
-                              <a class="dropdown-item" href="#" @click="newChar(63)">Phoenix</a>
-                              <a class="dropdown-item" href="#" @click="newChar(64)">Trapper</a>
-                              <a class="dropdown-item" href="#" @click="newChar(65)">Kicker</a>
-                              <a class="dropdown-item" href="#" @click="newChar(66)">BladeFury</a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Barbarian
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(40)">Barbarian</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <div v-if="$work_mod.value == 'diablo2'">
-                              <a class="dropdown-item" href="#" @click="newChar(41)">Whirlwind</a>
-                              <a class="dropdown-item" href="#" @click="newChar(42)">Double Throw</a>
-                            </div>
-                            <div v-if="$work_mod.value == 'blizzless_beta'">
-                              <a class="dropdown-item" href="#" @click="newChar(41)">Whirlwind</a>
-                              <a class="dropdown-item" href="#" @click="newChar(42)">WC</a>
-                              <a class="dropdown-item" href="#" @click="newChar(43)">Thrower</a>
-                              <a class="dropdown-item" href="#" @click="newChar(44)">Berserk</a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Druid
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(50)">Druid</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <div v-if="$work_mod.value == 'diablo2'">
-                              <a class="dropdown-item" href="#" @click="newChar(51)">Fire</a>
-                            </div>
-                            <div v-if="$work_mod.value == 'blizzless_beta'">
-                               <a class="dropdown-item" href="#" @click="newChar(51)">Fire</a>
-                               <a class="dropdown-item" href="#" @click="newChar(52)">Shoсkwave</a>
-                               <a class="dropdown-item" href="#" @click="newChar(53)">Rabies</a> 
-                            </div>
-                          </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Necromancer
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(20)">Necromancer</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <div v-if="$work_mod.value == 'diablo2'">
-                              <a class="dropdown-item" href="#" @click="newChar(21)">Poison</a>
-                            </div>
-                            <div v-if="$work_mod.value == 'blizzless_beta'">
-                              <a class="dropdown-item" href="#" @click="newChar(21)">Poison</a>
-                              <a class="dropdown-item" href="#" @click="newChar(22)">Ultra</a>
-                              <a class="dropdown-item" href="#" @click="newChar(23)">Coroner</a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Paladin
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(30)">Paladin</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <div v-if="$work_mod.value == 'diablo2'">
-                              <a class="dropdown-item" href="#" @click="newChar(31)">Hammerdin</a>
-                              <a class="dropdown-item" href="#" @click="newChar(32)">Fist of the Heavens</a>
-                            </div>
-                            <div v-if="$work_mod.value == 'blizzless_beta'">
-                              <a class="dropdown-item" href="#" @click="newChar(31)">Hammerdin</a>
-                              <a class="dropdown-item" href="#" @click="newChar(32)">Auradin</a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Sorceress
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(10)">Sorceress</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <div v-if="$work_mod.value == 'diablo2'">
-                              <a class="dropdown-item" href="#" @click="newChar(11)">Blizzard</a>
-                              <a class="dropdown-item" href="#" @click="newChar(12)">Blizzard(Mana)</a>
-                              <a class="dropdown-item" href="#" @click="newChar(13)">Fire</a>
-                              <a class="dropdown-item" href="#" @click="newChar(14)">Nova</a>
-                              <a class="dropdown-item" href="#" @click="newChar(15)">Enchant Bow</a>
-                            </div>
-                            <div v-if="$work_mod.value == 'blizzless_beta'">
-                              <a class="dropdown-item" href="#" @click="newChar(11)">Enchantress</a>
-                              <a class="dropdown-item" href="#" @click="newChar(12)">Rogue</a>
-                              <a class="dropdown-item" href="#" @click="newChar(13)">Fire</a>
-                              <a class="dropdown-item" href="#" @click="newChar(14)">Nova</a>
-                              <a class="dropdown-item" href="#" @click="newChar(15)">Blizzard</a>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
+                  <nav v-if="hasOpened" class="navbar navbar-expand-md navbar-light">
+                    <div class="w-100 d-flex justify-content-between align-items-center">
+                      <div class="save-info d-flex align-items-center flex-1" v-if="hasOpened">
+                        <span class="mr-2">Current:</span>
+                        <template v-if="save && save.header && save.header.name">
+                          <img v-if="classIconSrc" :src="classIconSrc" alt="class" style="height:24px;width:24px;object-fit:contain;" />
+                          <strong class="ml-2">{{ save.header.name }}</strong>
+                          <span class="ml-2">Level {{ save.header.level }}</span>
+                          <a-tag class="ml-2" :color="currentModeLabelColor">{{ currentModeLabel }}</a-tag>
+                          <a-tag v-if="isClassic" class="ml-2" color="gold">Classic</a-tag>
+                        </template>
+                        <template v-else-if="stashData">
+                          <img src="img/icons/stash.png" alt="stash" style="height:24px;width:24px;object-fit:contain;" />
+                          <Flex gap="2" align="center" justify="left" class="ml-2">
+                            <Tag color="gold">Pages: {{ stashData.pageCount }}</Tag>
+                            <Tag color="gold">Items: {{ stashItemsCount }}</Tag>
+                          </Flex>
+                        </template>
+                      </div>
+                      <div v-if="save != null" class="d-flex flex-1 justify-content-end">
+                        <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x60)">Save D2</button> -->
+                        <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x63)">Save D2R</button> -->
+                        <!-- <a-button type="primary" id="d2r" @click="saveFile($work_mod.value, $work_version.value)">Save</a-button> -->
+                        <a-button type="primary" id="d2r-blizz" @click="saveFile('blizzless', $work_version.value)">Save file</a-button>
+                        <a-button type="primary" id="d2r-base64" @click="outputBase64Save($work_mod.value, $work_version.value)">Output as base64</a-button>
+                      </div>
                     </div>
                   </nav>
 
                   <div v-if="save != null">
+                    <div class="mb-3 ml-3">
+                      <div class="row" v-if="!isStashOnly">
+                        <a-button type="primary" @click="unlockHell">Unlock Hell</a-button>
+                        <a-button type="primary" @click="unlockAllWPs">Unlock All WPs</a-button>
+                        <a-button type="primary" @click="setLvl99">Set Level 99</a-button>
+                        <a-button type="primary" @click="setAllSkills20">Set All Skills 20</a-button>
+                        <a-button type="primary" @click="unlockQs">Complete Skill/Stat Qs</a-button>
+                        <a-button type="primary" @click="maxGold">Max Gold</a-button>
+                      </div>
+                    </div>
                     <ul class="nav nav-tabs" id="tabs">
                       <li class="nav-item">
                         <a class="nav-link active" id="items-tab" data-toggle="tab" data-target="#items-content"
                           role="tab" type="button">Equipment</a>
                       </li>
-                      <li class="nav-item" role="presentation">
+                      <li class="nav-item" role="presentation" v-if="!isStashOnly">
                         <a class="nav-link" id="stats-tab" data-toggle="tab" data-target="#stats-content" role="tab"
                           type="button">Character</a>
                       </li>
-                      <li class="nav-item" role="presentation">
+                      <li class="nav-item" role="presentation" v-if="!isStashOnly">
                         <a class="nav-link" id="skills-tab" data-toggle="tab" data-target="#skills-content" role="tab"
                           type="button">Skills</a>
                       </li>
-                      <li class="nav-item" role="presentation">
+                      <li class="nav-item" role="presentation" v-if="!isStashOnly">
                         <a class="nav-link" id="quests-tab" data-toggle="tab" data-target="#quests-content" role="tab"
                           type="button">Quests</a>
                       </li>
-                      <li class="nav-item" role="presentation">
+                      <li class="nav-item" role="presentation" v-if="!isStashOnly">
                         <a class="nav-link" id="waypoints-tab" data-toggle="tab" data-target="#waypoints-content"
                           role="tab" type="button">Waypoints</a>
                       </li>
@@ -278,25 +176,25 @@
                         <div v-for="(notification, idx) in notifications" :key="idx" :class="notification.alert"
                           role="alert">
                           {{ notification.message }}
-                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
+                          <a-button type="text" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></a-button>
                         </div>
                         <div class="row mt-3">
                           <div class="col-auto equipment-inventory-col">
-                            <Equipped :items.sync="equipped" @item-selected="onSelect" @item-event="onEvent"
-                              :id="'Equipped'" :contextMenu="$refs.contextMenu">
+                            <Equipped v-if="!isStashOnly" :items.sync="equipped" @item-selected="onSelect" @item-event="onEvent"
+                              :id="'Equipped'" :contextMenu="$refs.contextMenu" :gold="save?.attributes?.gold">
                             </Equipped>
                             <!-- <Grid v-if="activeTab == 1 || activeTab == 10" :width="grid.inv.w" :height="grid.inv.h" :page="1"
                               :items.sync="inventory" @item-selected="onSelect" @item-event="onEvent" :id="'InventoryGrid'" :contextMenu="$refs.contextMenu">
                             </Grid> -->
-                            <Stash :items.sync="stash" @item-selected="onSelect" @item-event="onEvent" :id="'Stash'"
+                            <Stash :items.sync="stashWithMeta" @item-selected="onSelect" @item-event="onEvent" :id="'Stash'"
+                              :hidePersonal="isStashOnly"
+                              :sharedCount="stashSharedCount"
                               :contextMenu="$refs.contextMenu">
                             </Stash>
-                            <Mercenary :items.sync="mercenary" @item-selected="onSelect"
+                            <Mercenary v-if="!isStashOnly" :items.sync="mercenary" @item-selected="onSelect"
                               :contextMenu="$refs.contextMenu">
                             </Mercenary>
-                            <div class="cube">
+                            <div class="cube" v-if="!isStashOnly">
                               <Grid class="cube__grid" :width="grid.cube.w" :height="grid.cube.h" :page="8"
                                 :items.sync="cube" @item-selected="onSelect" @item-event="onEvent" :id="'CubeGrid'"
                                 :contextMenu="$refs.contextMenu">
@@ -304,47 +202,23 @@
                             </div>
                           </div>
                           <div class="col">
-                            <div class="col">
-                              <div class="row mb-3 justify-content-end">
-                                <button type="button" class="btn btn-primary" :disabled="!clipboard"
-                                  @click="paste()">Paste</button>
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                  data-target="#LoadItem">Load
-                                  Item</button>
-                              </div>
-                            </div>
-                            <ItemEditor v-if="selected" :id="'Selected'" :item.sync="selected" :location="location"
+                            <div class="col"></div>
+                            <ItemEditor :id="'Selected'" :item.sync="selected" :location="location"
                               ref="editor" @item-event="onEvent"></ItemEditor>
                           </div>
                         </div>
                       </div>
                       <div class="tab-pane" id="stats-content" role="tabpanel">
-                        <Stats v-bind:save.sync="save" />
+                        <Stats v-if="save && save.header && save.attributes" v-bind:save.sync="save" />
                       </div>
                       <div class="tab-pane" id="waypoints-content" role="tabpanel">
-                        <Waypoints v-bind:save.sync="save" />
+                        <Waypoints v-if="save && save.header && save.header.waypoints" v-bind:save.sync="save" />
                       </div>
                       <div class="tab-pane" id="quests-content" role="tabpanel">
-                        <Quests v-bind:save.sync="save" />
+                        <Quests v-if="save && save.header && save.header.quests_normal && save.header.quests_nm && save.header.quests_hell" v-bind:save.sync="save" />
                       </div>
                       <div class="tab-pane" id="skills-content" role="tabpanel">
-                        <Skills v-bind:save.sync="save" />
-                      </div>
-                    </div>
-                    <div v-if="save != null">
-                      <div class="row">
-                        <button type="button" @click="unlockHell" class="btn btn-primary">Unlock Hell</button>
-                        <button type="button" @click="unlockAllWPs" class="btn btn-primary">Unlock All WPs</button>
-                        <button type="button" @click="setLvl99" class="btn btn-primary">Set Level 99</button>
-                        <button type="button" @click="setAllSkills20" class="btn btn-primary">Set All Skills 20</button>
-                        <button type="button" @click="unlockQs" class="btn btn-primary">Complete Skill/Stat Qs</button>
-                        <button type="button" @click="maxGold" class="btn btn-primary">Max Gold</button>
-                      </div>
-                      <div class="row mt-3">
-                        <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x60)">Save D2</button> -->
-                        <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x63)">Save D2R</button> -->
-                        <button type="button" id="d2r" class="btn btn-primary" @click="saveFile($work_mod.value, $work_version.value)">Save</button>
-                        <button type="button" id="d2r-blizz" class="btn btn-primary" @click="saveFile('blizzless', $work_version.value)">Save Blizzless</button>
+                        <Skills v-if="save && save.skills && save.skills.length" v-bind:save.sync="save" />
                       </div>
                     </div>
                   </div>
@@ -360,6 +234,7 @@
       </div>
     </div>
   </div>
+  </a-config-provider>
 </template>
 
 <script>
@@ -374,6 +249,7 @@
   import Mercenary from './Mercenary.vue';
   import ItemEditor from './inventory/ItemEditor.vue';
   import Stash from './inventory/Stash.vue';
+  import { theme as antdTheme, Flex, Tag } from 'ant-design-vue';
 
   import ItemPack from '../d2/ItemPack.js';
   import CharPack from '../d2/CharPack.js';
@@ -397,10 +273,13 @@
       Grid,
       Mercenary,
       ItemEditor,
-      ContextMenu
+      ContextMenu,
+      Flex,
+      Tag
     },
     data() {
       return {
+        antdTheme: antdTheme,
         save: null,
         stashData: null,
         activeTab: 1,
@@ -422,11 +301,48 @@
       if (localStorage.grid) {
         this.grid = JSON.parse(localStorage.getItem('grid'));
       }
-      this.changeMod();
+      await this.changeMod();
+      await this.initFromQuery();
     },
     filters: {
     },
     computed: {
+      hasOpened() {
+        return !!(this.save && this.save.header && this.save.header.name) || !!this.stashData;
+      },
+      stashItemsCount() {
+        if (!this.stashData || !this.stashData.pages) return 0;
+        return this.stashData.pages.reduce((acc, p) => acc + (p.items ? p.items.length : 0), 0);
+      },
+      isClassic() {
+        // Classic если нет Expansion флага
+        return !!(this.save && this.save.header && this.save.header.status && !this.save.header.status.expansion);
+      },
+      currentModeLabel() {
+        if (!this.save || !this.save.header || !this.save.header.status) return '';
+        const s = this.save.header.status;
+        // SC/HC + Ladder
+        const base = s.hardcore ? 'HC' : 'SC';
+        return s.ladder ? `${base}L` : base;
+      },
+      currentModeLabelColor() {
+        if (!this.save || !this.save.header || !this.save.header.status) return '';
+        const s = this.save.header.status;
+        return s.hardcore ? 'red' : 'blue';
+      },
+      isStashOnly() {
+        return !!this.stashData && (!this.save || !this.save.header || !this.save.header.name);
+      },
+      stashSharedCount() {
+        if (!this.stashData || !this.stashData.pages) return 0;
+        return this.stashData.pageCount || this.stashData.pages.length || 0;
+      },
+      classIconSrc() {
+        if (!this.save || !this.save.header || !this.save.header.class) return null;
+        const name = (this.save.header.class || '').toLowerCase();
+        // match filenames in public/img/chars
+        return `img/chars/${name}.webp`;
+      },
       equipped() {
         return this.save.items.filter(
           item => item.location_id === 1 || item.location_id === 0 && item.alt_position_id === 1
@@ -451,6 +367,15 @@
         }
         return stash;
       },
+      stashWithMeta() {
+        const base = this.stash;
+        const meta = {
+          gold: this.save && this.save.attributes ? this.save.attributes.gold : null,
+          stashedGold: this.save && this.save.attributes ? this.save.attributes.stashed_gold : null,
+          sharedGold: this.stashData && typeof this.stashData.sharedGold === 'number' ? this.stashData.sharedGold : null,
+        };
+        return { ...base, meta };
+      },
       stashGrid() {
         return this.$work_mod.value === 'blizzless'
           ? { w: 16, h: 13 }
@@ -466,6 +391,94 @@
       },
     },
     methods: {
+      closeLoadItemModal() {
+        try {
+          const modal = document.getElementById('LoadItem');
+          if (!modal) return;
+          // Bootstrap-like hide if available
+          if (typeof window.$ !== 'undefined' && window.$(modal).modal) {
+            window.$(modal).modal('hide');
+            return;
+          }
+          // Fallback: toggle classes/attributes
+          modal.classList.remove('show');
+          modal.style.display = 'none';
+          modal.setAttribute('aria-hidden', 'true');
+          const backdrop = document.querySelector('.modal-backdrop');
+          if (backdrop && backdrop.parentNode) backdrop.parentNode.removeChild(backdrop);
+        } catch (_) {}
+      },
+      onAntUploadChange({ fileList }) {
+        if (!fileList || !fileList.length) return;
+        const list = fileList.slice(0, 2);
+        list.forEach(f => {
+          const file = f.originFileObj || f;
+          if (!file) return;
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            try {
+              const buf = e.target.result;
+              this.readBuffer(buf, file.name);
+            } catch (err) {
+              // noop, readBuffer handles messaging
+            }
+          };
+          reader.onerror = () => {
+            if (this.$message) {
+              this.$message.error('Failed to read file');
+            }
+          };
+          reader.readAsArrayBuffer(file);
+        });
+      },
+      async copyBase64OrPrompt(text) {
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(text);
+          } else {
+            window.prompt('Base64 save string (copy it):', text);
+          }
+        } catch (e) {
+          window.prompt('Base64 save string (copy it):', text);
+        }
+      },
+      async outputBase64Save(mod, version) {
+        try {
+          if (this.isStashOnly && this.stashData) {
+            const response = await this.$d2s.writeStash(this.stashData, this.$work_mod.value, this.$work_version.value);
+            const b64 = utils.arrayBufferToBase64(response);
+            await this.copyBase64OrPrompt(b64);
+            if (this.$message) {
+              this.$message.success('Shared stash base64 is copied to clipboard');
+            }
+            return;
+          }
+          if (!this.save) {
+            if (this.$message) {
+              this.$message.error('No save is loaded');
+            }
+            return;
+          }
+          this.save.header.version = version;
+          const response = await this.$d2s.write(this.save, mod, version);
+          const b64 = utils.arrayBufferToBase64(response);
+          await this.copyBase64OrPrompt(b64);
+          if (this.$message) {
+            this.$message.success('Character save base64 is copied to clipboard');
+          }
+        } catch (e) {
+          if (this.$message) {
+            this.$message.error('Failed to build base64');
+          }
+          if (localStorage.getItem('isDebug') == '1') console.error('[outputBase64Save] error', e);
+        }
+      },
+      onCreateMenuClick({ key }) {
+        const idx = parseInt(key);
+        if (!isNaN(idx)) {
+          this.newChar(idx);
+        }
+      },
       async getPaletteData() {
         let a1PaletteBuffer;
         const colorMapBuffers = {};
@@ -480,7 +493,7 @@
         utils.fillPalettes(this.$palettes.value, a1PaletteBuffer, colorMapBuffers);
       },
       // Uses globalProperties $work_mod & $work_version as input
-      changeMod(failSafe = true) {
+      async changeMod(failSafe = true) {
         let succeed = true;
         try {
           // Safety check
@@ -497,7 +510,7 @@
         this.save = null;
         this.preview = null;
         this.stashData = null;
-        this.getPaletteData();
+        await this.getPaletteData();
         this.addItemsToItemPack();
         // console.log('Changing mod to ' + this.$work_mod.value + this.$work_version.value);
         // console.log(this.$d2s.getConstantData(this.$work_mod.value, this.$work_version.value));
@@ -679,9 +692,10 @@
       async setPreviewItem(e) {
         this.baseOptions = null;
         this.baseModel = null;
-        if (this.previewModel) {
+        if (!this.previewModel) return;
+        try {
           if (this.previewModel.base64) {
-            let bytes = utils.b64ToArrayBuffer(this.previewModel.base64);
+            const bytes = utils.b64ToArrayBuffer(this.previewModel.base64);
             this.preview = await this.$d2s.readItem(bytes, this.$work_mod.value, this.$work_version.value);
           } else if (this.previewModel.item) {
             this.preview = this.previewModel.item;
@@ -689,36 +703,59 @@
               this.baseOptions = this.getBasesOptions(this.preview);
               return;
             }
-        }
+          }
           await this.resolveInventoryImage(this.preview);
+        } catch (err) {
+          this.closeLoadItemModal();
+          if (this.$message) {
+            this.$message.error(`Failed to open item: ${err && err.message ? err.message : 'Unknown error'}`);
+          }
         }
       },
       async onItemFileLoad(event) {
-        this.previewModel = {
-          base64: utils.arrayBufferToBase64(event.target.result),
-          // mod: this.$work_mod.value,
-          // version: this.$work_version.value,
-        };
-        this.setPreviewItem();
+        try {
+          this.previewModel = {
+            base64: utils.arrayBufferToBase64(event.target.result),
+            // mod: this.$work_mod.value,
+            // version: this.$work_version.value,
+          };
+          this.setPreviewItem();
+        } catch (e) {
+          this.closeLoadItemModal();
+          if (this.$message) {
+            this.$message.error('Failed to load item file');
+          }
+        }
       },
       onItemFileChange(event) {
-        let reader = new FileReader();
+        const file = event && event.target && event.target.files && event.target.files[0];
+        if (!file) {
+          return;
+        }
+        const reader = new FileReader();
         reader.onload = this.onItemFileLoad;
-        reader.readAsArrayBuffer(event.target.files[0]);
+        reader.onerror = () => {
+          this.closeLoadItemModal();
+          if (this.$message) {
+            this.$message.error('Failed to read item file');
+          }
+        };
+        reader.readAsArrayBuffer(file);
         event.target.value = null;
       },
       async loadBase64Item() {
         try {
-          let b64 = prompt("Please enter your base64 string for item.");
-          if (b64 && this.preview) {
-            let bytes = utils.b64ToArrayBuffer(b64);
-            //await this.readItem(bytes, 0x63);
-            this.preview = await this.$d2s.readItem(bytes, mod, version);
-            await this.resolveInventoryImage(this.preview);
-            this.paste(this.preview);
+          const b64 = prompt("Please enter your base64 string for item.");
+          if (!b64) return;
+          const bytes = utils.b64ToArrayBuffer(b64);
+          this.preview = await this.$d2s.readItem(bytes, this.$work_mod.value, this.$work_version.value);
+          await this.resolveInventoryImage(this.preview);
+          this.paste(this.preview);
+        } catch (e) {
+          this.closeLoadItemModal();
+          if (this.$message) {
+            this.$message.error(`Failed to read item: ${e && e.message ? e.message : 'Unknown error'}`);
           }
-        } catch(e) {
-          alert("Failed to read item.");
         }
       },
       loadItem() {
@@ -809,7 +846,8 @@
         return true;
       },
       async resolveInventoryImages() {
-        const allItems = [...this.save.items, ...this.save.merc_items, ...this.save.corpse_items, this.save.golem_item];
+        const allItems = [...(this.save.items || []), ...(this.save.merc_items || []), ...(this.save.corpse_items || []), this.save.golem_item].filter(Boolean);
+        if (localStorage.getItem('isDebug') == '1') console.log('[resolveInventoryImages] total items:', allItems.length);
         const promises = allItems.map(async function (item) {
           return this.resolveInventoryImage(item);
         }, this);
@@ -817,9 +855,15 @@
       },
       async resolveInventoryImage(item) {
         if (!item) {
+          if (localStorage.getItem('isDebug') == '1') console.log('[resolveInventoryImage] skip null item');
           return;
         }
-        item.src = await utils.getInventoryImage(item, this.$work_mod.value, this.$work_version.value, this.$palettes.value);
+        try {
+          item.src = await utils.getInventoryImage(item, this.$work_mod.value, this.$work_version.value, this.$palettes.value);
+          if (localStorage.getItem('isDebug') == '1') console.log('[resolveInventoryImage] resolved', { type: item.type, inv: item.inv_file, hasSrc: !!item.src });
+        } catch (e) {
+          if (localStorage.getItem('isDebug') == '1') console.error('[resolveInventoryImage] error', e);
+        }
         if (!item.socketed_items) {
           return;
         }
@@ -830,9 +874,20 @@
                 // Recheck cause it's async, and user may have used unsocket all button in the meanwhile
                 item.socketed_items[i].src = img;
                 //item.socketed_items[i].magic_attributes.forEach((it, idx) => { if (item.socketed_attributes.findIndex(x => x.id == it.id) == -1) item.socketed_attributes.push(it) });
+              } else {
+                if (localStorage.getItem('isDebug') == '1') console.log('[resolveInventoryImage] socket image missing', { parent: item.type, idx: i });
               }
-            });
+            })
+            .catch((err) => { if (localStorage.getItem('isDebug') == '1') console.error('[resolveInventoryImage] socket image error', err); });
         }
+      },
+      setPropertiesOnItem(item) {
+        if (!item) {
+          return;
+        }
+        // Items from stash are already enhanced in parser; we only need to resolve their images here
+        if (localStorage.getItem('isDebug') == '1') console.log('[setPropertiesOnItem] item', { type: item.type, q: item.quality, inv: item.inv_file });
+        this.resolveInventoryImage(item);
       },
       addItemsToItemPack() {
         const constants = this.$getWorkConstantData();
@@ -861,35 +916,180 @@
       onFileLoad(event) {
         this.readBuffer(event.target.result, event.target.filename);
       },
+      async readBufferAuto(bytes) {
+        // Try to read as character first, then as shared stash
+        this.save = null;
+        this.selected = null;
+        this.stashData = null;
+        try {
+          const response = await this.$d2s.read(bytes, this.$work_mod.value);
+          this.save = response;
+          await this.resolveInventoryImages();
+          if (this.$message) {
+            this.$message.success('Character save opened successfully');
+          }
+          return;
+        } catch (e1) {
+          // Fallback to stash parsing
+        }
+        try {
+          const response = await this.$d2s.readStash(bytes, this.$work_mod.value);
+          if (!this.save) {
+            // Ensure UI renders stash even without a loaded character
+            this.save = { items: [], merc_items: [], corpse_items: [], golem_item: null, header: {} };
+          }
+          this.stashData = response;
+          for (var i = 0; i < this.stashData.pageCount; i++) {
+            [... this.stashData.pages[i].items].forEach(item => { this.setPropertiesOnItem(item)});
+          }
+          if (this.$message) {
+            this.$message.success(`Shared stash opened successfully (${this.stashData.pageCount} pages)`);
+          }
+          return;
+        } catch (e2) {
+          if (this.$message) {
+            this.$message.error('Provided base64 is not a valid D2S or D2I file');
+          }
+        }
+      },
       readBuffer(bytes, filename) {
         //this.addItemsToItemPack();
+        const byteLen = bytes && (bytes.byteLength ?? bytes.length ?? 0);
+        if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] start', { filename, byteLen });
         if (filename) {
-          if (filename.includes(".d2s")) {
+          const lower = filename.toLowerCase();
+          if (lower.endsWith(".d2s")) {
+            if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] detected .d2s');
             this.save = null;
-            this.$d2s.read(bytes, this.$work_mod.value).then(response => {
+            this.$d2s.read(bytes, this.$work_mod.value)
+            .then(response => {
+              if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] d2s parsed OK');
               this.save = response;
               this.save.header.name = filename.split('.')[0];
-              this.resolveInventoryImages();
+              this.resolveInventoryImages().then(() => { if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] inventory images resolved') });
+              if (this.$message) {
+                this.$message.success(`Character save opened successfully: \"${this.save.header.name}\"`);
+              }
+            })
+            .catch(err => {
+              if (localStorage.getItem('isDebug') == '1') console.error('[readBuffer] d2s parse error:', err);
+              if (this.$message) {
+                this.$message.error(`Failed to open character save: ${err && err.message ? err.message : 'Unknown error'}`);
+              }
             });
-          } else if (filename.includes("")) {
+          } else if (lower.endsWith(".d2i")) {
+            if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] detected .d2i');
             this.stashData = null;
-            this.$d2s.readStash(bytes, this.$work_mod.value).then(response => {
+            this.$d2s.readStash(bytes, this.$work_mod.value)
+            .then(response => {
+              if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] d2i parsed OK');
+              if (!this.save) {
+                // Ensure UI renders stash even without a loaded character
+                this.save = { items: [], merc_items: [], corpse_items: [], golem_item: null, header: {} };
+                if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] created placeholder save for stash rendering');
+              }
               this.stashData = response;
+              const pages = this.stashData?.pages || [];
+              if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] stash pages:', this.stashData.pageCount, 'items per page:', pages.map(p => p.items?.length || 0));
               for (var i = 0; i < this.stashData.pageCount; i++) {
-                [... this.stashData.pages[i].items].forEach(item => { this.setPropertiesOnItem(item)})}
+                [... this.stashData.pages[i].items].forEach(item => { this.setPropertiesOnItem(item)})
+              }
+              if (this.$message) {
+                this.$message.success(`Shared stash opened successfully (${this.stashData.pageCount} pages)`);
+              }
+            })
+            .catch(err => {
+              if (localStorage.getItem('isDebug') == '1') console.error('[readBuffer] d2i parse error:', err);
+              if (this.$message) {
+                this.$message.error(`Failed to open shared stash: ${err && err.message ? err.message : 'Unknown error'}`);
+              }
             })
           }
         } else {
           let that = this;
+          if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] filename not provided, defaulting to character parse');
           this.save = null;
           this.selected = null;
           this.stashData = null;
-          this.$d2s.read(bytes, this.$work_mod.value).then(response => {
+          this.$d2s.read(bytes, this.$work_mod.value)
+          .then(response => {
+            if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] d2s parsed OK (no filename)');
             that.save = response;
-            that.resolveInventoryImages();
+            that.resolveInventoryImages().then(() => { if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] inventory images resolved') });
+            if (that.$message) {
+              that.$message.success('Character save opened successfully');
+            }
+          })
+          .catch(err => {
+            if (localStorage.getItem('isDebug') == '1') console.error('[readBuffer] d2s parse error (no filename):', err);
+            if (that.$message) {
+              that.$message.error(`Failed to open character save: ${err && err.message ? err.message : 'Unknown error'}`);
+            }
           })
         }
         
+      },
+      async initFromQuery() {
+        try {
+          const search = window.location.search || '';
+          const match = search.match(/[?&]s=([^&]*)/);
+          if (!match) return;
+          const encoded = match[1];
+          // Preserve '+' as plus, only decode percent-encoding
+          const decoded = decodeURIComponent(encoded.replace(/\+/g, '%2B'));
+          const raw = decoded.trim();
+          const cleaned = raw.replace(/\s+/g, '').replace(/^data:.*?;base64,/, '');
+          let normalized = cleaned.replace(/-/g, '+').replace(/_/g, '/');
+          const pad = normalized.length % 4;
+          if (pad === 2) normalized += '==';
+          else if (pad === 3) normalized += '=';
+          let bytes;
+          try {
+            bytes = utils.b64ToArrayBuffer(normalized);
+          } catch (e) {
+            if (this.$message) {
+              this.$message.error('Query parameter "s" is not valid base64');
+            }
+            return;
+          }
+          await this.readBufferAuto(bytes);
+        } catch (err) {
+          if (this.$message) {
+            this.$message.error('Failed to process query parameter "s"');
+          }
+        }
+      },
+      async pasteBase64Save() {
+        try {
+          if (!navigator.clipboard || !navigator.clipboard.readText) {
+            if (this.$message) {
+              this.$message.error('Clipboard API is not available');
+            }
+            return;
+          }
+          const raw = (await navigator.clipboard.readText() || '').trim();
+          if (!raw) {
+            if (this.$message) {
+              this.$message.error('Clipboard is empty');
+            }
+            return;
+          }
+          const b64 = raw.replace(/\s+/g, '').replace(/^data:.*?;base64,/, '');
+          let bytes;
+          try {
+            bytes = utils.b64ToArrayBuffer(b64);
+          } catch (e) {
+            if (this.$message) {
+              this.$message.error('Clipboard does not contain valid base64 data');
+            }
+            return;
+          }
+          await this.readBufferAuto(bytes);
+        } catch (err) {
+          if (this.$message) {
+            this.$message.error(`Failed to open data from clipboard: ${err && err.message ? err.message : 'Unknown error'}`);
+          }
+        }
       },
       saveFileStash() {
         if (this.stashData != null) {
@@ -906,19 +1106,37 @@
         }
       },
       onFileChange(event) {
+        if (localStorage.getItem('isDebug') == '1') console.log('[onFileChange] triggered');
         this.save = null;
         this.stashData = null;
         this.selected = null;
         const files = event.currentTarget.files;
-        Object.keys(files).forEach(i => {
-          if (i < 2) {
-            const reader = new FileReader();
-            reader.onload = (e) => {
-              this.readBuffer(e.target.result, files[i].name);
+        if (localStorage.getItem('isDebug') == '1') console.log('[onFileChange] files:', files);
+        const count = Math.min(files.length || 0, 2);
+        for (let i = 0; i < count; i++) {
+          const file = typeof files.item === 'function' ? files.item(i) : files[i];
+          if (!file) continue;
+          if (localStorage.getItem('isDebug') == '1') console.log('[onFileChange] reading file:', file.name, 'size:', file.size);
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            try {
+              const buf = e.target.result;
+              if (localStorage.getItem('isDebug') == '1') console.log('[onFileChange] loaded:', file.name, 'byteLength:', buf?.byteLength);
+              this.readBuffer(buf, file.name);
+            } catch (err) {
+              if (localStorage.getItem('isDebug') == '1') console.error('[onFileChange] onload error:', err);
             }
-            reader.readAsArrayBuffer(files[i]);
+          };
+          reader.onerror = (e) => {
+            if (localStorage.getItem('isDebug') == '1') console.error('[onFileChange] FileReader error for', file.name, e);
+          if (this.$message) {
+            this.$message.error(`Failed to read file: ${file && file.name ? file.name : 'Unknown file'}`);
           }
-        });
+          };
+          reader.readAsArrayBuffer(file);
+        }
+        // Allow selecting the same file again
+        event.currentTarget.value = null;
       },
       maxGold() {
         this.save.attributes.gold = this.save.header.level * 10000;
@@ -1002,7 +1220,8 @@
         .then(function (response) {
           let blob = new Blob([response], { type: "octet/stream" });
           link.href = window.URL.createObjectURL(blob);
-          link.download = that.save.header.name + '.d2s';
+          const fileName = (that.save && that.save.header && that.save.header.name) ? that.save.header.name : 'character';
+          link.download = fileName + '.d2s';
           link.click();
           link.remove();
         });
@@ -1176,3 +1395,30 @@
     },
   };
 </script>
+
+<style>
+.dark-theme {
+  background-color: #141414;
+  color: #e8e8e8;
+}
+.dark-theme .card.bg-light {
+  background-color: #1f1f1f;
+}
+.dark-theme .alert.alert-primary {
+  background-color: #2a2a2a;
+  border-color: #3a3a3a;
+  color: #e6f7ff;
+}
+.dark-theme .modal-content {
+  background-color: #1f1f1f;
+  color: #e8e8e8;
+}
+.dark-theme .nav-tabs .nav-link {
+  color: #bfbfbf;
+}
+.dark-theme .nav-tabs .nav-link.active {
+  color: #fff;
+  background-color: #262626;
+  border-color: #434343 #434343 #262626;
+}
+</style>

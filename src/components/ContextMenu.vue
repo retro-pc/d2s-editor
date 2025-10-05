@@ -1,8 +1,8 @@
 <template>
   <div class="dropdown-menu" role="menu" :class="options != null ? 'show' : ''" v-bind:style="{top: evt.clientY+'px', left: evt.clientX+'px'}">
-    <button class="dropdown-item" v-for="option in options" @click.stop="onClick($event, option)"
+    <a-button class="dropdown-item" v-for="option in options" @click.stop="onClick($event, option)"
         :class="[option.type === 'divider' ? 'dropdown-divider' : '']" v-html="option.text">
-    </button>
+    </a-button>
   </div>
 </template>
 

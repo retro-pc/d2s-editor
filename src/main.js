@@ -1,7 +1,9 @@
 import { createApp, ref } from 'vue';
+import Antd from 'ant-design-vue';
 import VueTippy from 'vue-tippy';
 import Multiselect from '@vueform/multiselect';
 import '@vueform/multiselect/themes/default.css';
+import 'ant-design-vue/dist/reset.css';
 
 import * as d2s from '../lib/d2';
 
@@ -38,8 +40,47 @@ app.config.globalProperties.$clipboard = clipboard;
 app.config.globalProperties.$getWorkConstantData = () => d2s.getConstantData(work_mod.value, work_version.value);
 app.config.globalProperties.$uuid = utils.uuidv4();
 
+// Global error handling: Vue errors, window errors, unhandled promise rejections
+app.config.errorHandler = (err, instance, info) => {
+  try {
+    const messageApi = app.config.globalProperties.$message;
+    const text = (err && err.message) ? err.message : (typeof err === 'string' ? err : 'Unknown error');
+    if (messageApi && typeof messageApi.error === 'function') {
+      messageApi.error(text);
+    } else {
+      console.error('[GlobalError]', text, info);
+    }
+  } catch (_) {}
+};
+
+window.addEventListener('error', (event) => {
+  try {
+    const messageApi = app.config.globalProperties.$message;
+    const text = (event && event.message) ? event.message : 'Unknown error';
+    if (messageApi && typeof messageApi.error === 'function') {
+      messageApi.error(text);
+    } else {
+      console.error('[WindowError]', text);
+    }
+  } catch (_) {}
+});
+
+window.addEventListener('unhandledrejection', (event) => {
+  try {
+    const messageApi = app.config.globalProperties.$message;
+    const reason = event && event.reason;
+    const text = reason && reason.message ? reason.message : (typeof reason === 'string' ? reason : 'Unhandled rejection');
+    if (messageApi && typeof messageApi.error === 'function') {
+      messageApi.error(text);
+    } else {
+      console.error('[UnhandledRejection]', text);
+    }
+  } catch (_) {}
+});
+
 app
   .component('multiselect', Multiselect)
+  .use(Antd)
   .use(
     VueTippy,
     // optional

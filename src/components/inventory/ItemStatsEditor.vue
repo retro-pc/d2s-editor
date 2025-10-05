@@ -2,7 +2,7 @@
   <div style="padding-top: 20px;">
     <div v-for="(stat, statIdx) in itemStats" :key="statIdx" class="form-row">
       <div class="col-md-auto">
-        <button type="button" class="btn btn-link red" @click="removeStat(statIdx)">&times;</button>
+        <a-button type="link" class="red" @click="removeStat(statIdx)">&times;</a-button>
       </div>
       <div class="col-md-3" style="padding-top: 5px;">
         <multiselect v-model.number="stat.id" :options="stats_options" :searchable="true" :canDeselect="false" :canClear="false" :required="true" @update:model-value="onItemModified"/>
@@ -17,13 +17,13 @@
         <template v-else-if="isSkill(stat.id, valIdx)">
           <multiselect v-model.number="stat.values[valIdx-1]" :options="skills_options" :searchable="true" :canDeselect="false" :canClear="false" @update:model-value="onItemModified"/>
         </template>
-        <input type="number" class= "edit-box" :min="getMinValue(stat.id)" :max="getMaxValue(stat.id)" @input="changeStatValue(stat.id, stat.values, valIdx-1)"
-          :id="id + 'Stat' + statIdx + 'Index'+ valIdx" v-model.number="stat.values[valIdx-1]" v-else>
+        <a-input-number class="edit-box" :min="getMinValue(stat.id)" :max="getMaxValue(stat.id)" @update:value="() => changeStatValue(stat.id, stat.values, valIdx-1)"
+          :id="id + 'Stat' + statIdx + 'Index'+ valIdx" v-model:value="stat.values[valIdx-1]" v-else />
       </div>
     </div>
     
     <div class="form-row">
-      <button type="button" class="btn btn-link" @click="addNewStat">Add Stat</button>
+      <a-button type="link" @click="addNewStat">Add Stat</a-button>
     </div>
   </div>
 </template>

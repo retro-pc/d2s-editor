@@ -50,16 +50,14 @@
       <div
           class="btn-group"
           role="group">
-        <button
-            type="button"
-            class="tab btn btn-secondary"
+        <a-button
+            class="tab"
             :class="{ active: !alt_displayed }"
-            @click="setAltDisplayed(false)">I</button>
-        <button
-            type="button"
-            class="tab btn btn-secondary"
+            @click="setAltDisplayed(false)">I</a-button>
+        <a-button
+            class="tab"
             :class="{ active: alt_displayed }"
-            @click="setAltDisplayed(true)">II</button>
+            @click="setAltDisplayed(true)">II</a-button>
       </div>
     </span>
       <span
@@ -96,16 +94,14 @@
       <div
           class="btn-group"
           role="group">
-        <button
-            type="button"
-            class="tab btn btn-secondary"
+        <a-button
+            class="tab"
             :class="{ active: !alt_displayed }"
-            @click="setAltDisplayed(false)">I</button>
-        <button
-            type="button"
-            class="tab btn btn-secondary"
+            @click="setAltDisplayed(false)">I</a-button>
+        <a-button
+            class="tab"
             :class="{ active: alt_displayed }"
-            @click="setAltDisplayed(true)">II</button>
+            @click="setAltDisplayed(true)">II</a-button>
       </div>
     </span>
       <span
@@ -225,6 +221,12 @@
           class="equippedInventoryGrid"
     </Grid>
   </div>
+  <div v-if="gold != null" class="inventory-gold-container d-flex justify-content-center">
+    <div class="inventory-gold d-flex align-items-center">
+      <img src="img/icons/gold.png" alt="gold" style="height:20px;width:20px;object-fit:contain;" />
+      <span class="ml-2">{{ gold }}</span>
+    </div>
+  </div>
 
 <!--  <ItemEditor-->
 <!--      v-if="selected"-->
@@ -302,8 +304,12 @@ export default {
     items: Array,
     id: String,
     contextMenu: Object,
+    gold: Number,
   },
   methods: {
+    onEvent(e) {
+      this.$emit('item-event', e);
+    },
     setAltDisplayed(value) {
       this.alt_displayed = value;
     },

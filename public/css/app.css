@@ -36,6 +36,10 @@
   --ms-empty-color: rgba(80, 80, 80, 0.98);
 }
 
+#app, .container-fluid {
+  min-height: 100vh;
+}
+
 * {
   border-radius: 0 !important;
 }
@@ -122,12 +126,20 @@ ul {
   position: relative;
   /* margin: 1em auto; */
   width: calc(var(--grid-size) * 10);
-  height: calc(var(--grid-size) * 12); /*7.5*/
+  height: calc(var(--grid-size) * 12 - 22px); /*7.5*/
   background: url(../img/hd-invchar.png) no-repeat;
   /* .h-2 {
   }
   .h-3 {
   } */
+}
+.inventory-gold-container {
+  width: calc(var(--grid-size) * 10);
+  
+  background-color: #00000099;
+  font-size: 0.75rem;
+  padding: 5px 10px;
+  color: #ccc;
 }
 
 .equipment-inventory-col{
@@ -506,7 +518,11 @@ ul {
   padding: 20px;
 }
 .item-editor {
-  margin-top: 20px;
+  border: 1px solid #111;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #00000022;
+  margin-top: 37px;
 }
 
 .item-stats .form-row {
@@ -613,18 +629,31 @@ ul {
   padding: 8px;
   font-size: 16px;
 }
+
+.stash-tab {
+  border: none !important;
+  box-shadow: none !important; 
+}
+
+.stash-gold {
+  background-color: #00000099;
+  font-size: 0.75rem;
+  padding: 5px 10px;
+  color: #ccc;
+}
 .stash-bg{
     padding-top: 10px;
     background: url(../img/hd-stash.png) no-repeat;
 }
 .stash-bg-big{
-  background-image: url(../img/hd-stash-big.png);
-  padding: 10px 20px 10px 0;
+  background-image: url(../img/hd-stash-big-2.png);
+  padding: 0;
+  border: 10px solid #000000 !important;
   background-size: 100% 100%;
   margin-bottom: 20px;
   .d2p-InventoryGrid {
     position: relative;
-    left: 10px;
+    left: 0px;
     width: 512px;
     height: 416px;
 
@@ -1138,4 +1167,26 @@ div.settings .form-check-input {
 
 .h-20 {
   height: 640px;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.navbar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  
+  background: #00000055 !important;
 }

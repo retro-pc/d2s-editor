@@ -5,8 +5,7 @@
         <div class="row">
           <div class="col-md-6" v-for="j in 10">
             <label :for="'Skill' + i + '_' + j">{{save.skills[(i - 1) * 10 + (j - 1)].name}}</label>
-            <input type="number" class="form-control" :id="'Skill' + i + '_' + j" min="0" max="20"
-                    v-model.number="save.skills[(i - 1) * 10 + (j - 1)].points">
+            <a-input-number :id="'Skill' + i + '_' + j" :min="0" :max="20" v-model:value="save.skills[(i - 1) * 10 + (j - 1)].points" />
           </div>
         </div>
       </div>
@@ -15,9 +14,9 @@
     <div class="form-row">
       <div class="input-group">
         <div class="input-group-prepend">
-          <button type="button" class="btn btn-secondary" @click="setAll()">Set All To</button>
+          <a-button type="default" @click="setAll()">Set All To</a-button>
         </div>
-        <input type="number" min="0" max="20" v-model="allSkills"/>
+        <a-input-number :min="0" :max="20" v-model:value="allSkills" />
       </div>
     </div>
   </div>

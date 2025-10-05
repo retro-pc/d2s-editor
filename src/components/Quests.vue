@@ -3,18 +3,18 @@
     <div class="col-md-4" v-for="difficulty in difficulties">
       <ul>
         <li>
-          <label><input class="form-check-input" type="checkbox" @input="updateDiff(difficulty)" v-model="difficulty.all"/>{{ difficulty.label }}</label>
-          <button type="button" class="btn btn-link btn-sm" title="Reset Difficulty" @click="resetDifficulty(difficulty)"><i class="fa fa-undo"></i></button>
+          <a-checkbox v-model:checked="difficulty.all" @change="() => updateDiff(difficulty)">{{ difficulty.label }}</a-checkbox>
+          <a-button type="link" size="small" title="Reset Difficulty" @click="resetDifficulty(difficulty)"><i class="fa fa-undo"></i></a-button>
         </li>
         <ul v-for="act in difficulty.acts">
           <li>
-            <label><input class="form-check-input" type="checkbox" @input="updateAct(difficulty, act)" v-model="act.all" />{{ act.label }}</label>
-            <button type="button" class="btn btn-link btn-sm" title="Reset Act" @click="resetAct(difficulty, act)"><i class="fa fa-undo"></i></button>
+            <a-checkbox v-model:checked="act.all" @change="() => updateAct(difficulty, act)">{{ act.label }}</a-checkbox>
+            <a-button type="link" size="small" title="Reset Act" @click="resetAct(difficulty, act)"><i class="fa fa-undo"></i></a-button>
           </li>
           <ul v-for="quest in act.quests">
-            <li><button type="button" class="btn btn-link" title="Reset Quest" @click="reset(difficulty, act, quest)"><i class="fa fa-undo"></i></button><label>{{ quest.label }}</label></li>
+            <li><a-button type="link" title="Reset Quest" @click="reset(difficulty, act, quest)"><i class="fa fa-undo"></i></a-button><label>{{ quest.label }}</label></li>
             <ul>
-              <li v-for="state in quest.values"><label><input class="form-check-input" type="checkbox" @click="updateQuest(difficulty, act, quest, state, null)" v-model="save.header[difficulty.key][act.key][quest.key][state.key]">{{ state.label }}</label></li>
+              <li v-for="state in quest.values"><a-checkbox @change="() => updateQuest(difficulty, act, quest, state, null)" v-model:checked="save.header[difficulty.key][act.key][quest.key][state.key]">{{ state.label }}</a-checkbox></li>
             </ul>
           </ul>
         </ul>
