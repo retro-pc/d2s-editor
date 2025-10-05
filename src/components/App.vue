@@ -74,7 +74,6 @@
                             title="Workspace Mod"
                             @change="changeMod()"
                             style="min-width: 120px"
-                            class="flex-1"
                           >
                             <a-select-option value="diablo2">Diablo2</a-select-option>
                             <a-select-option value="blizzless">Blizzless</a-select-option>
@@ -87,7 +86,6 @@
                             title="Workspace Version"
                             @change="changeMod()"
                             style="min-width: 80px"
-                            class="flex-1"
                           >
                             <!-- <option v-if="$work_mod.value == 'diablo2'" value="96">LOD 1.10-1.14d</option> -->
                             <!-- <option v-if="$work_mod.value == 'diablo2'" value="97">D2R Alpha</option> -->
@@ -96,14 +94,10 @@
                             <!-- <option v-if="$work_mod.value == 'blizzless'" value="98">Beta</option> -->
                             <a-select-option value="99">D2R 2.5+</a-select-option>
                           </a-select>
-                          <div class="flex-1">
-                            <a-upload :before-upload="() => false" :multiple="true" :show-upload-list="false" accept=".d2s,.d2i" @change="onAntUploadChange">
-                              <a-button type="primary">Open D2S / D2I</a-button>
-                            </a-upload>
-                          </div>
-                          <div class="flex-1">
-                            <a-button type="primary" @click="pasteBase64Save">Paste as base64</a-button>
-                          </div>
+                          <a-upload :before-upload="() => false" :multiple="true" :show-upload-list="false" accept=".d2s,.d2i" @change="onAntUploadChange">
+                            <a-button type="primary">Open D2S / D2I</a-button>
+                          </a-upload>
+                          <a-button type="primary" @click="pasteBase64Save">Paste as base64</a-button>
                         </Flex>
                       </div>
                     </div>
