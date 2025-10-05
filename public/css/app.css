@@ -36,6 +36,10 @@
   --ms-empty-color: rgba(80, 80, 80, 0.98);
 }
 
+#app, .container-fluid {
+  min-height: 100vh;
+}
+
 * {
   border-radius: 0 !important;
 }
@@ -122,12 +126,20 @@ ul {
   position: relative;
   /* margin: 1em auto; */
   width: calc(var(--grid-size) * 10);
-  height: calc(var(--grid-size) * 12); /*7.5*/
+  height: calc(var(--grid-size) * 12 - 22px); /*7.5*/
   background: url(../img/hd-invchar.png) no-repeat;
   /* .h-2 {
   }
   .h-3 {
   } */
+}
+.inventory-gold-container {
+  width: calc(var(--grid-size) * 10);
+  
+  background-color: #00000099;
+  font-size: 0.75rem;
+  padding: 5px 10px;
+  color: #ccc;
 }
 
 .equipment-inventory-col{
@@ -616,6 +628,18 @@ ul {
   color: white;
   padding: 8px;
   font-size: 16px;
+}
+
+.stash-tab {
+  border: none !important;
+  box-shadow: none !important; 
+}
+
+.stash-gold {
+  background-color: #00000099;
+  font-size: 0.75rem;
+  padding: 5px 10px;
+  color: #ccc;
 }
 .stash-bg{
     padding-top: 10px;
@@ -1143,4 +1167,26 @@ div.settings .form-check-input {
 
 .h-20 {
   height: 640px;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.navbar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  
+  background: #00000055 !important;
 }

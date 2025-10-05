@@ -221,6 +221,12 @@
           class="equippedInventoryGrid"
     </Grid>
   </div>
+  <div v-if="gold != null" class="inventory-gold-container d-flex justify-content-center">
+    <div class="inventory-gold d-flex align-items-center">
+      <img src="img/icons/gold.png" alt="gold" style="height:20px;width:20px;object-fit:contain;" />
+      <span class="ml-2">{{ gold }}</span>
+    </div>
+  </div>
 
 <!--  <ItemEditor-->
 <!--      v-if="selected"-->
@@ -298,6 +304,7 @@ export default {
     items: Array,
     id: String,
     contextMenu: Object,
+    gold: Number,
   },
   methods: {
     onEvent(e) {

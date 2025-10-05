@@ -25,10 +25,10 @@
             </div>
           </div>
           <div class="modal-footer">
-            <input style="display:none;" type="file" name="d2iFile" @change="onItemFileChange" id="d2iFile">
-            <label for="d2iFile" class="mb-0"><a-button type="primary">Load From File</a-button></label>
+            <input style="display:none;" type="file" name="d2iFile" @change="onItemFileChange" id="d2iFile" ref="d2iFile">
+            <a-button type="primary" @click="$refs.d2iFile && $refs.d2iFile.click()">Load From File</a-button>
             <a-button type="primary" @click="loadBase64Item">Load From String</a-button>
-            <a-button type="primary" @click="loadItem">Load</a-button>
+            <a-button type="primary" :disabled="!preview" @click="loadItem">Load</a-button>
             <a-button type="default" data-dismiss="modal">Close</a-button>
           </div>
         </div>
@@ -45,88 +45,110 @@
               </div>
               <form id="d2sForm">
                 <fieldset>
-                  <div class="form-group">
-                    <div class="input-group">
-                      <a-select id="open-mod" v-model:value="$work_mod.value" name="open-mod" title="Workspace Mod" @change="changeMod()" style="min-width: 160px">
-                        <a-select-option value="diablo2">Diablo2</a-select-option>
-                        <a-select-option value="blizzless">Blizzless</a-select-option>
-                        <a-select-option value="blizzless_beta">Blizzless Beta</a-select-option>
-                      </a-select>
-                      <a-select
-                        id="work-version"
-                        v-model:value="$work_version.value"
-                        name="work-version"
-                        title="Workspace Version"
-                        @change="changeMod()"
-                        style="min-width: 160px"
-                      >
-                        <!-- <option v-if="$work_mod.value == 'diablo2'" value="96">LOD 1.10-1.14d</option> -->
-                        <!-- <option v-if="$work_mod.value == 'diablo2'" value="97">D2R Alpha</option> -->
-                        <!-- <option v-if="$work_mod.value == 'diablo2'" value="98">D2R 2.4</option> -->
-                        
-                        <!-- <option v-if="$work_mod.value == 'blizzless'" value="98">Beta</option> -->
-                        <a-select-option value="99">D2R 2.5+</a-select-option>
-                      </a-select>
-                      <div class="custom-file">
-                        <a-upload :before-upload="() => false" :multiple="true" :show-upload-list="false" accept=".d2s,.d2i" @change="onAntUploadChange">
-                          <a-button type="primary">Open D2S / D2I</a-button>
-                        </a-upload>
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <h5 class="mt-1 mb-2">Create</h5>
+                      <a-dropdown>
+                        <a-button type="primary">Create new</a-button>
+                        <template #overlay>
+                          <a-menu @click="onCreateMenuClick">
+                            <a-menu-item key="0">Amazon</a-menu-item>
+                            <a-menu-item key="10">Sorceress</a-menu-item>
+                            <a-menu-item key="20">Necromancer</a-menu-item>
+                            <a-menu-item key="30">Paladin</a-menu-item>
+                            <a-menu-item key="40">Barbarian</a-menu-item>
+                            <a-menu-item key="50">Druid</a-menu-item>
+                            <a-menu-item key="60">Assassin</a-menu-item>
+                          </a-menu>
+                        </template>
+                      </a-dropdown>
+                    </div>
+                    <div class="col-md-6">
+                      <h5 class="mt-1 mb-2">Open</h5>
+                      <div class="form-group">
+                        <Flex gap="6" align="center" justify="left">
+                          <a-select
+                            id="open-mod"
+                            v-model:value="$work_mod.value"
+                            name="open-mod"
+                            title="Workspace Mod"
+                            @change="changeMod()"
+                            style="min-width: 120px"
+                            class="flex-1"
+                          >
+                            <a-select-option value="diablo2">Diablo2</a-select-option>
+                            <a-select-option value="blizzless">Blizzless</a-select-option>
+                            <a-select-option value="blizzless_beta">Blizzless Beta</a-select-option>
+                          </a-select>
+                          <a-select
+                            id="work-version"
+                            v-model:value="$work_version.value"
+                            name="work-version"
+                            title="Workspace Version"
+                            @change="changeMod()"
+                            style="min-width: 80px"
+                            class="flex-1"
+                          >
+                            <!-- <option v-if="$work_mod.value == 'diablo2'" value="96">LOD 1.10-1.14d</option> -->
+                            <!-- <option v-if="$work_mod.value == 'diablo2'" value="97">D2R Alpha</option> -->
+                            <!-- <option v-if="$work_mod.value == 'diablo2'" value="98">D2R 2.4</option> -->
+                            
+                            <!-- <option v-if="$work_mod.value == 'blizzless'" value="98">Beta</option> -->
+                            <a-select-option value="99">D2R 2.5+</a-select-option>
+                          </a-select>
+                          <div class="flex-1">
+                            <a-upload :before-upload="() => false" :multiple="true" :show-upload-list="false" accept=".d2s,.d2i" @change="onAntUploadChange">
+                              <a-button type="primary">Open D2S / D2I</a-button>
+                            </a-upload>
+                          </div>
+                          <div class="flex-1">
+                            <a-button type="primary" @click="pasteBase64Save">Paste as base64</a-button>
+                          </div>
+                        </Flex>
                       </div>
-                      <div class="input-group-append">
-                        <a-button type="primary" @click="pasteBase64Save">Paste as base64</a-button>
-                      </div>
-                      <!-- <div>
-                       <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">Create New</button>
-                        <div class="dropdown-menu dropdown-menu-right">
-                          <button class="dropdown-item" type="button" @click="newChar(0)">Amazon</button>
-                          <button class="dropdown-item" type="button" @click="newChar(1)">Sorceress</button>
-                          <button class="dropdown-item" type="button" @click="newChar(2)">Necromancer</button>
-                          <button class="dropdown-item" type="button" @click="newChar(3)">Paladin</button>
-                          <button class="dropdown-item" type="button" @click="newChar(4)">Barbarian</button>
-                          <button class="dropdown-item" type="button" @click="newChar(5)">Druid</button>
-                          <button class="dropdown-item" type="button" @click="newChar(6)">Assassin</button>
-                        </div>
-                      </div>
-                      <div class="input-group-append"><span>&nbsp;</span></div> -->
                     </div>
                   </div>
 
-                  <nav class="navbar navbar-expand-md navbar-light">
+                  <nav v-if="hasOpened" class="navbar navbar-expand-md navbar-light">
                     <div class="w-100 d-flex justify-content-between align-items-center">
-                      <div class="save-info d-flex align-items-center">
-                        <span class="mr-2">Opened:</span>
+                      <div class="save-info d-flex align-items-center flex-1" v-if="hasOpened">
+                        <span class="mr-2">Current:</span>
                         <template v-if="save && save.header && save.header.name">
                           <img v-if="classIconSrc" :src="classIconSrc" alt="class" style="height:24px;width:24px;object-fit:contain;" />
                           <strong class="ml-2">{{ save.header.name }}</strong>
                           <span class="ml-2">Level {{ save.header.level }}</span>
+                          <a-tag class="ml-2" :color="currentModeLabelColor">{{ currentModeLabel }}</a-tag>
+                          <a-tag v-if="isClassic" class="ml-2" color="gold">Classic</a-tag>
                         </template>
                         <template v-else-if="stashData">
                           <img src="img/icons/stash.png" alt="stash" style="height:24px;width:24px;object-fit:contain;" />
-                          <span class="ml-2">Pages: {{ stashData.pageCount }}</span>
-                          <span class="ml-2">Items: {{ stashItemsCount }}</span>
-                          <span v-if="stashData.sharedGold != null" class="ml-2">Gold: {{ stashData.sharedGold }}</span>
+                          <Flex gap="2" align="center" justify="left" class="ml-2">
+                            <Tag color="gold">Pages: {{ stashData.pageCount }}</Tag>
+                            <Tag color="gold">Items: {{ stashItemsCount }}</Tag>
+                          </Flex>
                         </template>
                       </div>
-                      <div>
-                        <a-dropdown>
-                          <a-button type="primary">Create new</a-button>
-                          <template #overlay>
-                            <a-menu @click="onCreateMenuClick">
-                              <a-menu-item key="0">Amazon</a-menu-item>
-                              <a-menu-item key="10">Sorceress</a-menu-item>
-                              <a-menu-item key="20">Necromancer</a-menu-item>
-                              <a-menu-item key="30">Paladin</a-menu-item>
-                              <a-menu-item key="40">Barbarian</a-menu-item>
-                              <a-menu-item key="50">Druid</a-menu-item>
-                              <a-menu-item key="60">Assassin</a-menu-item>
-                            </a-menu>
-                          </template>
-                        </a-dropdown>
+                      <div v-if="save != null" class="d-flex flex-1 justify-content-end">
+                        <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x60)">Save D2</button> -->
+                        <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x63)">Save D2R</button> -->
+                        <!-- <a-button type="primary" id="d2r" @click="saveFile($work_mod.value, $work_version.value)">Save</a-button> -->
+                        <a-button type="primary" id="d2r-blizz" @click="saveFile('blizzless', $work_version.value)">Save file</a-button>
+                        <a-button type="primary" id="d2r-base64" @click="outputBase64Save($work_mod.value, $work_version.value)">Output as base64</a-button>
                       </div>
                     </div>
                   </nav>
 
                   <div v-if="save != null">
+                    <div class="mb-3 ml-3">
+                      <div class="row" v-if="!isStashOnly">
+                        <a-button type="primary" @click="unlockHell">Unlock Hell</a-button>
+                        <a-button type="primary" @click="unlockAllWPs">Unlock All WPs</a-button>
+                        <a-button type="primary" @click="setLvl99">Set Level 99</a-button>
+                        <a-button type="primary" @click="setAllSkills20">Set All Skills 20</a-button>
+                        <a-button type="primary" @click="unlockQs">Complete Skill/Stat Qs</a-button>
+                        <a-button type="primary" @click="maxGold">Max Gold</a-button>
+                      </div>
+                    </div>
                     <ul class="nav nav-tabs" id="tabs">
                       <li class="nav-item">
                         <a class="nav-link active" id="items-tab" data-toggle="tab" data-target="#items-content"
@@ -159,12 +181,12 @@
                         <div class="row mt-3">
                           <div class="col-auto equipment-inventory-col">
                             <Equipped v-if="!isStashOnly" :items.sync="equipped" @item-selected="onSelect" @item-event="onEvent"
-                              :id="'Equipped'" :contextMenu="$refs.contextMenu">
+                              :id="'Equipped'" :contextMenu="$refs.contextMenu" :gold="save?.attributes?.gold">
                             </Equipped>
                             <!-- <Grid v-if="activeTab == 1 || activeTab == 10" :width="grid.inv.w" :height="grid.inv.h" :page="1"
                               :items.sync="inventory" @item-selected="onSelect" @item-event="onEvent" :id="'InventoryGrid'" :contextMenu="$refs.contextMenu">
                             </Grid> -->
-                            <Stash :items.sync="stash" @item-selected="onSelect" @item-event="onEvent" :id="'Stash'"
+                            <Stash :items.sync="stashWithMeta" @item-selected="onSelect" @item-event="onEvent" :id="'Stash'"
                               :hidePersonal="isStashOnly"
                               :sharedCount="stashSharedCount"
                               :contextMenu="$refs.contextMenu">
@@ -199,23 +221,6 @@
                         <Skills v-if="save && save.skills && save.skills.length" v-bind:save.sync="save" />
                       </div>
                     </div>
-          <div v-if="save != null">
-                      <div class="row" v-if="!isStashOnly">
-                        <a-button type="primary" @click="unlockHell">Unlock Hell</a-button>
-                        <a-button type="primary" @click="unlockAllWPs">Unlock All WPs</a-button>
-                        <a-button type="primary" @click="setLvl99">Set Level 99</a-button>
-                        <a-button type="primary" @click="setAllSkills20">Set All Skills 20</a-button>
-                        <a-button type="primary" @click="unlockQs">Complete Skill/Stat Qs</a-button>
-                        <a-button type="primary" @click="maxGold">Max Gold</a-button>
-                      </div>
-                      <div class="row mt-3 ml-1">
-                        <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x60)">Save D2</button> -->
-                        <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x63)">Save D2R</button> -->
-                        <!-- <a-button type="primary" id="d2r" @click="saveFile($work_mod.value, $work_version.value)">Save</a-button> -->
-                        <a-button type="primary" id="d2r-blizz" @click="saveFile('blizzless', $work_version.value)">Save file</a-button>
-                        <a-button type="primary" id="d2r-base64" @click="outputBase64Save($work_mod.value, $work_version.value)">Output as base64</a-button>
-                      </div>
-                    </div>
                   </div>
 
                 </fieldset>
@@ -244,7 +249,7 @@
   import Mercenary from './Mercenary.vue';
   import ItemEditor from './inventory/ItemEditor.vue';
   import Stash from './inventory/Stash.vue';
-  import { theme as antdTheme } from 'ant-design-vue';
+  import { theme as antdTheme, Flex, Tag } from 'ant-design-vue';
 
   import ItemPack from '../d2/ItemPack.js';
   import CharPack from '../d2/CharPack.js';
@@ -268,7 +273,9 @@
       Grid,
       Mercenary,
       ItemEditor,
-      ContextMenu
+      ContextMenu,
+      Flex,
+      Tag
     },
     data() {
       return {
@@ -300,9 +307,28 @@
     filters: {
     },
     computed: {
+      hasOpened() {
+        return !!(this.save && this.save.header && this.save.header.name) || !!this.stashData;
+      },
       stashItemsCount() {
         if (!this.stashData || !this.stashData.pages) return 0;
         return this.stashData.pages.reduce((acc, p) => acc + (p.items ? p.items.length : 0), 0);
+      },
+      isClassic() {
+        // Classic если нет Expansion флага
+        return !!(this.save && this.save.header && this.save.header.status && !this.save.header.status.expansion);
+      },
+      currentModeLabel() {
+        if (!this.save || !this.save.header || !this.save.header.status) return '';
+        const s = this.save.header.status;
+        // SC/HC + Ladder
+        const base = s.hardcore ? 'HC' : 'SC';
+        return s.ladder ? `${base}L` : base;
+      },
+      currentModeLabelColor() {
+        if (!this.save || !this.save.header || !this.save.header.status) return '';
+        const s = this.save.header.status;
+        return s.hardcore ? 'red' : 'blue';
       },
       isStashOnly() {
         return !!this.stashData && (!this.save || !this.save.header || !this.save.header.name);
@@ -341,6 +367,15 @@
         }
         return stash;
       },
+      stashWithMeta() {
+        const base = this.stash;
+        const meta = {
+          gold: this.save && this.save.attributes ? this.save.attributes.gold : null,
+          stashedGold: this.save && this.save.attributes ? this.save.attributes.stashed_gold : null,
+          sharedGold: this.stashData && typeof this.stashData.sharedGold === 'number' ? this.stashData.sharedGold : null,
+        };
+        return { ...base, meta };
+      },
       stashGrid() {
         return this.$work_mod.value === 'blizzless'
           ? { w: 16, h: 13 }
@@ -356,6 +391,23 @@
       },
     },
     methods: {
+      closeLoadItemModal() {
+        try {
+          const modal = document.getElementById('LoadItem');
+          if (!modal) return;
+          // Bootstrap-like hide if available
+          if (typeof window.$ !== 'undefined' && window.$(modal).modal) {
+            window.$(modal).modal('hide');
+            return;
+          }
+          // Fallback: toggle classes/attributes
+          modal.classList.remove('show');
+          modal.style.display = 'none';
+          modal.setAttribute('aria-hidden', 'true');
+          const backdrop = document.querySelector('.modal-backdrop');
+          if (backdrop && backdrop.parentNode) backdrop.parentNode.removeChild(backdrop);
+        } catch (_) {}
+      },
       onAntUploadChange({ fileList }) {
         if (!fileList || !fileList.length) return;
         const list = fileList.slice(0, 2);
@@ -369,6 +421,11 @@
               this.readBuffer(buf, file.name);
             } catch (err) {
               // noop, readBuffer handles messaging
+            }
+          };
+          reader.onerror = () => {
+            if (this.$message) {
+              this.$message.error('Failed to read file');
             }
           };
           reader.readAsArrayBuffer(file);
@@ -635,9 +692,10 @@
       async setPreviewItem(e) {
         this.baseOptions = null;
         this.baseModel = null;
-        if (this.previewModel) {
+        if (!this.previewModel) return;
+        try {
           if (this.previewModel.base64) {
-            let bytes = utils.b64ToArrayBuffer(this.previewModel.base64);
+            const bytes = utils.b64ToArrayBuffer(this.previewModel.base64);
             this.preview = await this.$d2s.readItem(bytes, this.$work_mod.value, this.$work_version.value);
           } else if (this.previewModel.item) {
             this.preview = this.previewModel.item;
@@ -645,36 +703,59 @@
               this.baseOptions = this.getBasesOptions(this.preview);
               return;
             }
-        }
+          }
           await this.resolveInventoryImage(this.preview);
+        } catch (err) {
+          this.closeLoadItemModal();
+          if (this.$message) {
+            this.$message.error(`Failed to open item: ${err && err.message ? err.message : 'Unknown error'}`);
+          }
         }
       },
       async onItemFileLoad(event) {
-        this.previewModel = {
-          base64: utils.arrayBufferToBase64(event.target.result),
-          // mod: this.$work_mod.value,
-          // version: this.$work_version.value,
-        };
-        this.setPreviewItem();
+        try {
+          this.previewModel = {
+            base64: utils.arrayBufferToBase64(event.target.result),
+            // mod: this.$work_mod.value,
+            // version: this.$work_version.value,
+          };
+          this.setPreviewItem();
+        } catch (e) {
+          this.closeLoadItemModal();
+          if (this.$message) {
+            this.$message.error('Failed to load item file');
+          }
+        }
       },
       onItemFileChange(event) {
-        let reader = new FileReader();
+        const file = event && event.target && event.target.files && event.target.files[0];
+        if (!file) {
+          return;
+        }
+        const reader = new FileReader();
         reader.onload = this.onItemFileLoad;
-        reader.readAsArrayBuffer(event.target.files[0]);
+        reader.onerror = () => {
+          this.closeLoadItemModal();
+          if (this.$message) {
+            this.$message.error('Failed to read item file');
+          }
+        };
+        reader.readAsArrayBuffer(file);
         event.target.value = null;
       },
       async loadBase64Item() {
         try {
-          let b64 = prompt("Please enter your base64 string for item.");
-          if (b64 && this.preview) {
-            let bytes = utils.b64ToArrayBuffer(b64);
-            //await this.readItem(bytes, 0x63);
-            this.preview = await this.$d2s.readItem(bytes, mod, version);
-            await this.resolveInventoryImage(this.preview);
-            this.paste(this.preview);
+          const b64 = prompt("Please enter your base64 string for item.");
+          if (!b64) return;
+          const bytes = utils.b64ToArrayBuffer(b64);
+          this.preview = await this.$d2s.readItem(bytes, this.$work_mod.value, this.$work_version.value);
+          await this.resolveInventoryImage(this.preview);
+          this.paste(this.preview);
+        } catch (e) {
+          this.closeLoadItemModal();
+          if (this.$message) {
+            this.$message.error(`Failed to read item: ${e && e.message ? e.message : 'Unknown error'}`);
           }
-        } catch(e) {
-          alert("Failed to read item.");
         }
       },
       loadItem() {
