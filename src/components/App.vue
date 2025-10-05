@@ -354,10 +354,10 @@
         stash.pages[0].items = [];
         stash.pages[0].items = this.save.items.filter(item => item.location_id === 0 && item.alt_position_id === 5);
 
-        if (this.stashData != null) {
-          stash.pages.push(this.stashData.pages[0]);
-          stash.pages.push(this.stashData.pages[1]);
-          stash.pages.push(this.stashData.pages[2]);
+        if (this.stashData != null && Array.isArray(this.stashData.pages)) {
+          for (let i = 0; i < this.stashData.pages.length; i++) {
+            stash.pages.push(this.stashData.pages[i]);
+          }
         }
         return stash;
       },
