@@ -402,28 +402,46 @@
           if (backdrop && backdrop.parentNode) backdrop.parentNode.removeChild(backdrop);
         } catch (_) {}
       },
+      // Fully reset state related to currently opened save/stash
+      resetOpenState() {
+        this.save = null;
+        this.stashData = null;
+        this.selected = null;
+        this.notifications = [];
+        this.preview = null;
+        this.previewModel = null;
+        this.baseModel = null;
+        this.baseOptions = null;
+        this.location = {};
+      },
+      // Increase load token to invalidate previous async operations
+      beginNewLoad() {
+        if (typeof this.load !== 'number') this.load = 0;
+        this.load += 1;
+        return this.load;
+      },
       onAntUploadChange({ fileList }) {
         if (!fileList || !fileList.length) return;
-        const list = fileList.slice(0, 2);
-        list.forEach(f => {
-          const file = f.originFileObj || f;
-          if (!file) return;
-          const reader = new FileReader();
-          reader.onload = (e) => {
-            try {
-              const buf = e.target.result;
-              this.readBuffer(buf, file.name);
-            } catch (err) {
-              // noop, readBuffer handles messaging
-            }
-          };
-          reader.onerror = () => {
-            if (this.$message) {
-              this.$message.error('Failed to read file');
-            }
-          };
-          reader.readAsArrayBuffer(file);
-        });
+        const latest = fileList[fileList.length - 1];
+        const file = latest && (latest.originFileObj || latest);
+        if (!file) return;
+        const token = this.beginNewLoad();
+        this.resetOpenState();
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          try {
+            const buf = e.target.result;
+            this.readBuffer(buf, file.name, token);
+          } catch (err) {
+            // noop, readBuffer handles messaging
+          }
+        };
+        reader.onerror = () => {
+          if (this.$message) {
+            this.$message.error('Failed to read file');
+          }
+        };
+        reader.readAsArrayBuffer(file);
       },
       async copyBase64OrPrompt(text) {
         try {
@@ -905,18 +923,21 @@
         } else if (this.$work_mod.value == 'blizzless_beta') {
           bytes = utils.b64ToArrayBuffer(CharPack.blizzless_beta[index]);
         }
-        this.readBuffer(bytes);
+        const token = this.beginNewLoad();
+        this.resetOpenState();
+        this.readBuffer(bytes, undefined, token);
       },
       onFileLoad(event) {
         this.readBuffer(event.target.result, event.target.filename);
       },
-      async readBufferAuto(bytes) {
+      async readBufferAuto(bytes, expectedLoad) {
         // Try to read as character first, then as shared stash
         this.save = null;
         this.selected = null;
         this.stashData = null;
         try {
           const response = await this.$d2s.read(bytes, this.$work_mod.value);
+          if (expectedLoad != null && expectedLoad !== this.load) return;
           this.save = response;
           await this.resolveInventoryImages();
           if (this.$message) {
@@ -928,6 +949,7 @@
         }
         try {
           const response = await this.$d2s.readStash(bytes, this.$work_mod.value);
+          if (expectedLoad != null && expectedLoad !== this.load) return;
           if (!this.save) {
             // Ensure UI renders stash even without a loaded character
             this.save = { items: [], merc_items: [], corpse_items: [], golem_item: null, header: {} };
@@ -941,12 +963,13 @@
           }
           return;
         } catch (e2) {
+          if (expectedLoad != null && expectedLoad !== this.load) return;
           if (this.$message) {
             this.$message.error('Provided base64 is not a valid D2S or D2I file');
           }
         }
       },
-      readBuffer(bytes, filename) {
+      readBuffer(bytes, filename, expectedLoad) {
         //this.addItemsToItemPack();
         const byteLen = bytes && (bytes.byteLength ?? bytes.length ?? 0);
         if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] start', { filename, byteLen });
@@ -958,6 +981,7 @@
             this.$d2s.read(bytes, this.$work_mod.value)
             .then(response => {
               if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] d2s parsed OK');
+              if (expectedLoad != null && expectedLoad !== this.load) return;
               this.save = response;
               this.save.header.name = filename.split('.')[0];
               this.resolveInventoryImages().then(() => { if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] inventory images resolved') });
@@ -967,6 +991,7 @@
             })
             .catch(err => {
               if (localStorage.getItem('isDebug') == '1') console.error('[readBuffer] d2s parse error:', err);
+              if (expectedLoad != null && expectedLoad !== this.load) return;
               if (this.$message) {
                 this.$message.error(`Failed to open character save: ${err && err.message ? err.message : 'Unknown error'}`);
               }
@@ -977,6 +1002,7 @@
             this.$d2s.readStash(bytes, this.$work_mod.value)
             .then(response => {
               if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] d2i parsed OK');
+              if (expectedLoad != null && expectedLoad !== this.load) return;
               if (!this.save) {
                 // Ensure UI renders stash even without a loaded character
                 this.save = { items: [], merc_items: [], corpse_items: [], golem_item: null, header: {} };
@@ -994,6 +1020,7 @@
             })
             .catch(err => {
               if (localStorage.getItem('isDebug') == '1') console.error('[readBuffer] d2i parse error:', err);
+              if (expectedLoad != null && expectedLoad !== this.load) return;
               if (this.$message) {
                 this.$message.error(`Failed to open shared stash: ${err && err.message ? err.message : 'Unknown error'}`);
               }
@@ -1008,6 +1035,7 @@
           this.$d2s.read(bytes, this.$work_mod.value)
           .then(response => {
             if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] d2s parsed OK (no filename)');
+            if (expectedLoad != null && expectedLoad !== that.load) return;
             that.save = response;
             that.resolveInventoryImages().then(() => { if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] inventory images resolved') });
             if (that.$message) {
@@ -1016,6 +1044,7 @@
           })
           .catch(err => {
             if (localStorage.getItem('isDebug') == '1') console.error('[readBuffer] d2s parse error (no filename):', err);
+            if (expectedLoad != null && expectedLoad !== that.load) return;
             if (that.$message) {
               that.$message.error(`Failed to open character save: ${err && err.message ? err.message : 'Unknown error'}`);
             }
@@ -1046,7 +1075,9 @@
             }
             return;
           }
-          await this.readBufferAuto(bytes);
+          const token = this.beginNewLoad();
+          this.resetOpenState();
+          await this.readBufferAuto(bytes, token);
         } catch (err) {
           if (this.$message) {
             this.$message.error('Failed to process query parameter "s"');
@@ -1078,7 +1109,9 @@
             }
             return;
           }
-          await this.readBufferAuto(bytes);
+          const token = this.beginNewLoad();
+          this.resetOpenState();
+          await this.readBufferAuto(bytes, token);
         } catch (err) {
           if (this.$message) {
             this.$message.error(`Failed to open data from clipboard: ${err && err.message ? err.message : 'Unknown error'}`);
@@ -1101,34 +1134,37 @@
       },
       onFileChange(event) {
         if (localStorage.getItem('isDebug') == '1') console.log('[onFileChange] triggered');
-        this.save = null;
-        this.stashData = null;
-        this.selected = null;
         const files = event.currentTarget.files;
         if (localStorage.getItem('isDebug') == '1') console.log('[onFileChange] files:', files);
-        const count = Math.min(files.length || 0, 2);
-        for (let i = 0; i < count; i++) {
-          const file = typeof files.item === 'function' ? files.item(i) : files[i];
-          if (!file) continue;
-          if (localStorage.getItem('isDebug') == '1') console.log('[onFileChange] reading file:', file.name, 'size:', file.size);
-          const reader = new FileReader();
-          reader.onload = (e) => {
-            try {
-              const buf = e.target.result;
-              if (localStorage.getItem('isDebug') == '1') console.log('[onFileChange] loaded:', file.name, 'byteLength:', buf?.byteLength);
-              this.readBuffer(buf, file.name);
-            } catch (err) {
-              if (localStorage.getItem('isDebug') == '1') console.error('[onFileChange] onload error:', err);
-            }
-          };
-          reader.onerror = (e) => {
-            if (localStorage.getItem('isDebug') == '1') console.error('[onFileChange] FileReader error for', file.name, e);
+        if (!files || !files.length) {
+          event.currentTarget.value = null;
+          return;
+        }
+        const file = typeof files.item === 'function' ? files.item(files.length - 1) : files[files.length - 1];
+        if (!file) {
+          event.currentTarget.value = null;
+          return;
+        }
+        const token = this.beginNewLoad();
+        this.resetOpenState();
+        if (localStorage.getItem('isDebug') == '1') console.log('[onFileChange] reading file:', file.name, 'size:', file.size);
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          try {
+            const buf = e.target.result;
+            if (localStorage.getItem('isDebug') == '1') console.log('[onFileChange] loaded:', file.name, 'byteLength:', buf?.byteLength);
+            this.readBuffer(buf, file.name, token);
+          } catch (err) {
+            if (localStorage.getItem('isDebug') == '1') console.error('[onFileChange] onload error:', err);
+          }
+        };
+        reader.onerror = (e) => {
+          if (localStorage.getItem('isDebug') == '1') console.error('[onFileChange] FileReader error for', file.name, e);
           if (this.$message) {
             this.$message.error(`Failed to read file: ${file && file.name ? file.name : 'Unknown file'}`);
           }
-          };
-          reader.readAsArrayBuffer(file);
-        }
+        };
+        reader.readAsArrayBuffer(file);
         // Allow selecting the same file again
         event.currentTarget.value = null;
       },
