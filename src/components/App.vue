@@ -810,7 +810,6 @@
       },
       async resolveInventoryImages() {
         const allItems = [...(this.save.items || []), ...(this.save.merc_items || []), ...(this.save.corpse_items || []), this.save.golem_item].filter(Boolean);
-        if (localStorage.getItem('isDebug') == '1') console.log('[resolveInventoryImages] total items:', allItems.length);
         const promises = allItems.map(async function (item) {
           return this.resolveInventoryImage(item);
         }, this);
@@ -818,15 +817,9 @@
       },
       async resolveInventoryImage(item) {
         if (!item) {
-          if (localStorage.getItem('isDebug') == '1') console.log('[resolveInventoryImage] skip null item');
           return;
         }
-        try {
-          item.src = await utils.getInventoryImage(item, this.$work_mod.value, this.$work_version.value, this.$palettes.value);
-          if (localStorage.getItem('isDebug') == '1') console.log('[resolveInventoryImage] resolved', { type: item.type, inv: item.inv_file, hasSrc: !!item.src });
-        } catch (e) {
-          if (localStorage.getItem('isDebug') == '1') console.error('[resolveInventoryImage] error', e);
-        }
+        item.src = await utils.getInventoryImage(item, this.$work_mod.value, this.$work_version.value, this.$palettes.value);
         if (!item.socketed_items) {
           return;
         }
@@ -837,11 +830,8 @@
                 // Recheck cause it's async, and user may have used unsocket all button in the meanwhile
                 item.socketed_items[i].src = img;
                 //item.socketed_items[i].magic_attributes.forEach((it, idx) => { if (item.socketed_attributes.findIndex(x => x.id == it.id) == -1) item.socketed_attributes.push(it) });
-              } else {
-                if (localStorage.getItem('isDebug') == '1') console.log('[resolveInventoryImage] socket image missing', { parent: item.type, idx: i });
               }
             })
-            .catch((err) => { if (localStorage.getItem('isDebug') == '1') console.error('[resolveInventoryImage] socket image error', err); });
         }
       },
       setPropertiesOnItem(item) {
@@ -849,7 +839,6 @@
           return;
         }
         // Items from stash are already enhanced in parser; we only need to resolve their images here
-        if (localStorage.getItem('isDebug') == '1') console.log('[setPropertiesOnItem] item', { type: item.type, q: item.quality, inv: item.inv_file });
         this.resolveInventoryImage(item);
       },
       addItemsToItemPack() {
@@ -882,59 +871,41 @@
       readBuffer(bytes, filename) {
         //this.addItemsToItemPack();
         const byteLen = bytes && (bytes.byteLength ?? bytes.length ?? 0);
-        if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] start', { filename, byteLen });
         if (filename) {
           const lower = filename.toLowerCase();
           if (lower.endsWith(".d2s")) {
-            if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] detected .d2s');
             this.save = null;
             this.$d2s.read(bytes, this.$work_mod.value)
             .then(response => {
-              if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] d2s parsed OK');
               this.save = response;
               this.save.header.name = filename.split('.')[0];
-              this.resolveInventoryImages().then(() => { if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] inventory images resolved') });
+              this.resolveInventoryImages();
             })
-            .catch(err => {
-              if (localStorage.getItem('isDebug') == '1') console.error('[readBuffer] d2s parse error:', err);
-            });
           } else if (lower.endsWith(".d2i")) {
-            if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] detected .d2i');
             this.stashData = null;
             this.$d2s.readStash(bytes, this.$work_mod.value)
             .then(response => {
-              if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] d2i parsed OK');
               if (!this.save) {
                 // Ensure UI renders stash even without a loaded character
                 this.save = { items: [], merc_items: [], corpse_items: [], golem_item: null, header: {} };
-                if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] created placeholder save for stash rendering');
               }
               this.stashData = response;
               const pages = this.stashData?.pages || [];
-              if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] stash pages:', this.stashData.pageCount, 'items per page:', pages.map(p => p.items?.length || 0));
               for (var i = 0; i < this.stashData.pageCount; i++) {
                 [... this.stashData.pages[i].items].forEach(item => { this.setPropertiesOnItem(item)})
               }
             })
-            .catch(err => {
-              if (localStorage.getItem('isDebug') == '1') console.error('[readBuffer] d2i parse error:', err);
-            })
           }
         } else {
           let that = this;
-          if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] filename not provided, defaulting to character parse');
           this.save = null;
           this.selected = null;
           this.stashData = null;
           this.$d2s.read(bytes, this.$work_mod.value)
           .then(response => {
-            if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] d2s parsed OK (no filename)');
             that.save = response;
-            that.resolveInventoryImages().then(() => { if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] inventory images resolved') });
-          })
-          .catch(err => {
-            if (localStorage.getItem('isDebug') == '1') console.error('[readBuffer] d2s parse error (no filename):', err);
-          })
+            that.resolveInventoryImages();
+          });
         }
         
       },
@@ -953,29 +924,18 @@
         }
       },
       onFileChange(event) {
-        if (localStorage.getItem('isDebug') == '1') console.log('[onFileChange] triggered');
         this.save = null;
         this.stashData = null;
         this.selected = null;
         const files = event.currentTarget.files;
-        if (localStorage.getItem('isDebug') == '1') console.log('[onFileChange] files:', files);
         const count = Math.min(files.length || 0, 2);
         for (let i = 0; i < count; i++) {
           const file = typeof files.item === 'function' ? files.item(i) : files[i];
           if (!file) continue;
-          if (localStorage.getItem('isDebug') == '1') console.log('[onFileChange] reading file:', file.name, 'size:', file.size);
           const reader = new FileReader();
           reader.onload = (e) => {
-            try {
-              const buf = e.target.result;
-              if (localStorage.getItem('isDebug') == '1') console.log('[onFileChange] loaded:', file.name, 'byteLength:', buf?.byteLength);
-              this.readBuffer(buf, file.name);
-            } catch (err) {
-              if (localStorage.getItem('isDebug') == '1') console.error('[onFileChange] onload error:', err);
-            }
-          };
-          reader.onerror = (e) => {
-            if (localStorage.getItem('isDebug') == '1') console.error('[onFileChange] FileReader error for', file.name, e);
+            const buf = e.target.result;
+            this.readBuffer(buf, file.name);
           };
           reader.readAsArrayBuffer(file);
         }
