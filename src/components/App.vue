@@ -18,7 +18,7 @@
             </div>
             <label for="Item">Item</label>
             <multiselect v-model="previewModel" :options="itempack" label="key" valueProp="value" :searchable="true"
-              @update:model-value="setPreviewItem" />
+              @update:model-value="setPreviewItem($work_mod.value, $work_version.value)" />
             <div v-if="baseOptions">
               <label>Base</label>
               <multiselect v-model="baseModel" :options="baseOptions" label="label" valueProp="value" :searchable="true"
@@ -344,7 +344,9 @@
                         <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x60)">Save D2</button> -->
                         <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x63)">Save D2R</button> -->
                         <button type="button" id="d2r" class="btn btn-primary" @click="saveFile($work_mod.value, $work_version.value)">Save</button>
-                        <button type="button" id="d2r-blizz" class="btn btn-primary" @click="saveFile('blizzless', $work_version.value)">Save Blizzless</button>
+                        <div v-if="$work_mod.value == 'blizzless_beta'">
+                          <button type="button" id="d2r-blizz" class="btn btn-primary" @click="saveFile('blizzless', $work_version.value)">Save Blizzless</button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -676,13 +678,13 @@
           await this.resolveInventoryImage(this.preview);
         }
       },
-      async setPreviewItem(e) {
+      async setPreviewItem(mod, version) {
         this.baseOptions = null;
         this.baseModel = null;
         if (this.previewModel) {
           if (this.previewModel.base64) {
             let bytes = utils.b64ToArrayBuffer(this.previewModel.base64);
-            this.preview = await this.$d2s.readItem(bytes, this.$work_mod.value, this.$work_version.value);
+            this.preview = await this.$d2s.readItem(bytes, mod, version);
           } else if (this.previewModel.item) {
             this.preview = this.previewModel.item;
             if (this.preview?.given_runeword) {
@@ -693,17 +695,17 @@
           await this.resolveInventoryImage(this.preview);
         }
       },
-      async onItemFileLoad(event) {
+      async loadD2iItem(event) {
         this.previewModel = {
           base64: utils.arrayBufferToBase64(event.target.result),
-          // mod: this.$work_mod.value,
-          // version: this.$work_version.value,
+          mod: "diablo2",
+          version: 0x60,
         };
-        this.setPreviewItem();
+        this.setPreviewItem(this.previewModel.mod, this.previewModel.version);
       },
       onItemFileChange(event) {
         let reader = new FileReader();
-        reader.onload = this.onItemFileLoad;
+        reader.onload = this.loadD2iItem;
         reader.readAsArrayBuffer(event.target.files[0]);
         event.target.value = null;
       },
@@ -1081,6 +1083,7 @@
               set_name: item.n,
               ethereal: 0,
               identified: 1,
+              //TODO
               //set_attributes: 
               magic_attributes: this.$d2s.generateFixedMods(item.m, this.$getWorkConstantData())
             });
