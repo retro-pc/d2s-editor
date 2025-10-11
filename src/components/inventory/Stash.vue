@@ -1,98 +1,47 @@
 <template>
   <div class="stash">
     <div
-          class="btn-group"
-          role="group">
-        <button
-            type="button"
-            class="btn btn-secondary"
-            :class="{ active: activeTab == 1 }"
-            @click="changeTab(1)">Personal
-        </button>
-        <button
-            type="button"
-            class="btn btn-secondary"
-            :class="{ active: activeTab == 2 }"
-            @click="changeTab(2)">Shared
-        </button>
-        <button
-            type="button"
-            class="btn btn-secondary"
-            :class="{ active: activeTab == 3 }"
-            @click="changeTab(3)">Shared
-        </button>
-        <button
-            type="button"
-            class="btn btn-secondary"
-            :class="{ active: activeTab == 4 }"
-            @click="changeTab(4)">Shared
-        </button>
+      class="btn-group"
+      role="group">
+      <button
+        v-for="tabIndex in (items && items.pages ? items.pages.length : 0)"
+        :key="tabIndex"
+        type="button"
+        class="btn btn-secondary"
+        :class="{ active: activeTab === tabIndex }"
+        @click="changeTab(tabIndex)">
+        {{ tabIndex === 1 ? 'Personal' : `Shared` }}
+      </button>
     </div>
-    <div class="stash-bg":class="{'stash-bg-big': $work_mod.value !== 'diablo2'}">
+    <div class="stash-bg" :class="{ 'stash-bg-big': $work_mod.value !== 'diablo2' }">
       <Grid
-          v-if="activeTab == 1"
-          :width="stashGrid.w"
-          :height="stashGrid.h"
-          :page="1"
-          :items.sync="stash(0)"
-          @item-selected="onSelect"
-          @item-event="onEvent"
-          :id="'Grid'"
-          :contextMenu=contextMenu
-          class="y-0"></Grid>
-      <Grid
-          v-if="activeTab == 2"
-          :width="stashGrid.w"
-          :height="stashGrid.h"
-          :page="2"
-          :items.sync="stash(1)"
-          @item-selected="onSelect"
-          @item-event="onEvent"
-          :id="'Grid'"
-          :contextMenu=contextMenu
-          class="y-0"></Grid>
-      <Grid
-          v-if="activeTab == 3"
-          :width="stashGrid.w"
-          :height="stashGrid.h"
-          :page="3"
-          :items.sync="stash(2)"
-          @item-selected="onSelect"
-          @item-event="onEvent"
-          :id="'Grid'"
-          :contextMenu=contextMenu
-          class="y-0"></Grid>
-      <Grid
-          v-if="activeTab == 4"
-          :width="stashGrid.w"
-          :height="stashGrid.h"
-          :page="4"
-          :items.sync="stash(3)"
-          @item-selected="onSelect"
-          @item-event="onEvent"
-          :id="'Grid'"
-          :contextMenu=contextMenu
-          class="y-0"></Grid>
+        v-if="items && items.pages && items.pages.length > 0"
+        :width="stashGrid.w"
+        :height="stashGrid.h"
+        :page="activeTab"
+        :items.sync="stash(activeTab - 1)"
+        @item-selected="onSelect"
+        @item-event="onEvent"
+        :id="'Grid'"
+        :contextMenu="contextMenu"
+        class="y-0"></Grid>
     </div>
   </div>
 </template>
 
 <script>
-import Item from './Item.vue';
 import Grid from './Grid.vue';
 import ContextMenu from "../ContextMenu.vue";
 
 export default {
   name: 'Stash',
   components: {
-    Item,
     Grid,
     ContextMenu
   },
   data() {
     return {
-      activeTab: 1,
-      gameMode: 'd2r-blizz'
+      activeTab: 1
     };
   },
   props: {
