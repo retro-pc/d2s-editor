@@ -72,6 +72,9 @@
                           id="d2sFile" accept=".d2s,.d2i">
                         <label class="custom-file-label load-save-label" for="d2sFile">*.d2s,*.d2i</label>
                       </div>
+                      <div class="input-group-append">
+                        <button type="button" class="btn btn-primary" @click="pasteBase64Save">Paste base64</button>
+                      </div>
                       <!-- <div>
                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">Create New</button>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -345,6 +348,7 @@
                         <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x63)">Save D2R</button> -->
                         <button type="button" id="d2r" class="btn btn-primary" @click="saveFile($work_mod.value, $work_version.value)">Save</button>
                         <button type="button" id="d2r-blizz" class="btn btn-primary" @click="saveFile('blizzless', $work_version.value)">Save Blizzless</button>
+                        <button type="button" class="btn btn-primary" @click="outputBase64Save">Output as base64</button>
                       </div>
                     </div>
                   </div>
@@ -947,6 +951,42 @@
         // Allow selecting the same file again
         event.currentTarget.value = null;
       },
+      async pasteBase64Save() {
+        try {
+          const text = await navigator.clipboard.readText();
+          if (!text) {
+            alert('Clipboard is empty.');
+            return;
+          }
+          const idx = text.indexOf(',');
+          const b64 = (idx !== -1 ? text.substring(idx + 1) : text).trim();
+          const bytes = utils.b64ToArrayBuffer(b64);
+          this.save = null;
+          this.stashData = null;
+          this.selected = null;
+          try {
+            const response = await this.$d2s.read(bytes, this.$work_mod.value);
+            this.save = response;
+            this.saveViewMod = 'character';
+            await this.resolveInventoryImages();
+            this.notifications.push({ alert: 'alert alert-info', message: 'Save loaded from clipboard.' });
+          } catch (e1) {
+            const stash = await this.$d2s.readStash(bytes, this.$work_mod.value);
+            if (!this.save) {
+              this.save = { items: [], merc_items: [], corpse_items: [], golem_item: null, header: {} };
+            }
+            this.stashData = stash;
+            this.saveViewMod = 'stash';
+            for (let i = 0; i < this.stashData.pageCount; i++) {
+              [...this.stashData.pages[i].items].forEach(item => { this.setPropertiesOnItem(item); });
+            }
+            this.notifications.push({ alert: 'alert alert-info', message: 'Stash loaded from clipboard.' });
+          }
+        } catch (e) {
+          console.error(e);
+          alert('Failed to load from clipboard. Ensure it is a valid base64 save.');
+        }
+      },
       maxGold() {
         this.save.attributes.gold = this.save.header.level * 10000;
         this.save.attributes.stashed_gold = 2500000
@@ -1034,6 +1074,28 @@
           link.click();
           link.remove();
         });
+      },
+      async outputBase64Save() {
+        try {
+          if (this.saveViewMod === 'stash' && this.stashData != null) {
+            const buf = await this.$d2s.writeStash(this.stashData, this.$work_mod.value, this.$work_version.value);
+            const b64 = utils.arrayBufferToBase64(buf);
+            await navigator.clipboard.writeText(b64);
+            this.notifications.push({ alert: 'alert alert-info', message: 'Stash base64 copied to clipboard.' });
+            return;
+          }
+          if (!this.save) {
+            alert('Nothing to export. Load or create a save first.');
+            return;
+          }
+          const buf = await this.$d2s.write(this.save, this.$work_mod.value, this.$work_version.value);
+          const b64 = utils.arrayBufferToBase64(buf);
+          await navigator.clipboard.writeText(b64);
+          this.notifications.push({ alert: 'alert alert-info', message: 'Save base64 copied to clipboard.' });
+        } catch (e) {
+          console.error(e);
+          alert('Failed to export base64.');
+        }
       },
       async addBasesToItemPack(constants, category) {
         let newItems = [];
