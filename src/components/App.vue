@@ -256,19 +256,19 @@
                         <a class="nav-link active" id="items-tab" data-toggle="tab" data-target="#items-content"
                           role="tab" type="button">Equipment</a>
                       </li>
-                      <li class="nav-item" role="presentation">
+                      <li class="nav-item" role="presentation" v-if="saveViewMod !== 'stash'">
                         <a class="nav-link" id="stats-tab" data-toggle="tab" data-target="#stats-content" role="tab"
                           type="button">Character</a>
                       </li>
-                      <li class="nav-item" role="presentation">
+                      <li class="nav-item" role="presentation" v-if="saveViewMod !== 'stash'">
                         <a class="nav-link" id="skills-tab" data-toggle="tab" data-target="#skills-content" role="tab"
                           type="button">Skills</a>
                       </li>
-                      <li class="nav-item" role="presentation">
+                      <li class="nav-item" role="presentation" v-if="saveViewMod !== 'stash'">
                         <a class="nav-link" id="quests-tab" data-toggle="tab" data-target="#quests-content" role="tab"
                           type="button">Quests</a>
                       </li>
-                      <li class="nav-item" role="presentation">
+                      <li class="nav-item" role="presentation" v-if="saveViewMod !== 'stash'">
                         <a class="nav-link" id="waypoints-tab" data-toggle="tab" data-target="#waypoints-content"
                           role="tab" type="button">Waypoints</a>
                       </li>
@@ -284,19 +284,19 @@
                         </div>
                         <div class="row mt-3">
                           <div class="col-auto equipment-inventory-col">
-                            <Equipped :items.sync="equipped" @item-selected="onSelect" @item-event="onEvent"
+                            <Equipped v-if="saveViewMod !== 'stash'" :items.sync="equipped" @item-selected="onSelect" @item-event="onEvent"
                               :id="'Equipped'" :contextMenu="$refs.contextMenu">
                             </Equipped>
                             <!-- <Grid v-if="activeTab == 1 || activeTab == 10" :width="grid.inv.w" :height="grid.inv.h" :page="1"
                               :items.sync="inventory" @item-selected="onSelect" @item-event="onEvent" :id="'InventoryGrid'" :contextMenu="$refs.contextMenu">
                             </Grid> -->
-          <Stash :items.sync="stash" @item-selected="onSelect" @item-event="onEvent" :id="'Stash'"
+          <Stash :items.sync="stash" :mode="saveViewMod" @item-selected="onSelect" @item-event="onEvent" :id="'Stash'"
                               :contextMenu="$refs.contextMenu">
                             </Stash>
-                            <Mercenary :items.sync="mercenary" @item-selected="onSelect"
+                            <Mercenary v-if="saveViewMod !== 'stash'" :items.sync="mercenary" @item-selected="onSelect"
                               :contextMenu="$refs.contextMenu">
                             </Mercenary>
-                            <div class="cube">
+                            <div class="cube" v-if="saveViewMod !== 'stash'">
                               <Grid class="cube__grid" :width="grid.cube.w" :height="grid.cube.h" :page="8"
                                 :items.sync="cube" @item-selected="onSelect" @item-event="onEvent" :id="'CubeGrid'"
                                 :contextMenu="$refs.contextMenu">
@@ -318,21 +318,21 @@
                           </div>
                         </div>
                       </div>
-                      <div class="tab-pane" id="stats-content" role="tabpanel">
+                      <div class="tab-pane" id="stats-content" role="tabpanel" v-if="saveViewMod !== 'stash'">
                         <Stats v-if="save && save.header && save.attributes" v-bind:save.sync="save" />
                       </div>
-                      <div class="tab-pane" id="waypoints-content" role="tabpanel">
+                      <div class="tab-pane" id="waypoints-content" role="tabpanel" v-if="saveViewMod !== 'stash'">
                         <Waypoints v-if="save && save.header && save.header.waypoints" v-bind:save.sync="save" />
                       </div>
-                      <div class="tab-pane" id="quests-content" role="tabpanel">
+                      <div class="tab-pane" id="quests-content" role="tabpanel" v-if="saveViewMod !== 'stash'">
                         <Quests v-if="save && save.header && save.header.quests_normal && save.header.quests_nm && save.header.quests_hell" v-bind:save.sync="save" />
                       </div>
-                      <div class="tab-pane" id="skills-content" role="tabpanel">
+                      <div class="tab-pane" id="skills-content" role="tabpanel" v-if="saveViewMod !== 'stash'">
                         <Skills v-if="save && save.skills && save.skills.length" v-bind:save.sync="save" />
                       </div>
                     </div>
           <div v-if="save != null">
-                      <div class="row">
+                      <div class="row" v-if="saveViewMod !== 'stash'">
                         <button type="button" @click="unlockHell" class="btn btn-primary">Unlock Hell</button>
                         <button type="button" @click="unlockAllWPs" class="btn btn-primary">Unlock All WPs</button>
                         <button type="button" @click="setLvl99" class="btn btn-primary">Set Level 99</button>
@@ -403,6 +403,7 @@
       return {
         save: null,
         stashData: null,
+        saveViewMod: 'character',
         activeTab: 1,
         selected: null,
         itempack: ItemPack,
@@ -497,6 +498,7 @@
         this.save = null;
         this.preview = null;
         this.stashData = null;
+        this.saveViewMod = 'character';
         this.getPaletteData();
         this.addItemsToItemPack();
         // console.log('Changing mod to ' + this.$work_mod.value + this.$work_version.value);
@@ -879,6 +881,7 @@
             .then(response => {
               this.save = response;
               this.save.header.name = filename.split('.')[0];
+              this.saveViewMod = 'character';
               this.resolveInventoryImages();
             })
           } else if (lower.endsWith(".d2i")) {
@@ -890,6 +893,7 @@
                 this.save = { items: [], merc_items: [], corpse_items: [], golem_item: null, header: {} };
               }
               this.stashData = response;
+              this.saveViewMod = 'stash';
               const pages = this.stashData?.pages || [];
               for (var i = 0; i < this.stashData.pageCount; i++) {
                 [... this.stashData.pages[i].items].forEach(item => { this.setPropertiesOnItem(item)})
@@ -904,6 +908,7 @@
           this.$d2s.read(bytes, this.$work_mod.value)
           .then(response => {
             that.save = response;
+            that.saveViewMod = 'character';
             that.resolveInventoryImages();
           });
         }
