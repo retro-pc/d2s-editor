@@ -332,7 +332,7 @@
                       </div>
                     </div>
           <div v-if="save != null">
-                      <div class="row" v-if="saveViewMod !== 'stash'">
+                      <div class="row ml-1" v-if="saveViewMod !== 'stash'">
                         <button type="button" @click="unlockHell" class="btn btn-primary">Unlock Hell</button>
                         <button type="button" @click="unlockAllWPs" class="btn btn-primary">Unlock All WPs</button>
                         <button type="button" @click="setLvl99" class="btn btn-primary">Set Level 99</button>
@@ -340,7 +340,7 @@
                         <button type="button" @click="unlockQs" class="btn btn-primary">Complete Skill/Stat Qs</button>
                         <button type="button" @click="maxGold" class="btn btn-primary">Max Gold</button>
                       </div>
-          <div class="row mt-3">
+          <div class="row mt-3 ml-1">
                         <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x60)">Save D2</button> -->
                         <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x63)">Save D2R</button> -->
                         <button type="button" id="d2r" class="btn btn-primary" @click="saveFile($work_mod.value, $work_version.value)">Save</button>
