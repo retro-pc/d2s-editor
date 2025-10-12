@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div ref="itemRef" tabindex="0" :class="itemClass" v-on:dragstart="dragStart">
+    <div ref="itemRef" tabindex="0" :class="itemClass" v-on:dragstart="dragStart" @click="onClick">
       <div :class="innerClass">
         <img :src="item.src" :class="{ ethereal: item.ethereal}" />
         <div v-if="item.total_nr_of_sockets && tooltipShown" class="sockets">
@@ -218,13 +218,16 @@
         const vm = this;
         this.tooltip = tippy(this.$refs.itemRef, {
           content: this.$refs.tooltipRef,
-          hideOnClick: true,
+          hideOnClick: false,
           duration: [0, 0],
           distance: 0,
           arrow: false,
           onShown: () => { vm.tooltipShown = true; },
           onHidden: () => { vm.tooltipShown = false; },
         });
+      },
+      onClick() {
+        this.$emit('select');
       },
       dragStart(event) {
         localStorage.setItem('dragElement', JSON.stringify({

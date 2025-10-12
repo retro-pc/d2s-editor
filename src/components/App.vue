@@ -18,7 +18,7 @@
             </div>
             <label for="Item">Item</label>
             <multiselect v-model="previewModel" :options="itempack" label="key" valueProp="value" :searchable="true"
-              @update:model-value="setPreviewItem" />
+              @update:model-value="setPreviewItem($work_mod.value, $work_version.value)" />
             <div v-if="baseOptions">
               <label>Base</label>
               <multiselect v-model="baseModel" :options="baseOptions" label="label" valueProp="value" :searchable="true"
@@ -27,8 +27,8 @@
           </div>
           <div class="modal-footer">
             <input style="display:none;" type="file" name="d2iFile" @change="onItemFileChange" id="d2iFile">
-            <label for="d2iFile" class="mb-0 btn btn-primary">Load From File</label>
-            <button type="button" class="btn btn-primary" @click="loadBase64Item">Load From String</button>
+            <label for="d2iFile" class="mb-0 btn btn-primary">Load D2I</label>
+            <button type="button" class="btn btn-primary" @click="loadBase64Item">Load Base64</button>
             <button type="button" class="btn btn-primary" @click="loadItem">Load</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
@@ -72,6 +72,9 @@
                           id="d2sFile" accept=".d2s,.d2i">
                         <label class="custom-file-label load-save-label" for="d2sFile">*.d2s,*.d2i</label>
                       </div>
+                      <!-- <div class="input-group-append">
+                        <button type="button" class="btn btn-primary" @click="pasteBase64Save">Paste base64</button>
+                      </div> -->
                       <!-- <div>
                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">Create New</button>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -256,19 +259,19 @@
                         <a class="nav-link active" id="items-tab" data-toggle="tab" data-target="#items-content"
                           role="tab" type="button">Equipment</a>
                       </li>
-                      <li class="nav-item" role="presentation">
+                      <li class="nav-item" role="presentation" v-if="saveViewMod !== 'stash'">
                         <a class="nav-link" id="stats-tab" data-toggle="tab" data-target="#stats-content" role="tab"
                           type="button">Character</a>
                       </li>
-                      <li class="nav-item" role="presentation">
+                      <li class="nav-item" role="presentation" v-if="saveViewMod !== 'stash'">
                         <a class="nav-link" id="skills-tab" data-toggle="tab" data-target="#skills-content" role="tab"
                           type="button">Skills</a>
                       </li>
-                      <li class="nav-item" role="presentation">
+                      <li class="nav-item" role="presentation" v-if="saveViewMod !== 'stash'">
                         <a class="nav-link" id="quests-tab" data-toggle="tab" data-target="#quests-content" role="tab"
                           type="button">Quests</a>
                       </li>
-                      <li class="nav-item" role="presentation">
+                      <li class="nav-item" role="presentation" v-if="saveViewMod !== 'stash'">
                         <a class="nav-link" id="waypoints-tab" data-toggle="tab" data-target="#waypoints-content"
                           role="tab" type="button">Waypoints</a>
                       </li>
@@ -284,19 +287,19 @@
                         </div>
                         <div class="row mt-3">
                           <div class="col-auto equipment-inventory-col">
-                            <Equipped :items.sync="equipped" @item-selected="onSelect" @item-event="onEvent"
+                            <Equipped v-if="saveViewMod !== 'stash'" :items.sync="equipped" @item-selected="onSelect" @item-event="onEvent"
                               :id="'Equipped'" :contextMenu="$refs.contextMenu">
                             </Equipped>
                             <!-- <Grid v-if="activeTab == 1 || activeTab == 10" :width="grid.inv.w" :height="grid.inv.h" :page="1"
                               :items.sync="inventory" @item-selected="onSelect" @item-event="onEvent" :id="'InventoryGrid'" :contextMenu="$refs.contextMenu">
                             </Grid> -->
-                            <Stash :items.sync="stash" @item-selected="onSelect" @item-event="onEvent" :id="'Stash'"
+          <Stash :items.sync="stash" :mode="saveViewMod" @item-selected="onSelect" @item-event="onEvent" :id="'Stash'"
                               :contextMenu="$refs.contextMenu">
                             </Stash>
-                            <Mercenary :items.sync="mercenary" @item-selected="onSelect"
+                            <Mercenary v-if="saveViewMod !== 'stash'" :items.sync="mercenary" @item-selected="onSelect"
                               :contextMenu="$refs.contextMenu">
                             </Mercenary>
-                            <div class="cube">
+                            <div class="cube" v-if="saveViewMod !== 'stash'">
                               <Grid class="cube__grid" :width="grid.cube.w" :height="grid.cube.h" :page="8"
                                 :items.sync="cube" @item-selected="onSelect" @item-event="onEvent" :id="'CubeGrid'"
                                 :contextMenu="$refs.contextMenu">
@@ -318,21 +321,21 @@
                           </div>
                         </div>
                       </div>
-                      <div class="tab-pane" id="stats-content" role="tabpanel">
-                        <Stats v-bind:save.sync="save" />
+                      <div class="tab-pane" id="stats-content" role="tabpanel" v-if="saveViewMod !== 'stash'">
+                        <Stats v-if="save && save.header && save.attributes" v-bind:save.sync="save" />
                       </div>
-                      <div class="tab-pane" id="waypoints-content" role="tabpanel">
-                        <Waypoints v-bind:save.sync="save" />
+                      <div class="tab-pane" id="waypoints-content" role="tabpanel" v-if="saveViewMod !== 'stash'">
+                        <Waypoints v-if="save && save.header && save.header.waypoints" v-bind:save.sync="save" />
                       </div>
-                      <div class="tab-pane" id="quests-content" role="tabpanel">
-                        <Quests v-bind:save.sync="save" />
+                      <div class="tab-pane" id="quests-content" role="tabpanel" v-if="saveViewMod !== 'stash'">
+                        <Quests v-if="save && save.header && save.header.quests_normal && save.header.quests_nm && save.header.quests_hell" v-bind:save.sync="save" />
                       </div>
-                      <div class="tab-pane" id="skills-content" role="tabpanel">
-                        <Skills v-bind:save.sync="save" />
+                      <div class="tab-pane" id="skills-content" role="tabpanel" v-if="saveViewMod !== 'stash'">
+                        <Skills v-if="save && save.skills && save.skills.length" v-bind:save.sync="save" />
                       </div>
                     </div>
-                    <div v-if="save != null">
-                      <div class="row">
+          <div v-if="save != null">
+                      <div class="row ml-1" v-if="saveViewMod !== 'stash'">
                         <button type="button" @click="unlockHell" class="btn btn-primary">Unlock Hell</button>
                         <button type="button" @click="unlockAllWPs" class="btn btn-primary">Unlock All WPs</button>
                         <button type="button" @click="setLvl99" class="btn btn-primary">Set Level 99</button>
@@ -340,11 +343,14 @@
                         <button type="button" @click="unlockQs" class="btn btn-primary">Complete Skill/Stat Qs</button>
                         <button type="button" @click="maxGold" class="btn btn-primary">Max Gold</button>
                       </div>
-                      <div class="row mt-3">
+          <div class="row mt-3 ml-1">
                         <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x60)">Save D2</button> -->
                         <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x63)">Save D2R</button> -->
                         <button type="button" id="d2r" class="btn btn-primary" @click="saveFile($work_mod.value, $work_version.value)">Save</button>
-                        <button type="button" id="d2r-blizz" class="btn btn-primary" @click="saveFile('blizzless', $work_version.value)">Save Blizzless</button>
+                        <!-- <button type="button" class="btn btn-primary" @click="outputBase64Save">Output as base64</button> -->
+                        <div v-if="$work_mod.value == 'blizzless_beta'">
+                          <button type="button" id="d2r-blizz" class="btn btn-primary" @click="saveFile('blizzless', $work_version.value)">Save Blizzless</button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -403,6 +409,7 @@
       return {
         save: null,
         stashData: null,
+        saveViewMod: 'character',
         activeTab: 1,
         selected: null,
         itempack: ItemPack,
@@ -444,10 +451,10 @@
         stash.pages[0].items = [];
         stash.pages[0].items = this.save.items.filter(item => item.location_id === 0 && item.alt_position_id === 5);
 
-        if (this.stashData != null) {
-          stash.pages.push(this.stashData.pages[0]);
-          stash.pages.push(this.stashData.pages[1]);
-          stash.pages.push(this.stashData.pages[2]);
+        if (this.stashData != null && Array.isArray(this.stashData.pages)) {
+          for (let i = 0; i < this.stashData.pages.length; i++) {
+            stash.pages.push(this.stashData.pages[i]);
+          }
         }
         return stash;
       },
@@ -497,6 +504,7 @@
         this.save = null;
         this.preview = null;
         this.stashData = null;
+        this.saveViewMod = 'character';
         this.getPaletteData();
         this.addItemsToItemPack();
         // console.log('Changing mod to ' + this.$work_mod.value + this.$work_version.value);
@@ -595,6 +603,7 @@
         } else if(e.type == 'copy') {
           this.clipboard = JSON.parse(JSON.stringify(e.item));
           navigator.clipboard.writeText(JSON.stringify(e.item));
+          this.notifications.push({ alert: "alert alert-info", message: `Item data copied to clipboard.` });
         } else if(e.type == 'update') {
           this.$d2s.enhanceItems([e.item], this.$work_mod.value, this.$work_version.value);
           this.resolveInventoryImage(e.item);
@@ -676,13 +685,13 @@
           await this.resolveInventoryImage(this.preview);
         }
       },
-      async setPreviewItem(e) {
+      async setPreviewItem(mod, version) {
         this.baseOptions = null;
         this.baseModel = null;
         if (this.previewModel) {
           if (this.previewModel.base64) {
             let bytes = utils.b64ToArrayBuffer(this.previewModel.base64);
-            this.preview = await this.$d2s.readItem(bytes, this.$work_mod.value, this.$work_version.value);
+            this.preview = await this.$d2s.readItem(bytes, mod, version);
           } else if (this.previewModel.item) {
             this.preview = this.previewModel.item;
             if (this.preview?.given_runeword) {
@@ -693,29 +702,30 @@
           await this.resolveInventoryImage(this.preview);
         }
       },
-      async onItemFileLoad(event) {
+      async loadD2iItem(event) {
         this.previewModel = {
           base64: utils.arrayBufferToBase64(event.target.result),
-          // mod: this.$work_mod.value,
-          // version: this.$work_version.value,
+          mod: "diablo2",
+          version: 0x60,  //1.10-1.14d
         };
-        this.setPreviewItem();
+        this.setPreviewItem(this.previewModel.mod, this.previewModel.version);
       },
       onItemFileChange(event) {
         let reader = new FileReader();
-        reader.onload = this.onItemFileLoad;
+        reader.onload = this.loadD2iItem;
         reader.readAsArrayBuffer(event.target.files[0]);
         event.target.value = null;
       },
       async loadBase64Item() {
         try {
           let b64 = prompt("Please enter your base64 string for item.");
-          if (b64 && this.preview) {
-            let bytes = utils.b64ToArrayBuffer(b64);
-            //await this.readItem(bytes, 0x63);
-            this.preview = await this.$d2s.readItem(bytes, mod, version);
-            await this.resolveInventoryImage(this.preview);
-            this.paste(this.preview);
+          if (b64) {
+            this.previewModel = {
+              base64: b64,
+              mod: this.$work_mod.value,
+              version: this.$work_version.value,
+            };
+            this.setPreviewItem(this.previewModel.mod, this.previewModel.version);
           }
         } catch(e) {
           alert("Failed to read item.");
@@ -809,7 +819,7 @@
         return true;
       },
       async resolveInventoryImages() {
-        const allItems = [...this.save.items, ...this.save.merc_items, ...this.save.corpse_items, this.save.golem_item];
+        const allItems = [...(this.save.items || []), ...(this.save.merc_items || []), ...(this.save.corpse_items || []), this.save.golem_item].filter(Boolean);
         const promises = allItems.map(async function (item) {
           return this.resolveInventoryImage(item);
         }, this);
@@ -831,7 +841,7 @@
                 item.socketed_items[i].src = img;
                 //item.socketed_items[i].magic_attributes.forEach((it, idx) => { if (item.socketed_attributes.findIndex(x => x.id == it.id) == -1) item.socketed_attributes.push(it) });
               }
-            });
+            })
         }
       },
       addItemsToItemPack() {
@@ -863,20 +873,32 @@
       },
       readBuffer(bytes, filename) {
         //this.addItemsToItemPack();
+        const byteLen = bytes && (bytes.byteLength ?? bytes.length ?? 0);
         if (filename) {
-          if (filename.includes(".d2s")) {
+          const lower = filename.toLowerCase();
+          if (lower.endsWith(".d2s")) {
             this.save = null;
-            this.$d2s.read(bytes, this.$work_mod.value).then(response => {
+            this.$d2s.read(bytes, this.$work_mod.value)
+            .then(response => {
               this.save = response;
               this.save.header.name = filename.split('.')[0];
+              this.saveViewMod = 'character';
               this.resolveInventoryImages();
-            });
-          } else if (filename.includes("")) {
+            })
+          } else if (lower.endsWith(".d2i")) {
             this.stashData = null;
-            this.$d2s.readStash(bytes, this.$work_mod.value).then(response => {
+            this.$d2s.readStash(bytes, this.$work_mod.value)
+            .then(response => {
+              if (!this.save) {
+                // Ensure UI renders stash even without a loaded character
+                this.save = { items: [], merc_items: [], corpse_items: [], golem_item: null, header: {} };
+              }
               this.stashData = response;
+              this.saveViewMod = 'stash';
+              const pages = this.stashData?.pages || [];
               for (var i = 0; i < this.stashData.pageCount; i++) {
-                [... this.stashData.pages[i].items].forEach(item => { this.setPropertiesOnItem(item)})}
+                [... this.stashData.pages[i].items].forEach(item => { this.resolveInventoryImage(item)})
+              }
             })
           }
         } else {
@@ -884,10 +906,12 @@
           this.save = null;
           this.selected = null;
           this.stashData = null;
-          this.$d2s.read(bytes, this.$work_mod.value).then(response => {
+          this.$d2s.read(bytes, this.$work_mod.value)
+          .then(response => {
             that.save = response;
+            that.saveViewMod = 'character';
             that.resolveInventoryImages();
-          })
+          });
         }
         
       },
@@ -910,15 +934,55 @@
         this.stashData = null;
         this.selected = null;
         const files = event.currentTarget.files;
-        Object.keys(files).forEach(i => {
-          if (i < 2) {
-            const reader = new FileReader();
-            reader.onload = (e) => {
-              this.readBuffer(e.target.result, files[i].name);
-            }
-            reader.readAsArrayBuffer(files[i]);
+        const count = Math.min(files.length || 0, 2);
+        for (let i = 0; i < count; i++) {
+          const file = typeof files.item === 'function' ? files.item(i) : files[i];
+          if (!file) continue;
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            const buf = e.target.result;
+            this.readBuffer(buf, file.name);
+          };
+          reader.readAsArrayBuffer(file);
+        }
+        // Allow selecting the same file again
+        event.currentTarget.value = null;
+      },
+      async pasteBase64Save() {
+        try {
+          const text = await navigator.clipboard.readText();
+          if (!text) {
+            alert('Clipboard is empty.');
+            return;
           }
-        });
+          const idx = text.indexOf(',');
+          const b64 = (idx !== -1 ? text.substring(idx + 1) : text).trim();
+          const bytes = utils.b64ToArrayBuffer(b64);
+          this.save = null;
+          this.stashData = null;
+          this.selected = null;
+          try {
+            const response = await this.$d2s.read(bytes, this.$work_mod.value);
+            this.save = response;
+            this.saveViewMod = 'character';
+            await this.resolveInventoryImages();
+            this.notifications.push({ alert: 'alert alert-info', message: 'Save loaded from clipboard.' });
+          } catch (e1) {
+            const stash = await this.$d2s.readStash(bytes, this.$work_mod.value);
+            if (!this.save) {
+              this.save = { items: [], merc_items: [], corpse_items: [], golem_item: null, header: {} };
+            }
+            this.stashData = stash;
+            this.saveViewMod = 'stash';
+            for (let i = 0; i < this.stashData.pageCount; i++) {
+              [...this.stashData.pages[i].items].forEach(item => { this.resolveInventoryImage(item); });
+            }
+            this.notifications.push({ alert: 'alert alert-info', message: 'Stash loaded from clipboard.' });
+          }
+        } catch (e) {
+          console.error(e);
+          alert('Failed to load from clipboard. Ensure it is a valid base64 save.');
+        }
       },
       maxGold() {
         this.save.attributes.gold = this.save.header.level * 10000;
@@ -1002,10 +1066,33 @@
         .then(function (response) {
           let blob = new Blob([response], { type: "octet/stream" });
           link.href = window.URL.createObjectURL(blob);
-          link.download = that.save.header.name + '.d2s';
+          const fileName = (that.save && that.save.header && that.save.header.name) ? that.save.header.name : 'character';
+          link.download = fileName + '.d2s';
           link.click();
           link.remove();
         });
+      },
+      async outputBase64Save() {
+        try {
+          if (this.saveViewMod === 'stash' && this.stashData != null) {
+            const buf = await this.$d2s.writeStash(this.stashData, this.$work_mod.value, this.$work_version.value);
+            const b64 = utils.arrayBufferToBase64(buf);
+            await navigator.clipboard.writeText(b64);
+            this.notifications.push({ alert: 'alert alert-info', message: 'Stash base64 copied to clipboard.' });
+            return;
+          }
+          if (!this.save) {
+            alert('Nothing to export. Load or create a save first.');
+            return;
+          }
+          const buf = await this.$d2s.write(this.save, this.$work_mod.value, this.$work_version.value);
+          const b64 = utils.arrayBufferToBase64(buf);
+          await navigator.clipboard.writeText(b64);
+          this.notifications.push({ alert: 'alert alert-info', message: 'Save base64 copied to clipboard.' });
+        } catch (e) {
+          console.error(e);
+          alert('Failed to export base64.');
+        }
       },
       async addBasesToItemPack(constants, category) {
         let newItems = [];
@@ -1081,6 +1168,7 @@
               set_name: item.n,
               ethereal: 0,
               identified: 1,
+              //TODO
               //set_attributes: 
               magic_attributes: this.$d2s.generateFixedMods(item.m, this.$getWorkConstantData())
             });

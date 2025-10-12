@@ -3,8 +3,7 @@ import vue from 'rollup-plugin-vue'
 export default {
   process: {},
   input: "",
-  plugins: [
-  ],
+  plugins: [vue(/* options */)],
   output: {
     dir: "",
   }
