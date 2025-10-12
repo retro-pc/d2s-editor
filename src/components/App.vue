@@ -74,6 +74,10 @@
                             title="Workspace Mod"
                             @change="changeMod()"
                             style="min-width: 120px"
+<<<<<<< HEAD
+=======
+                            class="flex-1"
+>>>>>>> origin/release-ci
                           >
                             <a-select-option value="diablo2">Diablo2</a-select-option>
                             <a-select-option value="blizzless">Blizzless</a-select-option>
@@ -86,6 +90,10 @@
                             title="Workspace Version"
                             @change="changeMod()"
                             style="min-width: 80px"
+<<<<<<< HEAD
+=======
+                            class="flex-1"
+>>>>>>> origin/release-ci
                           >
                             <!-- <option v-if="$work_mod.value == 'diablo2'" value="96">LOD 1.10-1.14d</option> -->
                             <!-- <option v-if="$work_mod.value == 'diablo2'" value="97">D2R Alpha</option> -->
@@ -94,10 +102,21 @@
                             <!-- <option v-if="$work_mod.value == 'blizzless'" value="98">Beta</option> -->
                             <a-select-option value="99">D2R 2.5+</a-select-option>
                           </a-select>
+<<<<<<< HEAD
                           <a-upload :before-upload="() => false" :multiple="true" :show-upload-list="false" accept=".d2s,.d2i" @change="onAntUploadChange">
                             <a-button type="primary">Open D2S / D2I</a-button>
                           </a-upload>
                           <a-button type="primary" @click="pasteBase64Save">Paste as base64</a-button>
+=======
+                          <div class="flex-1">
+                            <a-upload :before-upload="() => false" :multiple="true" :show-upload-list="false" accept=".d2s,.d2i" @change="onAntUploadChange">
+                              <a-button type="primary">Open D2S / D2I</a-button>
+                            </a-upload>
+                          </div>
+                          <div class="flex-1">
+                            <a-button type="primary" @click="pasteBase64Save">Paste as base64</a-button>
+                          </div>
+>>>>>>> origin/release-ci
                         </Flex>
                       </div>
                     </div>
@@ -402,6 +421,7 @@
           if (backdrop && backdrop.parentNode) backdrop.parentNode.removeChild(backdrop);
         } catch (_) {}
       },
+<<<<<<< HEAD
       // Fully reset state related to currently opened save/stash
       resetOpenState() {
         this.save = null;
@@ -442,6 +462,30 @@
           }
         };
         reader.readAsArrayBuffer(file);
+=======
+      onAntUploadChange({ fileList }) {
+        if (!fileList || !fileList.length) return;
+        const list = fileList.slice(0, 2);
+        list.forEach(f => {
+          const file = f.originFileObj || f;
+          if (!file) return;
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            try {
+              const buf = e.target.result;
+              this.readBuffer(buf, file.name);
+            } catch (err) {
+              // noop, readBuffer handles messaging
+            }
+          };
+          reader.onerror = () => {
+            if (this.$message) {
+              this.$message.error('Failed to read file');
+            }
+          };
+          reader.readAsArrayBuffer(file);
+        });
+>>>>>>> origin/release-ci
       },
       async copyBase64OrPrompt(text) {
         try {
@@ -930,14 +974,21 @@
       onFileLoad(event) {
         this.readBuffer(event.target.result, event.target.filename);
       },
+<<<<<<< HEAD
       async readBufferAuto(bytes, expectedLoad) {
+=======
+      async readBufferAuto(bytes) {
+>>>>>>> origin/release-ci
         // Try to read as character first, then as shared stash
         this.save = null;
         this.selected = null;
         this.stashData = null;
         try {
           const response = await this.$d2s.read(bytes, this.$work_mod.value);
+<<<<<<< HEAD
           if (expectedLoad != null && expectedLoad !== this.load) return;
+=======
+>>>>>>> origin/release-ci
           this.save = response;
           await this.resolveInventoryImages();
           if (this.$message) {
@@ -949,7 +1000,10 @@
         }
         try {
           const response = await this.$d2s.readStash(bytes, this.$work_mod.value);
+<<<<<<< HEAD
           if (expectedLoad != null && expectedLoad !== this.load) return;
+=======
+>>>>>>> origin/release-ci
           if (!this.save) {
             // Ensure UI renders stash even without a loaded character
             this.save = { items: [], merc_items: [], corpse_items: [], golem_item: null, header: {} };
@@ -963,13 +1017,20 @@
           }
           return;
         } catch (e2) {
+<<<<<<< HEAD
           if (expectedLoad != null && expectedLoad !== this.load) return;
+=======
+>>>>>>> origin/release-ci
           if (this.$message) {
             this.$message.error('Provided base64 is not a valid D2S or D2I file');
           }
         }
       },
+<<<<<<< HEAD
       readBuffer(bytes, filename, expectedLoad) {
+=======
+      readBuffer(bytes, filename) {
+>>>>>>> origin/release-ci
         //this.addItemsToItemPack();
         const byteLen = bytes && (bytes.byteLength ?? bytes.length ?? 0);
         if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] start', { filename, byteLen });
@@ -981,7 +1042,10 @@
             this.$d2s.read(bytes, this.$work_mod.value)
             .then(response => {
               if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] d2s parsed OK');
+<<<<<<< HEAD
               if (expectedLoad != null && expectedLoad !== this.load) return;
+=======
+>>>>>>> origin/release-ci
               this.save = response;
               this.save.header.name = filename.split('.')[0];
               this.resolveInventoryImages().then(() => { if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] inventory images resolved') });
@@ -991,7 +1055,10 @@
             })
             .catch(err => {
               if (localStorage.getItem('isDebug') == '1') console.error('[readBuffer] d2s parse error:', err);
+<<<<<<< HEAD
               if (expectedLoad != null && expectedLoad !== this.load) return;
+=======
+>>>>>>> origin/release-ci
               if (this.$message) {
                 this.$message.error(`Failed to open character save: ${err && err.message ? err.message : 'Unknown error'}`);
               }
@@ -1002,7 +1069,10 @@
             this.$d2s.readStash(bytes, this.$work_mod.value)
             .then(response => {
               if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] d2i parsed OK');
+<<<<<<< HEAD
               if (expectedLoad != null && expectedLoad !== this.load) return;
+=======
+>>>>>>> origin/release-ci
               if (!this.save) {
                 // Ensure UI renders stash even without a loaded character
                 this.save = { items: [], merc_items: [], corpse_items: [], golem_item: null, header: {} };
@@ -1020,7 +1090,10 @@
             })
             .catch(err => {
               if (localStorage.getItem('isDebug') == '1') console.error('[readBuffer] d2i parse error:', err);
+<<<<<<< HEAD
               if (expectedLoad != null && expectedLoad !== this.load) return;
+=======
+>>>>>>> origin/release-ci
               if (this.$message) {
                 this.$message.error(`Failed to open shared stash: ${err && err.message ? err.message : 'Unknown error'}`);
               }
@@ -1035,7 +1108,10 @@
           this.$d2s.read(bytes, this.$work_mod.value)
           .then(response => {
             if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] d2s parsed OK (no filename)');
+<<<<<<< HEAD
             if (expectedLoad != null && expectedLoad !== that.load) return;
+=======
+>>>>>>> origin/release-ci
             that.save = response;
             that.resolveInventoryImages().then(() => { if (localStorage.getItem('isDebug') == '1') console.log('[readBuffer] inventory images resolved') });
             if (that.$message) {
@@ -1044,7 +1120,10 @@
           })
           .catch(err => {
             if (localStorage.getItem('isDebug') == '1') console.error('[readBuffer] d2s parse error (no filename):', err);
+<<<<<<< HEAD
             if (expectedLoad != null && expectedLoad !== that.load) return;
+=======
+>>>>>>> origin/release-ci
             if (that.$message) {
               that.$message.error(`Failed to open character save: ${err && err.message ? err.message : 'Unknown error'}`);
             }
@@ -1075,9 +1154,13 @@
             }
             return;
           }
+<<<<<<< HEAD
           const token = this.beginNewLoad();
           this.resetOpenState();
           await this.readBufferAuto(bytes, token);
+=======
+          await this.readBufferAuto(bytes);
+>>>>>>> origin/release-ci
         } catch (err) {
           if (this.$message) {
             this.$message.error('Failed to process query parameter "s"');
@@ -1109,9 +1192,13 @@
             }
             return;
           }
+<<<<<<< HEAD
           const token = this.beginNewLoad();
           this.resetOpenState();
           await this.readBufferAuto(bytes, token);
+=======
+          await this.readBufferAuto(bytes);
+>>>>>>> origin/release-ci
         } catch (err) {
           if (this.$message) {
             this.$message.error(`Failed to open data from clipboard: ${err && err.message ? err.message : 'Unknown error'}`);
@@ -1134,6 +1221,7 @@
       },
       onFileChange(event) {
         if (localStorage.getItem('isDebug') == '1') console.log('[onFileChange] triggered');
+<<<<<<< HEAD
         const files = event.currentTarget.files;
         if (localStorage.getItem('isDebug') == '1') console.log('[onFileChange] files:', files);
         if (!files || !files.length) {
@@ -1165,6 +1253,36 @@
           }
         };
         reader.readAsArrayBuffer(file);
+=======
+        this.save = null;
+        this.stashData = null;
+        this.selected = null;
+        const files = event.currentTarget.files;
+        if (localStorage.getItem('isDebug') == '1') console.log('[onFileChange] files:', files);
+        const count = Math.min(files.length || 0, 2);
+        for (let i = 0; i < count; i++) {
+          const file = typeof files.item === 'function' ? files.item(i) : files[i];
+          if (!file) continue;
+          if (localStorage.getItem('isDebug') == '1') console.log('[onFileChange] reading file:', file.name, 'size:', file.size);
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            try {
+              const buf = e.target.result;
+              if (localStorage.getItem('isDebug') == '1') console.log('[onFileChange] loaded:', file.name, 'byteLength:', buf?.byteLength);
+              this.readBuffer(buf, file.name);
+            } catch (err) {
+              if (localStorage.getItem('isDebug') == '1') console.error('[onFileChange] onload error:', err);
+            }
+          };
+          reader.onerror = (e) => {
+            if (localStorage.getItem('isDebug') == '1') console.error('[onFileChange] FileReader error for', file.name, e);
+          if (this.$message) {
+            this.$message.error(`Failed to read file: ${file && file.name ? file.name : 'Unknown file'}`);
+          }
+          };
+          reader.readAsArrayBuffer(file);
+        }
+>>>>>>> origin/release-ci
         // Allow selecting the same file again
         event.currentTarget.value = null;
       },
