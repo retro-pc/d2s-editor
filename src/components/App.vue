@@ -27,8 +27,8 @@
           </div>
           <div class="modal-footer">
             <input style="display:none;" type="file" name="d2iFile" @change="onItemFileChange" id="d2iFile">
-            <label for="d2iFile" class="mb-0 btn btn-primary">Load From File</label>
-            <button type="button" class="btn btn-primary" @click="loadBase64Item">Load From String</button>
+            <label for="d2iFile" class="mb-0 btn btn-primary">Load D2I</label>
+            <button type="button" class="btn btn-primary" @click="loadBase64Item">Load Base64</button>
             <button type="button" class="btn btn-primary" @click="loadItem">Load</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
@@ -72,9 +72,9 @@
                           id="d2sFile" accept=".d2s,.d2i">
                         <label class="custom-file-label load-save-label" for="d2sFile">*.d2s,*.d2i</label>
                       </div>
-                      <div class="input-group-append">
+                      <!-- <div class="input-group-append">
                         <button type="button" class="btn btn-primary" @click="pasteBase64Save">Paste base64</button>
-                      </div>
+                      </div> -->
                       <!-- <div>
                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">Create New</button>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -347,8 +347,7 @@
                         <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x60)">Save D2</button> -->
                         <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x63)">Save D2R</button> -->
                         <button type="button" id="d2r" class="btn btn-primary" @click="saveFile($work_mod.value, $work_version.value)">Save</button>
-                        <button type="button" id="d2r-blizz" class="btn btn-primary" @click="saveFile('blizzless', $work_version.value)">Save Blizzless</button>
-                        <button type="button" class="btn btn-primary" @click="outputBase64Save">Output as base64</button>
+                        <!-- <button type="button" class="btn btn-primary" @click="outputBase64Save">Output as base64</button> -->
                         <div v-if="$work_mod.value == 'blizzless_beta'">
                           <button type="button" id="d2r-blizz" class="btn btn-primary" @click="saveFile('blizzless', $work_version.value)">Save Blizzless</button>
                         </div>
@@ -604,6 +603,7 @@
         } else if(e.type == 'copy') {
           this.clipboard = JSON.parse(JSON.stringify(e.item));
           navigator.clipboard.writeText(JSON.stringify(e.item));
+          this.notifications.push({ alert: "alert alert-info", message: `Item data copied to clipboard.` });
         } else if(e.type == 'update') {
           this.$d2s.enhanceItems([e.item], this.$work_mod.value, this.$work_version.value);
           this.resolveInventoryImage(e.item);
@@ -706,7 +706,7 @@
         this.previewModel = {
           base64: utils.arrayBufferToBase64(event.target.result),
           mod: "diablo2",
-          version: 0x60,
+          version: 0x60,  //1.10-1.14d
         };
         this.setPreviewItem(this.previewModel.mod, this.previewModel.version);
       },
@@ -719,12 +719,13 @@
       async loadBase64Item() {
         try {
           let b64 = prompt("Please enter your base64 string for item.");
-          if (b64 && this.preview) {
-            let bytes = utils.b64ToArrayBuffer(b64);
-            //await this.readItem(bytes, 0x63);
-            this.preview = await this.$d2s.readItem(bytes, mod, version);
-            await this.resolveInventoryImage(this.preview);
-            this.paste(this.preview);
+          if (b64) {
+            this.previewModel = {
+              base64: b64,
+              mod: this.$work_mod.value,
+              version: this.$work_version.value,
+            };
+            this.setPreviewItem(this.previewModel.mod, this.previewModel.version);
           }
         } catch(e) {
           alert("Failed to read item.");
@@ -843,13 +844,6 @@
             })
         }
       },
-      setPropertiesOnItem(item) {
-        if (!item) {
-          return;
-        }
-        // Items from stash are already enhanced in parser; we only need to resolve their images here
-        this.resolveInventoryImage(item);
-      },
       addItemsToItemPack() {
         const constants = this.$getWorkConstantData();
         // Regenerate item pack
@@ -903,7 +897,7 @@
               this.saveViewMod = 'stash';
               const pages = this.stashData?.pages || [];
               for (var i = 0; i < this.stashData.pageCount; i++) {
-                [... this.stashData.pages[i].items].forEach(item => { this.setPropertiesOnItem(item)})
+                [... this.stashData.pages[i].items].forEach(item => { this.resolveInventoryImage(item)})
               }
             })
           }
@@ -981,7 +975,7 @@
             this.stashData = stash;
             this.saveViewMod = 'stash';
             for (let i = 0; i < this.stashData.pageCount; i++) {
-              [...this.stashData.pages[i].items].forEach(item => { this.setPropertiesOnItem(item); });
+              [...this.stashData.pages[i].items].forEach(item => { this.resolveInventoryImage(item); });
             }
             this.notifications.push({ alert: 'alert alert-info', message: 'Stash loaded from clipboard.' });
           }
