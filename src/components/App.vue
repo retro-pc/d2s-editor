@@ -17,7 +17,7 @@
             </div>
             <label for="Item">Item</label>
             <multiselect v-model="previewModel" :options="itempack" label="key" valueProp="value" :searchable="true"
-              @update:model-value="setPreviewItem" />
+              @update:model-value="setPreviewItem($work_mod.value, $work_version.value)" />
             <div v-if="baseOptions">
               <label>Base</label>
               <multiselect v-model="baseModel" :options="baseOptions" label="label" valueProp="value" :searchable="true"
@@ -745,7 +745,7 @@
           await this.resolveInventoryImage(this.preview);
         }
       },
-      async setPreviewItem(e) {
+      async setPreviewItem(mod, version) {
         this.baseOptions = null;
         this.baseModel = null;
         if (!this.previewModel) return;
@@ -1448,6 +1448,7 @@
               set_name: item.n,
               ethereal: 0,
               identified: 1,
+              //TODO
               //set_attributes: 
               magic_attributes: this.$d2s.generateFixedMods(item.m, this.$getWorkConstantData())
             });

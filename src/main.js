@@ -7,7 +7,7 @@ import 'ant-design-vue/dist/reset.css';
 
 import * as d2s from '../lib/d2';
 
-// import { constants_diablo2_96 } from '../public/d2/constants_diablo2_96.js';
+import { constants_diablo2_96 } from '../public/d2/constants_diablo2_96.js';
 // import { constants_diablo2_97 } from '../public/d2/constants_diablo2_97.js';
 // import { constants_diablo2_98 } from '../public/d2/constants_diablo2_98.js';
 import { constants_diablo2_99 } from '../public/d2/constants_diablo2_99.js';
@@ -22,7 +22,7 @@ const app = createApp(App);
 app.config.globalProperties.$d2s = d2s;
 
 //console.log(constants_96);
-// d2s.setConstantData('diablo2', 0x60, constants_diablo2_96); //1.10-1.14d
+d2s.setConstantData('diablo2', 0x60, constants_diablo2_96); //1.10-1.14d
 // d2s.setConstantData('diablo2', 0x61, constants_diablo2_97); //alpha (D2R)
 // d2s.setConstantData('diablo2', 0x62, constants_diablo2_98); //2.4 (D2R)
 d2s.setConstantData('diablo2', 0x63, constants_diablo2_99); //2.5+ (D2R)
