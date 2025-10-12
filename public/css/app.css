@@ -505,6 +505,9 @@ ul {
 .item-runeword-stats {
   padding: 20px;
 }
+.item-set-stats {
+    padding: 20px;
+}
 .item-editor {
   margin-top: 20px;
 }
