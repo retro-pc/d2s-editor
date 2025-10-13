@@ -278,13 +278,6 @@
                     </ul>
                     <div class="tab-content" id="tabs-content">
                       <div class="tab-pane show active" id="items-content" role="tabpanel">
-                        <div v-for="(notification, idx) in notifications" :key="idx" :class="notification.alert"
-                          role="alert">
-                          {{ notification.message }}
-                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
                         <div class="row mt-3">
                           <div class="col-auto equipment-inventory-col">
                             <Equipped v-if="saveViewMod !== 'stash'" :items.sync="equipped" @item-selected="onSelect" @item-event="onEvent"
@@ -386,6 +379,7 @@
   import CharPack from '../d2/CharPack.js';
   import utils from '../utils.js';
   import {itemGroups as itemGroups} from '../items.js';
+  import { message } from 'ant-design-vue';
 
   // TODO https://github.com/dschu012/d2s/pull/77
   // import * as d2s from '@dschu012/d2s';
@@ -420,7 +414,6 @@
         baseOptions: null,
         clipboard: null,
         load: null,
-        notifications: [],
         grid: { inv: { w: 10, h: 4 }, cube: { w: 3, h: 4 } },
         location: {},
         theme: localStorage.getItem('theme')
@@ -596,7 +589,7 @@
         let bytes = await this.$d2s.writeItem(item, this.$work_mod.value, this.$work_version.value);
         let base64 = utils.arrayBufferToBase64(bytes);
         navigator.clipboard.writeText(base64);
-        this.notifications.push({ alert: "alert alert-info", message: `Item data copied to clipboard. Use load from string to share it with someone.` });
+        message.info(`Item data copied to clipboard. Use load from string to share it with someone.`);
       },
       onEvent(e) {
         if(e.type == 'share') {
@@ -741,12 +734,11 @@
         copy.position_x = pos[2];
         copy.position_y = pos[3];
         copy.alt_position_id = pos[4];
-        this.notifications = [];
         if (copy.location_id == 4) {
-          this.notifications.push({ alert: "alert alert-warning", message: `Could not find safe location to place item. Placed in mouse buffer.` });
+          message.warning(`Could not find safe location to place item. Placed in mouse buffer.`);
         } else {
           let loc = copy.alt_position_id == 1 ? 'inventory' : (copy.alt_position_id == 5 ? 'stash' : 'cube');
-          this.notifications.push({ alert: "alert alert-info", message: `Loaded item in ${loc} at ${copy.position_x}, ${copy.position_y}` });
+          message.info(`Loaded item in ${loc} at ${copy.position_x}, ${copy.position_y}`);
         }
         this.save.items.push(copy);
         this.selected = copy;
@@ -972,7 +964,7 @@
             this.save = response;
             this.saveViewMod = 'character';
             await this.resolveInventoryImages();
-            this.notifications.push({ alert: 'alert alert-info', message: 'Save loaded from clipboard.' });
+            message.info('Save loaded from clipboard.');
           } catch (e1) {
             const stash = await this.$d2s.readStash(bytes, this.$work_mod.value);
             if (!this.save) {
@@ -983,7 +975,7 @@
             for (let i = 0; i < this.stashData.pageCount; i++) {
               [...this.stashData.pages[i].items].forEach(item => { this.setPropertiesOnItem(item); });
             }
-            this.notifications.push({ alert: 'alert alert-info', message: 'Stash loaded from clipboard.' });
+            message.info('Stash loaded from clipboard.');
           }
         } catch (e) {
           console.error(e);
@@ -1084,7 +1076,7 @@
             const buf = await this.$d2s.writeStash(this.stashData, this.$work_mod.value, this.$work_version.value);
             const b64 = utils.arrayBufferToBase64(buf);
             await navigator.clipboard.writeText(b64);
-            this.notifications.push({ alert: 'alert alert-info', message: 'Stash base64 copied to clipboard.' });
+            message.success('Stash base64 copied to clipboard.');
             return;
           }
           if (!this.save) {
@@ -1094,7 +1086,7 @@
           const buf = await this.$d2s.write(this.save, this.$work_mod.value, this.$work_version.value);
           const b64 = utils.arrayBufferToBase64(buf);
           await navigator.clipboard.writeText(b64);
-          this.notifications.push({ alert: 'alert alert-info', message: 'Save base64 copied to clipboard.' });
+          message.success('Save base64 copied to clipboard.');
         } catch (e) {
           console.error(e);
           alert('Failed to export base64.');

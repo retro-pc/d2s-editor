@@ -1,4 +1,5 @@
 import { createApp, ref } from 'vue';
+import Antd from 'ant-design-vue';
 import VueTippy from 'vue-tippy';
 import Multiselect from '@vueform/multiselect';
 import '@vueform/multiselect/themes/default.css';
@@ -40,6 +41,7 @@ app.config.globalProperties.$uuid = utils.uuidv4();
 
 app
   .component('multiselect', Multiselect)
+  .use(Antd)
   .use(
     VueTippy,
     // optional
