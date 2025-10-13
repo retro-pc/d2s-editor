@@ -622,12 +622,13 @@ ul {
 }
 .stash-bg-big{
   background-image: url(../img/hd-stash-big.png);
-  padding: 10px 20px 10px 0;
+  padding: 0;
+  border: 10px solid #111 !important;
   background-size: 100% 100%;
   margin-bottom: 20px;
   .d2p-InventoryGrid {
     position: relative;
-    left: 10px;
+    left: 0;
     width: 512px;
     height: 416px;
 
