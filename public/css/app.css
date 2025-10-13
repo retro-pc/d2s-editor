@@ -517,6 +517,10 @@ ul {
     padding: 20px;
 }
 .item-editor {
+  border: 1px solid #111;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #00000022;
   margin-top: 20px;
 }
 
