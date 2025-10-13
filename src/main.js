@@ -1,5 +1,6 @@
-import { createApp, ref } from 'vue';
+import { createApp, ref, h } from 'vue';
 import Antd from 'ant-design-vue';
+import { ConfigProvider, theme as antdTheme } from 'ant-design-vue';
 import VueTippy from 'vue-tippy';
 import Multiselect from '@vueform/multiselect';
 import '@vueform/multiselect/themes/default.css';
@@ -16,7 +17,15 @@ import { constants_blizzless_99 } from '../public/d2/constants_blizzless_99.js';
 import App from './components/App.vue';
 import utils from './utils.js';
 
-const app = createApp(App);
+const app = createApp({
+  render() {
+    return h(
+      ConfigProvider,
+      { theme: { algorithm: antdTheme.darkAlgorithm } },
+      { default: () => h(App) }
+    );
+  },
+});
 
 app.config.globalProperties.$d2s = d2s;
 
