@@ -180,9 +180,9 @@
                               <a class="dropdown-item" href="#" @click="newChar(51)">Fire</a>
                             </div>
                             <div v-if="$work_mod.value == 'blizzless_beta'">
-                               <a class="dropdown-item" href="#" @click="newChar(51)">Fire</a>
-                               <a class="dropdown-item" href="#" @click="newChar(52)">Shoсkwave</a>
-                               <a class="dropdown-item" href="#" @click="newChar(53)">Rabies</a> 
+                              <a class="dropdown-item" href="#" @click="newChar(51)">Fire</a>
+                              <a class="dropdown-item" href="#" @click="newChar(52)">Shoсkwave</a>
+                              <a class="dropdown-item" href="#" @click="newChar(53)">Rabies</a> 
                             </div>
                           </div>
                         </li>
@@ -293,7 +293,7 @@
                             <!-- <Grid v-if="activeTab == 1 || activeTab == 10" :width="grid.inv.w" :height="grid.inv.h" :page="1"
                               :items.sync="inventory" @item-selected="onSelect" @item-event="onEvent" :id="'InventoryGrid'" :contextMenu="$refs.contextMenu">
                             </Grid> -->
-          <Stash :items.sync="stash" :mode="saveViewMod" @item-selected="onSelect" @item-event="onEvent" :id="'Stash'"
+                            <Stash :items.sync="stash" :mode="saveViewMod" @item-selected="onSelect" @item-event="onEvent" :id="'Stash'"
                               :contextMenu="$refs.contextMenu">
                             </Stash>
                             <Mercenary v-if="saveViewMod !== 'stash'" :items.sync="mercenary" @item-selected="onSelect"
@@ -334,7 +334,7 @@
                         <Skills v-if="save && save.skills && save.skills.length" v-bind:save.sync="save" />
                       </div>
                     </div>
-          <div v-if="save != null">
+                    <div v-if="save != null">
                       <div class="row ml-1" v-if="saveViewMod !== 'stash'">
                         <button type="button" @click="unlockHell" class="btn btn-primary">Unlock Hell</button>
                         <button type="button" @click="unlockAllWPs" class="btn btn-primary">Unlock All WPs</button>
@@ -343,7 +343,7 @@
                         <button type="button" @click="unlockQs" class="btn btn-primary">Complete Skill/Stat Qs</button>
                         <button type="button" @click="maxGold" class="btn btn-primary">Max Gold</button>
                       </div>
-          <div class="row mt-3 ml-1">
+                      <div class="row mt-3 ml-1">
                         <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x60)">Save D2</button> -->
                         <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x63)">Save D2R</button> -->
                         <button type="button" id="d2r" class="btn btn-primary" @click="saveFile($work_mod.value, $work_version.value)">Save</button>
