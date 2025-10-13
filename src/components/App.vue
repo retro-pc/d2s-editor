@@ -55,10 +55,20 @@
                           <a-menu>
                             <template v-for="cls in createNewMenu">
                               <template v-if="!buildsFor(cls).length">
-                                <a-menu-item :key="cls.key" @click="newChar(cls.baseIndex)">{{ cls.title }}</a-menu-item>
+                                <a-menu-item :key="cls.key" @click="newChar(cls.baseIndex)">
+                                  <a-flex align="center" justify="start" gap="8">
+                                    <img :src="`img/chars/${cls.key}.webp`" alt="class" style="height:24px;width:24px;object-fit:contain;" />
+                                    {{ cls.title }}
+                                  </a-flex>
+                                </a-menu-item>
                               </template>
                               <a-sub-menu v-else :key="cls.key">
-                                <template #title><span @click="newChar(cls.baseIndex)">{{ cls.title }}</span></template>
+                                <template #title>
+                                  <a-flex align="center" justify="start" gap="8" style="display: inline-flex">
+                                    <img :src="`img/chars/${cls.key}.webp`" alt="class" style="height:24px;width:24px;object-fit:contain;" />
+                                    <span @click="newChar(cls.baseIndex)">{{ cls.title }}</span>
+                                  </a-flex>
+                                </template>
                                 <a-menu-item v-for="b in buildsFor(cls)" :key="`${cls.key}-${b.index}`" @click="newChar(b.index)">{{ b.title }}</a-menu-item>
                               </a-sub-menu>
                             </template>
@@ -98,19 +108,59 @@
                           :show-upload-list="false"
                           @change="onFileChange"
                         >
-                          <button type="button" class="btn btn-primary">*.d2s, *.d2i</button>
+                          <button type="button" class="btn btn-primary">Open *.d2s, *.d2i save</button>
                         </a-upload>
-                        <button type="button" class="btn btn-primary" @click="pasteBase64Save">Paste base64</button>
+                        <button type="button" class="btn btn-primary" @click="pasteBase64Save">Paste as base64</button>
                       </a-flex>
                     </div>
                   </a-flex>
 
-                  <nav class="navbar navbar-expand-md navbar-light">
-                    
+                  <nav v-if="hasOpened" class="navbar navbar-expand-md mt-4">
+                    <div class="w-100 d-flex justify-content-between align-items-center">
+                      <a-flex align="center" class="col-6 px-0">
+                        <template v-if="save && save.header && save.header.name">
+                          <img v-if="classIconSrc" :src="classIconSrc" alt="class" style="height:24px;width:24px;object-fit:contain;" />
+                          <a-flex vertical align="start" justify="center" class="ml-2" gap="0">
+                            <strong class="text-lg">{{ save.header.name }}</strong>
+                            <span class="text-sm">Level {{ save.header.level }}</span>
+                          </a-flex>
+                          <a-tag class="ml-3" :color="currentModeLabelColor">{{ currentModeLabel }}</a-tag>
+                          <a-tag v-if="isClassic" class="ml-0" color="gold">Classic</a-tag>
+                        </template>
+                        <template v-else-if="stashData">
+                          <img src="img/icons/stash.png" alt="stash" style="height:24px;width:24px;object-fit:contain;" />
+                          <a-flex gap="2" align="center" justify="left" class="ml-2">
+                            <a-tag color="gold">Pages: {{ stashData.pageCount }}</a-tag>
+                            <a-tag color="gold">Items: {{ stashItemsCount }}</a-tag>
+                          </a-flex>
+                        </template>
+                      </a-flex>
+                      <a-flex v-if="save != null" justify="end" class="col-6 px-0">
+                        <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x60)">Save D2</button> -->
+                        <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x63)">Save D2R</button> -->
+                        <button type="button" id="d2r" class="btn btn-primary" @click="saveFile($work_mod.value, $work_version.value)">Save</button>
+                        <button type="button" id="d2r-blizz" class="btn btn-primary" @click="saveFile('blizzless', $work_version.value)">Save Blizzless</button>
+                        <button type="button" class="btn btn-primary" @click="outputBase64Save">Output as base64</button>
+                        <div v-if="$work_mod.value == 'blizzless_beta'">
+                          <button type="button" id="d2r-blizz" class="btn btn-primary" @click="saveFile('blizzless', $work_version.value)">Save Blizzless</button>
+                        </div>
+                      </a-flex>
+                    </div>
                   </nav>
 
-                  <div v-if="save != null">
-                    <ul class="nav nav-tabs" id="tabs">
+                  <div v-if="save != null && saveViewMod !== 'stash'">
+                    <div class="row ml-0">
+                      <button type="button" @click="unlockHell" class="btn btn-secondary text-sm">Unlock Hell</button>
+                      <button type="button" @click="unlockAllWPs" class="btn btn-secondary text-sm">Unlock All WPs</button>
+                      <button type="button" @click="setLvl99" class="btn btn-secondary text-sm">Set Level 99</button>
+                      <button type="button" @click="setAllSkills20" class="btn btn-secondary text-sm">Set All Skills 20</button>
+                      <button type="button" @click="unlockQs" class="btn btn-secondary text-sm">Complete Skill/Stat Qs</button>
+                      <button type="button" @click="maxGold" class="btn btn-secondary text-sm">Max Gold</button>
+                    </div>
+                  </div>
+
+                  <div v-if="save != null" class="mt-3">
+                    <ul v-if="saveViewMod !== 'stash'" class="nav nav-tabs" id="tabs" >
                       <li class="nav-item">
                         <a class="nav-link active" id="items-tab" data-toggle="tab" data-target="#items-content"
                           role="tab" type="button">Equipment</a>
@@ -181,26 +231,6 @@
                       </div>
                       <div class="tab-pane" id="skills-content" role="tabpanel" v-if="saveViewMod !== 'stash'">
                         <Skills v-if="save && save.skills && save.skills.length" v-bind:save.sync="save" />
-                      </div>
-                    </div>
-                    <div v-if="save != null">
-                      <div class="row ml-1" v-if="saveViewMod !== 'stash'">
-                        <button type="button" @click="unlockHell" class="btn btn-primary">Unlock Hell</button>
-                        <button type="button" @click="unlockAllWPs" class="btn btn-primary">Unlock All WPs</button>
-                        <button type="button" @click="setLvl99" class="btn btn-primary">Set Level 99</button>
-                        <button type="button" @click="setAllSkills20" class="btn btn-primary">Set All Skills 20</button>
-                        <button type="button" @click="unlockQs" class="btn btn-primary">Complete Skill/Stat Qs</button>
-                        <button type="button" @click="maxGold" class="btn btn-primary">Max Gold</button>
-                      </div>
-                      <div class="row mt-3 ml-1">
-                        <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x60)">Save D2</button> -->
-                        <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x63)">Save D2R</button> -->
-                        <button type="button" id="d2r" class="btn btn-primary" @click="saveFile($work_mod.value, $work_version.value)">Save</button>
-                        <button type="button" id="d2r-blizz" class="btn btn-primary" @click="saveFile('blizzless', $work_version.value)">Save Blizzless</button>
-                        <button type="button" class="btn btn-primary" @click="outputBase64Save">Output as base64</button>
-                        <div v-if="$work_mod.value == 'blizzless_beta'">
-                          <button type="button" id="d2r-blizz" class="btn btn-primary" @click="saveFile('blizzless', $work_version.value)">Save Blizzless</button>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -410,6 +440,42 @@
     filters: {
     },
     computed: {
+      hasOpened() {
+        return !!(this.save && this.save.header && this.save.header.name) || !!this.stashData;
+      },
+      stashItemsCount() {
+        if (!this.stashData || !this.stashData.pages) return 0;
+        return this.stashData.pages.reduce((acc, p) => acc + (p.items ? p.items.length : 0), 0);
+      },
+      isClassic() {
+        // Classic если нет Expansion флага
+        return !!(this.save && this.save.header && this.save.header.status && !this.save.header.status.expansion);
+      },
+      currentModeLabel() {
+        if (!this.save || !this.save.header || !this.save.header.status) return '';
+        const s = this.save.header.status;
+        // SC/HC + Ladder
+        const base = s.hardcore ? 'HC' : 'SC';
+        return s.ladder ? `${base}L` : base;
+      },
+      currentModeLabelColor() {
+        if (!this.save || !this.save.header || !this.save.header.status) return '';
+        const s = this.save.header.status;
+        return s.hardcore ? 'red' : 'blue';
+      },
+      isStashOnly() {
+        return !!this.stashData && (!this.save || !this.save.header || !this.save.header.name);
+      },
+      stashSharedCount() {
+        if (!this.stashData || !this.stashData.pages) return 0;
+        return this.stashData.pageCount || this.stashData.pages.length || 0;
+      },
+      classIconSrc() {
+        if (!this.save || !this.save.header || !this.save.header.class) return null;
+        const name = (this.save.header.class || '').toLowerCase();
+        // match filenames in public/img/chars
+        return `img/chars/${name}.webp`;
+      },
       equipped() {
         return this.save.items.filter(
           item => item.location_id === 1 || item.location_id === 0 && item.alt_position_id === 1
@@ -709,7 +775,7 @@
             this.paste(this.preview);
           }
         } catch(e) {
-          alert("Failed to read item.");
+          message.error("Failed to read item.");
         }
       },
       loadItem() {
@@ -966,7 +1032,7 @@
           }
         } catch (e) {
           console.error(e);
-          alert('Failed to load from clipboard. Ensure it is a valid base64 save.');
+          message.error('Failed to load from clipboard. Ensure it is a valid base64 save.');
         }
       },
       maxGold() {
@@ -1067,7 +1133,7 @@
             return;
           }
           if (!this.save) {
-            alert('Nothing to export. Load or create a save first.');
+            message.error('Nothing to export. Load or create a save first.');
             return;
           }
           const buf = await this.$d2s.write(this.save, this.$work_mod.value, this.$work_version.value);
@@ -1076,7 +1142,7 @@
           message.success('Save base64 copied to clipboard.');
         } catch (e) {
           console.error(e);
-          alert('Failed to export base64.');
+          message.error('Failed to export base64.');
         }
       },
       async addBasesToItemPack(constants, category) {

@@ -21,7 +21,7 @@ const app = createApp({
   render() {
     return h(
       ConfigProvider,
-      { theme: { algorithm: antdTheme.darkAlgorithm } },
+      { theme: { algorithm: antdTheme.darkAlgorithm, token: { fontSize: 15 } } },
       { default: () => h(App) }
     );
   },
