@@ -100,7 +100,6 @@
                           <option value="99">D2R 2.5+</option>
                         </select>
                         <a-upload
-                          v-model:fileList="fileList"
                           name="d2sFile"
                           :multiple="false"
                           accept=".d2s,.d2i"
@@ -186,13 +185,15 @@
                       <div class="tab-pane show active" id="items-content" role="tabpanel">
                         <div class="row mt-3">
                           <div class="col-auto equipment-inventory-col">
-                            <Equipped v-if="saveViewMod !== 'stash'" :items.sync="equipped" @item-selected="onSelect" @item-event="onEvent"
-                              :id="'Equipped'" :contextMenu="$refs.contextMenu">
-                            </Equipped>
+                            <div class="mb-3">
+                              <Equipped v-if="saveViewMod !== 'stash'" :items.sync="equipped" @item-selected="onSelect" @item-event="onEvent"
+                                :id="'Equipped'" :contextMenu="$refs.contextMenu" :gold="save?.attributes?.gold">
+                              </Equipped>
+                            </div>
                             <!-- <Grid v-if="activeTab == 1 || activeTab == 10" :width="grid.inv.w" :height="grid.inv.h" :page="1"
                               :items.sync="inventory" @item-selected="onSelect" @item-event="onEvent" :id="'InventoryGrid'" :contextMenu="$refs.contextMenu">
                             </Grid> -->
-                            <Stash :items.sync="stash" :mode="saveViewMod" @item-selected="onSelect" @item-event="onEvent" :id="'Stash'"
+                            <Stash :items.sync="stashWithMeta" :mode="saveViewMod" @item-selected="onSelect" @item-event="onEvent" :id="'Stash'"
                               :contextMenu="$refs.contextMenu">
                             </Stash>
                             <Mercenary v-if="saveViewMod !== 'stash'" :items.sync="mercenary" @item-selected="onSelect"
@@ -499,6 +500,15 @@
           }
         }
         return stash;
+      },
+      stashWithMeta() {
+        const base = this.stash;
+        const meta = {
+          gold: this.save && this.save.attributes ? this.save.attributes.gold : null,
+          stashedGold: this.save && this.save.attributes ? this.save.attributes.stashed_gold : null,
+          sharedGold: this.stashData && this.stashData.sharedGold,
+        };
+        return { ...base, meta };
       },
       stashGrid() {
         return this.$work_mod.value === 'blizzless'
