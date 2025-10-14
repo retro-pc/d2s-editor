@@ -79,8 +79,13 @@ export default {
       this.onItemModified();
     },
     addNewStat() {
+      const updated = Array.isArray(this.itemStats)
+        ? [...this.itemStats, { id: 0, values: [1, 0, 1] }]
+        : [{ id: 0, values: [1, 0, 1] }];
+      this.$emit('update:itemStats', updated);
+
       //this.itemStats.push({ id: 0, values: [0, 0] });
-      this.itemStats.push({ id: 0, values: [1, 0, 1] });
+      //this.itemStats.push({ id: 0, values: [1, 0, 1] });
       this.onItemModified();
     },
     removeStat(idx) {

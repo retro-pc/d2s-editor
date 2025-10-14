@@ -329,6 +329,7 @@ export interface IItem {
     magic_attributes: IMagicProperty[];
     combined_magic_attributes: IMagicProperty[];
     socketed_items: IItem[];
+    socketed_attributes: IMagicProperty[];
     base_damage: IWeaponDamage;
     reqstr: number;
     reqdex: number;
@@ -355,8 +356,10 @@ export interface IItem {
     rare_name_id: number;
     rare_name_id2: number;
     displayed_magic_attributes: IMagicProperty[];
+    displayed_socketed_attributes: IMagicProperty[];
     displayed_runeword_attributes: IMagicProperty[];
     displayed_combined_magic_attributes: IMagicProperty[];
+    displayed_set_attributes: IMagicProperty[][];
 }
 export interface IWeaponDamage {
     mindam: number;

@@ -13,6 +13,10 @@
         {{ mode === 'character' ? 'Personal' : 'Shared' }}
       </button>
     </div>
+    <div v-if="mode === 'character'" class="stash-gold d-flex align-items-center">
+      <img src="img/icons/gold.png" alt="gold" style="height:20px;width:20px;object-fit:contain;" />
+      <span class="ml-2 text-sm">{{ goldForActiveTab || 0 }}</span>
+    </div>
     <div class="stash-bg" :class="{ 'stash-bg-big': $work_mod.value !== 'diablo2' }">
       <Grid
         v-if="currentPageIndex !== null"
@@ -54,6 +58,31 @@ export default {
     }
   },
   computed: {
+    goldForActiveTab() {
+      try {
+        // Personal page 1 uses save.attributes.gold; shared pages use stashData.sharedGold if present
+        if (!this.items) return null;
+        if (this.mode === 'character') {
+          // Expect parent passes player stashed gold via items.meta?.stashedGold
+          if (this.items.meta && typeof this.items.meta.stashedGold === 'number') {
+            return this.items.meta.stashedGold;
+          }
+          return 0;
+        }
+        // Active shared page
+        if (this.items.meta && typeof this.items.meta.sharedGold === 'number') {
+          return this.items.meta.sharedGold;
+        }
+        return 0;
+      } catch (_) {
+        return 0;
+      }
+    },
+    goldLabel() {
+      if (!this.items) return 'Gold';
+      if (!this.hidePersonal && this.activeTab === 1) return 'Stashed Gold';
+      return 'Shared Gold';
+    },
     stashGrid() {
       return this.$work_mod.value === 'blizzless'
           ? { w: 16, h: 13 }
