@@ -90,12 +90,10 @@
                           v-model="$work_version.value"
                           name="work-version"
                           title="Workspace Version"
-                          @change="changeMod()"
-                        >
+                          @change="changeMod()">
                           <!-- <option v-if="$work_mod.value == 'diablo2'" value="96">LOD 1.10-1.14d</option> -->
                           <!-- <option v-if="$work_mod.value == 'diablo2'" value="97">D2R Alpha</option> -->
                           <!-- <option v-if="$work_mod.value == 'diablo2'" value="98">D2R 2.4</option> -->
-                          
                           <!-- <option v-if="$work_mod.value == 'blizzless'" value="98">Beta</option> -->
                           <option value="99">D2R 2.5+</option>
                         </select>
@@ -105,8 +103,7 @@
                           accept=".d2s,.d2i"
                           :before-upload="() => false"
                           :show-upload-list="false"
-                          @change="onFileChange"
-                        >
+                          @change="onFileChange">
                           <button type="button" class="btn btn-primary">Open *.d2s, *.d2i save</button>
                         </a-upload>
                         <button type="button" class="btn btn-primary" @click="pasteBase64Save">Paste as base64</button>
@@ -138,11 +135,11 @@
                         <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x60)">Save D2</button> -->
                         <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x63)">Save D2R</button> -->
                         <button type="button" id="d2r" class="btn btn-primary" @click="saveFile($work_mod.value, $work_version.value)">Save</button>
-                        <button type="button" id="d2r-blizz" class="btn btn-primary" @click="saveFile('blizzless', $work_version.value)">Save Blizzless</button>
-                        <button type="button" class="btn btn-primary" @click="outputBase64Save">Output as base64</button>
                         <div v-if="$work_mod.value == 'blizzless_beta'">
                           <button type="button" id="d2r-blizz" class="btn btn-primary" @click="saveFile('blizzless', $work_version.value)">Save Blizzless</button>
                         </div>
+                        <button type="button" class="btn btn-primary" @click="outputBase64Save">Output as base64</button>
+                     
                       </a-flex>
                     </div>
                   </nav>
@@ -233,8 +230,8 @@
                       <div class="tab-pane" id="skills-content" role="tabpanel" v-if="saveViewMod !== 'stash'">
                         <Skills v-if="save && save.skills && save.skills.length" v-bind:save.sync="save" />
                       </div>
+                    </div>
                   </div>
-
                 </fieldset>
 
                 <div id="errors">
