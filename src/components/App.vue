@@ -46,215 +46,120 @@
               </div>
               <form id="d2sForm">
                 <fieldset>
-                  <div class="form-group">
-                    <div class="input-group">
-                      <select id="open-mod" v-model="$work_mod.value" name="open-mod" title="Workspace Mod" @change="changeMod()">
-                        <option value="diablo2">Diablo2</option>
-                        <option value="blizzless">Blizzless</option>
-                        <option value="blizzless_beta">Blizzless Beta</option>
-                      </select>
-                      <select
-                        id="work-version"
-                        v-model="$work_version.value"
-                        name="work-version"
-                        title="Workspace Version"
-                        @change="changeMod()"
-                      >
-                        <!-- <option v-if="$work_mod.value == 'diablo2'" value="96">LOD 1.10-1.14d</option> -->
-                        <!-- <option v-if="$work_mod.value == 'diablo2'" value="97">D2R Alpha</option> -->
-                        <!-- <option v-if="$work_mod.value == 'diablo2'" value="98">D2R 2.4</option> -->
-                        
-                        <!-- <option v-if="$work_mod.value == 'blizzless'" value="98">Beta</option> -->
-                        <option value="99">D2R 2.5+</option>
-                      </select>
-                      <div class="custom-file">
-                        <input type="file" name="d2sFile" class="custom-file-input" multiple @change="onFileChange"
-                          id="d2sFile" accept=".d2s,.d2i">
-                        <label class="custom-file-label load-save-label" for="d2sFile">*.d2s,*.d2i</label>
-                      </div>
-                      <!-- <div class="input-group-append">
-                        <button type="button" class="btn btn-primary" @click="pasteBase64Save">Paste base64</button>
-                      </div> -->
-                      <!-- <div>
-                       <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">Create New</button>
-                        <div class="dropdown-menu dropdown-menu-right">
-                          <button class="dropdown-item" type="button" @click="newChar(0)">Amazon</button>
-                          <button class="dropdown-item" type="button" @click="newChar(1)">Sorceress</button>
-                          <button class="dropdown-item" type="button" @click="newChar(2)">Necromancer</button>
-                          <button class="dropdown-item" type="button" @click="newChar(3)">Paladin</button>
-                          <button class="dropdown-item" type="button" @click="newChar(4)">Barbarian</button>
-                          <button class="dropdown-item" type="button" @click="newChar(5)">Druid</button>
-                          <button class="dropdown-item" type="button" @click="newChar(6)">Assassin</button>
-                        </div>
-                      </div>
-                      <div class="input-group-append"><span>&nbsp;</span></div> -->
+                  <a-flex justify="space-between" align="center">
+                    <div class="col-6 px-0">
+                      <h5>Create character</h5>
+                      <a-dropdown>
+                        <button type="button" class="btn btn-primary">Create new</button>
+                        <template #overlay>
+                          <a-menu>
+                            <template v-for="cls in createNewMenu">
+                              <template v-if="!buildsFor(cls).length">
+                                <a-menu-item :key="cls.key" @click="newChar(cls.baseIndex)">
+                                  <a-flex align="center" justify="start" gap="8">
+                                    <img :src="`img/chars/${cls.key}.webp`" alt="class" style="height:24px;width:24px;object-fit:contain;" />
+                                    {{ cls.title }}
+                                  </a-flex>
+                                </a-menu-item>
+                              </template>
+                              <a-sub-menu v-else :key="cls.key">
+                                <template #title>
+                                  <a-flex align="center" justify="start" gap="8" style="display: inline-flex">
+                                    <img :src="`img/chars/${cls.key}.webp`" alt="class" style="height:24px;width:24px;object-fit:contain;" />
+                                    <span @click="newChar(cls.baseIndex)">{{ cls.title }}</span>
+                                  </a-flex>
+                                </template>
+                                <a-menu-item v-for="b in buildsFor(cls)" :key="`${cls.key}-${b.index}`" @click="newChar(b.index)">{{ b.title }}</a-menu-item>
+                              </a-sub-menu>
+                            </template>
+                          </a-menu>
+                        </template>
+                      </a-dropdown>
                     </div>
-                  </div>
 
-                  <nav class="navbar navbar-expand-md navbar-light">
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Create new</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Amazon
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(0)">Amazon</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <div v-if="$work_mod.value == 'diablo2'">
-                              <a class="dropdown-item" href="#" @click="newChar(1)">Bowazon(Physical)</a>
-                              <a class="dropdown-item" href="#" @click="newChar(2)">Bowazon(Elemental)</a>
-                              <a class="dropdown-item" href="#" @click="newChar(3)">Bowazon(Mavina)</a>
-                              <a class="dropdown-item" href="#" @click="newChar(4)">Exploding Arrow</a>
-                              <a class="dropdown-item" href="#" @click="newChar(5)">Ligthing Fury</a>
-                              <a class="dropdown-item" href="#" @click="newChar(6)">Poison</a>
-                              <a class="dropdown-item" href="#" @click="newChar(7)">Spearzon</a>
-                            </div>
-                            <div v-if="$work_mod.value == 'blizzless_beta'">
-                              <a class="dropdown-item" href="#" @click="newChar(1)">Poison</a>
-                              <a class="dropdown-item" href="#" @click="newChar(2)">Spearzon</a>
-                              <a class="dropdown-item" href="#" @click="newChar(3)">Cold</a>
-                              <a class="dropdown-item" href="#" @click="newChar(4)">Bowazon</a>
-                              <a class="dropdown-item" href="#" @click="newChar(5)">FemaleKnight</a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Assassin
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(60)">Assassin</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <div v-if="$work_mod.value == 'diablo2'">
-                              <a class="dropdown-item" href="#" @click="newChar(61)">Phoenix</a>
-                            </div>
-                            <div v-if="$work_mod.value == 'blizzless_beta'">
-                              <a class="dropdown-item" href="#" @click="newChar(61)">BladeSin</a>
-                              <a class="dropdown-item" href="#" @click="newChar(62)">FireTrapper</a>
-                              <a class="dropdown-item" href="#" @click="newChar(63)">Phoenix</a>
-                              <a class="dropdown-item" href="#" @click="newChar(64)">Trapper</a>
-                              <a class="dropdown-item" href="#" @click="newChar(65)">Kicker</a>
-                              <a class="dropdown-item" href="#" @click="newChar(66)">BladeFury</a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Barbarian
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(40)">Barbarian</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <div v-if="$work_mod.value == 'diablo2'">
-                              <a class="dropdown-item" href="#" @click="newChar(41)">Whirlwind</a>
-                              <a class="dropdown-item" href="#" @click="newChar(42)">Double Throw</a>
-                            </div>
-                            <div v-if="$work_mod.value == 'blizzless_beta'">
-                              <a class="dropdown-item" href="#" @click="newChar(41)">Whirlwind</a>
-                              <a class="dropdown-item" href="#" @click="newChar(42)">WC</a>
-                              <a class="dropdown-item" href="#" @click="newChar(43)">Thrower</a>
-                              <a class="dropdown-item" href="#" @click="newChar(44)">Berserk</a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Druid
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(50)">Druid</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <div v-if="$work_mod.value == 'diablo2'">
-                              <a class="dropdown-item" href="#" @click="newChar(51)">Fire</a>
-                            </div>
-                            <div v-if="$work_mod.value == 'blizzless_beta'">
-                               <a class="dropdown-item" href="#" @click="newChar(51)">Fire</a>
-                               <a class="dropdown-item" href="#" @click="newChar(52)">Shoсkwave</a>
-                               <a class="dropdown-item" href="#" @click="newChar(53)">Rabies</a> 
-                            </div>
-                          </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Necromancer
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(20)">Necromancer</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <div v-if="$work_mod.value == 'diablo2'">
-                              <a class="dropdown-item" href="#" @click="newChar(21)">Poison</a>
-                            </div>
-                            <div v-if="$work_mod.value == 'blizzless_beta'">
-                              <a class="dropdown-item" href="#" @click="newChar(21)">Poison</a>
-                              <a class="dropdown-item" href="#" @click="newChar(22)">Ultra</a>
-                              <a class="dropdown-item" href="#" @click="newChar(23)">Coroner</a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Paladin
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(30)">Paladin</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <div v-if="$work_mod.value == 'diablo2'">
-                              <a class="dropdown-item" href="#" @click="newChar(31)">Hammerdin</a>
-                              <a class="dropdown-item" href="#" @click="newChar(32)">Fist of the Heavens</a>
-                            </div>
-                            <div v-if="$work_mod.value == 'blizzless_beta'">
-                              <a class="dropdown-item" href="#" @click="newChar(31)">Hammerdin</a>
-                              <a class="dropdown-item" href="#" @click="newChar(32)">Auradin</a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Sorceress
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(10)">Sorceress</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <div v-if="$work_mod.value == 'diablo2'">
-                              <a class="dropdown-item" href="#" @click="newChar(11)">Blizzard</a>
-                              <a class="dropdown-item" href="#" @click="newChar(12)">Blizzard(Mana)</a>
-                              <a class="dropdown-item" href="#" @click="newChar(13)">Fire</a>
-                              <a class="dropdown-item" href="#" @click="newChar(14)">Nova</a>
-                              <a class="dropdown-item" href="#" @click="newChar(15)">Enchant Bow</a>
-                            </div>
-                            <div v-if="$work_mod.value == 'blizzless_beta'">
-                              <a class="dropdown-item" href="#" @click="newChar(11)">Enchantress</a>
-                              <a class="dropdown-item" href="#" @click="newChar(12)">Rogue</a>
-                              <a class="dropdown-item" href="#" @click="newChar(13)">Fire</a>
-                              <a class="dropdown-item" href="#" @click="newChar(14)">Nova</a>
-                              <a class="dropdown-item" href="#" @click="newChar(15)">Blizzard</a>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
+                    <div class="col-6 px-0">
+                      <h5>Open save</h5>
+                      <a-flex gap="8">
+                        <select id="open-mod" v-model="$work_mod.value" name="open-mod" title="Workspace Mod" @change="changeMod()">
+                          <option value="diablo2">Diablo2</option>
+                          <option value="blizzless">Blizzless</option>
+                          <option value="blizzless_beta">Blizzless Beta</option>
+                        </select>
+                        <select
+                          id="work-version"
+                          v-model="$work_version.value"
+                          name="work-version"
+                          title="Workspace Version"
+                          @change="changeMod()"
+                        >
+                          <!-- <option v-if="$work_mod.value == 'diablo2'" value="96">LOD 1.10-1.14d</option> -->
+                          <!-- <option v-if="$work_mod.value == 'diablo2'" value="97">D2R Alpha</option> -->
+                          <!-- <option v-if="$work_mod.value == 'diablo2'" value="98">D2R 2.4</option> -->
+                          
+                          <!-- <option v-if="$work_mod.value == 'blizzless'" value="98">Beta</option> -->
+                          <option value="99">D2R 2.5+</option>
+                        </select>
+                        <a-upload
+                          name="d2sFile"
+                          :multiple="false"
+                          accept=".d2s,.d2i"
+                          :before-upload="() => false"
+                          :show-upload-list="false"
+                          @change="onFileChange"
+                        >
+                          <button type="button" class="btn btn-primary">Open *.d2s, *.d2i save</button>
+                        </a-upload>
+                        <button type="button" class="btn btn-primary" @click="pasteBase64Save">Paste as base64</button>
+                      </a-flex>
+                    </div>
+                  </a-flex>
+
+                  <nav v-if="hasOpened" class="navbar navbar-expand-md mt-4">
+                    <div class="w-100 d-flex justify-content-between align-items-center">
+                      <a-flex align="center" class="col-6 px-0">
+                        <template v-if="save && save.header && save.header.name">
+                          <img v-if="classIconSrc" :src="classIconSrc" alt="class" style="height:24px;width:24px;object-fit:contain;" />
+                          <a-flex vertical align="start" justify="center" class="ml-2" gap="0">
+                            <strong class="text-lg">{{ save.header.name }}</strong>
+                            <span class="text-sm">Level {{ save.header.level }}</span>
+                          </a-flex>
+                          <a-tag class="ml-3" :color="currentModeLabelColor">{{ currentModeLabel }}</a-tag>
+                          <a-tag v-if="isClassic" class="ml-0" color="gold">Classic</a-tag>
+                        </template>
+                        <template v-else-if="stashData">
+                          <img src="img/icons/stash.png" alt="stash" style="height:24px;width:24px;object-fit:contain;" />
+                          <a-flex gap="2" align="center" justify="left" class="ml-2">
+                            <a-tag color="gold">Pages: {{ stashData.pageCount }}</a-tag>
+                            <a-tag color="gold">Items: {{ stashItemsCount }}</a-tag>
+                          </a-flex>
+                        </template>
+                      </a-flex>
+                      <a-flex v-if="save != null" justify="end" class="col-6 px-0">
+                        <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x60)">Save D2</button> -->
+                        <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x63)">Save D2R</button> -->
+                        <button type="button" id="d2r" class="btn btn-primary" @click="saveFile($work_mod.value, $work_version.value)">Save</button>
+                        <button type="button" id="d2r-blizz" class="btn btn-primary" @click="saveFile('blizzless', $work_version.value)">Save Blizzless</button>
+                        <button type="button" class="btn btn-primary" @click="outputBase64Save">Output as base64</button>
+                        <div v-if="$work_mod.value == 'blizzless_beta'">
+                          <button type="button" id="d2r-blizz" class="btn btn-primary" @click="saveFile('blizzless', $work_version.value)">Save Blizzless</button>
+                        </div>
+                      </a-flex>
                     </div>
                   </nav>
 
-                  <div v-if="save != null">
-                    <ul class="nav nav-tabs" id="tabs">
+                  <div v-if="save != null && saveViewMod !== 'stash'">
+                    <div class="row ml-0">
+                      <button type="button" @click="unlockHell" class="btn btn-secondary text-sm">Unlock Hell</button>
+                      <button type="button" @click="unlockAllWPs" class="btn btn-secondary text-sm">Unlock All WPs</button>
+                      <button type="button" @click="setLvl99" class="btn btn-secondary text-sm">Set Level 99</button>
+                      <button type="button" @click="setAllSkills20" class="btn btn-secondary text-sm">Set All Skills 20</button>
+                      <button type="button" @click="unlockQs" class="btn btn-secondary text-sm">Complete Skill/Stat Qs</button>
+                      <button type="button" @click="maxGold" class="btn btn-secondary text-sm">Max Gold</button>
+                    </div>
+                  </div>
+
+                  <div v-if="save != null" class="mt-3">
+                    <ul v-if="saveViewMod !== 'stash'" class="nav nav-tabs" id="tabs" >
                       <li class="nav-item">
                         <a class="nav-link active" id="items-tab" data-toggle="tab" data-target="#items-content"
                           role="tab" type="button">Equipment</a>
@@ -278,22 +183,17 @@
                     </ul>
                     <div class="tab-content" id="tabs-content">
                       <div class="tab-pane show active" id="items-content" role="tabpanel">
-                        <div v-for="(notification, idx) in notifications" :key="idx" :class="notification.alert"
-                          role="alert">
-                          {{ notification.message }}
-                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
                         <div class="row mt-3">
                           <div class="col-auto equipment-inventory-col">
-                            <Equipped v-if="saveViewMod !== 'stash'" :items.sync="equipped" @item-selected="onSelect" @item-event="onEvent"
-                              :id="'Equipped'" :contextMenu="$refs.contextMenu">
-                            </Equipped>
+                            <div class="mb-3">
+                              <Equipped v-if="saveViewMod !== 'stash'" :items.sync="equipped" @item-selected="onSelect" @item-event="onEvent"
+                                :id="'Equipped'" :contextMenu="$refs.contextMenu" :gold="save?.attributes?.gold">
+                              </Equipped>
+                            </div>
                             <!-- <Grid v-if="activeTab == 1 || activeTab == 10" :width="grid.inv.w" :height="grid.inv.h" :page="1"
                               :items.sync="inventory" @item-selected="onSelect" @item-event="onEvent" :id="'InventoryGrid'" :contextMenu="$refs.contextMenu">
                             </Grid> -->
-          <Stash :items.sync="stash" :mode="saveViewMod" @item-selected="onSelect" @item-event="onEvent" :id="'Stash'"
+                            <Stash :items.sync="stashWithMeta" :mode="saveViewMod" @item-selected="onSelect" @item-event="onEvent" :id="'Stash'"
                               :contextMenu="$refs.contextMenu">
                             </Stash>
                             <Mercenary v-if="saveViewMod !== 'stash'" :items.sync="mercenary" @item-selected="onSelect"
@@ -333,26 +233,6 @@
                       <div class="tab-pane" id="skills-content" role="tabpanel" v-if="saveViewMod !== 'stash'">
                         <Skills v-if="save && save.skills && save.skills.length" v-bind:save.sync="save" />
                       </div>
-                    </div>
-          <div v-if="save != null">
-                      <div class="row ml-1" v-if="saveViewMod !== 'stash'">
-                        <button type="button" @click="unlockHell" class="btn btn-primary">Unlock Hell</button>
-                        <button type="button" @click="unlockAllWPs" class="btn btn-primary">Unlock All WPs</button>
-                        <button type="button" @click="setLvl99" class="btn btn-primary">Set Level 99</button>
-                        <button type="button" @click="setAllSkills20" class="btn btn-primary">Set All Skills 20</button>
-                        <button type="button" @click="unlockQs" class="btn btn-primary">Complete Skill/Stat Qs</button>
-                        <button type="button" @click="maxGold" class="btn btn-primary">Max Gold</button>
-                      </div>
-          <div class="row mt-3 ml-1">
-                        <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x60)">Save D2</button> -->
-                        <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x63)">Save D2R</button> -->
-                        <button type="button" id="d2r" class="btn btn-primary" @click="saveFile($work_mod.value, $work_version.value)">Save</button>
-                        <!-- <button type="button" class="btn btn-primary" @click="outputBase64Save">Output as base64</button> -->
-                        <div v-if="$work_mod.value == 'blizzless_beta'">
-                          <button type="button" id="d2r-blizz" class="btn btn-primary" @click="saveFile('blizzless', $work_version.value)">Save Blizzless</button>
-                        </div>
-                      </div>
-                    </div>
                   </div>
 
                 </fieldset>
@@ -385,6 +265,7 @@
   import CharPack from '../d2/CharPack.js';
   import utils from '../utils.js';
   import {itemGroups as itemGroups} from '../items.js';
+  import { message } from 'ant-design-vue';
 
   // TODO https://github.com/dschu012/d2s/pull/77
   // import * as d2s from '@dschu012/d2s';
@@ -419,10 +300,135 @@
         baseOptions: null,
         clipboard: null,
         load: null,
-        notifications: [],
         grid: { inv: { w: 10, h: 4 }, cube: { w: 3, h: 4 } },
         location: {},
-        theme: localStorage.getItem('theme')
+        theme: localStorage.getItem('theme'),
+        createNewMenu: [
+          {
+            key: 'amazon',
+            title: 'Amazon',
+            baseIndex: 0,
+            builds: {
+              diablo2: [
+                { index: 1, title: 'Bowazon(Physical)' },
+                { index: 2, title: 'Bowazon(Elemental)' },
+                { index: 3, title: 'Bowazon(Mavina)' },
+                { index: 4, title: 'Exploding Arrow' },
+                { index: 5, title: 'Ligthing Fury' },
+                { index: 6, title: 'Poison' },
+                { index: 7, title: 'Spearzon' }
+              ],
+              blizzless_beta: [
+                { index: 1, title: 'Poison' },
+                { index: 2, title: 'Spearzon' },
+                { index: 3, title: 'Cold' },
+                { index: 4, title: 'Bowazon' },
+                { index: 5, title: 'FemaleKnight' }
+              ]
+            }
+          },
+          {
+            key: 'assassin',
+            title: 'Assassin',
+            baseIndex: 60,
+            builds: {
+              diablo2: [
+                { index: 61, title: 'Phoenix' }
+              ],
+              blizzless_beta: [
+                { index: 61, title: 'BladeSin' },
+                { index: 62, title: 'FireTrapper' },
+                { index: 63, title: 'Phoenix' },
+                { index: 64, title: 'Trapper' },
+                { index: 65, title: 'Kicker' },
+                { index: 66, title: 'BladeFury' }
+              ]
+            }
+          },
+          {
+            key: 'barbarian',
+            title: 'Barbarian',
+            baseIndex: 40,
+            builds: {
+              diablo2: [
+                { index: 41, title: 'Whirlwind' },
+                { index: 42, title: 'Double Throw' }
+              ],
+              blizzless_beta: [
+                { index: 41, title: 'Whirlwind' },
+                { index: 42, title: 'WC' },
+                { index: 43, title: 'Thrower' },
+                { index: 44, title: 'Berserk' }
+              ]
+            }
+          },
+          {
+            key: 'druid',
+            title: 'Druid',
+            baseIndex: 50,
+            builds: {
+              diablo2: [
+                { index: 51, title: 'Fire' }
+              ],
+              blizzless_beta: [
+                { index: 51, title: 'Fire' },
+                { index: 52, title: 'Shoсkwave' },
+                { index: 53, title: 'Rabies' }
+              ]
+            }
+          },
+          {
+            key: 'necromancer',
+            title: 'Necromancer',
+            baseIndex: 20,
+            builds: {
+              diablo2: [
+                { index: 21, title: 'Poison' }
+              ],
+              blizzless_beta: [
+                { index: 21, title: 'Poison' },
+                { index: 22, title: 'Ultra' },
+                { index: 23, title: 'Coroner' }
+              ]
+            }
+          },
+          {
+            key: 'paladin',
+            title: 'Paladin',
+            baseIndex: 30,
+            builds: {
+              diablo2: [
+                { index: 31, title: 'Hammerdin' },
+                { index: 32, title: 'Fist of the Heavens' }
+              ],
+              blizzless_beta: [
+                { index: 31, title: 'Hammerdin' },
+                { index: 32, title: 'Auradin' }
+              ]
+            }
+          },
+          {
+            key: 'sorceress',
+            title: 'Sorceress',
+            baseIndex: 10,
+            builds: {
+              diablo2: [
+                { index: 11, title: 'Blizzard' },
+                { index: 12, title: 'Blizzard(Mana)' },
+                { index: 13, title: 'Fire' },
+                { index: 14, title: 'Nova' },
+                { index: 15, title: 'Enchant Bow' }
+              ],
+              blizzless_beta: [
+                { index: 11, title: 'Enchantress' },
+                { index: 12, title: 'Rogue' },
+                { index: 13, title: 'Fire' },
+                { index: 14, title: 'Nova' },
+                { index: 15, title: 'Blizzard' }
+              ]
+            }
+          }
+        ]
       };
     },
     async mounted() {
@@ -434,6 +440,42 @@
     filters: {
     },
     computed: {
+      hasOpened() {
+        return !!(this.save && this.save.header && this.save.header.name) || !!this.stashData;
+      },
+      stashItemsCount() {
+        if (!this.stashData || !this.stashData.pages) return 0;
+        return this.stashData.pages.reduce((acc, p) => acc + (p.items ? p.items.length : 0), 0);
+      },
+      isClassic() {
+        // Classic если нет Expansion флага
+        return !!(this.save && this.save.header && this.save.header.status && !this.save.header.status.expansion);
+      },
+      currentModeLabel() {
+        if (!this.save || !this.save.header || !this.save.header.status) return '';
+        const s = this.save.header.status;
+        // SC/HC + Ladder
+        const base = s.hardcore ? 'HC' : 'SC';
+        return s.ladder ? `${base}L` : base;
+      },
+      currentModeLabelColor() {
+        if (!this.save || !this.save.header || !this.save.header.status) return '';
+        const s = this.save.header.status;
+        return s.hardcore ? 'red' : 'blue';
+      },
+      isStashOnly() {
+        return !!this.stashData && (!this.save || !this.save.header || !this.save.header.name);
+      },
+      stashSharedCount() {
+        if (!this.stashData || !this.stashData.pages) return 0;
+        return this.stashData.pageCount || this.stashData.pages.length || 0;
+      },
+      classIconSrc() {
+        if (!this.save || !this.save.header || !this.save.header.class) return null;
+        const name = (this.save.header.class || '').toLowerCase();
+        // match filenames in public/img/chars
+        return `img/chars/${name}.webp`;
+      },
       equipped() {
         return this.save.items.filter(
           item => item.location_id === 1 || item.location_id === 0 && item.alt_position_id === 1
@@ -458,6 +500,15 @@
         }
         return stash;
       },
+      stashWithMeta() {
+        const base = this.stash;
+        const meta = {
+          gold: this.save && this.save.attributes ? this.save.attributes.gold : null,
+          stashedGold: this.save && this.save.attributes ? this.save.attributes.stashed_gold : null,
+          sharedGold: this.stashData && this.stashData.sharedGold,
+        };
+        return { ...base, meta };
+      },
       stashGrid() {
         return this.$work_mod.value === 'blizzless'
           ? { w: 16, h: 13 }
@@ -473,6 +524,13 @@
       },
     },
     methods: {
+      buildsFor(cls) {
+        const mod = this.$work_mod?.value;
+        if (!cls || !cls.builds) return [];
+        if (mod === 'diablo2') return cls.builds.diablo2 || [];
+        if (mod === 'blizzless_beta') return cls.builds.blizzless_beta || [];
+        return [];
+      },
       async getPaletteData() {
         let a1PaletteBuffer;
         const colorMapBuffers = {};
@@ -595,7 +653,7 @@
         let bytes = await this.$d2s.writeItem(item, this.$work_mod.value, this.$work_version.value);
         let base64 = utils.arrayBufferToBase64(bytes);
         navigator.clipboard.writeText(base64);
-        this.notifications.push({ alert: "alert alert-info", message: `Item data copied to clipboard. Use load from string to share it with someone.` });
+        message.info(`Item data copied to clipboard. Use load from string to share it with someone.`);
       },
       onEvent(e) {
         if(e.type == 'share') {
@@ -728,7 +786,7 @@
             this.setPreviewItem(this.previewModel.mod, this.previewModel.version);
           }
         } catch(e) {
-          alert("Failed to read item.");
+          message.error("Failed to read item.");
         }
       },
       loadItem() {
@@ -742,12 +800,11 @@
         copy.position_x = pos[2];
         copy.position_y = pos[3];
         copy.alt_position_id = pos[4];
-        this.notifications = [];
         if (copy.location_id == 4) {
-          this.notifications.push({ alert: "alert alert-warning", message: `Could not find safe location to place item. Placed in mouse buffer.` });
+          message.warning(`Could not find safe location to place item. Placed in mouse buffer.`);
         } else {
           let loc = copy.alt_position_id == 1 ? 'inventory' : (copy.alt_position_id == 5 ? 'stash' : 'cube');
-          this.notifications.push({ alert: "alert alert-info", message: `Loaded item in ${loc} at ${copy.position_x}, ${copy.position_y}` });
+          message.info(`Loaded item in ${loc} at ${copy.position_x}, ${copy.position_y}`);
         }
         this.save.items.push(copy);
         this.selected = copy;
@@ -929,30 +986,28 @@
           });
         }
       },
-      onFileChange(event) {
+      onFileChange({ file }) {
+        if (!file) return;
         this.save = null;
         this.stashData = null;
         this.selected = null;
-        const files = event.currentTarget.files;
-        const count = Math.min(files.length || 0, 2);
-        for (let i = 0; i < count; i++) {
-          const file = typeof files.item === 'function' ? files.item(i) : files[i];
-          if (!file) continue;
-          const reader = new FileReader();
-          reader.onload = (e) => {
-            const buf = e.target.result;
-            this.readBuffer(buf, file.name);
-          };
-          reader.readAsArrayBuffer(file);
-        }
-        // Allow selecting the same file again
-        event.currentTarget.value = null;
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          const buf = e.target.result;
+          this.readBuffer(buf, file.name);
+        };
+        reader.onerror = () => {
+          if (this.$message) {
+            this.$message.error('Failed to read file');
+          }
+        };
+        reader.readAsArrayBuffer(file);
       },
       async pasteBase64Save() {
         try {
           const text = await navigator.clipboard.readText();
           if (!text) {
-            alert('Clipboard is empty.');
+            message.error('Clipboard is empty.');
             return;
           }
           const idx = text.indexOf(',');
@@ -966,7 +1021,7 @@
             this.save = response;
             this.saveViewMod = 'character';
             await this.resolveInventoryImages();
-            this.notifications.push({ alert: 'alert alert-info', message: 'Save loaded from clipboard.' });
+            message.info('Save loaded from clipboard.');
           } catch (e1) {
             const stash = await this.$d2s.readStash(bytes, this.$work_mod.value);
             if (!this.save) {
@@ -977,11 +1032,11 @@
             for (let i = 0; i < this.stashData.pageCount; i++) {
               [...this.stashData.pages[i].items].forEach(item => { this.resolveInventoryImage(item); });
             }
-            this.notifications.push({ alert: 'alert alert-info', message: 'Stash loaded from clipboard.' });
+            message.info('Stash loaded from clipboard.');
           }
         } catch (e) {
           console.error(e);
-          alert('Failed to load from clipboard. Ensure it is a valid base64 save.');
+          message.error('Failed to load from clipboard. Ensure it is a valid base64 save.');
         }
       },
       maxGold() {
@@ -1078,20 +1133,20 @@
             const buf = await this.$d2s.writeStash(this.stashData, this.$work_mod.value, this.$work_version.value);
             const b64 = utils.arrayBufferToBase64(buf);
             await navigator.clipboard.writeText(b64);
-            this.notifications.push({ alert: 'alert alert-info', message: 'Stash base64 copied to clipboard.' });
+            message.success('Stash base64 copied to clipboard.');
             return;
           }
           if (!this.save) {
-            alert('Nothing to export. Load or create a save first.');
+            message.error('Nothing to export. Load or create a save first.');
             return;
           }
           const buf = await this.$d2s.write(this.save, this.$work_mod.value, this.$work_version.value);
           const b64 = utils.arrayBufferToBase64(buf);
           await navigator.clipboard.writeText(b64);
-          this.notifications.push({ alert: 'alert alert-info', message: 'Save base64 copied to clipboard.' });
+          message.success('Save base64 copied to clipboard.');
         } catch (e) {
           console.error(e);
-          alert('Failed to export base64.');
+          message.error('Failed to export base64.');
         }
       },
       async addBasesToItemPack(constants, category) {

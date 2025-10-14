@@ -95,9 +95,11 @@
             @stat-change="onEvent('update')" />
         </div>
       </div>  -->
-       <div v-for="(set_attribute, idx) in item.set_attributes" class="item-set-stats">
-        <div>Set Stats {{ idx }}</div>
-        <ItemStatsEditor :id="id + 'Set' + idx" v-model:item-stats="item.set_attributes[idx]" @stat-change="onEvent('update')" />
+      <div v-if="item.set_attributes?.length" class="item-set-stats">
+        <div>Set Stats</div>
+        <div v-for="(set_attribute, idx) in item.set_attributes">
+          <ItemStatsEditor :id="id + 'Set' + idx" v-model:item-stats="item.set_attributes[idx]" @stat-change="onEvent('update')" />
+        </div>
       </div>
       <div v-if="item.socketed_items" class="item-socketed-stats">
         <div>Sockets Stats</div>

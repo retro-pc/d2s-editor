@@ -36,6 +36,11 @@
       <div class="blue" v-if="item.total_nr_of_sockets">
         Socketed ({{item.total_nr_of_sockets}})
       </div>
+      <div class="mt-3" v-if="item.displayed_set_attributes && item.displayed_set_attributes.length">
+        <template v-for="(group, gIdx) in item.displayed_set_attributes">
+          <div class="green" v-for="(stat, sIdx) in group" :key="'set-' + gIdx + '-' + sIdx" v-html="statDescription(stat)" />
+        </template>
+      </div>
     </div>
   </div>
 </template>
