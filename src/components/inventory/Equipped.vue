@@ -327,6 +327,7 @@ export default {
     },
     setAltDisplayed(value) {
       this.alt_displayed = value;
+      this.$emit('weapon-swap-changed', value);
     },
     onSelect(item) {
       //console.log(item);

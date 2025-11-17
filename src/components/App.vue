@@ -183,7 +183,7 @@
                         <div class="row mt-3">
                           <div class="col-auto equipment-inventory-col">
                             <div class="mb-3">
-                              <Equipped v-if="saveViewMod !== 'stash'" :items.sync="equipped" @item-selected="onSelect" @item-event="onEvent"
+                              <Equipped v-if="saveViewMod !== 'stash'" :items.sync="equipped" @item-selected="onSelect" @item-event="onEvent" @weapon-swap-changed="onWeaponSwapChanged"
                                 :id="'Equipped'" :contextMenu="$refs.contextMenu" :gold="save?.attributes?.gold">
                               </Equipped>
                             </div>
@@ -219,7 +219,7 @@
                         </div>
                       </div>
                       <div class="tab-pane" id="stats-content" role="tabpanel" v-if="saveViewMod !== 'stash'">
-                        <Stats v-if="save && save.header && save.attributes" v-bind:save.sync="save" />
+                        <Stats v-if="save && save.header && save.attributes" v-bind:save.sync="save" :altDisplayed="equippedAltDisplayed" />
                       </div>
                       <div class="tab-pane" id="waypoints-content" role="tabpanel" v-if="saveViewMod !== 'stash'">
                         <Waypoints v-if="save && save.header && save.header.waypoints" v-bind:save.sync="save" />
@@ -300,6 +300,7 @@
         grid: { inv: { w: 10, h: 4 }, cube: { w: 3, h: 4 } },
         location: {},
         theme: localStorage.getItem('theme'),
+        equippedAltDisplayed: false,
         createNewMenu: [
           {
             key: 'amazon',
@@ -1322,5 +1323,49 @@
         return bases;
       },
     },
+    onWeaponSwapChanged(isAlt) {
+      try {
+        if (!this.save || !Array.isArray(this.save.items)) return;
+        for (const item of this.save.items) {
+          if (item && item.location_id === 1 && (item.equipped_id === 4 || item.equipped_id === 5 || item.equipped_id === 11 || item.equipped_id === 12)) {
+            // nothing to change on item; Stats.vue will read active swap flag from localStorage
+          }
+        }
+        this.equippedAltDisplayed = !!isAlt;
+        localStorage.setItem('equippedAltDisplayed', isAlt ? '1' : '0');
+      } catch (_) {}
+    },
   };
 </script>
+
+<style>
+.dark-theme {
+  background-color: #141414;
+  color: #e8e8e8;
+}
+.dark-theme .card.bg-light {
+  background-color: #1f1f1f;
+}
+.dark-theme .alert.alert-primary {
+  background-color: #2a2a2a;
+  border-color: #3a3a3a;
+  color: #e6f7ff;
+}
+.dark-theme .modal-content {
+  background-color: #1f1f1f;
+  color: #e8e8e8;
+}
+.dark-theme .nav-tabs .nav-link {
+  color: #bfbfbf;
+}
+.dark-theme .nav-tabs .nav-link.active {
+  color: #fff;
+  background-color: #262626;
+  border-color: #434343 #434343 #262626;
+}
+/* Force left alignment for all inputs */
+.ant-input,
+.ant-input-number-input {
+  text-align: left;
+}
+</style>
