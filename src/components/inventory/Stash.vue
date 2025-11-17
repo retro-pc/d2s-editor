@@ -22,13 +22,14 @@
         v-if="currentPageIndex !== null"
         :width="stashGrid.w"
         :height="stashGrid.h"
-        :page="gridPageNumber"
+        :page="activeTab+4"
         :items.sync="stash(currentPageIndex)"
         @item-selected="onSelect"
         @item-event="onEvent"
-        :id="'Grid'"
+        :id="'StashGrid'"
         :contextMenu="contextMenu"
-        class="y-0"></Grid>
+        class="y-0">
+      </Grid>
     </div>
   </div>
 </template>
@@ -132,7 +133,64 @@ export default {
       if (this.activeTab < 1 || this.activeTab > this.displayedPages.length) {
         this.activeTab = 1;
       }
-    }
+    },
+    itemRC($evt, item) {
+      if (item != null) {
+        this.contextMenu.showContextMenu($evt, item, [
+          {text: "Select"},
+          {text: "Copy"},
+          {text: "Share"},
+          {text: "Delete"}
+        ]);
+      }
+    },
+    dragover(event) {
+      event.preventDefault();
+      event.dataTransfer.dropEffect = 'move';
+      return false;
+    },
+    dragenter(event, equipped_location) {
+      event.preventDefault();
+      let data = JSON.parse(localStorage.getItem('dragElement'));
+      this.$emit('item-event', {
+        uuid: data.uuid,
+        item: data.item,
+        id: `${this.id}-${equipped_location}`,
+        location: {
+          location: 5,
+          equipped_location: equipped_location,
+        },
+        type: 'dragenter'
+      });
+    },
+    dragleave(event, equipped_location) {
+      event.preventDefault();
+      let data = JSON.parse(localStorage.getItem('dragElement'));
+      this.$emit('item-event', {
+        uuid: data.uuid,
+        item: data.item,
+        id: `${this.id}-${equipped_location}`,
+        location: {
+          location: 5,
+          equipped_location: equipped_location,
+        },
+        type: 'dragleave'
+      });
+    },
+    drop(event, equipped_location) {
+      event.preventDefault();
+      let data = JSON.parse(localStorage.getItem('dragElement'));
+      this.$emit('item-event', {
+        uuid: data.uuid,
+        item: data.item,
+        id: `${this.id}-${equipped_location}`,
+        location: {
+          location: 5,
+          equipped_location: equipped_location,
+        },
+        type: 'move'
+      });
+    },    
   }
 }
 </script>
