@@ -183,7 +183,7 @@
                         <div class="row mt-3">
                           <div class="col-auto equipment-inventory-col">
                             <div class="mb-3">
-                              <Equipped v-if="saveViewMod !== 'stash'" :items.sync="equipped" @item-selected="onSelect" @item-event="onEvent"
+                              <Equipped v-if="saveViewMod !== 'stash'" :items.sync="equipped" @item-selected="onSelect" @item-event="onEvent" @weapon-swap-changed="onWeaponSwapChanged"
                                 :id="'Equipped'" :contextMenu="$refs.contextMenu" :gold="save?.attributes?.gold">
                               </Equipped>
                             </div>
@@ -193,7 +193,7 @@
                             <Stash :items.sync="stashWithMeta" :mode="saveViewMod" @item-selected="onSelect" @item-event="onEvent" :id="'Stash'"
                               :contextMenu="$refs.contextMenu">
                             </Stash>
-                            <Mercenary v-if="saveViewMod !== 'stash'" :items.sync="mercenary" @item-selected="onSelect"
+                            <Mercenary v-if="saveViewMod !== 'stash'" :items.sync="mercenary" @item-selected="onSelect" @item-event="onEvent" :id="'Mercenary'"
                               :contextMenu="$refs.contextMenu">
                             </Mercenary>
                             <div class="cube" v-if="saveViewMod !== 'stash'">
@@ -219,7 +219,7 @@
                         </div>
                       </div>
                       <div class="tab-pane" id="stats-content" role="tabpanel" v-if="saveViewMod !== 'stash'">
-                        <Stats v-if="save && save.header && save.attributes" v-bind:save.sync="save" />
+                        <Stats v-if="save && save.header && save.attributes" v-bind:save.sync="save" :altDisplayed="equippedAltDisplayed" />
                       </div>
                       <div class="tab-pane" id="waypoints-content" role="tabpanel" v-if="saveViewMod !== 'stash'">
                         <Waypoints v-if="save && save.header && save.header.waypoints" v-bind:save.sync="save" />
@@ -300,6 +300,7 @@
         grid: { inv: { w: 10, h: 4 }, cube: { w: 3, h: 4 } },
         location: {},
         theme: localStorage.getItem('theme'),
+        equippedAltDisplayed: false,
         createNewMenu: [
           {
             key: 'amazon',
@@ -634,7 +635,8 @@
       },
       findIndex(list, i) {
         return list.findIndex(item =>
-          item.location_id == i.location_id
+          item.type == i.type
+          && item.location_id == i.location_id
           && item.equipped_id == i.equipped_id
           && item.position_x == i.position_x
           && item.position_y == i.position_y
@@ -673,36 +675,37 @@
             this.deleteItem(this.save.merc_items, idx);
             return;
           }
-        } else if(e.type == 'move') {
+        } else if (e.type == 'move') {
           let element = document.getElementById(e.id);
           element.style.backgroundColor = ""; element.style.width = ""; element.style.height = "";
-          if (this.$uuid == e.uuid) {
+          //if (this.$uuid == e.uuid) 
+          {
             let idx = this.findIndex(this.save.items, e.item);
             this.onMove(this.save.items[idx], e);
-          } else {
-            //copy to another tab
-            if(this.onMove(e.item, e)) {
-              this.save.items.push(e.item);
-            }
+          // } else {
+          //   //copy to another tab
+          //   if (this.onMove(e.item, e)) {
+          //     this.save.items.push(e.item);
+          //   }
           }
-        } else if(e.type == 'dragenter') {
+        } else if (e.type == 'dragenter') {
+          //console.log(e);
           let item = e.item;
-          if(this.canPlaceItem(item, e.location.storage_page, e.location.x, e.location.y)) {
+          if (this.canPlaceItem(item, e.location.storage_page, e.location.x, e.location.y)) {
             let element = document.getElementById(e.id);
             element.style.backgroundColor = "green"; element.style.width = `calc(var(--grid-size) * ${item.inv_width})`; element.style.height = `calc(var(--grid-size) * ${item.inv_height})`;
           }
-        } else if(e.type == 'dragleave') {
+        } else if (e.type == 'dragleave') {
           let element = document.getElementById(e.id);
           element.style.backgroundColor = ""; element.style.width = ""; element.style.height = "";
-        }  else if(e.type === "pasteAt") {
+        } else if (e.type === "pasteAt") {
           const location_id = this.activeTab === 1 ? 1 : 0; // Equipped
           const storage_page = this.activeTab === 1 ? 1 :  // Equipped
               this.activeTab === 3 ? 5 : // Stash
               this.activeTab === 8 ? 8 : // Cube
                   1; // Inventory
-          if(this.canPlaceItem(e.item, storage_page, e.grid[0], e.grid[1])) {
+          if (this.canPlaceItem(e.item, storage_page, e.grid[0], e.grid[1])) {
             this.paste(e.item, [location_id, this.location?.equipped_location, e.grid[0], e.grid[1], storage_page]);
-
           } else {
             this.paste(e.item);
           }
@@ -729,6 +732,13 @@
           item.equipped_id = 0;
           item.position_x = 4; //why?
           item.position_y = 0;
+          item.alt_position_id = 0;
+        }
+        else if (e.location.location == 5) {
+          item.location_id = e.location.location;
+          item.equipped_id = e.location.equipped_location;
+          item.position_x =  e.location.x;
+          item.position_y = e.location.y;
           item.alt_position_id = 0;
         }
         return true;
@@ -1220,8 +1230,7 @@
               set_name: item.n,
               ethereal: 0,
               identified: 1,
-              //TODO
-              //set_attributes: 
+              set_attributes: this.$d2s.generateFixedMods(item.ms, this.$getWorkConstantData()).map((value) => [value]),
               magic_attributes: this.$d2s.generateFixedMods(item.m, this.$getWorkConstantData())
             });
           }
@@ -1314,5 +1323,49 @@
         return bases;
       },
     },
+    onWeaponSwapChanged(isAlt) {
+      try {
+        if (!this.save || !Array.isArray(this.save.items)) return;
+        for (const item of this.save.items) {
+          if (item && item.location_id === 1 && (item.equipped_id === 4 || item.equipped_id === 5 || item.equipped_id === 11 || item.equipped_id === 12)) {
+            // nothing to change on item; Stats.vue will read active swap flag from localStorage
+          }
+        }
+        this.equippedAltDisplayed = !!isAlt;
+        localStorage.setItem('equippedAltDisplayed', isAlt ? '1' : '0');
+      } catch (_) {}
+    },
   };
 </script>
+
+<style>
+.dark-theme {
+  background-color: #141414;
+  color: #e8e8e8;
+}
+.dark-theme .card.bg-light {
+  background-color: #1f1f1f;
+}
+.dark-theme .alert.alert-primary {
+  background-color: #2a2a2a;
+  border-color: #3a3a3a;
+  color: #e6f7ff;
+}
+.dark-theme .modal-content {
+  background-color: #1f1f1f;
+  color: #e8e8e8;
+}
+.dark-theme .nav-tabs .nav-link {
+  color: #bfbfbf;
+}
+.dark-theme .nav-tabs .nav-link.active {
+  color: #fff;
+  background-color: #262626;
+  border-color: #434343 #434343 #262626;
+}
+/* Force left alignment for all inputs */
+.ant-input,
+.ant-input-number-input {
+  text-align: left;
+}
+</style>

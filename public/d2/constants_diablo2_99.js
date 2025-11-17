@@ -19383,6 +19383,18 @@ export let constants_diablo2_99 = {
                     "min": 15,
                     "max": 15
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "mana",
+                    "min": 21,
+                    "max": 22
+                },
+                {
+                    "prop": "res-pois",
+                    "min": 25,
+                    "max": 26
+                }
             ]
         },
         {
@@ -19401,6 +19413,18 @@ export let constants_diablo2_99 = {
                     "prop": "regen",
                     "min": 4,
                     "max": 4
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "res-cold",
+                    "min": 25,
+                    "max": 25
+                },
+                {
+                    "prop": "ac",
+                    "min": 25,
+                    "max": 25
                 }
             ]
         },
@@ -19421,6 +19445,12 @@ export let constants_diablo2_99 = {
                     "min": 17,
                     "max": 23
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "dmg/lvl",
+                    "p": 8
+                }
             ]
         },
         {
@@ -19439,6 +19469,12 @@ export let constants_diablo2_99 = {
                     "prop": "move2",
                     "min": 20,
                     "max": 20
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "att/lvl",
+                    "p": 20
                 }
             ]
         },
@@ -19459,6 +19495,12 @@ export let constants_diablo2_99 = {
                     "min": 10,
                     "max": 10
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "ac/lvl",
+                    "p": 20
+                }
             ]
         },
         {
@@ -19477,6 +19519,12 @@ export let constants_diablo2_99 = {
                     "prop": "hp",
                     "min": 20,
                     "max": 20
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "ac/lvl",
+                    "p": 20
                 }
             ]
         },
@@ -19497,6 +19545,12 @@ export let constants_diablo2_99 = {
                     "min": 50,
                     "max": 50
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "dmg/lvl",
+                    "p": 10
+                }
             ]
         },
         {
@@ -19515,6 +19569,13 @@ export let constants_diablo2_99 = {
                     "prop": "res-pois-len",
                     "min": 75,
                     "max": 75
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "res-all",
+                    "min": 15,
+                    "max": 15
                 }
             ]
         },
@@ -19535,6 +19596,12 @@ export let constants_diablo2_99 = {
                     "min": 25,
                     "max": 25
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "att/lvl",
+                    "p": 20
+                }
             ]
         },
         {
@@ -19553,6 +19620,13 @@ export let constants_diablo2_99 = {
                     "prop": "res-pois-len",
                     "min": 75,
                     "max": 75
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "res-all",
+                    "min": 15,
+                    "max": 15
                 }
             ]
         },
@@ -19573,6 +19647,13 @@ export let constants_diablo2_99 = {
                     "min": 1,
                     "max": 1
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "swing2",
+                    "min": 20,
+                    "max": 20
+                }
             ]
         },
         {
@@ -19591,6 +19672,12 @@ export let constants_diablo2_99 = {
                     "prop": "res-ltng",
                     "min": 30,
                     "max": 30
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "ac/lvl",
+                    "p": 16
                 }
             ]
         },
@@ -19611,6 +19698,13 @@ export let constants_diablo2_99 = {
                     "min": 5,
                     "max": 5
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "dex",
+                    "min": 10,
+                    "max": 10
+                }
             ]
         },
         {
@@ -19629,6 +19723,12 @@ export let constants_diablo2_99 = {
                     "prop": "swing2",
                     "min": 20,
                     "max": 20
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "att/lvl",
+                    "p": 10
                 }
             ]
         },
@@ -19649,6 +19749,13 @@ export let constants_diablo2_99 = {
                     "min": 4,
                     "max": 4
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "res-all",
+                    "min": 8,
+                    "max": 8
+                }
             ]
         },
         {
@@ -19667,6 +19774,12 @@ export let constants_diablo2_99 = {
                     "prop": "red-mag",
                     "min": 2,
                     "max": 2
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "ac/lvl",
+                    "p": 16
                 }
             ]
         },
@@ -19687,6 +19800,13 @@ export let constants_diablo2_99 = {
                     "min": 2,
                     "max": 2
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "res-all",
+                    "min": 8,
+                    "max": 8
+                }
             ]
         },
         {
@@ -19705,6 +19825,12 @@ export let constants_diablo2_99 = {
                     "prop": "ltng-max",
                     "min": 20,
                     "max": 20
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "att/lvl",
+                    "p": 16
                 }
             ]
         },
@@ -19725,6 +19851,13 @@ export let constants_diablo2_99 = {
                     "min": 30,
                     "max": 30
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "res-all",
+                    "min": 8,
+                    "max": 8
+                }
             ]
         },
         {
@@ -19743,6 +19876,17 @@ export let constants_diablo2_99 = {
                     "prop": "dex",
                     "min": 11,
                     "max": 11
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "res-fire",
+                    "min": 24,
+                    "max": 24
+                },
+                {
+                    "prop": "ac/lvl",
+                    "p": 20
                 }
             ]
         },
@@ -19763,6 +19907,13 @@ export let constants_diablo2_99 = {
                     "min": 20,
                     "max": 20
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "mag%",
+                    "min": 50,
+                    "max": 50
+                }
             ]
         },
         {
@@ -19781,6 +19932,18 @@ export let constants_diablo2_99 = {
                     "prop": "ac",
                     "min": 25,
                     "max": 25
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "hp",
+                    "min": 50,
+                    "max": 50
+                },
+                {
+                    "prop": "ac%",
+                    "min": 50,
+                    "max": 50
                 }
             ]
         },
@@ -19806,7 +19969,8 @@ export let constants_diablo2_99 = {
                     "min": 2,
                     "max": 2
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 23,
@@ -19824,6 +19988,13 @@ export let constants_diablo2_99 = {
                     "prop": "mana",
                     "min": 15,
                     "max": 15
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "res-cold",
+                    "min": 40,
+                    "max": 40
                 }
             ]
         },
@@ -19844,6 +20015,13 @@ export let constants_diablo2_99 = {
                     "min": 2,
                     "max": 2
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "ac%",
+                    "min": 100,
+                    "max": 100
+                }
             ]
         },
         {
@@ -19860,6 +20038,18 @@ export let constants_diablo2_99 = {
                 },
                 {
                     "prop": "fire-max",
+                    "min": 10,
+                    "max": 10
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "mana",
+                    "min": 50,
+                    "max": 50
+                },
+                {
+                    "prop": "res-all",
                     "min": 10,
                     "max": 10
                 }
@@ -19882,6 +20072,18 @@ export let constants_diablo2_99 = {
                     "min": -50,
                     "max": -50
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "thorns",
+                    "min": 5,
+                    "max": 5
+                },
+                {
+                    "prop": "res-fire",
+                    "min": 30,
+                    "max": 30
+                }
             ]
         },
         {
@@ -19900,6 +20102,12 @@ export let constants_diablo2_99 = {
                     "prop": "res-cold",
                     "min": 25,
                     "max": 25
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "ac/lvl",
+                    "p": 16
                 }
             ]
         },
@@ -19920,6 +20128,18 @@ export let constants_diablo2_99 = {
                     "min": 5,
                     "max": 5
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "att",
+                    "min": 50,
+                    "max": 50
+                },
+                {
+                    "prop": "mag%",
+                    "min": 25,
+                    "max": 25
+                }
             ]
         },
         {
@@ -19938,6 +20158,13 @@ export let constants_diablo2_99 = {
                     "prop": "red-dmg",
                     "min": 2,
                     "max": 2
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "str",
+                    "min": 10,
+                    "max": 10
                 }
             ]
         },
@@ -19958,6 +20185,18 @@ export let constants_diablo2_99 = {
                     "min": 80,
                     "max": 80
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "mana",
+                    "min": 20,
+                    "max": 20
+                },
+                {
+                    "prop": "swing2",
+                    "min": 20,
+                    "max": 20
+                }
             ]
         },
         {
@@ -19977,6 +20216,12 @@ export let constants_diablo2_99 = {
                     "min": 15,
                     "max": 15
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "ac/lvl",
+                    "p": 16
+                }
             ]
         },
         {
@@ -19993,6 +20238,18 @@ export let constants_diablo2_99 = {
                 },
                 {
                     "prop": "dex",
+                    "min": 10,
+                    "max": 10
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "move3",
+                    "min": 30,
+                    "max": 30
+                },
+                {
+                    "prop": "str",
                     "min": 10,
                     "max": 10
                 }
@@ -20015,6 +20272,18 @@ export let constants_diablo2_99 = {
                     "min": 1,
                     "max": 1
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "mag%",
+                    "min": 78,
+                    "max": 78
+                },
+                {
+                    "prop": "att",
+                    "min": 60,
+                    "max": 60
+                }
             ]
         },
         {
@@ -20033,6 +20302,13 @@ export let constants_diablo2_99 = {
                     "prop": "att",
                     "min": 40,
                     "max": 40
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "res-all",
+                    "min": 10,
+                    "max": 10
                 }
             ]
         },
@@ -20053,6 +20329,13 @@ export let constants_diablo2_99 = {
                     "min": 20,
                     "max": 20
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "swing3",
+                    "min": 30,
+                    "max": 30
+                }
             ]
         },
         {
@@ -20071,6 +20354,12 @@ export let constants_diablo2_99 = {
                     "prop": "ac",
                     "min": 25,
                     "max": 25
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "att/lvl",
+                    "p": 16
                 }
             ]
         },
@@ -20091,6 +20380,13 @@ export let constants_diablo2_99 = {
                     "min": 30,
                     "max": 30
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "thorns",
+                    "min": 20,
+                    "max": 20
+                }
             ]
         },
         {
@@ -20109,6 +20405,18 @@ export let constants_diablo2_99 = {
                     "prop": "res-cold",
                     "min": 40,
                     "max": 40
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "att",
+                    "min": 50,
+                    "max": 50
+                },
+                {
+                    "prop": "mag%",
+                    "min": 50,
+                    "max": 50
                 }
             ]
         },
@@ -20129,6 +20437,12 @@ export let constants_diablo2_99 = {
                     "min": 20,
                     "max": 20
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "ac/lvl",
+                    "p": 16
+                }
             ]
         },
         {
@@ -20148,7 +20462,8 @@ export let constants_diablo2_99 = {
                     "min": 20,
                     "max": 20
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 41,
@@ -20166,6 +20481,12 @@ export let constants_diablo2_99 = {
                     "prop": "dmg-to-mana",
                     "min": 20,
                     "max": 20
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "ac/lvl",
+                    "p": 16
                 }
             ]
         },
@@ -20186,6 +20507,12 @@ export let constants_diablo2_99 = {
                     "min": 1,
                     "max": 1
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "att/lvl",
+                    "p": 20
+                }
             ]
         },
         {
@@ -20204,6 +20531,18 @@ export let constants_diablo2_99 = {
                     "prop": "hp",
                     "min": 20,
                     "max": 20
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "res-pois",
+                    "min": 25,
+                    "max": 25
+                },
+                {
+                    "prop": "half-freeze",
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
@@ -20224,6 +20563,12 @@ export let constants_diablo2_99 = {
                     "min": 25,
                     "max": 25
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "att/lvl",
+                    "p": 16
+                }
             ]
         },
         {
@@ -20242,6 +20587,12 @@ export let constants_diablo2_99 = {
                     "prop": "bar",
                     "min": 1,
                     "max": 1
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "ac/lvl",
+                    "p": 24
                 }
             ]
         },
@@ -20262,6 +20613,13 @@ export let constants_diablo2_99 = {
                     "min": 5,
                     "max": 5
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "dmg%",
+                    "min": 50,
+                    "max": 50
+                }
             ]
         },
         {
@@ -20280,6 +20638,13 @@ export let constants_diablo2_99 = {
                     "prop": "res-pois-len",
                     "min": 75,
                     "max": 75
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "swing3",
+                    "min": 30,
+                    "max": 30
                 }
             ]
         },
@@ -20300,6 +20665,13 @@ export let constants_diablo2_99 = {
                     "min": 1,
                     "max": 1
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "res-all",
+                    "min": 15,
+                    "max": 15
+                }
             ]
         },
         {
@@ -20318,6 +20690,14 @@ export let constants_diablo2_99 = {
                     "prop": "lifesteal",
                     "min": 4,
                     "max": 4
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "dmg-cold",
+                    "p": 75,
+                    "min": 25,
+                    "max": 75
                 }
             ]
         },
@@ -20338,6 +20718,18 @@ export let constants_diablo2_99 = {
                     "min": 250,
                     "max": 250
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "dmg%",
+                    "min": 75,
+                    "max": 75
+                },
+                {
+                    "prop": "swing3",
+                    "min": 30,
+                    "max": 30
+                }
             ]
         },
         {
@@ -20356,6 +20748,18 @@ export let constants_diablo2_99 = {
                     "prop": "ac%",
                     "min": 40,
                     "max": 40
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "ac",
+                    "min": 150,
+                    "max": 150
+                },
+                {
+                    "prop": "res-fire",
+                    "min": 50,
+                    "max": 50
                 }
             ]
         },
@@ -20376,6 +20780,17 @@ export let constants_diablo2_99 = {
                     "min": 20,
                     "max": 20
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "att/lvl",
+                    "p": 24
+                },
+                {
+                    "prop": "mag%",
+                    "min": 50,
+                    "max": 50
+                }
             ]
         },
         {
@@ -20394,6 +20809,18 @@ export let constants_diablo2_99 = {
                     "prop": "dmg-to-mana",
                     "min": 20,
                     "max": 20
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "hp",
+                    "min": 75,
+                    "max": 75
+                },
+                {
+                    "prop": "allskills",
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
@@ -20414,6 +20841,18 @@ export let constants_diablo2_99 = {
                     "min": 50,
                     "max": 50
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "att/lvl",
+                    "p": 16
+                },
+                {
+                    "prop": "dmg-cold",
+                    "p": 75,
+                    "min": 20,
+                    "max": 30
+                }
             ]
         },
         {
@@ -20432,6 +20871,17 @@ export let constants_diablo2_99 = {
                     "prop": "res-all",
                     "min": 10,
                     "max": 10
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "ac/lvl",
+                    "p": 24
+                },
+                {
+                    "prop": "res-cold",
+                    "min": 15,
+                    "max": 15
                 }
             ]
         },
@@ -20452,6 +20902,18 @@ export let constants_diablo2_99 = {
                     "min": 30,
                     "max": 30
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "mag%",
+                    "min": 40,
+                    "max": 40
+                },
+                {
+                    "prop": "res-cold",
+                    "min": 10,
+                    "max": 10
+                }
             ]
         },
         {
@@ -20468,6 +20930,18 @@ export let constants_diablo2_99 = {
                 },
                 {
                     "prop": "swing1",
+                    "min": 10,
+                    "max": 10
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "att",
+                    "min": 50,
+                    "max": 50
+                },
+                {
+                    "prop": "dex",
                     "min": 10,
                     "max": 10
                 }
@@ -20490,6 +20964,18 @@ export let constants_diablo2_99 = {
                     "min": 20,
                     "max": 20
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "mag%",
+                    "min": 50,
+                    "max": 50
+                },
+                {
+                    "prop": "res-fire",
+                    "min": 20,
+                    "max": 20
+                }
             ]
         },
         {
@@ -20508,6 +20994,18 @@ export let constants_diablo2_99 = {
                     "prop": "deadly",
                     "min": 25,
                     "max": 25
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "mana",
+                    "min": 50,
+                    "max": 50
+                },
+                {
+                    "prop": "regen-mana",
+                    "min": 5,
+                    "max": 5
                 }
             ]
         },
@@ -20528,6 +21026,17 @@ export let constants_diablo2_99 = {
                     "min": 2,
                     "max": 2
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "ac/lvl",
+                    "p": 24
+                },
+                {
+                    "prop": "res-ltng",
+                    "min": 15,
+                    "max": 15
+                }
             ]
         },
         {
@@ -20546,6 +21055,18 @@ export let constants_diablo2_99 = {
                     "prop": "red-dmg",
                     "min": 3,
                     "max": 3
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "ac",
+                    "min": 100,
+                    "max": 100
+                },
+                {
+                    "prop": "enr",
+                    "min": 10,
+                    "max": 10
                 }
             ]
         },
@@ -20581,7 +21102,8 @@ export let constants_diablo2_99 = {
                     "min": 3,
                     "max": 3
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 63,
@@ -20626,7 +21148,8 @@ export let constants_diablo2_99 = {
                     "min": 200,
                     "max": 200
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 64,
@@ -20665,7 +21188,8 @@ export let constants_diablo2_99 = {
                     "min": 1,
                     "max": 3
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 65,
@@ -20703,7 +21227,8 @@ export let constants_diablo2_99 = {
                     "min": 15,
                     "max": 25
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 66,
@@ -20741,6 +21266,23 @@ export let constants_diablo2_99 = {
                     "prop": "sock",
                     "min": 2,
                     "max": 2
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "enr",
+                    "min": 15,
+                    "max": 15
+                },
+                {
+                    "prop": "enr",
+                    "min": 15,
+                    "max": 15
+                },
+                {
+                    "prop": "enr",
+                    "min": 15,
+                    "max": 15
                 }
             ]
         },
@@ -20788,6 +21330,23 @@ export let constants_diablo2_99 = {
                     "min": 1,
                     "max": 1
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "vit",
+                    "min": 15,
+                    "max": 15
+                },
+                {
+                    "prop": "vit",
+                    "min": 15,
+                    "max": 15
+                },
+                {
+                    "prop": "vit",
+                    "min": 15,
+                    "max": 15
+                }
             ]
         },
         {
@@ -20831,6 +21390,23 @@ export let constants_diablo2_99 = {
                     "prop": "sock",
                     "min": 2,
                     "max": 5
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "str",
+                    "min": 15,
+                    "max": 15
+                },
+                {
+                    "prop": "str",
+                    "min": 15,
+                    "max": 15
+                },
+                {
+                    "prop": "str",
+                    "min": 15,
+                    "max": 15
                 }
             ]
         },
@@ -20876,6 +21452,23 @@ export let constants_diablo2_99 = {
                     "min": 40,
                     "max": 50
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "dex",
+                    "min": 15,
+                    "max": 15
+                },
+                {
+                    "prop": "dex",
+                    "min": 15,
+                    "max": 15
+                },
+                {
+                    "prop": "dex",
+                    "min": 15,
+                    "max": 15
+                }
             ]
         },
         {
@@ -20916,7 +21509,8 @@ export let constants_diablo2_99 = {
                     "min": 2,
                     "max": 2
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 71,
@@ -20944,6 +21538,33 @@ export let constants_diablo2_99 = {
                 },
                 {
                     "prop": "res-pois",
+                    "min": 50,
+                    "max": 50
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "balance2",
+                    "min": 25,
+                    "max": 25
+                },
+                {
+                    "prop": "res-cold",
+                    "min": 40,
+                    "max": 40
+                },
+                {
+                    "prop": "res-fire",
+                    "min": 40,
+                    "max": 40
+                },
+                {
+                    "prop": "res-ltng",
+                    "min": 40,
+                    "max": 40
+                },
+                {
+                    "prop": "ac%",
                     "min": 50,
                     "max": 50
                 }
@@ -20976,6 +21597,34 @@ export let constants_diablo2_99 = {
                     "min": 25,
                     "max": 25
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "ac",
+                    "min": 105,
+                    "max": 105
+                },
+                {
+                    "prop": "balance2",
+                    "min": 25,
+                    "max": 25
+                },
+                {
+                    "prop": "ac%",
+                    "min": 100,
+                    "max": 100
+                },
+                {
+                    "prop": "red-dmg%",
+                    "min": 20,
+                    "max": 20
+                },
+                {
+                    "prop": "skilltab",
+                    "p": 13,
+                    "min": 2,
+                    "max": 2
+                }
             ]
         },
         {
@@ -21006,6 +21655,33 @@ export let constants_diablo2_99 = {
                     "min": 12,
                     "max": 4
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "swing2",
+                    "min": 25,
+                    "max": 25
+                },
+                {
+                    "prop": "ac",
+                    "min": 120,
+                    "max": 120
+                },
+                {
+                    "prop": "lifesteal",
+                    "min": 10,
+                    "max": 10
+                },
+                {
+                    "prop": "manasteal",
+                    "min": 10,
+                    "max": 10
+                },
+                {
+                    "prop": "freeze",
+                    "min": 2,
+                    "max": 2
+                }
             ]
         },
         {
@@ -21034,6 +21710,29 @@ export let constants_diablo2_99 = {
                     "prop": "hp",
                     "min": 44,
                     "max": 44
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "mag%",
+                    "min": 25,
+                    "max": 25
+                },
+                {
+                    "prop": "skilltab",
+                    "p": 12,
+                    "min": 2,
+                    "max": 2
+                },
+                {
+                    "prop": "ac",
+                    "min": 160,
+                    "max": 160
+                },
+                {
+                    "prop": "half-freeze",
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
@@ -21079,6 +21778,35 @@ export let constants_diablo2_99 = {
                     "min": 2,
                     "max": 2
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "dmg-fire",
+                    "min": 211,
+                    "max": 397
+                },
+                {
+                    "prop": "dmg-ltng",
+                    "min": 7,
+                    "max": 477
+                },
+                {
+                    "prop": "dmg-cold",
+                    "p": 150,
+                    "min": 127,
+                    "max": 364
+                },
+                {
+                    "prop": "dmg-pois",
+                    "p": 150,
+                    "min": 349,
+                    "max": 349
+                },
+                {
+                    "prop": "dmg-mag",
+                    "min": 250,
+                    "max": 361
+                }
             ]
         },
         {
@@ -21112,6 +21840,18 @@ export let constants_diablo2_99 = {
                     "prop": "mag%",
                     "min": 10,
                     "max": 15
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "ac",
+                    "min": 60,
+                    "max": 60
+                },
+                {
+                    "prop": "cast2",
+                    "min": 10,
+                    "max": 10
                 }
             ]
         },
@@ -21147,7 +21887,8 @@ export let constants_diablo2_99 = {
                     "min": 42,
                     "max": 42
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 78,
@@ -21194,6 +21935,28 @@ export let constants_diablo2_99 = {
                     "min": 1,
                     "max": 2
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "sor",
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "prop": "pierce-fire",
+                    "min": 15,
+                    "max": 15
+                },
+                {
+                    "prop": "pierce-ltng",
+                    "min": 15,
+                    "max": 15
+                },
+                {
+                    "prop": "extra-cold",
+                    "min": 15,
+                    "max": 15
+                }
             ]
         },
         {
@@ -21238,6 +22001,13 @@ export let constants_diablo2_99 = {
                     "min": 400,
                     "max": 400
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "cast2",
+                    "min": 10,
+                    "max": 10
+                }
             ]
         },
         {
@@ -21277,7 +22047,8 @@ export let constants_diablo2_99 = {
                     "min": 10,
                     "max": 10
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 81,
@@ -21316,6 +22087,14 @@ export let constants_diablo2_99 = {
                     "min": 5,
                     "max": 5
                 }
+            ],
+            "ms": [
+                {
+                    "prop": "skilltab",
+                    "p": 10,
+                    "min": 2,
+                    "max": 2
+                }
             ]
         },
         {
@@ -21351,7 +22130,8 @@ export let constants_diablo2_99 = {
                     "min": -40,
                     "max": -40
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 83,
@@ -21384,6 +22164,24 @@ export let constants_diablo2_99 = {
                     "prop": "sock",
                     "min": 3,
                     "max": 4
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "skilltab",
+                    "p": 9,
+                    "min": 2,
+                    "max": 2
+                },
+                {
+                    "prop": "dmg-norm",
+                    "min": 10,
+                    "max": 20
+                },
+                {
+                    "prop": "dmg-norm",
+                    "min": 10,
+                    "max": 20
                 }
             ]
         },
@@ -21418,7 +22216,8 @@ export let constants_diablo2_99 = {
                     "min": 45,
                     "max": 45
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 85,
@@ -21452,7 +22251,8 @@ export let constants_diablo2_99 = {
                     "min": 5,
                     "max": 5
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 86,
@@ -21492,7 +22292,8 @@ export let constants_diablo2_99 = {
                     "min": 150,
                     "max": 150
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 87,
@@ -21537,7 +22338,8 @@ export let constants_diablo2_99 = {
                     "min": 2,
                     "max": 2
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 88,
@@ -21567,7 +22369,8 @@ export let constants_diablo2_99 = {
                     "min": 2,
                     "max": 2
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 89,
@@ -21611,7 +22414,8 @@ export let constants_diablo2_99 = {
                     "min": 25,
                     "max": 50
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 90,
@@ -21637,6 +22441,23 @@ export let constants_diablo2_99 = {
                 },
                 {
                     "prop": "mana",
+                    "min": 25,
+                    "max": 25
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "allskills",
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "prop": "att%",
+                    "min": 50,
+                    "max": 50
+                },
+                {
+                    "prop": "res-all",
                     "min": 25,
                     "max": 25
                 }
@@ -21680,7 +22501,8 @@ export let constants_diablo2_99 = {
                     "min": 350,
                     "max": 350
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 92,
@@ -21720,7 +22542,8 @@ export let constants_diablo2_99 = {
                     "min": 15,
                     "max": 15
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 93,
@@ -21749,7 +22572,8 @@ export let constants_diablo2_99 = {
                     "min": 5,
                     "max": 5
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 94,
@@ -21777,6 +22601,25 @@ export let constants_diablo2_99 = {
                     "prop": "att",
                     "min": 50,
                     "max": 50
+                }
+            ],
+            "ms": [
+                {
+                    "prop": "dmg-mag",
+                    "min": 114,
+                    "max": 377
+                },
+                {
+                    "prop": "hit-skill",
+                    "p": 48,
+                    "min": 10,
+                    "max": 15
+                },
+                {
+                    "prop": "skilltab",
+                    "p": 0,
+                    "min": 2,
+                    "max": 2
                 }
             ]
         },
@@ -21807,7 +22650,8 @@ export let constants_diablo2_99 = {
                     "min": 8,
                     "max": 10
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 96,
@@ -21842,7 +22686,8 @@ export let constants_diablo2_99 = {
                     "min": 10,
                     "max": 3
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 97,
@@ -21871,7 +22716,8 @@ export let constants_diablo2_99 = {
                     "min": 15,
                     "max": 25
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 98,
@@ -21902,7 +22748,8 @@ export let constants_diablo2_99 = {
                     "min": 125,
                     "max": 175
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 99,
@@ -21931,7 +22778,8 @@ export let constants_diablo2_99 = {
                     "min": 15,
                     "max": 15
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 100,
@@ -21959,7 +22807,8 @@ export let constants_diablo2_99 = {
                     "min": 20,
                     "max": 30
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 101,
@@ -22002,7 +22851,8 @@ export let constants_diablo2_99 = {
                     "min": 30,
                     "max": 30
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 102,
@@ -22035,7 +22885,8 @@ export let constants_diablo2_99 = {
                     "min": -20,
                     "max": -20
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 103,
@@ -22074,7 +22925,8 @@ export let constants_diablo2_99 = {
                     "min": 24,
                     "max": 24
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 104,
@@ -22108,7 +22960,8 @@ export let constants_diablo2_99 = {
                     "min": 15,
                     "max": 15
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 105,
@@ -22137,7 +22990,8 @@ export let constants_diablo2_99 = {
                     "min": 5,
                     "max": 5
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 106,
@@ -22171,7 +23025,8 @@ export let constants_diablo2_99 = {
                     "min": 100,
                     "max": 100
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 107,
@@ -22205,7 +23060,8 @@ export let constants_diablo2_99 = {
                     "min": 5,
                     "max": 5
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 108,
@@ -22233,7 +23089,8 @@ export let constants_diablo2_99 = {
                     "min": 100,
                     "max": 100
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 109,
@@ -22262,7 +23119,8 @@ export let constants_diablo2_99 = {
                     "min": 10,
                     "max": 3
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 110,
@@ -22289,7 +23147,8 @@ export let constants_diablo2_99 = {
                     "min": 12,
                     "max": 12
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 111,
@@ -22328,7 +23187,8 @@ export let constants_diablo2_99 = {
                     "min": 5,
                     "max": 25
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 112,
@@ -22373,7 +23233,8 @@ export let constants_diablo2_99 = {
                     "min": 5,
                     "max": 5
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 113,
@@ -22407,7 +23268,8 @@ export let constants_diablo2_99 = {
                     "min": 50,
                     "max": 75
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 114,
@@ -22436,7 +23298,8 @@ export let constants_diablo2_99 = {
                     "min": 15,
                     "max": 20
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 115,
@@ -22465,7 +23328,8 @@ export let constants_diablo2_99 = {
                     "min": 200,
                     "max": 200
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 116,
@@ -22500,7 +23364,8 @@ export let constants_diablo2_99 = {
                     "min": 200,
                     "max": 200
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 117,
@@ -22528,7 +23393,8 @@ export let constants_diablo2_99 = {
                     "min": 10,
                     "max": 10
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 118,
@@ -22557,7 +23423,8 @@ export let constants_diablo2_99 = {
                     "min": 18,
                     "max": 5
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 119,
@@ -22590,7 +23457,8 @@ export let constants_diablo2_99 = {
                     "min": 25,
                     "max": 35
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 120,
@@ -22634,7 +23502,8 @@ export let constants_diablo2_99 = {
                     "min": 1,
                     "max": 1
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 121,
@@ -22672,7 +23541,8 @@ export let constants_diablo2_99 = {
                     "min": 300,
                     "max": 300
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 122,
@@ -22706,7 +23576,8 @@ export let constants_diablo2_99 = {
                     "min": 12,
                     "max": 5
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 123,
@@ -22729,7 +23600,8 @@ export let constants_diablo2_99 = {
                     "prop": "ac/lvl",
                     "p": 8
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 124,
@@ -22758,7 +23630,8 @@ export let constants_diablo2_99 = {
                     "min": 10,
                     "max": 10
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 125,
@@ -22788,7 +23661,8 @@ export let constants_diablo2_99 = {
                     "min": 30,
                     "max": 36
                 }
-            ]
+            ],
+            "ms": []
         },
         {
             "id": 126,
@@ -22824,7 +23698,8 @@ export let constants_diablo2_99 = {
                     "min": 25,
                     "max": 75
                 }
-            ]
+            ],
+            "ms": []
         }
     ],
     "unq_items": [
