@@ -264,11 +264,6 @@
   import {itemGroups as itemGroups} from '../items.js';
   import { message } from 'ant-design-vue';
 
-  // TODO https://github.com/dschu012/d2s/pull/77
-  // import * as d2s from '@dschu012/d2s';
-  // import { constants as constants96 } from '@dschu012/d2s/lib/data/versions/96_constant_data';
-  // import { constants as constants99 } from '@dschu012/d2s/lib/data/versions/99_constant_data';
-
   export default {
     components: {
       Item,
@@ -564,7 +559,6 @@
         this.getPaletteData();
         this.addItemsToItemPack();
         // console.log('Changing mod to ' + this.$work_mod.value + this.$work_version.value);
-        // console.log(this.$d2s.getConstantData(this.$work_mod.value, this.$work_version.value));
         return succeed;
       },
       stash(i) {
@@ -1220,6 +1214,15 @@
         let newItems = [];
         for (const item of constants) {
           if (item.c) {
+            let set_attributes = [];
+            for (let i = 0; i < item.ms?.length; i++) {
+              if (set_attributes) {
+                set_attributes.push(this.$d2s.generateFixedMods([item.ms[i]], this.$getWorkConstantData()));
+              }
+              else {
+                set_attributes = [this.$d2s.generateFixedMods([item.ms[i]], this.$getWorkConstantData())]
+              }
+            }
             newItems.push({
               //code
               type: item.c,
@@ -1230,7 +1233,7 @@
               set_name: item.n,
               ethereal: 0,
               identified: 1,
-              set_attributes: this.$d2s.generateFixedMods(item.ms, this.$getWorkConstantData()).map((value) => [value]),
+              set_attributes: set_attributes,
               magic_attributes: this.$d2s.generateFixedMods(item.m, this.$getWorkConstantData())
             });
           }
