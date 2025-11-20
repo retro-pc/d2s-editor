@@ -18,7 +18,7 @@
             </div>
             <label for="Item">Item</label>
             <multiselect v-model="previewModel" :options="itempack" label="key" valueProp="value" :searchable="true"
-              @update:model-value="setPreviewItem($work_mod.value, $work_version.value)" />
+              @update:model-value="setPreviewItem()" />
             <div v-if="baseOptions">
               <label>Base</label>
               <multiselect v-model="baseModel" :options="baseOptions" label="label" valueProp="value" :searchable="true"
@@ -744,13 +744,13 @@
           await this.resolveInventoryImage(this.preview);
         }
       },
-      async setPreviewItem(mod, version) {
+      async setPreviewItem() {
         this.baseOptions = null;
         this.baseModel = null;
         if (this.previewModel) {
           if (this.previewModel.base64) {
             let bytes = utils.b64ToArrayBuffer(this.previewModel.base64);
-            this.preview = await this.$d2s.readItem(bytes, mod, version);
+            this.preview = await this.$d2s.readItem(bytes, "diablo2", 0x63);
           } else if (this.previewModel.item) {
             this.preview = this.previewModel.item;
             if (this.preview?.given_runeword) {
@@ -767,7 +767,7 @@
           mod: "diablo2",
           version: 0x60,  //1.10-1.14d
         };
-        this.setPreviewItem(this.previewModel.mod, this.previewModel.version);
+        this.setPreviewItem();
       },
       onItemFileChange(event) {
         let reader = new FileReader();
@@ -781,10 +781,8 @@
           if (b64) {
             this.previewModel = {
               base64: b64,
-              mod: this.$work_mod.value,
-              version: this.$work_version.value,
             };
-            this.setPreviewItem(this.previewModel.mod, this.previewModel.version);
+            this.setPreviewItem();
           }
         } catch(e) {
           message.error("Failed to read item.");
