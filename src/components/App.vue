@@ -1275,7 +1275,7 @@
           let socketIndex = item.magic_attributes.findIndex(i => i.name == "item_numsockets");
           if (socketIndex > 0) {
             item.socketed =  true;
-            item.total_nr_of_sockets = item.magic_attributes[socketIndex].value;
+            item.total_nr_of_sockets = item.magic_attributes[socketIndex].param;
             item.magic_attributes.splice(socketIndex, 1);
           }
           this.itempack.push({
