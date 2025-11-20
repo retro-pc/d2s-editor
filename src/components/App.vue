@@ -625,6 +625,7 @@
       },
       onSelect(e) {
         this.selected = e;
+        //console.log(e);
         //this.updateLocation(this.selected);
       },
       findIndex(list, i) {

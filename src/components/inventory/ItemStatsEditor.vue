@@ -123,14 +123,14 @@ export default {
       // }
       if (stat.dF == 15 || stat.dF == 24) {
         // Similar to e=2 or 3
-        return valueIdx == 2;
+        return idx == 2;
       }
       if (stat.dF == 16) {
-        return valueIdx == 1;
+        return idx == 1;
       }
       if (stat.dF == 16 || stat.dF == 27 || stat.dF == 28) {
         // Aura when equipped or Similar to e=1
-        return valueIdx == 1;
+        return idx == 1;
       }
       return false;
     },
