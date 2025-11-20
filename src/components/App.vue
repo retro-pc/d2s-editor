@@ -1289,7 +1289,9 @@
           newItems.push({
             //code
             type: item[0],
-            simple_item: 1,
+            level: 13,
+            quality: 2,
+            //simple_item: 1,
             categories: value.c,
             ethereal: 0,
             identified: 1
