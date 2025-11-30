@@ -3,31 +3,6 @@
   <div @click.native="rootClick">
     <link v-if="theme == 'd2'" href="css/theme.css" rel="stylesheet" />
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="octicon octicon-clippy navbar-brand">
-        <i class="fa fa-fw fa-github"></i>
-        <a href="https://github.com/dschu012">dschu012</a> / <a class="font-weight-bold"
-          href="https://github.com/dschu012/d2s-editor">d2s-editor</a>
-      </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <!-- <li class="nav-item" v-if="theme !== 'd2'">
-            <a class="nav-link" href="#" @click="setTheme('d2')">Change Theme</a>
-          </li>
-          <li class="nav-item" v-if="theme === 'd2'">
-            <a class="nav-link" href="#" @click="setTheme('dark')">Change Theme</a>
-          </li> -->
-        </ul>
-      </div>
-    </nav>
-
     <div class="modal" tabindex="-1" role="dialog" id="LoadItem">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -43,7 +18,7 @@
             </div>
             <label for="Item">Item</label>
             <multiselect v-model="previewModel" :options="itempack" label="key" valueProp="value" :searchable="true"
-              @update:model-value="setPreviewItem" />
+              @update:model-value="setPreviewItem()" />
             <div v-if="baseOptions">
               <label>Base</label>
               <multiselect v-model="baseModel" :options="baseOptions" label="label" valueProp="value" :searchable="true"
@@ -52,8 +27,8 @@
           </div>
           <div class="modal-footer">
             <input style="display:none;" type="file" name="d2iFile" @change="onItemFileChange" id="d2iFile">
-            <label for="d2iFile" class="mb-0 btn btn-primary">Load From File</label>
-            <button type="button" class="btn btn-primary" @click="loadBase64Item">Load From String</button>
+            <label for="d2iFile" class="mb-0 btn btn-primary">Load D2I</label>
+            <button type="button" class="btn btn-primary" @click="loadBase64Item">Load Base64</button>
             <button type="button" class="btn btn-primary" @click="loadItem">Load</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
@@ -62,194 +37,166 @@
     </div>
 
     <div class="container-fluid">
-
       <div class="row">
         <div class="offset-lg-1 col-lg-10 ">
           <div class="card bg-light">
             <div class="card-body">
               <div class="alert alert-primary" role="alert">
-                This editor is still a work in progress. Some things may not work. Found a bug? <a
-                  href="https://github.com/dschu012/d2s-editor/issues/new">Report it.</a>
+                This editor is still a work in progress. Some things may not work.
               </div>
-
               <form id="d2sForm">
                 <fieldset>
-                  <div class="form-group">
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" name="d2sFile" class="custom-file-input" multiple @change="onFileChange"
-                          id="d2sFile" accept=".d2s,.d2i">
-                        <label class="custom-file-label load-save-label" for="d2sFile">*.d2s,*.d2i</label>
-                      </div>
-                      <!-- <div>
-                       <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">Create New</button>
-                        <div class="dropdown-menu dropdown-menu-right">
-                          <button class="dropdown-item" type="button" @click="newChar(0)">Amazon</button>
-                          <button class="dropdown-item" type="button" @click="newChar(1)">Sorceress</button>
-                          <button class="dropdown-item" type="button" @click="newChar(2)">Necromancer</button>
-                          <button class="dropdown-item" type="button" @click="newChar(3)">Paladin</button>
-                          <button class="dropdown-item" type="button" @click="newChar(4)">Barbarian</button>
-                          <button class="dropdown-item" type="button" @click="newChar(5)">Druid</button>
-                          <button class="dropdown-item" type="button" @click="newChar(6)">Assassin</button>
-                        </div>
-                      </div>
-                      <div class="input-group-append"><span>&nbsp;</span></div> -->
+                  <a-flex justify="space-between" align="center">
+                    <div class="col-6 px-0">
+                      <h5>Create character</h5>
+                      <a-dropdown>
+                        <button type="button" class="btn btn-primary">Create new</button>
+                        <template #overlay>
+                          <a-menu>
+                            <template v-for="cls in createNewMenu">
+                              <template v-if="!buildsFor(cls).length">
+                                <a-menu-item :key="cls.key" @click="newChar(cls.baseIndex)">
+                                  <a-flex align="center" justify="start" gap="8">
+                                    <img :src="`img/chars/${cls.key}.webp`" alt="class" style="height:24px;width:24px;object-fit:contain;" />
+                                    {{ cls.title }}
+                                  </a-flex>
+                                </a-menu-item>
+                              </template>
+                              <a-sub-menu v-else :key="cls.key">
+                                <template #title>
+                                  <a-flex align="center" justify="start" gap="8" style="display: inline-flex">
+                                    <img :src="`img/chars/${cls.key}.webp`" alt="class" style="height:24px;width:24px;object-fit:contain;" />
+                                    <span @click="newChar(cls.baseIndex)">{{ cls.title }}</span>
+                                  </a-flex>
+                                </template>
+                                <a-menu-item v-for="b in buildsFor(cls)" :key="`${cls.key}-${b.index}`" @click="newChar(b.index)">{{ b.title }}</a-menu-item>
+                              </a-sub-menu>
+                            </template>
+                          </a-menu>
+                        </template>
+                      </a-dropdown>
                     </div>
-                  </div>
 
-                  <nav class="navbar navbar-expand-md navbar-light">
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Create new</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Amazon
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(0)">Amazon</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <a class="dropdown-item" href="#" @click="newChar(1)">Physical Bowazon</a>
-                            <a class="dropdown-item" href="#" @click="newChar(2)">Elemental Bowazon</a>
-                            <a class="dropdown-item" href="#" @click="newChar(3)">Elemental Bowazon(Mavina)</a>
-                            <a class="dropdown-item" href="#" @click="newChar(4)">Exploding Arrow</a>
-                            <a class="dropdown-item" href="#" @click="newChar(5)">Ligthing Fury</a>
-                            <a class="dropdown-item" href="#" @click="newChar(6)">Poison</a>
-                            <a class="dropdown-item" href="#" @click="newChar(7)">Spearzon</a>
-                          </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Assassin
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(60)">Assassin</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <a class="dropdown-item" href="#" @click="newChar(61)">Phoenix Strike</a>
-                          </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Barbarian
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(40)">Barbarian</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <a class="dropdown-item" href="#" @click="newChar(41)">Whirlwind</a>
-                            <a class="dropdown-item" href="#" @click="newChar(42)">Double Throw</a>
-                          </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Druid
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(50)">Druid</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <a class="dropdown-item" href="#" @click="newChar(51)">Fire</a>
-                          </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Necromancer
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(20)">Necromancer</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <a class="dropdown-item" href="#" @click="newChar(21)">Poison</a>
-                          </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Paladin
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(30)">Paladin</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <a class="dropdown-item" href="#" @click="newChar(31)">Blessed Hammer</a>
-                            <a class="dropdown-item" href="#" @click="newChar(32)">Fist of the Heavens</a>
-                          </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarGeneral" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Sorceress
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarGeneral">
-                            <a class="dropdown-item" href="#" @click="newChar(10)">Sorceress</a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Builds</h6>
-                            <a class="dropdown-item" href="#" @click="newChar(11)">Blizzard</a>
-                            <a class="dropdown-item" href="#" @click="newChar(12)">Blizzard(Mana)</a>
-                            <a class="dropdown-item" href="#" @click="newChar(13)">Fire</a>
-                            <a class="dropdown-item" href="#" @click="newChar(14)">Nova</a>
-                            <a class="dropdown-item" href="#" @click="newChar(15)">Enchant Bow</a>
-                          </div>
-                        </li>
-                      </ul>
+                    <div class="col-6 px-0">
+                      <h5>Open save</h5>
+                      <a-flex gap="8">
+                        <select id="open-mod" v-model="$work_mod.value" name="open-mod" title="Workspace Mod" @change="changeMod()">
+                          <option value="diablo2">Diablo2</option>
+                          <option value="blizzless">Blizzless</option>
+                          <option value="blizzless_beta">Blizzless Beta</option>
+                        </select>
+                        <select
+                          id="work-version"
+                          v-model="$work_version.value"
+                          name="work-version"
+                          title="Workspace Version"
+                          @change="changeMod()">
+                          <!-- <option v-if="$work_mod.value == 'diablo2'" value="96">LOD 1.10-1.14d</option> -->
+                          <!-- <option v-if="$work_mod.value == 'diablo2'" value="97">D2R Alpha</option> -->
+                          <!-- <option v-if="$work_mod.value == 'diablo2'" value="98">D2R 2.4</option> -->
+                          <!-- <option v-if="$work_mod.value == 'blizzless'" value="98">Beta</option> -->
+                          <option value="99">D2R 2.5+</option>
+                        </select>
+                        <a-upload
+                          name="d2sFile"
+                          :multiple="false"
+                          accept=".d2s,.d2i"
+                          :before-upload="() => false"
+                          :show-upload-list="false"
+                          @change="onFileChange">
+                          <button type="button" class="btn btn-primary">Open *.d2s, *.d2i save</button>
+                        </a-upload>
+                        <button type="button" class="btn btn-primary" @click="pasteBase64Save">Paste as base64</button>
+                      </a-flex>
+                    </div>
+                  </a-flex>
+
+                  <nav v-if="hasOpened" class="navbar navbar-expand-md mt-4">
+                    <div class="w-100 d-flex justify-content-between align-items-center">
+                      <a-flex align="center" class="col-6 px-0">
+                        <template v-if="save && save.header && save.header.name">
+                          <img v-if="classIconSrc" :src="classIconSrc" alt="class" style="height:24px;width:24px;object-fit:contain;" />
+                          <a-flex vertical align="start" justify="center" class="ml-2" gap="0">
+                            <strong class="text-lg">{{ save.header.name }}</strong>
+                            <span class="text-sm">Level {{ save.header.level }}</span>
+                          </a-flex>
+                          <a-tag class="ml-3" :color="currentModeLabelColor">{{ currentModeLabel }}</a-tag>
+                          <a-tag v-if="isClassic" class="ml-0" color="gold">Classic</a-tag>
+                        </template>
+                        <template v-else-if="stashData">
+                          <img src="img/icons/stash.png" alt="stash" style="height:24px;width:24px;object-fit:contain;" />
+                          <a-flex gap="2" align="center" justify="left" class="ml-2">
+                            <a-tag color="gold">Pages: {{ stashData.pageCount }}</a-tag>
+                            <a-tag color="gold">Items: {{ stashItemsCount }}</a-tag>
+                          </a-flex>
+                        </template>
+                      </a-flex>
+                      <a-flex v-if="save != null" justify="end" class="col-6 px-0">
+                        <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x60)">Save D2</button> -->
+                        <!-- <button type="button" id="d2" class="btn btn-primary" @click="saveFile('diablo2', 0x63)">Save D2R</button> -->
+                        <button type="button" id="d2r" class="btn btn-primary" @click="saveFile($work_mod.value, $work_version.value)">Save</button>
+                        <div v-if="$work_mod.value == 'blizzless_beta'">
+                          <button type="button" id="d2r-blizz" class="btn btn-primary" @click="saveFile('blizzless', $work_version.value)">Save Blizzless</button>
+                        </div>
+                        <button type="button" class="btn btn-primary" @click="outputBase64Save">Output as base64</button>
+                     
+                      </a-flex>
                     </div>
                   </nav>
 
-                  <div v-if="save != null">
-                    <ul class="nav nav-tabs" id="tabs">
+                  <div v-if="save != null && saveViewMod !== 'stash'">
+                    <div class="row ml-0">
+                      <button type="button" @click="unlockHell" class="btn btn-secondary text-sm">Unlock Hell</button>
+                      <button type="button" @click="unlockAllWPs" class="btn btn-secondary text-sm">Unlock All WPs</button>
+                      <button type="button" @click="setLvl99" class="btn btn-secondary text-sm">Set Level 99</button>
+                      <button type="button" @click="setAllSkills20" class="btn btn-secondary text-sm">Set All Skills 20</button>
+                      <button type="button" @click="unlockQs" class="btn btn-secondary text-sm">Complete Skill/Stat Qs</button>
+                      <button type="button" @click="maxGold" class="btn btn-secondary text-sm">Max Gold</button>
+                    </div>
+                  </div>
+
+                  <div v-if="save != null" class="mt-3">
+                    <ul v-if="saveViewMod !== 'stash'" class="nav nav-tabs" id="tabs" >
                       <li class="nav-item">
                         <a class="nav-link active" id="items-tab" data-toggle="tab" data-target="#items-content"
                           role="tab" type="button">Equipment</a>
                       </li>
-                      <li class="nav-item" role="presentation">
+                      <li class="nav-item" role="presentation" v-if="saveViewMod !== 'stash'">
                         <a class="nav-link" id="stats-tab" data-toggle="tab" data-target="#stats-content" role="tab"
                           type="button">Character</a>
                       </li>
-                      <li class="nav-item" role="presentation">
+                      <li class="nav-item" role="presentation" v-if="saveViewMod !== 'stash'">
                         <a class="nav-link" id="skills-tab" data-toggle="tab" data-target="#skills-content" role="tab"
                           type="button">Skills</a>
                       </li>
-                      <li class="nav-item" role="presentation">
+                      <li class="nav-item" role="presentation" v-if="saveViewMod !== 'stash'">
                         <a class="nav-link" id="quests-tab" data-toggle="tab" data-target="#quests-content" role="tab"
                           type="button">Quests</a>
                       </li>
-                      <li class="nav-item" role="presentation">
+                      <li class="nav-item" role="presentation" v-if="saveViewMod !== 'stash'">
                         <a class="nav-link" id="waypoints-tab" data-toggle="tab" data-target="#waypoints-content"
                           role="tab" type="button">Waypoints</a>
                       </li>
                     </ul>
                     <div class="tab-content" id="tabs-content">
                       <div class="tab-pane show active" id="items-content" role="tabpanel">
-                        <div v-for="(notification, idx) in notifications" :key="idx" :class="notification.alert"
-                          role="alert">
-                          {{ notification.message }}
-                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
                         <div class="row mt-3">
                           <div class="col-auto equipment-inventory-col">
-                            <Equipped :items.sync="equipped" @item-selected="onSelect" @item-event="onEvent"
-                              :id="'Equipped'" :contextMenu="$refs.contextMenu">
-                            </Equipped>
+                            <div class="mb-3">
+                              <Equipped v-if="saveViewMod !== 'stash'" :items.sync="equipped" @item-selected="onSelect" @item-event="onEvent" @weapon-swap-changed="onWeaponSwapChanged"
+                                :id="'Equipped'" :contextMenu="$refs.contextMenu" :gold="save?.attributes?.gold">
+                              </Equipped>
+                            </div>
                             <!-- <Grid v-if="activeTab == 1 || activeTab == 10" :width="grid.inv.w" :height="grid.inv.h" :page="1"
                               :items.sync="inventory" @item-selected="onSelect" @item-event="onEvent" :id="'InventoryGrid'" :contextMenu="$refs.contextMenu">
                             </Grid> -->
-                            <Stash :items.sync="stash" @item-selected="onSelect" @item-event="onEvent" :id="'Stash'"
+                            <Stash :items.sync="stashWithMeta" :mode="saveViewMod" @item-selected="onSelect" @item-event="onEvent" :id="'Stash'"
                               :contextMenu="$refs.contextMenu">
                             </Stash>
-                            <Mercenary :items.sync="mercenary" @item-selected="onSelect"
+                            <Mercenary v-if="saveViewMod !== 'stash'" :items.sync="mercenary" @item-selected="onSelect" @item-event="onEvent" :id="'Mercenary'"
                               :contextMenu="$refs.contextMenu">
                             </Mercenary>
-                            <div class="cube">
+                            <div class="cube" v-if="saveViewMod !== 'stash'">
                               <Grid class="cube__grid" :width="grid.cube.w" :height="grid.cube.h" :page="8"
                                 :items.sync="cube" @item-selected="onSelect" @item-event="onEvent" :id="'CubeGrid'"
                                 :contextMenu="$refs.contextMenu">
@@ -271,35 +218,20 @@
                           </div>
                         </div>
                       </div>
-                      <div class="tab-pane" id="stats-content" role="tabpanel">
-                        <Stats v-bind:save.sync="save" />
+                      <div class="tab-pane" id="stats-content" role="tabpanel" v-if="saveViewMod !== 'stash'">
+                        <Stats v-if="save && save.header && save.attributes" v-bind:save.sync="save" :altDisplayed="equippedAltDisplayed" />
                       </div>
-                      <div class="tab-pane" id="waypoints-content" role="tabpanel">
-                        <Waypoints v-bind:save.sync="save" />
+                      <div class="tab-pane" id="waypoints-content" role="tabpanel" v-if="saveViewMod !== 'stash'">
+                        <Waypoints v-if="save && save.header && save.header.waypoints" v-bind:save.sync="save" />
                       </div>
-                      <div class="tab-pane" id="quests-content" role="tabpanel">
-                        <Quests v-bind:save.sync="save" />
+                      <div class="tab-pane" id="quests-content" role="tabpanel" v-if="saveViewMod !== 'stash'">
+                        <Quests v-if="save && save.header && save.header.quests_normal && save.header.quests_nm && save.header.quests_hell" v-bind:save.sync="save" />
                       </div>
-                      <div class="tab-pane" id="skills-content" role="tabpanel">
-                        <Skills v-bind:save.sync="save" />
-                      </div>
-                    </div>
-                    <div v-if="save != null">
-                      <div class="row">
-                        <button type="button" @click="unlockHell" class="btn btn-primary">Unlock Hell</button>
-                        <button type="button" @click="unlockAllWPs" class="btn btn-primary">Unlock All WPs</button>
-                        <button type="button" @click="setLvl99" class="btn btn-primary">Set Level 99</button>
-                        <button type="button" @click="setAllSkills20" class="btn btn-primary">Set All Skills 20</button>
-                        <button type="button" @click="unlockQs" class="btn btn-primary">Complete Skill/Stat Qs</button>
-                        <button type="button" @click="maxGold" class="btn btn-primary">Max Gold</button>
-                      </div>
-                      <div class="row mt-3">
-                        <button type="button" id="d2" class="btn btn-primary" @click="saveFile(0x60)">Save D2</button>
-                        <button type="button" id="d2r" class="btn btn-primary" @click="saveFile(0x63)">Save D2R</button>
+                      <div class="tab-pane" id="skills-content" role="tabpanel" v-if="saveViewMod !== 'stash'">
+                        <Skills v-if="save && save.skills && save.skills.length" v-bind:save.sync="save" />
                       </div>
                     </div>
                   </div>
-
                 </fieldset>
 
                 <div id="errors">
@@ -330,12 +262,7 @@
   import CharPack from '../d2/CharPack.js';
   import utils from '../utils.js';
   import {itemGroups as itemGroups} from '../items.js';
-
-  // TODO https://github.com/dschu012/d2s/pull/77
-  // import * as d2s from '@dschu012/d2s';
-  // import { constants as constants96 } from '@dschu012/d2s/lib/data/versions/96_constant_data';
-  // import { constants as constants99 } from '@dschu012/d2s/lib/data/versions/99_constant_data';
-  import * as d2stash from '@dschu012/d2s/lib/d2/stash';
+  import { message } from 'ant-design-vue';
 
   export default {
     components: {
@@ -355,6 +282,7 @@
       return {
         save: null,
         stashData: null,
+        saveViewMod: 'character',
         activeTab: 1,
         selected: null,
         itempack: ItemPack,
@@ -364,58 +292,183 @@
         baseOptions: null,
         clipboard: null,
         load: null,
-        notifications: [],
-        grid: { inv: { w: 10, h: 4 }, stash: { w: 10, h: 10 }, cube: { w: 3, h: 4 } },
+        grid: { inv: { w: 10, h: 4 }, cube: { w: 3, h: 4 } },
         location: {},
-        theme: localStorage.getItem('theme')
+        theme: localStorage.getItem('theme'),
+        equippedAltDisplayed: false,
+        createNewMenu: [
+          {
+            key: 'amazon',
+            title: 'Amazon',
+            baseIndex: 0,
+            builds: {
+              diablo2: [
+                { index: 1, title: 'Bowazon(Physical)' },
+                { index: 2, title: 'Bowazon(Elemental)' },
+                { index: 3, title: 'Bowazon(Mavina)' },
+                { index: 4, title: 'Exploding Arrow' },
+                { index: 5, title: 'Ligthing Fury' },
+                { index: 6, title: 'Poison' },
+                { index: 7, title: 'Spearzon' }
+              ],
+              blizzless_beta: [
+                { index: 1, title: 'Poison' },
+                { index: 2, title: 'Spearzon' },
+                { index: 3, title: 'Cold' },
+                { index: 4, title: 'Bowazon' },
+                { index: 5, title: 'FemaleKnight' }
+              ]
+            }
+          },
+          {
+            key: 'assassin',
+            title: 'Assassin',
+            baseIndex: 60,
+            builds: {
+              diablo2: [
+                { index: 61, title: 'Phoenix' }
+              ],
+              blizzless_beta: [
+                { index: 61, title: 'BladeSin' },
+                { index: 62, title: 'FireTrapper' },
+                { index: 63, title: 'Phoenix' },
+                { index: 64, title: 'Trapper' },
+                { index: 65, title: 'Kicker' },
+                { index: 66, title: 'BladeFury' }
+              ]
+            }
+          },
+          {
+            key: 'barbarian',
+            title: 'Barbarian',
+            baseIndex: 40,
+            builds: {
+              diablo2: [
+                { index: 41, title: 'Whirlwind' },
+                { index: 42, title: 'Double Throw' }
+              ],
+              blizzless_beta: [
+                { index: 41, title: 'Whirlwind' },
+                { index: 42, title: 'WC' },
+                { index: 43, title: 'Thrower' },
+                { index: 44, title: 'Berserk' }
+              ]
+            }
+          },
+          {
+            key: 'druid',
+            title: 'Druid',
+            baseIndex: 50,
+            builds: {
+              diablo2: [
+                { index: 51, title: 'Fire' }
+              ],
+              blizzless_beta: [
+                { index: 51, title: 'Fire' },
+                { index: 52, title: 'Shoсkwave' },
+                { index: 53, title: 'Rabies' }
+              ]
+            }
+          },
+          {
+            key: 'necromancer',
+            title: 'Necromancer',
+            baseIndex: 20,
+            builds: {
+              diablo2: [
+                { index: 21, title: 'Poison' }
+              ],
+              blizzless_beta: [
+                { index: 21, title: 'Poison' },
+                { index: 22, title: 'Ultra' },
+                { index: 23, title: 'Coroner' }
+              ]
+            }
+          },
+          {
+            key: 'paladin',
+            title: 'Paladin',
+            baseIndex: 30,
+            builds: {
+              diablo2: [
+                { index: 31, title: 'Hammerdin' },
+                { index: 32, title: 'Fist of the Heavens' }
+              ],
+              blizzless_beta: [
+                { index: 31, title: 'Hammerdin' },
+                { index: 32, title: 'Auradin' }
+              ]
+            }
+          },
+          {
+            key: 'sorceress',
+            title: 'Sorceress',
+            baseIndex: 10,
+            builds: {
+              diablo2: [
+                { index: 11, title: 'Blizzard' },
+                { index: 12, title: 'Blizzard(Mana)' },
+                { index: 13, title: 'Fire' },
+                { index: 14, title: 'Nova' },
+                { index: 15, title: 'Enchant Bow' }
+              ],
+              blizzless_beta: [
+                { index: 11, title: 'Enchantress' },
+                { index: 12, title: 'Rogue' },
+                { index: 13, title: 'Fire' },
+                { index: 14, title: 'Nova' },
+                { index: 15, title: 'Blizzard' }
+              ]
+            }
+          }
+        ]
       };
     },
     async mounted() {
-      if (window.palettes == undefined) {
-        window.palettes = {};
-        window.palettes["ACT1"] = [];
-        let response = await fetch(`data/global/palette/ACT1/pal.dat`);
-        let buffer = new Uint8Array(await response.arrayBuffer());
-        for (let i = 0; i < 256; i += 1) {
-          window.palettes["ACT1"].push([buffer[i * 3 + 2], buffer[i * 3 + 1], buffer[i * 3]]);
-        }
-        for (const [k, v] of Object.entries(utils.colormaps)) {
-          response = await fetch(v);
-          buffer = new Uint8Array(await response.arrayBuffer());
-          window.palettes[k] = [];
-          for (let i = 0; i < Object.keys(utils.colors).length; i += 1) {
-            window.palettes[k].push(buffer.slice(0 + (i * 256), 256 + (i * 256)));
-          }
-        }
-      }
       if (localStorage.grid) {
         this.grid = JSON.parse(localStorage.getItem('grid'));
       }
-
-      //TODO: requreid additional fields in constants
-      // https://github.com/dschu012/d2s/pull/77
-      // d2s.setConstantData(96, constants96); //1.10-1.14d
-      // d2s.setConstantData(97, constants96); //alpha? (D2R)
-      // d2s.setConstantData(98, constants96); //2.4 (D2R)
-      // d2s.setConstantData(99, constants99); //2.5+ (D2R)
-      // window.constants = constants99;
-
-      d2s.setConstantData(96, window.constants_96.constants); //1.10-1.14d
-      d2s.setConstantData(97, window.constants_96.constants); //alpha? (D2R)
-      d2s.setConstantData(98, window.constants_96.constants); //2.4 (D2R)
-      d2s.setConstantData(99, window.constants_99.constants); //2.5+ (D2R)
-      window.constants = window.constants_99.constants;
-
-      this.addRunewordToItemPack(window.constants.runewords, "Runewords");
-      this.addUniqToItemPack(window.constants.unq_items, "Uniques");
-      this.addSetToItemPack(window.constants.set_items, "Sets");
-      this.addBasesToItemPack(window.constants.armor_items, "Armor");
-      this.addBasesToItemPack(window.constants.weapon_items, "Weapons");
-      this.addOtherToItemPack(window.constants.other_items, "Misc");
+      this.changeMod();
     },
     filters: {
     },
     computed: {
+      hasOpened() {
+        return !!(this.save && this.save.header && this.save.header.name) || !!this.stashData;
+      },
+      stashItemsCount() {
+        if (!this.stashData || !this.stashData.pages) return 0;
+        return this.stashData.pages.reduce((acc, p) => acc + (p.items ? p.items.length : 0), 0);
+      },
+      isClassic() {
+        // Classic если нет Expansion флага
+        return !!(this.save && this.save.header && this.save.header.status && !this.save.header.status.expansion);
+      },
+      currentModeLabel() {
+        if (!this.save || !this.save.header || !this.save.header.status) return '';
+        const s = this.save.header.status;
+        // SC/HC + Ladder
+        const base = s.hardcore ? 'HC' : 'SC';
+        return s.ladder ? `${base}L` : base;
+      },
+      currentModeLabelColor() {
+        if (!this.save || !this.save.header || !this.save.header.status) return '';
+        const s = this.save.header.status;
+        return s.hardcore ? 'red' : 'blue';
+      },
+      isStashOnly() {
+        return !!this.stashData && (!this.save || !this.save.header || !this.save.header.name);
+      },
+      stashSharedCount() {
+        if (!this.stashData || !this.stashData.pages) return 0;
+        return this.stashData.pageCount || this.stashData.pages.length || 0;
+      },
+      classIconSrc() {
+        if (!this.save || !this.save.header || !this.save.header.class) return null;
+        const name = (this.save.header.class || '').toLowerCase();
+        // match filenames in public/img/chars
+        return `img/chars/${name}.webp`;
+      },
       equipped() {
         return this.save.items.filter(
           item => item.location_id === 1 || item.location_id === 0 && item.alt_position_id === 1
@@ -433,12 +486,26 @@
         stash.pages[0].items = [];
         stash.pages[0].items = this.save.items.filter(item => item.location_id === 0 && item.alt_position_id === 5);
 
-        if (this.stashData != null) {
-          stash.pages.push(this.stashData.pages[0]);
-          stash.pages.push(this.stashData.pages[1]);
-          stash.pages.push(this.stashData.pages[2]);
+        if (this.stashData != null && Array.isArray(this.stashData.pages)) {
+          for (let i = 0; i < this.stashData.pages.length; i++) {
+            stash.pages.push(this.stashData.pages[i]);
+          }
         }
         return stash;
+      },
+      stashWithMeta() {
+        const base = this.stash;
+        const meta = {
+          gold: this.save && this.save.attributes ? this.save.attributes.gold : null,
+          stashedGold: this.save && this.save.attributes ? this.save.attributes.stashed_gold : null,
+          sharedGold: this.stashData && this.stashData.sharedGold,
+        };
+        return { ...base, meta };
+      },
+      stashGrid() {
+        return this.$work_mod.value === 'blizzless'
+          ? { w: 16, h: 13 }
+          : { w: 10, h: 10 };
       },
       cube() {
         return this.save.items.filter(
@@ -450,6 +517,50 @@
       },
     },
     methods: {
+      buildsFor(cls) {
+        const mod = this.$work_mod?.value;
+        if (!cls || !cls.builds) return [];
+        if (mod === 'diablo2') return cls.builds.diablo2 || [];
+        if (mod === 'blizzless_beta') return cls.builds.blizzless_beta || [];
+        return [];
+      },
+      async getPaletteData() {
+        let a1PaletteBuffer;
+        const colorMapBuffers = {};
+        const a1PalettePath = utils.getA1PalettePath(this.$work_mod.value, this.$work_version.value);
+        let response = await fetch(a1PalettePath);
+        a1PaletteBuffer = new Uint8Array(await response.arrayBuffer());
+        const colormapPaths = utils.getColormapPaths(this.$work_mod.value, this.$work_version.value);
+        for (const [index, colorMapPath] of Object.entries(colormapPaths)) {
+          response = await fetch(colorMapPath);
+          colorMapBuffers[index] = new Uint8Array(await response.arrayBuffer());
+        }
+        utils.fillPalettes(this.$palettes.value, a1PaletteBuffer, colorMapBuffers);
+      },
+      // Uses globalProperties $work_mod & $work_version as input
+      changeMod(failSafe = true) {
+        let succeed = true;
+        try {
+          // Safety check
+          this.$getWorkConstantData();
+        } catch (e) {
+          succeed = false;
+          if (failSafe) {
+            this.$work_mod.value = 'diablo2'; // Fallback
+            this.$work_version.value = 99; // Fallback
+          } else {
+            return false;
+          }
+        }
+        this.save = null;
+        this.preview = null;
+        this.stashData = null;
+        this.saveViewMod = 'character';
+        this.getPaletteData();
+        this.addItemsToItemPack();
+        // console.log('Changing mod to ' + this.$work_mod.value + this.$work_version.value);
+        return succeed;
+      },
       stash(i) {
         if (i == 0) {
           return this.save.items.filter(item => item.location_id === 0 && item.alt_position_id === 5,);
@@ -514,11 +625,13 @@
       },
       onSelect(e) {
         this.selected = e;
+        //console.log(e);
         //this.updateLocation(this.selected);
       },
       findIndex(list, i) {
         return list.findIndex(item =>
-          item.location_id == i.location_id
+          item.type == i.type
+          && item.location_id == i.location_id
           && item.equipped_id == i.equipped_id
           && item.position_x == i.position_x
           && item.position_y == i.position_y
@@ -531,10 +644,10 @@
         this.location = null;
       },
       async shareItem(item) {
-        let bytes = await d2s.writeItem(item, 0x63);
+        let bytes = await this.$d2s.writeItem(item, this.$work_mod.value, this.$work_version.value);
         let base64 = utils.arrayBufferToBase64(bytes);
         navigator.clipboard.writeText(base64);
-        this.notifications.push({ alert: "alert alert-info", message: `Item data copied to clipboard. Use load from string to share it with someone.` });
+        message.info(`Item data copied to clipboard. Use load from string to share it with someone.`);
       },
       onEvent(e) {
         if(e.type == 'share') {
@@ -542,9 +655,10 @@
         } else if(e.type == 'copy') {
           this.clipboard = JSON.parse(JSON.stringify(e.item));
           navigator.clipboard.writeText(JSON.stringify(e.item));
+          this.notifications.push({ alert: "alert alert-info", message: `Item data copied to clipboard.` });
         } else if(e.type == 'update') {
-          d2s.enhanceItems([e.item], window.constants);
-          this.setPropertiesOnItem(e.item);
+          this.$d2s.enhanceItems([e.item], this.$work_mod.value, this.$work_version.value);
+          this.resolveInventoryImage(e.item);
         } else if(e.type == 'delete') {
           let idx = this.findIndex(this.save.items, e.item);
           if(idx != -1) {
@@ -556,36 +670,37 @@
             this.deleteItem(this.save.merc_items, idx);
             return;
           }
-        } else if(e.type == 'move') {
+        } else if (e.type == 'move') {
           let element = document.getElementById(e.id);
           element.style.backgroundColor = ""; element.style.width = ""; element.style.height = "";
-          if(window.uuid == e.uuid) {
+          //if (this.$uuid == e.uuid) 
+          {
             let idx = this.findIndex(this.save.items, e.item);
             this.onMove(this.save.items[idx], e);
-          } else {
-            //copy to another tab
-            if(this.onMove(e.item, e)) {
-              this.save.items.push(e.item);
-            }
+          // } else {
+          //   //copy to another tab
+          //   if (this.onMove(e.item, e)) {
+          //     this.save.items.push(e.item);
+          //   }
           }
-        } else if(e.type == 'dragenter') {
+        } else if (e.type == 'dragenter') {
+          //console.log(e);
           let item = e.item;
-          if(this.canPlaceItem(item, e.location.storage_page, e.location.x, e.location.y)) {
+          if (this.canPlaceItem(item, e.location.storage_page, e.location.x, e.location.y)) {
             let element = document.getElementById(e.id);
             element.style.backgroundColor = "green"; element.style.width = `calc(var(--grid-size) * ${item.inv_width})`; element.style.height = `calc(var(--grid-size) * ${item.inv_height})`;
           }
-        } else if(e.type == 'dragleave') {
+        } else if (e.type == 'dragleave') {
           let element = document.getElementById(e.id);
           element.style.backgroundColor = ""; element.style.width = ""; element.style.height = "";
-        }  else if(e.type === "pasteAt") {
+        } else if (e.type === "pasteAt") {
           const location_id = this.activeTab === 1 ? 1 : 0; // Equipped
           const storage_page = this.activeTab === 1 ? 1 :  // Equipped
               this.activeTab === 3 ? 5 : // Stash
               this.activeTab === 8 ? 8 : // Cube
                   1; // Inventory
-          if(this.canPlaceItem(e.item, storage_page, e.grid[0], e.grid[1])) {
+          if (this.canPlaceItem(e.item, storage_page, e.grid[0], e.grid[1])) {
             this.paste(e.item, [location_id, this.location?.equipped_location, e.grid[0], e.grid[1], storage_page]);
-
           } else {
             this.paste(e.item);
           }
@@ -614,19 +729,29 @@
           item.position_y = 0;
           item.alt_position_id = 0;
         }
+        else if (e.location.location == 5) {
+          item.location_id = e.location.location;
+          item.equipped_id = e.location.equipped_location;
+          item.position_x =  e.location.x;
+          item.position_y = e.location.y;
+          item.alt_position_id = 0;
+        }
         return true;
       },
-      async readItem(bytes, version) {
-        this.preview = await d2s.readItem(bytes, version);
-        await this.setPropertiesOnItem(this.preview);
+      async setBase(e) {
+        if (this.baseModel) {
+          this.preview.type = this.baseModel;
+          await this.$d2s.enhanceItems([this.preview], this.$work_mod.value, this.$work_version.value);
+          await this.resolveInventoryImage(this.preview);
+        }
       },
-      async setPreviewItem(e) {
+      async setPreviewItem() {
         this.baseOptions = null;
         this.baseModel = null;
         if (this.previewModel) {
           if (this.previewModel.base64) {
             let bytes = utils.b64ToArrayBuffer(this.previewModel.base64);
-            this.preview = await d2s.readItem(bytes, 0x63);
+            this.preview = await this.$d2s.readItem(bytes, "diablo2", 0x63);
           } else if (this.previewModel.item) {
             this.preview = this.previewModel.item;
             if (this.preview?.given_runeword) {
@@ -634,35 +759,34 @@
               return;
             }
         }
-          await this.setPropertiesOnItem(this.preview);
+          await this.resolveInventoryImage(this.preview);
         }
       },
-      async setBase(e) {
-        if (this.baseModel) {
-          this.preview.type = this.baseModel;
-          await d2s.enhanceItems([this.preview], window.constants);
-          await this.setPropertiesOnItem(this.preview);
-        }
-      },
-      async onItemFileLoad(event) {
-        this.readItem(event.target.result, 0x60);
+      async loadD2iItem(event) {
+        this.previewModel = {
+          base64: utils.arrayBufferToBase64(event.target.result),
+          mod: "diablo2",
+          version: 0x60,  //1.10-1.14d
+        };
+        this.setPreviewItem();
       },
       onItemFileChange(event) {
         let reader = new FileReader();
-        reader.onload = this.onItemFileLoad;
+        reader.onload = this.loadD2iItem;
         reader.readAsArrayBuffer(event.target.files[0]);
         event.target.value = null;
       },
       async loadBase64Item() {
         try {
           let b64 = prompt("Please enter your base64 string for item.");
-          if (b64 && this.preview) {
-            let bytes = utils.b64ToArrayBuffer(b64);
-            await this.readItem(bytes, 0x63);
-            this.paste(this.preview);
+          if (b64) {
+            this.previewModel = {
+              base64: b64,
+            };
+            this.setPreviewItem();
           }
         } catch(e) {
-          alert("Failed to read item.");
+          message.error("Failed to read item.");
         }
       },
       loadItem() {
@@ -676,12 +800,11 @@
         copy.position_x = pos[2];
         copy.position_y = pos[3];
         copy.alt_position_id = pos[4];
-        this.notifications = [];
         if (copy.location_id == 4) {
-          this.notifications.push({ alert: "alert alert-warning", message: `Could not find safe location to place item. Placed in mouse buffer.` });
+          message.warning(`Could not find safe location to place item. Placed in mouse buffer.`);
         } else {
           let loc = copy.alt_position_id == 1 ? 'inventory' : (copy.alt_position_id == 5 ? 'stash' : 'cube');
-          this.notifications.push({ alert: "alert alert-info", message: `Loaded item in ${loc} at ${copy.position_x}, ${copy.position_y}` });
+          message.info(`Loaded item in ${loc} at ${copy.position_x}, ${copy.position_y}`);
         }
         this.save.items.push(copy);
         this.selected = copy;
@@ -696,8 +819,8 @@
             }
           }
         }
-        for (var i = 0; i < this.grid.stash.w; i++) {
-          for (var j = 0; j < this.grid.stash.h; j++) {
+        for (var i = 0; i < this.stashGrid.w; i++) {
+          for (var j = 0; j < this.stashGrid.h; j++) {
             if (this.canPlaceItem(item, 5, i, j)) {
               return [0, 0, i, j, 5];
             }
@@ -717,7 +840,7 @@
         if (loc == 4) {
           bounds = this.grid.cube;
         } else if (loc == 5) {
-          bounds = this.grid.stash;
+          bounds = this.stashGrid;
         } else {
           bounds = this.grid.inv;
         }
@@ -752,61 +875,87 @@
         if (a[1] >= b[3] || b[1] >= a[3]) return false;
         return true;
       },
-      setPropertiesOnSave() {
-        let that = this;
-        [... this.save.items, ... this.save.merc_items, ... this.save.corpse_items, this.save.golem_item].forEach(item => {
-          that.setPropertiesOnItem(item);
-        });
+      async resolveInventoryImages() {
+        const allItems = [...(this.save.items || []), ...(this.save.merc_items || []), ...(this.save.corpse_items || []), this.save.golem_item].filter(Boolean);
+        const promises = allItems.map(async function (item) {
+          return this.resolveInventoryImage(item);
+        }, this);
+        return Promise.all(promises);
       },
-      async setPropertiesOnItem(item) {
+      async resolveInventoryImage(item) {
         if (!item) {
           return;
         }
-        //TODO remove after https://github.com/dschu012/d2s/pull/77
-        if (item.total_nr_of_sockets > 0) {
-          item.socketed = 1;
-        } else {
-          item.socketed = 0;
-        }
-
-        if (!item.magic_attributes) item.magic_attributes = [];
-        item.src = await utils.b64PNGFromDC6(item);
+        item.src = await utils.getInventoryImage(item, this.$work_mod.value, this.$work_version.value, this.$palettes.value);
         if (!item.socketed_items) {
           return;
         }
-        if (!item.socketed_attributes) item.socketed_attributes = [];
-        for(let i = 0; i < item.socketed_items.length; i++) {
-          item.socketed_items[i].src = await utils.b64PNGFromDC6(item.socketed_items[i]);
-          item.socketed_items[i].magic_attributes.forEach((it, idx) => { if (item.socketed_attributes.findIndex(x => x.id == it.id) == -1) item.socketed_attributes.push(it) });
-        }
-        if (item.runeword_id == 2718) {
-          item.runeword_id = 48;
-        } else if (item.runeword_id > 2783) {
-          item.runeword_id -= 2588;
+        for (let i = 0; i < item.socketed_items.length; i++) {
+          utils.getInventoryImage(item.socketed_items[i], this.$work_mod.value, this.$work_version.value, this.$palettes.value)
+            .then((img) => {
+              if (img && item.socketed_items[i]) {
+                // Recheck cause it's async, and user may have used unsocket all button in the meanwhile
+                item.socketed_items[i].src = img;
+                //item.socketed_items[i].magic_attributes.forEach((it, idx) => { if (item.socketed_attributes.findIndex(x => x.id == it.id) == -1) item.socketed_attributes.push(it) });
+              }
+            })
         }
       },
+      addItemsToItemPack() {
+        const constants = this.$getWorkConstantData();
+        // Regenerate item pack
+        this.itempack = [];
+        this.itempack.push(...ItemPack);
+        this.addRunewordToItemPack(constants.runewords, "Runewords");
+        this.addUniqToItemPack(constants.unq_items, "Uniques");
+        this.addSetToItemPack(constants.set_items, "Sets");
+        this.addBasesToItemPack(constants.armor_items, "Armor");
+        this.addBasesToItemPack(constants.weapon_items, "Weapons");
+        this.addOtherToItemPack(constants.other_items, "Misc");
+        //this.resolveInventoryImages();  
+      },     
       newChar(index) {
-        let bytes = utils.b64ToArrayBuffer(CharPack[index]);
+        let bytes = [];
+        if (this.$work_mod.value == 'diablo2') {
+          bytes = utils.b64ToArrayBuffer(CharPack.diablo2[index]);
+        } else if (this.$work_mod.value == 'blizzless') {
+          bytes = utils.b64ToArrayBuffer(CharPack.blizzless[index]);
+        } else if (this.$work_mod.value == 'blizzless_beta') {
+          bytes = utils.b64ToArrayBuffer(CharPack.blizzless_beta[index]);
+        }
         this.readBuffer(bytes);
       },
       onFileLoad(event) {
         this.readBuffer(event.target.result, event.target.filename);
       },
       readBuffer(bytes, filename) {
+        //this.addItemsToItemPack();
+        const byteLen = bytes && (bytes.byteLength ?? bytes.length ?? 0);
         if (filename) {
-          if (filename.includes(".d2s")) {
+          const lower = filename.toLowerCase();
+          if (lower.endsWith(".d2s")) {
             this.save = null;
-            d2s.read(bytes).then(response => {
+            this.$d2s.read(bytes, this.$work_mod.value)
+            .then(response => {
               this.save = response;
               this.save.header.name = filename.split('.')[0];
-              this.setPropertiesOnSave();
-            });
-          } else if (filename.includes("")) {
+              this.saveViewMod = 'character';
+              this.resolveInventoryImages();
+            })
+          } else if (lower.endsWith(".d2i")) {
             this.stashData = null;
-            d2stash.read(bytes).then(response => {
+            this.$d2s.readStash(bytes, this.$work_mod.value)
+            .then(response => {
+              if (!this.save) {
+                // Ensure UI renders stash even without a loaded character
+                this.save = { items: [], merc_items: [], corpse_items: [], golem_item: null, header: {} };
+              }
               this.stashData = response;
+              this.saveViewMod = 'stash';
+              const pages = this.stashData?.pages || [];
               for (var i = 0; i < this.stashData.pageCount; i++) {
-                [... this.stashData.pages[i].items].forEach(item => { this.setPropertiesOnItem(item)})}
+                [... this.stashData.pages[i].items].forEach(item => { this.resolveInventoryImage(item)})
+              }
             })
           }
         } else {
@@ -814,18 +963,21 @@
           this.save = null;
           this.selected = null;
           this.stashData = null;
-          d2s.read(bytes).then(response => {
+          this.$d2s.read(bytes, this.$work_mod.value)
+          .then(response => {
             that.save = response;
-            this.setPropertiesOnSave();
-          })
+            that.saveViewMod = 'character';
+            that.resolveInventoryImages();
+          });
         }
+        
       },
       saveFileStash() {
         if (this.stashData != null) {
           let link = document.createElement('a');
           link.style.display = 'none';
           document.body.appendChild(link);
-          d2stash.write(this.stashData).then(function (response) {
+          this.$d2s.writeStash(this.stashData, this.$work_mod.value, this.$work_version.value).then(function (response) {
             let blob = new Blob([response], { type: "octet/stream" });
             link.href = window.URL.createObjectURL(blob);
             link.download = 'SharedStashSoftCoreV2.d2i';
@@ -834,20 +986,58 @@
           });
         }
       },
-      onFileChange(event) {
+      onFileChange({ file }) {
+        if (!file) return;
         this.save = null;
         this.stashData = null;
         this.selected = null;
-        const files = event.currentTarget.files;
-        Object.keys(files).forEach(i => {
-          if (i < 2) {
-            const reader = new FileReader();
-            reader.onload = (e) => {
-              this.readBuffer(e.target.result, files[i].name);
-            }
-            reader.readAsArrayBuffer(files[i]);
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          const buf = e.target.result;
+          this.readBuffer(buf, file.name);
+        };
+        reader.onerror = () => {
+          if (this.$message) {
+            this.$message.error('Failed to read file');
           }
-        });
+        };
+        reader.readAsArrayBuffer(file);
+      },
+      async pasteBase64Save() {
+        try {
+          const text = await navigator.clipboard.readText();
+          if (!text) {
+            message.error('Clipboard is empty.');
+            return;
+          }
+          const idx = text.indexOf(',');
+          const b64 = (idx !== -1 ? text.substring(idx + 1) : text).trim();
+          const bytes = utils.b64ToArrayBuffer(b64);
+          this.save = null;
+          this.stashData = null;
+          this.selected = null;
+          try {
+            const response = await this.$d2s.read(bytes, this.$work_mod.value);
+            this.save = response;
+            this.saveViewMod = 'character';
+            await this.resolveInventoryImages();
+            message.info('Save loaded from clipboard.');
+          } catch (e1) {
+            const stash = await this.$d2s.readStash(bytes, this.$work_mod.value);
+            if (!this.save) {
+              this.save = { items: [], merc_items: [], corpse_items: [], golem_item: null, header: {} };
+            }
+            this.stashData = stash;
+            this.saveViewMod = 'stash';
+            for (let i = 0; i < this.stashData.pageCount; i++) {
+              [...this.stashData.pages[i].items].forEach(item => { this.resolveInventoryImage(item); });
+            }
+            message.info('Stash loaded from clipboard.');
+          }
+        } catch (e) {
+          console.error(e);
+          message.error('Failed to load from clipboard. Ensure it is a valid base64 save.');
+        }
       },
       maxGold() {
         this.save.attributes.gold = this.save.header.level * 10000;
@@ -921,19 +1111,43 @@
           s.points = 20;
         }
       },
-      saveFile(version) {
+      saveFile(mod, version) {
         this.save.header.version = version;
         let link = document.createElement('a');
         let that = this;
         link.style.display = 'none';
         document.body.appendChild(link);
-        d2s.write(this.save).then(function (response) {
+        this.$d2s.write(this.save, mod, version)
+        .then(function (response) {
           let blob = new Blob([response], { type: "octet/stream" });
           link.href = window.URL.createObjectURL(blob);
-          link.download = that.save.header.name + '.d2s';
+          const fileName = (that.save && that.save.header && that.save.header.name) ? that.save.header.name : 'character';
+          link.download = fileName + '.d2s';
           link.click();
           link.remove();
         });
+      },
+      async outputBase64Save() {
+        try {
+          if (this.saveViewMod === 'stash' && this.stashData != null) {
+            const buf = await this.$d2s.writeStash(this.stashData, this.$work_mod.value, this.$work_version.value);
+            const b64 = utils.arrayBufferToBase64(buf);
+            await navigator.clipboard.writeText(b64);
+            message.success('Stash base64 copied to clipboard.');
+            return;
+          }
+          if (!this.save) {
+            message.error('Nothing to export. Load or create a save first.');
+            return;
+          }
+          const buf = await this.$d2s.write(this.save, this.$work_mod.value, this.$work_version.value);
+          const b64 = utils.arrayBufferToBase64(buf);
+          await navigator.clipboard.writeText(b64);
+          message.success('Save base64 copied to clipboard.');
+        } catch (e) {
+          console.error(e);
+          message.error('Failed to export base64.');
+        }
       },
       async addBasesToItemPack(constants, category) {
         let newItems = [];
@@ -943,7 +1157,7 @@
             //code
             type: item[0],
             quality: 2,
-            level: 41,
+            level: value.lvl,
             inv_width: value.iw,
             inv_height: value.ih,
             categories: value.c,
@@ -951,7 +1165,7 @@
             identified: 1
           });
         }
-        d2s.enhanceItems(newItems, window.constants);
+        this.$d2s.enhanceItems(newItems, this.$work_mod.value, this.$work_version.value);
         for (const item of newItems) {
           //let bytes = await d2s.writeItem(item, 0x63, window.constants);
           //let base64 = utils.arrayBufferToBase64(bytes);
@@ -975,7 +1189,7 @@
             runeword_name: item.n,
             given_runeword: 1,
             quality: 3,
-            level: 90,
+            level: 90, //todo
             ethereal: 0,
             socketed: 1,
             identified: 1,
@@ -984,10 +1198,10 @@
             nr_of_items_in_sockets: socketedItems.length,
             simple_item: 0,
             socketed_items: socketedItems,
-            runeword_attributes: d2s.generateFixedMods(item.m, window.constants),
+            runeword_attributes: this.$d2s.generateFixedMods(item.m, this.$getWorkConstantData()),
           });
         }
-        d2s.enhanceItems(newItems, window.constants);
+        this.$d2s.enhanceItems(newItems, this.$work_mod.value, this.$work_version.value);
         for (const item of newItems) {
           this.itempack.push({
             key: `[${category}]/${item.runeword_name}`,
@@ -999,6 +1213,15 @@
         let newItems = [];
         for (const item of constants) {
           if (item.c) {
+            let set_attributes = [];
+            for (let i = 0; i < item.ms?.length; i++) {
+              if (set_attributes) {
+                set_attributes.push(this.$d2s.generateFixedMods([item.ms[i]], this.$getWorkConstantData()));
+              }
+              else {
+                set_attributes = [this.$d2s.generateFixedMods([item.ms[i]], this.$getWorkConstantData())]
+              }
+            }
             newItems.push({
               //code
               type: item.c,
@@ -1009,17 +1232,18 @@
               set_name: item.n,
               ethereal: 0,
               identified: 1,
-              //set_attributes: 
-              magic_attributes: d2s.generateFixedMods(item.m, window.constants)
+              set_attributes: set_attributes,
+              magic_attributes: this.$d2s.generateFixedMods(item.m, this.$getWorkConstantData())
             });
           }
         }
-        d2s.enhanceItems(newItems, window.constants);
+        this.$d2s.enhanceItems(newItems, this.$work_mod.value, this.$work_version.value);
         for (const item of newItems) {
           let socketIndex = item.magic_attributes.findIndex(i => i.name == "item_numsockets");
           if (socketIndex > 0) {
             item.socketed =  true;
             item.total_nr_of_sockets = item.magic_attributes[socketIndex].value;
+            item.magic_attributes.splice(socketIndex, 1);
           }
           this.itempack.push({
             key: `[${category}]/${item.set_name}`,
@@ -1041,16 +1265,17 @@
               unique_name: item.n,
               ethereal: 0,
               identified: 1,
-              magic_attributes: d2s.generateFixedMods(item.m, window.constants)
+              magic_attributes: this.$d2s.generateFixedMods(item.m, this.$getWorkConstantData())
             });
           }
         }
-        d2s.enhanceItems(newItems, window.constants);
+        this.$d2s.enhanceItems(newItems, this.$work_mod.value, this.$work_version.value);
         for (const item of newItems) {
           let socketIndex = item.magic_attributes.findIndex(i => i.name == "item_numsockets");
           if (socketIndex > 0) {
             item.socketed =  true;
-            item.total_nr_of_sockets = item.magic_attributes[socketIndex].value;
+            item.total_nr_of_sockets = item.magic_attributes[socketIndex].param;
+            item.magic_attributes.splice(socketIndex, 1);
           }
           this.itempack.push({
             key: `[${category}]/${item.unique_name}`,
@@ -1065,13 +1290,15 @@
           newItems.push({
             //code
             type: item[0],
-            simple_item: 1,
+            level: 13,
+            quality: 2,
+            //simple_item: 1,
             categories: value.c,
             ethereal: 0,
             identified: 1
           });
         }
-        d2s.enhanceItems(newItems, window.constants);
+        this.$d2s.enhanceItems(newItems, this.$work_mod.value, this.$work_version.value);
         for (const item of newItems) {
           this.itempack.push({
             key: `[${category}]/${item.categories[0]}/${item.type_name}`,
@@ -1081,7 +1308,7 @@
       },
       getBasesOptions(item) {
         let bases = [];
-        const constants = {...window.constants.armor_items, ...window.constants.weapon_items};
+        const constants = {...this.$getWorkConstantData().armor_items, ...this.$getWorkConstantData().weapon_items};
         bases = this.findBasesInConstants(item, constants);
         return Object.entries(constants)
             .filter((entry) => bases.includes(entry[0]))
@@ -1100,5 +1327,49 @@
         return bases;
       },
     },
+    onWeaponSwapChanged(isAlt) {
+      try {
+        if (!this.save || !Array.isArray(this.save.items)) return;
+        for (const item of this.save.items) {
+          if (item && item.location_id === 1 && (item.equipped_id === 4 || item.equipped_id === 5 || item.equipped_id === 11 || item.equipped_id === 12)) {
+            // nothing to change on item; Stats.vue will read active swap flag from localStorage
+          }
+        }
+        this.equippedAltDisplayed = !!isAlt;
+        localStorage.setItem('equippedAltDisplayed', isAlt ? '1' : '0');
+      } catch (_) {}
+    },
   };
 </script>
+
+<style>
+.dark-theme {
+  background-color: #141414;
+  color: #e8e8e8;
+}
+.dark-theme .card.bg-light {
+  background-color: #1f1f1f;
+}
+.dark-theme .alert.alert-primary {
+  background-color: #2a2a2a;
+  border-color: #3a3a3a;
+  color: #e6f7ff;
+}
+.dark-theme .modal-content {
+  background-color: #1f1f1f;
+  color: #e8e8e8;
+}
+.dark-theme .nav-tabs .nav-link {
+  color: #bfbfbf;
+}
+.dark-theme .nav-tabs .nav-link.active {
+  color: #fff;
+  background-color: #262626;
+  border-color: #434343 #434343 #262626;
+}
+/* Force left alignment for all inputs */
+.ant-input,
+.ant-input-number-input {
+  text-align: left;
+}
+</style>

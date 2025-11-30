@@ -1,6 +1,17 @@
 <template>
   <div>
-    <div class="form-row">
+    <div class="d-flex flex-wrap">
+      <div class="mr-4 mb-3">
+        <label for="UnusedStatPoints">Unused Stat Points</label>
+        <a-input-number id="UnusedStatPoints" v-model:value="save.attributes.unused_stats" :min="0" />
+      </div>
+      <div class="mr-4 mb-3">
+        <label for="UnusedSkillPoints">Unused Skill Points</label>
+        <a-input-number id="UnusedSkillPoints" v-model:value="save.attributes.unused_skill_points" :min="0" />
+      </div>
+    </div>
+    <br />
+    <div class="d-flex flex-wrap">
       <div class="col-md-4" v-for="i in 3">
         <div class="row">
           <div class="col-md-6" v-for="j in 10">

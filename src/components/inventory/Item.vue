@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div ref="itemRef" tabindex="0" :class="itemClass" v-on:dragstart="dragStart">
+    <div ref="itemRef" tabindex="0" :class="itemClass" v-on:dragstart="dragStart" @click="onClick">
       <div :class="innerClass">
         <img :src="item.src" :class="{ ethereal: item.ethereal}" />
         <div v-if="item.total_nr_of_sockets && tooltipShown" class="sockets">
@@ -35,6 +35,11 @@
       </div>
       <div class="blue" v-if="item.total_nr_of_sockets">
         Socketed ({{item.total_nr_of_sockets}})
+      </div>
+      <div class="mt-3" v-if="item.displayed_set_attributes && item.displayed_set_attributes.length">
+        <template v-for="(group, gIdx) in item.displayed_set_attributes">
+          <div class="green" v-for="(stat, sIdx) in group" :key="'set-' + gIdx + '-' + sIdx" v-html="statDescription(stat)" />
+        </template>
       </div>
     </div>
   </div>
@@ -130,6 +135,7 @@
       itemName(item) {
         if (!item.type) return;
         let name = item.type_name;
+        const constants = this.$getWorkConstantData();
         if (item.magic_prefix) {
           let magic_prefix_name = constants.magic_prefixes[item.magic_prefix]
           ? constants.magic_prefixes[item.magic_prefix].n
@@ -217,13 +223,16 @@
         const vm = this;
         this.tooltip = tippy(this.$refs.itemRef, {
           content: this.$refs.tooltipRef,
-          hideOnClick: true,
+          hideOnClick: false,
           duration: [0, 0],
           distance: 0,
           arrow: false,
           onShown: () => { vm.tooltipShown = true; },
           onHidden: () => { vm.tooltipShown = false; },
         });
+      },
+      onClick() {
+        this.$emit('select');
       },
       dragStart(event) {
         localStorage.setItem('dragElement', JSON.stringify({

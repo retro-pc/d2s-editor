@@ -26,6 +26,9 @@ export const itemGroups = {
   jave: ['jave'],
   h2h: ['h2h', 'h2h2'],
   pala: ['pala', 'ashd'],
+  pelt: ['pelt'],
+  orb: ['orb'],
+  head: ['head']
 }
 
 export const itemTypeNames = {

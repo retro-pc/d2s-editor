@@ -39,15 +39,15 @@ export default {
   },
   data() {
     return {
-      stats: window.constants.magical_properties,
-      stats_options: window.constants.magical_properties
+      stats: this.$getWorkConstantData().magical_properties,
+      stats_options: this.$getWorkConstantData().magical_properties
         .filter(stat => stat && stat.s)
         .map(stat => ({value: stat.id, label: stat.s, desc: stat.dP || ""})),
-      skills_options: window.constants.skills
+      skills_options: this.$getWorkConstantData().skills
         .filter((skill) => skill && skill.s)
         .map((skill) => ({ value: skill.id, label: `${skill.s}${skill.id > 5 && !skill.c ? " (item)" : ""}` }))
         .sort((a, b) => { return a.label.localeCompare(b.label) }),
-      classes: window.constants.classes,
+      classes: this.$getWorkConstantData().classes,
     }
   },
   methods: {
@@ -79,8 +79,13 @@ export default {
       this.onItemModified();
     },
     addNewStat() {
+      const updated = Array.isArray(this.itemStats)
+        ? [...this.itemStats, { id: 0, values: [1, 0, 1] }]
+        : [{ id: 0, values: [1, 0, 1] }];
+      this.$emit('update:itemStats', updated);
+
       //this.itemStats.push({ id: 0, values: [0, 0] });
-      this.itemStats.push({ id: 0, values: [1, 0, 1] });
+      //this.itemStats.push({ id: 0, values: [1, 0, 1] });
       this.onItemModified();
     },
     removeStat(idx) {
@@ -106,15 +111,26 @@ export default {
     },
     isSkill(id, idx) {
       let stat = this.stats[id];
-      if (stat.dF == 14) {
-        return false;
+      // if (stat.dF == 14) {
+      //   return false;
+      // }
+      // if (stat.sP) {
+      //   if (stat.e == 3 || stat.e == 2) {
+      //     return idx == 2;
+      //   } else {
+      //     return idx == 1;
+      //   }
+      // }
+      if (stat.dF == 15 || stat.dF == 24) {
+        // Similar to e=2 or 3
+        return idx == 2;
       }
-      if (stat.sP) {
-        if (stat.e == 3 || stat.e == 2) {
-          return idx == 2;
-        } else {
-          return idx == 1;
-        }
+      if (stat.dF == 16) {
+        return idx == 1;
+      }
+      if (stat.dF == 16 || stat.dF == 27 || stat.dF == 28) {
+        // Aura when equipped or Similar to e=1
+        return idx == 1;
       }
       return false;
     },

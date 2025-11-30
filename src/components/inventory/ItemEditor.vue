@@ -58,9 +58,10 @@
         </li>
         <li v-if="getItemMaxSockets() > 0 && !item.given_runeword">
           <!-- <div>{{getItemMaxSockets()}}</div> -->
+          <!--  :max="getItemMaxSockets()" -->
           <label>Sockets:</label>
           <input class="edit-box" type="number" v-model.number="item.total_nr_of_sockets" min="0"
-            :max="getItemMaxSockets()" @input="onEvent('update')" />
+            @input="onEvent('update')" />
         </li>
         <li v-if="itemCanEthereal(item.type)">
           <div class="form-check form-check-inline">
@@ -75,37 +76,37 @@
     </div>
 
     <div v-if="!item.simple_item" class="item-stats">
-      <div v-if="item.magic_attributes" class="item-magic-stats">
+      <!-- v-if="item.magic_attributes" -->
+      <div class="item-magic-stats">
         <div>Item Stats</div>
-        <ItemStatsEditor :id="id + 'Magic'" v-model:item-stats="item.magic_attributes"
-          @stat-change="onEvent('update')" />
+        <ItemStatsEditor :id="id + 'Magic'" v-model:item-stats="item.magic_attributes " @stat-change="onEvent('update')" />
       </div>
       <div v-if="item.runeword_attributes" class="item-runeword-stats">
         <div>Runeword Stats</div>
-        <ItemStatsEditor :id="id + 'Runeword'" v-model:item-stats="item.runeword_attributes"
-          @stat-change="onEvent('update')" />
+        <ItemStatsEditor :id="id + 'Runeword'" v-model:item-stats="item.runeword_attributes" @stat-change="onEvent('update')" />
       </div>
-      <!-- 
-      <div v-if="item.set_attributes" class="item-set-stats">
+      <!-- <div v-if="item.set_attributes" class="item-set-stats">
         <div>Set Stats</div>
         <div v-for="(set_attribute, idx) in item.set_attributes">
           <ItemStatsEditor :id="id + 'Set'" v-model:item-stats="item.set_attributes[idx]"
             @stat-change="onEvent('update')" />
         </div>
-      </div> 
-      -->
-      <div v-if="item.socketed_items" class="item-socketed-stats">
-        <div>Sockets Stats</div>
-        <ItemStatsEditor :id="id + 'Socketed stats'" v-model:item-stats.sync="item.socketed_attributes"
-          @stat-change="onEvent('update')" />
-      </div>
-      <!--
-      <div v-if="item.socketed_items">
-        <div v-for="(socketed_item, index) in item.socketed_items">
-          <ItemEditor ref="itemEditor" :item.sync="socketed_item" :id="id + 'Socketed' + index" @item-event="onChildEvent"></>
+      </div>  -->
+      <div v-if="item.set_attributes?.length" class="item-set-stats">
+        <div>Set Stats</div>
+        <div v-for="(set_attribute, idx) in item.set_attributes">
+          <ItemStatsEditor :id="id + 'Set' + idx" v-model:item-stats="item.set_attributes[idx]" @stat-change="onEvent('update')" />
         </div>
       </div>
-      -->
+      <div v-if="item.socketed_items" class="item-socketed-stats">
+        <div>Sockets Stats</div>
+        <ItemStatsEditor :id="id + 'Socketed stats'" v-model:item-stats.sync="item.socketed_attributes" @stat-change="onEvent('update')" />
+      </div>
+      <div v-if="item.socketed_items">
+        <div v-for="(socketed_item, index) in item.socketed_items">
+          <ItemEditor :id="id + 'Socketed' + index"  ref="itemEditor" :item.sync="socketed_item" :context-menu="contextMenu" :location="{ location: 6 }" @item-event="onChildEvent" />
+        </div>
+      </div>
     </div>
 
   </div>
@@ -133,27 +134,27 @@ export default {
       locations: [{ key: 0, value: 'Stored' }, { key: 1, value: 'Equipped' }, { key: 4, value: 'Cursor' }],
       equipped_locations: [{ key: 1, value: 'Head' }, { key: 2, value: 'Neck' }, { key: 3, value: 'Torso' }, { key: 4, value: 'Right Hand' }, { key: 5, value: 'Left Hand' }, { key: 6, value: 'Right Finger' }, { key: 7, value: 'Left Finger' }, { key: 8, value: 'Waist' }, { key: 9, value: 'Boots' }, { key: 10, value: 'Gloves' }, { key: 11, value: 'Alternate Right Hand' }, { key: 12, value: 'Alternate Left Hand' }],
       storage_pages: [{ key: 1, value: 'Inventory' }, { key: 4, value: 'Cube' }, { key: 5, value: 'Stash' }],
-      magic_prefixes_options: window.constants.magic_prefixes
+      magic_prefixes_options: this.$getWorkConstantData().magic_prefixes
         .fill({id: 0, n: "None"}, 0, 1)
         .filter(entry => entry && entry.n)
         //.map((entry, i) => { return {value: i, label: entry.n} }),
         .map(entry => ({value: entry.id, label: entry.n})),
-      magic_suffixes_options: window.constants.magic_suffixes
+      magic_suffixes_options: this.$getWorkConstantData().magic_suffixes
         .fill({id: 0, n: "None"}, 0, 1)
         .filter(entry => entry && entry.n)
         .map(entry => ({value: entry.id, label: entry.n})),
-      rare_names_options: window.constants.rare_names
+      rare_names_options: this.$getWorkConstantData().rare_names
         .fill({id: 0, n: "None"}, 0, 1)
         .filter(entry => entry && entry.n)
         .map(entry => ({value: entry.id, label: entry.n})),
-      unq_items: window.constants.unq_items
+      unq_items: this.$getWorkConstantData().unq_items
         .map((e,i)=> { return { i:i, v:e }}).filter(e => e.v != null && e.v.n != null),
-      set_items_options: window.constants.set_items
+      set_items_options: this.$getWorkConstantData().set_items
         .filter(entry => entry && entry.n)
         .map(entry => ({value: entry.id, label: entry.n})),
-      armor_items: Object.entries(window.constants.armor_items).filter(e => e[1].n != null),
-      weapon_items: Object.entries(window.constants.weapon_items).filter(e => e[1].n != null),
-      other_items: Object.entries(window.constants.other_items).filter(e => e[1].n != null),
+      armor_items: Object.entries(this.$getWorkConstantData().armor_items).filter(e => e[1].n != null),
+      weapon_items: Object.entries(this.$getWorkConstantData().weapon_items).filter(e => e[1].n != null),
+      other_items: Object.entries(this.$getWorkConstantData().other_items).filter(e => e[1].n != null),
     };
   },
   methods: {
@@ -171,13 +172,13 @@ export default {
       let bases = [];
       let constants = {};
       if (this.item.type_id == 3) {
-        constants = window.constants.weapon_items;
+        constants = this.$getWorkConstantData().weapon_items;
         bases = this.findBasesInConstants(code, constants)
       } else if (this.item.type_id == 1) {
-        constants = window.constants.armor_items;
+        constants = this.$getWorkConstantData().armor_items;
         bases = this.findBasesInConstants(code, constants)
       } else if (this.item.type_id == 4) {
-        constants = window.constants.other_items;
+        constants = this.$getWorkConstantData().other_items;
         bases = Object.keys(constants);
       }
       return Object.entries(constants)
@@ -207,7 +208,7 @@ export default {
     },
     getItemMaxSockets() {
       let code = this.item.type;
-      const constants = window.constants;
+      const constants = this.$getWorkConstantData();
       if (this.item.type_id == 3) {
         return this.itemMaxSockets(constants.weapon_items[code])
       } else if (this.item.type_id == 1) {
@@ -247,7 +248,7 @@ export default {
 
       //if (this.baseNoDurability(base)) return false;
       let code = this.item.type;
-      const constants = window.constants;
+      const constants = this.$getWorkConstantData();
       if (this.item.type_id == 3) {
         return !this.baseNoDurability(constants.weapon_items[code])
       } else if (this.item.type_id == 1) {

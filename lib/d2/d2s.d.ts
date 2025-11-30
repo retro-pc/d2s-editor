@@ -1,0 +1,10 @@
+import * as types from "./types";
+import { BitReader } from "../binary/bitreader";
+import { BitWriter } from "../binary/bitwriter";
+declare function reader(buffer: Uint8Array): BitReader;
+declare function read(buffer: Uint8Array, mod: string, userConfig?: types.IConfig): Promise<types.ID2S>;
+declare function readItem(buffer: ArrayBuffer, mod: string, version: number, userConfig?: types.IConfig): Promise<types.IItem>;
+declare function writer(buffer: Uint8Array): BitWriter;
+declare function write(data: types.ID2S, mod: string, version: number, userConfig?: types.IConfig): Promise<Uint8Array>;
+declare function writeItem(item: types.IItem, mod: string, version: number, userConfig?: types.IConfig): Promise<Uint8Array>;
+export { reader, writer, read, write, readItem, writeItem };
