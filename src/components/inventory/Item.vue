@@ -8,7 +8,7 @@
             :class="{ 'empty-socket': !item.socketed_items || !item.socketed_items[idx-1]}"
             inert="true"
             v-for="idx in item.total_nr_of_sockets" :key="idx">
-            <!-- <img v-if="item.socketed_items && item.socketed_items[idx-1]" :src="item.socketed_items[idx-1].src" /> -->
+            <img v-if="item.socketed_items && item.socketed_items[idx-1]" :src="item.socketed_items[idx-1].src" />
           </div>
         </div>
       </div>

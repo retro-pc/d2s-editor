@@ -79,7 +79,7 @@
       <!-- v-if="item.magic_attributes" -->
       <div class="item-magic-stats">
         <div>Item Stats</div>
-        <ItemStatsEditor :id="id + 'Magic'" v-model:item-stats="item.magic_attributes " @stat-change="onEvent('update')" />
+        <ItemStatsEditor :id="id + 'Magic'" v-model:item-stats="item.magic_attributes" @stat-change="onEvent('update')" />
       </div>
       <div v-if="item.runeword_attributes" class="item-runeword-stats">
         <div>Runeword Stats</div>
@@ -166,6 +166,18 @@ export default {
     },
     onMove() {
       this.$emit('item-event', { item: this.item, location: this.location, type: 'move' });
+    },
+    onUpdate(variable, value) {
+      const path = variable.split('.');
+      path.shift(); // Should be "item"
+      const edited = path.reduceRight(
+        (accumulator, currentValue) => ({
+          [currentValue]: accumulator,
+        }),
+        value,
+      );
+      const newItem = Object.assign(this.item, edited);
+      this.$emit('item-event', { item: newItem, type: 'update' });
     },
     getBasesOptions(code) {
       //console.log(this.item)
