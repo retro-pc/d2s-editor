@@ -297,7 +297,7 @@ export interface IItem {
     id: number;
     level: number;
     quality: number;
-    multiple_pictures: number;
+    multiple_pictures: boolean;
     picture_id: number;
     class_specific: number;
     low_quality_id: number;
@@ -336,6 +336,7 @@ export interface IItem {
     inv_width: number;
     inv_height: number;
     inv_file: number;
+    hd_inv_file: string;
     inv_transform: number;
     transform_color: string;
     item_quality: EItemQuality;
@@ -420,7 +421,7 @@ export declare enum Quality {
 }
 export declare enum ItemType {
     Armor = 1,
-    Shield = 2,
+    Shield = 2,//treated the same as armor... only here to be able to parse nokkas jsons
     Weapon = 3,
     Other = 4
 }

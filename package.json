@@ -5,10 +5,10 @@
   "scripts": {
     "serve": "vue-cli-service serve --skip-plugins @vue/cli-plugin-eslint" ,
     "build": "vue-cli-service build --skip-plugins @vue/cli-plugin-eslint",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "generate": "node script/generate_web_pictures.mjs"
   },
   "dependencies": {
-    "@dschu012/d2s": "^2.0.36",
     "@popperjs/core": "^2.11.8",
     "@vueform/multiselect": "^2.6.6",
     "ant-design-vue": "^4.2.6",
@@ -28,15 +28,18 @@
     "@vue/cli-plugin-pwa": "^5.0.8",
     "@vue/cli-service": "~5.0.8",
     "@vue/compiler-sfc": "^3.4.13",
-    "@web/rollup-plugin-copy": "^0.5.1",
-    "@web/rollup-plugin-html": "^2.1.2",
+    "canvas": "^2.11.2",
     "dotenv-webpack": "^8.0.1",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-vue": "^9.20.1",
+    "fs": "^0.0.1-security",
+    "jsdom": "^25.0.1",
+    "path": "^0.12.7",
+    "pngjs": "^7.0.0",
     "prettier": "^3.2.2",
-    "serve-static": "^1.15.0"
+    "webpack-dev-middleware": "^7.4.2"
   },
   "eslintConfig": {
     "root": true,

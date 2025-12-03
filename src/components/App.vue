@@ -260,7 +260,7 @@
 
   import ItemPack from '../d2/ItemPack.js';
   import CharPack from '../d2/CharPack.js';
-  import utils from '../utils.js';
+  import utils from '../utils.mjs';
   import {itemGroups as itemGroups} from '../items.js';
   import { message } from 'ant-design-vue';
 
@@ -901,17 +901,17 @@
             })
         }
       },
-      addItemsToItemPack() {
+      async addItemsToItemPack() {
         const constants = this.$getWorkConstantData();
         // Regenerate item pack
         this.itempack = [];
         this.itempack.push(...ItemPack);
-        this.addRunewordToItemPack(constants.runewords, "Runewords");
-        this.addUniqToItemPack(constants.unq_items, "Uniques");
-        this.addSetToItemPack(constants.set_items, "Sets");
-        this.addBasesToItemPack(constants.armor_items, "Armor");
-        this.addBasesToItemPack(constants.weapon_items, "Weapons");
-        this.addOtherToItemPack(constants.other_items, "Misc");
+        await this.addRunewordToItemPack(constants.runewords, "Runewords");
+        await this.addUniqToItemPack(constants.unq_items, "Uniques");
+        await this.addSetToItemPack(constants.set_items, "Sets");
+        await this.addBasesToItemPack(constants.armor_items, "Armor");
+        await this.addBasesToItemPack(constants.weapon_items, "Weapons");
+        await this.addOtherToItemPack(constants.other_items, "Misc");
         //this.resolveInventoryImages();  
       },     
       newChar(index) {
@@ -936,7 +936,7 @@
           if (lower.endsWith(".d2s")) {
             this.save = null;
             this.$d2s.read(bytes, this.$work_mod.value)
-            .then(response => {
+            .then(async (response) => {
               this.save = response;
               this.save.header.name = filename.split('.')[0];
               this.saveViewMod = 'character';
@@ -945,7 +945,7 @@
           } else if (lower.endsWith(".d2i")) {
             this.stashData = null;
             this.$d2s.readStash(bytes, this.$work_mod.value)
-            .then(response => {
+            .then(async (response) => {
               if (!this.save) {
                 // Ensure UI renders stash even without a loaded character
                 this.save = { items: [], merc_items: [], corpse_items: [], golem_item: null, header: {} };
@@ -964,7 +964,7 @@
           this.selected = null;
           this.stashData = null;
           this.$d2s.read(bytes, this.$work_mod.value)
-          .then(response => {
+          .then(async (response) => {
             that.save = response;
             that.saveViewMod = 'character';
             that.resolveInventoryImages();

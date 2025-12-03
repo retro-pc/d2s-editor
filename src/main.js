@@ -15,7 +15,7 @@ import { constants_blizzless_beta_99 } from '../public/d2/constants_blizzless_be
 import { constants_blizzless_99 } from '../public/d2/constants_blizzless_99.js';
 
 import App from './components/App.vue';
-import utils from './utils.js';
+import utils from './utils.mjs';
 
 const app = createApp({
   render() {
