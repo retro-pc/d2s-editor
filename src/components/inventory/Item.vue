@@ -1,11 +1,12 @@
 <template>
   <div>
-    <div ref="itemRef" tabindex="0" :class="itemClass" v-on:dragstart="dragStart" @click="onClick">
+    <div ref="itemRef" tabindex="0" :class="itemClass" v-on:dragstart="dragStart" @click="onClick" @mouseover="mouseOver" @mouseleave="mouseLeave">
       <div :class="innerClass">
         <img :src="item.src" :class="{ ethereal: item.ethereal}" />
-        <div v-if="item.total_nr_of_sockets && tooltipShown" class="sockets">
+        <div v-if="item.total_nr_of_sockets && over" class="sockets">
           <div :style="socketStyle(idx)" class="socket"
             :class="{ 'empty-socket': !item.socketed_items || !item.socketed_items[idx-1]}"
+            inert="true"
             v-for="idx in item.total_nr_of_sockets" :key="idx">
             <img v-if="item.socketed_items && item.socketed_items[idx-1]" :src="item.socketed_items[idx-1].src" />
           </div>
@@ -55,6 +56,7 @@
         tooltipShown: false,
         tooltip: null,
         edit: false,
+        over: false,
         contextMenuShown: false,
       };
     },
@@ -235,11 +237,18 @@
         this.$emit('select');
       },
       dragStart(event) {
+        this.tooltip.hide();
         localStorage.setItem('dragElement', JSON.stringify({
           uuid: window.uuid,
           item: this.item
         }));
-      }
+      },
+      mouseOver() {
+        this.over = true;
+      },
+      mouseLeave() {
+        this.over = false;
+      },
     }
   };  
 </script>

@@ -11,14 +11,14 @@
         <template v-if="isClass(stat.id, valIdx)">
           <multiselect v-model.number="stat.values[valIdx-1]" :options="classes.map(charClass => ({value: charClass.id, label: charClass.co}))" :searchable="true" :canDeselect="false" :canClear="false" @update:model-value="onItemModified"/>
         </template>
-        <template v-else-if="isClassSkill(stat.id, valIdx)">
+        <template v-else-if="isClassSkillTab(stat.id, valIdx)">
           <multiselect v-model.number="stat.values[valIdx-1]" :options="[0, 1, 2].map(idx2 => ({value: idx2, label: classes[stat.values[valIdx]].ts[idx2]}))" :searchable="true" :canDeselect="false" :canClear="false" @update:model-value="onItemModified"/>
         </template>
         <template v-else-if="isSkill(stat.id, valIdx)">
           <multiselect v-model.number="stat.values[valIdx-1]" :options="skills_options" :searchable="true" :canDeselect="false" :canClear="false" @update:model-value="onItemModified"/>
         </template>
-        <input type="number" class= "edit-box" :min="getMinValue(stat.id)" :max="getMaxValue(stat.id)" @input="changeStatValue(stat.id, stat.values, valIdx-1)"
-          :id="id + 'Stat' + statIdx + 'Index'+ valIdx" v-model.number="stat.values[valIdx-1]" v-else>
+        <input v-else :id="id + 'Stat' + statIdx + 'Index'+ valIdx" v-model.number="stat.values[valIdx-1]"
+        type="number" class= "edit-box" :min="getMinValue(stat.id, valIdx -1)" :max="getMaxValue(stat.id, valIdx - 1)" @input="changeStatValue(stat.id, stat.values, valIdx-1)">
       </div>
     </div>
     
@@ -52,16 +52,42 @@ export default {
   },
   methods: {
     onItemModified() {
+      for (let i = 0; i < this.itemStats.length; i++) {
+        let numVal = this.numValues(this.itemStats[i].id);
+        if (numVal != this.itemStats[i].values.length) {
+          this.itemStats[i].values = [0, 0, 0, 0].slice(0, numVal);
+        }
+      }
       this.$emit('stat-change', this.itemStats)
     },
-    getMaxValue(id) {
-      let stat = this.stats[id];
-      let add = stat.sA ? stat.sA : 0;
-      return utils.shift(1, stat.sB) - 1 - add;
+    addNewStat() {
+      const updated = Array.isArray(this.itemStats)
+        ? [...this.itemStats, { id: 0, values: [1, 0, 1] }]
+        : [{ id: 0, values: [1, 0, 1] }];
+      this.$emit('update:itemStats', updated);
+
+      //this.itemStats.push({ id: 0, values: [0] });
+      this.onItemModified();
     },
-    getMinValue(id) {
-      //for the stat to be present need value > 0
-      let stat = this.stats[id];
+    getMaxValue(statId, valIdx) {
+      let stat = this.stats[statId];
+      if (stat.np && valIdx < stat.np) {
+        // Stat is a succession of np values (ex: coldmindam > coldmaxdam > coldlength)
+        stat = this.stats[statId + valIdx];
+      }
+      const bitSize = this.getValueBitSize(stat, valIdx);
+      const add = stat.sA ? stat.sA : 0;
+      return utils.shift(1, bitSize) - 1 - add;
+    },
+    getMinValue(statId, valIdx) {
+      let stat = this.stats[statId];
+      if (valIdx > 0) {
+        if (stat.np && valIdx < stat.np) {
+          // Stat is a succession of np values (ex: coldmindam > coldmaxdam > coldlength)
+          stat = this.stats[statId + valIdx];
+        }
+        // TODO: encode
+      }
       let add = stat.sA ? stat.sA : 0;
       return -add;
     },
@@ -78,16 +104,6 @@ export default {
 
       this.onItemModified();
     },
-    addNewStat() {
-      const updated = Array.isArray(this.itemStats)
-        ? [...this.itemStats, { id: 0, values: [1, 0, 1] }]
-        : [{ id: 0, values: [1, 0, 1] }];
-      this.$emit('update:itemStats', updated);
-
-      //this.itemStats.push({ id: 0, values: [0, 0] });
-      //this.itemStats.push({ id: 0, values: [1, 0, 1] });
-      this.onItemModified();
-    },
     removeStat(idx) {
       this.itemStats.splice(idx, 1);
       this.onItemModified();
@@ -102,7 +118,7 @@ export default {
       }
       return false;
     },
-    isClassSkill(id, idx) {
+    isClassSkillTab(id, idx) {
       let stat = this.stats[id];
       if ((stat.dF == 14) && idx == 1) {
         return true;
@@ -111,16 +127,6 @@ export default {
     },
     isSkill(id, idx) {
       let stat = this.stats[id];
-      // if (stat.dF == 14) {
-      //   return false;
-      // }
-      // if (stat.sP) {
-      //   if (stat.e == 3 || stat.e == 2) {
-      //     return idx == 2;
-      //   } else {
-      //     return idx == 1;
-      //   }
-      // }
       if (stat.dF == 15 || stat.dF == 24) {
         // Similar to e=2 or 3
         return idx == 2;
@@ -151,6 +157,29 @@ export default {
         }
         return 1;
       }
+    },
+    getValueBitSize(itemStatDef, valIdx) {
+      // 0-indexed
+      let bitSize = itemStatDef.sB;
+      switch (itemStatDef.e) {
+        case 1: // Logic is reversed: Param is the value, and values are the Params
+          if (valIdx == 1 && itemStatDef.sP) bitSize = itemStatDef.sP;
+          break;
+        case 2: // 2 Params (6bits skill level + 10bits skill ID) + 1 Value (7bits chance)
+          if (valIdx == 0) bitSize = 6;
+          if (valIdx == 1) bitSize = 10;
+          break;
+        case 3: // 2 Params (6bits skill level + 10bits skill ID) + 2 Values (8bits current charges, 8bits max charges)
+          if (valIdx == 0) bitSize = 6;
+          if (valIdx == 1) bitSize = 10;
+          if (valIdx == 2) bitSize = 8;
+          if (valIdx == 3) bitSize = 8;
+          break;
+        default: // Undefined: optional (sP bits param) + sB bits value
+          if (valIdx == 0 && itemStatDef.sP) bitSize = itemStatDef.sP;
+          break;
+      }
+      return bitSize;
     }
   }
 }  

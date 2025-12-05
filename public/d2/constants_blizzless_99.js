@@ -21571,7 +21571,14 @@ export let constants_blizzless_99 = {
                     "max": 2
                 }
             ],
-            "ms": []
+            "ms": [
+                {
+                    "prop": "skilltab",
+                    "p": 18,
+                    "min": 2,
+                    "max": 2
+                }
+            ]
         },
         {
             "id": 63,
@@ -21612,7 +21619,19 @@ export let constants_blizzless_99 = {
                     "max": 30
                 }
             ],
-            "ms": []
+            "ms": [
+                {
+                    "prop": "skilltab",
+                    "p": 18,
+                    "min": 2,
+                    "max": 2
+                },
+                {
+                    "prop": "dmg-max",
+                    "min": 127,
+                    "max": 127
+                }
+            ]
         },
         {
             "id": 64,
@@ -21652,7 +21671,14 @@ export let constants_blizzless_99 = {
                     "max": 3
                 }
             ],
-            "ms": []
+            "ms": [
+                {
+                    "prop": "skilltab",
+                    "p": 18,
+                    "min": 2,
+                    "max": 2
+                }
+            ]
         },
         {
             "id": 65,
@@ -21691,7 +21717,14 @@ export let constants_blizzless_99 = {
                     "max": 25
                 }
             ],
-            "ms": []
+            "ms": [
+                {
+                    "prop": "skilltab",
+                    "p": 18,
+                    "min": 2,
+                    "max": 2
+                }
+            ]
         },
         {
             "id": 66,
@@ -22317,7 +22350,13 @@ export let constants_blizzless_99 = {
                     "max": 42
                 }
             ],
-            "ms": []
+            "ms": [
+                {
+                    "prop": "cast2",
+                    "min": 10,
+                    "max": 10
+                }
+            ]
         },
         {
             "id": 78,
@@ -22566,7 +22605,19 @@ export let constants_blizzless_99 = {
                     "max": 350
                 }
             ],
-            "ms": []
+            "ms": [
+                {
+                    "prop": "skilltab",
+                    "p": 9,
+                    "min": 2,
+                    "max": 2
+                },
+                {
+                    "prop": "extra-ltng",
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 83,
@@ -22767,6 +22818,11 @@ export let constants_blizzless_99 = {
                     "prop": "res-ltng",
                     "min": 50,
                     "max": 50
+                },
+                {
+                    "prop": "red-dmg%",
+                    "min": 25,
+                    "max": 25
                 }
             ]
         },
@@ -23998,7 +24054,13 @@ export let constants_blizzless_99 = {
                     "max": 5
                 }
             ],
-            "ms": []
+            "ms": [
+                {
+                    "prop": "state",
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         },
         {
             "id": 119,
