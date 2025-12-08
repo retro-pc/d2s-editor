@@ -1,16 +1,14 @@
-let constants_diablo2_96 = {
+export let constants_diablo2_96 = {
     "classes": [
         {
             "id": 0,
             "n": "Amazon",
             "c": "ama",
-            "as": "to Amazon Skill Levels",
             "ts": [
-                "+%d to Bow and Crossbow Skills",
-                "+%d to Passive and Magic Skills",
-                "+%d to Javelin and Spear Skills"
+                null,
+                null,
+                null
             ],
-            "co": "(Amazon Only)",
             "s": {
                 "lpl": 8,
                 "mpl": 6,
@@ -32,13 +30,11 @@ let constants_diablo2_96 = {
             "id": 1,
             "n": "Sorceress",
             "c": "sor",
-            "as": "to Sorceress Skill Levels",
             "ts": [
-                "+%d to Fire Skills",
-                "+%d to Lightning Skills",
-                "+%d to Cold Skills"
+                null,
+                null,
+                null
             ],
-            "co": "(Sorceress Only)",
             "s": {
                 "lpl": 4,
                 "mpl": 8,
@@ -60,13 +56,11 @@ let constants_diablo2_96 = {
             "id": 2,
             "n": "Necromancer",
             "c": "nec",
-            "as": "to Necromancer Skill Levels",
             "ts": [
-                "+%d to Curses",
-                "+%d to Poison and Bone Skills",
-                "+%d to Summoning Skills"
+                null,
+                null,
+                null
             ],
-            "co": "(Necromancer Only)",
             "s": {
                 "lpl": 6,
                 "mpl": 8,
@@ -88,13 +82,11 @@ let constants_diablo2_96 = {
             "id": 3,
             "n": "Paladin",
             "c": "pal",
-            "as": "to Paladin Skill Levels",
             "ts": [
-                "+%d to Combat Skills",
-                "+%d to Offensive Auras",
-                "+%d to Defensive Auras"
+                null,
+                null,
+                null
             ],
-            "co": "(Paladin Only)",
             "s": {
                 "lpl": 8,
                 "mpl": 6,
@@ -116,13 +108,11 @@ let constants_diablo2_96 = {
             "id": 4,
             "n": "Barbarian",
             "c": "bar",
-            "as": "to Barbarian Skill Levels",
             "ts": [
-                "+%d to Combat Skills",
-                "+%d to Masteries",
-                "+%d to Warcries"
+                null,
+                null,
+                null
             ],
-            "co": "(Barbarian Only)",
             "s": {
                 "lpl": 8,
                 "mpl": 4,
@@ -144,13 +134,11 @@ let constants_diablo2_96 = {
             "id": 5,
             "n": "Druid",
             "c": "dru",
-            "as": "to Druid Skills",
             "ts": [
-                "+%d to Summoning Skills",
-                "+%d to Shape Shifting Skills",
-                "+%d to Elemental Skills"
+                null,
+                null,
+                null
             ],
-            "co": "(Druid Only)",
             "s": {
                 "lpl": 6,
                 "mpl": 8,
@@ -172,13 +160,11 @@ let constants_diablo2_96 = {
             "id": 6,
             "n": "Assassin",
             "c": "ass",
-            "as": "to Assassin Skills",
             "ts": [
-                "+%d to Traps",
-                "+%d to Shadow Disciplines",
-                "+%d to Martial Arts"
+                null,
+                null,
+                null
             ],
-            "co": "(Assassin Only)",
             "s": {
                 "lpl": 8,
                 "mpl": 6,
@@ -200,1230 +186,1808 @@ let constants_diablo2_96 = {
     "skills": [
         {
             "id": 0,
-            "s": "Attack"
+            "s": "Expansion",
+            "n": "Expansion"
         },
         {
             "id": 1,
-            "s": "Kick"
+            "s": "Kick",
+            "n": "Kick"
         },
         {
             "id": 2,
-            "s": "Throw"
+            "s": "Throw",
+            "n": "Throw"
         },
         {
             "id": 3,
-            "s": "Unsummon"
+            "s": "Unsummon",
+            "n": "Unsummon"
         },
         {
             "id": 4,
-            "s": "Left Hand Throw"
+            "s": "Left Hand Throw",
+            "n": "Left Hand Throw"
         },
         {
             "id": 5,
-            "s": "Left Hand Swing"
+            "s": "Left Hand Swing",
+            "n": "Left Hand Swing"
         },
         {
             "id": 6,
             "s": "Magic Arrow",
+            "n": "Magic Arrow",
             "c": "ama"
         },
         {
             "id": 7,
             "s": "Fire Arrow",
+            "n": "Fire Arrow",
             "c": "ama"
         },
         {
             "id": 8,
             "s": "Inner Sight",
+            "n": "Inner Sight",
             "c": "ama"
         },
         {
             "id": 9,
             "s": "Critical Strike",
+            "n": "Critical Strike",
             "c": "ama"
         },
         {
             "id": 10,
             "s": "Jab",
+            "n": "Jab",
             "c": "ama"
         },
         {
             "id": 11,
             "s": "Cold Arrow",
+            "n": "Cold Arrow",
             "c": "ama"
         },
         {
             "id": 12,
             "s": "Multiple Shot",
+            "n": "Multiple Shot",
             "c": "ama"
         },
         {
             "id": 13,
             "s": "Dodge",
+            "n": "Dodge",
             "c": "ama"
         },
         {
             "id": 14,
             "s": "Power Strike",
+            "n": "Power Strike",
             "c": "ama"
         },
         {
             "id": 15,
             "s": "Poison Javelin",
+            "n": "Poison Javelin",
             "c": "ama"
         },
         {
             "id": 16,
             "s": "Exploding Arrow",
+            "n": "Exploding Arrow",
             "c": "ama"
         },
         {
             "id": 17,
             "s": "Slow Missiles",
+            "n": "Slow Missiles",
             "c": "ama"
         },
         {
             "id": 18,
             "s": "Avoid",
+            "n": "Avoid",
             "c": "ama"
         },
         {
             "id": 19,
             "s": "Impale",
+            "n": "Impale",
             "c": "ama"
         },
         {
             "id": 20,
             "s": "Lightning Bolt",
+            "n": "Lightning Bolt",
             "c": "ama"
         },
         {
             "id": 21,
             "s": "Ice Arrow",
+            "n": "Ice Arrow",
             "c": "ama"
         },
         {
             "id": 22,
             "s": "Guided Arrow",
+            "n": "Guided Arrow",
             "c": "ama"
         },
         {
             "id": 23,
             "s": "Penetrate",
+            "n": "Penetrate",
             "c": "ama"
         },
         {
             "id": 24,
             "s": "Charged Strike",
+            "n": "Charged Strike",
             "c": "ama"
         },
         {
             "id": 25,
             "s": "Plague Javelin",
+            "n": "Plague Javelin",
             "c": "ama"
         },
         {
             "id": 26,
             "s": "Strafe",
+            "n": "Strafe",
             "c": "ama"
         },
         {
             "id": 27,
             "s": "Immolation Arrow",
+            "n": "Immolation Arrow",
             "c": "ama"
         },
         {
             "id": 28,
-            "s": "Decoy",
+            "s": "Dopplezon",
+            "n": "Dopplezon",
             "c": "ama"
         },
         {
             "id": 29,
             "s": "Evade",
+            "n": "Evade",
             "c": "ama"
         },
         {
             "id": 30,
             "s": "Fend",
+            "n": "Fend",
             "c": "ama"
         },
         {
             "id": 31,
             "s": "Freezing Arrow",
+            "n": "Freezing Arrow",
             "c": "ama"
         },
         {
             "id": 32,
             "s": "Valkyrie",
+            "n": "Valkyrie",
             "c": "ama"
         },
         {
             "id": 33,
             "s": "Pierce",
+            "n": "Pierce",
             "c": "ama"
         },
         {
             "id": 34,
             "s": "Lightning Strike",
+            "n": "Lightning Strike",
             "c": "ama"
         },
         {
             "id": 35,
             "s": "Lightning Fury",
+            "n": "Lightning Fury",
             "c": "ama"
         },
         {
             "id": 36,
             "s": "Fire Bolt",
+            "n": "Fire Bolt",
             "c": "sor"
         },
         {
             "id": 37,
             "s": "Warmth",
+            "n": "Warmth",
             "c": "sor"
         },
         {
             "id": 38,
             "s": "Charged Bolt",
+            "n": "Charged Bolt",
             "c": "sor"
         },
         {
             "id": 39,
             "s": "Ice Bolt",
+            "n": "Ice Bolt",
             "c": "sor"
         },
         {
             "id": 40,
             "s": "Frozen Armor",
+            "n": "Frozen Armor",
             "c": "sor"
         },
         {
             "id": 41,
             "s": "Inferno",
+            "n": "Inferno",
             "c": "sor"
         },
         {
             "id": 42,
             "s": "Static Field",
+            "n": "Static Field",
             "c": "sor"
         },
         {
             "id": 43,
             "s": "Telekinesis",
+            "n": "Telekinesis",
             "c": "sor"
         },
         {
             "id": 44,
             "s": "Frost Nova",
+            "n": "Frost Nova",
             "c": "sor"
         },
         {
             "id": 45,
             "s": "Ice Blast",
+            "n": "Ice Blast",
             "c": "sor"
         },
         {
             "id": 46,
             "s": "Blaze",
+            "n": "Blaze",
             "c": "sor"
         },
         {
             "id": 47,
             "s": "Fire Ball",
+            "n": "Fire Ball",
             "c": "sor"
         },
         {
             "id": 48,
             "s": "Nova",
+            "n": "Nova",
             "c": "sor"
         },
         {
             "id": 49,
             "s": "Lightning",
+            "n": "Lightning",
             "c": "sor"
         },
         {
             "id": 50,
             "s": "Shiver Armor",
+            "n": "Shiver Armor",
             "c": "sor"
         },
         {
             "id": 51,
             "s": "Fire Wall",
+            "n": "Fire Wall",
             "c": "sor"
         },
         {
             "id": 52,
             "s": "Enchant",
+            "n": "Enchant",
             "c": "sor"
         },
         {
             "id": 53,
             "s": "Chain Lightning",
+            "n": "Chain Lightning",
             "c": "sor"
         },
         {
             "id": 54,
             "s": "Teleport",
+            "n": "Teleport",
             "c": "sor"
         },
         {
             "id": 55,
             "s": "Glacial Spike",
+            "n": "Glacial Spike",
             "c": "sor"
         },
         {
             "id": 56,
             "s": "Meteor",
+            "n": "Meteor",
             "c": "sor"
         },
         {
             "id": 57,
             "s": "Thunder Storm",
+            "n": "Thunder Storm",
             "c": "sor"
         },
         {
             "id": 58,
             "s": "Energy Shield",
+            "n": "Energy Shield",
             "c": "sor"
         },
         {
             "id": 59,
             "s": "Blizzard",
+            "n": "Blizzard",
             "c": "sor"
         },
         {
             "id": 60,
             "s": "Chilling Armor",
+            "n": "Chilling Armor",
             "c": "sor"
         },
         {
             "id": 61,
             "s": "Fire Mastery",
+            "n": "Fire Mastery",
             "c": "sor"
         },
         {
             "id": 62,
             "s": "Hydra",
+            "n": "Hydra",
             "c": "sor"
         },
         {
             "id": 63,
             "s": "Lightning Mastery",
+            "n": "Lightning Mastery",
             "c": "sor"
         },
         {
             "id": 64,
             "s": "Frozen Orb",
+            "n": "Frozen Orb",
             "c": "sor"
         },
         {
             "id": 65,
             "s": "Cold Mastery",
+            "n": "Cold Mastery",
             "c": "sor"
         },
         {
             "id": 66,
             "s": "Amplify Damage",
+            "n": "Amplify Damage",
             "c": "nec"
         },
         {
             "id": 67,
             "s": "Teeth",
+            "n": "Teeth",
             "c": "nec"
         },
         {
             "id": 68,
             "s": "Bone Armor",
+            "n": "Bone Armor",
             "c": "nec"
         },
         {
             "id": 69,
             "s": "Skeleton Mastery",
+            "n": "Skeleton Mastery",
             "c": "nec"
         },
         {
             "id": 70,
             "s": "Raise Skeleton",
+            "n": "Raise Skeleton",
             "c": "nec"
         },
         {
             "id": 71,
             "s": "Dim Vision",
+            "n": "Dim Vision",
             "c": "nec"
         },
         {
             "id": 72,
             "s": "Weaken",
+            "n": "Weaken",
             "c": "nec"
         },
         {
             "id": 73,
             "s": "Poison Dagger",
+            "n": "Poison Dagger",
             "c": "nec"
         },
         {
             "id": 74,
             "s": "Corpse Explosion",
+            "n": "Corpse Explosion",
             "c": "nec"
         },
         {
             "id": 75,
             "s": "Clay Golem",
+            "n": "Clay Golem",
             "c": "nec"
         },
         {
             "id": 76,
             "s": "Iron Maiden",
+            "n": "Iron Maiden",
             "c": "nec"
         },
         {
             "id": 77,
             "s": "Terror",
+            "n": "Terror",
             "c": "nec"
         },
         {
             "id": 78,
             "s": "Bone Wall",
+            "n": "Bone Wall",
             "c": "nec"
         },
         {
             "id": 79,
             "s": "Golem Mastery",
+            "n": "Golem Mastery",
             "c": "nec"
         },
         {
             "id": 80,
             "s": "Raise Skeletal Mage",
+            "n": "Raise Skeletal Mage",
             "c": "nec"
         },
         {
             "id": 81,
             "s": "Confuse",
+            "n": "Confuse",
             "c": "nec"
         },
         {
             "id": 82,
             "s": "Life Tap",
+            "n": "Life Tap",
             "c": "nec"
         },
         {
             "id": 83,
             "s": "Poison Explosion",
+            "n": "Poison Explosion",
             "c": "nec"
         },
         {
             "id": 84,
             "s": "Bone Spear",
+            "n": "Bone Spear",
             "c": "nec"
         },
         {
             "id": 85,
-            "s": "Blood Golem",
+            "s": "BloodGolem",
+            "n": "BloodGolem",
             "c": "nec"
         },
         {
             "id": 86,
             "s": "Attract",
+            "n": "Attract",
             "c": "nec"
         },
         {
             "id": 87,
             "s": "Decrepify",
+            "n": "Decrepify",
             "c": "nec"
         },
         {
             "id": 88,
             "s": "Bone Prison",
+            "n": "Bone Prison",
             "c": "nec"
         },
         {
             "id": 89,
             "s": "Summon Resist",
+            "n": "Summon Resist",
             "c": "nec"
         },
         {
             "id": 90,
-            "s": "Iron Golem",
+            "s": "IronGolem",
+            "n": "IronGolem",
             "c": "nec"
         },
         {
             "id": 91,
             "s": "Lower Resist",
+            "n": "Lower Resist",
             "c": "nec"
         },
         {
             "id": 92,
             "s": "Poison Nova",
+            "n": "Poison Nova",
             "c": "nec"
         },
         {
             "id": 93,
             "s": "Bone Spirit",
+            "n": "Bone Spirit",
             "c": "nec"
         },
         {
             "id": 94,
-            "s": "Fire Golem",
+            "s": "FireGolem",
+            "n": "FireGolem",
             "c": "nec"
         },
         {
             "id": 95,
             "s": "Revive",
+            "n": "Revive",
             "c": "nec"
         },
         {
             "id": 96,
             "s": "Sacrifice",
+            "n": "Sacrifice",
             "c": "pal"
         },
         {
             "id": 97,
             "s": "Smite",
+            "n": "Smite",
             "c": "pal"
         },
         {
             "id": 98,
             "s": "Might",
+            "n": "Might",
             "c": "pal"
         },
         {
             "id": 99,
             "s": "Prayer",
+            "n": "Prayer",
             "c": "pal"
         },
         {
             "id": 100,
             "s": "Resist Fire",
+            "n": "Resist Fire",
             "c": "pal"
         },
         {
             "id": 101,
             "s": "Holy Bolt",
+            "n": "Holy Bolt",
             "c": "pal"
         },
         {
             "id": 102,
             "s": "Holy Fire",
+            "n": "Holy Fire",
             "c": "pal"
         },
         {
             "id": 103,
             "s": "Thorns",
+            "n": "Thorns",
             "c": "pal"
         },
         {
             "id": 104,
             "s": "Defiance",
+            "n": "Defiance",
             "c": "pal"
         },
         {
             "id": 105,
             "s": "Resist Cold",
+            "n": "Resist Cold",
             "c": "pal"
         },
         {
             "id": 106,
             "s": "Zeal",
+            "n": "Zeal",
             "c": "pal"
         },
         {
             "id": 107,
             "s": "Charge",
+            "n": "Charge",
             "c": "pal"
         },
         {
             "id": 108,
             "s": "Blessed Aim",
+            "n": "Blessed Aim",
             "c": "pal"
         },
         {
             "id": 109,
             "s": "Cleansing",
+            "n": "Cleansing",
             "c": "pal"
         },
         {
             "id": 110,
             "s": "Resist Lightning",
+            "n": "Resist Lightning",
             "c": "pal"
         },
         {
             "id": 111,
             "s": "Vengeance",
+            "n": "Vengeance",
             "c": "pal"
         },
         {
             "id": 112,
             "s": "Blessed Hammer",
+            "n": "Blessed Hammer",
             "c": "pal"
         },
         {
             "id": 113,
             "s": "Concentration",
+            "n": "Concentration",
             "c": "pal"
         },
         {
             "id": 114,
             "s": "Holy Freeze",
+            "n": "Holy Freeze",
             "c": "pal"
         },
         {
             "id": 115,
             "s": "Vigor",
+            "n": "Vigor",
             "c": "pal"
         },
         {
             "id": 116,
             "s": "Conversion",
+            "n": "Conversion",
             "c": "pal"
         },
         {
             "id": 117,
             "s": "Holy Shield",
+            "n": "Holy Shield",
             "c": "pal"
         },
         {
             "id": 118,
             "s": "Holy Shock",
+            "n": "Holy Shock",
             "c": "pal"
         },
         {
             "id": 119,
             "s": "Sanctuary",
+            "n": "Sanctuary",
             "c": "pal"
         },
         {
             "id": 120,
             "s": "Meditation",
+            "n": "Meditation",
             "c": "pal"
         },
         {
             "id": 121,
             "s": "Fist of the Heavens",
+            "n": "Fist of the Heavens",
             "c": "pal"
         },
         {
             "id": 122,
             "s": "Fanaticism",
+            "n": "Fanaticism",
             "c": "pal"
         },
         {
             "id": 123,
             "s": "Conviction",
+            "n": "Conviction",
             "c": "pal"
         },
         {
             "id": 124,
             "s": "Redemption",
+            "n": "Redemption",
             "c": "pal"
         },
         {
             "id": 125,
             "s": "Salvation",
+            "n": "Salvation",
             "c": "pal"
         },
         {
             "id": 126,
             "s": "Bash",
+            "n": "Bash",
             "c": "bar"
         },
         {
             "id": 127,
             "s": "Sword Mastery",
+            "n": "Sword Mastery",
             "c": "bar"
         },
         {
             "id": 128,
             "s": "Axe Mastery",
+            "n": "Axe Mastery",
             "c": "bar"
         },
         {
             "id": 129,
             "s": "Mace Mastery",
+            "n": "Mace Mastery",
             "c": "bar"
         },
         {
             "id": 130,
             "s": "Howl",
+            "n": "Howl",
             "c": "bar"
         },
         {
             "id": 131,
             "s": "Find Potion",
+            "n": "Find Potion",
             "c": "bar"
         },
         {
             "id": 132,
             "s": "Leap",
+            "n": "Leap",
             "c": "bar"
         },
         {
             "id": 133,
             "s": "Double Swing",
+            "n": "Double Swing",
             "c": "bar"
         },
         {
             "id": 134,
             "s": "Pole Arm Mastery",
+            "n": "Pole Arm Mastery",
             "c": "bar"
         },
         {
             "id": 135,
             "s": "Throwing Mastery",
+            "n": "Throwing Mastery",
             "c": "bar"
         },
         {
             "id": 136,
             "s": "Spear Mastery",
+            "n": "Spear Mastery",
             "c": "bar"
         },
         {
             "id": 137,
             "s": "Taunt",
+            "n": "Taunt",
             "c": "bar"
         },
         {
             "id": 138,
             "s": "Shout",
+            "n": "Shout",
             "c": "bar"
         },
         {
             "id": 139,
             "s": "Stun",
+            "n": "Stun",
             "c": "bar"
         },
         {
             "id": 140,
             "s": "Double Throw",
+            "n": "Double Throw",
             "c": "bar"
         },
         {
             "id": 141,
             "s": "Increased Stamina",
+            "n": "Increased Stamina",
             "c": "bar"
         },
         {
             "id": 142,
             "s": "Find Item",
+            "n": "Find Item",
             "c": "bar"
         },
         {
             "id": 143,
             "s": "Leap Attack",
+            "n": "Leap Attack",
             "c": "bar"
         },
         {
             "id": 144,
             "s": "Concentrate",
+            "n": "Concentrate",
             "c": "bar"
         },
         {
             "id": 145,
             "s": "Iron Skin",
+            "n": "Iron Skin",
             "c": "bar"
         },
         {
             "id": 146,
             "s": "Battle Cry",
+            "n": "Battle Cry",
             "c": "bar"
         },
         {
             "id": 147,
             "s": "Frenzy",
+            "n": "Frenzy",
             "c": "bar"
         },
         {
             "id": 148,
             "s": "Increased Speed",
+            "n": "Increased Speed",
             "c": "bar"
         },
         {
             "id": 149,
             "s": "Battle Orders",
+            "n": "Battle Orders",
             "c": "bar"
         },
         {
             "id": 150,
             "s": "Grim Ward",
+            "n": "Grim Ward",
             "c": "bar"
         },
         {
             "id": 151,
             "s": "Whirlwind",
+            "n": "Whirlwind",
             "c": "bar"
         },
         {
             "id": 152,
             "s": "Berserk",
+            "n": "Berserk",
             "c": "bar"
         },
         {
             "id": 153,
             "s": "Natural Resistance",
+            "n": "Natural Resistance",
             "c": "bar"
         },
         {
             "id": 154,
             "s": "War Cry",
+            "n": "War Cry",
             "c": "bar"
         },
         {
             "id": 155,
             "s": "Battle Command",
+            "n": "Battle Command",
             "c": "bar"
         },
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        {
+            "id": 156,
+            "s": "Fire Hit",
+            "n": "Fire Hit"
+        },
+        {
+            "id": 157,
+            "s": "UnHolyBolt",
+            "n": "UnHolyBolt"
+        },
+        {
+            "id": 158,
+            "s": "SkeletonRaise",
+            "n": "SkeletonRaise"
+        },
+        {
+            "id": 159,
+            "s": "MaggotEgg",
+            "n": "MaggotEgg"
+        },
+        {
+            "id": 160,
+            "s": "ShamanFire",
+            "n": "ShamanFire"
+        },
+        {
+            "id": 161,
+            "s": "MagottUp",
+            "n": "MagottUp"
+        },
+        {
+            "id": 162,
+            "s": "MagottDown",
+            "n": "MagottDown"
+        },
+        {
+            "id": 163,
+            "s": "MagottLay",
+            "n": "MagottLay"
+        },
+        {
+            "id": 164,
+            "s": "AndrialSpray",
+            "n": "AndrialSpray"
+        },
+        {
+            "id": 165,
+            "s": "Jump",
+            "n": "Jump"
+        },
+        {
+            "id": 166,
+            "s": "Swarm Move",
+            "n": "Swarm Move"
+        },
+        {
+            "id": 167,
+            "s": "Nest",
+            "n": "Nest"
+        },
+        {
+            "id": 168,
+            "s": "Quick Strike",
+            "n": "Quick Strike"
+        },
+        {
+            "id": 169,
+            "s": "VampireFireball",
+            "n": "VampireFireball"
+        },
+        {
+            "id": 170,
+            "s": "VampireFirewall",
+            "n": "VampireFirewall"
+        },
+        {
+            "id": 171,
+            "s": "VampireMeteor",
+            "n": "VampireMeteor"
+        },
+        {
+            "id": 172,
+            "s": "GargoyleTrap",
+            "n": "GargoyleTrap"
+        },
+        {
+            "id": 173,
+            "s": "SpiderLay",
+            "n": "SpiderLay"
+        },
+        {
+            "id": 174,
+            "s": "VampireHeal",
+            "n": "VampireHeal"
+        },
+        {
+            "id": 175,
+            "s": "VampireRaise",
+            "n": "VampireRaise"
+        },
+        {
+            "id": 176,
+            "s": "Submerge",
+            "n": "Submerge"
+        },
+        {
+            "id": 177,
+            "s": "FetishAura",
+            "n": "FetishAura"
+        },
+        {
+            "id": 178,
+            "s": "FetishInferno",
+            "n": "FetishInferno"
+        },
+        {
+            "id": 179,
+            "s": "ZakarumHeal",
+            "n": "ZakarumHeal"
+        },
+        {
+            "id": 180,
+            "s": "Emerge",
+            "n": "Emerge"
+        },
+        {
+            "id": 181,
+            "s": "Resurrect",
+            "n": "Resurrect"
+        },
+        {
+            "id": 182,
+            "s": "Bestow",
+            "n": "Bestow"
+        },
+        {
+            "id": 183,
+            "s": "MissileSkill1",
+            "n": "MissileSkill1"
+        },
+        {
+            "id": 184,
+            "s": "MonTeleport",
+            "n": "MonTeleport"
+        },
+        {
+            "id": 185,
+            "s": "PrimeLightning",
+            "n": "PrimeLightning"
+        },
+        {
+            "id": 186,
+            "s": "PrimeBolt",
+            "n": "PrimeBolt"
+        },
+        {
+            "id": 187,
+            "s": "PrimeBlaze",
+            "n": "PrimeBlaze"
+        },
+        {
+            "id": 188,
+            "s": "PrimeFirewall",
+            "n": "PrimeFirewall"
+        },
+        {
+            "id": 189,
+            "s": "PrimeSpike",
+            "n": "PrimeSpike"
+        },
+        {
+            "id": 190,
+            "s": "PrimeIceNova",
+            "n": "PrimeIceNova"
+        },
+        {
+            "id": 191,
+            "s": "PrimePoisonball",
+            "n": "PrimePoisonball"
+        },
+        {
+            "id": 192,
+            "s": "PrimePoisonNova",
+            "n": "PrimePoisonNova"
+        },
+        {
+            "id": 193,
+            "s": "DiabLight",
+            "n": "DiabLight"
+        },
+        {
+            "id": 194,
+            "s": "DiabCold",
+            "n": "DiabCold"
+        },
+        {
+            "id": 195,
+            "s": "DiabFire",
+            "n": "DiabFire"
+        },
+        {
+            "id": 196,
+            "s": "FingerMageSpider",
+            "n": "FingerMageSpider"
+        },
         {
             "id": 197,
-            "s": "Firestorm"
+            "s": "DiabWall",
+            "n": "DiabWall"
         },
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        {
+            "id": 198,
+            "s": "DiabRun",
+            "n": "DiabRun"
+        },
+        {
+            "id": 199,
+            "s": "DiabPrison",
+            "n": "DiabPrison"
+        },
+        {
+            "id": 200,
+            "s": "PoisonBallTrap",
+            "n": "PoisonBallTrap"
+        },
+        {
+            "id": 201,
+            "s": "AndyPoisonBolt",
+            "n": "AndyPoisonBolt"
+        },
+        {
+            "id": 202,
+            "s": "HireableMissile",
+            "n": "HireableMissile"
+        },
+        {
+            "id": 203,
+            "s": "DesertTurret",
+            "n": "DesertTurret"
+        },
+        {
+            "id": 204,
+            "s": "ArcaneTower",
+            "n": "ArcaneTower"
+        },
+        {
+            "id": 205,
+            "s": "MonBlizzard",
+            "n": "MonBlizzard"
+        },
+        {
+            "id": 206,
+            "s": "Mosquito",
+            "n": "Mosquito"
+        },
+        {
+            "id": 207,
+            "s": "CursedBallTrapRight",
+            "n": "CursedBallTrapRight"
+        },
+        {
+            "id": 208,
+            "s": "CursedBallTrapLeft",
+            "n": "CursedBallTrapLeft"
+        },
+        {
+            "id": 209,
+            "s": "MonFrozenArmor",
+            "n": "MonFrozenArmor"
+        },
+        {
+            "id": 210,
+            "s": "MonBoneArmor",
+            "n": "MonBoneArmor"
+        },
+        {
+            "id": 211,
+            "s": "MonBoneSpirit",
+            "n": "MonBoneSpirit"
+        },
+        {
+            "id": 212,
+            "s": "MonCurseCast",
+            "n": "MonCurseCast"
+        },
+        {
+            "id": 213,
+            "s": "HellMeteor",
+            "n": "HellMeteor"
+        },
+        {
+            "id": 214,
+            "s": "RegurgitatorEat",
+            "n": "RegurgitatorEat"
+        },
+        {
+            "id": 215,
+            "s": "MonFrenzy",
+            "n": "MonFrenzy"
+        },
+        {
+            "id": 216,
+            "s": "QueenDeath",
+            "n": "QueenDeath"
+        },
         {
             "id": 217,
-            "s": "Scroll of Identify"
+            "s": "Scroll of Identify",
+            "n": "Scroll of Identify"
         },
         {
             "id": 218,
-            "s": "Tome of Identify"
+            "s": "Book of Identify",
+            "n": "Book of Identify"
         },
         {
             "id": 219,
-            "s": "Scroll of Townportal"
+            "s": "Scroll of Townportal",
+            "n": "Scroll of Townportal"
         },
         {
             "id": 220,
-            "s": "Tome of Townportal"
+            "s": "Book of Townportal",
+            "n": "Book of Townportal"
         },
         {
             "id": 221,
             "s": "Raven",
+            "n": "Raven",
             "c": "dru"
         },
         {
             "id": 222,
-            "s": "Poison Creeper",
+            "s": "Plague Poppy",
+            "n": "Plague Poppy",
             "c": "dru"
         },
         {
             "id": 223,
-            "s": "Werewolf",
+            "s": "Dire Wolf",
+            "n": "Dire Wolf",
             "c": "dru"
         },
         {
             "id": 224,
-            "s": "Lycanthropy",
+            "s": "Shape Shifting",
+            "n": "Shape Shifting",
             "c": "dru"
         },
         {
             "id": 225,
             "s": "Firestorm",
+            "n": "Firestorm",
             "c": "dru"
         },
         {
             "id": 226,
             "s": "Oak Sage",
+            "n": "Oak Sage",
             "c": "dru"
         },
         {
             "id": 227,
             "s": "Summon Spirit Wolf",
+            "n": "Summon Spirit Wolf",
             "c": "dru"
         },
         {
             "id": 228,
-            "s": "Werebear",
+            "s": "Mammoth Bear",
+            "n": "Mammoth Bear",
             "c": "dru"
         },
         {
             "id": 229,
             "s": "Molten Boulder",
+            "n": "Molten Boulder",
             "c": "dru"
         },
         {
             "id": 230,
             "s": "Arctic Blast",
+            "n": "Arctic Blast",
             "c": "dru"
         },
         {
             "id": 231,
-            "s": "Carrion Vine",
+            "s": "Cycle of Life",
+            "n": "Cycle of Life",
             "c": "dru"
         },
         {
             "id": 232,
             "s": "Feral Rage",
+            "n": "Feral Rage",
             "c": "dru"
         },
         {
             "id": 233,
             "s": "Maul",
+            "n": "Maul",
             "c": "dru"
         },
         {
             "id": 234,
-            "s": "Fissure",
+            "s": "Eruption",
+            "n": "Eruption",
             "c": "dru"
         },
         {
             "id": 235,
             "s": "Cyclone Armor",
+            "n": "Cyclone Armor",
             "c": "dru"
         },
         {
             "id": 236,
             "s": "Heart of Wolverine",
+            "n": "Heart of Wolverine",
             "c": "dru"
         },
         {
             "id": 237,
-            "s": "Summon Dire Wolf",
+            "s": "Summon Fenris",
+            "n": "Summon Fenris",
             "c": "dru"
         },
         {
             "id": 238,
             "s": "Rabies",
+            "n": "Rabies",
             "c": "dru"
         },
         {
             "id": 239,
             "s": "Fire Claws",
+            "n": "Fire Claws",
             "c": "dru"
         },
         {
             "id": 240,
             "s": "Twister",
+            "n": "Twister",
             "c": "dru"
         },
         {
             "id": 241,
-            "s": "Solar Creeper",
+            "s": "Vines",
+            "n": "Vines",
             "c": "dru"
         },
         {
             "id": 242,
             "s": "Hunger",
+            "n": "Hunger",
             "c": "dru"
         },
         {
             "id": 243,
             "s": "Shock Wave",
+            "n": "Shock Wave",
             "c": "dru"
         },
         {
             "id": 244,
             "s": "Volcano",
+            "n": "Volcano",
             "c": "dru"
         },
         {
             "id": 245,
             "s": "Tornado",
+            "n": "Tornado",
             "c": "dru"
         },
         {
             "id": 246,
             "s": "Spirit of Barbs",
+            "n": "Spirit of Barbs",
             "c": "dru"
         },
         {
             "id": 247,
             "s": "Summon Grizzly",
+            "n": "Summon Grizzly",
             "c": "dru"
         },
         {
             "id": 248,
             "s": "Fury",
+            "n": "Fury",
             "c": "dru"
         },
         {
             "id": 249,
             "s": "Armageddon",
+            "n": "Armageddon",
             "c": "dru"
         },
         {
             "id": 250,
             "s": "Hurricane",
+            "n": "Hurricane",
             "c": "dru"
         },
         {
             "id": 251,
-            "s": "Fire Blast",
+            "s": "Fire Trauma",
+            "n": "Fire Trauma",
             "c": "ass"
         },
         {
             "id": 252,
             "s": "Claw Mastery",
+            "n": "Claw Mastery",
             "c": "ass"
         },
         {
             "id": 253,
             "s": "Psychic Hammer",
+            "n": "Psychic Hammer",
             "c": "ass"
         },
         {
             "id": 254,
             "s": "Tiger Strike",
+            "n": "Tiger Strike",
             "c": "ass"
         },
         {
             "id": 255,
             "s": "Dragon Talon",
+            "n": "Dragon Talon",
             "c": "ass"
         },
         {
             "id": 256,
-            "s": "Shock Web",
+            "s": "Shock Field",
+            "n": "Shock Field",
             "c": "ass"
         },
         {
             "id": 257,
             "s": "Blade Sentinel",
+            "n": "Blade Sentinel",
             "c": "ass"
         },
         {
             "id": 258,
-            "s": "Burst of Speed",
+            "s": "Quickness",
+            "n": "Quickness",
             "c": "ass"
         },
         {
             "id": 259,
             "s": "Fists of Fire",
+            "n": "Fists of Fire",
             "c": "ass"
         },
         {
             "id": 260,
             "s": "Dragon Claw",
+            "n": "Dragon Claw",
             "c": "ass"
         },
         {
             "id": 261,
             "s": "Charged Bolt Sentry",
+            "n": "Charged Bolt Sentry",
             "c": "ass"
         },
         {
             "id": 262,
-            "s": "Wake of Fire",
+            "s": "Wake of Fire Sentry",
+            "n": "Wake of Fire Sentry",
             "c": "ass"
         },
         {
             "id": 263,
             "s": "Weapon Block",
+            "n": "Weapon Block",
             "c": "ass"
         },
         {
             "id": 264,
             "s": "Cloak of Shadows",
+            "n": "Cloak of Shadows",
             "c": "ass"
         },
         {
             "id": 265,
             "s": "Cobra Strike",
+            "n": "Cobra Strike",
             "c": "ass"
         },
         {
             "id": 266,
             "s": "Blade Fury",
+            "n": "Blade Fury",
             "c": "ass"
         },
         {
             "id": 267,
             "s": "Fade",
+            "n": "Fade",
             "c": "ass"
         },
         {
             "id": 268,
             "s": "Shadow Warrior",
+            "n": "Shadow Warrior",
             "c": "ass"
         },
         {
             "id": 269,
             "s": "Claws of Thunder",
+            "n": "Claws of Thunder",
             "c": "ass"
         },
         {
             "id": 270,
             "s": "Dragon Tail",
+            "n": "Dragon Tail",
             "c": "ass"
         },
         {
             "id": 271,
             "s": "Lightning Sentry",
+            "n": "Lightning Sentry",
             "c": "ass"
         },
         {
             "id": 272,
-            "s": "Wake of Inferno",
+            "s": "Inferno Sentry",
+            "n": "Inferno Sentry",
             "c": "ass"
         },
         {
             "id": 273,
             "s": "Mind Blast",
+            "n": "Mind Blast",
             "c": "ass"
         },
         {
             "id": 274,
             "s": "Blades of Ice",
+            "n": "Blades of Ice",
             "c": "ass"
         },
         {
             "id": 275,
             "s": "Dragon Flight",
+            "n": "Dragon Flight",
             "c": "ass"
         },
         {
             "id": 276,
             "s": "Death Sentry",
+            "n": "Death Sentry",
             "c": "ass"
         },
         {
             "id": 277,
             "s": "Blade Shield",
+            "n": "Blade Shield",
             "c": "ass"
         },
         {
             "id": 278,
             "s": "Venom",
+            "n": "Venom",
             "c": "ass"
         },
         {
             "id": 279,
             "s": "Shadow Master",
+            "n": "Shadow Master",
             "c": "ass"
         },
         {
             "id": 280,
-            "s": "Phoenix Strike",
+            "s": "Royal Strike",
+            "n": "Royal Strike",
             "c": "ass"
         },
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         {
-            "id": 350,
-            "s": "Delirium"
+            "id": 281,
+            "s": "Wake Of Destruction Sentry",
+            "n": "Wake Of Destruction Sentry"
+        },
+        {
+            "id": 282,
+            "s": "Imp Inferno",
+            "n": "Imp Inferno"
+        },
+        {
+            "id": 283,
+            "s": "Imp Fireball",
+            "n": "Imp Fireball"
+        },
+        {
+            "id": 284,
+            "s": "Baal Taunt",
+            "n": "Baal Taunt"
+        },
+        {
+            "id": 285,
+            "s": "Baal Corpse Explode",
+            "n": "Baal Corpse Explode"
+        },
+        {
+            "id": 286,
+            "s": "Baal Monster Spawn",
+            "n": "Baal Monster Spawn"
+        },
+        {
+            "id": 287,
+            "s": "Catapult Charged Ball",
+            "n": "Catapult Charged Ball"
+        },
+        {
+            "id": 288,
+            "s": "Catapult Spike Ball",
+            "n": "Catapult Spike Ball"
+        },
+        {
+            "id": 289,
+            "s": "Suck Blood",
+            "n": "Suck Blood"
+        },
+        {
+            "id": 290,
+            "s": "Cry Help",
+            "n": "Cry Help"
+        },
+        {
+            "id": 291,
+            "s": "Healing Vortex",
+            "n": "Healing Vortex"
+        },
+        {
+            "id": 292,
+            "s": "Teleport 2",
+            "n": "Teleport 2"
+        },
+        {
+            "id": 293,
+            "s": "Self-resurrect",
+            "n": "Self-resurrect"
+        },
+        {
+            "id": 294,
+            "s": "Vine Attack",
+            "n": "Vine Attack"
+        },
+        {
+            "id": 295,
+            "s": "Overseer Whip",
+            "n": "Overseer Whip"
+        },
+        {
+            "id": 296,
+            "s": "Barbs Aura",
+            "n": "Barbs Aura"
+        },
+        {
+            "id": 297,
+            "s": "Wolverine Aura",
+            "n": "Wolverine Aura"
+        },
+        {
+            "id": 298,
+            "s": "Oak Sage Aura",
+            "n": "Oak Sage Aura"
+        },
+        {
+            "id": 299,
+            "s": "Imp Fire Missile",
+            "n": "Imp Fire Missile"
+        },
+        {
+            "id": 300,
+            "s": "Impregnate",
+            "n": "Impregnate"
+        },
+        {
+            "id": 301,
+            "s": "Siege Beast Stomp",
+            "n": "Siege Beast Stomp"
+        },
+        {
+            "id": 302,
+            "s": "MinionSpawner",
+            "n": "MinionSpawner"
+        },
+        {
+            "id": 303,
+            "s": "CatapultBlizzard",
+            "n": "CatapultBlizzard"
+        },
+        {
+            "id": 304,
+            "s": "CatapultPlague",
+            "n": "CatapultPlague"
+        },
+        {
+            "id": 305,
+            "s": "CatapultMeteor",
+            "n": "CatapultMeteor"
+        },
+        {
+            "id": 306,
+            "s": "BoltSentry",
+            "n": "BoltSentry"
+        },
+        {
+            "id": 307,
+            "s": "CorpseCycler",
+            "n": "CorpseCycler"
+        },
+        {
+            "id": 308,
+            "s": "DeathMaul",
+            "n": "DeathMaul"
+        },
+        {
+            "id": 309,
+            "s": "Defense Curse",
+            "n": "Defense Curse"
+        },
+        {
+            "id": 310,
+            "s": "Blood Mana",
+            "n": "Blood Mana"
+        },
+        {
+            "id": 311,
+            "s": "inferno sentry",
+            "n": "inferno sentry"
+        },
+        {
+            "id": 312,
+            "s": "death sentry",
+            "n": "death sentry"
+        },
+        {
+            "id": 313,
+            "s": "sentry lightning",
+            "n": "sentry lightning"
+        },
+        {
+            "id": 314,
+            "s": "fenris rage",
+            "n": "fenris rage"
+        },
+        {
+            "id": 315,
+            "s": "Baal Tentacle",
+            "n": "Baal Tentacle"
+        },
+        {
+            "id": 316,
+            "s": "Baal Nova",
+            "n": "Baal Nova"
+        },
+        {
+            "id": 317,
+            "s": "Baal Inferno",
+            "n": "Baal Inferno"
+        },
+        {
+            "id": 318,
+            "s": "Baal Cold Missiles",
+            "n": "Baal Cold Missiles"
         }
     ],
     "rare_names": [
@@ -3811,21 +4375,21 @@ let constants_diablo2_96 = {
         },
         {
             "id": 366,
-            "n": "Crimson"
+            "n": "Russet"
         },
         {
             "id": 367,
-            "n": "Russet",
-            "tc": "lred"
-        },
-        {
-            "id": 368,
             "n": "Garnet",
             "tc": "lred"
         },
         {
+            "id": 368,
+            "n": "Ruby",
+            "tc": "lred"
+        },
+        {
             "id": 369,
-            "n": "Ruby"
+            "n": "Crimson"
         },
         {
             "id": 370,
@@ -4308,7 +4872,7 @@ let constants_diablo2_96 = {
         },
         {
             "id": 478,
-            "n": "Expert's"
+            "n": "Sounding"
         },
         {
             "id": 479,
@@ -4316,20 +4880,20 @@ let constants_diablo2_96 = {
         },
         {
             "id": 480,
-            "n": "Sounding"
-        },
-        {
-            "id": 481,
             "n": "Expert's"
         },
         {
+            "id": 481,
+            "n": "Sounding"
+        },
+        {
             "id": 482,
-            "n": "Veteran's",
+            "n": "Resonant",
             "tc": "lgld"
         },
         {
             "id": 483,
-            "n": "Master's",
+            "n": "Echoing",
             "tc": "lgld"
         },
         {
@@ -4348,16 +4912,16 @@ let constants_diablo2_96 = {
         },
         {
             "id": 487,
-            "n": "Sounding"
+            "n": "Expert's"
         },
         {
             "id": 488,
-            "n": "Resonant",
+            "n": "Veteran's",
             "tc": "lgld"
         },
         {
             "id": 489,
-            "n": "Echoing",
+            "n": "Master's",
             "tc": "lgld"
         },
         {
@@ -4555,7 +5119,7 @@ let constants_diablo2_96 = {
         },
         {
             "id": 531,
-            "n": "Grinding",
+            "n": "Screaming",
             "tc": "whit"
         },
         {
@@ -4606,97 +5170,97 @@ let constants_diablo2_96 = {
         {
             "id": 541,
             "n": "Snowy",
-            "tc": "lblu"
+            "tc": "whit"
         },
         {
             "id": 542,
             "n": "Shivering",
-            "tc": "lblu"
+            "tc": "whit"
         },
         {
             "id": 543,
             "n": "Boreal",
-            "tc": "lblu"
+            "tc": "whit"
         },
         {
             "id": 544,
             "n": "Hibernal",
-            "tc": "lblu"
+            "tc": "whit"
         },
         {
             "id": 545,
             "n": "Fiery",
-            "tc": "dred"
+            "tc": "whit"
         },
         {
             "id": 546,
             "n": "Smoldering",
-            "tc": "dred"
+            "tc": "whit"
         },
         {
             "id": 547,
             "n": "Smoking",
-            "tc": "dred"
+            "tc": "whit"
         },
         {
             "id": 548,
             "n": "Flaming",
-            "tc": "dred"
+            "tc": "whit"
         },
         {
             "id": 549,
             "n": "Condensing",
-            "tc": "dred"
+            "tc": "whit"
         },
         {
             "id": 550,
             "n": "Static",
-            "tc": "lyel"
+            "tc": "whit"
         },
         {
             "id": 551,
             "n": "Glowing",
-            "tc": "lyel"
+            "tc": "whit"
         },
         {
             "id": 552,
             "n": "Buzzing",
-            "tc": "lyel"
+            "tc": "whit"
         },
         {
             "id": 553,
             "n": "Arcing",
-            "tc": "lyel"
+            "tc": "whit"
         },
         {
             "id": 554,
             "n": "Shocking",
-            "tc": "lyel"
+            "tc": "whit"
         },
         {
             "id": 555,
             "n": "Septic",
-            "tc": "dgrn"
+            "tc": "whit"
         },
         {
             "id": 556,
             "n": "Foul",
-            "tc": "dgrn"
+            "tc": "whit"
         },
         {
             "id": 557,
             "n": "Corrosive",
-            "tc": "dgrn"
+            "tc": "whit"
         },
         {
             "id": 558,
             "n": "Toxic",
-            "tc": "dgrn"
+            "tc": "whit"
         },
         {
             "id": 559,
             "n": "Pestilent",
-            "tc": "dgrn"
+            "tc": "whit"
         },
         {
             "id": 560,
@@ -4860,344 +5424,26 @@ let constants_diablo2_96 = {
         },
         {
             "id": 596,
-            "n": "Pure",
-            "tc": "lgld"
+            "n": "Pure"
         },
         {
             "id": 597,
-            "n": "Sacred",
-            "tc": "lgld"
+            "n": "Sacred"
         },
         {
             "id": 598,
-            "n": "Hallowed",
-            "tc": "lgld"
+            "n": "Hallowed"
         },
         {
             "id": 599,
-            "n": "Divine",
-            "tc": "lgld"
+            "n": "Divine"
         },
         {
             "id": 600,
             "n": "Pearl"
         },
         {
-            "id": 601,
-            "n": "Crimson"
-        },
-        {
-            "id": 602,
-            "n": "Red",
-            "tc": "dred"
-        },
-        {
-            "id": 603,
-            "n": "Sanguinary",
-            "tc": "dred"
-        },
-        {
-            "id": 604,
-            "n": "Bloody",
-            "tc": "dred"
-        },
-        {
-            "id": 605,
-            "n": "Red",
-            "tc": "dred"
-        },
-        {
-            "id": 606,
-            "n": "Sanguinary",
-            "tc": "dred"
-        },
-        {
-            "id": 607,
-            "n": "Red",
-            "tc": "dred"
-        },
-        {
-            "id": 608,
-            "n": "Jagged",
-            "tc": "blac"
-        },
-        {
-            "id": 609,
-            "n": "Forked",
-            "tc": "blac"
-        },
-        {
-            "id": 610,
-            "n": "Serrated",
-            "tc": "blac"
-        },
-        {
-            "id": 611,
-            "n": "Jagged",
-            "tc": "blac"
-        },
-        {
-            "id": 612,
-            "n": "Forked",
-            "tc": "blac"
-        },
-        {
-            "id": 613,
-            "n": "Jagged",
-            "tc": "blac"
-        },
-        {
-            "id": 614,
-            "n": "Snowy"
-        },
-        {
-            "id": 615,
-            "n": "Shivering"
-        },
-        {
-            "id": 616,
-            "n": "Boreal",
-            "tc": "lblu"
-        },
-        {
-            "id": 617,
-            "n": "Hibernal",
-            "tc": "lblu"
-        },
-        {
-            "id": 618,
-            "n": "Snowy"
-        },
-        {
-            "id": 619,
-            "n": "Shivering"
-        },
-        {
-            "id": 620,
-            "n": "Boreal",
-            "tc": "lblu"
-        },
-        {
-            "id": 621,
-            "n": "Hibernal",
-            "tc": "lblu"
-        },
-        {
-            "id": 622,
-            "n": "Snowy"
-        },
-        {
-            "id": 623,
-            "n": "Shivering"
-        },
-        {
-            "id": 624,
-            "n": "Boreal",
-            "tc": "lblu"
-        },
-        {
-            "id": 625,
-            "n": "Hibernal",
-            "tc": "lblu"
-        },
-        {
-            "id": 626,
-            "n": "Fiery"
-        },
-        {
-            "id": 627,
-            "n": "Smoldering"
-        },
-        {
-            "id": 628,
-            "n": "Smoking",
-            "tc": "lred"
-        },
-        {
-            "id": 629,
-            "n": "Flaming",
-            "tc": "lred"
-        },
-        {
-            "id": 630,
-            "n": "Fiery"
-        },
-        {
-            "id": 631,
-            "n": "Smoldering"
-        },
-        {
-            "id": 632,
-            "n": "Smoking",
-            "tc": "lred"
-        },
-        {
-            "id": 633,
-            "n": "Flaming",
-            "tc": "lred"
-        },
-        {
-            "id": 634,
-            "n": "Fiery"
-        },
-        {
-            "id": 635,
-            "n": "Smoldering"
-        },
-        {
-            "id": 636,
-            "n": "Smoking",
-            "tc": "lred"
-        },
-        {
-            "id": 637,
-            "n": "Flaming",
-            "tc": "lred"
-        },
-        {
-            "id": 638,
-            "n": "Static"
-        },
-        {
-            "id": 639,
-            "n": "Glowing"
-        },
-        {
-            "id": 640,
-            "n": "Arcing",
-            "tc": "whit"
-        },
-        {
-            "id": 641,
-            "n": "Shocking",
-            "tc": "whit"
-        },
-        {
-            "id": 642,
-            "n": "Static"
-        },
-        {
-            "id": 643,
-            "n": "Glowing"
-        },
-        {
-            "id": 644,
-            "n": "Arcing",
-            "tc": "whit"
-        },
-        {
-            "id": 645,
-            "n": "Shocking",
-            "tc": "whit"
-        },
-        {
-            "id": 646,
-            "n": "Static"
-        },
-        {
-            "id": 647,
-            "n": "Glowing"
-        },
-        {
-            "id": 648,
-            "n": "Arcing",
-            "tc": "whit"
-        },
-        {
-            "id": 649,
-            "n": "Shocking",
-            "tc": "whit"
-        },
-        {
-            "id": 650,
-            "n": "Septic"
-        },
-        {
-            "id": 651,
-            "n": "Foul"
-        },
-        {
-            "id": 652,
-            "n": "Toxic",
-            "tc": "dgrn"
-        },
-        {
-            "id": 653,
-            "n": "Pestilent",
-            "tc": "dgrn"
-        },
-        {
-            "id": 654,
-            "n": "Septic"
-        },
-        {
-            "id": 655,
-            "n": "Foul"
-        },
-        {
-            "id": 656,
-            "n": "Toxic",
-            "tc": "dgrn"
-        },
-        {
-            "id": 657,
-            "n": "Pestilent",
-            "tc": "dgrn"
-        },
-        {
-            "id": 658,
-            "n": "Septic"
-        },
-        {
-            "id": 659,
-            "n": "Foul"
-        },
-        {
-            "id": 660,
-            "n": "Toxic",
-            "tc": "dgrn"
-        },
-        {
-            "id": 661,
-            "n": "Pestilent",
-            "tc": "dgrn"
-        },
-        {
-            "id": 662,
-            "n": "Tireless"
-        },
-        {
-            "id": 663,
-            "n": "Lizard's"
-        },
-        {
-            "id": 664,
-            "n": "Azure"
-        },
-        {
-            "id": 665,
-            "n": "Crimson"
-        },
-        {
-            "id": 666,
-            "n": "Tangerine"
-        },
-        {
-            "id": 667,
-            "n": "Beryl"
-        },
-        {
-            "id": 668,
-            "n": "Godly",
-            "tc": "dgld"
-        },
-        {
-            "id": 669,
-            "n": "Cruel",
-            "tc": "blac"
-        },
-        {
-            "id": 670
+            "id": 601
         }
     ],
     "magic_suffixes": [
@@ -6538,7 +6784,7 @@ let constants_diablo2_96 = {
         },
         {
             "id": 318,
-            "n": "of the Colossus",
+            "n": "of the Gargantuan",
             "tc": "cred"
         },
         {
@@ -6574,7 +6820,7 @@ let constants_diablo2_96 = {
         },
         {
             "id": 326,
-            "n": "of the Colossus",
+            "n": "of the Gargantuan",
             "tc": "cred"
         },
         {
@@ -8018,9539 +8264,6506 @@ let constants_diablo2_96 = {
             "n": "of Readiness"
         },
         {
-            "id": 676,
-            "n": "of Craftmanship"
-        },
-        {
-            "id": 677,
-            "n": "of Quality"
-        },
-        {
-            "id": 678,
-            "n": "of Maiming"
-        },
-        {
-            "id": 679,
-            "n": "of Craftmanship"
-        },
-        {
-            "id": 680,
-            "n": "of Quality"
-        },
-        {
-            "id": 681,
-            "n": "of Craftmanship"
-        },
-        {
-            "id": 682,
-            "n": "of Blight"
-        },
-        {
-            "id": 683,
-            "n": "of Venom"
-        },
-        {
-            "id": 684,
-            "n": "of Pestilence",
-            "tc": "dgrn"
-        },
-        {
-            "id": 685,
-            "n": "of Anthrax",
-            "tc": "dgrn"
-        },
-        {
-            "id": 686,
-            "n": "of Blight"
-        },
-        {
-            "id": 687,
-            "n": "of Venom"
-        },
-        {
-            "id": 688,
-            "n": "of Pestilence",
-            "tc": "dgrn"
-        },
-        {
-            "id": 689,
-            "n": "of Anthrax",
-            "tc": "dgrn"
-        },
-        {
-            "id": 690,
-            "n": "of Blight"
-        },
-        {
-            "id": 691,
-            "n": "of Venom"
-        },
-        {
-            "id": 692,
-            "n": "of Pestilence",
-            "tc": "dgrn"
-        },
-        {
-            "id": 693,
-            "n": "of Anthrax",
-            "tc": "dgrn"
-        },
-        {
-            "id": 694,
-            "n": "of Frost"
-        },
-        {
-            "id": 695,
-            "n": "of the Icicle"
-        },
-        {
-            "id": 696,
-            "n": "of the Glacier",
-            "tc": "dblu"
-        },
-        {
-            "id": 697,
-            "n": "of Winter",
-            "tc": "dblu"
-        },
-        {
-            "id": 698,
-            "n": "of Frost"
-        },
-        {
-            "id": 699,
-            "n": "of the Icicle"
-        },
-        {
-            "id": 700,
-            "n": "of the Glacier",
-            "tc": "dblu"
-        },
-        {
-            "id": 701,
-            "n": "of Winter",
-            "tc": "dblu"
-        },
-        {
-            "id": 702,
-            "n": "of Frost"
-        },
-        {
-            "id": 703,
-            "n": "of the Icicle"
-        },
-        {
-            "id": 704,
-            "n": "of the Glacier",
-            "tc": "dblu"
-        },
-        {
-            "id": 705,
-            "n": "of Winter",
-            "tc": "dblu"
-        },
-        {
-            "id": 706,
-            "n": "of Flame"
-        },
-        {
-            "id": 707,
-            "n": "of Fire"
-        },
-        {
-            "id": 708,
-            "n": "of Burning",
-            "tc": "dred"
-        },
-        {
-            "id": 709,
-            "n": "of Incineration",
-            "tc": "dred"
-        },
-        {
-            "id": 710,
-            "n": "of Flame"
-        },
-        {
-            "id": 711,
-            "n": "of Fire"
-        },
-        {
-            "id": 712,
-            "n": "of Burning",
-            "tc": "dred"
-        },
-        {
-            "id": 713,
-            "n": "of Incineration",
-            "tc": "dred"
-        },
-        {
-            "id": 714,
-            "n": "of Flame"
-        },
-        {
-            "id": 715,
-            "n": "of Fire"
-        },
-        {
-            "id": 716,
-            "n": "of Burning",
-            "tc": "dred"
-        },
-        {
-            "id": 717,
-            "n": "of Incineration",
-            "tc": "dred"
-        },
-        {
-            "id": 718,
-            "n": "of Shock"
-        },
-        {
-            "id": 719,
-            "n": "of Lightning"
-        },
-        {
-            "id": 720,
-            "n": "of Thunder",
-            "tc": "dyel"
-        },
-        {
-            "id": 721,
-            "n": "of Storms",
-            "tc": "dyel"
-        },
-        {
-            "id": 722,
-            "n": "of Shock"
-        },
-        {
-            "id": 723,
-            "n": "of Lightning"
-        },
-        {
-            "id": 724,
-            "n": "of Thunder",
-            "tc": "dyel"
-        },
-        {
-            "id": 725,
-            "n": "of Storms",
-            "tc": "dyel"
-        },
-        {
-            "id": 726,
-            "n": "of Shock"
-        },
-        {
-            "id": 727,
-            "n": "of Lightning"
-        },
-        {
-            "id": 728,
-            "n": "of Thunder",
-            "tc": "dyel"
-        },
-        {
-            "id": 729,
-            "n": "of Storms",
-            "tc": "dyel"
-        },
-        {
-            "id": 730,
-            "n": "of Dexterity"
-        },
-        {
-            "id": 731,
-            "n": "of Dexterity"
-        },
-        {
-            "id": 732,
-            "n": "of Strength"
-        },
-        {
-            "id": 733,
-            "n": "of Strength"
-        },
-        {
-            "id": 734,
-            "n": "of Thorns"
-        },
-        {
-            "id": 735,
-            "n": "of Frost"
-        },
-        {
-            "id": 736,
-            "n": "of Flame"
-        },
-        {
-            "id": 737,
-            "n": "of Blight"
-        },
-        {
-            "id": 738,
-            "n": "of Shock"
-        },
-        {
-            "id": 739,
-            "n": "of Regeneration"
-        },
-        {
-            "id": 740,
-            "n": "of Energy"
-        },
-        {
-            "id": 741,
-            "n": "of Light"
-        },
-        {
-            "id": 742,
-            "n": "of the Leech"
-        },
-        {
-            "id": 743,
-            "n": "of the Locust"
-        },
-        {
-            "id": 744,
-            "n": "of the Lamprey",
-            "tc": "cred"
-        },
-        {
-            "id": 745,
-            "n": "of the Bat"
-        },
-        {
-            "id": 746,
-            "n": "of the Wraith"
-        },
-        {
-            "id": 747,
-            "n": "of the Vampire",
-            "tc": "cred"
-        },
-        {
-            "id": 748
+            "id": 676
         }
     ],
     "properties": {
-        "ac": [
-            {
-                "s": "armorclass",
-                "f": 1
-            }
-        ],
-        "ac-miss": [
-            {
-                "s": "armorclass_vs_missile",
-                "f": 1
-            }
-        ],
-        "ac-hth": [
-            {
-                "s": "armorclass_vs_hth",
-                "f": 1
-            }
-        ],
-        "red-dmg": [
-            {
-                "s": "normal_damage_reduction",
-                "f": 1
-            }
-        ],
-        "red-dmg%": [
-            {
-                "s": "damageresist",
-                "f": 1
-            }
-        ],
-        "ac%": [
-            {
-                "s": "item_armor_percent",
-                "f": 2
-            }
-        ],
-        "red-mag": [
-            {
-                "s": "magic_damage_reduction",
-                "f": 1
-            }
-        ],
-        "str": [
-            {
-                "s": "strength",
-                "f": 1
-            }
-        ],
-        "dex": [
-            {
-                "s": "dexterity",
-                "f": 1
-            }
-        ],
-        "vit": [
-            {
-                "s": "vitality",
-                "f": 1
-            }
-        ],
-        "enr": [
-            {
-                "s": "energy",
-                "f": 1
-            }
-        ],
-        "mana": [
-            {
-                "s": "maxmana",
-                "f": 1
-            }
-        ],
-        "mana%": [
-            {
-                "s": "item_maxmana_percent",
-                "f": 1
-            }
-        ],
-        "hp": [
-            {
-                "s": "maxhp",
-                "f": 1
-            }
-        ],
-        "hp%": [
-            {
-                "s": "item_maxhp_percent",
-                "f": 1
-            }
-        ],
-        "att": [
-            {
-                "s": "tohit",
-                "f": 1
-            }
-        ],
-        "block": [
-            {
-                "s": "toblock",
-                "f": 1
-            }
-        ],
-        "cold-min": [
-            {
-                "s": "coldmindam",
-                "f": 1
-            }
-        ],
-        "cold-max": [
-            {
-                "s": "coldmaxdam",
-                "f": 1
-            }
-        ],
-        "cold-len": [
-            {
-                "s": "coldlength",
-                "f": 1
-            }
-        ],
-        "fire-min": [
-            {
-                "s": "firemindam",
-                "f": 1
-            }
-        ],
-        "fire-max": [
-            {
-                "s": "firemaxdam",
-                "f": 1
-            }
-        ],
-        "ltng-min": [
-            {
-                "s": "lightmindam",
-                "f": 1
-            }
-        ],
-        "ltng-max": [
-            {
-                "s": "lightmaxdam",
-                "f": 1
-            }
-        ],
-        "pois-min": [
-            {
-                "s": "poisonmindam",
-                "f": 1
-            }
-        ],
-        "pois-max": [
-            {
-                "s": "poisonmaxdam",
-                "f": 1
-            }
-        ],
-        "pois-len": [
-            {
-                "s": "poisonlength",
-                "f": 1
-            }
-        ],
-        "dmg-min": [
-            {
-                "f": 5
-            }
-        ],
-        "dmg-max": [
-            {
-                "f": 6
-            }
-        ],
-        "dmg%": [
-            {
-                "f": 7
-            }
-        ],
-        "dmg-to-mana": [
-            {
-                "s": "item_damagetomana",
-                "f": 1
-            }
-        ],
-        "res-fire": [
-            {
-                "s": "fireresist",
-                "f": 1
-            }
-        ],
-        "res-fire-max": [
-            {
-                "s": "maxfireresist",
-                "f": 1
-            }
-        ],
-        "res-ltng": [
-            {
-                "s": "lightresist",
-                "f": 1
-            }
-        ],
-        "res-ltng-max": [
-            {
-                "s": "maxlightresist",
-                "f": 1
-            }
-        ],
-        "res-cold": [
-            {
-                "s": "coldresist",
-                "f": 1
-            }
-        ],
-        "res-cold-max": [
-            {
-                "s": "maxcoldresist",
-                "f": 1
-            }
-        ],
-        "res-mag": [
-            {
-                "s": "magicresist",
-                "f": 1
-            }
-        ],
-        "res-mag-max": [
-            {
-                "s": "maxmagicresist",
-                "f": 1
-            }
-        ],
-        "res-pois": [
-            {
-                "s": "poisonresist",
-                "f": 1
-            }
-        ],
-        "res-pois-max": [
-            {
-                "s": "maxpoisonresist",
-                "f": 1
-            }
-        ],
-        "res-all": [
-            {
-                "s": "fireresist",
-                "f": 1
-            },
-            {
-                "s": "lightresist",
-                "f": 3
-            },
-            {
-                "s": "coldresist",
-                "f": 3
-            },
-            {
-                "s": "poisonresist",
-                "f": 3
-            }
-        ],
-        "res-all-max": [
-            {
-                "s": "maxfireresist",
-                "f": 1
-            },
-            {
-                "s": "maxlightresist",
-                "f": 3
-            },
-            {
-                "s": "maxcoldresist",
-                "f": 3
-            },
-            {
-                "s": "maxpoisonresist",
-                "f": 3
-            }
-        ],
-        "abs-fire%": [
-            {
-                "s": "item_absorbfire_percent",
-                "f": 1
-            }
-        ],
-        "abs-fire": [
-            {
-                "s": "item_absorbfire",
-                "f": 1
-            }
-        ],
-        "abs-ltng%": [
-            {
-                "s": "item_absorblight_percent",
-                "f": 1
-            }
-        ],
-        "abs-ltng": [
-            {
-                "s": "item_absorblight",
-                "f": 1
-            }
-        ],
-        "abs-mag%": [
-            {
-                "s": "item_absorbmagic_percent",
-                "f": 1
-            }
-        ],
-        "abs-mag": [
-            {
-                "s": "item_absorbmagic",
-                "f": 1
-            }
-        ],
-        "abs-cold%": [
-            {
-                "s": "item_absorbcold_percent",
-                "f": 1
-            }
-        ],
-        "abs-cold": [
-            {
-                "s": "item_absorbcold",
-                "f": 1
-            }
-        ],
-        "dur": [
-            {
-                "s": "maxdurability",
-                "f": 1
-            }
-        ],
-        "dur%": [
-            {
-                "s": "item_maxdurability_percent",
-                "f": 13
-            }
-        ],
-        "regen": [
-            {
-                "s": "hpregen",
-                "f": 1
-            }
-        ],
-        "thorns": [
-            {
-                "s": "item_attackertakesdamage",
-                "f": 1
-            }
-        ],
-        "swing1": [
-            {
-                "s": "item_fasterattackrate",
-                "f": 8
-            }
-        ],
-        "swing2": [
-            {
-                "s": "item_fasterattackrate",
-                "f": 8
-            }
-        ],
-        "swing3": [
-            {
-                "s": "item_fasterattackrate",
-                "f": 8
-            }
-        ],
-        "gold%": [
-            {
-                "s": "item_goldbonus",
-                "f": 1
-            }
-        ],
-        "mag%": [
-            {
-                "s": "item_magicbonus",
-                "f": 1
-            }
-        ],
-        "knock": [
-            {
-                "s": "item_knockback",
-                "f": 1
-            }
-        ],
-        "regen-stam": [
-            {
-                "s": "staminarecoverybonus",
-                "f": 1
-            }
-        ],
-        "regen-mana": [
-            {
-                "s": "manarecoverybonus",
-                "f": 1
-            }
-        ],
-        "stam": [
-            {
-                "s": "maxstamina",
-                "f": 1
-            }
-        ],
-        "time": [
-            {
-                "s": "item_timeduration",
-                "f": 1
-            }
-        ],
-        "manasteal": [
-            {
-                "s": "manadrainmindam",
-                "f": 1
-            }
-        ],
-        "lifesteal": [
-            {
-                "s": "lifedrainmindam",
-                "f": 1
-            }
-        ],
-        "ama": [
-            {
-                "s": "item_addclassskills",
-                "f": 21
-            }
-        ],
-        "pal": [
-            {
-                "s": "item_addclassskills",
-                "f": 21
-            }
-        ],
-        "nec": [
-            {
-                "s": "item_addclassskills",
-                "f": 21
-            }
-        ],
-        "sor": [
-            {
-                "s": "item_addclassskills",
-                "f": 21
-            }
-        ],
-        "bar": [
-            {
-                "s": "item_addclassskills",
-                "f": 21
-            }
-        ],
-        "herb": [
-            {
-                "s": "item_doubleherbduration",
-                "f": 1
-            }
-        ],
-        "light": [
-            {
-                "s": "item_lightradius",
-                "f": 1
-            }
-        ],
-        "color": [
-            {
-                "s": "item_lightcolor",
-                "f": 1
-            }
-        ],
-        "ease": [
-            {
-                "s": "item_req_percent",
-                "f": 1
-            }
-        ],
-        "move1": [
-            {
-                "s": "item_fastermovevelocity",
-                "f": 8
-            }
-        ],
-        "move2": [
-            {
-                "s": "item_fastermovevelocity",
-                "f": 8
-            }
-        ],
-        "move3": [
-            {
-                "s": "item_fastermovevelocity",
-                "f": 8
-            }
-        ],
-        "balance1": [
-            {
-                "s": "item_fastergethitrate",
-                "f": 8
-            }
-        ],
-        "balance2": [
-            {
-                "s": "item_fastergethitrate",
-                "f": 8
-            }
-        ],
-        "balance3": [
-            {
-                "s": "item_fastergethitrate",
-                "f": 8
-            }
-        ],
-        "block1": [
-            {
-                "s": "item_fasterblockrate",
-                "f": 8
-            }
-        ],
-        "block2": [
-            {
-                "s": "item_fasterblockrate",
-                "f": 8
-            }
-        ],
-        "block3": [
-            {
-                "s": "item_fasterblockrate",
-                "f": 8
-            }
-        ],
-        "cast1": [
-            {
-                "s": "item_fastercastrate",
-                "f": 8
-            }
-        ],
-        "cast2": [
-            {
-                "s": "item_fastercastrate",
-                "f": 8
-            }
-        ],
-        "cast3": [
-            {
-                "s": "item_fastercastrate",
-                "f": 8
-            }
-        ],
-        "res-pois-len": [
-            {
-                "s": "item_poisonlengthresist",
-                "f": 1
-            }
-        ],
-        "dmg": [
-            {
-                "s": "item_normaldamage",
-                "f": 1
-            }
-        ],
-        "howl": [
-            {
-                "s": "item_howl",
-                "f": 1
-            }
-        ],
-        "stupidity": [
-            {
-                "s": "item_stupidity",
-                "f": 1
-            }
-        ],
-        "ignore-ac": [
-            {
-                "s": "item_ignoretargetac",
-                "f": 1
-            }
-        ],
-        "reduce-ac": [
-            {
-                "s": "item_fractionaltargetac",
-                "f": 1
-            }
-        ],
-        "noheal": [
-            {
-                "s": "item_preventheal",
-                "f": 1
-            }
-        ],
-        "half-freeze": [
-            {
-                "s": "item_halffreezeduration",
-                "f": 1
-            }
-        ],
-        "att%": [
-            {
-                "s": "item_tohit_percent",
-                "f": 1
-            }
-        ],
-        "dmg-ac": [
-            {
-                "s": "item_damagetargetac",
-                "f": 1
-            }
-        ],
-        "dmg-demon": [
-            {
-                "s": "item_demondamage_percent",
-                "f": 1
-            }
-        ],
-        "dmg-undead": [
-            {
-                "s": "item_undeaddamage_percent",
-                "f": 1
-            }
-        ],
-        "att-demon": [
-            {
-                "s": "item_demon_tohit",
-                "f": 1
-            }
-        ],
-        "att-undead": [
-            {
-                "s": "item_undead_tohit",
-                "f": 1
-            }
-        ],
-        "throw": [
-            {
-                "s": "item_throwable",
-                "f": 1
-            }
-        ],
-        "fireskill": [
-            {
-                "s": "item_elemskill",
-                "f": 21
-            }
-        ],
-        "allskills": [
-            {
-                "s": "item_allskills",
-                "f": 1
-            }
-        ],
-        "light-thorns": [
-            {
-                "s": "item_attackertakeslightdamage",
-                "f": 1
-            }
-        ],
-        "freeze": [
-            {
-                "s": "item_freeze",
-                "f": 1
-            }
-        ],
-        "openwounds": [
-            {
-                "s": "item_openwounds",
-                "f": 1
-            }
-        ],
-        "crush": [
-            {
-                "s": "item_crushingblow",
-                "f": 1
-            }
-        ],
-        "kick": [
-            {
-                "s": "item_kickdamage",
-                "f": 1
-            }
-        ],
-        "mana-kill": [
-            {
-                "s": "item_manaafterkill",
-                "f": 1
-            }
-        ],
-        "demon-heal": [
-            {
-                "s": "item_healafterdemonkill",
-                "f": 1
-            }
-        ],
-        "bloody": [
-            {
-                "s": "item_extrablood",
-                "f": 1
-            }
-        ],
-        "deadly": [
-            {
-                "s": "item_deadlystrike",
-                "f": 1
-            }
-        ],
-        "slow": [
-            {
-                "s": "item_slow",
-                "f": 1
-            }
-        ],
-        "nofreeze": [
-            {
-                "s": "item_cannotbefrozen",
-                "f": 1
-            }
-        ],
-        "stamdrain": [
-            {
-                "s": "item_staminadrainpct",
-                "f": 1
-            }
-        ],
-        "reanimate": [
-            {
-                "s": "item_reanimate",
-                "f": 24
-            }
-        ],
-        "pierce": [
-            {
-                "s": "item_pierce",
-                "f": 1
-            }
-        ],
-        "magicarrow": [
-            {
-                "s": "item_magicarrow",
-                "f": 1
-            }
-        ],
-        "explosivearrow": [
-            {
-                "s": "item_explosivearrow",
-                "f": 1
-            }
-        ],
-        "dru": [
-            {
-                "s": "item_addclassskills",
-                "f": 21
-            }
-        ],
-        "ass": [
-            {
-                "s": "item_addclassskills",
-                "f": 21
-            }
-        ],
-        "skill": [
-            {
-                "s": "item_singleskill",
-                "f": 22
-            }
-        ],
-        "skilltab": [
-            {
-                "s": "item_addskill_tab",
-                "f": 10
-            }
-        ],
-        "aura": [
-            {
-                "s": "item_aura",
-                "f": 22
-            }
-        ],
-        "att-skill": [
-            {
-                "s": "item_skillonattack",
-                "f": 11
-            }
-        ],
-        "hit-skill": [
-            {
-                "s": "item_skillonhit",
-                "f": 11
-            }
-        ],
-        "gethit-skill": [
-            {
-                "s": "item_skillongethit",
-                "f": 11
-            }
-        ],
-        "sock": [
-            {
-                "s": "item_numsockets",
-                "f": 14
-            }
-        ],
-        "dmg-fire": [
-            {
-                "s": "firemindam",
-                "f": 15
-            },
-            {
-                "s": "firemaxdam",
-                "f": 16
-            }
-        ],
-        "dmg-ltng": [
-            {
-                "s": "lightmindam",
-                "f": 15
-            },
-            {
-                "s": "lightmaxdam",
-                "f": 16
-            }
-        ],
-        "dmg-mag": [
-            {
-                "s": "magicmindam",
-                "f": 15
-            },
-            {
-                "s": "magicmaxdam",
-                "f": 16
-            }
-        ],
-        "dmg-cold": [
-            {
-                "s": "coldmindam",
-                "f": 15
-            },
-            {
-                "s": "coldmaxdam",
-                "f": 16
-            },
-            {
-                "s": "coldlength",
-                "f": 17
-            }
-        ],
-        "dmg-pois": [
-            {
-                "s": "poisonmindam",
-                "f": 15
-            },
-            {
-                "s": "poisonmaxdam",
-                "f": 16
-            },
-            {
-                "s": "poisonlength",
-                "f": 17
-            }
-        ],
-        "dmg-throw": [
-            {
-                "s": "item_throw_mindamage",
-                "f": 15
-            },
-            {
-                "s": "item_throw_maxdamage",
-                "f": 16
-            }
-        ],
-        "dmg-norm": [
-            {
-                "s": "mindamage",
-                "f": 15
-            },
-            {
-                "s": "maxdamage",
-                "f": 16
-            }
-        ],
-        "ac/lvl": [
-            {
-                "s": "item_armor_perlevel",
-                "f": 17
-            }
-        ],
-        "ac%/lvl": [
-            {
-                "s": "item_armorpercent_perlevel",
-                "f": 17
-            }
-        ],
-        "hp/lvl": [
-            {
-                "s": "item_hp_perlevel",
-                "f": 17
-            }
-        ],
-        "mana/lvl": [
-            {
-                "s": "item_mana_perlevel",
-                "f": 17
-            }
-        ],
-        "dmg/lvl": [
-            {
-                "s": "item_maxdamage_perlevel",
-                "f": 17
-            }
-        ],
-        "dmg%/lvl": [
-            {
-                "s": "item_maxdamage_percent_perlevel",
-                "f": 17
-            }
-        ],
-        "str/lvl": [
-            {
-                "s": "item_strength_perlevel",
-                "f": 17
-            }
-        ],
-        "dex/lvl": [
-            {
-                "s": "item_dexterity_perlevel",
-                "f": 17
-            }
-        ],
-        "enr/lvl": [
-            {
-                "s": "item_energy_perlevel",
-                "f": 17
-            }
-        ],
-        "vit/lvl": [
-            {
-                "s": "item_vitality_perlevel",
-                "f": 17
-            }
-        ],
-        "att/lvl": [
-            {
-                "s": "item_tohit_perlevel",
-                "f": 17
-            }
-        ],
-        "att%/lvl": [
-            {
-                "s": "item_tohitpercent_perlevel",
-                "f": 17
-            }
-        ],
-        "dmg-cold/lvl": [
-            {
-                "s": "item_cold_damagemax_perlevel",
-                "f": 17
-            }
-        ],
-        "dmg-fire/lvl": [
-            {
-                "s": "item_fire_damagemax_perlevel",
-                "f": 17
-            }
-        ],
-        "dmg-ltng/lvl": [
-            {
-                "s": "item_ltng_damagemax_perlevel",
-                "f": 17
-            }
-        ],
-        "dmg-pois/lvl": [
-            {
-                "s": "item_pois_damagemax_perlevel",
-                "f": 17
-            }
-        ],
-        "res-cold/lvl": [
-            {
-                "s": "item_resist_cold_perlevel",
-                "f": 17
-            }
-        ],
-        "res-fire/lvl": [
-            {
-                "s": "item_resist_fire_perlevel",
-                "f": 17
-            }
-        ],
-        "res-ltng/lvl": [
-            {
-                "s": "item_resist_ltng_perlevel",
-                "f": 17
-            }
-        ],
-        "res-pois/lvl": [
-            {
-                "s": "item_resist_pois_perlevel",
-                "f": 17
-            }
-        ],
-        "abs-cold/lvl": [
-            {
-                "s": "item_absorb_cold_perlevel",
-                "f": 17
-            }
-        ],
-        "abs-fire/lvl": [
-            {
-                "s": "item_absorb_fire_perlevel",
-                "f": 17
-            }
-        ],
-        "abs-ltng/lvl": [
-            {
-                "s": "item_absorb_ltng_perlevel",
-                "f": 17
-            }
-        ],
-        "abs-pois/lvl": [
-            {
-                "s": "item_absorb_pois_perlevel",
-                "f": 17
-            }
-        ],
-        "thorns/lvl": [
-            {
-                "s": "item_thorns_perlevel",
-                "f": 17
-            }
-        ],
-        "gold%/lvl": [
-            {
-                "s": "item_find_gold_perlevel",
-                "f": 17
-            }
-        ],
-        "mag%/lvl": [
-            {
-                "s": "item_find_magic_perlevel",
-                "f": 17
-            }
-        ],
-        "regen-stam/lvl": [
-            {
-                "s": "item_regenstamina_perlevel",
-                "f": 17
-            }
-        ],
-        "stam/lvl": [
-            {
-                "s": "item_stamina_perlevel",
-                "f": 17
-            }
-        ],
-        "dmg-dem/lvl": [
-            {
-                "s": "item_damage_demon_perlevel",
-                "f": 17
-            }
-        ],
-        "dmg-und/lvl": [
-            {
-                "s": "item_damage_undead_perlevel",
-                "f": 17
-            }
-        ],
-        "att-dem/lvl": [
-            {
-                "s": "item_tohit_demon_perlevel",
-                "f": 17
-            }
-        ],
-        "att-und/lvl": [
-            {
-                "s": "item_tohit_undead_perlevel",
-                "f": 17
-            }
-        ],
-        "crush/lvl": [
-            {
-                "s": "item_crushingblow_perlevel",
-                "f": 17
-            }
-        ],
-        "wounds/lvl": [
-            {
-                "s": "item_openwounds_perlevel",
-                "f": 17
-            }
-        ],
-        "kick/lvl": [
-            {
-                "s": "item_kick_damage_perlevel",
-                "f": 17
-            }
-        ],
-        "deadly/lvl": [
-            {
-                "s": "item_deadlystrike_perlevel",
-                "f": 17
-            }
-        ],
-        "rep-dur": [
-            {
-                "s": "item_replenish_durability",
-                "f": 17
-            }
-        ],
-        "rep-quant": [
-            {
-                "s": "item_replenish_quantity",
-                "f": 17
-            }
-        ],
-        "stack": [
-            {
-                "s": "item_extra_stack",
-                "f": 1
-            }
-        ],
-        "ac/time": [
-            {
-                "s": "item_armor_bytime",
-                "f": 18
-            }
-        ],
-        "ac%/time": [
-            {
-                "s": "item_armorpercent_bytime",
-                "f": 18
-            }
-        ],
-        "hp/time": [
-            {
-                "s": "item_hp_bytime",
-                "f": 18
-            }
-        ],
-        "mana/time": [
-            {
-                "s": "item_mana_bytime",
-                "f": 18
-            }
-        ],
-        "dmg/time": [
-            {
-                "s": "item_maxdamage_bytime",
-                "f": 18
-            }
-        ],
-        "dmg%/time": [
-            {
-                "s": "item_maxdamage_percent_bytime",
-                "f": 18
-            }
-        ],
-        "str/time": [
-            {
-                "s": "item_strength_bytime",
-                "f": 18
-            }
-        ],
-        "dex/time": [
-            {
-                "s": "item_dexterity_bytime",
-                "f": 18
-            }
-        ],
-        "enr/time": [
-            {
-                "s": "item_energy_bytime",
-                "f": 18
-            }
-        ],
-        "vit/time": [
-            {
-                "s": "item_vitality_bytime",
-                "f": 18
-            }
-        ],
-        "att/time": [
-            {
-                "s": "item_tohit_bytime",
-                "f": 18
-            }
-        ],
-        "att%/time": [
-            {
-                "s": "item_tohitpercent_bytime",
-                "f": 18
-            }
-        ],
-        "dmg-cold/time": [
-            {
-                "s": "item_cold_damagemax_bytime",
-                "f": 18
-            }
-        ],
-        "dmg-fire/time": [
-            {
-                "s": "item_fire_damagemax_bytime",
-                "f": 18
-            }
-        ],
-        "dmg-ltng/time": [
-            {
-                "s": "item_ltng_damagemax_bytime",
-                "f": 18
-            }
-        ],
-        "dmg-pois/time": [
-            {
-                "s": "item_pois_damagemax_bytime",
-                "f": 18
-            }
-        ],
-        "res-cold/time": [
-            {
-                "s": "item_resist_cold_bytime",
-                "f": 18
-            }
-        ],
-        "res-fire/time": [
-            {
-                "s": "item_resist_fire_bytime",
-                "f": 18
-            }
-        ],
-        "res-ltng/time": [
-            {
-                "s": "item_resist_ltng_bytime",
-                "f": 18
-            }
-        ],
-        "res-pois/time": [
-            {
-                "s": "item_resist_pois_bytime",
-                "f": 18
-            }
-        ],
-        "abs-cold/time": [
-            {
-                "s": "item_absorb_cold_bytime",
-                "f": 18
-            }
-        ],
-        "abs-fire/time": [
-            {
-                "s": "item_absorb_fire_bytime",
-                "f": 18
-            }
-        ],
-        "abs-ltng/time": [
-            {
-                "s": "item_absorb_ltng_bytime",
-                "f": 18
-            }
-        ],
-        "abs-pois/time": [
-            {
-                "s": "item_absorb_pois_bytime",
-                "f": 18
-            }
-        ],
-        "gold%/time": [
-            {
-                "s": "item_find_gold_bytime",
-                "f": 18
-            }
-        ],
-        "mag%/time": [
-            {
-                "s": "item_find_magic_bytime",
-                "f": 18
-            }
-        ],
-        "regen-stam/time": [
-            {
-                "s": "item_regenstamina_bytime",
-                "f": 18
-            }
-        ],
-        "stam/time": [
-            {
-                "s": "item_stamina_bytime",
-                "f": 18
-            }
-        ],
-        "dmg-dem/time": [
-            {
-                "s": "item_damage_demon_bytime",
-                "f": 18
-            }
-        ],
-        "dmg-und/time": [
-            {
-                "s": "item_damage_undead_bytime",
-                "f": 18
-            }
-        ],
-        "att-dem/time": [
-            {
-                "s": "item_tohit_demon_bytime",
-                "f": 18
-            }
-        ],
-        "att-und/time": [
-            {
-                "s": "item_tohit_undead_bytime",
-                "f": 18
-            }
-        ],
-        "crush/time": [
-            {
-                "s": "item_crushingblow_bytime",
-                "f": 18
-            }
-        ],
-        "wounds/time": [
-            {
-                "s": "item_openwounds_bytime",
-                "f": 18
-            }
-        ],
-        "kick/time": [
-            {
-                "s": "item_kick_damage_bytime",
-                "f": 18
-            }
-        ],
-        "deadly/time": [
-            {
-                "s": "item_deadlystrike_bytime",
-                "f": 18
-            }
-        ],
-        "pierce-fire": [
-            {
-                "s": "passive_fire_pierce",
-                "f": 1
-            }
-        ],
-        "pierce-ltng": [
-            {
-                "s": "passive_ltng_pierce",
-                "f": 1
-            }
-        ],
-        "pierce-cold": [
-            {
-                "s": "passive_cold_pierce",
-                "f": 1
-            }
-        ],
-        "pierce-pois": [
-            {
-                "s": "passive_pois_pierce",
-                "f": 1
-            }
-        ],
-        "indestruct": [
-            {
-                "f": 20
-            }
-        ],
-        "charged": [
-            {
-                "s": "item_charged_skill",
-                "f": 19
-            }
-        ],
-        "extra-fire": [
-            {
-                "s": "passive_fire_mastery",
-                "f": 1
-            }
-        ],
-        "extra-ltng": [
-            {
-                "s": "passive_ltng_mastery",
-                "f": 1
-            }
-        ],
-        "extra-cold": [
-            {
-                "s": "passive_cold_mastery",
-                "f": 1
-            }
-        ],
-        "extra-pois": [
-            {
-                "s": "passive_pois_mastery",
-                "f": 1
-            }
-        ],
-        "dmg-elem": [
-            {
-                "s": "firemindam",
-                "f": 15
-            },
-            {
-                "s": "firemaxdam",
-                "f": 16
-            },
-            {
-                "s": "lightmindam",
-                "f": 15
-            },
-            {
-                "s": "lightmaxdam",
-                "f": 16
-            },
-            {
-                "s": "coldmindam",
-                "f": 15
-            },
-            {
-                "s": "coldmaxdam",
-                "f": 16
-            },
-            {
-                "s": "coldlength",
-                "f": 17
-            }
-        ],
-        "dmg-elem-min": [
-            {
-                "s": "firemindam",
-                "f": 1
-            },
-            {
-                "s": "lightmindam",
-                "f": 3
-            },
-            {
-                "s": "coldmindam",
-                "f": 3
-            }
-        ],
-        "dmg-elem-max": [
-            {
-                "s": "firemaxdam",
-                "f": 1
-            },
-            {
-                "s": "lightmaxdam",
-                "f": 3
-            },
-            {
-                "s": "coldmaxdam",
-                "f": 3
-            },
-            {
-                "s": "coldlength",
-                "f": 17
-            }
-        ],
-        "all-stats": [
-            {
-                "s": "strength",
-                "f": 1
-            },
-            {
-                "s": "energy",
-                "f": 3
-            },
-            {
-                "s": "dexterity",
-                "f": 3
-            },
-            {
-                "s": "vitality",
-                "f": 3
-            }
-        ],
-        "addxp": [
-            {
-                "s": "item_addexperience",
-                "f": 1
-            }
-        ],
-        "heal-kill": [
-            {
-                "s": "item_healafterkill",
-                "f": 1
-            }
-        ],
-        "cheap": [
-            {
-                "s": "item_reducedprices",
-                "f": 1
-            }
-        ],
-        "rip": [
-            {
-                "s": "item_restinpeace",
-                "f": 1
-            }
-        ],
-        "att-mon%": [
-            {
-                "s": "attack_vs_montype",
-                "f": 24
-            }
-        ],
-        "dmg-mon%": [
-            {
-                "s": "damage_vs_montype",
-                "f": 24
-            }
-        ],
-        "kill-skill": [
-            {
-                "s": "item_skillonkill",
-                "f": 11
-            }
-        ],
-        "death-skill": [
-            {
-                "s": "item_skillondeath",
-                "f": 11
-            }
-        ],
-        "levelup-skill": [
-            {
-                "s": "item_skillonlevelup",
-                "f": 11
-            }
-        ],
-        "skill-rand": [
-            {
-                "s": "item_singleskill",
-                "f": 12
-            }
-        ],
-        "fade": [
-            {
-                "s": "fade",
-                "f": 17
-            }
-        ],
-        "levelreq": [
-            {
-                "s": "item_levelreq",
-                "f": 1
-            }
-        ],
-        "ethereal": [
-            {
-                "f": 23
-            }
-        ],
-        "oskill": [
-            {
-                "s": "item_nonclassskill",
-                "f": 22
-            }
-        ],
-        "state": [
-            {
-                "s": "state",
-                "f": 24
-            }
-        ],
-        "randclassskill": [
-            {
-                "s": "item_addclassskills",
-                "f": 36
-            }
-        ]
+        "ac": {
+            "s": "ARMORCLASS"
+        },
+        "ac-miss": {
+            "s": "ARMORCLASS_VS_MISSILE"
+        },
+        "ac-hth": {
+            "s": "ARMORCLASS_VS_HTH"
+        },
+        "red-dmg": {
+            "s": "NORMAL_DAMAGE_REDUCTION"
+        },
+        "red-dmg%": {
+            "s": "NORMAL_DAMAGE_REDUCTION_PCT"
+        },
+        "ac%": {
+            "s": "ARMOR_PERCENT"
+        },
+        "red-mag": {
+            "s": "MAGIC_DAMAGE_REDUCTION"
+        },
+        "str": {
+            "s": "STRENGTH"
+        },
+        "dex": {
+            "s": "DEXTERITY"
+        },
+        "vit": {
+            "s": "VITALITY"
+        },
+        "enr": {
+            "s": "ENERGY"
+        },
+        "mana": {
+            "s": "MAXMANA "
+        },
+        "mana%": {
+            "s": "MAXMANA_PERCENT "
+        },
+        "hp": {
+            "s": "MAXHP "
+        },
+        "hp%": {
+            "s": "MAXHP_PERCENT"
+        },
+        "att": {
+            "s": "TOHIT"
+        },
+        "block": {
+            "s": "TOBLOCK"
+        },
+        "cold-min": {
+            "s": "COLDMINDAM"
+        },
+        "cold-max": {
+            "s": "COLDMAXDAM"
+        },
+        "cold-len": {
+            "s": "COLDLENGTH"
+        },
+        "fire-min": {
+            "s": "FIREMINDAM"
+        },
+        "fire-max": {
+            "s": "FIREMAXDAM"
+        },
+        "ltng-min": {
+            "s": "LIGHTMINDAM"
+        },
+        "ltng-max": {
+            "s": "LIGHTMAXDAM"
+        },
+        "pois-min": {
+            "s": "POISONMINDAM"
+        },
+        "pois-max": {
+            "s": "POISONMAXDAM"
+        },
+        "pois-len": {
+            "s": "POISONLENGTH"
+        },
+        "dmg-min": {
+            "s": "MINDAMAGE"
+        },
+        "dmg-max": {
+            "s": "MAXDAMAGE"
+        },
+        "dmg%": {
+            "s": "WEAPONDAMAGE_PERCENT"
+        },
+        "dmg-to-mana": {
+            "s": "DAMAGETOMANA"
+        },
+        "res-fire": {
+            "s": "FIRERESIST"
+        },
+        "res-fire-max": {
+            "s": "MAXFIRERESIST"
+        },
+        "res-ltng": {
+            "s": "LIGHTRESIST"
+        },
+        "res-ltng-max": {
+            "s": "MAXLIGHTRESIST"
+        },
+        "res-cold": {
+            "s": "COLDRESIST"
+        },
+        "res-cold-max": {
+            "s": "MAXCOLDRESIST"
+        },
+        "res-mag": {
+            "s": "MAGICRESIST"
+        },
+        "res-mag-max": {
+            "s": "MAXMAGICRESIST"
+        },
+        "res-pois": {
+            "s": "POISONRESIST"
+        },
+        "res-pois-max": {
+            "s": "MAXPOISONRESIST"
+        },
+        "res-all": {
+            "s": "RESISTALL"
+        },
+        "res-all-max": {
+            "s": "MAXRESISTALL"
+        },
+        "abs-fire%": {
+            "s": "ASBORBFIRE_PERCENT"
+        },
+        "abs-fire": {
+            "s": "ASBORBFIRE"
+        },
+        "abs-ltng%": {
+            "s": "ASBORBLIGHT_PERCENT"
+        },
+        "abs-ltng": {
+            "s": "ASBORBLIGHT"
+        },
+        "abs-mag%": {
+            "s": "ASBORBMAGIC_PERCENT"
+        },
+        "abs-mag": {
+            "s": "ASBORBMAGIC"
+        },
+        "abs-cold%": {
+            "s": "ASBORBCOLD_PERCENT"
+        },
+        "abs-cold": {
+            "s": "ASBORBCOLD"
+        },
+        "dur": {
+            "s": "MAXDURABILITY"
+        },
+        "dur%": {
+            "s": "MAXDURABILITY_PERCENT"
+        },
+        "regen": {
+            "s": "HITPOINTS_DELTA"
+        },
+        "thorns": {
+            "s": "ATTACKERTAKES_DAMAGE"
+        },
+        "swing1": {
+            "s": "FASTATTACKRATE"
+        },
+        "swing2": {
+            "s": "FASTERATTACKRATE"
+        },
+        "swing3": {
+            "s": "FASTESTATTACKRATE"
+        },
+        "gold%": {
+            "s": "GOLDBONUS"
+        },
+        "mag%": {
+            "s": "MAGICBONUS"
+        },
+        "knock": {
+            "s": "KNOCKBACK"
+        },
+        "regen-stam": {
+            "s": "REGENSTAMINA_PERCENT"
+        },
+        "regen-mana": {
+            "s": "REGENMANA_PERCENT"
+        },
+        "stam": {
+            "s": "BASESTAMINA"
+        },
+        "time": {
+            "s": "TIMEDURATION"
+        },
+        "manasteal": {
+            "s": "MANASTEAL"
+        },
+        "lifesteal": {
+            "s": "LIFESTEAL"
+        },
+        "ama": {
+            "s": "ADDAMASKILLPOINTS"
+        },
+        "pal": {
+            "s": "ADDPALSKILLPOINTS"
+        },
+        "nec": {
+            "s": "ADDNECSKILLPOINTS"
+        },
+        "sor": {
+            "s": "ADDSORSKILLPOINTS"
+        },
+        "bar": {
+            "s": "ADDBARSKILLPOINTS"
+        },
+        "herb": {
+            "s": "DOUBLEHERBDURATION"
+        },
+        "light": {
+            "s": "LIGHTRADIUS"
+        },
+        "color": {
+            "s": "LIGHTCOLOR"
+        },
+        "ease": {
+            "s": "REQ_PERCENT"
+        },
+        "move1": {
+            "s": "FASTMOVEVELOCITY"
+        },
+        "move2": {
+            "s": "FASTERMOVEVELOCITY"
+        },
+        "move3": {
+            "s": "FASTESTMOVEVELOCITY"
+        },
+        "balance1": {
+            "s": "FASTGETHITRATE"
+        },
+        "balance2": {
+            "s": "FASTERGETHITRATE"
+        },
+        "balance3": {
+            "s": "FASTESTGETHITRATE"
+        },
+        "block1": {
+            "s": "FASTBLOCKRATE"
+        },
+        "block2": {
+            "s": "FASTERBLOCKRATE"
+        },
+        "block3": {
+            "s": "FASTESTBLOCKRATE"
+        },
+        "cast1": {
+            "s": "FASTCASTRATE"
+        },
+        "cast2": {
+            "s": "FASTERCASTRATE"
+        },
+        "cast3": {
+            "s": "FASTESTCASTRATE"
+        },
+        "res-pois-len": {
+            "s": "POISONLENGTHRESIST"
+        },
+        "dmg": {
+            "s": "NORMALDAMAGE"
+        },
+        "howl": {
+            "s": "HOWL"
+        },
+        "stupidity": {
+            "s": "STUPIDITY"
+        },
+        "ignore-ac": {
+            "s": "IGNORETARGETAC"
+        },
+        "reduce-ac": {
+            "s": "FRACTIONALTARGETAC"
+        },
+        "noheal": {
+            "s": "PREVENTHEAL"
+        },
+        "half-freeze": {
+            "s": "HALFFREEZEDURATION"
+        },
+        "att%": {
+            "s": "TOHIT_PERCENT"
+        },
+        "dmg-ac": {
+            "s": "DAMAGETARGETAC"
+        },
+        "dmg-demon": {
+            "s": "DEMONDAMAGE_PERCENT"
+        },
+        "dmg-undead": {
+            "s": "UNDEADDAMAGE_PERCENT"
+        },
+        "att-demon": {
+            "s": "DEMON_TOHIT"
+        },
+        "att-undead": {
+            "s": "UNDEAD_TOHIT"
+        },
+        "throw": {
+            "s": "THROWABLE"
+        },
+        "fireskill": {
+            "s": "FIRESKILL"
+        },
+        "allskills": {
+            "s": "ALLSKILLS"
+        },
+        "light-thorns": {
+            "s": "ATTACKERTAKESLIGHT_DAMAGE"
+        },
+        "freeze": {
+            "s": "FREEZE"
+        },
+        "openwounds": {
+            "s": "OPENWOUNDS"
+        },
+        "crush": {
+            "s": "CRUSHINGBLOW"
+        },
+        "kick": {
+            "s": "KICKDAMAGE"
+        },
+        "mana-kill": {
+            "s": "MANAAFTERKILL"
+        },
+        "demon-heal": {
+            "s": "HEALAFTERDEMONKILL"
+        },
+        "bloody": {
+            "s": "EXTRABLOOD"
+        },
+        "deadly": {
+            "s": "DEADLYSTRIKE"
+        },
+        "slow": {
+            "s": "SLOW"
+        },
+        "nofreeze": {
+            "s": "CANNOTBEFROZEN"
+        },
+        "stamdrain": {
+            "s": "STAMINADRAINPCT"
+        },
+        "reanimate": {
+            "s": "REANIMATE"
+        },
+        "pierce": {
+            "s": "PIERCE"
+        },
+        "magicarrow": {
+            "s": "MAGICARROW"
+        },
+        "explosivearrow": {
+            "s": "EXPLOSIVEARROW"
+        },
+        "dru": {
+            "s": "ADDDRUSKILLPOINTS"
+        },
+        "ass": {
+            "s": "ADDASSSKILLPOINTS"
+        },
+        "skill": {
+            "s": "ADDSKILL"
+        },
+        "skilltab": {
+            "s": "ADDTAB"
+        },
+        "passives": {
+            "s": "ADDSKILL_PASSIVES"
+        },
+        "att-skill": {
+            "s": "SKILL_ON_ATTACK"
+        },
+        "hit-skill": {
+            "s": "SKILL_ON_HIT"
+        },
+        "gethit-skill": {
+            "s": "SKILL_ON_GETHIT"
+        },
+        "gembonus": {
+            "s": "GEMBONUS"
+        },
+        "regen-dur": {
+            "s": "DURABILITY_OVER_TIME"
+        },
+        "fire-fx": {
+            "s": "FIRE_EFFECTS"
+        },
+        "ltng-fx": {
+            "s": "LIGHTNING_EFFECTS"
+        },
+        "sock": {
+            "s": "SOCKETS"
+        },
+        "dmg-fire": {
+            "s": "FIRE_DAMAGE_MINMAX"
+        },
+        "dmg-ltng": {
+            "s": "LIGHT_DAMAGE_MINMAX"
+        },
+        "dmg-mag": {
+            "s": "MAGIC_DAMAGE_MINMAX"
+        },
+        "dmg-cold": {
+            "s": "COLD_DAMAGE_MINMAXLEN"
+        },
+        "dmg-pois": {
+            "s": "POIS_DAMAGE_MINMAXLEN"
+        },
+        "dmg-throw": {
+            "s": "THROW_DAMAGE_MINMAX"
+        },
+        "dmg-norm": {
+            "s": "DAMAGE_MINMAX"
+        },
+        "ac/lvl": {
+            "s": "STATS_ITEM_ARMOR_PERLEVEL"
+        },
+        "ac%/lvl": {
+            "s": "STATS_ITEM_ARMORPERCENT_PERLEVEL"
+        },
+        "hp/lvl": {
+            "s": "STATS_ITEM_HP_PERLEVEL"
+        },
+        "mana/lvl": {
+            "s": "STATS_ITEM_MANA_PERLEVEL"
+        },
+        "dmg/lvl": {
+            "s": "STATS_ITEM_MAXDAMAGE_PERLEVEL"
+        },
+        "dmg%/lvl": {
+            "s": "STATS_ITEM_MAXDAMAGE_PERCENT_PERLEVEL"
+        },
+        "str/lvl": {
+            "s": "STATS_ITEM_STRENGTH_PERLEVEL"
+        },
+        "dex/lvl": {
+            "s": "STATS_ITEM_DEXTERITY_PERLEVEL"
+        },
+        "enr/lvl": {
+            "s": "STATS_ITEM_ENERGY_PERLEVEL"
+        },
+        "vit/lvl": {
+            "s": "STATS_ITEM_VITALITY_PERLEVEL"
+        },
+        "att/lvl": {
+            "s": "STATS_ITEM_TOHIT_PERLEVEL"
+        },
+        "att%/lvl": {
+            "s": "STATS_ITEM_TOHITPERCENT_PERLEVEL"
+        },
+        "dmg-cold/lvl": {
+            "s": "STATS_ITEM_COLD_DAMAGEMAX_PERLEVEL"
+        },
+        "dmg-fire/lvl": {
+            "s": "STATS_ITEM_FIRE_DAMAGEMAX_PERLEVEL"
+        },
+        "dmg-ltng/lvl": {
+            "s": "STATS_ITEM_LTNG_DAMAGEMAX_PERLEVEL"
+        },
+        "dmg-pois/lvl": {
+            "s": "STATS_ITEM_POIS_DAMAGEMAX_PERLEVEL"
+        },
+        "res-cold/lvl": {
+            "s": "STATS_ITEM_RESIST_COLD_PERLEVEL"
+        },
+        "res-fire/lvl": {
+            "s": "STATS_ITEM_RESIST_FIRE_PERLEVEL"
+        },
+        "res-ltng/lvl": {
+            "s": "STATS_ITEM_RESIST_LTNG_PERLEVEL"
+        },
+        "res-pois/lvl": {
+            "s": "STATS_ITEM_RESIST_POIS_PERLEVEL"
+        },
+        "abs-cold/lvl": {
+            "s": "STATS_ITEM_ABSORB_COLD_PERLEVEL"
+        },
+        "abs-fire/lvl": {
+            "s": "STATS_ITEM_ABSORB_FIRE_PERLEVEL"
+        },
+        "abs-ltng/lvl": {
+            "s": "STATS_ITEM_ABSORB_LTNG_PERLEVEL"
+        },
+        "abs-pois/lvl": {
+            "s": "STATS_ITEM_ABSORB_POIS_PERLEVEL"
+        },
+        "thorns/lvl": {
+            "s": "STATS_ITEM_THORNS_PERLEVEL"
+        },
+        "gold%/lvl": {
+            "s": "STATS_ITEM_FIND_GOLD_PERLEVEL"
+        },
+        "mag%/lvl": {
+            "s": "STATS_ITEM_FIND_MAGIC_PERLEVEL"
+        },
+        "regen-stam/lvl": {
+            "s": "STATS_ITEM_REGENSTAMINA_PERLEVEL"
+        },
+        "stam/lvl": {
+            "s": "STATS_ITEM_STAMINA_PERLEVEL"
+        },
+        "dmg-dem/lvl": {
+            "s": "STATS_ITEM_DAMAGE_DEMON_PERLEVEL"
+        },
+        "dmg-und/lvl": {
+            "s": "STATS_ITEM_DAMAGE_UNDEAD_PERLEVEL"
+        },
+        "att-dem/lvl": {
+            "s": "STATS_ITEM_TOHIT_DEMON_PERLEVEL"
+        },
+        "att-und/lvl": {
+            "s": "STATS_ITEM_TOHIT_UNDEAD_PERLEVEL"
+        },
+        "crush/lvl": {
+            "s": "STATS_ITEM_CRUSHINGBLOW_PERLEVEL"
+        },
+        "wounds/lvl": {
+            "s": "STATS_ITEM_OPENWOUNDS_PERLEVEL"
+        },
+        "kick/lvl": {
+            "s": "STATS_ITEM_KICK_DAMAGE_PERLEVEL"
+        },
+        "deadly/lvl": {
+            "s": "STATS_ITEM_DEADLYSTRIKE_PERLEVEL"
+        },
+        "gems%/lvl": {
+            "s": "STATS_ITEM_FIND_GEMS_PERLEVEL"
+        },
+        "rep-dur": {
+            "s": "STATS_ITEM_REPLENISH_DURABILITY"
+        },
+        "rep-quant": {
+            "s": "STATS_ITEM_REPLENISH_QUANTITY"
+        },
+        "stack": {
+            "s": "STATS_ITEM_EXTRA_STACK"
+        },
+        "item%": {
+            "s": "STATS_ITEM_FIND_ITEM"
+        },
+        "dmg-slash": {
+            "s": "STATS_ITEM_SLASH_DAMAGE"
+        },
+        "dmg-slash%": {
+            "s": "STATS_ITEM_SLASH_DAMAGE_PERCENT"
+        },
+        "dmg-crush": {
+            "s": "STATS_ITEM_CRUSH_DAMAGE"
+        },
+        "dmg-crush%": {
+            "s": "STATS_ITEM_CRUSH_DAMAGE_PERCENT"
+        },
+        "dmg-thrust": {
+            "s": "STATS_ITEM_THRUST_DAMAGE"
+        },
+        "dmg-thrust%": {
+            "s": "STATS_ITEM_THRUST_DAMAGE_PERCENT"
+        },
+        "abs-slash": {
+            "s": "STATS_ITEM_ABSORB_SLASH"
+        },
+        "abs-crush": {
+            "s": "STATS_ITEM_ABSORB_CRUSH"
+        },
+        "abs-thrust": {
+            "s": "STATS_ITEM_ABSORB_THRUST"
+        },
+        "abs-slash%": {
+            "s": "STATS_ITEM_ABSORB_SLASH_PERCENT"
+        },
+        "abs-crush%": {
+            "s": "STATS_ITEM_ABSORB_CRUSH_PERCENT"
+        },
+        "abs-thrust%": {
+            "s": "STATS_ITEM_ABSORB_THRUST_PERCENT"
+        },
+        "ac/time": {
+            "s": "STATS_ITEM_ARMOR_BYTIME"
+        },
+        "ac%/time": {
+            "s": "STATS_ITEM_ARMORPERCENT_BYTIME"
+        },
+        "hp/time": {
+            "s": "STATS_ITEM_HP_BYTIME"
+        },
+        "mana/time": {
+            "s": "STATS_ITEM_MANA_BYTIME"
+        },
+        "dmg/time": {
+            "s": "STATS_ITEM_MAXDAMAGE_BYTIME"
+        },
+        "dmg%/time": {
+            "s": "STATS_ITEM_MAXDAMAGE_PERCENT_BYTIME"
+        },
+        "str/time": {
+            "s": "STATS_ITEM_STRENGTH_BYTIME"
+        },
+        "dex/time": {
+            "s": "STATS_ITEM_DEXTERITY_BYTIME"
+        },
+        "enr/time": {
+            "s": "STATS_ITEM_ENERGY_BYTIME"
+        },
+        "vit/time": {
+            "s": "STATS_ITEM_VITALITY_BYTIME"
+        },
+        "att/time": {
+            "s": "STATS_ITEM_TOHIT_BYTIME"
+        },
+        "att%/time": {
+            "s": "STATS_ITEM_TOHITPERCENT_BYTIME"
+        },
+        "dmg-cold/time": {
+            "s": "STATS_ITEM_COLD_DAMAGEMAX_BYTIME"
+        },
+        "dmg-fire/time": {
+            "s": "STATS_ITEM_FIRE_DAMAGEMAX_BYTIME"
+        },
+        "dmg-ltng/time": {
+            "s": "STATS_ITEM_LTNG_DAMAGEMAX_BYTIME"
+        },
+        "dmg-pois/time": {
+            "s": "STATS_ITEM_POIS_DAMAGEMAX_BYTIME"
+        },
+        "res-cold/time": {
+            "s": "STATS_ITEM_RESIST_COLD_BYTIME"
+        },
+        "res-fire/time": {
+            "s": "STATS_ITEM_RESIST_FIRE_BYTIME"
+        },
+        "res-ltng/time": {
+            "s": "STATS_ITEM_RESIST_LTNG_BYTIME"
+        },
+        "res-pois/time": {
+            "s": "STATS_ITEM_RESIST_POIS_BYTIME"
+        },
+        "abs-cold/time": {
+            "s": "STATS_ITEM_ABSORB_COLD_BYTIME"
+        },
+        "abs-fire/time": {
+            "s": "STATS_ITEM_ABSORB_FIRE_BYTIME"
+        },
+        "abs-ltng/time": {
+            "s": "STATS_ITEM_ABSORB_LTNG_BYTIME"
+        },
+        "abs-pois/time": {
+            "s": "STATS_ITEM_ABSORB_POIS_BYTIME"
+        },
+        "gold%/time": {
+            "s": "STATS_ITEM_FIND_GOLD_BYTIME"
+        },
+        "mag%/time": {
+            "s": "STATS_ITEM_FIND_MAGIC_BYTIME"
+        },
+        "regen-stam/time": {
+            "s": "STATS_ITEM_REGENSTAMINA_BYTIME"
+        },
+        "stam/time": {
+            "s": "STATS_ITEM_STAMINA_BYTIME"
+        },
+        "dmg-dem/time": {
+            "s": "STATS_ITEM_DAMAGE_DEMON_BYTIME"
+        },
+        "dmg-und/time": {
+            "s": "STATS_ITEM_DAMAGE_UNDEAD_BYTIME"
+        },
+        "att-dem/time": {
+            "s": "STATS_ITEM_TOHIT_DEMON_BYTIME"
+        },
+        "att-und/time": {
+            "s": "STATS_ITEM_TOHIT_UNDEAD_BYTIME"
+        },
+        "crush/time": {
+            "s": "STATS_ITEM_CRUSHINGBLOW_BYTIME"
+        },
+        "wounds/time": {
+            "s": "STATS_ITEM_OPENWOUNDS_BYTIME"
+        },
+        "kick/time": {
+            "s": "STATS_ITEM_KICK_DAMAGE_BYTIME"
+        },
+        "deadly/time": {
+            "s": "STATS_ITEM_DEADLYSTRIKE_BYTIME"
+        },
+        "gems%/time": {
+            "s": "STATS_ITEM_FIND_GEMS_BYTIME"
+        },
+        "pierce-cold": {
+            "s": "STATS_ITEM_PIERCE_COLD"
+        },
+        "pierce-fire": {
+            "s": "STATS_ITEM_PIERCE_FIRE"
+        },
+        "pierce-ltng": {
+            "s": "STATS_ITEM_PIERCE_LTNG"
+        },
+        "pierce-pois": {
+            "s": "STATS_ITEM_PIERCE_POIS"
+        },
+        "dmg-mon": {
+            "s": "STATS_ITEM_DAMAGE_VS_MONSTER"
+        },
+        "dmg%-mon": {
+            "s": "STATS_ITEM_DAMAGE_PERCENT_VS_MONSTER"
+        },
+        "att-mon": {
+            "s": "STATS_ITEM_TOHIT_VS_MONSTER"
+        },
+        "att%-mon": {
+            "s": "STATS_ITEM_TOHIT_PERCENT_VS_MONSTER"
+        },
+        "ac-mon": {
+            "s": "STATS_ITEM_AC_VS_MONSTER"
+        },
+        "ac%-mon": {
+            "s": "STATS_ITEM_AC_PERCENT_VS_MONSTER"
+        },
+        "indestruct": {
+            "s": "INDESTRUCTIBLE"
+        },
+        "charged": {
+            "s": "STATS_ITEM_CHARGED_SKILL"
+        },
+        "": {}
     },
     "magical_properties": [
         {
             "id": 0,
-            "s": "strength",
-            "c": 1,
-            "cB": 10,
-            "cS": 0,
-            "sB": 8,
-            "sA": 32,
-            "so": 67,
-            "dF": 1,
-            "dV": 1,
-            "dP": "to Strength",
-            "dN": "to all Attributes",
-            "dg": 1,
-            "dgF": 1,
-            "dgV": 1,
-            "dgP": "to all Attributes"
+            "s": "STATS_STRENGTH",
+            "sB": 7,
+            "sA": 32
         },
         {
             "id": 1,
-            "s": "energy",
-            "c": 1,
-            "cB": 10,
-            "cS": 0,
+            "s": "STATS_ENERGY",
             "sB": 7,
-            "sA": 32,
-            "so": 61,
-            "dF": 1,
-            "dV": 1,
-            "dP": "to Energy",
-            "dN": "to all Attributes",
-            "dg": 1,
-            "dgF": 1,
-            "dgV": 1,
-            "dgP": "to all Attributes",
-            "o": 8,
-            "os": [
-                "maxmana"
-            ]
+            "sA": 32
         },
         {
             "id": 2,
-            "s": "dexterity",
-            "c": 1,
-            "cB": 10,
-            "cS": 0,
+            "s": "STATS_DEXTERITY",
             "sB": 7,
-            "sA": 32,
-            "so": 65,
-            "dF": 1,
-            "dV": 1,
-            "dP": "to Dexterity",
-            "dN": "to all Attributes",
-            "dg": 1,
-            "dgF": 1,
-            "dgV": 1,
-            "dgP": "to all Attributes"
+            "sA": 32
         },
         {
             "id": 3,
-            "s": "vitality",
-            "c": 1,
-            "cB": 10,
-            "cS": 0,
+            "s": "STATS_VITALITY",
             "sB": 7,
-            "sA": 32,
-            "so": 63,
-            "dF": 1,
-            "dV": 1,
-            "dP": "to Vitality",
-            "dN": "to all Attributes",
-            "dg": 1,
-            "dgF": 1,
-            "dgV": 1,
-            "dgP": "to all Attributes",
-            "o": 9,
-            "os": [
-                "maxhp",
-                "maxstamina"
-            ]
+            "sA": 32
         },
         {
             "id": 4,
-            "s": "statpts",
-            "c": 1,
-            "cB": 10,
-            "cS": 0
+            "s": "STATS_STATPTS"
         },
         {
             "id": 5,
-            "s": "newskills",
-            "c": 1,
-            "cB": 8,
-            "cS": 0
+            "s": "STATS_NEWSKILLS"
         },
         {
             "id": 6,
-            "s": "hitpoints",
-            "c": 1,
-            "cB": 21,
-            "cS": 0,
-            "cVS": 8
+            "s": "STATS_HITPOINTS",
+            "vS": 8
         },
         {
             "id": 7,
-            "s": "maxhp",
-            "c": 1,
-            "cB": 21,
-            "cS": 0,
-            "cVS": 8,
-            "sB": 9,
-            "sA": 32,
-            "so": 59,
-            "dF": 1,
-            "dV": 1,
-            "dP": "to Life",
-            "dN": "to Life"
+            "s": "STATS_MAXHP",
+            "vS": 8,
+            "sB": 8,
+            "sA": 32
         },
         {
             "id": 8,
-            "s": "mana",
-            "c": 1,
-            "cB": 21,
-            "cS": 0,
-            "cVS": 8
+            "s": "STATS_MANA",
+            "vS": 8
         },
         {
             "id": 9,
-            "s": "maxmana",
-            "c": 1,
-            "cB": 21,
-            "cS": 0,
-            "cVS": 8,
+            "s": "STATS_MAXMANA",
+            "vS": 8,
             "sB": 8,
-            "sA": 32,
-            "so": 55,
-            "dF": 1,
-            "dV": 1,
-            "dP": "to Mana",
-            "dN": "to Mana"
+            "sA": 32
         },
         {
             "id": 10,
-            "s": "stamina",
-            "c": 1,
-            "cB": 21,
-            "cS": 0,
-            "cVS": 8
+            "s": "STATS_STAMINA",
+            "vS": 8
         },
         {
             "id": 11,
-            "s": "maxstamina",
-            "c": 1,
-            "cB": 21,
-            "cS": 0,
-            "cVS": 8,
+            "s": "STATS_MAXSTAMINA",
+            "vS": 8,
             "sB": 8,
-            "sA": 32,
-            "so": 51,
-            "dF": 1,
-            "dV": 1,
-            "dP": "Maximum Stamina",
-            "dN": "Maximum Stamina"
+            "sA": 32
         },
         {
             "id": 12,
-            "s": "level",
-            "c": 1,
-            "cB": 7,
-            "cS": 0
+            "s": "STATS_LEVEL"
         },
         {
             "id": 13,
-            "s": "experience",
-            "c": 1,
-            "cB": 32,
-            "cS": 0
+            "s": "STATS_EXPERIENCE"
         },
         {
             "id": 14,
-            "s": "gold",
-            "c": 1,
-            "cB": 25,
-            "cS": 0
+            "s": "STATS_GOLD"
         },
         {
             "id": 15,
-            "s": "goldbank",
-            "c": 1,
-            "cB": 25,
-            "cS": 0
+            "s": "STATS_GOLDBANK"
         },
         {
             "id": 16,
-            "s": "item_armor_percent",
-            "sS": 1,
+            "s": "STATS_ITEM_ARMOR_PERCENT",
             "sB": 9,
-            "sA": 0,
-            "so": 74,
-            "dF": 4,
-            "dV": 1,
-            "dP": "Enhanced Defense",
-            "dN": "Enhanced Defense",
-            "o": 13,
-            "os": [
-                "armorclass"
-            ]
+            "sA": 0
         },
         {
             "id": 17,
-            "s": "item_maxdamage_percent",
-            "sS": 1,
+            "s": "STATS_ITEM_MAXDAMAGE_PERCENT",
             "sB": 9,
-            "sA": 0,
-            "so": 129,
-            "dF": 3,
-            "dV": 0,
-            "dP": "Enhanced Maximum Damage",
-            "dN": "Enhanced Maximum Damage",
-            "o": 13,
-            "os": [
-                "maxdamage",
-                "secondary_maxdamage",
-                "item_throw_maxdamage"
-            ],
-            "np": 2,
-            "dR": "Adds %d-%d damage",
-            "dE": "Enhanced Damage}"
+            "sA": 0
         },
         {
             "id": 18,
-            "s": "item_mindamage_percent",
-            "sS": 1,
+            "s": "STATS_ITEM_MINDAMAGE_PERCENT",
             "sB": 9,
-            "sA": 0,
-            "so": 130,
-            "dF": 3,
-            "dV": 0,
-            "dP": "Enhanced Minimum Damage",
-            "dN": "Enhanced Minimum Damage",
-            "o": 13,
-            "os": [
-                "mindamage",
-                "secondary_mindamage",
-                "item_throw_mindamage"
-            ]
+            "sA": 0
         },
         {
             "id": 19,
-            "s": "tohit",
-            "sS": 1,
-            "sB": 10,
-            "so": 115,
-            "dF": 1,
-            "dV": 1,
-            "dP": "to Attack Rating",
-            "dN": "to Attack Rating"
+            "s": "STATS_TOHIT",
+            "sB": 10
         },
         {
             "id": 20,
-            "s": "toblock",
-            "sS": 1,
+            "s": "STATS_TOBLOCK",
             "sB": 6,
-            "sA": 0,
-            "so": 134,
-            "dF": 2,
-            "dV": 1,
-            "dP": "Increased Chance of Blocking",
-            "dN": "Increased Chance of Blocking"
+            "sA": 0
         },
         {
             "id": 21,
-            "s": "mindamage",
-            "sS": 1,
+            "s": "STATS_MINDAMAGE",
             "sB": 6,
-            "sA": 0,
-            "so": 127,
-            "dF": 1,
-            "dV": 1,
-            "dP": "to Minimum Damage",
-            "dN": "to Minimum Damage"
+            "sA": 0
         },
         {
             "id": 22,
-            "s": "maxdamage",
-            "sS": 1,
+            "s": "STATS_MAXDAMAGE",
             "sB": 7,
-            "sA": 0,
-            "so": 126,
-            "dF": 1,
-            "dV": 1,
-            "dP": "to Maximum Damage",
-            "dN": "to Maximum Damage"
+            "sA": 0
         },
         {
             "id": 23,
-            "s": "secondary_mindamage",
-            "sS": 1,
-            "sB": 6,
-            "sA": 0,
-            "so": 124,
-            "dF": 1,
-            "dV": 1,
-            "dP": "to Minimum Damage",
-            "dN": "to Minimum Damage"
+            "s": "STATS_SECONDARY_MINDAMAGE",
+            "sB": 5,
+            "sA": 0
         },
         {
             "id": 24,
-            "s": "secondary_maxdamage",
-            "sS": 1,
-            "sB": 7,
-            "sA": 0,
-            "so": 123,
-            "dF": 1,
-            "dV": 1,
-            "dP": "to Maximum Damage",
-            "dN": "to Maximum Damage"
+            "s": "STATS_SECONDARY_MAXDAMAGE",
+            "sB": 6,
+            "sA": 0
         },
         {
             "id": 25,
-            "s": "damagepercent",
-            "sS": 1,
+            "s": "STATS_DAMAGEPERCENT",
             "sB": 8,
             "sA": 0
         },
         {
             "id": 26,
-            "s": "manarecovery",
+            "s": "STATS_MANARECOVERY",
             "sB": 8,
             "sA": 0
         },
         {
             "id": 27,
-            "s": "manarecoverybonus",
-            "sS": 1,
+            "s": "STATS_MANARECOVERYBONUS",
             "sB": 8,
-            "sA": 0,
-            "so": 52,
-            "dF": 2,
-            "dV": 2,
-            "dP": "Regenerate Mana",
-            "dN": "Regenerate Mana"
+            "sA": 0
         },
         {
             "id": 28,
-            "s": "staminarecoverybonus",
-            "sS": 1,
+            "s": "STATS_STAMINARECOVERYBONUS",
             "sB": 8,
-            "sA": 0,
-            "so": 48,
-            "dF": 2,
-            "dV": 2,
-            "dP": "Heal Stamina Plus",
-            "dN": "Heal Stamina Plus"
+            "sA": 0
         },
         {
             "id": 29,
-            "s": "lastexp"
+            "s": "STATS_LASTEXP"
         },
         {
             "id": 30,
-            "s": "nextexp"
+            "s": "STATS_NEXTEXP"
         },
         {
             "id": 31,
-            "s": "armorclass",
-            "sS": 1,
-            "sB": 11,
-            "sA": 10,
-            "so": 71,
-            "dF": 1,
-            "dV": 1,
-            "dP": "Defense",
-            "dN": "Defense"
+            "s": "STATS_ARMORCLASS",
+            "sB": 10,
+            "sA": 10
         },
         {
             "id": 32,
-            "s": "armorclass_vs_missile",
-            "sS": 1,
-            "sB": 9,
-            "sA": 0,
-            "so": 69,
-            "dF": 1,
-            "dV": 1,
-            "dP": "Defense vs. Missile",
-            "dN": "Defense vs. Missile"
+            "s": "STATS_ARMORCLASS_VS_MISSILE",
+            "sB": 8,
+            "sA": 0
         },
         {
             "id": 33,
-            "s": "armorclass_vs_hth",
-            "sS": 1,
+            "s": "STATS_ARMORCLASS_VS_HTH",
             "sB": 8,
-            "sA": 0,
-            "so": 70,
-            "dF": 1,
-            "dV": 1,
-            "dP": "Defense vs. Melee",
-            "dN": "Defense vs. Melee"
+            "sA": 0
         },
         {
             "id": 34,
-            "s": "normal_damage_reduction",
-            "sS": 1,
+            "s": "STATS_NORMAL_DAMAGE_REDUCTION",
             "sB": 6,
-            "sA": 0,
-            "so": 22,
-            "dF": 3,
-            "dV": 2,
-            "dP": "Damage Reduced by",
-            "dN": "Damage Reduced by"
+            "sA": 0
         },
         {
             "id": 35,
-            "s": "magic_damage_reduction",
-            "sS": 1,
+            "s": "STATS_MAGIC_DAMAGE_REDUCTION",
             "sB": 6,
-            "sA": 0,
-            "so": 21,
-            "dF": 3,
-            "dV": 2,
-            "dP": "Magic Damage Reduced by",
-            "dN": "Magic Damage Reduced by"
+            "sA": 0
         },
         {
             "id": 36,
-            "s": "damageresist",
-            "sS": 1,
+            "s": "STATS_DAMAGERESIST",
             "sB": 8,
-            "sA": 0,
-            "so": 22,
-            "dF": 2,
-            "dV": 2,
-            "dP": "Damage Reduced by",
-            "dN": "Damage Reduced by"
+            "sA": 0
         },
         {
             "id": 37,
-            "s": "magicresist",
-            "sS": 1,
+            "s": "STATS_MAGICRESIST",
             "sB": 8,
-            "sA": 0,
-            "so": 41,
-            "dF": 4,
-            "dV": 2,
-            "dP": "Magic Resist",
-            "dN": "Magic Resist"
+            "sA": 0
         },
         {
             "id": 38,
-            "s": "maxmagicresist",
-            "sS": 1,
+            "s": "STATS_MAXMAGICRESIST",
             "sB": 5,
-            "sA": 0,
-            "so": 46,
-            "dF": 4,
-            "dV": 1,
-            "dP": "to Maximum Magic Resist",
-            "dN": "to Maximum Magic Resist"
+            "sA": 0
         },
         {
             "id": 39,
-            "s": "fireresist",
-            "sS": 1,
+            "s": "STATS_FIRERESIST",
             "sB": 8,
-            "sA": 50,
-            "so": 36,
-            "dF": 4,
-            "dV": 2,
-            "dP": "Fire Resist",
-            "dN": "All Resistances +%d",
-            "dg": 2,
-            "dgF": 19,
-            "dgP": "All Resistances +%d"
+            "sA": 0
         },
         {
             "id": 40,
-            "s": "maxfireresist",
-            "sS": 1,
+            "s": "STATS_MAXFIRERESIST",
             "sB": 5,
-            "sA": 0,
-            "so": 42,
-            "dF": 4,
-            "dV": 1,
-            "dP": "to Maximum Fire Resist",
-            "dN": "to Maximum Fire Resist"
+            "sA": 0
         },
         {
             "id": 41,
-            "s": "lightresist",
-            "sS": 1,
+            "s": "STATS_LIGHTRESIST",
             "sB": 8,
-            "sA": 50,
-            "so": 38,
-            "dF": 4,
-            "dV": 2,
-            "dP": "Lightning Resist",
-            "dN": "All Resistances +%d",
-            "dg": 2,
-            "dgF": 19,
-            "dgP": "All Resistances +%d"
+            "sA": 0
         },
         {
             "id": 42,
-            "s": "maxlightresist",
-            "sS": 1,
+            "s": "STATS_MAXLIGHTRESIST",
             "sB": 5,
-            "sA": 0,
-            "so": 43,
-            "dF": 4,
-            "dV": 1,
-            "dP": "to Maximum Lightning Resist",
-            "dN": "to Maximum Lightning Resist"
+            "sA": 0
         },
         {
             "id": 43,
-            "s": "coldresist",
-            "sS": 1,
+            "s": "STATS_COLDRESIST",
             "sB": 8,
-            "sA": 50,
-            "so": 40,
-            "dF": 4,
-            "dV": 2,
-            "dP": "Cold Resist",
-            "dN": "All Resistances +%d",
-            "dg": 2,
-            "dgF": 19,
-            "dgP": "All Resistances +%d"
+            "sA": 0
         },
         {
             "id": 44,
-            "s": "maxcoldresist",
-            "sS": 1,
+            "s": "STATS_MAXCOLDRESIST",
             "sB": 5,
-            "sA": 0,
-            "so": 44,
-            "dF": 4,
-            "dV": 1,
-            "dP": "to Maximum Cold Resist",
-            "dN": "to Maximum Cold Resist"
+            "sA": 0
         },
         {
             "id": 45,
-            "s": "poisonresist",
-            "sS": 1,
+            "s": "STATS_POISONRESIST",
             "sB": 8,
-            "sA": 50,
-            "so": 34,
-            "dF": 4,
-            "dV": 2,
-            "dP": "Poison Resist",
-            "dN": "All Resistances +%d",
-            "dg": 2,
-            "dgF": 19,
-            "dgP": "All Resistances +%d"
+            "sA": 0
         },
         {
             "id": 46,
-            "s": "maxpoisonresist",
-            "sS": 1,
+            "s": "STATS_MAXPOISONRESIST",
             "sB": 5,
-            "sA": 0,
-            "so": 45,
-            "dF": 4,
-            "dV": 1,
-            "dP": "to Maximum Poison Resist",
-            "dN": "to Maximum Poison Resist"
+            "sA": 0
         },
         {
             "id": 47,
-            "s": "damageaura",
-            "sS": 1
+            "s": "STATS_DAMAGEAURA"
         },
         {
             "id": 48,
-            "s": "firemindam",
-            "sS": 1,
+            "s": "STATS_FIREMINDAM",
             "sB": 8,
-            "sA": 0,
-            "so": 102,
-            "dF": 1,
-            "dV": 1,
-            "dP": "to Minimum Fire Damage",
-            "dN": "to Minimum Fire Damage",
-            "np": 2,
-            "dR": "Adds %d-%d fire damage",
-            "dE": "+%d fire damage"
+            "sA": 0
         },
         {
             "id": 49,
-            "s": "firemaxdam",
-            "sS": 1,
-            "sB": 9,
-            "sA": 0,
-            "so": 101,
-            "dF": 1,
-            "dV": 1,
-            "dP": "to Maximum Fire Damage",
-            "dN": "to Maximum Fire Damage"
+            "s": "STATS_FIREMAXDAM",
+            "sB": 8,
+            "sA": 0
         },
         {
             "id": 50,
-            "s": "lightmindam",
-            "sS": 1,
+            "s": "STATS_LIGHTMINDAM",
             "sB": 6,
-            "sA": 0,
-            "so": 99,
-            "dF": 1,
-            "dV": 1,
-            "dP": "to Minimum Lightning Damage",
-            "dN": "to Minimum Lightning Damage",
-            "np": 2,
-            "dR": "Adds %d-%d lightning damage",
-            "dE": "+%d lightning damage"
+            "sA": 0
         },
         {
             "id": 51,
-            "s": "lightmaxdam",
-            "sS": 1,
-            "sB": 10,
-            "sA": 0,
-            "so": 98,
-            "dF": 1,
-            "dV": 1,
-            "dP": "to Maximum Lightning Damage",
-            "dN": "to Maximum Lightning Damage"
+            "s": "STATS_LIGHTMAXDAM",
+            "sB": 9,
+            "sA": 0
         },
         {
             "id": 52,
-            "s": "magicmindam",
-            "sS": 1,
-            "sB": 8,
-            "sA": 0,
-            "so": 104,
-            "dF": 1,
-            "dV": 1,
-            "dP": "+%d magic damage",
-            "dN": "+%d magic damage",
-            "np": 2,
-            "dR": "Adds %d-%d magic damage",
-            "dE": "+%d magic damage"
+            "s": "STATS_MAGICMINDAM",
+            "sB": 6,
+            "sA": 0
         },
         {
             "id": 53,
-            "s": "magicmaxdam",
-            "sS": 1,
-            "sB": 9,
-            "sA": 0,
-            "so": 103,
-            "dF": 1,
-            "dV": 1,
-            "dP": "+%d magic damage",
-            "dN": "+%d magic damage"
+            "s": "STATS_MAGICMAXDAM",
+            "sB": 7,
+            "sA": 0
         },
         {
             "id": 54,
-            "s": "coldmindam",
-            "sS": 1,
-            "sB": 8,
-            "sA": 0,
-            "so": 96,
-            "dF": 1,
-            "dV": 1,
-            "dP": "to Minimum Cold Damage",
-            "dN": "to Minimum Cold Damage",
-            "np": 3,
-            "dR": "Adds %d-%d cold damage",
-            "dE": "+%d cold damage"
+            "s": "STATS_COLDMINDAM",
+            "sB": 6,
+            "sA": 0
         },
         {
             "id": 55,
-            "s": "coldmaxdam",
-            "sS": 1,
-            "sB": 9,
-            "sA": 0,
-            "so": 95,
-            "dF": 1,
-            "dV": 1,
-            "dP": "to Maximum Cold Damage",
-            "dN": "to Maximum Cold Damage"
+            "s": "STATS_COLDMAXDAM",
+            "sB": 8,
+            "sA": 0
         },
         {
             "id": 56,
-            "s": "coldlength",
-            "sS": 1,
+            "s": "STATS_COLDLENGTH",
             "sB": 8,
             "sA": 0
         },
         {
             "id": 57,
-            "s": "poisonmindam",
-            "sS": 1,
-            "sB": 10,
-            "sA": 0,
-            "so": 92,
-            "dF": 1,
-            "dV": 1,
-            "dP": "to Minimum Poison Damage",
-            "dN": "to Minimum Poison Damage",
-            "np": 3,
-            "dR": "Adds %d-%d poison damage over %d seconds",
-            "dE": "+%d poison damage over %d seconds"
-        },
-        {
-            "id": 58,
-            "s": "poisonmaxdam",
-            "sS": 1,
-            "sB": 10,
-            "sA": 0,
-            "so": 91,
-            "dF": 1,
-            "dV": 1,
-            "dP": "to Maximum Poison Damage",
-            "dN": "to Maximum Poison Damage"
-        },
-        {
-            "id": 59,
-            "s": "poisonlength",
-            "sS": 1,
+            "s": "STATS_POISONMINDAM",
             "sB": 9,
             "sA": 0
         },
         {
+            "id": 58,
+            "s": "STATS_POISONMAXDAM",
+            "sB": 9,
+            "sA": 0
+        },
+        {
+            "id": 59,
+            "s": "STATS_POISONLENGTH",
+            "sB": 8,
+            "sA": 0
+        },
+        {
             "id": 60,
-            "s": "lifedrainmindam",
-            "sS": 1,
+            "s": "STATS_LIFEDRAINMINDAM",
             "sB": 7,
-            "sA": 0,
-            "so": 88,
-            "dF": 2,
-            "dV": 1,
-            "dP": "Life stolen per hit",
-            "dN": "Life stolen per hit"
+            "sA": 0
         },
         {
             "id": 61,
-            "s": "lifedrainmaxdam",
-            "sS": 1
+            "s": "STATS_LIFEDRAINMAXDAM"
         },
         {
             "id": 62,
-            "s": "manadrainmindam",
-            "sS": 1,
+            "s": "STATS_MANADRAINMINDAM",
             "sB": 7,
-            "sA": 0,
-            "so": 89,
-            "dF": 2,
-            "dV": 1,
-            "dP": "Mana stolen per hit",
-            "dN": "Mana stolen per hit"
+            "sA": 0
         },
         {
             "id": 63,
-            "s": "manadrainmaxdam",
-            "sS": 1
+            "s": "STATS_MANADRAINMAXDAM"
         },
         {
             "id": 64,
-            "s": "stamdrainmindam",
-            "sS": 1
+            "s": "STATS_STAMDRAINMINDAM"
         },
         {
             "id": 65,
-            "s": "stamdrainmaxdam",
-            "sS": 1
+            "s": "STATS_STAMDRAINMAXDAM"
         },
         {
             "id": 66,
-            "s": "stunlength"
+            "s": "STATS_STUNLENGTH"
         },
         {
             "id": 67,
-            "s": "velocitypercent",
-            "sS": 1,
+            "s": "STATS_VELOCITYPERCENT",
             "sB": 7,
             "sA": 30
         },
         {
             "id": 68,
-            "s": "attackrate",
-            "sS": 1,
+            "s": "STATS_ATTACKRATE",
             "sB": 7,
             "sA": 30
         },
         {
             "id": 69,
-            "s": "other_animrate",
-            "sS": 1
+            "s": "STATS_OTHER_ANIMRATE"
         },
         {
             "id": 70,
-            "s": "quantity",
-            "sS": 1
+            "s": "STATS_QUANTITY"
         },
         {
             "id": 71,
-            "s": "value",
-            "sS": 1,
+            "s": "STATS_VALUE",
             "sB": 8,
             "sA": 100
         },
         {
             "id": 72,
-            "s": "durability",
-            "sS": 1,
-            "sB": 9,
+            "s": "STATS_DURABILITY",
+            "sB": 8,
             "sA": 0
         },
         {
             "id": 73,
-            "s": "maxdurability",
-            "sS": 1,
+            "s": "STATS_MAXDURABILITY",
             "sB": 8,
             "sA": 0
         },
         {
             "id": 74,
-            "s": "hpregen",
-            "sB": 6,
-            "sA": 30,
-            "so": 56,
-            "dF": 1,
-            "dV": 2,
-            "dP": "Replenish Life",
-            "dN": "Drain Life"
+            "s": "STATS_HPREGEN",
+            "sB": 5,
+            "sA": 10
         },
         {
             "id": 75,
-            "s": "item_maxdurability_percent",
-            "sS": 1,
+            "s": "STATS_ITEM_MAXDURABILITY_PERCENT",
             "sB": 7,
-            "sA": 20,
-            "so": 3,
-            "dF": 2,
-            "dV": 2,
-            "dP": "Increase Maximum Durability",
-            "dN": "Increase Maximum Durability",
-            "o": 13,
-            "os": [
-                "maxdurability"
-            ]
+            "sA": 20
         },
         {
             "id": 76,
-            "s": "item_maxhp_percent",
-            "sS": 1,
+            "s": "STATS_ITEM_MAXHP_PERCENT",
             "sB": 6,
-            "sA": 10,
-            "so": 58,
-            "dF": 2,
-            "dV": 2,
-            "dP": "Increase Maximum Life",
-            "dN": "Increase Maximum Life",
-            "o": 11,
-            "os": [
-                "maxhp"
-            ]
+            "sA": 10
         },
         {
             "id": 77,
-            "s": "item_maxmana_percent",
-            "sS": 1,
+            "s": "STATS_ITEM_MAXMANA_PERCENT",
             "sB": 6,
-            "sA": 10,
-            "so": 54,
-            "dF": 2,
-            "dV": 2,
-            "dP": "Increase Maximum Mana",
-            "dN": "Increase Maximum Mana",
-            "o": 11,
-            "os": [
-                "maxmana"
-            ]
+            "sA": 10
         },
         {
             "id": 78,
-            "s": "item_attackertakesdamage",
-            "sS": 1,
+            "s": "STATS_ITEM_ATTACKERTAKESDAMAGE",
             "sB": 7,
-            "sA": 0,
-            "so": 13,
-            "dF": 3,
-            "dV": 2,
-            "dP": "Attacker Takes Damage of",
-            "dN": "Attacker Takes Damage of"
+            "sA": 0
         },
         {
             "id": 79,
-            "s": "item_goldbonus",
-            "sS": 1,
-            "sB": 9,
-            "sA": 100,
-            "so": 10,
-            "dF": 2,
-            "dV": 1,
-            "dP": "Extra Gold from Monsters",
-            "dN": "Extra Gold from Monsters"
+            "s": "STATS_ITEM_GOLDBONUS",
+            "sB": 8,
+            "sA": 20
         },
         {
             "id": 80,
-            "s": "item_magicbonus",
-            "sS": 1,
-            "sB": 8,
-            "sA": 100,
-            "so": 8,
-            "dF": 2,
-            "dV": 1,
-            "dP": "Better Chance of Getting Magic Items",
-            "dN": "Better Chance of Getting Magic Items"
+            "s": "STATS_ITEM_MAGICBONUS",
+            "sB": 7,
+            "sA": 20
         },
         {
             "id": 81,
-            "s": "item_knockback",
-            "sS": 1,
+            "s": "STATS_ITEM_KNOCKBACK",
             "sB": 7,
-            "sA": 0,
-            "so": 76,
-            "dF": 3,
-            "dV": 0,
-            "dP": "Knockback",
-            "dN": "Knockback"
+            "sA": 0
         },
         {
             "id": 82,
-            "s": "item_timeduration",
-            "sS": 1,
+            "s": "STATS_ITEM_TIMEDURATION",
             "sB": 9,
             "sA": 20
         },
         {
             "id": 83,
-            "s": "item_addclassskills",
-            "sS": 1,
+            "s": "STATS_ITEM_ADDAMASKILLPOINTS",
             "sB": 3,
-            "sA": 0,
-            "sP": 3,
-            "so": 150,
-            "dF": 13,
-            "dV": 1,
-            "dP": "to Amazon Skill Levels",
-            "dN": "to Amazon Skill Levels"
+            "sA": 0
         },
         {
             "id": 84,
-            "s": "unsentparam1"
+            "s": "STATS_ITEM_ADDPALSKILLPOINTS",
+            "sB": 3,
+            "sA": 0
         },
         {
             "id": 85,
-            "s": "item_addexperience",
-            "sS": 1,
-            "sB": 9,
-            "sA": 50,
-            "so": 11,
-            "dF": 4,
-            "dV": 1,
-            "dP": "to Experience Gained",
-            "dN": "to Experience Gained"
+            "s": "STATS_ITEM_ADDNECSKILLPOINTS",
+            "sB": 3,
+            "sA": 0
         },
         {
             "id": 86,
-            "s": "item_healafterkill",
-            "sS": 1,
-            "sB": 7,
-            "sA": 0,
-            "so": 16,
-            "dF": 1,
-            "dV": 1,
-            "dP": "Life after each Kill",
-            "dN": "Life after each Kill"
+            "s": "STATS_ITEM_ADDSORSKILLPOINTS",
+            "sB": 3,
+            "sA": 0
         },
         {
             "id": 87,
-            "s": "item_reducedprices",
-            "sB": 7,
-            "sA": 0,
-            "so": 8,
-            "dF": 2,
-            "dV": 2,
-            "dP": "Reduces all Vendor Prices",
-            "dN": "Reduces all Vendor Prices"
+            "s": "STATS_ITEM_ADDBARSKILLPOINTS",
+            "sB": 3,
+            "sA": 0
         },
         {
             "id": 88,
-            "s": "item_doubleherbduration",
-            "sS": 1,
+            "s": "STATS_ITEM_DOUBLEHERBDURATION",
             "sB": 1,
             "sA": 0
         },
         {
             "id": 89,
-            "s": "item_lightradius",
-            "sS": 1,
+            "s": "STATS_ITEM_LIGHTRADIUS",
             "sB": 4,
-            "sA": 4,
-            "so": 6,
-            "dF": 1,
-            "dV": 1,
-            "dP": "to Light Radius",
-            "dN": "to Light Radius"
+            "sA": 4
         },
         {
             "id": 90,
-            "s": "item_lightcolor",
-            "sS": 1,
-            "sB": 24,
+            "s": "STATS_ITEM_LIGHTCOLOR",
+            "sB": 5,
             "sA": 0
         },
         {
             "id": 91,
-            "s": "item_req_percent",
-            "sS": 1,
+            "s": "STATS_ITEM_REQ_PERCENT",
             "sB": 8,
-            "sA": 100,
-            "so": 0,
-            "dF": 4,
-            "dV": 2,
-            "dP": "Requirements",
-            "dN": "Requirements"
+            "sA": 100
         },
         {
             "id": 92,
-            "s": "item_levelreq",
-            "sB": 7
+            "s": "STATS_ITEM_FASTATTACKRATE",
+            "sB": 6,
+            "sA": 20
         },
         {
             "id": 93,
-            "s": "item_fasterattackrate",
-            "sS": 1,
-            "sB": 7,
-            "sA": 20,
-            "so": 145,
-            "dF": 4,
-            "dV": 1,
-            "dP": "Increased Attack Speed",
-            "dN": "Increased Attack Speed"
+            "s": "STATS_ITEM_FASTERATTACKRATE",
+            "sB": 6,
+            "sA": 20
         },
         {
             "id": 94,
-            "s": "item_levelreqpct",
+            "s": "STATS_ITEM_FASTESTATTACKRATE",
             "sB": 7,
-            "sA": 64,
-            "o": 13,
-            "os": [
-                "item_levelreq"
-            ]
+            "sA": 20
         },
         {
             "id": 95,
-            "s": "lastblockframe"
+            "s": "STATS_ITEM_FASTMOVEVELOCITY",
+            "sB": 6,
+            "sA": 20
         },
         {
             "id": 96,
-            "s": "item_fastermovevelocity",
-            "sS": 1,
-            "sB": 7,
-            "sA": 20,
-            "so": 148,
-            "dF": 4,
-            "dV": 1,
-            "dP": "Faster Run/Walk",
-            "dN": "Faster Run/Walk"
+            "s": "STATS_ITEM_FASTERMOVEVELOCITY",
+            "sB": 6,
+            "sA": 20
         },
         {
             "id": 97,
-            "s": "item_nonclassskill",
-            "e": 1,
-            "sS": 1,
-            "sB": 6,
-            "sA": 0,
-            "sP": 9,
-            "so": 81,
-            "dF": 28
+            "s": "STATS_ITEM_FASTESTMOVEVELOCITY",
+            "sB": 7,
+            "sA": 20
         },
         {
             "id": 98,
-            "s": "state",
-            "sB": 1,
-            "sP": 8
+            "s": "STATS_ITEM_FASTGETHITRATE",
+            "sB": 6,
+            "sA": 20
         },
         {
             "id": 99,
-            "s": "item_fastergethitrate",
-            "sS": 1,
-            "sB": 7,
-            "sA": 20,
-            "so": 139,
-            "dF": 4,
-            "dV": 1,
-            "dP": "Faster Hit Recovery",
-            "dN": "Faster Hit Recovery"
+            "s": "STATS_ITEM_FASTERGETHITRATE",
+            "sB": 6,
+            "sA": 20
         },
         {
             "id": 100,
-            "s": "monster_playercount"
+            "s": "STATS_ITEM_FASTESTGETHITRATE",
+            "sB": 7,
+            "sA": 20
         },
         {
             "id": 101,
-            "s": "skill_poison_override_length"
+            "s": "STATS_ITEM_FASTBLOCKRATE",
+            "sB": 6,
+            "sA": 20
         },
         {
             "id": 102,
-            "s": "item_fasterblockrate",
-            "sS": 1,
-            "sB": 7,
-            "sA": 20,
-            "so": 136,
-            "dF": 4,
-            "dV": 1,
-            "dP": "Faster Block Rate",
-            "dN": "Faster Block Rate"
+            "s": "STATS_ITEM_FASTERBLOCKRATE",
+            "sB": 6,
+            "sA": 20
         },
         {
             "id": 103,
-            "s": "skill_bypass_undead"
+            "s": "STATS_ITEM_FASTESTBLOCKRATE",
+            "sB": 7,
+            "sA": 20
         },
         {
             "id": 104,
-            "s": "skill_bypass_demons"
+            "s": "STATS_ITEM_FASTCASTRATE",
+            "sB": 6,
+            "sA": 20
         },
         {
             "id": 105,
-            "s": "item_fastercastrate",
-            "sS": 1,
-            "sB": 7,
-            "sA": 20,
-            "so": 142,
-            "dF": 4,
-            "dV": 1,
-            "dP": "Faster Cast Rate",
-            "dN": "Faster Cast Rate"
+            "s": "STATS_ITEM_FASTERCASTRATE",
+            "sB": 6,
+            "sA": 20
         },
         {
             "id": 106,
-            "s": "skill_bypass_beasts"
+            "s": "STATS_ITEM_FASTESTCASTRATE",
+            "sB": 7,
+            "sA": 20
         },
         {
             "id": 107,
-            "s": "item_singleskill",
+            "s": "STATS_ITEM_SINGLESKILL1",
             "e": 1,
-            "sS": 1,
-            "sB": 3,
-            "sA": 0,
-            "sP": 9,
-            "so": 81,
-            "dF": 27
+            "sB": 14,
+            "sA": 0
         },
         {
             "id": 108,
-            "s": "item_restinpeace",
-            "sB": 1,
-            "sA": 0,
-            "so": 81,
-            "dF": 3,
-            "dV": 0,
-            "dP": "Slain Monsters Rest in Peace",
-            "dN": "Slain Monsters Rest in Peace"
+            "s": "STATS_ITEM_SINGLESKILL2",
+            "e": 1,
+            "sB": 14,
+            "sA": 0
         },
         {
             "id": 109,
-            "s": "curse_resistance",
-            "sB": 9,
+            "s": "STATS_ITEM_SINGLESKILL3",
+            "e": 1,
+            "sB": 14,
             "sA": 0
         },
         {
             "id": 110,
-            "s": "item_poisonlengthresist",
-            "sS": 1,
+            "s": "STATS_ITEM_POISONLENGTHRESIST",
             "sB": 8,
-            "sA": 20,
-            "so": 18,
-            "dF": 2,
-            "dV": 2,
-            "dP": "Poison Length Reduced by",
-            "dN": "Poison Length Reduced by"
+            "sA": 20
         },
         {
             "id": 111,
-            "s": "item_normaldamage",
-            "sS": 1,
-            "sB": 9,
-            "sA": 20,
-            "so": 122,
-            "dF": 1,
-            "dV": 2,
-            "dP": "Damage",
-            "dN": "Damage"
+            "s": "STATS_ITEM_NORMALDAMAGE",
+            "sB": 7,
+            "sA": 20
         },
         {
             "id": 112,
-            "s": "item_howl",
-            "sS": 1,
+            "s": "STATS_ITEM_HOWL",
             "sB": 7,
-            "sA": -1,
-            "so": 79,
-            "dF": 5,
-            "dV": 2,
-            "dP": "Hit Causes Monster to Flee",
-            "dN": "Hit Causes Monster to Flee"
+            "sA": -1
         },
         {
             "id": 113,
-            "s": "item_stupidity",
-            "sS": 1,
+            "s": "STATS_ITEM_STUPIDITY",
             "sB": 7,
-            "sA": 0,
-            "so": 80,
-            "dF": 12,
-            "dV": 2,
-            "dP": "Hit Blinds Target",
-            "dN": "Hit Blinds Target"
+            "sA": 0
         },
         {
             "id": 114,
-            "s": "item_damagetomana",
-            "sS": 1,
+            "s": "STATS_ITEM_DAMAGETOMANA",
             "sB": 6,
-            "sA": 0,
-            "so": 11,
-            "dF": 2,
-            "dV": 1,
-            "dP": "Damage Taken Goes To Mana",
-            "dN": "Damage Taken Goes To Mana"
+            "sA": 0
         },
         {
             "id": 115,
-            "s": "item_ignoretargetac",
-            "sS": 1,
+            "s": "STATS_ITEM_IGNORETARGETAC",
             "sB": 1,
-            "sA": 0,
-            "so": 119,
-            "dF": 3,
-            "dV": 0,
-            "dP": "Ignore Target's Defense",
-            "dN": "Ignore Target's Defense"
+            "sA": 0
         },
         {
             "id": 116,
-            "s": "item_fractionaltargetac",
-            "sS": 1,
+            "s": "STATS_ITEM_FRACTIONALTARGETAC",
             "sB": 7,
-            "sA": 0,
-            "so": 118,
-            "dF": 20,
-            "dV": 1,
-            "dP": "Target Defense",
-            "dN": "Target Defense"
+            "sA": 0
         },
         {
             "id": 117,
-            "s": "item_preventheal",
-            "sS": 1,
+            "s": "STATS_ITEM_PREVENTHEAL",
             "sB": 7,
-            "sA": 0,
-            "so": 81,
-            "dF": 3,
-            "dV": 0,
-            "dP": "Prevent Monster Heal",
-            "dN": "Prevent Monster Heal"
+            "sA": 0
         },
         {
             "id": 118,
-            "s": "item_halffreezeduration",
-            "sS": 1,
+            "s": "STATS_ITEM_HALFFREEZEDURATION",
             "sB": 1,
-            "sA": 0,
-            "so": 19,
-            "dF": 3,
-            "dV": 0,
-            "dP": "Half Freeze Duration",
-            "dN": "Half Freeze Duration"
+            "sA": 0
         },
         {
             "id": 119,
-            "s": "item_tohit_percent",
-            "sS": 1,
+            "s": "STATS_ITEM_TOHIT_PERCENT",
             "sB": 9,
-            "sA": 20,
-            "so": 117,
-            "dF": 2,
-            "dV": 1,
-            "dP": "Bonus to Attack Rating",
-            "dN": "Bonus to Attack Rating"
+            "sA": 20
         },
         {
             "id": 120,
-            "s": "item_damagetargetac",
-            "sS": 1,
+            "s": "STATS_ITEM_DAMAGETARGETAC",
             "sB": 7,
-            "sA": 128,
-            "so": 75,
-            "dF": 1,
-            "dV": 1,
-            "dP": "to Monster Defense Per Hit",
-            "dN": "to Monster Defense Per Hit"
+            "sA": 128
         },
         {
             "id": 121,
-            "s": "item_demondamage_percent",
-            "sS": 1,
+            "s": "STATS_ITEM_DEMONDAMAGE_PERCENT",
             "sB": 9,
-            "sA": 20,
-            "so": 112,
-            "dF": 4,
-            "dV": 1,
-            "dP": "Damage to Demons",
-            "dN": "Damage to Demons"
+            "sA": 20
         },
         {
             "id": 122,
-            "s": "item_undeaddamage_percent",
-            "sS": 1,
+            "s": "STATS_ITEM_UNDEADDAMAGE_PERCENT",
             "sB": 9,
-            "sA": 20,
-            "so": 108,
-            "dF": 4,
-            "dV": 1,
-            "dP": "Damage to Undead",
-            "dN": "Damage to Undead"
+            "sA": 20
         },
         {
             "id": 123,
-            "s": "item_demon_tohit",
-            "sS": 1,
+            "s": "STATS_ITEM_DEMON_TOHIT",
             "sB": 10,
-            "sA": 128,
-            "so": 110,
-            "dF": 1,
-            "dV": 1,
-            "dP": "to Attack Rating against Demons",
-            "dN": "to Attack Rating against Demons"
+            "sA": 128
         },
         {
             "id": 124,
-            "s": "item_undead_tohit",
-            "sS": 1,
+            "s": "STATS_ITEM_UNDEAD_TOHIT",
             "sB": 10,
-            "sA": 128,
-            "so": 106,
-            "dF": 1,
-            "dV": 1,
-            "dP": "to Attack Rating against Undead",
-            "dN": "to Attack Rating against Undead"
+            "sA": 128
         },
         {
             "id": 125,
-            "s": "item_throwable",
-            "sS": 1,
+            "s": "STATS_ITEM_THROWABLE",
             "sB": 1,
-            "sA": 0,
-            "so": 5,
-            "dF": 3,
-            "dV": 0,
-            "dP": "Throwable",
-            "dN": "Throwable"
+            "sA": 0
         },
         {
             "id": 126,
-            "s": "item_elemskill",
-            "sS": 1,
-            "sB": 3,
-            "sA": 0,
-            "sP": 3,
-            "so": 157,
-            "dF": 1,
-            "dV": 1,
-            "dP": "to Fire Skills",
-            "dN": "to Fire Skills"
+            "s": "STATS_ITEM_FIRESKILL",
+            "sB": 4,
+            "sA": 0
         },
         {
             "id": 127,
-            "s": "item_allskills",
-            "sS": 1,
+            "s": "STATS_ITEM_ALLSKILLS",
             "sB": 3,
-            "sA": 0,
-            "so": 158,
-            "dF": 1,
-            "dV": 1,
-            "dP": "to All Skills",
-            "dN": "to All Skills"
+            "sA": 0
         },
         {
             "id": 128,
-            "s": "item_attackertakeslightdamage",
-            "sS": 1,
+            "s": "STATS_ITEM_ATTACKERTAKESLIGHTDAMAGE",
             "sB": 5,
-            "sA": 0,
-            "so": 14,
-            "dF": 3,
-            "dV": 2,
-            "dP": "Attacker Takes Lightning Damage of",
-            "dN": "Attacker Takes Lightning Damage of"
+            "sA": 0
         },
         {
             "id": 129,
-            "s": "ironmaiden_level",
-            "sS": 1
+            "s": "STATS_IRONMAIDEN_LEVEL"
         },
         {
             "id": 130,
-            "s": "lifetap_level",
-            "sS": 1
+            "s": "STATS_LIFETAP_LEVEL"
         },
         {
             "id": 131,
-            "s": "thorns_percent"
+            "s": "STATS_THORNS_LEVEL"
         },
         {
             "id": 132,
-            "s": "bonearmor",
-            "sS": 1
+            "s": "STATS_BONEARMOR"
         },
         {
             "id": 133,
-            "s": "bonearmormax",
-            "sS": 1
+            "s": "STATS_BONEARMORMAX"
         },
         {
             "id": 134,
-            "s": "item_freeze",
-            "sS": 1,
-            "sB": 5,
-            "sA": 0,
-            "so": 78,
-            "dF": 12,
-            "dV": 2,
-            "dP": "Freezes target",
-            "dN": "Freezes target"
+            "s": "STATS_ITEM_FREEZE",
+            "sB": 16,
+            "sA": 0
         },
         {
             "id": 135,
-            "s": "item_openwounds",
-            "sS": 1,
+            "s": "STATS_ITEM_OPENWOUNDS",
             "sB": 7,
-            "sA": 0,
-            "so": 83,
-            "dF": 2,
-            "dV": 1,
-            "dP": "Chance of Open Wounds",
-            "dN": "Chance of Open Wounds"
+            "sA": 0
         },
         {
             "id": 136,
-            "s": "item_crushingblow",
-            "sS": 1,
+            "s": "STATS_ITEM_CRUSHINGBLOW",
             "sB": 7,
-            "sA": 0,
-            "so": 87,
-            "dF": 2,
-            "dV": 1,
-            "dP": "Chance of Crushing Blow",
-            "dN": "Chance of Crushing Blow"
+            "sA": 0
         },
         {
             "id": 137,
-            "s": "item_kickdamage",
-            "sS": 1,
+            "s": "STATS_ITEM_KICKDAMAGE",
             "sB": 7,
-            "sA": 0,
-            "so": 121,
-            "dF": 1,
-            "dV": 1,
-            "dP": "Kick Damage",
-            "dN": "Kick Damage"
+            "sA": 0
         },
         {
             "id": 138,
-            "s": "item_manaafterkill",
-            "sS": 1,
+            "s": "STATS_ITEM_MANAAFTERKILL",
             "sB": 7,
-            "sA": 0,
-            "so": 16,
-            "dF": 1,
-            "dV": 1,
-            "dP": "to Mana after each Kill",
-            "dN": "to Mana after each Kill"
+            "sA": 0
         },
         {
             "id": 139,
-            "s": "item_healafterdemonkill",
-            "sS": 1,
+            "s": "STATS_ITEM_HEALAFTERDEMONKILL",
             "sB": 7,
-            "sA": 0,
-            "so": 15,
-            "dF": 1,
-            "dV": 1,
-            "dP": "Life after each Demon Kill",
-            "dN": "Life after each Demon Kill"
+            "sA": 0
         },
         {
             "id": 140,
-            "s": "item_extrablood",
-            "sS": 1,
+            "s": "STATS_ITEM_EXTRABLOOD",
             "sB": 7,
             "sA": 0
         },
         {
             "id": 141,
-            "s": "item_deadlystrike",
-            "sS": 1,
+            "s": "STATS_ITEM_DEADLYSTRIKE",
             "sB": 7,
-            "sA": 0,
-            "so": 85,
-            "dF": 2,
-            "dV": 1,
-            "dP": "Deadly Strike",
-            "dN": "Deadly Strike"
+            "sA": 0
         },
         {
             "id": 142,
-            "s": "item_absorbfire_percent",
-            "sS": 1,
+            "s": "STATS_ITEM_ABSORBFIRE_PERCENT",
             "sB": 7,
-            "sA": 0,
-            "so": 23,
-            "dF": 2,
-            "dV": 2,
-            "dP": "Fire Absorb",
-            "dN": "Fire Absorb"
+            "sA": 0
         },
         {
             "id": 143,
-            "s": "item_absorbfire",
-            "sS": 1,
+            "s": "STATS_ITEM_ABSORBFIRE",
             "sB": 7,
-            "sA": 0,
-            "so": 27,
-            "dF": 1,
-            "dV": 1,
-            "dP": "Fire Absorb",
-            "dN": "Fire Absorb"
+            "sA": 0
         },
         {
             "id": 144,
-            "s": "item_absorblight_percent",
-            "sS": 1,
+            "s": "STATS_ITEM_ABSORBLIGHT_PERCENT",
             "sB": 7,
-            "sA": 0,
-            "so": 24,
-            "dF": 2,
-            "dV": 2,
-            "dP": "Lightning Absorb",
-            "dN": "Lightning Absorb"
+            "sA": 0
         },
         {
             "id": 145,
-            "s": "item_absorblight",
-            "sS": 1,
+            "s": "STATS_ITEM_ABSORBLIGHT",
             "sB": 7,
-            "sA": 0,
-            "so": 29,
-            "dF": 1,
-            "dV": 1,
-            "dP": "Lightning Absorb",
-            "dN": "Lightning Absorb"
+            "sA": 0
         },
         {
             "id": 146,
-            "s": "item_absorbmagic_percent",
-            "sS": 1,
+            "s": "STATS_ITEM_ABSORBMAGIC_PERCENT",
             "sB": 7,
-            "sA": 0,
-            "so": 26,
-            "dF": 2,
-            "dV": 2,
-            "dP": "Magic Absorb",
-            "dN": "Magic Absorb"
+            "sA": 0
         },
         {
             "id": 147,
-            "s": "item_absorbmagic",
-            "sS": 1,
+            "s": "STATS_ITEM_ABSORBMAGIC",
             "sB": 7,
-            "sA": 0,
-            "so": 33,
-            "dF": 1,
-            "dV": 1,
-            "dP": "Magic Absorb",
-            "dN": "Magic Absorb"
+            "sA": 0
         },
         {
             "id": 148,
-            "s": "item_absorbcold_percent",
-            "sS": 1,
+            "s": "STATS_ITEM_ABSORBCOLD_PERCENT",
             "sB": 7,
-            "sA": 0,
-            "so": 25,
-            "dF": 2,
-            "dV": 2,
-            "dP": "Cold Absorb",
-            "dN": "Cold Absorb"
+            "sA": 0
         },
         {
             "id": 149,
-            "s": "item_absorbcold",
-            "sS": 1,
+            "s": "STATS_ITEM_ABSORBCOLD",
             "sB": 7,
-            "sA": 0,
-            "so": 31,
-            "dF": 1,
-            "dV": 1,
-            "dP": "Cold Absorb",
-            "dN": "Cold Absorb"
+            "sA": 0
         },
         {
             "id": 150,
-            "s": "item_slow",
-            "sS": 1,
+            "s": "STATS_ITEM_SLOW",
             "sB": 7,
-            "sA": 0,
-            "so": 77,
-            "dF": 2,
-            "dV": 2,
-            "dP": "Slows Target by",
-            "dN": "Slows Target by"
+            "sA": 0
         },
         {
             "id": 151,
-            "s": "item_aura",
-            "sS": 1,
-            "sB": 5,
-            "sA": 0,
-            "sP": 9,
-            "so": 159,
-            "dF": 16,
-            "dV": 0,
-            "dP": "Level %d %s Aura When Equipped",
-            "dN": "Level %d %s Aura When Equipped"
+            "s": "STATS_ITEM_BLESSEDAIM",
+            "sB": 7,
+            "sA": 0
         },
         {
             "id": 152,
-            "s": "item_indesctructible",
-            "sS": 1,
-            "sB": 1,
-            "so": 160,
-            "dF": 3,
-            "dV": 0,
-            "dP": "Indestructible",
-            "dN": "Indestructible"
+            "s": "STATS_ITEM_DEFIANCE",
+            "sB": 7,
+            "sA": 0
         },
         {
             "id": 153,
-            "s": "item_cannotbefrozen",
-            "sS": 1,
-            "sB": 1,
-            "so": 20,
-            "dF": 3,
-            "dV": 0,
-            "dP": "Cannot Be Frozen",
-            "dN": "Cannot Be Frozen"
+            "s": "STATS_ITEM_CANNOTBEFROZEN",
+            "sB": 1
         },
         {
             "id": 154,
-            "s": "item_staminadrainpct",
-            "sS": 1,
+            "s": "STATS_ITEM_STAMINADRAINPCT",
             "sB": 7,
-            "sA": 20,
-            "so": 49,
-            "dF": 2,
-            "dV": 1,
-            "dP": "Slower Stamina Drain",
-            "dN": "Slower Stamina Drain"
+            "sA": 20
         },
         {
             "id": 155,
-            "s": "item_reanimate",
+            "s": "STATS_ITEM_REANIMATE",
             "sB": 7,
-            "sA": 0,
-            "sP": 10,
-            "so": 17,
-            "dF": 23,
-            "dV": 1,
-            "dP": "Reanimate as:",
-            "dN": "Reanimate as:"
+            "sA": 0
         },
         {
             "id": 156,
-            "s": "item_pierce",
-            "sS": 1,
+            "s": "STATS_ITEM_PIERCE",
             "sB": 7,
-            "sA": 0,
-            "so": 132,
-            "dF": 3,
-            "dV": 0,
-            "dP": "Piercing Attack",
-            "dN": "Piercing Attack"
+            "sA": 0
         },
         {
             "id": 157,
-            "s": "item_magicarrow",
-            "sS": 1,
+            "s": "STATS_ITEM_MAGICARROW",
             "sB": 7,
-            "sA": 0,
-            "so": 131,
-            "dF": 3,
-            "dV": 0,
-            "dP": "Fires Magic Arrows",
-            "dN": "Fires Magic Arrows"
+            "sA": 0
         },
         {
             "id": 158,
-            "s": "item_explosivearrow",
-            "sS": 1,
+            "s": "STATS_ITEM_EXPLOSIVEARROW",
             "sB": 7,
-            "sA": 0,
-            "so": 133,
-            "dF": 3,
-            "dV": 0,
-            "dP": "Fires Explosive Arrows or Bolts",
-            "dN": "Fires Explosive Arrows or Bolts"
+            "sA": 0
         },
         {
             "id": 159,
-            "s": "item_throw_mindamage",
-            "sS": 1,
+            "s": "STATS_ITEM_THROW_MINDAMAGE",
             "sB": 6,
             "sA": 0
         },
         {
             "id": 160,
-            "s": "item_throw_maxdamage",
-            "sS": 1,
+            "s": "STATS_ITEM_THROW_MAXDAMAGE",
             "sB": 7,
             "sA": 0
         },
         {
             "id": 161,
-            "s": "skill_handofathena",
-            "sS": 1
+            "s": "STATS_SKILL_HANDOFATHENA"
         },
         {
             "id": 162,
-            "s": "skill_staminapercent",
-            "sS": 1,
-            "o": 1,
-            "os": [
-                "maxstamina"
-            ]
+            "s": "STATS_SKILL_STAMINAPERCENT"
         },
         {
             "id": 163,
-            "s": "skill_passive_staminapercent",
-            "sS": 1,
-            "o": 1,
-            "os": [
-                "maxstamina"
-            ]
+            "s": "STATS_SKILL_PASSIVE_STAMINAPERCENT"
         },
         {
             "id": 164,
-            "s": "skill_concentration",
-            "sS": 1
+            "s": "STATS_SKILL_CONCENTRATION"
         },
         {
             "id": 165,
-            "s": "skill_enchant",
-            "sS": 1
+            "s": "STATS_SKILL_ENCHANT"
         },
         {
             "id": 166,
-            "s": "skill_pierce",
-            "sS": 1
+            "s": "STATS_SKILL_PIERCE"
         },
         {
             "id": 167,
-            "s": "skill_conviction",
-            "sS": 1
+            "s": "STATS_SKILL_CONVICTION"
         },
         {
             "id": 168,
-            "s": "skill_chillingarmor",
-            "sS": 1
+            "s": "STATS_SKILL_CHILLINGARMOR"
         },
         {
             "id": 169,
-            "s": "skill_frenzy",
-            "sS": 1
+            "s": "STATS_SKILL_FRENZY"
         },
         {
             "id": 170,
-            "s": "skill_decrepify",
-            "sS": 1
+            "s": "STATS_SKILL_DECREPIFY"
         },
         {
             "id": 171,
-            "s": "skill_armor_percent",
-            "sS": 1
+            "s": "STATS_SKILL_ARMOR_PERCENT"
         },
         {
             "id": 172,
-            "s": "alignment"
+            "s": "STATS_ALIGNMENT"
         },
         {
             "id": 173,
-            "s": "target0"
+            "s": "STATS_TARGET0"
         },
         {
             "id": 174,
-            "s": "target1"
+            "s": "STATS_TARGET1"
         },
         {
             "id": 175,
-            "s": "goldlost"
+            "s": "STATS_GOLDLOST"
         },
         {
             "id": 176,
-            "s": "conversion_level"
+            "s": "STATS_CONVERSION_LEVEL"
         },
         {
             "id": 177,
-            "s": "conversion_maxhp"
+            "s": "STATS_CONVERSION_MAXHP"
         },
         {
             "id": 178,
-            "s": "unit_dooverlay"
+            "s": "STATS_UNIT_DOOVERLAY"
         },
         {
             "id": 179,
-            "s": "attack_vs_montype",
-            "sB": 9,
-            "sP": 10,
-            "so": 108,
-            "dF": 22,
-            "dV": 1,
-            "dP": "to Attack Rating versus",
-            "dN": "to Attack Rating versus"
+            "s": "Expansion"
         },
         {
             "id": 180,
-            "s": "damage_vs_montype",
-            "sB": 9,
-            "sP": 10,
-            "so": 106,
-            "dF": 22,
-            "dV": 1,
-            "dP": "to Damage versus",
-            "dN": "to Damage versus"
+            "s": "STATS_ITEM_ADDDRUSKILLPOINTS",
+            "sB": 3,
+            "sA": 0
         },
         {
             "id": 181,
-            "s": "fade",
-            "sB": 3
+            "s": "STATS_ITEM_ADDASSSKILLPOINTS",
+            "sB": 3,
+            "sA": 0
         },
         {
             "id": 182,
-            "s": "armor_override_percent",
-            "sS": 1
+            "s": "STATS_ITEM_ADDSKILL_SINGLE4",
+            "e": 1,
+            "sB": 14,
+            "sA": 0
         },
         {
             "id": 183,
-            "s": "unused183"
+            "s": "STATS_ITEM_ADDSKILL_SINGLE5",
+            "e": 1,
+            "sB": 14,
+            "sA": 0
         },
         {
             "id": 184,
-            "s": "unused184"
+            "s": "STATS_ITEM_ADDSKILL_SINGLE6",
+            "e": 1,
+            "sB": 14,
+            "sA": 0
         },
         {
             "id": 185,
-            "s": "unused185"
+            "s": "STATS_ITEM_ADDSKILL_SINGLE7",
+            "e": 1,
+            "sB": 14,
+            "sA": 0
         },
         {
             "id": 186,
-            "s": "unused186"
+            "s": "STATS_ITEM_ADDSKILL_SINGLE8",
+            "e": 1,
+            "sB": 14,
+            "sA": 0
         },
         {
             "id": 187,
-            "s": "unused187"
+            "s": "STATS_ITEM_ADDSKILL_SINGLE9",
+            "e": 1,
+            "sB": 14,
+            "sA": 0
         },
         {
             "id": 188,
-            "s": "item_addskill_tab",
-            "sS": 1,
-            "sB": 3,
-            "sA": 0,
-            "sP": 16,
-            "so": 151,
-            "dF": 14,
-            "dP": "+%d to Javelin and Spear Skills",
-            "dN": "+%d to Javelin and Spear Skills"
+            "s": "STATS_ITEM_ADDSKILL_SINGLE10",
+            "e": 1,
+            "sB": 14,
+            "sA": 0
         },
         {
             "id": 189,
-            "s": "unused189"
+            "s": "STATS_ITEM_ADDSKILL_TAB1",
+            "e": 5,
+            "sB": 10,
+            "sA": 0
         },
         {
             "id": 190,
-            "s": "unused190"
+            "s": "STATS_ITEM_ADDSKILL_TAB2",
+            "e": 5,
+            "sB": 10,
+            "sA": 0
         },
         {
             "id": 191,
-            "s": "unused191"
+            "s": "STATS_ITEM_ADDSKILL_TAB3",
+            "e": 5,
+            "sB": 10,
+            "sA": 0
         },
         {
             "id": 192,
-            "s": "unused192"
+            "s": "STATS_ITEM_ADDSKILL_TAB4",
+            "e": 5,
+            "sB": 10,
+            "sA": 0
         },
         {
             "id": 193,
-            "s": "unused193"
+            "s": "STATS_ITEM_ADDSKILL_TAB5",
+            "e": 5,
+            "sB": 10,
+            "sA": 0
         },
         {
             "id": 194,
-            "s": "item_numsockets",
-            "sS": 1,
-            "sB": 4,
+            "s": "STATS_ITEM_ADDSKILL_TAB6",
+            "e": 5,
+            "sB": 10,
             "sA": 0
         },
         {
             "id": 195,
-            "s": "item_skillonattack",
-            "e": 2,
-            "sS": 1,
-            "sB": 7,
-            "sA": 0,
-            "sP": 16,
-            "so": 160,
-            "dF": 15,
-            "dP": "%d%% Chance to cast level %d %s on attack",
-            "dN": "%d%% Chance to cast level %d %s on attack"
+            "s": "STATS_ITEM_NUMSOCKETS",
+            "sB": 4,
+            "sA": 0
         },
         {
             "id": 196,
-            "s": "item_skillonkill",
+            "s": "STATS_ITEM_SKILLONATTACK1",
             "e": 2,
-            "sS": 1,
-            "sB": 7,
-            "sA": 0,
-            "sP": 16,
-            "so": 160,
-            "dF": 15,
-            "dP": "%d%% Chance to cast level %d %s when you Kill an Enemy",
-            "dN": "%d%% Chance to cast level %d %s when you Kill an Enemy"
+            "sB": 21,
+            "sA": 0
         },
         {
             "id": 197,
-            "s": "item_skillondeath",
+            "s": "STATS_ITEM_SKILLONATTACK2",
             "e": 2,
-            "sS": 1,
-            "sB": 7,
-            "sA": 0,
-            "sP": 16,
-            "so": 160,
-            "dF": 15,
-            "dP": "%d%% Chance to cast level %d %s when you Die",
-            "dN": "%d%% Chance to cast level %d %s when you Die"
+            "sB": 21,
+            "sA": 0
         },
         {
             "id": 198,
-            "s": "item_skillonhit",
+            "s": "STATS_ITEM_SKILLONATTACK3",
             "e": 2,
-            "sS": 1,
-            "sB": 7,
-            "sA": 0,
-            "sP": 16,
-            "so": 160,
-            "dF": 15,
-            "dP": "%d%% Chance to cast level %d %s on striking",
-            "dN": "%d%% Chance to cast level %d %s on striking"
+            "sB": 21,
+            "sA": 0
         },
         {
             "id": 199,
-            "s": "item_skillonlevelup",
+            "s": "STATS_ITEM_SKILLONHIT1",
             "e": 2,
-            "sS": 1,
-            "sB": 7,
-            "sA": 0,
-            "sP": 16,
-            "so": 160,
-            "dF": 15,
-            "dP": "%d%% Chance to cast level %d %s when you Level-Up",
-            "dN": "%d%% Chance to cast level %d %s when you Level-Up"
+            "sB": 21,
+            "sA": 0
         },
         {
             "id": 200,
-            "s": "unused200"
+            "s": "STATS_ITEM_SKILLONHIT2",
+            "e": 2,
+            "sB": 21,
+            "sA": 0
         },
         {
             "id": 201,
-            "s": "item_skillongethit",
+            "s": "STATS_ITEM_SKILLONHIT3",
             "e": 2,
-            "sS": 1,
-            "sB": 7,
-            "sA": 0,
-            "sP": 16,
-            "so": 160,
-            "dF": 15,
-            "dP": "%d%% Chance to cast level %d %s when struck",
-            "dN": "%d%% Chance to cast level %d %s when struck"
+            "sB": 21,
+            "sA": 0
         },
         {
             "id": 202,
-            "s": "unused202"
+            "s": "STATS_ITEM_SKILLONGETHIT1",
+            "e": 2,
+            "sB": 21,
+            "sA": 0
         },
         {
             "id": 203,
-            "s": "unused203"
+            "s": "STATS_ITEM_SKILLONGETHIT2",
+            "e": 2,
+            "sB": 21,
+            "sA": 0
         },
         {
             "id": 204,
-            "s": "item_charged_skill",
-            "e": 3,
-            "sS": 1,
-            "sB": 16,
-            "sA": 0,
-            "sP": 16,
-            "so": 1,
-            "dF": 24,
-            "dP": "Level %d %s (%d/%d Charges)",
-            "dN": "Level %d %s (%d/%d Charges)"
+            "s": "STATS_ITEM_SKILLONGETHIT3",
+            "e": 2,
+            "sB": 21,
+            "sA": 0
         },
         {
             "id": 205,
-            "s": "unused204",
+            "s": "STATS_ITEM_CHARGED_SKILL0",
             "e": 3,
-            "sS": 1
+            "sB": 30,
+            "sA": 0
         },
         {
             "id": 206,
-            "s": "unused205",
+            "s": "STATS_ITEM_CHARGED_SKILL1",
             "e": 3,
-            "sS": 1
+            "sB": 30,
+            "sA": 0
         },
         {
             "id": 207,
-            "s": "unused206",
+            "s": "STATS_ITEM_CHARGED_SKILL2",
             "e": 3,
-            "sS": 1
+            "sB": 30,
+            "sA": 0
         },
         {
             "id": 208,
-            "s": "unused207",
+            "s": "STATS_ITEM_CHARGED_SKILL3",
             "e": 3,
-            "sS": 1
+            "sB": 30,
+            "sA": 0
         },
         {
             "id": 209,
-            "s": "unused208",
+            "s": "STATS_ITEM_CHARGED_SKILL4",
             "e": 3,
-            "sS": 1
+            "sB": 30,
+            "sA": 0
         },
         {
             "id": 210,
-            "s": "unused209",
+            "s": "STATS_ITEM_CHARGED_SKILL5",
             "e": 3,
-            "sS": 1
+            "sB": 30,
+            "sA": 0
         },
         {
             "id": 211,
-            "s": "unused210",
+            "s": "STATS_ITEM_CHARGED_SKILL6",
             "e": 3,
-            "sS": 1
+            "sB": 30,
+            "sA": 0
         },
         {
             "id": 212,
-            "s": "unused211",
+            "s": "STATS_ITEM_CHARGED_SKILL7",
             "e": 3,
-            "sS": 1
+            "sB": 30,
+            "sA": 0
         },
         {
             "id": 213,
-            "s": "unused212",
+            "s": "STATS_ITEM_CHARGED_SKILL8",
             "e": 3,
-            "sS": 1
+            "sB": 30,
+            "sA": 0
         },
         {
             "id": 214,
-            "s": "item_armor_perlevel",
-            "sS": 1,
-            "sB": 6,
-            "sA": 0,
-            "so": 72,
-            "dF": 6,
-            "dV": 1,
-            "dP": "Defense",
-            "dN": "Defense",
-            "d2": "(Based on Character Level)",
-            "o": 4,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "armorclass"
-            ]
+            "s": "STATS_ITEM_CHARGED_SKILL9",
+            "e": 3,
+            "sB": 30,
+            "sA": 0
         },
         {
             "id": 215,
-            "s": "item_armorpercent_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_ARMOR_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 73,
-            "dF": 8,
-            "dV": 1,
-            "dP": "Enhanced Defense",
-            "dN": "Enhanced Defense",
-            "d2": "(Based on Character Level)",
-            "o": 5,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "armorclass"
-            ]
+            "sA": 0
         },
         {
             "id": 216,
-            "s": "item_hp_perlevel",
-            "cVS": 8,
-            "sS": 1,
+            "s": "STATS_ITEM_ARMORPERCENT_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 57,
-            "dF": 6,
-            "dV": 1,
-            "dP": "to Life",
-            "dN": "to Life",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "maxhp"
-            ]
+            "sA": 0
         },
         {
             "id": 217,
-            "s": "item_mana_perlevel",
-            "cVS": 8,
-            "sS": 1,
+            "s": "STATS_ITEM_HP_PERLEVEL",
+            "vS": 8,
             "sB": 6,
-            "sA": 0,
-            "so": 53,
-            "dF": 6,
-            "dV": 1,
-            "dP": "to Mana",
-            "dN": "to Mana",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "maxmana"
-            ]
+            "sA": 0
         },
         {
             "id": 218,
-            "s": "item_maxdamage_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_MANA_PERLEVEL",
+            "vS": 8,
             "sB": 6,
-            "sA": 0,
-            "so": 125,
-            "dF": 6,
-            "dV": 1,
-            "dP": "to Maximum Damage",
-            "dN": "to Maximum Damage",
-            "d2": "(Based on Character Level)",
-            "o": 4,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "maxdamage",
-                "secondary_maxdamage",
-                "item_throw_maxdamage"
-            ]
+            "sA": 0
         },
         {
             "id": 219,
-            "s": "item_maxdamage_percent_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_MAXDAMAGE_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 128,
-            "dF": 8,
-            "dV": 1,
-            "dP": "Enhanced Maximum Damage",
-            "dN": "Enhanced Maximum Damage",
-            "d2": "(Based on Character Level)",
-            "o": 5,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "maxdamage",
-                "secondary_maxdamage",
-                "item_throw_maxdamage"
-            ]
+            "sA": 0
         },
         {
             "id": 220,
-            "s": "item_strength_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_MAXDAMAGE_PERCENT_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 66,
-            "dF": 6,
-            "dV": 1,
-            "dP": "to Strength",
-            "dN": "to Strength",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "strength"
-            ]
+            "sA": 0
         },
         {
             "id": 221,
-            "s": "item_dexterity_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_STRENGTH_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 64,
-            "dF": 6,
-            "dV": 1,
-            "dP": "to Dexterity",
-            "dN": "to Dexterity",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "dexterity"
-            ]
+            "sA": 0
         },
         {
             "id": 222,
-            "s": "item_energy_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_DEXTERITY_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 60,
-            "dF": 6,
-            "dV": 1,
-            "dP": "to Energy",
-            "dN": "to Energy",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "energy"
-            ]
+            "sA": 0
         },
         {
             "id": 223,
-            "s": "item_vitality_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_ENERGY_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 62,
-            "dF": 6,
-            "dV": 1,
-            "dP": "to Vitality",
-            "dN": "to Vitality",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "vitality"
-            ]
+            "sA": 0
         },
         {
             "id": 224,
-            "s": "item_tohit_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_VITALITY_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 114,
-            "dF": 6,
-            "dV": 1,
-            "dP": "to Attack Rating",
-            "dN": "to Attack Rating",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 1,
-            "ob": "level",
-            "os": [
-                "tohit"
-            ]
+            "sA": 0
         },
         {
             "id": 225,
-            "s": "item_tohitpercent_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_TOHIT_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 116,
-            "dF": 7,
-            "dV": 1,
-            "dP": "Bonus to Attack Rating",
-            "dN": "Bonus to Attack Rating",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 1,
-            "ob": "level",
-            "os": [
-                "item_tohit_percent"
-            ]
+            "sA": 0
         },
         {
             "id": 226,
-            "s": "item_cold_damagemax_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_TOHITPERCENT_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 94,
-            "dF": 6,
-            "dV": 1,
-            "dP": "to Maximum Cold Damage",
-            "dN": "to Maximum Cold Damage",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "coldmaxdam"
-            ]
+            "sA": 0
         },
         {
             "id": 227,
-            "s": "item_fire_damagemax_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_COLD_DAMAGEMAX_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 100,
-            "dF": 6,
-            "dV": 1,
-            "dP": "to Maximum Fire Damage",
-            "dN": "to Maximum Fire Damage",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "firemaxdam"
-            ]
+            "sA": 0
         },
         {
             "id": 228,
-            "s": "item_ltng_damagemax_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_FIRE_DAMAGEMAX_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 97,
-            "dF": 6,
-            "dV": 1,
-            "dP": "to Maximum Lightning Damage",
-            "dN": "to Maximum Lightning Damage",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "lightmaxdam"
-            ]
+            "sA": 0
         },
         {
             "id": 229,
-            "s": "item_pois_damagemax_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_LTNG_DAMAGEMAX_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 90,
-            "dF": 6,
-            "dV": 1,
-            "dP": "to Maximum Poison Damage",
-            "dN": "to Maximum Poison Damage",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "poisonmaxdam"
-            ]
+            "sA": 0
         },
         {
             "id": 230,
-            "s": "item_resist_cold_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_POIS_DAMAGEMAX_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 39,
-            "dF": 7,
-            "dV": 2,
-            "dP": "Cold Resist",
-            "dN": "Cold Resist",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "coldresist"
-            ]
+            "sA": 0
         },
         {
             "id": 231,
-            "s": "item_resist_fire_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_RESIST_COLD_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 35,
-            "dF": 7,
-            "dV": 2,
-            "dP": "Fire Resist",
-            "dN": "Fire Resist",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "fireresist"
-            ]
+            "sA": 0
         },
         {
             "id": 232,
-            "s": "item_resist_ltng_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_RESIST_FIRE_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 37,
-            "dF": 7,
-            "dV": 2,
-            "dP": "Lightning Resist",
-            "dN": "Lightning Resist",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "lightresist"
-            ]
+            "sA": 0
         },
         {
             "id": 233,
-            "s": "item_resist_pois_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_RESIST_LTNG_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 33,
-            "dF": 7,
-            "dV": 2,
-            "dP": "Poison Resist",
-            "dN": "Poison Resist",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "poisonresist"
-            ]
+            "sA": 0
         },
         {
             "id": 234,
-            "s": "item_absorb_cold_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_RESIST_POIS_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 32,
-            "dF": 6,
-            "dV": 1,
-            "dP": "Absorbs Cold Damage",
-            "dN": "Absorbs Cold Damage",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "item_absorbcold"
-            ]
+            "sA": 0
         },
         {
             "id": 235,
-            "s": "item_absorb_fire_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_ABSORB_COLD_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 28,
-            "dF": 6,
-            "dV": 1,
-            "dP": "Absorbs Fire Damage",
-            "dN": "Absorbs Fire Damage",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "item_absorbfire"
-            ]
+            "sA": 0
         },
         {
             "id": 236,
-            "s": "item_absorb_ltng_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_ABSORB_FIRE_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 30,
-            "dF": 6,
-            "dV": 1,
-            "dP": "Absorbs Lightning Damage",
-            "dN": "Absorbs Lightning Damage",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "item_absorblight"
-            ]
+            "sA": 0
         },
         {
             "id": 237,
-            "s": "item_absorb_pois_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_ABSORB_LTNG_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "item_absorbmagic"
-            ]
+            "sA": 0
         },
         {
             "id": 238,
-            "s": "item_thorns_perlevel",
-            "sS": 1,
-            "sB": 5,
-            "sA": 0,
-            "so": 12,
-            "dF": 9,
-            "dV": 2,
-            "dP": "Attacker Takes Damage of",
-            "dN": "Attacker Takes Damage of",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "item_attackertakesdamage"
-            ]
+            "s": "STATS_ITEM_ABSORB_POIS_PERLEVEL",
+            "sB": 6,
+            "sA": 0
         },
         {
             "id": 239,
-            "s": "item_find_gold_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_THORNS_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 9,
-            "dF": 7,
-            "dV": 1,
-            "dP": "Extra Gold from Monsters",
-            "dN": "Extra Gold from Monsters",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "item_goldbonus"
-            ]
+            "sA": 0
         },
         {
             "id": 240,
-            "s": "item_find_magic_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_FIND_GOLD_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 7,
-            "dF": 7,
-            "dV": 1,
-            "dP": "Better Chance of Getting Magic Items",
-            "dN": "Better Chance of Getting Magic Items",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "item_magicbonus"
-            ]
+            "sA": 0
         },
         {
             "id": 241,
-            "s": "item_regenstamina_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_FIND_MAGIC_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 47,
-            "dF": 8,
-            "dV": 2,
-            "dP": "Heal Stamina Plus",
-            "dN": "Heal Stamina Plus",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "staminarecoverybonus"
-            ]
+            "sA": 0
         },
         {
             "id": 242,
-            "s": "item_stamina_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_REGENSTAMINA_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 50,
-            "dF": 6,
-            "dV": 1,
-            "dP": "Maximum Stamina",
-            "dN": "Maximum Stamina",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "maxstamina"
-            ]
+            "sA": 0
         },
         {
             "id": 243,
-            "s": "item_damage_demon_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_STAMINA_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 111,
-            "dF": 8,
-            "dV": 1,
-            "dP": "Damage to Demons",
-            "dN": "Damage to Demons",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "item_demondamage_percent"
-            ]
+            "sA": 0
         },
         {
             "id": 244,
-            "s": "item_damage_undead_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_DAMAGE_DEMON_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 107,
-            "dF": 8,
-            "dV": 1,
-            "dP": "Damage to Undead",
-            "dN": "Damage to Undead",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "item_undeaddamage_percent"
-            ]
+            "sA": 0
         },
         {
             "id": 245,
-            "s": "item_tohit_demon_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_DAMAGE_UNDEAD_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 109,
-            "dF": 6,
-            "dV": 1,
-            "dP": "to Attack Rating against Demons",
-            "dN": "to Attack Rating against Demons",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 1,
-            "ob": "level",
-            "os": [
-                "item_demon_tohit"
-            ]
+            "sA": 0
         },
         {
             "id": 246,
-            "s": "item_tohit_undead_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_TOHIT_DEMON_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 105,
-            "dF": 6,
-            "dV": 1,
-            "dP": "to Attack Rating against Undead",
-            "dN": "to Attack Rating against Undead",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 1,
-            "ob": "level",
-            "os": [
-                "item_undead_tohit"
-            ]
+            "sA": 0
         },
         {
             "id": 247,
-            "s": "item_crushingblow_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_TOHIT_UNDEAD_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 86,
-            "dF": 7,
-            "dV": 1,
-            "dP": "Chance of Crushing Blow",
-            "dN": "Chance of Crushing Blow",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "item_crushingblow"
-            ]
+            "sA": 0
         },
         {
             "id": 248,
-            "s": "item_openwounds_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_CRUSHINGBLOW_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 82,
-            "dF": 7,
-            "dV": 1,
-            "dP": "Chance of Open Wounds",
-            "dN": "Chance of Open Wounds",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "item_openwounds"
-            ]
+            "sA": 0
         },
         {
             "id": 249,
-            "s": "item_kick_damage_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_OPENWOUNDS_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 120,
-            "dF": 6,
-            "dV": 1,
-            "dP": "Kick Damage",
-            "dN": "Kick Damage",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "item_kickdamage"
-            ]
+            "sA": 0
         },
         {
             "id": 250,
-            "s": "item_deadlystrike_perlevel",
-            "sS": 1,
+            "s": "STATS_ITEM_KICK_DAMAGE_PERLEVEL",
             "sB": 6,
-            "sA": 0,
-            "so": 84,
-            "dF": 7,
-            "dV": 1,
-            "dP": "Deadly Strike",
-            "dN": "Deadly Strike",
-            "d2": "(Based on Character Level)",
-            "o": 2,
-            "op": 3,
-            "ob": "level",
-            "os": [
-                "item_deadlystrike"
-            ]
+            "sA": 0
         },
         {
             "id": 251,
-            "s": "item_find_gems_perlevel",
-            "sS": 1
+            "s": "STATS_ITEM_DEADLYSTRIKE_PERLEVEL",
+            "sB": 6,
+            "sA": 0
         },
         {
             "id": 252,
-            "s": "item_replenish_durability",
-            "sS": 1,
-            "sB": 6,
-            "sA": 0,
-            "so": 1,
-            "dF": 11,
-            "dV": 0,
-            "dP": "Repairs %d durability per second",
-            "dN": "Repairs %d durability per second"
+            "s": "STATS_ITEM_FIND_GEMS_PERLEVEL"
         },
         {
             "id": 253,
-            "s": "item_replenish_quantity",
-            "sS": 1,
-            "sB": 6,
-            "sA": 0,
-            "so": 2,
-            "dF": 3,
-            "dV": 0,
-            "dP": "Replenishes quantity",
-            "dN": "Replenishes quantity"
+            "s": "STATS_ITEM_REPLENISH_DURABILITY",
+            "sB": 5,
+            "sA": 0
         },
         {
             "id": 254,
-            "s": "item_extra_stack",
-            "sS": 1,
-            "sB": 8,
-            "sA": 0,
-            "so": 4,
-            "dF": 3,
-            "dV": 0,
-            "dP": "Increased Stack Size",
-            "dN": "Increased Stack Size"
+            "s": "STATS_ITEM_REPLENISH_QUANTITY",
+            "sB": 5,
+            "sA": 0
         },
         {
             "id": 255,
-            "s": "item_find_item",
-            "sS": 1
+            "s": "STATS_ITEM_EXTRA_STACK",
+            "sB": 8,
+            "sA": 0
         },
         {
             "id": 256,
-            "s": "item_slash_damage",
-            "sS": 1
+            "s": "STATS_ITEM_FIND_ITEM"
         },
         {
             "id": 257,
-            "s": "item_slash_damage_percent",
-            "sS": 1
+            "s": "STATS_ITEM_SLASH_DAMAGE"
         },
         {
             "id": 258,
-            "s": "item_crush_damage",
-            "sS": 1
+            "s": "STATS_ITEM_SLASH_DAMAGE_PERCENT"
         },
         {
             "id": 259,
-            "s": "item_crush_damage_percent",
-            "sS": 1
+            "s": "STATS_ITEM_CRUSH_DAMAGE"
         },
         {
             "id": 260,
-            "s": "item_thrust_damage",
-            "sS": 1
+            "s": "STATS_ITEM_CRUSH_DAMAGE_PERCENT"
         },
         {
             "id": 261,
-            "s": "item_thrust_damage_percent",
-            "sS": 1
+            "s": "STATS_ITEM_THRUST_DAMAGE"
         },
         {
             "id": 262,
-            "s": "item_absorb_slash",
-            "sS": 1
+            "s": "STATS_ITEM_THRUST_DAMAGE_PERCENT"
         },
         {
             "id": 263,
-            "s": "item_absorb_crush",
-            "sS": 1
+            "s": "STATS_ITEM_ABSORB_SLASH"
         },
         {
             "id": 264,
-            "s": "item_absorb_thrust",
-            "sS": 1
+            "s": "STATS_ITEM_ABSORB_CRUSH"
         },
         {
             "id": 265,
-            "s": "item_absorb_slash_percent",
-            "sS": 1
+            "s": "STATS_ITEM_ABSORB_THRUST"
         },
         {
             "id": 266,
-            "s": "item_absorb_crush_percent",
-            "sS": 1
+            "s": "STATS_ITEM_ABSORB_SLASH_PERCENT"
         },
         {
             "id": 267,
-            "s": "item_absorb_thrust_percent",
-            "sS": 1
+            "s": "STATS_ITEM_ABSORB_CRUSH_PERCENT"
         },
         {
             "id": 268,
-            "s": "item_armor_bytime",
-            "e": 4,
-            "sS": 1,
-            "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 17,
-            "dV": 1,
-            "dP": "Defense",
-            "dN": "Defense",
-            "o": 6,
-            "os": [
-                "armorclass"
-            ]
+            "s": "STATS_ITEM_ABSORB_THRUST_PERCENT"
         },
         {
             "id": 269,
-            "s": "item_armorpercent_bytime",
+            "s": "STATS_ITEM_ARMOR_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 18,
-            "dV": 1,
-            "dP": "Enhanced Defense",
-            "dN": "Enhanced Defense",
-            "o": 7,
-            "os": [
-                "armorclass"
-            ]
+            "sA": 0
         },
         {
             "id": 270,
-            "s": "item_hp_bytime",
+            "s": "STATS_ITEM_ARMORPERCENT_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 17,
-            "dV": 1,
-            "dP": "to Life",
-            "dN": "to Life",
-            "o": 6,
-            "os": [
-                "maxhp"
-            ]
+            "sA": 0
         },
         {
             "id": 271,
-            "s": "item_mana_bytime",
+            "s": "STATS_ITEM_HP_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 17,
-            "dV": 1,
-            "dP": "to Mana",
-            "dN": "to Mana",
-            "o": 6,
-            "os": [
-                "maxmana"
-            ]
+            "sA": 0
         },
         {
             "id": 272,
-            "s": "item_maxdamage_bytime",
+            "s": "STATS_ITEM_MANA_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 17,
-            "dV": 1,
-            "dP": "to Maximum Damage",
-            "dN": "to Maximum Damage",
-            "o": 6,
-            "os": [
-                "maxdamage",
-                "secondary_maxdamage",
-                "item_throw_maxdamage"
-            ]
+            "sA": 0
         },
         {
             "id": 273,
-            "s": "item_maxdamage_percent_bytime",
+            "s": "STATS_ITEM_MAXDAMAGE_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 18,
-            "dV": 1,
-            "dP": "Enhanced Maximum Damage",
-            "dN": "Enhanced Maximum Damage",
-            "o": 7,
-            "os": [
-                "maxdamage",
-                "secondary_mindamage",
-                "item_throw_mindamage"
-            ]
+            "sA": 0
         },
         {
             "id": 274,
-            "s": "item_strength_bytime",
+            "s": "STATS_ITEM_MAXDAMAGE_PERCENT_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 17,
-            "dV": 1,
-            "dP": "to Strength",
-            "dN": "to Strength",
-            "o": 6,
-            "os": [
-                "strength"
-            ]
+            "sA": 0
         },
         {
             "id": 275,
-            "s": "item_dexterity_bytime",
+            "s": "STATS_ITEM_STRENGTH_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 17,
-            "dV": 1,
-            "dP": "to Dexterity",
-            "dN": "to Dexterity",
-            "o": 6,
-            "os": [
-                "dexterity"
-            ]
+            "sA": 0
         },
         {
             "id": 276,
-            "s": "item_energy_bytime",
+            "s": "STATS_ITEM_DEXTERITY_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 17,
-            "dV": 1,
-            "dP": "to Energy",
-            "dN": "to Energy",
-            "o": 6,
-            "os": [
-                "energy"
-            ]
+            "sA": 0
         },
         {
             "id": 277,
-            "s": "item_vitality_bytime",
+            "s": "STATS_ITEM_ENERGY_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 17,
-            "dV": 1,
-            "dP": "to Vitality",
-            "dN": "to Vitality",
-            "o": 6,
-            "os": [
-                "vitality"
-            ]
+            "sA": 0
         },
         {
             "id": 278,
-            "s": "item_tohit_bytime",
+            "s": "STATS_ITEM_VITALITY_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 17,
-            "dV": 1,
-            "dP": "to Attack Rating",
-            "dN": "to Attack Rating",
-            "o": 6,
-            "os": [
-                "tohit"
-            ]
+            "sA": 0
         },
         {
             "id": 279,
-            "s": "item_tohitpercent_bytime",
+            "s": "STATS_ITEM_TOHIT_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 18,
-            "dV": 1,
-            "dP": "Bonus to Attack Rating",
-            "dN": "Bonus to Attack Rating",
-            "o": 6,
-            "os": [
-                "item_tohit_percent"
-            ]
+            "sA": 0
         },
         {
             "id": 280,
-            "s": "item_cold_damagemax_bytime",
+            "s": "STATS_ITEM_TOHITPERCENT_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 17,
-            "dV": 1,
-            "dP": "to Maximum Cold Damage",
-            "dN": "to Maximum Cold Damage",
-            "o": 6,
-            "os": [
-                "coldmaxdam"
-            ]
+            "sA": 0
         },
         {
             "id": 281,
-            "s": "item_fire_damagemax_bytime",
+            "s": "STATS_ITEM_COLD_DAMAGEMAX_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 17,
-            "dV": 1,
-            "dP": "to Maximum Fire Damage",
-            "dN": "to Maximum Fire Damage",
-            "o": 6,
-            "os": [
-                "firemaxdam"
-            ]
+            "sA": 0
         },
         {
             "id": 282,
-            "s": "item_ltng_damagemax_bytime",
+            "s": "STATS_ITEM_FIRE_DAMAGEMAX_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 17,
-            "dV": 1,
-            "dP": "to Maximum Lightning Damage",
-            "dN": "to Maximum Lightning Damage",
-            "o": 6,
-            "os": [
-                "lightmaxdam"
-            ]
+            "sA": 0
         },
         {
             "id": 283,
-            "s": "item_pois_damagemax_bytime",
+            "s": "STATS_ITEM_LTNG_DAMAGEMAX_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 17,
-            "dV": 1,
-            "dP": "to Maximum Poison Damage",
-            "dN": "to Maximum Poison Damage",
-            "o": 6,
-            "os": [
-                "poisonmaxdam"
-            ]
+            "sA": 0
         },
         {
             "id": 284,
-            "s": "item_resist_cold_bytime",
+            "s": "STATS_ITEM_POIS_DAMAGEMAX_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 18,
-            "dV": 2,
-            "dP": "Cold Resist",
-            "dN": "Cold Resist",
-            "o": 6,
-            "os": [
-                "coldresist"
-            ]
+            "sA": 0
         },
         {
             "id": 285,
-            "s": "item_resist_fire_bytime",
+            "s": "STATS_ITEM_RESIST_COLD_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 18,
-            "dV": 2,
-            "dP": "Fire Resist",
-            "dN": "Fire Resist",
-            "o": 6,
-            "os": [
-                "fireresist"
-            ]
+            "sA": 0
         },
         {
             "id": 286,
-            "s": "item_resist_ltng_bytime",
+            "s": "STATS_ITEM_RESIST_FIRE_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 18,
-            "dV": 2,
-            "dP": "Lightning Resist",
-            "dN": "Lightning Resist",
-            "o": 6,
-            "os": [
-                "lightresist"
-            ]
+            "sA": 0
         },
         {
             "id": 287,
-            "s": "item_resist_pois_bytime",
+            "s": "STATS_ITEM_RESIST_LTNG_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 18,
-            "dV": 2,
-            "dP": "Poison Resist",
-            "dN": "Poison Resist",
-            "o": 6,
-            "os": [
-                "poisonresist"
-            ]
+            "sA": 0
         },
         {
             "id": 288,
-            "s": "item_absorb_cold_bytime",
+            "s": "STATS_ITEM_RESIST_POIS_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 18,
-            "dV": 1,
-            "dP": "Absorbs Cold Damage",
-            "dN": "Absorbs Cold Damage",
-            "o": 6,
-            "os": [
-                "item_absorbcold"
-            ]
+            "sA": 0
         },
         {
             "id": 289,
-            "s": "item_absorb_fire_bytime",
+            "s": "STATS_ITEM_ABSORB_COLD_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 18,
-            "dV": 1,
-            "dP": "Absorbs Fire Damage",
-            "dN": "Absorbs Fire Damage",
-            "o": 6,
-            "os": [
-                "item_absorbfire"
-            ]
+            "sA": 0
         },
         {
             "id": 290,
-            "s": "item_absorb_ltng_bytime",
+            "s": "STATS_ITEM_ABSORB_FIRE_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 18,
-            "dV": 1,
-            "dP": "Absorbs Lightning Damage",
-            "dN": "Absorbs Lightning Damage",
-            "o": 6,
-            "os": [
-                "item_absorblight"
-            ]
+            "sA": 0
         },
         {
             "id": 291,
-            "s": "item_absorb_pois_bytime",
+            "s": "STATS_ITEM_ABSORB_LTNG_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "o": 6,
-            "os": [
-                "item_absorbmagic"
-            ]
+            "sA": 0
         },
         {
             "id": 292,
-            "s": "item_find_gold_bytime",
+            "s": "STATS_ITEM_ABSORB_POIS_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 18,
-            "dV": 2,
-            "dP": "Extra Gold from Monsters",
-            "dN": "Extra Gold from Monsters",
-            "o": 6,
-            "os": [
-                "item_goldbonus"
-            ]
+            "sA": 0
         },
         {
             "id": 293,
-            "s": "item_find_magic_bytime",
+            "s": "STATS_ITEM_FIND_GOLD_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 18,
-            "dV": 1,
-            "dP": "Better Chance of Getting Magic Items",
-            "dN": "Better Chance of Getting Magic Items",
-            "o": 6,
-            "os": [
-                "item_magicbonus"
-            ]
+            "sA": 0
         },
         {
             "id": 294,
-            "s": "item_regenstamina_bytime",
+            "s": "STATS_ITEM_FIND_MAGIC_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 18,
-            "dV": 2,
-            "dP": "Heal Stamina Plus",
-            "dN": "Heal Stamina Plus",
-            "o": 6,
-            "os": [
-                "staminarecoverybonus"
-            ]
+            "sA": 0
         },
         {
             "id": 295,
-            "s": "item_stamina_bytime",
+            "s": "STATS_ITEM_REGENSTAMINA_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 17,
-            "dV": 1,
-            "dP": "Maximum Stamina",
-            "dN": "Maximum Stamina",
-            "o": 6,
-            "os": [
-                "maxstamina"
-            ]
+            "sA": 0
         },
         {
             "id": 296,
-            "s": "item_damage_demon_bytime",
+            "s": "STATS_ITEM_STAMINA_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 18,
-            "dV": 1,
-            "dP": "Damage to Demons",
-            "dN": "Damage to Demons",
-            "o": 6,
-            "os": [
-                "item_demondamage_percent"
-            ]
+            "sA": 0
         },
         {
             "id": 297,
-            "s": "item_damage_undead_bytime",
+            "s": "STATS_ITEM_DAMAGE_DEMON_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 18,
-            "dV": 1,
-            "dP": "Damage to Undead",
-            "dN": "Damage to Undead",
-            "o": 6,
-            "os": [
-                "item_undeaddamage_percent"
-            ]
+            "sA": 0
         },
         {
             "id": 298,
-            "s": "item_tohit_demon_bytime",
+            "s": "STATS_ITEM_DAMAGE_UNDEAD_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 17,
-            "dV": 1,
-            "dP": "to Attack Rating against Demons",
-            "dN": "to Attack Rating against Demons",
-            "o": 6,
-            "os": [
-                "item_demon_tohit"
-            ]
+            "sA": 0
         },
         {
             "id": 299,
-            "s": "item_tohit_undead_bytime",
+            "s": "STATS_ITEM_TOHIT_DEMON_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 17,
-            "dV": 1,
-            "dP": "to Attack Rating against Undead",
-            "dN": "to Attack Rating against Undead",
-            "o": 6,
-            "os": [
-                "item_undead_tohit"
-            ]
+            "sA": 0
         },
         {
             "id": 300,
-            "s": "item_crushingblow_bytime",
+            "s": "STATS_ITEM_TOHIT_UNDEAD_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 18,
-            "dV": 1,
-            "dP": "Chance of Crushing Blow",
-            "dN": "Chance of Crushing Blow",
-            "o": 6,
-            "os": [
-                "item_crushingblow"
-            ]
+            "sA": 0
         },
         {
             "id": 301,
-            "s": "item_openwounds_bytime",
+            "s": "STATS_ITEM_CRUSHINGBLOW_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 18,
-            "dV": 1,
-            "dP": "Chance of Open Wounds",
-            "dN": "Chance of Open Wounds",
-            "o": 6,
-            "os": [
-                "item_openwounds"
-            ]
+            "sA": 0
         },
         {
             "id": 302,
-            "s": "item_kick_damage_bytime",
+            "s": "STATS_ITEM_OPENWOUNDS_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 17,
-            "dV": 1,
-            "dP": "Kick Damage",
-            "dN": "Kick Damage",
-            "o": 6,
-            "os": [
-                "item_kickdamage"
-            ]
+            "sA": 0
         },
         {
             "id": 303,
-            "s": "item_deadlystrike_bytime",
+            "s": "STATS_ITEM_KICK_DAMAGE_BYTIME",
             "e": 4,
-            "sS": 1,
             "sB": 22,
-            "sA": 0,
-            "so": 180,
-            "dF": 18,
-            "dV": 1,
-            "dP": "Deadly Strike",
-            "dN": "Deadly Strike",
-            "o": 6,
-            "os": [
-                "item_deadlystrike"
-            ]
+            "sA": 0
         },
         {
             "id": 304,
-            "s": "item_find_gems_bytime",
+            "s": "STATS_ITEM_DEADLYSTRIKE_BYTIME",
             "e": 4,
-            "sS": 1
+            "sB": 22,
+            "sA": 0
         },
         {
             "id": 305,
-            "s": "item_pierce_cold",
-            "sS": 1,
-            "sB": 8,
-            "sA": 50,
-            "so": 88,
-            "dF": 20,
-            "dV": 1,
-            "dP": "to Enemy Cold Resistance",
-            "dN": "to Enemy Cold Resistance"
+            "s": "STATS_ITEM_FIND_GEMS_BYTIME",
+            "e": 4
         },
         {
             "id": 306,
-            "s": "item_pierce_fire",
-            "sS": 1,
-            "sB": 8,
-            "sA": 50,
-            "so": 88,
-            "dF": 20,
-            "dV": 1,
-            "dP": "to Enemy Fire Resistance",
-            "dN": "to Enemy Fire Resistance"
+            "s": "STATS_ITEM_PIERCE_COLD"
         },
         {
             "id": 307,
-            "s": "item_pierce_ltng",
-            "sS": 1,
-            "sB": 8,
-            "sA": 50,
-            "so": 88,
-            "dF": 20,
-            "dV": 1,
-            "dP": "to Enemy Lightning Resistance",
-            "dN": "to Enemy Lightning Resistance"
+            "s": "STATS_ITEM_PIERCE_FIRE"
         },
         {
             "id": 308,
-            "s": "item_pierce_pois",
-            "sS": 1,
-            "sB": 8,
-            "sA": 50,
-            "so": 88,
-            "dF": 20,
-            "dV": 1,
-            "dP": "to Enemy Poison Resistance",
-            "dN": "to Enemy Poison Resistance"
+            "s": "STATS_ITEM_PIERCE_LTNG"
         },
         {
             "id": 309,
-            "s": "item_damage_vs_monster",
-            "sS": 1
+            "s": "STATS_ITEM_PIERCE_POIS"
         },
         {
             "id": 310,
-            "s": "item_damage_percent_vs_monster",
-            "sS": 1
+            "s": "STATS_ITEM_DAMAGE_VS_MONSTER"
         },
         {
             "id": 311,
-            "s": "item_tohit_vs_monster",
-            "sS": 1
+            "s": "STATS_ITEM_DAMAGE_PERCENT_VS_MONSTER"
         },
         {
             "id": 312,
-            "s": "item_tohit_percent_vs_monster",
-            "sS": 1
+            "s": "STATS_ITEM_TOHIT_VS_MONSTER"
         },
         {
             "id": 313,
-            "s": "item_ac_vs_monster",
-            "sS": 1
+            "s": "STATS_ITEM_TOHIT_PERCENT_VS_MONSTER"
         },
         {
             "id": 314,
-            "s": "item_ac_percent_vs_monster",
-            "sS": 1
+            "s": "STATS_ITEM_AC_VS_MONSTER"
         },
         {
             "id": 315,
-            "s": "firelength",
-            "sS": 1
+            "s": "STATS_ITEM_AC_PERCENT_VS_MONSTER"
         },
         {
             "id": 316,
-            "s": "burningmin",
-            "sS": 1
+            "s": "STATS_FIRELENGTH"
         },
         {
             "id": 317,
-            "s": "burningmax",
-            "sS": 1
+            "s": "STATS_BURNINGMIN"
         },
         {
             "id": 318,
-            "s": "progressive_damage",
-            "sS": 1
+            "s": "STATS_BURNINGMAX"
         },
         {
             "id": 319,
-            "s": "progressive_steal",
-            "sS": 1
+            "s": "STATS_PROGRESSIVE_DAMAGE"
         },
         {
             "id": 320,
-            "s": "progressive_other",
-            "sS": 1
+            "s": "STATS_PROGRESSIVE_STEAL"
         },
         {
             "id": 321,
-            "s": "progressive_fire",
-            "sS": 1
+            "s": "STATS_PROGRESSIVE_OTHER"
         },
         {
             "id": 322,
-            "s": "progressive_cold",
-            "sS": 1
+            "s": "STATS_PROGRESSIVE_FIRE"
         },
         {
             "id": 323,
-            "s": "progressive_lightning",
-            "sS": 1
+            "s": "STATS_PROGRESSIVE_COLD"
         },
         {
             "id": 324,
-            "s": "item_extra_charges",
-            "sS": 1,
+            "s": "STATS_PROGRESSIVE_LIGHTNING"
+        },
+        {
+            "id": 325,
+            "s": "STATS_ITEM_EXTRA_CHARGES",
             "sB": 6,
             "sA": 0
         },
         {
-            "id": 325,
-            "s": "progressive_tohit",
-            "sS": 1
-        },
-        {
             "id": 326,
-            "s": "poison_count",
-            "sS": 1
-        },
-        {
-            "id": 327,
-            "s": "damage_framerate",
-            "sS": 1
-        },
-        {
-            "id": 328,
-            "s": "pierce_idx",
-            "sS": 1
-        },
-        {
-            "id": 329,
-            "s": "passive_fire_mastery",
-            "sS": 1,
-            "sB": 9,
-            "sA": 50,
-            "so": 88,
-            "dF": 4,
-            "dV": 1,
-            "dP": "to Fire Skill Damage",
-            "dN": "to Fire Skill Damage"
-        },
-        {
-            "id": 330,
-            "s": "passive_ltng_mastery",
-            "sS": 1,
-            "sB": 9,
-            "sA": 50,
-            "so": 88,
-            "dF": 4,
-            "dV": 1,
-            "dP": "to Lightning Skill Damage",
-            "dN": "to Lightning Skill Damage"
-        },
-        {
-            "id": 331,
-            "s": "passive_cold_mastery",
-            "sS": 1,
-            "sB": 9,
-            "sA": 50,
-            "so": 88,
-            "dF": 4,
-            "dV": 1,
-            "dP": "to Cold Skill Damage",
-            "dN": "to Cold Skill Damage"
-        },
-        {
-            "id": 332,
-            "s": "passive_pois_mastery",
-            "sS": 1,
-            "sB": 9,
-            "sA": 50,
-            "so": 88,
-            "dF": 4,
-            "dV": 1,
-            "dP": "to Poison Skill Damage",
-            "dN": "to Poison Skill Damage"
-        },
-        {
-            "id": 333,
-            "s": "passive_fire_pierce",
-            "sS": 1,
-            "sB": 8,
-            "sA": 0,
-            "so": 88,
-            "dF": 20,
-            "dV": 1,
-            "dP": "to Enemy Fire Resistance",
-            "dN": "to Enemy Fire Resistance"
-        },
-        {
-            "id": 334,
-            "s": "passive_ltng_pierce",
-            "sS": 1,
-            "sB": 8,
-            "sA": 0,
-            "so": 88,
-            "dF": 20,
-            "dV": 1,
-            "dP": "to Enemy Lightning Resistance",
-            "dN": "to Enemy Lightning Resistance"
-        },
-        {
-            "id": 335,
-            "s": "passive_cold_pierce",
-            "sS": 1,
-            "sB": 8,
-            "sA": 0,
-            "so": 88,
-            "dF": 20,
-            "dV": 1,
-            "dP": "to Enemy Cold Resistance",
-            "dN": "to Enemy Cold Resistance"
-        },
-        {
-            "id": 336,
-            "s": "passive_pois_pierce",
-            "sS": 1,
-            "sB": 8,
-            "sA": 0,
-            "so": 88,
-            "dF": 20,
-            "dV": 1,
-            "dP": "to Enemy Poison Resistance",
-            "dN": "to Enemy Poison Resistance"
-        },
-        {
-            "id": 337,
-            "s": "passive_critical_strike",
-            "sS": 1,
-            "sB": 8,
-            "sA": 0
-        },
-        {
-            "id": 338,
-            "s": "passive_dodge",
-            "sS": 1,
-            "sB": 7,
-            "sA": 0
-        },
-        {
-            "id": 339,
-            "s": "passive_avoid",
-            "sS": 1,
-            "sB": 7,
-            "sA": 0
-        },
-        {
-            "id": 340,
-            "s": "passive_evade",
-            "sS": 1,
-            "sB": 7,
-            "sA": 0
-        },
-        {
-            "id": 341,
-            "s": "passive_warmth",
-            "sS": 1,
-            "sB": 8,
-            "sA": 0
-        },
-        {
-            "id": 342,
-            "s": "passive_mastery_melee_th",
-            "sS": 1,
-            "sB": 8,
-            "sA": 0
-        },
-        {
-            "id": 343,
-            "s": "passive_mastery_melee_dmg",
-            "sS": 1,
-            "sB": 8,
-            "sA": 0
-        },
-        {
-            "id": 344,
-            "s": "passive_mastery_melee_crit",
-            "sS": 1,
-            "sB": 8,
-            "sA": 0
-        },
-        {
-            "id": 345,
-            "s": "passive_mastery_throw_th",
-            "sS": 1,
-            "sB": 8,
-            "sA": 0
-        },
-        {
-            "id": 346,
-            "s": "passive_mastery_throw_dmg",
-            "sS": 1,
-            "sB": 8,
-            "sA": 0
-        },
-        {
-            "id": 347,
-            "s": "passive_mastery_throw_crit",
-            "sS": 1,
-            "sB": 8,
-            "sA": 0
-        },
-        {
-            "id": 348,
-            "s": "passive_weaponblock",
-            "sS": 1,
-            "sB": 8,
-            "sA": 0
-        },
-        {
-            "id": 349,
-            "s": "passive_summon_resist",
-            "sS": 1,
-            "sB": 8,
-            "sA": 0
-        },
-        {
-            "id": 350,
-            "s": "modifierlist_skill"
-        },
-        {
-            "id": 351,
-            "s": "modifierlist_level"
-        },
-        {
-            "id": 352,
-            "s": "last_sent_hp_pct",
-            "sS": 1
-        },
-        {
-            "id": 353,
-            "s": "source_unit_type"
-        },
-        {
-            "id": 354,
-            "s": "source_unit_id"
-        },
-        {
-            "id": 355,
-            "s": "shortparam1"
-        },
-        {
-            "id": 356,
-            "s": "questitemdifficulty",
-            "sB": 2,
-            "sA": 0
-        },
-        {
-            "id": 357,
-            "s": "passive_mag_mastery",
-            "sS": 1,
-            "sB": 9,
-            "sA": 50
-        },
-        {
-            "id": 358,
-            "s": "passive_mag_pierce",
-            "sS": 1,
-            "sB": 8,
-            "sA": 0
+            "s": "STATS_PROGRESSIVE_TOHIT"
         }
     ],
     "runewords": [
         null,
-        {
-            "id": 1,
-            "n": "Ancients' Pledge"
-        },
-        {
-            "id": 2,
-            "n": "Armageddon"
-        },
-        {
-            "id": 3,
-            "n": "Authority"
-        },
-        {
-            "id": 4,
-            "n": "Beast"
-        },
-        {
-            "id": 5,
-            "n": "Beauty"
-        },
-        {
-            "id": 6,
-            "n": "Black"
-        },
-        {
-            "id": 7,
-            "n": "Blood"
-        },
-        {
-            "id": 8,
-            "n": "Bone"
-        },
-        {
-            "id": 9,
-            "n": "Bramble"
-        },
-        {
-            "id": 10,
-            "n": "Brand"
-        },
-        {
-            "id": 11,
-            "n": "Breath of the Dying"
-        },
-        {
-            "id": 12,
-            "n": "Broken Promise"
-        },
-        {
-            "id": 13,
-            "n": "Call to Arms"
-        },
-        {
-            "id": 14,
-            "n": "Chains of Honor"
-        },
-        {
-            "id": 15,
-            "n": "Chance"
-        },
-        {
-            "id": 16,
-            "n": "Chaos"
-        },
-        {
-            "id": 17,
-            "n": "Crescent Moon"
-        },
-        {
-            "id": 18,
-            "n": "Darkness"
-        },
-        {
-            "id": 19,
-            "n": "Daylight"
-        },
-        {
-            "id": 20,
-            "n": "Death"
-        },
-        {
-            "id": 21,
-            "n": "Deception"
-        },
-        {
-            "id": 22,
-            "n": "Delirium"
-        },
-        {
-            "id": 23,
-            "n": "Desire"
-        },
-        {
-            "id": 24,
-            "n": "Despair"
-        },
-        {
-            "id": 25,
-            "n": "Destruction"
-        },
-        {
-            "id": 26,
-            "n": "Doom"
-        },
-        {
-            "id": 27,
-            "n": "Dragon"
-        },
-        {
-            "id": 28,
-            "n": "Dread"
-        },
-        {
-            "id": 29,
-            "n": "Dream"
-        },
-        {
-            "id": 30,
-            "n": "Duress"
-        },
-        {
-            "id": 31,
-            "n": "Edge"
-        },
-        {
-            "id": 32,
-            "n": "Elation"
-        },
-        {
-            "id": 33,
-            "n": "Enigma"
-        },
-        {
-            "id": 34,
-            "n": "Enlightenment"
-        },
-        {
-            "id": 35,
-            "n": "Envy"
-        },
-        {
-            "id": 36,
-            "n": "Eternity"
-        },
-        {
-            "id": 37,
-            "n": "Exile"
-        },
-        {
-            "id": 38,
-            "n": "Faith"
-        },
-        {
-            "id": 39,
-            "n": "Famine"
-        },
-        {
-            "id": 40,
-            "n": "Flickering Flame"
-        },
-        {
-            "id": 41,
-            "n": "Fortitude"
-        },
-        {
-            "id": 42,
-            "n": "Fortune"
-        },
-        {
-            "id": 43,
-            "n": "Friendship"
-        },
-        {
-            "id": 44,
-            "n": "Fury"
-        },
-        {
-            "id": 45,
-            "n": "Gloom"
-        },
-        {
-            "id": 46,
-            "n": "Glory"
-        },
-        {
-            "id": 47,
-            "n": "Grief"
-        },
-        {
-            "id": 48,
-            "n": "Hand of Justice"
-        },
-        {
-            "id": 49,
-            "n": "Harmony"
-        },
-        {
-            "id": 50,
-            "n": "Hatred"
-        },
-        {
-            "id": 51,
-            "n": "Heart of the Oak"
-        },
-        {
-            "id": 52,
-            "n": "Heaven's Will"
-        },
-        {
-            "id": 53,
-            "n": "Holy Tears"
-        },
-        {
-            "id": 54,
-            "n": "Holy Thunder"
-        },
-        {
-            "id": 55,
-            "n": "Honor"
-        },
-        {
-            "id": 56,
-            "n": "Revenge"
-        },
-        {
-            "id": 57,
-            "n": "Humility"
-        },
-        {
-            "id": 58,
-            "n": "Hunger"
-        },
-        {
-            "id": 59,
-            "n": "Ice"
-        },
-        {
-            "id": 60,
-            "n": "Infinity"
-        },
-        {
-            "id": 61,
-            "n": "Innocence"
-        },
-        {
-            "id": 62,
-            "n": "Insight"
-        },
-        {
-            "id": 63,
-            "n": "Jealousy"
-        },
-        {
-            "id": 64,
-            "n": "Judgement"
-        },
-        {
-            "id": 65,
-            "n": "King's Grace"
-        },
-        {
-            "id": 66,
-            "n": "Kingslayer"
-        },
-        {
-            "id": 67,
-            "n": "Knight's Vigil"
-        },
-        {
-            "id": 68,
-            "n": "Knowledge"
-        },
-        {
-            "id": 69,
-            "n": "Last Wish"
-        },
-        {
-            "id": 70,
-            "n": "Law"
-        },
-        {
-            "id": 71,
-            "n": "Lawbringer"
-        },
-        {
-            "id": 72,
-            "n": "Leaf"
-        },
-        {
-            "id": 73,
-            "n": "Lightning"
-        },
-        {
-            "id": 74,
-            "n": "Lionheart"
-        },
-        {
-            "id": 75,
-            "n": "Lore"
-        },
-        {
-            "id": 76,
-            "n": "Love"
-        },
-        {
-            "id": 77,
-            "n": "Loyalty"
-        },
-        {
-            "id": 78,
-            "n": "Lust"
-        },
-        {
-            "id": 79,
-            "n": "Madness"
-        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         {
-            "id": 81,
-            "n": "Malice"
-        },
-        {
-            "id": 82,
-            "n": "Melody"
-        },
-        {
-            "id": 83,
-            "n": "Memory"
-        },
-        {
-            "id": 84,
-            "n": "Mist"
-        },
-        {
-            "id": 85,
-            "n": "Morning"
-        },
-        {
-            "id": 86,
-            "n": "Mystery"
-        },
-        {
-            "id": 87,
-            "n": "Myth"
-        },
-        {
-            "id": 88,
-            "n": "Nadir"
-        },
-        {
-            "id": 89,
-            "n": "Nature's Kingdom"
-        },
-        {
-            "id": 90,
-            "n": "Night"
-        },
-        {
-            "id": 91,
-            "n": "Oath"
-        },
-        {
-            "id": 92,
-            "n": "Obedience"
-        },
-        {
-            "id": 93,
-            "n": "Oblivion"
-        },
-        {
-            "id": 94,
-            "n": "Obsession"
-        },
-        {
-            "id": 95,
-            "n": "Passion"
-        },
-        {
-            "id": 96,
-            "n": "Patience"
-        },
-        {
-            "id": 97,
-            "n": "Pattern"
-        },
-        {
-            "id": 98,
-            "n": "Peace"
-        },
-        {
-            "id": 99,
-            "n": "Voice of Reason"
-        },
-        {
-            "id": 100,
-            "n": "Penitence"
-        },
-        {
-            "id": 101,
-            "n": "Peril"
-        },
-        {
-            "id": 102,
-            "n": "Pestilence"
-        },
-        {
-            "id": 103,
-            "n": "Phoenix"
-        },
-        {
-            "id": 104,
-            "n": "Piety"
-        },
-        {
-            "id": 105,
-            "n": "Pillar of Faith"
-        },
-        {
-            "id": 106,
-            "n": "Plague"
-        },
-        {
-            "id": 107,
-            "n": "Praise"
-        },
-        {
-            "id": 108,
-            "n": "Prayer"
-        },
-        {
-            "id": 109,
-            "n": "Pride"
-        },
-        {
-            "id": 110,
-            "n": "Principle"
-        },
-        {
-            "id": 111,
-            "n": "Prowess in Battle"
-        },
-        {
-            "id": 112,
-            "n": "Prudence"
-        },
-        {
-            "id": 113,
-            "n": "Punishment"
-        },
-        {
-            "id": 114,
-            "n": "Purity"
-        },
-        {
-            "id": 115,
-            "n": "Question"
-        },
-        {
-            "id": 116,
-            "n": "Radiance"
-        },
-        {
-            "id": 117,
-            "n": "Rain"
-        },
-        {
-            "id": 118,
-            "n": "Reason"
-        },
-        {
-            "id": 119,
-            "n": "Red"
-        },
-        {
-            "id": 120,
-            "n": "Rhyme"
-        },
-        {
-            "id": 121,
-            "n": "Rift"
-        },
-        {
-            "id": 122,
-            "n": "Sanctuary"
-        },
-        {
-            "id": 123,
-            "n": "Serendipity"
-        },
-        {
-            "id": 124,
-            "n": "Shadow"
-        },
-        {
-            "id": 125,
-            "n": "Shadow of Doubt"
-        },
-        {
-            "id": 126,
-            "n": "Silence"
-        },
-        {
-            "id": 127,
-            "n": "Siren's Song"
-        },
-        {
-            "id": 128,
-            "n": "Smoke"
-        },
-        {
-            "id": 129,
-            "n": "Sorrow"
-        },
-        {
-            "id": 130,
-            "n": "Spirit"
-        },
-        {
-            "id": 131,
-            "n": "Splendor"
-        },
-        {
-            "id": 132,
-            "n": "Starlight"
-        },
-        {
-            "id": 133,
-            "n": "Stealth"
-        },
-        {
-            "id": 134,
-            "n": "Steel"
-        },
-        {
-            "id": 135,
-            "n": "Still Water"
-        },
-        {
-            "id": 136,
-            "n": "Sting"
-        },
-        {
-            "id": 137,
-            "n": "Stone"
-        },
-        {
-            "id": 138,
-            "n": "Storm"
-        },
-        {
-            "id": 139,
-            "n": "Strength"
-        },
-        {
-            "id": 140,
-            "n": "Tempest"
-        },
-        {
-            "id": 141,
-            "n": "Temptation"
-        },
-        {
-            "id": 142,
-            "n": "Terror"
-        },
-        {
-            "id": 143,
-            "n": "Thirst"
-        },
-        {
-            "id": 144,
-            "n": "Thought"
-        },
-        {
-            "id": 145,
-            "n": "Thunder"
-        },
-        {
-            "id": 146,
-            "n": "Time"
-        },
-        {
-            "id": 147,
-            "n": "Tradition"
-        },
-        {
-            "id": 148,
-            "n": "Treachery"
-        },
-        {
-            "id": 149,
-            "n": "Trust"
-        },
-        {
-            "id": 150,
-            "n": "Truth"
-        },
-        {
-            "id": 151,
-            "n": "Unbending Will"
-        },
-        {
-            "id": 152,
-            "n": "Valor"
-        },
-        {
-            "id": 153,
-            "n": "Vengeance"
-        },
-        {
-            "id": 154,
-            "n": "Venom"
-        },
-        {
-            "id": 155,
-            "n": "Victory"
-        },
-        {
-            "id": 156,
-            "n": "Voice"
-        },
-        {
-            "id": 157,
-            "n": "Void"
-        },
-        {
-            "id": 158,
-            "n": "War"
-        },
-        {
-            "id": 159,
-            "n": "Water"
-        },
-        {
-            "id": 160,
-            "n": "Wealth"
-        },
-        {
-            "id": 161,
-            "n": "Whisper"
-        },
-        {
-            "id": 162,
-            "n": "White"
-        },
-        {
-            "id": 163,
-            "n": "Wind"
-        },
-        {
-            "id": 164,
-            "n": "Wings of Hope"
-        },
-        {
-            "id": 165,
-            "n": "Wisdom"
-        },
-        {
-            "id": 166,
-            "n": "Woe"
-        },
-        {
-            "id": 167,
-            "n": "Wonder"
-        },
-        {
-            "id": 168,
-            "n": "Wrath"
-        },
-        {
-            "id": 169,
-            "n": "Youth"
-        },
-        {
-            "id": 170,
-            "n": "Zephyr"
-        }
-    ],
-    "set_items": [
-        {
-            "id": 0,
-            "n": "Civerb's Ward",
-            "c": "lrg",
-            "tc": "lyel"
-        },
-        {
-            "id": 1,
-            "n": "Civerb's Icon",
-            "c": "amu",
-            "tc": "lyel"
-        },
-        {
-            "id": 2,
-            "n": "Civerb's Cudgel",
-            "c": "gsc",
-            "tc": "lyel"
-        },
-        {
-            "id": 3,
-            "n": "Hsarus' Iron Heel",
-            "c": "mbt",
-            "tc": "dred"
-        },
-        {
-            "id": 4,
-            "n": "Hsarus' Iron Fist",
-            "c": "buc",
-            "tc": "dred"
-        },
-        {
-            "id": 5,
-            "n": "Hsarus' Iron Stay",
-            "c": "mbl",
-            "tc": "dred"
-        },
-        {
-            "id": 6,
-            "n": "Cleglaw's Tooth",
-            "c": "lsd",
-            "tc": "lred"
-        },
-        {
-            "id": 7,
-            "n": "Cleglaw's Claw",
-            "c": "sml",
-            "tc": "lred"
-        },
-        {
-            "id": 8,
-            "n": "Cleglaw's Pincers",
-            "c": "mgl",
-            "tc": "lred"
-        },
-        {
-            "id": 9,
-            "n": "Iratha's Collar",
-            "c": "amu",
-            "tc": "lgry"
-        },
-        {
-            "id": 10,
-            "n": "Iratha's Cuff",
-            "c": "tgl",
-            "tc": "lgry"
-        },
-        {
-            "id": 11,
-            "n": "Iratha's Coil",
-            "c": "crn",
-            "tc": "lgry"
-        },
-        {
-            "id": 12,
-            "n": "Iratha's Cord",
-            "c": "tbl",
-            "tc": "lgry"
-        },
-        {
-            "id": 13,
-            "n": "Isenhart's Lightbrand",
-            "c": "bsd",
-            "tc": "lgld"
-        },
-        {
-            "id": 14,
-            "n": "Isenhart's Parry",
-            "c": "gts",
-            "tc": "lgld"
-        },
-        {
-            "id": 15,
-            "n": "Isenhart's Case",
-            "c": "brs",
-            "tc": "lgld"
-        },
-        {
-            "id": 16,
-            "n": "Isenhart's Horns",
-            "c": "fhl",
-            "tc": "lgld"
-        },
-        {
-            "id": 17,
-            "n": "Vidala's Barb",
-            "c": "lbb",
-            "tc": "blac"
-        },
-        {
-            "id": 18,
-            "n": "Vidala's Fetlock",
-            "c": "tbt",
-            "tc": "blac"
-        },
-        {
-            "id": 19,
-            "n": "Vidala's Ambush",
-            "c": "lea",
-            "tc": "blac"
-        },
-        {
-            "id": 20,
-            "n": "Vidala's Snare",
-            "c": "amu",
-            "tc": "blac"
-        },
-        {
-            "id": 21,
-            "n": "Milabrega's Orb",
-            "c": "kit",
-            "tc": "dblu"
-        },
-        {
-            "id": 22,
-            "n": "Milabrega's Rod",
-            "c": "wsp",
-            "tc": "dblu"
-        },
-        {
-            "id": 23,
-            "n": "Milabrega's Diadem",
-            "c": "crn",
-            "tc": "dblu"
-        },
-        {
-            "id": 24,
-            "n": "Milabrega's Robe",
-            "c": "aar",
-            "tc": "dblu"
-        },
-        {
-            "id": 25,
-            "n": "Cathan's Rule",
-            "c": "bst",
-            "tc": "dgrn"
-        },
-        {
             "id": 26,
-            "n": "Cathan's Mesh",
-            "c": "chn",
-            "tc": "dgrn"
+            "types": [],
+            "r": [],
+            "m": []
         },
         {
             "id": 27,
-            "n": "Cathan's Visage",
-            "c": "msk",
-            "tc": "dgrn"
+            "n": "Ancients' Pledge",
+            "types": [
+                "shld"
+            ],
+            "r": [
+                "r08",
+                "r09",
+                "r07"
+            ],
+            "m": [
+                {
+                    "prop": "res-cold",
+                    "min": 30,
+                    "max": 30
+                },
+                {
+                    "prop": "res-all",
+                    "min": 13,
+                    "max": 13
+                },
+                {
+                    "prop": "ac%",
+                    "min": 50,
+                    "max": 50
+                },
+                {
+                    "prop": "dmg-to-mana",
+                    "min": 10,
+                    "max": 10
+                }
+            ]
         },
         {
             "id": 28,
-            "n": "Cathan's Sigil",
-            "c": "amu",
-            "tc": "dgrn"
+            "n": "Armageddon",
+            "types": [
+                "axe",
+                "club",
+                "pole",
+                "hamm"
+            ],
+            "r": [
+                "r11",
+                "r31",
+                "r32",
+                "r12",
+                "r11",
+                "r06"
+            ],
+            "m": [
+                {
+                    "prop": "dmg%",
+                    "min": 185,
+                    "max": 185
+                },
+                {
+                    "prop": "att",
+                    "min": 300,
+                    "max": 300
+                },
+                {
+                    "prop": "swing2",
+                    "min": 20,
+                    "max": 20
+                },
+                {
+                    "prop": "lifesteal",
+                    "min": 3,
+                    "max": 3
+                }
+            ]
         },
         {
             "id": 29,
-            "n": "Cathan's Seal",
-            "c": "rin",
-            "tc": "dgrn"
+            "n": "Authority",
+            "types": [
+                "helm"
+            ],
+            "r": [
+                "r33",
+                "r25",
+                "r22"
+            ],
+            "m": [
+                {
+                    "prop": "ac%",
+                    "min": 100,
+                    "max": 100
+                },
+                {
+                    "prop": "res-all",
+                    "min": 5,
+                    "max": 5
+                },
+                {
+                    "prop": "allskills",
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "prop": "str",
+                    "min": 20,
+                    "max": 20
+                }
+            ]
         },
         {
             "id": 30,
-            "n": "Tancred's Crowbill",
-            "c": "mpi",
-            "tc": "dgld"
+            "n": "Beast",
+            "types": [
+                "axe",
+                "club",
+                "hamm"
+            ],
+            "r": [
+                "r33",
+                "r03",
+                "r22",
+                "r23",
+                "r17"
+            ],
+            "m": [
+                {
+                    "prop": "dmg%",
+                    "min": 200,
+                    "max": 200
+                },
+                {
+                    "prop": "crush",
+                    "min": 25,
+                    "max": 25
+                },
+                {
+                    "prop": "openwounds",
+                    "min": 25,
+                    "max": 25
+                },
+                {
+                    "prop": "dmg-undead",
+                    "min": 50,
+                    "max": 50
+                },
+                {
+                    "prop": "dmg-demon",
+                    "min": 50,
+                    "max": 50
+                }
+            ]
         },
         {
             "id": 31,
-            "n": "Tancred's Spine",
-            "c": "ful",
-            "tc": "dgld"
+            "n": "Beauty",
+            "types": [
+                "helm"
+            ],
+            "r": [
+                "r01",
+                "r08",
+                "r05"
+            ],
+            "m": [
+                {
+                    "prop": "light",
+                    "min": 2,
+                    "max": 2
+                },
+                {
+                    "prop": "mag%",
+                    "min": 50,
+                    "max": 50
+                },
+                {
+                    "prop": "balance2",
+                    "min": 20,
+                    "max": 20
+                }
+            ]
         },
         {
             "id": 32,
-            "n": "Tancred's Hobnails",
-            "c": "lbt",
-            "tc": "dgld"
+            "n": "Black",
+            "types": [
+                "club",
+                "hamm",
+                "mace"
+            ],
+            "r": [
+                "r16",
+                "r12",
+                "r02"
+            ],
+            "m": [
+                {
+                    "prop": "dmg-undead",
+                    "min": 25,
+                    "max": 25
+                },
+                {
+                    "prop": "att-undead",
+                    "min": 50,
+                    "max": 50
+                },
+                {
+                    "prop": "manasteal",
+                    "min": 7,
+                    "max": 7
+                },
+                {
+                    "prop": "dmg%",
+                    "min": 133,
+                    "max": 133
+                },
+                {
+                    "prop": "lifesteal",
+                    "min": 7,
+                    "max": 7
+                }
+            ]
         },
         {
             "id": 33,
-            "n": "Tancred's Weird",
-            "c": "amu",
-            "tc": "dgld"
+            "n": "Blood",
+            "types": [
+                "spea",
+                "axe",
+                "swor"
+            ],
+            "r": [
+                "r31",
+                "r30",
+                "r01",
+                "r22"
+            ],
+            "m": [
+                {
+                    "prop": "dmg%",
+                    "min": 175,
+                    "max": 175
+                },
+                {
+                    "prop": "openwounds",
+                    "min": 75,
+                    "max": 75
+                },
+                {
+                    "prop": "deadly",
+                    "min": 25,
+                    "max": 25
+                },
+                {
+                    "prop": "lifesteal",
+                    "min": 13,
+                    "max": 13
+                },
+                {
+                    "prop": "str",
+                    "min": 13,
+                    "max": 13
+                }
+            ]
         },
         {
             "id": 34,
-            "n": "Tancred's Skull",
-            "c": "bhm",
-            "tc": "dgld"
+            "n": "Bone",
+            "types": [
+                "spea",
+                "wand"
+            ],
+            "r": [
+                "r17",
+                "r02"
+            ],
+            "m": [
+                {
+                    "prop": "att-undead",
+                    "min": 200,
+                    "max": 200
+                },
+                {
+                    "prop": "dmg-undead",
+                    "min": 75,
+                    "max": 75
+                },
+                {
+                    "prop": "dmg%",
+                    "min": 180,
+                    "max": 180
+                },
+                {
+                    "prop": "manasteal",
+                    "min": 9,
+                    "max": 9
+                },
+                {
+                    "prop": "skilltab",
+                    "p": 7,
+                    "min": 4,
+                    "max": 4
+                }
+            ]
         },
         {
             "id": 35,
-            "n": "Sigon's Gage",
-            "c": "hgl",
-            "tc": "whit"
+            "n": "Bramble",
+            "types": [
+                "tors"
+            ],
+            "r": [
+                "r05",
+                "r08"
+            ],
+            "m": [
+                {
+                    "prop": "ac%",
+                    "min": 47,
+                    "max": 47
+                },
+                {
+                    "prop": "res-fire",
+                    "min": 3,
+                    "max": 3
+                },
+                {
+                    "prop": "res-ltng",
+                    "min": 33,
+                    "max": 33
+                },
+                {
+                    "prop": "move1",
+                    "min": 10,
+                    "max": 10
+                }
+            ]
         },
         {
             "id": 36,
-            "n": "Sigon's Visor",
-            "c": "ghm",
-            "tc": "whit"
+            "n": "Brand",
+            "types": [
+                "scep",
+                "swor"
+            ],
+            "r": [
+                "r01",
+                "r15",
+                "r08",
+                "r06"
+            ],
+            "m": [
+                {
+                    "prop": "light",
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "prop": "dmg-fire",
+                    "min": 10,
+                    "max": 30
+                },
+                {
+                    "prop": "dmg%",
+                    "min": 100,
+                    "max": 100
+                },
+                {
+                    "prop": "res-cold",
+                    "min": 35,
+                    "max": 35
+                }
+            ]
         },
         {
             "id": 37,
-            "n": "Sigon's Shelter",
-            "c": "gth",
-            "tc": "whit"
+            "n": "Breath of the Dying",
+            "types": [
+                "weap"
+            ],
+            "r": [
+                "r31",
+                "r07",
+                "r24",
+                "r28",
+                "r09",
+                "r20"
+            ],
+            "m": [
+                {
+                    "prop": "dmg%",
+                    "min": 100,
+                    "max": 100
+                },
+                {
+                    "prop": "dmg-cold",
+                    "min": 9,
+                    "max": 15
+                },
+                {
+                    "prop": "mana-kill",
+                    "min": 5,
+                    "max": 5
+                }
+            ]
         },
         {
             "id": 38,
-            "n": "Sigon's Sabot",
-            "c": "hbt",
-            "tc": "whit"
+            "n": "Broken Promise",
+            "types": [
+                "weap"
+            ],
+            "r": [
+                "r07",
+                "r27",
+                "r14"
+            ],
+            "m": [
+                {
+                    "prop": "pois-max",
+                    "min": 200,
+                    "max": 200
+                },
+                {
+                    "prop": "dmg-cold",
+                    "min": 6,
+                    "max": 11
+                },
+                {
+                    "prop": "att",
+                    "min": 250,
+                    "max": 250
+                },
+                {
+                    "prop": "dmg%",
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 39,
-            "n": "Sigon's Wrap",
-            "c": "hbl",
-            "tc": "whit"
+            "n": "Call to Arms",
+            "types": [
+                "weap"
+            ],
+            "r": [
+                "r10",
+                "r06",
+                "r10",
+                "r23"
+            ],
+            "m": [
+                {
+                    "prop": "dmg%",
+                    "min": 77,
+                    "max": 77
+                },
+                {
+                    "prop": "ac",
+                    "min": 200,
+                    "max": 200
+                },
+                {
+                    "prop": "dex",
+                    "min": 15,
+                    "max": 15
+                },
+                {
+                    "prop": "thorns",
+                    "min": 21,
+                    "max": 21
+                },
+                {
+                    "prop": "att",
+                    "min": 200,
+                    "max": 200
+                }
+            ]
         },
         {
             "id": 40,
-            "n": "Sigon's Guard",
-            "c": "tow",
-            "tc": "whit"
+            "n": "Chains of Honor",
+            "types": [
+                "tors"
+            ],
+            "r": [
+                "r03",
+                "r11",
+                "r01",
+                "r09"
+            ],
+            "m": [
+                {
+                    "prop": "ac%",
+                    "min": 70,
+                    "max": 70
+                },
+                {
+                    "prop": "balance3",
+                    "min": 30,
+                    "max": 30
+                },
+                {
+                    "prop": "skilltab",
+                    "p": 11,
+                    "min": 2,
+                    "max": 2
+                },
+                {
+                    "prop": "hp",
+                    "min": 30,
+                    "max": 30
+                }
+            ]
         },
         {
             "id": 41,
-            "n": "Infernal Cranium",
-            "c": "cap",
-            "tc": "lyel"
+            "n": "Chance",
+            "types": [
+                "weap"
+            ],
+            "r": [
+                "r28",
+                "r08"
+            ],
+            "m": [
+                {
+                    "prop": "mag%",
+                    "min": 50,
+                    "max": 50
+                },
+                {
+                    "prop": "gold%",
+                    "min": 100,
+                    "max": 100
+                },
+                {
+                    "prop": "stupidity",
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "prop": "dmg%",
+                    "min": 42,
+                    "max": 42
+                }
+            ]
         },
         {
             "id": 42,
-            "n": "Infernal Torch",
-            "c": "gwn",
-            "tc": "lyel"
+            "n": "Chaos",
+            "types": [
+                "tors"
+            ],
+            "r": [
+                "r29",
+                "r09",
+                "r02",
+                "r13"
+            ],
+            "m": [
+                {
+                    "prop": "ac%",
+                    "min": 80,
+                    "max": 80
+                },
+                {
+                    "prop": "res-fire",
+                    "min": 30,
+                    "max": 30
+                },
+                {
+                    "prop": "str",
+                    "min": 15,
+                    "max": 15
+                },
+                {
+                    "prop": "gethit-skill",
+                    "p": 38,
+                    "min": 50,
+                    "max": 7
+                }
+            ]
         },
         {
             "id": 43,
-            "n": "Infernal Sign",
-            "c": "tbl",
-            "tc": "lyel"
+            "n": "Crescent Moon",
+            "types": [
+                "axe",
+                "swor",
+                "pole"
+            ],
+            "r": [
+                "r02",
+                "r15",
+                "r22"
+            ],
+            "m": [
+                {
+                    "prop": "dmg%",
+                    "min": 100,
+                    "max": 100
+                },
+                {
+                    "prop": "manasteal",
+                    "min": 7,
+                    "max": 7
+                },
+                {
+                    "prop": "swing3",
+                    "min": 30,
+                    "max": 30
+                },
+                {
+                    "prop": "att%",
+                    "min": 20,
+                    "max": 20
+                }
+            ]
         },
         {
             "id": 44,
-            "n": "Berserker's Headgear",
-            "c": "hlm",
-            "tc": "dred"
+            "n": "Darkness",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r07",
+                "r11",
+                "r25",
+                "r04",
+                "r10"
+            ],
+            "m": [
+                {
+                    "prop": "dmg%",
+                    "min": 120,
+                    "max": 120
+                },
+                {
+                    "prop": "lifesteal",
+                    "min": 3,
+                    "max": 3
+                },
+                {
+                    "prop": "stupidity",
+                    "min": 1,
+                    "max": 1
+                }
+            ]
         },
         {
             "id": 45,
-            "n": "Berserker's Hauberk",
-            "c": "spl",
-            "tc": "dred"
+            "n": "Daylight",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r11",
+                "r03",
+                "r31"
+            ],
+            "m": [
+                {
+                    "prop": "dmg%",
+                    "min": 120,
+                    "max": 120
+                },
+                {
+                    "prop": "light",
+                    "min": 3,
+                    "max": 3
+                },
+                {
+                    "prop": "manasteal",
+                    "min": 3,
+                    "max": 3
+                },
+                {
+                    "prop": "dmg-fire",
+                    "min": 33,
+                    "max": 99
+                }
+            ]
         },
         {
             "id": 46,
-            "n": "Berserker's Hatchet",
-            "c": "2ax",
-            "tc": "dred"
+            "n": "Death",
+            "types": [
+                "weap"
+            ],
+            "r": [
+                "r14",
+                "r20",
+                "r04",
+                "r07",
+                "r05"
+            ],
+            "m": [
+                {
+                    "prop": "deadly",
+                    "min": 33,
+                    "max": 33
+                },
+                {
+                    "prop": "dmg%",
+                    "min": 133,
+                    "max": 133
+                },
+                {
+                    "prop": "noheal",
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "prop": "dmg-pois",
+                    "p": 25,
+                    "min": 200,
+                    "max": 200
+                },
+                {
+                    "prop": "lifesteal",
+                    "min": 5,
+                    "max": 5
+                }
+            ]
         },
         {
             "id": 47,
-            "n": "Death's Hand",
-            "c": "lgl",
-            "tc": "lred"
+            "n": "Deception",
+            "types": [
+                "knif"
+            ],
+            "r": [
+                "r18",
+                "r14",
+                "r05"
+            ],
+            "m": [
+                {
+                    "prop": "dmg-pois",
+                    "p": 100,
+                    "min": 52,
+                    "max": 52
+                },
+                {
+                    "prop": "manasteal",
+                    "min": 10,
+                    "max": 10
+                },
+                {
+                    "prop": "ignore-ac",
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "prop": "dmg%",
+                    "min": 199,
+                    "max": 199
+                },
+                {
+                    "prop": "slow",
+                    "min": 50,
+                    "max": 50
+                }
+            ]
         },
         {
             "id": 48,
-            "n": "Death's Guard",
-            "c": "lbl",
-            "tc": "lred"
+            "n": "Delerium",
+            "types": [
+                "helm"
+            ],
+            "r": [
+                "r20",
+                "r09",
+                "r16"
+            ],
+            "m": [
+                {
+                    "prop": "ac%",
+                    "min": 77,
+                    "max": 77
+                },
+                {
+                    "prop": "res-cold",
+                    "min": 44,
+                    "max": 44
+                },
+                {
+                    "prop": "res-fire",
+                    "min": 55,
+                    "max": 55
+                },
+                {
+                    "prop": "res-pois",
+                    "min": 66,
+                    "max": 66
+                },
+                {
+                    "prop": "res-ltng",
+                    "min": 3,
+                    "max": 3
+                },
+                {
+                    "prop": "regen",
+                    "min": -3,
+                    "max": -3
+                }
+            ]
         },
         {
             "id": 49,
-            "n": "Death's Touch",
-            "c": "wsd",
-            "tc": "lred"
+            "n": "Desire",
+            "types": [
+                "helm"
+            ],
+            "r": [
+                "r28",
+                "r09",
+                "r06"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 50,
-            "n": "Angelic Sickle",
-            "c": "sbr",
-            "tc": "lgry"
+            "n": "Despair",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r21",
+                "r32",
+                "r17",
+                "r21",
+                "r09"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 51,
-            "n": "Angelic Mantle",
-            "c": "rng",
-            "tc": "lgry"
+            "n": "Destruction",
+            "types": [
+                "axe",
+                "club",
+                "hamm"
+            ],
+            "r": [
+                "r05",
+                "r08",
+                "r25",
+                "r11"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 52,
-            "n": "Angelic Halo",
-            "c": "rin",
-            "tc": "lgry"
+            "n": "Doom",
+            "types": [
+                "axe",
+                "club",
+                "hamm"
+            ],
+            "r": [
+                "r13",
+                "r30",
+                "r21",
+                "r06",
+                "r05",
+                "r10"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 53,
-            "n": "Angelic Wings",
-            "c": "amu",
-            "tc": "lgry"
+            "n": "Dragon",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r22",
+                "r04",
+                "r17",
+                "r05",
+                "r28"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 54,
-            "n": "Arctic Horn",
-            "c": "swb",
-            "tc": "lgld"
+            "n": "Dread",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r20",
+                "r01",
+                "r18",
+                "r15"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 55,
-            "n": "Arctic Furs",
-            "c": "qui",
-            "tc": "lgld"
+            "n": "Dream",
+            "types": [
+                "helm"
+            ],
+            "r": [
+                "r08",
+                "r05"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 56,
-            "n": "Arctic Binding",
-            "c": "vbl",
-            "tc": "lgld"
+            "n": "Duress",
+            "types": [
+                "tors"
+            ],
+            "r": [
+                "r13",
+                "r22",
+                "r10"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 57,
-            "n": "Arctic Mitts",
-            "c": "tgl",
-            "tc": "lgld"
+            "n": "Edge",
+            "types": [
+                "axe",
+                "swor",
+                "knif"
+            ],
+            "r": [
+                "r30",
+                "r09"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 58,
-            "n": "Arcanna's Sign",
-            "c": "amu",
-            "tc": "blac"
+            "n": "Elation",
+            "types": [
+                "helm"
+            ],
+            "r": [
+                "r04",
+                "r26",
+                "r01"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 59,
-            "n": "Arcanna's Deathwand",
-            "c": "wst",
-            "tc": "blac"
+            "n": "Enigma",
+            "types": [
+                "tors"
+            ],
+            "r": [
+                "r32",
+                "r30",
+                "r06"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 60,
-            "n": "Arcanna's Head",
-            "c": "skp",
-            "tc": "blac"
+            "n": "Enlightenment",
+            "types": [
+                "helm"
+            ],
+            "r": [
+                "r10",
+                "r02"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 61,
-            "n": "Arcanna's Flesh",
-            "c": "ltp",
-            "tc": "blac"
+            "n": "Envy",
+            "types": [
+                "helm"
+            ],
+            "r": [
+                "r18",
+                "r03"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 62,
-            "n": "Natalya's Totem",
-            "c": "xh9",
-            "tc": "dgry"
+            "n": "Eternity",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r21",
+                "r01",
+                "r07",
+                "r20",
+                "r30"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 63,
-            "n": "Natalya's Mark",
-            "c": "7qr",
-            "tc": "dgry"
+            "n": "Exile",
+            "types": [
+                "shld"
+            ],
+            "r": [
+                "r07",
+                "r04",
+                "r03",
+                "r10"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 64,
-            "n": "Natalya's Shadow",
-            "c": "ucl",
-            "tc": "dgry"
+            "n": "Faith",
+            "types": [
+                "shld"
+            ],
+            "r": [
+                "r19",
+                "r32",
+                "r22",
+                "r08"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 65,
-            "n": "Natalya's Soul",
-            "c": "xmb",
-            "tc": "dgry"
+            "n": "Famine",
+            "types": [
+                "axe",
+                "club"
+            ],
+            "r": [
+                "r02",
+                "r26",
+                "r02",
+                "r03",
+                "r20"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 66,
-            "n": "Aldur's Stony Gaze",
-            "c": "dr8",
-            "tc": "oran"
+            "n": "Flame",
+            "types": [
+                "swor"
+            ],
+            "r": [
+                "r21",
+                "r05",
+                "r07"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 67,
-            "n": "Aldur's Deception",
-            "c": "uul",
-            "tc": "oran"
+            "n": "Fortitude",
+            "types": [
+                "club",
+                "hamm",
+                "mace",
+                "scep"
+            ],
+            "r": [
+                "r13",
+                "r05",
+                "r03"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 68,
-            "n": "Aldur's Rhythm",
-            "c": "9mt",
-            "tc": "oran"
+            "n": "Fortune",
+            "types": [
+                "knif"
+            ],
+            "r": [
+                "r05",
+                "r11",
+                "r29",
+                "r15",
+                "r26"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 69,
-            "n": "Aldur's Advance",
-            "c": "xtb",
-            "tc": "oran"
+            "n": "Friendship",
+            "types": [
+                "shld"
+            ],
+            "r": [
+                "r13",
+                "r07"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 70,
-            "n": "Immortal King's Will",
-            "c": "ba5",
-            "tc": "lgry"
+            "n": "Fury",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r31",
+                "r17",
+                "r24"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 71,
-            "n": "Immortal King's Soul Cage",
-            "c": "uar",
-            "tc": "lgry"
+            "n": "Gloom",
+            "types": [
+                "axe"
+            ],
+            "r": [
+                "r25",
+                "r06",
+                "r13"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 72,
-            "n": "Immortal King's Detail",
-            "c": "zhb",
-            "tc": "lgry"
+            "n": "Glory",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r23",
+                "r19",
+                "r07",
+                "r02"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 73,
-            "n": "Immortal King's Forge",
-            "c": "xhg",
-            "tc": "lgry"
+            "n": "Grief",
+            "types": [
+                "miss"
+            ],
+            "r": [
+                "r17",
+                "r24",
+                "r02",
+                "r02"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 74,
-            "n": "Immortal King's Pillar",
-            "c": "xhb",
-            "tc": "lgry"
+            "n": "Hand of Justice",
+            "types": [
+                "mace",
+                "scep"
+            ],
+            "r": [
+                "r18",
+                "r02",
+                "r33",
+                "r29",
+                "r22",
+                "r16"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 75,
-            "n": "Immortal King's Stone Crusher",
-            "c": "7m7",
-            "tc": "lgry"
+            "n": "Harmony",
+            "types": [
+                "tors"
+            ],
+            "r": [
+                "r12",
+                "r33",
+                "r15"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 76,
-            "n": "Tal Rasha's Fine-Spun Cloth",
-            "c": "zmb",
-            "tc": "dpur"
+            "n": "Hatred",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r08",
+                "r10",
+                "r21",
+                "r16",
+                "r07"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 77,
-            "n": "Tal Rasha's Adjudication",
-            "c": "amu",
-            "tc": "dpur"
+            "n": "Heart of the Oak",
+            "types": [
+                "staf",
+                "club"
+            ],
+            "r": [
+                "r01",
+                "r04",
+                "r05",
+                "r15"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 78,
-            "n": "Tal Rasha's Lidless Eye",
-            "c": "oba",
-            "tc": "dpur"
+            "n": "Heaven's Will",
+            "types": [
+                "scep"
+            ],
+            "r": [
+                "r23",
+                "r15",
+                "r18",
+                "r13",
+                "r11",
+                "r18"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 79,
-            "n": "Tal Rasha's Guardianship",
-            "c": "uth",
-            "tc": "dpur"
+            "n": "Holy Tears",
+            "types": [
+                "scep"
+            ],
+            "r": [
+                "r24",
+                "r08",
+                "r07",
+                "r25"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 80,
-            "n": "Tal Rasha's Horadric Crest",
-            "c": "xsk",
-            "tc": "dpur"
+            "n": "Holy Thunder",
+            "types": [
+                "scep"
+            ],
+            "r": [
+                "r07",
+                "r01",
+                "r02",
+                "r05"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 81,
-            "n": "Griswold's Valor",
-            "c": "urn",
-            "tc": "dgld"
+            "n": "Honor",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r06",
+                "r09",
+                "r12",
+                "r08",
+                "r08"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 82,
-            "n": "Griswold's Heart",
-            "c": "xar",
-            "tc": "dgld"
+            "n": "Revenge",
+            "types": [
+                "staf"
+            ],
+            "r": [
+                "r04",
+                "r07",
+                "r03",
+                "r08"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 83,
-            "n": "Griswold's Redemption",
-            "c": "7ws",
-            "tc": "dgld"
+            "n": "Humility",
+            "types": [
+                "helm"
+            ],
+            "r": [
+                "r06",
+                "r13",
+                "r01"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 84,
-            "n": "Griswold's Honor",
-            "c": "paf",
-            "tc": "dgld"
+            "n": "Hunger",
+            "types": [
+                "swor",
+                "knif",
+                "axe",
+                "spea"
+            ],
+            "r": [
+                "r08",
+                "r15"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 85,
-            "n": "Trang-Oul's Guise",
-            "c": "uh9",
-            "tc": "dgld"
+            "n": "Ice",
+            "types": [
+                "swor",
+                "knif",
+                "axe",
+                "spea"
+            ],
+            "r": [
+                "r07",
+                "r15",
+                "r16",
+                "r04"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 86,
-            "n": "Trang-Oul's Scales",
-            "c": "xul",
-            "tc": "dyel"
+            "n": "Infinity",
+            "types": [
+                "staf"
+            ],
+            "r": [
+                "r01",
+                "r01",
+                "r12",
+                "r07"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 87,
-            "n": "Trang-Oul's Wing",
-            "c": "ne9",
-            "tc": "dyel"
+            "n": "Innocence",
+            "types": [
+                "scep"
+            ],
+            "r": [
+                "r06",
+                "r22"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 88,
-            "n": "Trang-Oul's Claws",
-            "c": "xmg",
-            "tc": "dyel"
+            "n": "Insight",
+            "types": [
+                "helm"
+            ],
+            "r": [
+                "r01",
+                "r04",
+                "r19"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 89,
-            "n": "Trang-Oul's Girth",
-            "c": "utc",
-            "tc": "dyel"
+            "n": "Jealousy",
+            "types": [
+                "weap"
+            ],
+            "r": [
+                "r15",
+                "r16",
+                "r09",
+                "r20"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 90,
-            "n": "M'avina's True Sight",
-            "c": "ci3",
-            "tc": "whit"
+            "n": "Judgement",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r20",
+                "r09",
+                "r07",
+                "r01",
+                "r11"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 91,
-            "n": "M'avina's Embrace",
-            "c": "uld",
-            "tc": "whit"
+            "n": "King's Grace",
+            "types": [
+                "swor",
+                "scep"
+            ],
+            "r": [
+                "r04",
+                "r02",
+                "r05"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 92,
-            "n": "M'avina's Icy Clutch",
-            "c": "xtg",
-            "tc": "whit"
+            "n": "Kingslayer",
+            "types": [
+                "swor",
+                "axe"
+            ],
+            "r": [
+                "r23",
+                "r09",
+                "r25"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 93,
-            "n": "M'avina's Tenet",
-            "c": "zvb",
-            "tc": "whit"
+            "n": "Knight's Vigil",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r08",
+                "r04",
+                "r05",
+                "r17",
+                "r01"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 94,
-            "n": "M'avina's Caster",
-            "c": "amc",
-            "tc": "whit"
+            "n": "Knowledge",
+            "types": [
+                "helm"
+            ],
+            "r": [
+                "r09",
+                "r20"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 95,
-            "n": "Telling of Beads",
-            "c": "amu",
-            "tc": "lblu"
+            "n": "Last Wish",
+            "types": [
+                "shld"
+            ],
+            "r": [
+                "r12",
+                "r10",
+                "r08",
+                "r06"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 96,
-            "n": "Laying of Hands",
-            "c": "ulg",
-            "tc": "lblu"
+            "n": "Law",
+            "types": [
+                "shld"
+            ],
+            "r": [
+                "r22",
+                "r08",
+                "r19",
+                "r01"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 97,
-            "n": "Rite of Passage",
-            "c": "xlb",
-            "tc": "lblu"
+            "n": "Lawbringer",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r22",
+                "r20",
+                "r30"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 98,
-            "n": "Dark Adherent",
-            "c": "uui",
-            "tc": "lblu"
+            "n": "Leaf",
+            "types": [
+                "staf"
+            ],
+            "r": [
+                "r02",
+                "r06"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 99,
-            "n": "Credendum",
-            "c": "umc",
-            "tc": "lblu"
+            "n": "Lightning",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r16",
+                "r15",
+                "r12",
+                "r01"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 100,
-            "n": "Dangoon's Teaching",
-            "c": "7ma"
+            "n": "Lionheart",
+            "types": [
+                "tors"
+            ],
+            "r": [
+                "r09",
+                "r17",
+                "r16"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 101,
-            "n": "Taebaek's Glory",
-            "c": "uts"
+            "n": "Love",
+            "types": [
+                "shld"
+            ],
+            "r": [
+                "r25",
+                "r19",
+                "r25",
+                "r29"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 102,
-            "n": "Haemosu's Adamant",
-            "c": "xrs"
+            "n": "Loyalty",
+            "types": [
+                "shld"
+            ],
+            "r": [
+                "r04",
+                "r08",
+                "r22"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 103,
-            "n": "Ondal's Almighty",
-            "c": "uhm"
+            "n": "Lust",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r12",
+                "r01",
+                "r09",
+                "r01",
+                "r28",
+                "r02"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 104,
-            "n": "Guillaume's Face",
-            "c": "xhm",
-            "tc": "lgry"
+            "n": "Madness",
+            "types": [
+                "helm"
+            ],
+            "r": [
+                "r25",
+                "r27"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 105,
-            "n": "Wilhelm's Pride",
-            "c": "ztb",
-            "tc": "lgry"
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r03",
+                "r01",
+                "r04"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 106,
-            "n": "Magnus' Skin",
-            "c": "xvg",
-            "tc": "lgry"
+            "n": "Malice",
+            "types": [
+                "miss"
+            ],
+            "r": [
+                "r10",
+                "r16",
+                "r05"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 107,
-            "n": "Whitstan's Guard",
-            "c": "xml",
-            "tc": "lgry"
+            "n": "Melody",
+            "types": [
+                "staf"
+            ],
+            "r": [
+                "r31",
+                "r09",
+                "r04",
+                "r01"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 108,
-            "n": "Hwanin's Splendor",
-            "c": "xrn"
+            "n": "Memory",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r11",
+                "r08"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 109,
-            "n": "Hwanin's Refuge",
-            "c": "xcl"
+            "n": "Mist",
+            "types": [
+                "shld"
+            ],
+            "r": [
+                "r01",
+                "r26",
+                "r03"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 110,
-            "n": "Hwanin's Blessing",
-            "c": "mbl"
+            "n": "Morning",
+            "types": [
+                "staf"
+            ],
+            "r": [
+                "r12",
+                "r05",
+                "r20"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 111,
-            "n": "Hwanin's Justice",
-            "c": "9vo"
+            "n": "Mystery",
+            "types": [
+                "staf"
+            ],
+            "r": [
+                "r27",
+                "r33",
+                "r15",
+                "r06"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 112,
-            "n": "Sazabi's Cobalt Redeemer",
-            "c": "7ls",
-            "tc": "dblu"
+            "n": "Myth",
+            "types": [
+                "helm"
+            ],
+            "r": [
+                "r01",
+                "r03"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 113,
-            "n": "Sazabi's Ghost Liberator",
-            "c": "upl",
-            "tc": "dblu"
+            "n": "Nadir",
+            "types": [
+                "club"
+            ],
+            "r": [
+                "r22",
+                "r05",
+                "r22",
+                "r08"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 114,
-            "n": "Sazabi's Mental Sheath",
-            "c": "xhl",
-            "tc": "dblu"
+            "n": "Nature's Kingdom",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r08",
+                "r06",
+                "r25",
+                "r11"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 115,
-            "n": "Bul-Kathos' Sacred Charge",
-            "c": "7gd",
-            "tc": "dgrn"
+            "n": "Night",
+            "types": [
+                "scep"
+            ],
+            "r": [
+                "r16",
+                "r01",
+                "r04",
+                "r09"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 116,
-            "n": "Bul-Kathos' Tribal Guardian",
-            "c": "7wd",
-            "tc": "dgrn"
+            "n": "Oath",
+            "types": [
+                "tors"
+            ],
+            "r": [
+                "r16",
+                "r17"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 117,
-            "n": "Cow King's Horns",
-            "c": "xap"
+            "n": "Obedience",
+            "types": [
+                "axe",
+                "hamm",
+                "mace"
+            ],
+            "r": [
+                "r31",
+                "r33",
+                "r01",
+                "r16",
+                "r15",
+                "r29"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 118,
-            "n": "Cow King's Hide",
-            "c": "stu"
+            "n": "Oblivion",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r01",
+                "r12",
+                "r06",
+                "r07"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 119,
-            "n": "Cow King's Hooves",
-            "c": "vbt"
+            "n": "Obsession",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r23",
+                "r03",
+                "r16"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 120,
-            "n": "Naj's Puzzler",
-            "c": "6cs"
+            "n": "Passion",
+            "types": [
+                "helm"
+            ],
+            "r": [
+                "r11",
+                "r12"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 121,
-            "n": "Naj's Light Plate",
-            "c": "ult"
+            "n": "Patience",
+            "types": [
+                "weap"
+            ],
+            "r": [
+                "r07",
+                "r09",
+                "r07",
+                "r03",
+                "r02"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 122,
-            "n": "Naj's Circlet",
-            "c": "ci0"
+            "n": "Patter",
+            "types": [
+                "shld"
+            ],
+            "r": [
+                "r22",
+                "r06",
+                "r02",
+                "r20"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 123,
-            "n": "Sander's Paragon",
-            "c": "cap",
-            "tc": "lpur"
+            "n": "Peace",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r01",
+                "r06",
+                "r01",
+                "r09",
+                "r05",
+                "r01"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 124,
-            "n": "Sander's Riprap",
-            "c": "vbt",
-            "tc": "lpur"
+            "n": "Voice of Reason",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r10",
+                "r15",
+                "r06"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 125,
-            "n": "Sander's Taboo",
-            "c": "vgl",
-            "tc": "lpur"
+            "n": "Penitence",
+            "types": [
+                "weap"
+            ],
+            "r": [
+                "r19",
+                "r03"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 126,
-            "n": "Sander's Superstition",
-            "c": "bwn",
-            "tc": "lpur"
-        }
-    ],
-    "unq_items": [
-        {
-            "id": 0,
-            "n": "The Gnasher",
-            "i": "invhaxu",
-            "c": "hax"
-        },
-        {
-            "id": 1,
-            "n": "Deathspade",
-            "i": "invaxeu",
-            "c": "axe"
-        },
-        {
-            "id": 2,
-            "n": "Bladebone",
-            "c": "2ax",
-            "tc": "lgry"
-        },
-        {
-            "id": 3,
-            "n": "Skull Splitter",
-            "i": "invmpiu",
-            "c": "mpi"
-        },
-        {
-            "id": 4,
-            "n": "Rakescar",
-            "c": "wax",
-            "tc": "dgry"
-        },
-        {
-            "id": 5,
-            "n": "Axe of Fechmar",
-            "c": "lax",
-            "tc": "lpur"
-        },
-        {
-            "id": 6,
-            "n": "Goreshovel",
-            "c": "bax",
-            "tc": "dpur"
-        },
-        {
-            "id": 7,
-            "n": "The Chieftain",
-            "i": "invbtxu",
-            "c": "btx"
-        },
-        {
-            "id": 8,
-            "n": "Brainhew",
-            "i": "invgaxu",
-            "c": "gax"
-        },
-        {
-            "id": 9,
-            "n": "Humongous",
-            "c": "gix",
-            "tc": "blac"
-        },
-        {
-            "id": 10,
-            "n": "Torch of Iro",
-            "i": "invwndu",
-            "c": "wnd"
-        },
-        {
-            "id": 11,
-            "n": "Maelstrom",
-            "c": "ywn",
-            "tc": "dblu"
-        },
-        {
-            "id": 12,
-            "n": "Gravenspine",
-            "i": "invbwnu",
-            "c": "bwn"
-        },
-        {
-            "id": 13,
-            "n": "Ume's Lament",
-            "c": "gwn",
-            "tc": "lblu"
-        },
-        {
-            "id": 14,
-            "n": "Felloak",
-            "i": "invclbu",
-            "c": "clb"
-        },
-        {
-            "id": 15,
-            "n": "Knell Striker",
-            "c": "scp",
-            "tc": "dred"
-        },
-        {
-            "id": 16,
-            "n": "Rusthandle",
-            "c": "gsc",
-            "tc": "lgld"
-        },
-        {
-            "id": 17,
-            "n": "Stormeye",
-            "c": "wsp",
-            "tc": "cred"
-        },
-        {
-            "id": 18,
-            "n": "Stoutnail",
-            "i": "invspcu",
-            "c": "spc"
-        },
-        {
-            "id": 19,
-            "n": "Crushflange",
-            "c": "mac",
-            "tc": "blac"
-        },
-        {
-            "id": 20,
-            "n": "Bloodrise",
-            "i": "invmstu",
-            "c": "mst"
-        },
-        {
-            "id": 21,
-            "n": "The General's Tan Do Li Ga",
-            "c": "fla",
-            "tc": "dblu"
-        },
-        {
-            "id": 22,
-            "n": "Ironstone",
-            "c": "whm",
-            "tc": "cblu"
-        },
-        {
-            "id": 23,
-            "n": "Bonesnap",
-            "i": "invmauu",
-            "c": "mau"
-        },
-        {
-            "id": 24,
-            "n": "Steeldriver",
-            "i": "invgma",
-            "c": "gma",
-            "tc": "cgrn"
-        },
-        {
-            "id": 25,
-            "n": "Rixot's Keen",
-            "c": "ssd",
-            "tc": "blac"
-        },
-        {
-            "id": 26,
-            "n": "Blood Crescent",
-            "i": "invscmu",
-            "c": "scm"
-        },
-        {
-            "id": 27,
-            "n": "Skewer of Krintiz",
-            "i": "inv9sbu",
-            "c": "sbr"
-        },
-        {
-            "id": 28,
-            "n": "Gleamscythe",
-            "i": "invflcu",
-            "c": "flc"
-        },
-        {
-            "id": 29,
-            "n": "Azurewrath",
-            "i": "invcrsu",
-            "c": "crs"
-        },
-        {
-            "id": 30,
-            "n": "Griswold's Edge",
-            "i": "invbsdu",
-            "c": "bsd"
-        },
-        {
-            "id": 31,
-            "n": "Hellplague",
-            "i": "invlsdu",
-            "c": "lsd"
-        },
-        {
-            "id": 32,
-            "n": "Culwen's Point",
-            "c": "wsd",
-            "tc": "whit"
-        },
-        {
-            "id": 33,
-            "n": "Shadowfang",
-            "i": "inv2hsu",
-            "c": "2hs"
-        },
-        {
-            "id": 34,
-            "n": "Soulflay",
-            "c": "clm",
-            "tc": "dgrn"
-        },
-        {
-            "id": 35,
-            "n": "Kinemil's Awl",
-            "i": "invgisu",
-            "c": "gis"
-        },
-        {
-            "id": 36,
-            "n": "Blacktongue",
-            "i": "invbswu",
-            "c": "bsw"
-        },
-        {
-            "id": 37,
-            "n": "Ripsaw",
-            "c": "flb",
-            "tc": "cblu"
-        },
-        {
-            "id": 38,
-            "n": "The Patriarch",
-            "i": "invgsdu",
-            "c": "gsd"
-        },
-        {
-            "id": 39,
-            "n": "Gull",
-            "c": "dgr",
-            "tc": "lgry"
-        },
-        {
-            "id": 40,
-            "n": "The Diggler",
-            "c": "dir",
-            "tc": "dgry"
-        },
-        {
-            "id": 41,
-            "n": "The Jade Tan Do",
-            "i": "invkrsu",
-            "c": "kri"
-        },
-        {
-            "id": 42,
-            "n": "Spectral Shard",
-            "c": "bld",
-            "tc": "dblu"
-        },
-        {
-            "id": 43,
-            "n": "The Dragon Chang",
-            "c": "spr",
-            "tc": "dpur"
-        },
-        {
-            "id": 44,
-            "n": "Razortine",
-            "i": "invtriu",
-            "c": "tri"
-        },
-        {
-            "id": 45,
-            "n": "Bloodthief",
-            "c": "brn",
-            "tc": "whit"
-        },
-        {
-            "id": 46,
-            "n": "Lance of Yaggai",
-            "c": "spt",
-            "tc": "lred"
-        },
-        {
-            "id": 47,
-            "n": "The Tannr Gorerod",
-            "c": "pik",
-            "tc": "lgry"
-        },
-        {
-            "id": 48,
-            "n": "Dimoak's Hew",
-            "c": "bar",
-            "tc": "blac"
-        },
-        {
-            "id": 49,
-            "n": "Steelgoad",
-            "c": "vou",
-            "tc": "cgrn"
-        },
-        {
-            "id": 50,
-            "n": "Soul Harvest",
-            "i": "invscyu",
-            "c": "scy"
-        },
-        {
-            "id": 51,
-            "n": "The Battlebranch",
-            "c": "pax",
-            "tc": "lblu"
-        },
-        {
-            "id": 52,
-            "n": "Woestave",
-            "c": "hal",
-            "tc": "dblu"
-        },
-        {
-            "id": 53,
-            "n": "The Grim Reaper",
-            "c": "wsc",
-            "tc": "lpur"
-        },
-        {
-            "id": 54,
-            "n": "Bane Ash",
-            "c": "sst",
-            "tc": "lgrn"
-        },
-        {
-            "id": 55,
-            "n": "Serpent Lord",
-            "c": "lst",
-            "tc": "cgrn"
-        },
-        {
-            "id": 56,
-            "n": "Spire of Lazarus",
-            "i": "invcstu",
-            "c": "cst"
-        },
-        {
-            "id": 57,
-            "n": "The Salamander",
-            "c": "bst",
-            "tc": "dred"
-        },
-        {
-            "id": 58,
-            "n": "The Iron Jang Bong",
-            "c": "wst",
-            "tc": "dyel"
-        },
-        {
-            "id": 59,
-            "n": "Pluckeye",
-            "c": "sbw",
-            "tc": "cblu"
-        },
-        {
-            "id": 60,
-            "n": "Witherstring",
-            "c": "hbw",
-            "tc": "lred"
-        },
-        {
-            "id": 61,
-            "n": "Raven Claw",
-            "c": "lbw",
-            "tc": "dred"
-        },
-        {
-            "id": 62,
-            "n": "Rogue's Bow",
-            "i": "invcbwu",
-            "c": "cbw"
-        },
-        {
-            "id": 63,
-            "n": "Stormstrike",
-            "i": "invsbbu",
-            "c": "sbb"
-        },
-        {
-            "id": 64,
-            "n": "Wizendraw",
-            "c": "lbb",
-            "tc": "dgrn"
-        },
-        {
-            "id": 65,
-            "n": "Hellclap",
-            "i": "invswbu",
-            "c": "swb"
-        },
-        {
-            "id": 66,
-            "n": "Blastbark",
-            "c": "lwb",
-            "tc": "lyel"
-        },
-        {
-            "id": 67,
-            "n": "Leadcrow",
-            "i": "invlxbu",
-            "c": "lxb"
-        },
-        {
-            "id": 68,
-            "n": "Ichorsting",
-            "i": "invmxbu",
-            "c": "mxb"
-        },
-        {
-            "id": 69,
-            "n": "Hellcast",
-            "i": "invhxbu",
-            "c": "hxb"
-        },
-        {
-            "id": 70,
-            "n": "Doomslinger",
-            "i": "invrxbu",
-            "c": "rxb"
-        },
-        {
-            "id": 71,
-            "n": "Biggin's Bonnet",
-            "i": "invcapu",
-            "c": "cap"
-        },
-        {
-            "id": 72,
-            "n": "Tarnhelm",
-            "c": "skp",
-            "tc": "oran"
-        },
-        {
-            "id": 73,
-            "n": "Coif of Glory",
-            "i": "invhlmu",
-            "c": "hlm"
-        },
-        {
-            "id": 74,
-            "n": "Duskdeep",
-            "i": "invfhlu",
-            "c": "fhl"
-        },
-        {
-            "id": 75,
-            "n": "Wormskull",
-            "i": "invbhmu",
-            "c": "bhm"
-        },
-        {
-            "id": 76,
-            "n": "Howltusk",
-            "c": "ghm",
-            "tc": "dgry"
-        },
-        {
-            "id": 77,
-            "n": "Undead Crown",
-            "c": "crn",
-            "tc": "blac"
-        },
-        {
-            "id": 78,
-            "n": "The Face of Horror",
-            "c": "msk",
-            "tc": "lblu"
-        },
-        {
-            "id": 79,
-            "n": "Greyform",
-            "c": "qui",
-            "tc": "lgry"
-        },
-        {
-            "id": 80,
-            "n": "Blinkbat's Form",
-            "c": "lea",
-            "tc": "dred"
-        },
-        {
-            "id": 81,
-            "n": "The Centurion",
-            "c": "hla",
-            "tc": "cred"
-        },
-        {
-            "id": 82,
-            "n": "Twitchthroe",
-            "c": "stu",
-            "tc": "lgrn"
-        },
-        {
-            "id": 83,
-            "n": "Darkglow",
-            "c": "rng",
-            "tc": "dgrn"
-        },
-        {
-            "id": 84,
-            "n": "Hawkmail",
-            "c": "scl",
-            "tc": "cgrn"
-        },
-        {
-            "id": 85,
-            "n": "Sparking Mail",
-            "c": "chn",
-            "tc": "lyel"
-        },
-        {
-            "id": 86,
-            "n": "Venom Ward",
-            "c": "brs",
-            "tc": "dyel"
-        },
-        {
-            "id": 87,
-            "n": "Iceblink",
-            "c": "spl",
-            "tc": "lgld"
-        },
-        {
-            "id": 88,
-            "n": "Boneflesh",
-            "c": "plt",
-            "tc": "dgld"
-        },
-        {
-            "id": 89,
-            "n": "Rockfleece",
-            "c": "fld",
-            "tc": "dgry"
-        },
-        {
-            "id": 90,
-            "n": "Rattlecage",
-            "c": "gth",
-            "tc": "dpur"
-        },
-        {
-            "id": 91,
-            "n": "Goldskin",
-            "i": "invfulu",
-            "c": "ful"
-        },
-        {
-            "id": 92,
-            "n": "Silks of the Victor",
-            "i": "invaaru",
-            "c": "aar"
-        },
-        {
-            "id": 93,
-            "n": "Heavenly Garb",
-            "c": "ltp",
-            "tc": "cblu"
-        },
-        {
-            "id": 94,
-            "n": "Pelta Lunata",
-            "i": "invbucu",
-            "c": "buc"
-        },
-        {
-            "id": 95,
-            "n": "Umbral Disk",
-            "i": "invsmlu",
-            "c": "sml"
-        },
-        {
-            "id": 96,
-            "n": "Stormguild",
-            "i": "invlrgu",
-            "c": "lrg"
-        },
-        {
-            "id": 97,
-            "n": "Wall of the Eyeless",
-            "i": "invbshu",
-            "c": "bsh"
-        },
-        {
-            "id": 98,
-            "n": "Swordback Hold",
-            "i": "invspku",
-            "c": "spk"
-        },
-        {
-            "id": 99,
-            "n": "Steelclash",
-            "i": "invkitu",
-            "c": "kit"
-        },
-        {
-            "id": 100,
-            "n": "Bverrit Keep",
-            "i": "invtowu",
-            "c": "tow"
-        },
-        {
-            "id": 101,
-            "n": "The Ward",
-            "i": "invgtsu",
-            "c": "gts"
-        },
-        {
-            "id": 102,
-            "n": "The Hand of Broc",
-            "c": "lgl",
-            "tc": "cblu"
-        },
-        {
-            "id": 103,
-            "n": "Bloodfist",
-            "c": "vgl",
-            "tc": "oran"
-        },
-        {
-            "id": 104,
-            "n": "Chance Guards",
-            "c": "mgl",
-            "tc": "lred"
-        },
-        {
-            "id": 105,
-            "n": "Magefist",
-            "c": "tgl",
-            "tc": "lgry"
-        },
-        {
-            "id": 106,
-            "n": "Frostburn",
-            "c": "hgl",
-            "tc": "dred"
-        },
-        {
-            "id": 107,
-            "n": "Hotspur",
-            "c": "lbt",
-            "tc": "cred"
-        },
-        {
-            "id": 108,
-            "n": "Gorefoot",
-            "c": "vbt",
-            "tc": "dblu"
-        },
-        {
-            "id": 109,
-            "n": "Treads of Cthon",
-            "c": "mbt",
-            "tc": "lgrn"
-        },
-        {
-            "id": 110,
-            "n": "Goblin Toe",
-            "c": "tbt",
-            "tc": "dgry"
-        },
-        {
-            "id": 111,
-            "n": "Tearhaunch",
-            "c": "hbt",
-            "tc": "dgrn"
-        },
-        {
-            "id": 112,
-            "n": "Lenymo",
-            "c": "lbl",
-            "tc": "cgrn"
-        },
-        {
-            "id": 113,
-            "n": "Snakecord",
-            "c": "vbl",
-            "tc": "blac"
-        },
-        {
-            "id": 114,
-            "n": "Nightsmoke",
-            "c": "mbl",
-            "tc": "lyel"
-        },
-        {
-            "id": 115,
-            "n": "Goldwrap",
-            "c": "tbl",
-            "tc": "lblu"
-        },
-        {
-            "id": 116,
-            "n": "Bladebuckle",
-            "c": "hbl",
-            "tc": "dyel"
-        },
-        {
-            "id": 117,
-            "n": "Nokozan Relic",
-            "c": "amu"
-        },
-        {
-            "id": 118,
-            "n": "The Eye of Etlich",
-            "c": "amu"
-        },
-        {
-            "id": 119,
-            "n": "The Mahim-Oak Curio",
-            "c": "amu"
-        },
-        {
-            "id": 120,
-            "n": "Nagelring",
-            "c": "rin"
-        },
-        {
-            "id": 121,
-            "n": "Manald Heal",
-            "c": "rin"
-        },
-        {
-            "id": 122,
-            "n": "The Stone of Jordan",
-            "c": "rin"
-        },
-        {
-            "id": 123,
-            "n": "Amulet of the Viper",
-            "c": "vip"
-        },
-        {
-            "id": 124,
-            "n": "Staff of Kings",
-            "c": "msf"
-        },
-        {
-            "id": 125,
-            "n": "Horadric Staff",
-            "c": "hst"
-        },
-        {
-            "id": 126,
-            "n": "Hell Forge Hammer",
-            "c": "hfh"
+            "n": "Peril",
+            "types": [
+                "weap"
+            ],
+            "r": [
+                "r03",
+                "r18",
+                "r03",
+                "r12"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 127,
-            "n": "Khalim's Flail",
-            "c": "qf1"
+            "n": "Pestilence",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r11",
+                "r29",
+                "r09",
+                "r15"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 128,
-            "n": "Khalim's Will",
-            "c": "qf2"
+            "n": "Phoenix",
+            "types": [
+                "scep"
+            ],
+            "r": [
+                "r01",
+                "r30",
+                "r05"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 129,
-            "n": "Coldkill",
-            "i": "invhaxu",
-            "c": "9ha",
-            "tc": "cblu"
+            "n": "Piety",
+            "types": [
+                "scep"
+            ],
+            "r": [
+                "r21",
+                "r20",
+                "r06",
+                "r07",
+                "r06"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 130,
-            "n": "Butcher's Pupil",
-            "i": "invaxeu",
-            "c": "9ax",
-            "tc": "cblu"
+            "n": "Pillar of Faith",
+            "types": [
+                "knif",
+                "swor",
+                "spea"
+            ],
+            "r": [
+                "r21",
+                "r13"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 131,
-            "n": "Islestrike",
-            "c": "92a"
+            "n": "Plague",
+            "types": [
+                "scep",
+                "mace"
+            ],
+            "r": [
+                "r26",
+                "r05"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 132,
-            "n": "Pompeii's Wrath",
-            "i": "invmpiu",
-            "c": "9mp",
-            "tc": "cred"
+            "n": "Praise",
+            "types": [
+                "scep"
+            ],
+            "r": [
+                "r12",
+                "r05",
+                "r13",
+                "r03"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 133,
-            "n": "Guardian Naga",
-            "c": "9wa"
+            "n": "Prayer",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r14",
+                "r19",
+                "r05"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 134,
-            "n": "Warlord's Trust",
-            "c": "9la",
-            "tc": "whit"
+            "n": "Pride",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r33",
+                "r04",
+                "r23"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 135,
-            "n": "Spellsteel",
-            "c": "9ba",
-            "tc": "whit"
+            "n": "Principle",
+            "types": [
+                "weap"
+            ],
+            "r": [
+                "r13",
+                "r08"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 136,
-            "n": "Stormrider",
-            "i": "inv9btu",
-            "c": "9bt",
-            "tc": "lred"
+            "n": "Prowess in Battle",
+            "types": [
+                "tors"
+            ],
+            "r": [
+                "r23",
+                "r03"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 137,
-            "n": "Boneslayer Blade",
-            "i": "invgaxu",
-            "c": "9ga"
+            "n": "Prudence",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r02",
+                "r04",
+                "r08",
+                "r23"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 138,
-            "n": "The Minotaur",
-            "i": "inv9giu",
-            "c": "9gi"
+            "n": "Punishment",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r03",
+                "r11",
+                "r27",
+                "r09",
+                "r18"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 139,
-            "n": "Suicide Branch",
-            "c": "9wn"
+            "n": "Purity",
+            "types": [
+                "staf"
+            ],
+            "r": [
+                "r12",
+                "r01",
+                "r06"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 140,
-            "n": "Carin Shard",
-            "c": "9yw",
-            "tc": "cblu"
+            "n": "Question",
+            "types": [
+                "helm"
+            ],
+            "r": [
+                "r05",
+                "r03",
+                "r07"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 141,
-            "n": "Arm of King Leoric",
-            "i": "invbwnu",
-            "c": "9bw"
+            "n": "Radiance",
+            "types": [
+                "club"
+            ],
+            "r": [
+                "r32",
+                "r06"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 142,
-            "n": "Blackhand Key",
-            "i": "inv9gwu",
-            "c": "9gw",
-            "tc": "blac"
+            "n": "Rain",
+            "types": [
+                "helm"
+            ],
+            "r": [
+                "r11",
+                "r26",
+                "r20"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 143,
-            "n": "Dark Clan Crusher",
-            "i": "invclbu",
-            "c": "9cl",
-            "tc": "dgld"
+            "n": "Reason",
+            "types": [
+                "weap"
+            ],
+            "r": [
+                "r13",
+                "r09",
+                "r16"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 144,
-            "n": "Zakarum's Hand",
-            "c": "9sc",
-            "tc": "lpur"
+            "n": "Red",
+            "types": [
+                "shld"
+            ],
+            "r": [
+                "r09",
+                "r12"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 145,
-            "n": "The Fetid Sprinkler",
-            "c": "9qs"
+            "n": "Rhyme",
+            "types": [
+                "axe"
+            ],
+            "r": [
+                "r02",
+                "r03",
+                "r09",
+                "r02",
+                "r18",
+                "r06"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 146,
-            "n": "Hand of Blessed Light",
-            "c": "9ws"
+            "n": "Rift",
+            "types": [
+                "shld"
+            ],
+            "r": [
+                "r18",
+                "r03",
+                "r08",
+                "r10"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 147,
-            "n": "Fleshrender",
-            "i": "invspcu",
-            "c": "9sp"
+            "n": "Sanctuary",
+            "types": [
+                "club",
+                "mace",
+                "scep"
+            ],
+            "r": [
+                "r06",
+                "r19"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 148,
-            "n": "Sureshrill Frost",
-            "c": "9ma"
+            "n": "Serendipity",
+            "types": [
+                "h2h"
+            ],
+            "r": [
+                "r28",
+                "r06",
+                "r08",
+                "r10"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 149,
-            "n": "Moonfall",
-            "i": "invmstu",
-            "c": "9mt"
+            "n": "Shadow",
+            "types": [
+                "helm"
+            ],
+            "r": [
+                "r07",
+                "r11"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 150,
-            "n": "Baezil's Vortex",
-            "c": "9fl",
-            "tc": "dblu"
+            "n": "Shadow of Doubt",
+            "types": [
+                "weap"
+            ],
+            "r": [
+                "r17",
+                "r09",
+                "r19",
+                "r20",
+                "r16",
+                "r20"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 151,
-            "n": "Earthshaker",
-            "c": "9wh"
+            "n": "Silence",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r28",
+                "r10",
+                "r07",
+                "r20"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 152,
-            "n": "Bloodtree Stump",
-            "c": "9m9"
+            "n": "Siren's Song",
+            "types": [
+                "tors"
+            ],
+            "r": [
+                "r15",
+                "r03"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 153,
-            "n": "The Gavel of Pain",
-            "i": "inv9gmu",
-            "c": "9gm"
+            "n": "Smoke",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r03",
+                "r04",
+                "r13",
+                "r25",
+                "r04"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 154,
-            "n": "Bloodletter",
-            "c": "9ss",
-            "tc": "cred"
+            "n": "Sorrow",
+            "types": [
+                "weap"
+            ],
+            "r": [
+                "r23",
+                "r01",
+                "r01",
+                "r30",
+                "r13"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 155,
-            "n": "Coldsteel Eye",
-            "i": "invscmu",
-            "c": "9sm"
+            "n": "Spirit",
+            "types": [
+                "shld"
+            ],
+            "r": [
+                "r05",
+                "r17"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 156,
-            "n": "Hexfire",
-            "i": "invsbru",
-            "c": "9sb"
+            "n": "Splendor",
+            "types": [
+                "staf",
+                "swor"
+            ],
+            "r": [
+                "r20",
+                "r04",
+                "r03"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 157,
-            "n": "Blade of Ali Baba",
-            "c": "9fc",
-            "tc": "cred"
+            "n": "Starlight",
+            "types": [
+                "scep"
+            ],
+            "r": [
+                "r05",
+                "r01"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 158,
-            "n": "Ginther's Rift",
-            "i": "inv9cru",
-            "c": "9cr"
+            "n": "Stealth",
+            "types": [
+                "swor",
+                "axe",
+                "mace"
+            ],
+            "r": [
+                "r04",
+                "r03"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 159,
-            "n": "Headstriker",
-            "c": "9bs",
-            "tc": "bwht"
+            "n": "Steel",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r01",
+                "r10"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 160,
-            "n": "Plague Bearer",
-            "i": "inv9lsu",
-            "c": "9ls"
+            "n": "Still Water",
+            "types": [
+                "swor",
+                "knif"
+            ],
+            "r": [
+                "r04",
+                "r11",
+                "r17"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 161,
-            "n": "The Atlantean",
-            "c": "9wd",
-            "tc": "lblu"
+            "n": "Sting",
+            "types": [
+                "mace",
+                "hamm",
+                "club"
+            ],
+            "r": [
+                "r08",
+                "r10",
+                "r01"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 162,
-            "n": "Crainte Vomir",
-            "i": "inv2hsu",
-            "c": "92h"
+            "n": "Stone",
+            "types": [
+                "axe",
+                "hamm"
+            ],
+            "r": [
+                "r01",
+                "r03",
+                "r15",
+                "r04",
+                "r03"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 163,
-            "n": "Bing Sz Wang",
-            "c": "9cm"
+            "n": "Storm",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r09",
+                "r07"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 164,
-            "n": "The Vile Husk",
-            "i": "invgisu",
-            "c": "9gs",
-            "tc": "dgry"
+            "n": "Strength",
+            "types": [
+                "weap"
+            ],
+            "r": [
+                "r05",
+                "r02",
+                "r08",
+                "r24"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 165,
-            "n": "Cloudcrack",
-            "i": "invbswu",
-            "c": "9b9"
+            "n": "Tempest",
+            "types": [
+                "helm"
+            ],
+            "r": [
+                "r01",
+                "r18"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 166,
-            "n": "Todesfaelle Flamme",
-            "i": "inv9fbu",
-            "c": "9fb"
+            "n": "Temptation",
+            "types": [
+                "weap"
+            ],
+            "r": [
+                "r24",
+                "r06",
+                "r19",
+                "r01"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 167,
-            "n": "Swordguard",
-            "i": "invgsdu",
-            "c": "9gd",
-            "tc": "bwht"
+            "n": "Terror",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r02",
+                "r09"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 168,
-            "n": "Spineripper",
-            "c": "9dg"
+            "n": "Thirst",
+            "types": [
+                "helm"
+            ],
+            "r": [
+                "r13",
+                "r16"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 169,
-            "n": "Heart Carver",
-            "c": "9di"
+            "n": "Thought",
+            "types": [
+                "hamm",
+                "mace",
+                "axe"
+            ],
+            "r": [
+                "r15",
+                "r24"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 170,
-            "n": "Blackbog's Sharp",
-            "i": "invkrsu",
-            "c": "9kr"
+            "n": "Thunder",
+            "types": [
+                "staf"
+            ],
+            "r": [
+                "r29",
+                "r25",
+                "r30",
+                "r04",
+                "r31",
+                "r18"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 171,
-            "n": "Stormspike",
-            "i": "inv9blu",
-            "c": "9bl",
-            "tc": "cblu"
+            "n": "Time",
+            "types": [
+                "scep"
+            ],
+            "r": [
+                "r01",
+                "r09",
+                "r04",
+                "r08"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 172,
-            "n": "The Impaler",
-            "c": "9sr",
-            "tc": "lred"
+            "n": "Tradition",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r29",
+                "r18",
+                "r26"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 173,
-            "n": "Kelpie Snare",
-            "i": "invtriu",
-            "c": "9tr"
+            "n": "Treachery",
+            "types": [
+                "helm"
+            ],
+            "r": [
+                "r11",
+                "r02",
+                "r32"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 174,
-            "n": "Soulfeast Tine",
-            "i": "inv9bru",
-            "c": "9br",
-            "tc": "lyel"
+            "n": "Trust",
+            "types": [
+                "swor"
+            ],
+            "r": [
+                "r19",
+                "r22",
+                "r27",
+                "r26",
+                "r04",
+                "r17"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 175,
-            "n": "Hone Sundan",
-            "c": "9st"
+            "n": "Truth",
+            "types": [
+                "tors"
+            ],
+            "r": [
+                "r09",
+                "r32",
+                "r07",
+                "r07"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 176,
-            "n": "Spire of Honor",
-            "c": "9p9",
-            "tc": "lgry"
+            "n": "Unbending Will",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r04",
+                "r01",
+                "r28"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 177,
-            "n": "The Meat Scraper",
-            "c": "9b7",
-            "tc": "dred"
+            "n": "Valor",
+            "types": [
+                "weap"
+            ],
+            "r": [
+                "r06",
+                "r11",
+                "r01"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 178,
-            "n": "Blackleach Blade",
-            "c": "9vo",
-            "tc": "blac"
+            "n": "Vengeance",
+            "types": [
+                "weap"
+            ],
+            "r": [
+                "r09",
+                "r12",
+                "r23"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 179,
-            "n": "Athena's Wrath",
-            "i": "inv9s8u",
-            "c": "9s8"
+            "n": "Venom",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r07",
+                "r04",
+                "r02",
+                "r01"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 180,
-            "n": "Pierre Tombale Couant",
-            "c": "9pa",
-            "tc": "lgld"
+            "n": "Victory",
+            "types": [
+                "helm"
+            ],
+            "r": [
+                "r03",
+                "r06"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 181,
-            "n": "Husoldal Evo",
-            "c": "9h9"
+            "n": "Voice",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r11",
+                "r01",
+                "r31",
+                "r08",
+                "r21"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 182,
-            "n": "Grim's Burning Dead",
-            "c": "9wc",
-            "tc": "cred"
+            "n": "Void",
+            "types": [
+                "weap"
+            ],
+            "r": [
+                "r25",
+                "r11",
+                "r04",
+                "r03",
+                "r04"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 183,
-            "n": "Razorswitch",
-            "c": "8ss"
+            "n": "War",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r05",
+                "r27",
+                "r33",
+                "r16"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 184,
-            "n": "Ribcracker",
-            "c": "8ls",
-            "tc": "lblu"
+            "n": "Water",
+            "types": [
+                "tors"
+            ],
+            "r": [
+                "r07",
+                "r21",
+                "r01"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 185,
-            "n": "Chromatic Ire",
-            "i": "invcstu",
-            "c": "8cs"
+            "n": "Wealth",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r14",
+                "r03",
+                "r01"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 186,
-            "n": "Warpspear",
-            "c": "8bs",
-            "tc": "cblu"
+            "n": "Whisper",
+            "types": [
+                "wand"
+            ],
+            "r": [
+                "r17",
+                "r06",
+                "r02"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 187,
-            "n": "Skull Collector",
-            "i": "inv8wsu",
-            "c": "8ws",
-            "tc": "blac"
+            "n": "White",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r29",
+                "r01"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 188,
-            "n": "Skystrike",
-            "c": "8sb"
+            "n": "Wind",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r10",
+                "r03",
+                "r17",
+                "r03",
+                "r08"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 189,
-            "n": "Riphook",
-            "c": "8hb",
-            "tc": "cred"
+            "n": "Wings of Hope",
+            "types": [
+                "staf"
+            ],
+            "r": [
+                "r08",
+                "r31",
+                "r08",
+                "r18",
+                "r01"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 190,
-            "n": "Kuko Shakaku",
-            "i": "inv8lbu",
-            "c": "8lb",
-            "tc": "lpur"
+            "n": "Wisdom",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r03",
+                "r04",
+                "r06",
+                "r09",
+                "r14"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 191,
-            "n": "Endlesshail",
-            "i": "invcbwu",
-            "c": "8cb"
+            "n": "Woe",
+            "types": [
+                "wand"
+            ],
+            "r": [
+                "r04",
+                "r12",
+                "r24"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 192,
-            "n": "Witchwild String",
-            "i": "inv8s8u",
-            "c": "8s8",
-            "tc": "lblu"
+            "n": "Wonder",
+            "types": [
+                "mele"
+            ],
+            "r": [
+                "r08",
+                "r05",
+                "r28",
+                "r15",
+                "r01"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 193,
-            "n": "Cliffkiller",
-            "c": "8l8"
+            "n": "Wrath",
+            "types": [
+                "tors"
+            ],
+            "r": [
+                "r08",
+                "r15",
+                "r03",
+                "r17",
+                "r21"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         },
         {
             "id": 194,
-            "n": "Magewrath",
-            "i": "invswbu",
-            "c": "8sw"
-        },
-        {
-            "id": 195,
-            "n": "Goldstrike Arch",
-            "c": "8lw",
-            "tc": "lgry"
-        },
-        {
-            "id": 196,
-            "n": "Langer Briser",
-            "i": "inv8lxu",
-            "c": "8lx"
-        },
-        {
-            "id": 197,
-            "n": "Pus Spitter",
-            "i": "inv8mxu",
-            "c": "8mx",
-            "tc": "cgrn"
-        },
-        {
-            "id": 198,
-            "n": "Buriza-Do Kyanon",
-            "i": "invhxbu",
-            "c": "8hx"
-        },
-        {
-            "id": 199,
-            "n": "Demon Machine",
-            "i": "invrxbu",
-            "c": "8rx",
-            "tc": "blac"
-        },
-        {
-            "id": 200,
-            "n": "Armor"
-        },
-        {
-            "id": 201,
-            "n": "Peasant Crown",
-            "c": "xap"
-        },
-        {
-            "id": 202,
-            "n": "Rockstopper",
-            "i": "invxkpu",
-            "c": "xkp"
-        },
-        {
-            "id": 203,
-            "n": "Stealskull",
-            "i": "invhlmu",
-            "c": "xlm"
-        },
-        {
-            "id": 204,
-            "n": "Darksight Helm",
-            "i": "invfhlu",
-            "c": "xhl",
-            "tc": "blac"
-        },
-        {
-            "id": 205,
-            "n": "Valkyrie Wing",
-            "c": "xhm"
-        },
-        {
-            "id": 206,
-            "n": "Crown of Thieves",
-            "i": "invxrnu",
-            "c": "xrn",
-            "tc": "dgld"
-        },
-        {
-            "id": 207,
-            "n": "Blackhorn's Face",
-            "c": "xsk",
-            "tc": "blac"
-        },
-        {
-            "id": 208,
-            "n": "Vampire Gaze",
-            "i": "invbhmu",
-            "c": "xh9",
-            "tc": "cgrn"
-        },
-        {
-            "id": 209,
-            "n": "The Spirit Shroud",
-            "c": "xui"
-        },
-        {
-            "id": 210,
-            "n": "Skin of the Vipermagi",
-            "c": "xea",
-            "tc": "dblu"
-        },
-        {
-            "id": 211,
-            "n": "Skin of the Flayed One",
-            "c": "xla",
-            "tc": "lred"
-        },
-        {
-            "id": 212,
-            "n": "Iron Pelt",
-            "i": "invxtuu",
-            "c": "xtu",
-            "tc": "dgry"
-        },
-        {
-            "id": 213,
-            "n": "Spirit Forge",
-            "c": "xng"
-        },
-        {
-            "id": 214,
-            "n": "Crow Caw",
-            "c": "xcl"
-        },
-        {
-            "id": 215,
-            "n": "Shaftstop",
-            "c": "xhn"
-        },
-        {
-            "id": 216,
-            "n": "Duriel's Shell",
-            "c": "xrs",
-            "tc": "oran"
-        },
-        {
-            "id": 217,
-            "n": "Skullder's Ire",
-            "c": "xpl"
-        },
-        {
-            "id": 218,
-            "n": "Guardian Angel",
-            "c": "xlt",
-            "tc": "lgry"
-        },
-        {
-            "id": 219,
-            "n": "Toothrow",
-            "c": "xld",
-            "tc": "whit"
-        },
-        {
-            "id": 220,
-            "n": "Atma's Wail",
-            "c": "xth"
-        },
-        {
-            "id": 221,
-            "n": "Black Hades",
-            "c": "xul"
-        },
-        {
-            "id": 222,
-            "n": "Corpsemourn",
-            "i": "invxaru",
-            "c": "xar",
-            "tc": "blac"
-        },
-        {
-            "id": 223,
-            "n": "Que-Hegan's Wisdom",
-            "c": "xtp"
-        },
-        {
-            "id": 224,
-            "n": "Visceratuant",
-            "i": "invbucu",
-            "c": "xuc"
-        },
-        {
-            "id": 225,
-            "n": "Moser's Blessed Circle",
-            "i": "invxmlu",
-            "c": "xml"
-        },
-        {
-            "id": 226,
-            "n": "Stormchaser",
-            "i": "invxrgu",
-            "c": "xrg",
-            "tc": "cblu"
-        },
-        {
-            "id": 227,
-            "n": "Tiamat's Rebuke",
-            "i": "invkitu",
-            "c": "xit",
-            "tc": "lgry"
-        },
-        {
-            "id": 228,
-            "n": "Gerke's Sanctuary",
-            "i": "invtowu",
-            "c": "xow",
-            "tc": "lgrn"
-        },
-        {
-            "id": 229,
-            "n": "Radament's Sphere",
-            "i": "invgtsu",
-            "c": "xts"
-        },
-        {
-            "id": 230,
-            "n": "Lidless Wall",
-            "i": "invxshu",
-            "c": "xsh",
-            "tc": "dgld"
-        },
-        {
-            "id": 231,
-            "n": "Lance Guard",
-            "i": "invxpku",
-            "c": "xpk"
-        },
-        {
-            "id": 232,
-            "n": "Venom Grip",
-            "c": "xlg"
-        },
-        {
-            "id": 233,
-            "n": "Gravepalm",
-            "c": "xvg"
-        },
-        {
-            "id": 234,
-            "n": "Ghoulhide",
-            "c": "xmg"
-        },
-        {
-            "id": 235,
-            "n": "Lava Gout",
-            "c": "xtg"
-        },
-        {
-            "id": 236,
-            "n": "Hellmouth",
-            "c": "xhg"
-        },
-        {
-            "id": 237,
-            "n": "Infernostride",
-            "c": "xlb"
-        },
-        {
-            "id": 238,
-            "n": "Waterwalk",
-            "c": "xvb"
-        },
-        {
-            "id": 239,
-            "n": "Silkweave",
-            "c": "xmb"
-        },
-        {
-            "id": 240,
-            "n": "War Traveler",
-            "c": "xtb"
-        },
-        {
-            "id": 241,
-            "n": "Gore Rider",
-            "c": "xhb"
-        },
-        {
-            "id": 242,
-            "n": "String of Ears",
-            "c": "zlb"
-        },
-        {
-            "id": 243,
-            "n": "Razortail",
-            "c": "zvb"
-        },
-        {
-            "id": 244,
-            "n": "Gloom's Trap",
-            "c": "zmb"
-        },
-        {
-            "id": 245,
-            "n": "Snowclash",
-            "c": "ztb"
-        },
-        {
-            "id": 246,
-            "n": "Thundergod's Vigor",
-            "c": "zhb"
-        },
-        {
-            "id": 247
-        },
-        {
-            "id": 248,
-            "n": "Harlequin Crest",
-            "c": "uap",
-            "tc": "cgrn"
-        },
-        {
-            "id": 249,
-            "n": "Veil of Steel",
-            "c": "uhm",
-            "tc": "lgry"
-        },
-        {
-            "id": 250,
-            "n": "The Gladiator's Bane",
-            "c": "utu",
-            "tc": "lgry"
-        },
-        {
-            "id": 251,
-            "n": "Arkaine's Valor",
-            "c": "upl",
-            "tc": "lred"
-        },
-        {
-            "id": 252,
-            "n": "Blackoak Shield",
-            "i": "invsmlu",
-            "c": "uml"
-        },
-        {
-            "id": 253,
-            "n": "Stormshield",
-            "i": "invkitu",
-            "c": "uit"
-        },
-        {
-            "id": 254,
-            "n": "Hellslayer",
-            "i": "invbtxu",
-            "c": "7bt",
-            "tc": "dred"
-        },
-        {
-            "id": 255,
-            "n": "Messerschmidt's Reaver",
-            "i": "invgaxu",
-            "c": "7ga",
-            "tc": "blac"
-        },
-        {
-            "id": 256,
-            "n": "Baranar's Star",
-            "i": "invmstu",
-            "c": "7mt",
-            "tc": "lred"
-        },
-        {
-            "id": 257,
-            "n": "Schaefer's Hammer",
-            "c": "7wh",
-            "tc": "lblu"
-        },
-        {
-            "id": 258,
-            "n": "The Cranium Basher",
-            "c": "7gm",
-            "tc": "blac"
-        },
-        {
-            "id": 259,
-            "n": "Lightsabre",
-            "i": "invcrsu",
-            "c": "7cr"
-        },
-        {
-            "id": 260,
-            "n": "Doombringer",
-            "i": "invbswu",
-            "c": "7b7",
-            "tc": "dred"
-        },
-        {
-            "id": 261,
-            "n": "The Grandfather",
-            "i": "invgsdu",
-            "c": "7gd",
-            "tc": "lyel"
-        },
-        {
-            "id": 262,
-            "n": "Wizardspike",
-            "c": "7dg",
-            "tc": "lgry"
-        },
-        {
-            "id": 263,
-            "n": "Constricting Ring",
-            "c": "rin",
-            "tc": "cblu"
-        },
-        {
-            "id": 264,
-            "n": "Stormspire",
-            "c": "7wc",
-            "tc": "dblu"
-        },
-        {
-            "id": 265,
-            "n": "Eaglehorn",
-            "c": "6l7",
-            "tc": "dgld"
-        },
-        {
-            "id": 266,
-            "n": "Windforce",
-            "c": "6lw",
-            "tc": "dyel"
-        },
-        {
-            "id": 267,
-            "n": "Rings"
-        },
-        {
-            "id": 268,
-            "n": "Bul-Kathos' Wedding Band",
-            "c": "rin",
-            "tc": "dpur"
-        },
-        {
-            "id": 269,
-            "n": "The Cat's Eye",
-            "c": "amu",
-            "tc": "oran"
-        },
-        {
-            "id": 270,
-            "n": "The Rising Sun",
-            "c": "amu",
-            "tc": "lgld"
-        },
-        {
-            "id": 271,
-            "n": "Crescent Moon",
-            "c": "amu",
-            "tc": "lblu"
-        },
-        {
-            "id": 272,
-            "n": "Mara's Kaleidoscope",
-            "c": "amu",
-            "tc": "oran"
-        },
-        {
-            "id": 273,
-            "n": "Atma's Scarab",
-            "c": "amu",
-            "tc": "cgrn"
-        },
-        {
-            "id": 274,
-            "n": "Dwarf Star",
-            "c": "rin",
-            "tc": "dgry"
-        },
-        {
-            "id": 275,
-            "n": "Raven Frost",
-            "c": "rin",
-            "tc": "cblu"
-        },
-        {
-            "id": 276,
-            "n": "Highlord's Wrath",
-            "c": "amu",
-            "tc": "bwht"
-        },
-        {
-            "id": 277,
-            "n": "Saracen's Chance",
-            "c": "amu",
-            "tc": "dpur"
-        },
-        {
-            "id": 278,
-            "n": "Class-specific"
-        },
-        {
-            "id": 279,
-            "n": "Arreat's Face",
-            "c": "baa"
-        },
-        {
-            "id": 280,
-            "n": "Homunculus",
-            "c": "nea"
-        },
-        {
-            "id": 281,
-            "n": "Titan's Revenge",
-            "c": "ama"
-        },
-        {
-            "id": 282,
-            "n": "Lycander's Aim",
-            "c": "am7"
-        },
-        {
-            "id": 283,
-            "n": "Lycander's Flank",
-            "c": "am9"
-        },
-        {
-            "id": 284,
-            "n": "The Oculus",
-            "c": "oba"
-        },
-        {
-            "id": 285,
-            "n": "Herald of Zakarum",
-            "c": "pa9"
-        },
-        {
-            "id": 286,
-            "n": "Bartuc's Cut-Throat",
-            "c": "9tw"
-        },
-        {
-            "id": 287,
-            "n": "Jalal's Mane",
-            "c": "dra"
-        },
-        {
-            "id": 288,
-            "n": "The Scalper",
-            "c": "9ta"
-        },
-        {
-            "id": 289,
-            "n": "Bloodmoon",
-            "i": "invsbru",
-            "c": "7sb",
-            "tc": "cred"
-        },
-        {
-            "id": 290,
-            "n": "Djinn Slayer",
-            "i": "invscmu",
-            "c": "7sm",
-            "tc": "dpur"
-        },
-        {
-            "id": 291,
-            "n": "Deathbit",
-            "c": "9tk"
-        },
-        {
-            "id": 292,
-            "n": "Warshrike",
-            "i": "invtk3",
-            "c": "7bk",
-            "tc": "bwht"
-        },
-        {
-            "id": 293,
-            "n": "Gut Siphon",
-            "i": "invrxbu",
-            "c": "6rx",
-            "tc": "lgrn"
-        },
-        {
-            "id": 294,
-            "n": "Razor's Edge",
-            "i": "invhaxu",
-            "c": "7ha"
-        },
-        {
-            "id": 295,
-            "n": "Gore Ripper",
-            "tc": "dred"
-        },
-        {
-            "id": 296,
-            "n": "Demon Limb",
-            "i": "invspcu",
-            "c": "7sp",
-            "tc": "dgrn"
-        },
-        {
-            "id": 297,
-            "n": "Steel Shade",
-            "i": "invhlmu",
-            "c": "ulm",
-            "tc": "blac"
-        },
-        {
-            "id": 298,
-            "n": "Tomb Reaver",
-            "c": "7pa",
-            "tc": "lyel"
-        },
-        {
-            "id": 299,
-            "n": "Death's Web",
-            "c": "7gw",
-            "tc": "bwht"
-        },
-        {
-            "id": 300,
-            "n": "Nature's Peace",
-            "c": "rin",
-            "tc": "dgrn"
-        },
-        {
-            "id": 301,
-            "n": "Azurewrath",
-            "i": "invcrs",
-            "c": "7cr"
-        },
-        {
-            "id": 302,
-            "n": "Seraph's Hymn",
-            "i": "invamu2",
-            "c": "amu",
-            "tc": "bwht"
-        },
-        {
-            "id": 303,
-            "n": "Zakarum's Salvation"
-        },
-        {
-            "id": 304,
-            "n": "Fleshripper",
-            "i": "invkrsu",
-            "c": "7kr",
-            "tc": "dred"
-        },
-        {
-            "id": 305,
-            "n": "Odium"
-        },
-        {
-            "id": 306,
-            "n": "Horizon's Tornado",
-            "c": "7fl",
-            "tc": "dpur"
-        },
-        {
-            "id": 307,
-            "n": "Stone Crusher",
-            "c": "7wh"
-        },
-        {
-            "id": 308,
-            "n": "Jade Talon",
-            "c": "7wb",
-            "tc": "cgrn"
-        },
-        {
-            "id": 309,
-            "n": "Shadow Dancer",
-            "c": "uhb",
-            "tc": "blac"
-        },
-        {
-            "id": 310,
-            "n": "Cerebus' Bite",
-            "c": "drb",
-            "tc": "bwht"
-        },
-        {
-            "id": 311,
-            "n": "Tyrael's Might",
-            "i": "invaaru",
-            "c": "uar",
-            "tc": "dblu"
-        },
-        {
-            "id": 312,
-            "n": "Soul Drainer",
-            "c": "umg",
-            "tc": "dred"
-        },
-        {
-            "id": 313,
-            "n": "Rune Master",
-            "c": "72a",
-            "tc": "lblu"
-        },
-        {
-            "id": 314,
-            "n": "Death Cleaver",
-            "c": "7wa"
-        },
-        {
-            "id": 315,
-            "n": "Executioner's Justice",
-            "c": "7gi",
-            "tc": "blac"
-        },
-        {
-            "id": 316,
-            "n": "Stoneraven",
-            "c": "amd"
-        },
-        {
-            "id": 317,
-            "n": "Leviathan",
-            "c": "uld",
-            "tc": "cgrn"
-        },
-        {
-            "id": 318,
-            "n": "Larzuk's Champion",
-            "i": "invhfh"
-        },
-        {
-            "id": 319,
-            "n": "Wisp Projector",
-            "c": "rin",
-            "tc": "bwht"
-        },
-        {
-            "id": 320,
-            "n": "Gargoyle's Bite",
-            "c": "7ts",
-            "tc": "cgrn"
-        },
-        {
-            "id": 321,
-            "n": "Lacerator",
-            "c": "7b8",
-            "tc": "blac"
-        },
-        {
-            "id": 322,
-            "n": "Mang Song's Lesson",
-            "i": "inv8wsu",
-            "c": "6ws",
-            "tc": "dgld"
-        },
-        {
-            "id": 323,
-            "n": "Viperfork",
-            "c": "7br",
-            "tc": "dgrn"
-        },
-        {
-            "id": 324,
-            "n": "Ethereal Edge",
-            "c": "7ba",
-            "tc": "whit"
-        },
-        {
-            "id": 325,
-            "n": "Demonhorn's Edge",
-            "c": "bad",
-            "tc": "dgry"
-        },
-        {
-            "id": 326,
-            "n": "The Reaper's Toll",
-            "i": "invscy",
-            "c": "7s8"
-        },
-        {
-            "id": 327,
-            "n": "Spirit Keeper",
-            "c": "drd"
-        },
-        {
-            "id": 328,
-            "n": "Hellrack",
-            "i": "invhxbu",
-            "c": "6hx"
-        },
-        {
-            "id": 329,
-            "n": "Alma Negra",
-            "c": "pac",
-            "tc": "blac"
-        },
-        {
-            "id": 330,
-            "n": "Darkforce Spawn",
-            "c": "nef",
-            "tc": "cred"
-        },
-        {
-            "id": 331,
-            "n": "Widowmaker",
-            "i": "invswbu",
-            "c": "6sw",
-            "tc": "dred"
-        },
-        {
-            "id": 332,
-            "n": "Blood Raven's Charge",
-            "i": "invswbu",
-            "c": "amb",
-            "tc": "dgld"
-        },
-        {
-            "id": 333,
-            "n": "Ghostflame",
-            "c": "7bl",
-            "tc": "cblu"
-        },
-        {
-            "id": 334,
-            "n": "Shadow Killer",
-            "i": "invaxfu",
-            "c": "7cs"
-        },
-        {
-            "id": 335,
-            "n": "Gimmershred",
-            "c": "7ta"
-        },
-        {
-            "id": 336,
-            "n": "Griffon's Eye",
-            "c": "ci3"
-        },
-        {
-            "id": 337,
-            "n": "Windhammer",
-            "i": "invmau",
-            "c": "7m7",
-            "tc": "cblu"
-        },
-        {
-            "id": 338,
-            "n": "Thunderstroke",
-            "c": "amf",
-            "tc": "dblu"
-        },
-        {
-            "id": 339,
-            "n": "Giant Maimer",
-            "tc": "cred"
-        },
-        {
-            "id": 340,
-            "n": "Demon's Arch",
-            "c": "7s7",
-            "tc": "cred"
-        },
-        {
-            "id": 341,
-            "n": "Boneflame",
-            "c": "nee",
-            "tc": "dred"
-        },
-        {
-            "id": 342,
-            "n": "Steel Pillar",
-            "c": "7p7"
-        },
-        {
-            "id": 343,
-            "n": "Nightwing's Veil",
-            "c": "uhm",
-            "tc": "cblu"
-        },
-        {
-            "id": 344,
-            "n": "Crown of Ages",
-            "c": "urn",
-            "tc": "dgld"
-        },
-        {
-            "id": 345,
-            "n": "Andariel's Visage",
-            "c": "usk",
-            "tc": "dred"
-        },
-        {
-            "id": 346,
-            "n": "Darkfear",
-            "i": "invhlmu",
-            "c": "ulm"
-        },
-        {
-            "id": 347,
-            "n": "Dragonscale",
-            "c": "pae",
-            "tc": "dgrn"
-        },
-        {
-            "id": 348,
-            "n": "Steel Carapace",
-            "c": "uul",
-            "tc": "dgry"
-        },
-        {
-            "id": 349,
-            "n": "Medusa's Gaze",
-            "i": "invtowu",
-            "c": "uow",
-            "tc": "lred"
-        },
-        {
-            "id": 350,
-            "n": "Ravenlore",
-            "c": "dre",
-            "tc": "dgld"
-        },
-        {
-            "id": 351,
-            "n": "Boneshade",
-            "i": "invbwnu",
-            "c": "7bw",
-            "tc": "dgry"
-        },
-        {
-            "id": 352,
-            "n": "Nethercrow",
-            "tc": "cblu"
-        },
-        {
-            "id": 353,
-            "n": "Flamebellow",
-            "i": "invgisu",
-            "c": "7gs",
-            "tc": "cred"
-        },
-        {
-            "id": 354,
-            "n": "Death's Fathom",
-            "c": "obf"
-        },
-        {
-            "id": 355,
-            "n": "Wolfhowl",
-            "c": "bac",
-            "tc": "cred"
-        },
-        {
-            "id": 356,
-            "n": "Spirit Ward",
-            "i": "invgtsu",
-            "c": "uts",
-            "tc": "dblu"
-        },
-        {
-            "id": 357,
-            "n": "Kira's Guardian",
-            "c": "ci2",
-            "tc": "blac"
-        },
-        {
-            "id": 358,
-            "n": "Ormus' Robes",
-            "c": "uui",
-            "tc": "blac"
-        },
-        {
-            "id": 359,
-            "n": "Gheed's Fortune",
-            "c": "cm3"
-        },
-        {
-            "id": 360,
-            "n": "Stormlash",
-            "c": "7fl",
-            "tc": "dgry"
-        },
-        {
-            "id": 361,
-            "n": "Halaberd's Reign",
-            "c": "bae"
-        },
-        {
-            "id": 362,
-            "n": "Warriv's Warder"
-        },
-        {
-            "id": 363,
-            "n": "Spike Thorn",
-            "i": "invspku",
-            "c": "upk",
-            "tc": "dyel"
-        },
-        {
-            "id": 364,
-            "n": "Dracul's Grasp",
-            "c": "uvg",
-            "tc": "dred"
-        },
-        {
-            "id": 365,
-            "n": "Frostwind",
-            "i": "invlsdu",
-            "c": "7ls",
-            "tc": "cblu"
-        },
-        {
-            "id": 366,
-            "n": "Templar's Might",
-            "i": "invaaru",
-            "c": "uar",
-            "tc": "cgrn"
-        },
-        {
-            "id": 367,
-            "n": "Eschuta's Temper",
-            "c": "obc"
-        },
-        {
-            "id": 368,
-            "n": "Firelizard's Talons",
-            "c": "7lw"
-        },
-        {
-            "id": 369,
-            "n": "Sandstorm Trek",
-            "c": "uvb"
-        },
-        {
-            "id": 370,
-            "n": "Marrowwalk",
-            "c": "umb"
-        },
-        {
-            "id": 371,
-            "n": "Heaven's Light",
-            "c": "7sc",
-            "tc": "cblu"
-        },
-        {
-            "id": 372,
-            "n": "Merman's Sprocket"
-        },
-        {
-            "id": 373,
-            "n": "Arachnid Mesh",
-            "c": "ulc",
-            "tc": "blac"
-        },
-        {
-            "id": 374,
-            "n": "Nosferatu's Coil",
-            "c": "uvc"
-        },
-        {
-            "id": 375,
-            "n": "Metalgrid",
-            "c": "amu"
-        },
-        {
-            "id": 376,
-            "n": "Verdungo's Hearty Cord",
-            "c": "umc",
-            "tc": "blac"
-        },
-        {
-            "id": 377,
-            "n": "Siggard's Stealth"
-        },
-        {
-            "id": 378,
-            "n": "Carrion Wind",
-            "c": "rin"
-        },
-        {
-            "id": 379,
-            "n": "Giant Skull",
-            "i": "invbhm",
-            "c": "uh9",
-            "tc": "lgry"
-        },
-        {
-            "id": 380,
-            "n": "Astreon's Iron Ward",
-            "c": "7ws",
-            "tc": "blac"
-        },
-        {
-            "id": 381,
-            "n": "Annihilus",
-            "i": "invmss",
-            "c": "cm1"
-        },
-        {
-            "id": 382,
-            "n": "Arioc's Needle",
-            "c": "7sr"
-        },
-        {
-            "id": 383,
-            "n": "Cranebeak",
-            "i": "invmpiu",
-            "c": "7mp"
-        },
-        {
-            "id": 384,
-            "n": "Nord's Tenderizer",
-            "i": "invclbu",
-            "c": "7cl"
-        },
-        {
-            "id": 385,
-            "n": "Earth Shifter",
-            "c": "7gm"
-        },
-        {
-            "id": 386,
-            "n": "Wraith Flight",
-            "c": "7gl",
-            "tc": "dblu"
-        },
-        {
-            "id": 387,
-            "n": "Bonehew",
-            "c": "7o7",
-            "tc": "bwht"
-        },
-        {
-            "id": 388,
-            "n": "Ondal's Wisdom",
-            "i": "invcstu",
-            "c": "6cs"
-        },
-        {
-            "id": 389,
-            "n": "The Redeemer",
-            "c": "7sc"
-        },
-        {
-            "id": 390,
-            "n": "Head Hunter's Glory",
-            "i": "invbshu",
-            "c": "ush"
-        },
-        {
-            "id": 391,
-            "n": "Steelrend",
-            "c": "uhg"
-        },
-        {
-            "id": 392,
-            "n": "Rainbow Facet",
-            "c": "jew"
-        },
-        {
-            "id": 393,
-            "n": "Rainbow Facet",
-            "c": "jew"
-        },
-        {
-            "id": 394,
-            "n": "Rainbow Facet",
-            "c": "jew"
-        },
-        {
-            "id": 395,
-            "n": "Rainbow Facet",
-            "c": "jew"
-        },
-        {
-            "id": 396,
-            "n": "Rainbow Facet",
-            "c": "jew"
-        },
-        {
-            "id": 397,
-            "n": "Rainbow Facet",
-            "c": "jew"
-        },
-        {
-            "id": 398,
-            "n": "Rainbow Facet",
-            "c": "jew"
-        },
-        {
-            "id": 399,
-            "n": "Rainbow Facet",
-            "c": "jew"
-        },
-        {
-            "id": 400,
-            "n": "Hellfire Torch",
-            "i": "invtrch",
-            "c": "cm2"
+            "n": "Youth",
+            "types": [
+                "miss"
+            ],
+            "r": [
+                "r07",
+                "r06"
+            ],
+            "m": [
+                {
+                    "prop": "res-pois",
+                    "p": 0,
+                    "min": 25,
+                    "max": 25
+                }
+            ]
         }
     ],
+    "set_items": [],
+    "unq_items": [],
     "stackables": {
         "tkf": {
             "n": "Throwing Knife"
@@ -17690,6 +14903,9 @@ let constants_diablo2_96 = {
             "elc": "uap",
             "iq": 0,
             "n": "Cap",
+            "minac": 3,
+            "maxac": 5,
+            "durability": 12,
             "rs": 0,
             "hi": 1,
             "gt": 1,
@@ -17699,6 +14915,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "helm",
+            "lvl": "1",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -17712,6 +14933,9 @@ let constants_diablo2_96 = {
             "elc": "ukp",
             "iq": 0,
             "n": "Skull Cap",
+            "minac": 8,
+            "maxac": 11,
+            "durability": 18,
             "rs": 15,
             "hi": 1,
             "gt": 1,
@@ -17719,6 +14943,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "helm",
+            "lvl": "5",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -17732,6 +14961,9 @@ let constants_diablo2_96 = {
             "elc": "ulm",
             "iq": 0,
             "n": "Helm",
+            "minac": 15,
+            "maxac": 18,
+            "durability": 24,
             "rs": 26,
             "hi": 1,
             "gt": 1,
@@ -17741,6 +14973,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "helm",
+            "lvl": "11",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -17754,6 +14991,9 @@ let constants_diablo2_96 = {
             "elc": "uhl",
             "iq": 0,
             "n": "Full Helm",
+            "minac": 23,
+            "maxac": 26,
+            "durability": 30,
             "rs": 41,
             "hi": 1,
             "gt": 1,
@@ -17763,6 +15003,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "helm",
+            "lvl": "15",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -17776,6 +15021,9 @@ let constants_diablo2_96 = {
             "elc": "uhm",
             "iq": 0,
             "n": "Great Helm",
+            "minac": 30,
+            "maxac": 35,
+            "durability": 40,
             "rs": 63,
             "hi": 1,
             "gt": 1,
@@ -17783,6 +15031,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "helm",
+            "lvl": "23",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -17796,6 +15049,9 @@ let constants_diablo2_96 = {
             "elc": "urn",
             "iq": 0,
             "n": "Crown",
+            "minac": 25,
+            "maxac": 45,
+            "durability": 50,
             "rs": 55,
             "hi": 1,
             "gt": 1,
@@ -17803,6 +15059,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "helm",
+            "lvl": "29",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -17816,6 +15077,9 @@ let constants_diablo2_96 = {
             "elc": "usk",
             "iq": 0,
             "n": "Mask",
+            "minac": 9,
+            "maxac": 27,
+            "durability": 20,
             "rs": 23,
             "hi": 1,
             "gt": 1,
@@ -17823,6 +15087,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 2,
+            "type": "helm",
+            "lvl": "19",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -17836,6 +15105,9 @@ let constants_diablo2_96 = {
             "elc": "uui",
             "iq": 0,
             "n": "Quilted Armor",
+            "minac": 8,
+            "maxac": 11,
+            "durability": 20,
             "rs": 12,
             "hi": 1,
             "gt": 1,
@@ -17843,6 +15115,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "1",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -17856,6 +15133,9 @@ let constants_diablo2_96 = {
             "elc": "uea",
             "iq": 0,
             "n": "Leather Armor",
+            "minac": 14,
+            "maxac": 17,
+            "durability": 24,
             "rs": 15,
             "hi": 1,
             "gt": 1,
@@ -17863,6 +15143,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "3",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -17876,6 +15161,9 @@ let constants_diablo2_96 = {
             "elc": "ula",
             "iq": 0,
             "n": "Hard Leather Armor",
+            "minac": 21,
+            "maxac": 24,
+            "durability": 28,
             "rs": 20,
             "hi": 1,
             "gt": 1,
@@ -17883,6 +15171,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "5",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -17896,6 +15189,9 @@ let constants_diablo2_96 = {
             "elc": "utu",
             "iq": 0,
             "n": "Studded Leather",
+            "minac": 32,
+            "maxac": 35,
+            "durability": 32,
             "rs": 27,
             "hi": 1,
             "gt": 1,
@@ -17903,6 +15199,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "8",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -17916,6 +15217,9 @@ let constants_diablo2_96 = {
             "elc": "ung",
             "iq": 0,
             "n": "Ring Mail",
+            "minac": 45,
+            "maxac": 48,
+            "durability": 26,
             "rs": 36,
             "hi": 1,
             "gt": 1,
@@ -17923,6 +15227,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "11",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -17936,6 +15245,9 @@ let constants_diablo2_96 = {
             "elc": "ucl",
             "iq": 0,
             "n": "Scale Mail",
+            "minac": 57,
+            "maxac": 60,
+            "durability": 36,
             "rs": 44,
             "hi": 1,
             "gt": 1,
@@ -17943,6 +15255,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "13",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -17956,6 +15273,9 @@ let constants_diablo2_96 = {
             "elc": "uhn",
             "iq": 0,
             "n": "Chain Mail",
+            "minac": 72,
+            "maxac": 75,
+            "durability": 45,
             "rs": 48,
             "hi": 1,
             "gt": 1,
@@ -17963,6 +15283,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "15",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -17976,6 +15301,9 @@ let constants_diablo2_96 = {
             "elc": "urs",
             "iq": 0,
             "n": "Breast Plate",
+            "minac": 65,
+            "maxac": 68,
+            "durability": 50,
             "rs": 30,
             "hi": 1,
             "gt": 1,
@@ -17983,6 +15311,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "18",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -17996,6 +15329,9 @@ let constants_diablo2_96 = {
             "elc": "upl",
             "iq": 0,
             "n": "Splint Mail",
+            "minac": 90,
+            "maxac": 95,
+            "durability": 30,
             "rs": 51,
             "hi": 1,
             "gt": 1,
@@ -18003,6 +15339,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "20",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18016,6 +15357,9 @@ let constants_diablo2_96 = {
             "elc": "ult",
             "iq": 0,
             "n": "Plate Mail",
+            "minac": 108,
+            "maxac": 116,
+            "durability": 60,
             "rs": 65,
             "hi": 1,
             "gt": 1,
@@ -18023,6 +15367,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "24",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18036,6 +15385,9 @@ let constants_diablo2_96 = {
             "elc": "uld",
             "iq": 0,
             "n": "Field Plate",
+            "minac": 101,
+            "maxac": 105,
+            "durability": 48,
             "rs": 55,
             "hi": 1,
             "gt": 1,
@@ -18043,6 +15395,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "28",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18056,6 +15413,9 @@ let constants_diablo2_96 = {
             "elc": "uth",
             "iq": 0,
             "n": "Gothic Plate",
+            "minac": 128,
+            "maxac": 135,
+            "durability": 55,
             "rs": 70,
             "hi": 1,
             "gt": 1,
@@ -18063,6 +15423,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "32",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18076,6 +15441,9 @@ let constants_diablo2_96 = {
             "elc": "uul",
             "iq": 0,
             "n": "Full Plate Mail",
+            "minac": 150,
+            "maxac": 161,
+            "durability": 70,
             "rs": 80,
             "hi": 1,
             "gt": 1,
@@ -18085,6 +15453,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "37",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18098,6 +15471,9 @@ let constants_diablo2_96 = {
             "elc": "uar",
             "iq": 0,
             "n": "Ancient Armor",
+            "minac": 218,
+            "maxac": 233,
+            "durability": 60,
             "rs": 100,
             "hi": 1,
             "gt": 1,
@@ -18107,6 +15483,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "40",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18120,6 +15501,9 @@ let constants_diablo2_96 = {
             "elc": "utp",
             "iq": 0,
             "n": "Light Plate",
+            "minac": 90,
+            "maxac": 107,
+            "durability": 60,
             "rs": 41,
             "hi": 1,
             "gt": 1,
@@ -18127,6 +15511,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "35",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18140,6 +15529,9 @@ let constants_diablo2_96 = {
             "elc": "uuc",
             "iq": 0,
             "n": "Buckler",
+            "minac": 4,
+            "maxac": 6,
+            "durability": 12,
             "mind": 1,
             "maxd": 3,
             "rs": 12,
@@ -18151,6 +15543,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "shie",
+            "lvl": "1",
+            "gemsockets": 1,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "c": [
@@ -18166,6 +15563,9 @@ let constants_diablo2_96 = {
             "elc": "uml",
             "iq": 0,
             "n": "Small Shield",
+            "minac": 8,
+            "maxac": 10,
+            "durability": 16,
             "mind": 2,
             "maxd": 3,
             "rs": 22,
@@ -18177,6 +15577,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 5,
+            "type": "shie",
+            "lvl": "5",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "c": [
@@ -18192,6 +15597,9 @@ let constants_diablo2_96 = {
             "elc": "urg",
             "iq": 0,
             "n": "Large Shield",
+            "minac": 12,
+            "maxac": 14,
+            "durability": 24,
             "mind": 2,
             "maxd": 4,
             "rs": 34,
@@ -18203,6 +15611,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "shie",
+            "lvl": "11",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "c": [
@@ -18218,6 +15631,9 @@ let constants_diablo2_96 = {
             "elc": "uit",
             "iq": 0,
             "n": "Kite Shield",
+            "minac": 16,
+            "maxac": 18,
+            "durability": 30,
             "mind": 2,
             "maxd": 5,
             "rs": 47,
@@ -18229,6 +15645,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "shie",
+            "lvl": "15",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "c": [
@@ -18244,6 +15665,9 @@ let constants_diablo2_96 = {
             "elc": "uow",
             "iq": 0,
             "n": "Tower Shield",
+            "minac": 22,
+            "maxac": 25,
+            "durability": 60,
             "mind": 1,
             "maxd": 5,
             "rs": 75,
@@ -18255,6 +15679,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "shie",
+            "lvl": "22",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "c": [
@@ -18270,6 +15699,9 @@ let constants_diablo2_96 = {
             "elc": "uts",
             "iq": 0,
             "n": "Gothic Shield",
+            "minac": 30,
+            "maxac": 35,
+            "durability": 40,
             "mind": 2,
             "maxd": 6,
             "rs": 60,
@@ -18281,6 +15713,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "shie",
+            "lvl": "30",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "c": [
@@ -18296,6 +15733,9 @@ let constants_diablo2_96 = {
             "elc": "ulg",
             "iq": 0,
             "n": "Leather Gloves",
+            "minac": 2,
+            "maxac": 3,
+            "durability": 12,
             "rs": 0,
             "hi": 0,
             "gt": 0,
@@ -18303,6 +15743,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "glov",
+            "lvl": "3",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18316,6 +15761,9 @@ let constants_diablo2_96 = {
             "elc": "uvg",
             "iq": 0,
             "n": "Heavy Gloves",
+            "minac": 5,
+            "maxac": 6,
+            "durability": 14,
             "rs": 0,
             "hi": 0,
             "gt": 0,
@@ -18323,6 +15771,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "glov",
+            "lvl": "7",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18336,6 +15789,9 @@ let constants_diablo2_96 = {
             "elc": "umg",
             "iq": 0,
             "n": "Chain Gloves",
+            "minac": 8,
+            "maxac": 9,
+            "durability": 16,
             "rs": 25,
             "hi": 0,
             "gt": 0,
@@ -18343,6 +15799,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "glov",
+            "lvl": "12",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18356,6 +15817,9 @@ let constants_diablo2_96 = {
             "elc": "utg",
             "iq": 0,
             "n": "Light Gauntlets",
+            "minac": 9,
+            "maxac": 11,
+            "durability": 18,
             "rs": 45,
             "hi": 0,
             "gt": 0,
@@ -18363,6 +15827,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "glov",
+            "lvl": "20",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18376,6 +15845,9 @@ let constants_diablo2_96 = {
             "elc": "uhg",
             "iq": 0,
             "n": "Gauntlets",
+            "minac": 12,
+            "maxac": 15,
+            "durability": 24,
             "rs": 60,
             "hi": 0,
             "gt": 0,
@@ -18383,6 +15855,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "glov",
+            "lvl": "27",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18396,6 +15873,9 @@ let constants_diablo2_96 = {
             "elc": "ulb",
             "iq": 0,
             "n": "Boots",
+            "minac": 2,
+            "maxac": 3,
+            "durability": 12,
             "mind": 3,
             "maxd": 8,
             "rs": 0,
@@ -18405,6 +15885,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "boot",
+            "lvl": "3",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18418,6 +15903,9 @@ let constants_diablo2_96 = {
             "elc": "uvb",
             "iq": 0,
             "n": "Heavy Boots",
+            "minac": 5,
+            "maxac": 6,
+            "durability": 14,
             "mind": 4,
             "maxd": 10,
             "rs": 18,
@@ -18427,6 +15915,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "boot",
+            "lvl": "7",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18440,6 +15933,9 @@ let constants_diablo2_96 = {
             "elc": "umb",
             "iq": 0,
             "n": "Chain Boots",
+            "minac": 8,
+            "maxac": 9,
+            "durability": 16,
             "mind": 6,
             "maxd": 12,
             "rs": 30,
@@ -18449,6 +15945,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "boot",
+            "lvl": "12",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18462,6 +15963,9 @@ let constants_diablo2_96 = {
             "elc": "utb",
             "iq": 0,
             "n": "Light Plated Boots",
+            "minac": 9,
+            "maxac": 11,
+            "durability": 18,
             "mind": 8,
             "maxd": 16,
             "rs": 50,
@@ -18471,6 +15975,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "boot",
+            "lvl": "20",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18484,6 +15993,9 @@ let constants_diablo2_96 = {
             "elc": "uhb",
             "iq": 0,
             "n": "Greaves",
+            "minac": 12,
+            "maxac": 15,
+            "durability": 24,
             "mind": 10,
             "maxd": 20,
             "rs": 70,
@@ -18493,6 +16005,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "boot",
+            "lvl": "27",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18503,9 +16020,12 @@ let constants_diablo2_96 = {
         "lbl": {
             "nc": "lbl",
             "exc": "zlb",
-            "elc": "ulc",
+            "elc": "ulb",
             "iq": 0,
             "n": "Sash",
+            "minac": 2,
+            "maxac": 2,
+            "durability": 12,
             "rs": 0,
             "hi": 0,
             "gt": 0,
@@ -18513,6 +16033,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 1,
             "it": 8,
+            "type": "belt",
+            "lvl": "3",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18523,9 +16048,12 @@ let constants_diablo2_96 = {
         "vbl": {
             "nc": "vbl",
             "exc": "zvb",
-            "elc": "uvc",
+            "elc": "uvb",
             "iq": 0,
             "n": "Light Belt",
+            "minac": 3,
+            "maxac": 3,
+            "durability": 14,
             "rs": 0,
             "hi": 0,
             "gt": 0,
@@ -18533,6 +16061,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 1,
             "it": 8,
+            "type": "belt",
+            "lvl": "7",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18543,9 +16076,12 @@ let constants_diablo2_96 = {
         "mbl": {
             "nc": "mbl",
             "exc": "zmb",
-            "elc": "umc",
+            "elc": "umb",
             "iq": 0,
             "n": "Belt",
+            "minac": 5,
+            "maxac": 5,
+            "durability": 16,
             "rs": 25,
             "hi": 0,
             "gt": 0,
@@ -18553,6 +16089,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 1,
             "it": 8,
+            "type": "belt",
+            "lvl": "12",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18563,9 +16104,12 @@ let constants_diablo2_96 = {
         "tbl": {
             "nc": "tbl",
             "exc": "ztb",
-            "elc": "utc",
+            "elc": "utb",
             "iq": 0,
             "n": "Heavy Belt",
+            "minac": 6,
+            "maxac": 6,
+            "durability": 18,
             "rs": 45,
             "hi": 0,
             "gt": 0,
@@ -18573,6 +16117,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 1,
             "it": 8,
+            "type": "belt",
+            "lvl": "20",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18583,9 +16132,12 @@ let constants_diablo2_96 = {
         "hbl": {
             "nc": "hbl",
             "exc": "zhb",
-            "elc": "uhc",
+            "elc": "uhb",
             "iq": 0,
             "n": "Plated Belt",
+            "minac": 8,
+            "maxac": 11,
+            "durability": 24,
             "rs": 60,
             "hi": 0,
             "gt": 0,
@@ -18593,6 +16145,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 1,
             "it": 8,
+            "type": "belt",
+            "lvl": "27",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18606,6 +16163,9 @@ let constants_diablo2_96 = {
             "elc": "uh9",
             "iq": 0,
             "n": "Bone Helm",
+            "minac": 33,
+            "maxac": 36,
+            "durability": 40,
             "rs": 25,
             "hi": 1,
             "gt": 1,
@@ -18615,6 +16175,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "helm",
+            "lvl": "22",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18628,6 +16193,9 @@ let constants_diablo2_96 = {
             "elc": "ush",
             "iq": 0,
             "n": "Bone Shield",
+            "minac": 10,
+            "maxac": 30,
+            "durability": 40,
             "mind": 3,
             "maxd": 6,
             "rs": 25,
@@ -18639,6 +16207,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "shie",
+            "lvl": "19",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "c": [
@@ -18654,6 +16227,9 @@ let constants_diablo2_96 = {
             "elc": "upk",
             "iq": 0,
             "n": "Spiked Shield",
+            "minac": 15,
+            "maxac": 25,
+            "durability": 40,
             "mind": 5,
             "maxd": 9,
             "rs": 30,
@@ -18665,6 +16241,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "shie",
+            "lvl": "11",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "c": [
@@ -18680,6 +16261,9 @@ let constants_diablo2_96 = {
             "elc": "uap",
             "iq": 1,
             "n": "War Hat",
+            "minac": 45,
+            "maxac": 53,
+            "durability": 12,
             "rs": 20,
             "hi": 1,
             "gt": 1,
@@ -18687,6 +16271,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "helm",
+            "lvl": "34",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18700,6 +16289,9 @@ let constants_diablo2_96 = {
             "elc": "ukp",
             "iq": 1,
             "n": "Sallet",
+            "minac": 52,
+            "maxac": 62,
+            "durability": 18,
             "rs": 43,
             "hi": 1,
             "gt": 1,
@@ -18709,6 +16301,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "helm",
+            "lvl": "37",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18722,6 +16319,9 @@ let constants_diablo2_96 = {
             "elc": "ulm",
             "iq": 1,
             "n": "Casque",
+            "minac": 63,
+            "maxac": 72,
+            "durability": 24,
             "rs": 59,
             "hi": 1,
             "gt": 1,
@@ -18731,6 +16331,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "helm",
+            "lvl": "42",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18744,6 +16349,9 @@ let constants_diablo2_96 = {
             "elc": "uhl",
             "iq": 1,
             "n": "Basinet",
+            "minac": 75,
+            "maxac": 84,
+            "durability": 30,
             "rs": 82,
             "hi": 1,
             "gt": 1,
@@ -18753,6 +16361,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "helm",
+            "lvl": "45",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18766,6 +16379,9 @@ let constants_diablo2_96 = {
             "elc": "uhm",
             "iq": 1,
             "n": "Winged Helm",
+            "minac": 85,
+            "maxac": 98,
+            "durability": 40,
             "rs": 115,
             "hi": 1,
             "gt": 1,
@@ -18773,6 +16389,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "helm",
+            "lvl": "51",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18786,6 +16407,9 @@ let constants_diablo2_96 = {
             "elc": "urn",
             "iq": 1,
             "n": "Grand Crown",
+            "minac": 78,
+            "maxac": 113,
+            "durability": 50,
             "rs": 103,
             "hi": 1,
             "gt": 1,
@@ -18795,6 +16419,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "helm",
+            "lvl": "55",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18808,6 +16437,9 @@ let constants_diablo2_96 = {
             "elc": "usk",
             "iq": 1,
             "n": "Death Mask",
+            "minac": 54,
+            "maxac": 86,
+            "durability": 20,
             "rs": 55,
             "hi": 1,
             "gt": 1,
@@ -18815,6 +16447,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 2,
+            "type": "helm",
+            "lvl": "48",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18828,6 +16465,9 @@ let constants_diablo2_96 = {
             "elc": "uui",
             "iq": 1,
             "n": "Ghost Armor",
+            "minac": 102,
+            "maxac": 117,
+            "durability": 20,
             "rs": 38,
             "hi": 1,
             "gt": 1,
@@ -18835,6 +16475,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "34",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18848,6 +16493,9 @@ let constants_diablo2_96 = {
             "elc": "uea",
             "iq": 1,
             "n": "Serpentskin Armor",
+            "minac": 111,
+            "maxac": 126,
+            "durability": 24,
             "rs": 43,
             "hi": 1,
             "gt": 1,
@@ -18855,6 +16503,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "36",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18868,6 +16521,9 @@ let constants_diablo2_96 = {
             "elc": "ula",
             "iq": 1,
             "n": "Demonhide Armor",
+            "minac": 122,
+            "maxac": 136,
+            "durability": 28,
             "rs": 50,
             "hi": 1,
             "gt": 1,
@@ -18875,6 +16531,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "37",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18888,6 +16549,9 @@ let constants_diablo2_96 = {
             "elc": "utu",
             "iq": 1,
             "n": "Trellised Armor",
+            "minac": 138,
+            "maxac": 153,
+            "durability": 32,
             "rs": 61,
             "hi": 1,
             "gt": 1,
@@ -18897,6 +16561,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "40",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18910,6 +16579,9 @@ let constants_diablo2_96 = {
             "elc": "ung",
             "iq": 1,
             "n": "Linked Mail",
+            "minac": 158,
+            "maxac": 172,
+            "durability": 26,
             "rs": 74,
             "hi": 1,
             "gt": 1,
@@ -18917,6 +16589,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "42",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18930,6 +16607,9 @@ let constants_diablo2_96 = {
             "elc": "ucl",
             "iq": 1,
             "n": "Tigulated Mail",
+            "minac": 176,
+            "maxac": 190,
+            "durability": 36,
             "rs": 86,
             "hi": 1,
             "gt": 1,
@@ -18937,6 +16617,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "43",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18950,6 +16635,9 @@ let constants_diablo2_96 = {
             "elc": "uhn",
             "iq": 1,
             "n": "Mesh Armor",
+            "minac": 198,
+            "maxac": 213,
+            "durability": 45,
             "rs": 92,
             "hi": 1,
             "gt": 1,
@@ -18957,6 +16645,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "45",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18970,6 +16663,9 @@ let constants_diablo2_96 = {
             "elc": "urs",
             "iq": 1,
             "n": "Cuirass",
+            "minac": 188,
+            "maxac": 202,
+            "durability": 50,
             "rs": 65,
             "hi": 1,
             "gt": 1,
@@ -18978,6 +16674,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "47",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -18991,6 +16692,9 @@ let constants_diablo2_96 = {
             "elc": "upl",
             "iq": 1,
             "n": "Russet Armor",
+            "minac": 225,
+            "maxac": 243,
+            "durability": 30,
             "rs": 97,
             "hi": 1,
             "gt": 1,
@@ -18998,6 +16702,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "49",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -19011,6 +16720,9 @@ let constants_diablo2_96 = {
             "elc": "ult",
             "iq": 1,
             "n": "Templar Coat",
+            "minac": 252,
+            "maxac": 274,
+            "durability": 60,
             "rs": 118,
             "hi": 1,
             "gt": 1,
@@ -19018,6 +16730,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "52",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -19031,6 +16748,9 @@ let constants_diablo2_96 = {
             "elc": "uld",
             "iq": 1,
             "n": "Sharktooth Armor",
+            "minac": 242,
+            "maxac": 258,
+            "durability": 48,
             "rs": 103,
             "hi": 1,
             "gt": 1,
@@ -19038,6 +16758,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "55",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -19051,6 +16776,9 @@ let constants_diablo2_96 = {
             "elc": "uth",
             "iq": 1,
             "n": "Embossed Plate",
+            "minac": 282,
+            "maxac": 303,
+            "durability": 55,
             "rs": 125,
             "hi": 1,
             "gt": 1,
@@ -19058,6 +16786,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "58",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -19071,6 +16804,9 @@ let constants_diablo2_96 = {
             "elc": "uul",
             "iq": 1,
             "n": "Chaos Armor",
+            "minac": 315,
+            "maxac": 342,
+            "durability": 70,
             "rs": 140,
             "hi": 1,
             "gt": 1,
@@ -19078,6 +16814,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "61",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -19091,6 +16832,9 @@ let constants_diablo2_96 = {
             "elc": "uar",
             "iq": 1,
             "n": "Ornate Plate",
+            "minac": 417,
+            "maxac": 450,
+            "durability": 60,
             "rs": 170,
             "hi": 1,
             "gt": 1,
@@ -19100,6 +16844,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "64",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -19113,6 +16862,9 @@ let constants_diablo2_96 = {
             "elc": "utp",
             "iq": 1,
             "n": "Mage Plate",
+            "minac": 225,
+            "maxac": 261,
+            "durability": 60,
             "rs": 55,
             "hi": 1,
             "gt": 1,
@@ -19120,6 +16872,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "60",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -19133,6 +16890,9 @@ let constants_diablo2_96 = {
             "elc": "uuc",
             "iq": 1,
             "n": "Defender",
+            "minac": 41,
+            "maxac": 49,
+            "durability": 68,
             "mind": 8,
             "maxd": 12,
             "rs": 38,
@@ -19144,6 +16904,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "shie",
+            "lvl": "34",
+            "gemsockets": 1,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "c": [
@@ -19159,6 +16924,9 @@ let constants_diablo2_96 = {
             "elc": "uml",
             "iq": 1,
             "n": "Round Shield",
+            "minac": 47,
+            "maxac": 55,
+            "durability": 64,
             "mind": 7,
             "maxd": 14,
             "rs": 53,
@@ -19170,6 +16938,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 5,
+            "type": "shie",
+            "lvl": "37",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "c": [
@@ -19185,6 +16958,9 @@ let constants_diablo2_96 = {
             "elc": "urg",
             "iq": 1,
             "n": "Scutum",
+            "minac": 53,
+            "maxac": 61,
+            "durability": 62,
             "mind": 11,
             "maxd": 15,
             "rs": 71,
@@ -19196,6 +16972,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "shie",
+            "lvl": "42",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "c": [
@@ -19211,6 +16992,9 @@ let constants_diablo2_96 = {
             "elc": "uit",
             "iq": 1,
             "n": "Dragon Shield",
+            "minac": 59,
+            "maxac": 67,
+            "durability": 76,
             "mind": 15,
             "maxd": 24,
             "rs": 91,
@@ -19222,6 +17006,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "shie",
+            "lvl": "45",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "c": [
@@ -19237,6 +17026,9 @@ let constants_diablo2_96 = {
             "elc": "uow",
             "iq": 1,
             "n": "Pavise",
+            "minac": 68,
+            "maxac": 78,
+            "durability": 72,
             "mind": 10,
             "maxd": 17,
             "rs": 133,
@@ -19248,6 +17040,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "shie",
+            "lvl": "50",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "c": [
@@ -19263,6 +17060,9 @@ let constants_diablo2_96 = {
             "elc": "uts",
             "iq": 1,
             "n": "Ancient Shield",
+            "minac": 80,
+            "maxac": 93,
+            "durability": 80,
             "mind": 12,
             "maxd": 16,
             "rs": 110,
@@ -19274,6 +17074,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "shie",
+            "lvl": "56",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "c": [
@@ -19289,6 +17094,9 @@ let constants_diablo2_96 = {
             "elc": "ulg",
             "iq": 1,
             "n": "Demonhide Gloves",
+            "minac": 28,
+            "maxac": 35,
+            "durability": 12,
             "rs": 20,
             "hi": 0,
             "gt": 0,
@@ -19296,6 +17104,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "glov",
+            "lvl": "36",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -19309,6 +17122,9 @@ let constants_diablo2_96 = {
             "elc": "uvg",
             "iq": 1,
             "n": "Sharkskin Gloves",
+            "minac": 33,
+            "maxac": 39,
+            "durability": 14,
             "rs": 20,
             "hi": 0,
             "gt": 0,
@@ -19316,6 +17132,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "glov",
+            "lvl": "39",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -19329,6 +17150,9 @@ let constants_diablo2_96 = {
             "elc": "umg",
             "iq": 1,
             "n": "Heavy Bracers",
+            "minac": 37,
+            "maxac": 44,
+            "durability": 16,
             "rs": 58,
             "hi": 0,
             "gt": 0,
@@ -19336,6 +17160,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "glov",
+            "lvl": "43",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -19349,6 +17178,9 @@ let constants_diablo2_96 = {
             "elc": "utg",
             "iq": 1,
             "n": "Battle Gauntlets",
+            "minac": 39,
+            "maxac": 47,
+            "durability": 18,
             "rs": 88,
             "hi": 0,
             "gt": 0,
@@ -19356,6 +17188,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "glov",
+            "lvl": "49",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -19369,6 +17206,9 @@ let constants_diablo2_96 = {
             "elc": "uhg",
             "iq": 1,
             "n": "War Gauntlets",
+            "minac": 43,
+            "maxac": 53,
+            "durability": 24,
             "rs": 110,
             "hi": 0,
             "gt": 0,
@@ -19376,6 +17216,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "glov",
+            "lvl": "54",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -19389,8 +17234,11 @@ let constants_diablo2_96 = {
             "elc": "ulb",
             "iq": 1,
             "n": "Demonhide Boots",
-            "mind": 26,
-            "maxd": 46,
+            "minac": 28,
+            "maxac": 35,
+            "durability": 12,
+            "mind": 13,
+            "maxd": 23,
             "rs": 20,
             "hi": 0,
             "gt": 0,
@@ -19398,6 +17246,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "boot",
+            "lvl": "36",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -19411,8 +17264,11 @@ let constants_diablo2_96 = {
             "elc": "uvb",
             "iq": 1,
             "n": "Sharkskin Boots",
-            "mind": 28,
-            "maxd": 50,
+            "minac": 33,
+            "maxac": 39,
+            "durability": 14,
+            "mind": 14,
+            "maxd": 25,
             "rs": 47,
             "hi": 0,
             "gt": 0,
@@ -19420,6 +17276,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "boot",
+            "lvl": "39",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -19433,8 +17294,11 @@ let constants_diablo2_96 = {
             "elc": "umb",
             "iq": 1,
             "n": "Mesh Boots",
-            "mind": 23,
-            "maxd": 52,
+            "minac": 37,
+            "maxac": 44,
+            "durability": 16,
+            "mind": 16,
+            "maxd": 27,
             "rs": 65,
             "hi": 0,
             "gt": 0,
@@ -19442,6 +17306,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "boot",
+            "lvl": "43",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -19455,8 +17324,11 @@ let constants_diablo2_96 = {
             "elc": "utb",
             "iq": 1,
             "n": "Battle Boots",
-            "mind": 37,
-            "maxd": 64,
+            "minac": 39,
+            "maxac": 47,
+            "durability": 18,
+            "mind": 18,
+            "maxd": 31,
             "rs": 95,
             "hi": 0,
             "gt": 0,
@@ -19464,6 +17336,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "boot",
+            "lvl": "49",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -19477,8 +17354,11 @@ let constants_diablo2_96 = {
             "elc": "uhb",
             "iq": 1,
             "n": "War Boots",
-            "mind": 39,
-            "maxd": 80,
+            "minac": 43,
+            "maxac": 53,
+            "durability": 24,
+            "mind": 20,
+            "maxd": 35,
             "rs": 125,
             "hi": 0,
             "gt": 0,
@@ -19486,6 +17366,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "boot",
+            "lvl": "54",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -19499,6 +17384,9 @@ let constants_diablo2_96 = {
             "elc": "ulc",
             "iq": 1,
             "n": "Demonhide Sash",
+            "minac": 29,
+            "maxac": 34,
+            "durability": 12,
             "rs": 20,
             "hi": 0,
             "gt": 0,
@@ -19506,6 +17394,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 1,
             "it": 8,
+            "type": "belt",
+            "lvl": "36",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -19519,6 +17412,9 @@ let constants_diablo2_96 = {
             "elc": "uvc",
             "iq": 1,
             "n": "Sharkskin Belt",
+            "minac": 31,
+            "maxac": 36,
+            "durability": 14,
             "rs": 20,
             "hi": 0,
             "gt": 0,
@@ -19526,6 +17422,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 1,
             "it": 8,
+            "type": "belt",
+            "lvl": "39",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -19539,6 +17440,9 @@ let constants_diablo2_96 = {
             "elc": "umc",
             "iq": 1,
             "n": "Mesh Belt",
+            "minac": 35,
+            "maxac": 40,
+            "durability": 16,
             "rs": 58,
             "hi": 0,
             "gt": 0,
@@ -19546,6 +17450,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 1,
             "it": 8,
+            "type": "belt",
+            "lvl": "43",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -19559,6 +17468,9 @@ let constants_diablo2_96 = {
             "elc": "utc",
             "iq": 1,
             "n": "Battle Belt",
+            "minac": 37,
+            "maxac": 42,
+            "durability": 18,
             "rs": 88,
             "hi": 0,
             "gt": 0,
@@ -19566,6 +17478,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 1,
             "it": 8,
+            "type": "belt",
+            "lvl": "49",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -19579,6 +17496,9 @@ let constants_diablo2_96 = {
             "elc": "uhc",
             "iq": 1,
             "n": "War Belt",
+            "minac": 41,
+            "maxac": 52,
+            "durability": 24,
             "rs": 110,
             "hi": 0,
             "gt": 0,
@@ -19586,6 +17506,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 1,
             "it": 8,
+            "type": "belt",
+            "lvl": "54",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -19599,6 +17524,9 @@ let constants_diablo2_96 = {
             "elc": "uh9",
             "iq": 1,
             "n": "Grim Helm",
+            "minac": 60,
+            "maxac": 125,
+            "durability": 40,
             "rs": 58,
             "hi": 1,
             "gt": 1,
@@ -19608,6 +17536,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "helm",
+            "lvl": "50",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -19621,6 +17554,9 @@ let constants_diablo2_96 = {
             "elc": "ush",
             "iq": 1,
             "n": "Grim Shield",
+            "minac": 50,
+            "maxac": 150,
+            "durability": 70,
             "mind": 14,
             "maxd": 20,
             "rs": 58,
@@ -19632,6 +17568,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "shie",
+            "lvl": "48",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "c": [
@@ -19647,6 +17588,9 @@ let constants_diablo2_96 = {
             "elc": "upk",
             "iq": 1,
             "n": "Barbed Shield",
+            "minac": 58,
+            "maxac": 78,
+            "durability": 55,
             "mind": 18,
             "maxd": 35,
             "rs": 65,
@@ -19658,6 +17602,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "shie",
+            "lvl": "42",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "c": [
@@ -19673,13 +17622,21 @@ let constants_diablo2_96 = {
             "elc": "drb",
             "iq": 0,
             "n": "Wolf Head",
+            "minac": 8,
+            "maxac": 11,
+            "durability": 20,
             "rs": 16,
             "hi": 1,
             "gt": 1,
             "i": "invdr1",
             "iw": 2,
             "ih": 2,
-            "it": 8,
+            "it": 0,
+            "type": "pelt",
+            "lvl": "4",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Druid Item",
@@ -19697,13 +17654,21 @@ let constants_diablo2_96 = {
             "elc": "drc",
             "iq": 0,
             "n": "Hawk Helm",
+            "minac": 4,
+            "maxac": 15,
+            "durability": 20,
             "rs": 20,
             "hi": 1,
             "gt": 1,
             "i": "invdr2",
             "iw": 2,
             "ih": 2,
-            "it": 8,
+            "it": 0,
+            "type": "pelt",
+            "lvl": "8",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Druid Item",
@@ -19721,13 +17686,21 @@ let constants_diablo2_96 = {
             "elc": "drd",
             "iq": 0,
             "n": "Antlers",
+            "minac": 18,
+            "maxac": 24,
+            "durability": 20,
             "rs": 24,
             "hi": 1,
             "gt": 1,
             "i": "invdr3",
             "iw": 2,
             "ih": 2,
-            "it": 8,
+            "it": 0,
+            "type": "pelt",
+            "lvl": "16",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Druid Item",
@@ -19745,13 +17718,21 @@ let constants_diablo2_96 = {
             "elc": "dre",
             "iq": 0,
             "n": "Falcon Mask",
+            "minac": 12,
+            "maxac": 28,
+            "durability": 20,
             "rs": 28,
             "hi": 1,
             "gt": 1,
             "i": "invdr4",
             "iw": 2,
             "ih": 2,
-            "it": 8,
+            "it": 0,
+            "type": "pelt",
+            "lvl": "20",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Druid Item",
@@ -19769,13 +17750,21 @@ let constants_diablo2_96 = {
             "elc": "drf",
             "iq": 0,
             "n": "Spirit Mask",
+            "minac": 22,
+            "maxac": 35,
+            "durability": 20,
             "rs": 30,
             "hi": 1,
             "gt": 1,
             "i": "invdr5",
             "iw": 2,
             "ih": 2,
-            "it": 8,
+            "it": 0,
+            "type": "pelt",
+            "lvl": "24",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Druid Item",
@@ -19793,13 +17782,21 @@ let constants_diablo2_96 = {
             "elc": "bab",
             "iq": 0,
             "n": "Jawbone Cap",
+            "minac": 10,
+            "maxac": 15,
+            "durability": 25,
             "rs": 25,
             "hi": 1,
             "gt": 1,
             "i": "invba1",
             "iw": 2,
             "ih": 2,
-            "it": 8,
+            "it": 0,
+            "type": "phlm",
+            "lvl": "4",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Barbarian Item",
@@ -19817,13 +17814,21 @@ let constants_diablo2_96 = {
             "elc": "bac",
             "iq": 0,
             "n": "Fanged Helm",
+            "minac": 15,
+            "maxac": 20,
+            "durability": 35,
             "rs": 35,
             "hi": 1,
             "gt": 1,
             "i": "invba2",
             "iw": 2,
             "ih": 2,
-            "it": 8,
+            "it": 0,
+            "type": "phlm",
+            "lvl": "8",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Barbarian Item",
@@ -19841,13 +17846,21 @@ let constants_diablo2_96 = {
             "elc": "bad",
             "iq": 0,
             "n": "Horned Helm",
+            "minac": 25,
+            "maxac": 30,
+            "durability": 45,
             "rs": 45,
             "hi": 1,
             "gt": 1,
             "i": "invba3",
             "iw": 2,
             "ih": 2,
-            "it": 8,
+            "it": 0,
+            "type": "phlm",
+            "lvl": "16",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Barbarian Item",
@@ -19865,13 +17878,21 @@ let constants_diablo2_96 = {
             "elc": "bae",
             "iq": 0,
             "n": "Assault Helmet",
+            "minac": 30,
+            "maxac": 35,
+            "durability": 50,
             "rs": 55,
             "hi": 1,
             "gt": 1,
             "i": "invba4",
             "iw": 2,
             "ih": 2,
-            "it": 8,
+            "it": 0,
+            "type": "phlm",
+            "lvl": "20",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Barbarian Item",
@@ -19889,13 +17910,21 @@ let constants_diablo2_96 = {
             "elc": "baf",
             "iq": 0,
             "n": "Avenger Guard",
+            "minac": 35,
+            "maxac": 50,
+            "durability": 55,
             "rs": 65,
             "hi": 1,
             "gt": 1,
             "i": "invba5",
             "iw": 2,
             "ih": 2,
-            "it": 8,
+            "it": 0,
+            "type": "phlm",
+            "lvl": "24",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Barbarian Item",
@@ -19913,6 +17942,9 @@ let constants_diablo2_96 = {
             "elc": "pab",
             "iq": 0,
             "n": "Targe",
+            "minac": 8,
+            "maxac": 12,
+            "durability": 20,
             "mind": 2,
             "maxd": 6,
             "rs": 16,
@@ -19922,6 +17954,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "ashd",
+            "lvl": "4",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Paladin Item",
@@ -19940,6 +17977,9 @@ let constants_diablo2_96 = {
             "elc": "pac",
             "iq": 0,
             "n": "Rondache",
+            "minac": 10,
+            "maxac": 18,
+            "durability": 30,
             "mind": 2,
             "maxd": 8,
             "rs": 26,
@@ -19949,6 +17989,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "ashd",
+            "lvl": "8",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Paladin Item",
@@ -19967,6 +18012,9 @@ let constants_diablo2_96 = {
             "elc": "pad",
             "iq": 0,
             "n": "Heraldic Shield",
+            "minac": 16,
+            "maxac": 26,
+            "durability": 40,
             "mind": 3,
             "maxd": 9,
             "rs": 40,
@@ -19976,6 +18024,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 0,
+            "type": "ashd",
+            "lvl": "16",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Paladin Item",
@@ -19994,6 +18047,9 @@ let constants_diablo2_96 = {
             "elc": "pae",
             "iq": 0,
             "n": "Aerin Shield",
+            "minac": 26,
+            "maxac": 36,
+            "durability": 50,
             "mind": 4,
             "maxd": 10,
             "rs": 50,
@@ -20003,6 +18059,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 0,
+            "type": "ashd",
+            "lvl": "20",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Paladin Item",
@@ -20021,6 +18082,9 @@ let constants_diablo2_96 = {
             "elc": "paf",
             "iq": 0,
             "n": "Crown Shield",
+            "minac": 30,
+            "maxac": 40,
+            "durability": 60,
             "mind": 4,
             "maxd": 12,
             "rs": 65,
@@ -20030,6 +18094,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "ashd",
+            "lvl": "24",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Paladin Item",
@@ -20048,6 +18117,9 @@ let constants_diablo2_96 = {
             "elc": "neb",
             "iq": 0,
             "n": "Preserved Head",
+            "minac": 2,
+            "maxac": 5,
+            "durability": 20,
             "rs": 12,
             "hi": 1,
             "gt": 2,
@@ -20055,6 +18127,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "head",
+            "lvl": "4",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Necromancer Item",
@@ -20070,9 +18147,12 @@ let constants_diablo2_96 = {
         "ne2": {
             "nc": "ne2",
             "exc": "ne7",
-            "elc": "neg",
+            "elc": "nec",
             "iq": 0,
             "n": "Zombie Head",
+            "minac": 4,
+            "maxac": 8,
+            "durability": 20,
             "rs": 14,
             "hi": 1,
             "gt": 2,
@@ -20080,6 +18160,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "head",
+            "lvl": "8",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Necromancer Item",
@@ -20098,6 +18183,9 @@ let constants_diablo2_96 = {
             "elc": "ned",
             "iq": 0,
             "n": "Unraveller Head",
+            "minac": 6,
+            "maxac": 10,
+            "durability": 20,
             "rs": 18,
             "hi": 1,
             "gt": 2,
@@ -20105,6 +18193,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "head",
+            "lvl": "16",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Necromancer Item",
@@ -20123,6 +18216,9 @@ let constants_diablo2_96 = {
             "elc": "nee",
             "iq": 0,
             "n": "Gargoyle Head",
+            "minac": 10,
+            "maxac": 16,
+            "durability": 20,
             "rs": 20,
             "hi": 1,
             "gt": 2,
@@ -20130,6 +18226,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "head",
+            "lvl": "20",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Necromancer Item",
@@ -20148,6 +18249,9 @@ let constants_diablo2_96 = {
             "elc": "nef",
             "iq": 0,
             "n": "Demon Head",
+            "minac": 15,
+            "maxac": 20,
+            "durability": 20,
             "rs": 25,
             "hi": 1,
             "gt": 2,
@@ -20155,6 +18259,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "head",
+            "lvl": "24",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Necromancer Item",
@@ -20169,10 +18278,13 @@ let constants_diablo2_96 = {
         },
         "ci0": {
             "nc": "ci0",
-            "exc": "",
-            "elc": "",
+            "exc": "ci2",
+            "elc": "ci3",
             "iq": 0,
             "n": "Circlet",
+            "minac": 20,
+            "maxac": 30,
+            "durability": 35,
             "rs": 0,
             "hi": 1,
             "gt": 1,
@@ -20180,6 +18292,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 2,
+            "type": "circ",
+            "lvl": "24",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "c": [
@@ -20194,6 +18311,9 @@ let constants_diablo2_96 = {
             "elc": "ci3",
             "iq": 0,
             "n": "Coronet",
+            "minac": 30,
+            "maxac": 40,
+            "durability": 30,
             "rs": 0,
             "hi": 1,
             "gt": 1,
@@ -20201,6 +18321,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 2,
+            "type": "circ",
+            "lvl": "35",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "c": [
@@ -20215,6 +18340,9 @@ let constants_diablo2_96 = {
             "elc": "ci3",
             "iq": 1,
             "n": "Tiara",
+            "minac": 40,
+            "maxac": 50,
+            "durability": 25,
             "rs": 0,
             "hi": 1,
             "gt": 1,
@@ -20222,6 +18350,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 2,
+            "type": "circ",
+            "lvl": "45",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "c": [
@@ -20236,6 +18369,9 @@ let constants_diablo2_96 = {
             "elc": "ci3",
             "iq": 2,
             "n": "Diadem",
+            "minac": 50,
+            "maxac": 60,
+            "durability": 20,
             "rs": 0,
             "hi": 1,
             "gt": 1,
@@ -20243,6 +18379,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 2,
+            "type": "circ",
+            "lvl": "60",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "c": [
@@ -20257,6 +18398,9 @@ let constants_diablo2_96 = {
             "elc": "uap",
             "iq": 2,
             "n": "Shako",
+            "minac": 98,
+            "maxac": 141,
+            "durability": 12,
             "rs": 50,
             "hi": 1,
             "gt": 1,
@@ -20264,6 +18408,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "helm",
+            "lvl": "65",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20277,6 +18426,9 @@ let constants_diablo2_96 = {
             "elc": "ukp",
             "iq": 2,
             "n": "Hydraskull",
+            "minac": 101,
+            "maxac": 145,
+            "durability": 18,
             "rs": 84,
             "hi": 1,
             "gt": 1,
@@ -20284,6 +18436,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "helm",
+            "lvl": "68",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20297,6 +18454,9 @@ let constants_diablo2_96 = {
             "elc": "ulm",
             "iq": 2,
             "n": "Armet",
+            "minac": 105,
+            "maxac": 149,
+            "durability": 24,
             "rs": 109,
             "hi": 1,
             "gt": 1,
@@ -20306,6 +18466,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "helm",
+            "lvl": "73",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20319,6 +18484,9 @@ let constants_diablo2_96 = {
             "elc": "uhl",
             "iq": 2,
             "n": "Giant Conch",
+            "minac": 110,
+            "maxac": 154,
+            "durability": 30,
             "rs": 142,
             "hi": 1,
             "gt": 1,
@@ -20328,6 +18496,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "helm",
+            "lvl": "54",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20341,6 +18514,9 @@ let constants_diablo2_96 = {
             "elc": "uhm",
             "iq": 2,
             "n": "Spired Helm",
+            "minac": 114,
+            "maxac": 159,
+            "durability": 40,
             "rs": 192,
             "hi": 1,
             "gt": 1,
@@ -20349,6 +18525,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "helm",
+            "lvl": "78",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20362,6 +18543,9 @@ let constants_diablo2_96 = {
             "elc": "urn",
             "iq": 2,
             "n": "Corona",
+            "minac": 111,
+            "maxac": 165,
+            "durability": 50,
             "rs": 174,
             "hi": 1,
             "gt": 1,
@@ -20369,6 +18553,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "helm",
+            "lvl": "81",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20382,6 +18571,9 @@ let constants_diablo2_96 = {
             "elc": "usk",
             "iq": 2,
             "n": "Demonhead",
+            "minac": 101,
+            "maxac": 154,
+            "durability": 20,
             "rs": 102,
             "hi": 1,
             "gt": 1,
@@ -20389,6 +18581,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 2,
+            "type": "helm",
+            "lvl": "76",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20402,6 +18599,9 @@ let constants_diablo2_96 = {
             "elc": "uui",
             "iq": 2,
             "n": "Dusk Shroud",
+            "minac": 361,
+            "maxac": 467,
+            "durability": 20,
             "rs": 77,
             "hi": 1,
             "gt": 1,
@@ -20409,6 +18609,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "66",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20422,6 +18627,9 @@ let constants_diablo2_96 = {
             "elc": "uea",
             "iq": 2,
             "n": "Wyrmhide",
+            "minac": 364,
+            "maxac": 470,
+            "durability": 24,
             "rs": 84,
             "hi": 1,
             "gt": 1,
@@ -20429,6 +18637,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "67",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20442,6 +18655,9 @@ let constants_diablo2_96 = {
             "elc": "ula",
             "iq": 2,
             "n": "Scarab Husk",
+            "minac": 369,
+            "maxac": 474,
+            "durability": 28,
             "rs": 95,
             "hi": 1,
             "gt": 1,
@@ -20449,6 +18665,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "68",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20462,6 +18683,9 @@ let constants_diablo2_96 = {
             "elc": "utu",
             "iq": 2,
             "n": "Wire Fleece",
+            "minac": 375,
+            "maxac": 481,
+            "durability": 32,
             "rs": 111,
             "hi": 1,
             "gt": 1,
@@ -20469,6 +18693,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "70",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20482,6 +18711,9 @@ let constants_diablo2_96 = {
             "elc": "ung",
             "iq": 2,
             "n": "Diamond Mail",
+            "minac": 383,
+            "maxac": 489,
+            "durability": 26,
             "rs": 131,
             "hi": 1,
             "gt": 1,
@@ -20489,6 +18721,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "72",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20502,6 +18739,9 @@ let constants_diablo2_96 = {
             "elc": "ucl",
             "iq": 2,
             "n": "Loricated Mail",
+            "minac": 390,
+            "maxac": 496,
+            "durability": 36,
             "rs": 149,
             "hi": 1,
             "gt": 1,
@@ -20509,6 +18749,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "72",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20522,6 +18767,9 @@ let constants_diablo2_96 = {
             "elc": "uhn",
             "iq": 2,
             "n": "Boneweave",
+            "minac": 399,
+            "maxac": 505,
+            "durability": 45,
             "rs": 158,
             "hi": 1,
             "gt": 1,
@@ -20529,6 +18777,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "64",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20542,6 +18795,9 @@ let constants_diablo2_96 = {
             "elc": "urs",
             "iq": 2,
             "n": "Great Hauberk",
+            "minac": 395,
+            "maxac": 501,
+            "durability": 50,
             "rs": 118,
             "hi": 1,
             "gt": 1,
@@ -20549,6 +18805,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "75",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20562,6 +18823,9 @@ let constants_diablo2_96 = {
             "elc": "upl",
             "iq": 2,
             "n": "Balrog Skin",
+            "minac": 410,
+            "maxac": 517,
+            "durability": 30,
             "rs": 165,
             "hi": 1,
             "gt": 1,
@@ -20569,6 +18833,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "77",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20582,6 +18851,9 @@ let constants_diablo2_96 = {
             "elc": "ult",
             "iq": 2,
             "n": "Hellforge Plate",
+            "minac": 421,
+            "maxac": 530,
+            "durability": 60,
             "rs": 196,
             "hi": 1,
             "gt": 1,
@@ -20589,6 +18861,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "79",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20602,6 +18879,9 @@ let constants_diablo2_96 = {
             "elc": "uld",
             "iq": 2,
             "n": "Kraken Shell",
+            "minac": 417,
+            "maxac": 523,
+            "durability": 48,
             "rs": 174,
             "hi": 1,
             "gt": 1,
@@ -20609,6 +18889,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "81",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20622,6 +18907,9 @@ let constants_diablo2_96 = {
             "elc": "uth",
             "iq": 2,
             "n": "Lacquered Plate",
+            "minac": 433,
+            "maxac": 541,
+            "durability": 55,
             "rs": 208,
             "hi": 1,
             "gt": 1,
@@ -20629,6 +18917,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "84",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20642,6 +18935,9 @@ let constants_diablo2_96 = {
             "elc": "uul",
             "iq": 2,
             "n": "Shadow Plate",
+            "minac": 446,
+            "maxac": 557,
+            "durability": 70,
             "rs": 230,
             "hi": 1,
             "gt": 1,
@@ -20649,6 +18945,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "86",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20662,6 +18963,9 @@ let constants_diablo2_96 = {
             "elc": "uar",
             "iq": 2,
             "n": "Sacred Armor",
+            "minac": 487,
+            "maxac": 600,
+            "durability": 60,
             "rs": 232,
             "hi": 1,
             "gt": 1,
@@ -20671,6 +18975,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "88",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20684,6 +18993,9 @@ let constants_diablo2_96 = {
             "elc": "utp",
             "iq": 2,
             "n": "Archon Plate",
+            "minac": 410,
+            "maxac": 524,
+            "durability": 60,
             "rs": 103,
             "hi": 1,
             "gt": 1,
@@ -20691,6 +19003,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "tors",
+            "lvl": "85",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20704,6 +19021,9 @@ let constants_diablo2_96 = {
             "elc": "uuc",
             "iq": 2,
             "n": "Heater",
+            "minac": 81,
+            "maxac": 100,
+            "durability": 88,
             "mind": 16,
             "maxd": 30,
             "rs": 77,
@@ -20715,6 +19035,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "shie",
+            "lvl": "66",
+            "gemsockets": 1,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "c": [
@@ -20730,6 +19055,9 @@ let constants_diablo2_96 = {
             "elc": "uml",
             "iq": 2,
             "n": "Luna",
+            "minac": 84,
+            "maxac": 103,
+            "durability": 84,
             "mind": 17,
             "maxd": 29,
             "rs": 100,
@@ -20741,6 +19069,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 5,
+            "type": "shie",
+            "lvl": "68",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "c": [
@@ -20756,6 +19089,9 @@ let constants_diablo2_96 = {
             "elc": "urg",
             "iq": 2,
             "n": "Hyperion",
+            "minac": 87,
+            "maxac": 106,
+            "durability": 82,
             "mind": 14,
             "maxd": 32,
             "rs": 127,
@@ -20767,6 +19103,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "shie",
+            "lvl": "72",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "c": [
@@ -20782,6 +19123,9 @@ let constants_diablo2_96 = {
             "elc": "uit",
             "iq": 2,
             "n": "Monarch",
+            "minac": 90,
+            "maxac": 109,
+            "durability": 86,
             "mind": 12,
             "maxd": 34,
             "rs": 156,
@@ -20793,6 +19137,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "shie",
+            "lvl": "74",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "c": [
@@ -20808,6 +19157,9 @@ let constants_diablo2_96 = {
             "elc": "uow",
             "iq": 2,
             "n": "Aegis",
+            "minac": 94,
+            "maxac": 114,
+            "durability": 92,
             "mind": 18,
             "maxd": 28,
             "rs": 219,
@@ -20819,6 +19171,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "shie",
+            "lvl": "78",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "c": [
@@ -20834,6 +19191,9 @@ let constants_diablo2_96 = {
             "elc": "uts",
             "iq": 2,
             "n": "Ward",
+            "minac": 100,
+            "maxac": 121,
+            "durability": 100,
             "mind": 11,
             "maxd": 35,
             "rs": 185,
@@ -20845,6 +19205,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "shie",
+            "lvl": "82",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "c": [
@@ -20860,6 +19225,9 @@ let constants_diablo2_96 = {
             "elc": "ulg",
             "iq": 2,
             "n": "Bramble Mitts",
+            "minac": 54,
+            "maxac": 62,
+            "durability": 12,
             "rs": 50,
             "hi": 0,
             "gt": 0,
@@ -20867,6 +19235,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "glov",
+            "lvl": "67",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20880,6 +19253,9 @@ let constants_diablo2_96 = {
             "elc": "uvg",
             "iq": 2,
             "n": "Vampirebone Gloves",
+            "minac": 56,
+            "maxac": 65,
+            "durability": 14,
             "rs": 50,
             "hi": 0,
             "gt": 0,
@@ -20887,6 +19263,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "glov",
+            "lvl": "69",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20900,6 +19281,9 @@ let constants_diablo2_96 = {
             "elc": "umg",
             "iq": 2,
             "n": "Vambraces",
+            "minac": 59,
+            "maxac": 67,
+            "durability": 16,
             "rs": 106,
             "hi": 0,
             "gt": 0,
@@ -20907,6 +19291,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "glov",
+            "lvl": "72",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20920,6 +19309,9 @@ let constants_diablo2_96 = {
             "elc": "utg",
             "iq": 2,
             "n": "Crusader Gauntlets",
+            "minac": 59,
+            "maxac": 68,
+            "durability": 18,
             "rs": 151,
             "hi": 0,
             "gt": 0,
@@ -20927,6 +19319,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "glov",
+            "lvl": "77",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20940,6 +19337,9 @@ let constants_diablo2_96 = {
             "elc": "uhg",
             "iq": 2,
             "n": "Ogre Gauntlets",
+            "minac": 62,
+            "maxac": 71,
+            "durability": 24,
             "rs": 185,
             "hi": 0,
             "gt": 0,
@@ -20947,6 +19347,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "glov",
+            "lvl": "81",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20960,8 +19365,11 @@ let constants_diablo2_96 = {
             "elc": "ulb",
             "iq": 2,
             "n": "Wyrmhide Boots",
-            "mind": 65,
-            "maxd": 100,
+            "minac": 54,
+            "maxac": 62,
+            "durability": 12,
+            "mind": 23,
+            "maxd": 38,
             "rs": 50,
             "hi": 0,
             "gt": 0,
@@ -20969,6 +19377,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "boot",
+            "lvl": "67",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -20982,8 +19395,11 @@ let constants_diablo2_96 = {
             "elc": "uvb",
             "iq": 2,
             "n": "Scarabshell Boots",
-            "mind": 60,
-            "maxd": 110,
+            "minac": 56,
+            "maxac": 65,
+            "durability": 14,
+            "mind": 24,
+            "maxd": 40,
             "rs": 91,
             "hi": 0,
             "gt": 0,
@@ -20991,6 +19407,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "boot",
+            "lvl": "69",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -21004,8 +19425,11 @@ let constants_diablo2_96 = {
             "elc": "umb",
             "iq": 2,
             "n": "Boneweave Boots",
-            "mind": 69,
-            "maxd": 118,
+            "minac": 59,
+            "maxac": 67,
+            "durability": 16,
+            "mind": 26,
+            "maxd": 42,
             "rs": 118,
             "hi": 0,
             "gt": 0,
@@ -21013,6 +19437,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "boot",
+            "lvl": "72",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -21026,8 +19455,11 @@ let constants_diablo2_96 = {
             "elc": "utb",
             "iq": 2,
             "n": "Mirrored Boots",
-            "mind": 50,
-            "maxd": 145,
+            "minac": 59,
+            "maxac": 68,
+            "durability": 18,
+            "mind": 28,
+            "maxd": 46,
             "rs": 163,
             "hi": 0,
             "gt": 0,
@@ -21035,6 +19467,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "boot",
+            "lvl": "77",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -21048,8 +19485,11 @@ let constants_diablo2_96 = {
             "elc": "uhb",
             "iq": 2,
             "n": "Myrmidon Greaves",
-            "mind": 83,
-            "maxd": 149,
+            "minac": 62,
+            "maxac": 71,
+            "durability": 24,
+            "mind": 30,
+            "maxd": 50,
             "rs": 208,
             "hi": 0,
             "gt": 0,
@@ -21057,6 +19497,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "boot",
+            "lvl": "81",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -21070,6 +19515,9 @@ let constants_diablo2_96 = {
             "elc": "ulc",
             "iq": 2,
             "n": "Spiderweb Sash",
+            "minac": 55,
+            "maxac": 62,
+            "durability": 12,
             "rs": 50,
             "hi": 0,
             "gt": 0,
@@ -21077,6 +19525,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 1,
             "it": 8,
+            "type": "belt",
+            "lvl": "67",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -21090,6 +19543,9 @@ let constants_diablo2_96 = {
             "elc": "uvc",
             "iq": 2,
             "n": "Vampirefang Belt",
+            "minac": 56,
+            "maxac": 63,
+            "durability": 14,
             "rs": 50,
             "hi": 0,
             "gt": 0,
@@ -21097,6 +19553,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 1,
             "it": 8,
+            "type": "belt",
+            "lvl": "69",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -21110,6 +19571,9 @@ let constants_diablo2_96 = {
             "elc": "umc",
             "iq": 2,
             "n": "Mithril Coil",
+            "minac": 58,
+            "maxac": 65,
+            "durability": 16,
             "rs": 106,
             "hi": 0,
             "gt": 0,
@@ -21117,6 +19581,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 1,
             "it": 8,
+            "type": "belt",
+            "lvl": "72",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -21130,6 +19599,9 @@ let constants_diablo2_96 = {
             "elc": "utc",
             "iq": 2,
             "n": "Troll Belt",
+            "minac": 59,
+            "maxac": 66,
+            "durability": 18,
             "rs": 151,
             "hi": 0,
             "gt": 0,
@@ -21137,6 +19609,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 1,
             "it": 8,
+            "type": "belt",
+            "lvl": "77",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -21150,6 +19627,9 @@ let constants_diablo2_96 = {
             "elc": "uhc",
             "iq": 2,
             "n": "Colossus Girdle",
+            "minac": 61,
+            "maxac": 71,
+            "durability": 24,
             "rs": 185,
             "hi": 0,
             "gt": 0,
@@ -21157,6 +19637,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 1,
             "it": 8,
+            "type": "belt",
+            "lvl": "81",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -21170,8 +19655,11 @@ let constants_diablo2_96 = {
             "elc": "uh9",
             "iq": 2,
             "n": "Bone Visage",
+            "minac": 70,
+            "maxac": 108,
+            "durability": 40,
             "rs": 106,
-            "hi": 1,
+            "hi": 0,
             "gt": 1,
             "i": "invbhm",
             "ui": "invbhmu",
@@ -21179,6 +19667,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 8,
+            "type": "helm",
+            "lvl": "78",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Armor",
             "c": [
@@ -21192,10 +19685,13 @@ let constants_diablo2_96 = {
             "elc": "ush",
             "iq": 2,
             "n": "Troll Nest",
+            "minac": 65,
+            "maxac": 120,
+            "durability": 74,
             "mind": 24,
             "maxd": 38,
             "rs": 106,
-            "hi": 1,
+            "hi": 0,
             "gt": 2,
             "i": "invbsh",
             "ui": "invbshu",
@@ -21203,6 +19699,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "shie",
+            "lvl": "76",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "c": [
@@ -21218,10 +19719,13 @@ let constants_diablo2_96 = {
             "elc": "upk",
             "iq": 2,
             "n": "Blade Barrier",
+            "minac": 69,
+            "maxac": 84,
+            "durability": 83,
             "mind": 26,
             "maxd": 40,
             "rs": 118,
-            "hi": 1,
+            "hi": 0,
             "gt": 2,
             "i": "invspk",
             "ui": "invspku",
@@ -21229,6 +19733,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "shie",
+            "lvl": "72",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "c": [
@@ -21244,13 +19753,21 @@ let constants_diablo2_96 = {
             "elc": "drb",
             "iq": 1,
             "n": "Alpha Helm",
+            "minac": 52,
+            "maxac": 62,
+            "durability": 20,
             "rs": 44,
             "hi": 1,
             "gt": 1,
             "i": "invdr1",
             "iw": 2,
             "ih": 2,
-            "it": 8,
+            "it": 0,
+            "type": "pelt",
+            "lvl": "28",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Druid Item",
@@ -21268,13 +19785,21 @@ let constants_diablo2_96 = {
             "elc": "drc",
             "iq": 1,
             "n": "Griffon Headdress",
+            "minac": 46,
+            "maxac": 68,
+            "durability": 20,
             "rs": 50,
             "hi": 1,
             "gt": 1,
             "i": "invdr2",
             "iw": 2,
             "ih": 2,
-            "it": 8,
+            "it": 0,
+            "type": "pelt",
+            "lvl": "31",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Druid Item",
@@ -21292,13 +19817,21 @@ let constants_diablo2_96 = {
             "elc": "drd",
             "iq": 1,
             "n": "Hunter's Guise",
+            "minac": 67,
+            "maxac": 81,
+            "durability": 20,
             "rs": 56,
             "hi": 1,
             "gt": 1,
             "i": "invdr3",
             "iw": 2,
             "ih": 2,
-            "it": 8,
+            "it": 0,
+            "type": "pelt",
+            "lvl": "37",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Druid Item",
@@ -21316,13 +19849,21 @@ let constants_diablo2_96 = {
             "elc": "dre",
             "iq": 1,
             "n": "Sacred Feathers",
+            "minac": 58,
+            "maxac": 87,
+            "durability": 20,
             "rs": 62,
             "hi": 1,
             "gt": 1,
             "i": "invdr4",
             "iw": 2,
             "ih": 2,
-            "it": 8,
+            "it": 0,
+            "type": "pelt",
+            "lvl": "40",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Druid Item",
@@ -21340,13 +19881,21 @@ let constants_diablo2_96 = {
             "elc": "drf",
             "iq": 1,
             "n": "Totemic Mask",
+            "minac": 73,
+            "maxac": 98,
+            "durability": 20,
             "rs": 65,
             "hi": 1,
             "gt": 1,
             "i": "invdr5",
             "iw": 2,
             "ih": 2,
-            "it": 8,
+            "it": 0,
+            "type": "pelt",
+            "lvl": "43",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Druid Item",
@@ -21364,6 +19913,9 @@ let constants_diablo2_96 = {
             "elc": "bab",
             "iq": 1,
             "n": "Jawbone Visor",
+            "minac": 55,
+            "maxac": 68,
+            "durability": 25,
             "rs": 58,
             "hi": 1,
             "gt": 1,
@@ -21371,6 +19923,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "phlm",
+            "lvl": "28",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Barbarian Item",
@@ -21388,6 +19945,9 @@ let constants_diablo2_96 = {
             "elc": "bac",
             "iq": 1,
             "n": "Lion Helm",
+            "minac": 63,
+            "maxac": 75,
+            "durability": 35,
             "rs": 73,
             "hi": 1,
             "gt": 1,
@@ -21395,6 +19955,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "phlm",
+            "lvl": "31",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Barbarian Item",
@@ -21412,6 +19977,9 @@ let constants_diablo2_96 = {
             "elc": "bad",
             "iq": 1,
             "n": "Rage Mask",
+            "minac": 78,
+            "maxac": 90,
+            "durability": 45,
             "rs": 88,
             "hi": 1,
             "gt": 1,
@@ -21419,6 +19987,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "phlm",
+            "lvl": "37",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Barbarian Item",
@@ -21436,6 +20009,9 @@ let constants_diablo2_96 = {
             "elc": "bae",
             "iq": 1,
             "n": "Savage Helmet",
+            "minac": 85,
+            "maxac": 98,
+            "durability": 50,
             "rs": 103,
             "hi": 1,
             "gt": 1,
@@ -21443,6 +20019,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "phlm",
+            "lvl": "40",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Barbarian Item",
@@ -21460,6 +20041,9 @@ let constants_diablo2_96 = {
             "elc": "baf",
             "iq": 1,
             "n": "Slayer Guard",
+            "minac": 93,
+            "maxac": 120,
+            "durability": 55,
             "rs": 118,
             "hi": 1,
             "gt": 1,
@@ -21467,6 +20051,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "phlm",
+            "lvl": "43",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Barbarian Item",
@@ -21484,6 +20073,9 @@ let constants_diablo2_96 = {
             "elc": "pab",
             "iq": 1,
             "n": "Akaran Targe",
+            "minac": 47,
+            "maxac": 58,
+            "durability": 20,
             "mind": 12,
             "maxd": 16,
             "rs": 44,
@@ -21493,6 +20085,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "ashd",
+            "lvl": "28",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Paladin Item",
@@ -21511,6 +20108,9 @@ let constants_diablo2_96 = {
             "elc": "pac",
             "iq": 1,
             "n": "Akaran Rondache",
+            "minac": 50,
+            "maxac": 67,
+            "durability": 30,
             "mind": 15,
             "maxd": 20,
             "rs": 59,
@@ -21520,6 +20120,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "ashd",
+            "lvl": "31",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Paladin Item",
@@ -21538,6 +20143,9 @@ let constants_diablo2_96 = {
             "elc": "pad",
             "iq": 1,
             "n": "Protector Shield",
+            "minac": 59,
+            "maxac": 79,
+            "durability": 40,
             "mind": 18,
             "maxd": 24,
             "rs": 69,
@@ -21547,6 +20155,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 0,
+            "type": "ashd",
+            "lvl": "37",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Paladin Item",
@@ -21565,6 +20178,9 @@ let constants_diablo2_96 = {
             "elc": "pae",
             "iq": 1,
             "n": "Gilded Shield",
+            "minac": 74,
+            "maxac": 94,
+            "durability": 50,
             "mind": 20,
             "maxd": 28,
             "rs": 89,
@@ -21574,6 +20190,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 0,
+            "type": "ashd",
+            "lvl": "40",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Paladin Item",
@@ -21592,6 +20213,9 @@ let constants_diablo2_96 = {
             "elc": "paf",
             "iq": 1,
             "n": "Royal Shield",
+            "minac": 80,
+            "maxac": 100,
+            "durability": 60,
             "mind": 24,
             "maxd": 32,
             "rs": 114,
@@ -21601,6 +20225,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "ashd",
+            "lvl": "43",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Paladin Item",
@@ -21619,6 +20248,9 @@ let constants_diablo2_96 = {
             "elc": "neb",
             "iq": 1,
             "n": "Mummified Trophy",
+            "minac": 38,
+            "maxac": 48,
+            "durability": 20,
             "rs": 38,
             "hi": 1,
             "gt": 2,
@@ -21626,6 +20258,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "head",
+            "lvl": "28",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Necromancer Item",
@@ -21641,9 +20278,12 @@ let constants_diablo2_96 = {
         "ne7": {
             "nc": "ne2",
             "exc": "ne7",
-            "elc": "neg",
+            "elc": "nec",
             "iq": 1,
             "n": "Fetish Trophy",
+            "minac": 41,
+            "maxac": 52,
+            "durability": 20,
             "rs": 41,
             "hi": 1,
             "gt": 2,
@@ -21651,6 +20291,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "head",
+            "lvl": "31",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Necromancer Item",
@@ -21669,6 +20314,9 @@ let constants_diablo2_96 = {
             "elc": "ned",
             "iq": 1,
             "n": "Sexton Trophy",
+            "minac": 44,
+            "maxac": 55,
+            "durability": 20,
             "rs": 47,
             "hi": 1,
             "gt": 2,
@@ -21676,6 +20324,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "head",
+            "lvl": "37",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Necromancer Item",
@@ -21694,6 +20347,9 @@ let constants_diablo2_96 = {
             "elc": "nee",
             "iq": 1,
             "n": "Cantor Trophy",
+            "minac": 50,
+            "maxac": 64,
+            "durability": 20,
             "rs": 50,
             "hi": 1,
             "gt": 2,
@@ -21701,6 +20357,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "head",
+            "lvl": "40",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Necromancer Item",
@@ -21719,6 +20380,9 @@ let constants_diablo2_96 = {
             "elc": "nef",
             "iq": 1,
             "n": "Hierophant Trophy",
+            "minac": 58,
+            "maxac": 70,
+            "durability": 20,
             "rs": 58,
             "hi": 1,
             "gt": 2,
@@ -21726,6 +20390,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "head",
+            "lvl": "43",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Necromancer Item",
@@ -21744,13 +20413,21 @@ let constants_diablo2_96 = {
             "elc": "drb",
             "iq": 2,
             "n": "Blood Spirit",
+            "minac": 101,
+            "maxac": 145,
+            "durability": 20,
             "rs": 86,
             "hi": 1,
             "gt": 1,
             "i": "invdr1",
             "iw": 2,
             "ih": 2,
-            "it": 8,
+            "it": 0,
+            "type": "pelt",
+            "lvl": "56",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Druid Item",
@@ -21768,13 +20445,21 @@ let constants_diablo2_96 = {
             "elc": "drc",
             "iq": 2,
             "n": "Sun Spirit",
+            "minac": 98,
+            "maxac": 147,
+            "durability": 20,
             "rs": 95,
             "hi": 1,
             "gt": 1,
             "i": "invdr2",
             "iw": 2,
             "ih": 2,
-            "it": 8,
+            "it": 0,
+            "type": "pelt",
+            "lvl": "58",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Druid Item",
@@ -21792,13 +20477,21 @@ let constants_diablo2_96 = {
             "elc": "drd",
             "iq": 2,
             "n": "Earth Spirit",
+            "minac": 107,
+            "maxac": 152,
+            "durability": 20,
             "rs": 104,
             "hi": 1,
             "gt": 1,
             "i": "invdr3",
             "iw": 2,
             "ih": 2,
-            "it": 8,
+            "it": 0,
+            "type": "pelt",
+            "lvl": "63",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Druid Item",
@@ -21816,13 +20509,21 @@ let constants_diablo2_96 = {
             "elc": "dre",
             "iq": 2,
             "n": "Sky Spirit",
+            "minac": 103,
+            "maxac": 155,
+            "durability": 20,
             "rs": 113,
             "hi": 1,
             "gt": 1,
             "i": "invdr4",
             "iw": 2,
             "ih": 2,
-            "it": 8,
+            "it": 0,
+            "type": "pelt",
+            "lvl": "65",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Druid Item",
@@ -21840,13 +20541,21 @@ let constants_diablo2_96 = {
             "elc": "drf",
             "iq": 2,
             "n": "Dream Spirit",
+            "minac": 109,
+            "maxac": 159,
+            "durability": 20,
             "rs": 118,
             "hi": 1,
             "gt": 1,
             "i": "invdr5",
             "iw": 2,
             "ih": 2,
-            "it": 8,
+            "it": 0,
+            "type": "pelt",
+            "lvl": "67",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Druid Item",
@@ -21864,6 +20573,9 @@ let constants_diablo2_96 = {
             "elc": "bab",
             "iq": 2,
             "n": "Carnage Helm",
+            "minac": 102,
+            "maxac": 147,
+            "durability": 25,
             "rs": 106,
             "hi": 1,
             "gt": 1,
@@ -21871,6 +20583,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "phlm",
+            "lvl": "56",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Barbarian Item",
@@ -21888,6 +20605,9 @@ let constants_diablo2_96 = {
             "elc": "bac",
             "iq": 2,
             "n": "Fury Visor",
+            "minac": 105,
+            "maxac": 150,
+            "durability": 35,
             "rs": 129,
             "hi": 1,
             "gt": 1,
@@ -21895,6 +20615,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "phlm",
+            "lvl": "58",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Barbarian Item",
@@ -21912,6 +20637,9 @@ let constants_diablo2_96 = {
             "elc": "bad",
             "iq": 2,
             "n": "Destroyer Helm",
+            "minac": 111,
+            "maxac": 156,
+            "durability": 45,
             "rs": 151,
             "hi": 1,
             "gt": 1,
@@ -21919,6 +20647,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "phlm",
+            "lvl": "63",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Barbarian Item",
@@ -21936,6 +20669,9 @@ let constants_diablo2_96 = {
             "elc": "bae",
             "iq": 2,
             "n": "Conqueror Crown",
+            "minac": 114,
+            "maxac": 159,
+            "durability": 50,
             "rs": 174,
             "hi": 1,
             "gt": 1,
@@ -21943,6 +20679,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "phlm",
+            "lvl": "65",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Barbarian Item",
@@ -21960,6 +20701,9 @@ let constants_diablo2_96 = {
             "elc": "baf",
             "iq": 2,
             "n": "Guardian Crown",
+            "minac": 117,
+            "maxac": 168,
+            "durability": 55,
             "rs": 196,
             "hi": 1,
             "gt": 1,
@@ -21967,6 +20711,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "phlm",
+            "lvl": "67",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Helm",
             "eq2n": "Barbarian Item",
@@ -21984,6 +20733,9 @@ let constants_diablo2_96 = {
             "elc": "pab",
             "iq": 2,
             "n": "Sacred Targe",
+            "minac": 84,
+            "maxac": 104,
+            "durability": 20,
             "mind": 22,
             "maxd": 70,
             "rs": 86,
@@ -21993,6 +20745,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "ashd",
+            "lvl": "56",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Paladin Item",
@@ -22011,6 +20768,9 @@ let constants_diablo2_96 = {
             "elc": "pac",
             "iq": 2,
             "n": "Sacred Rondache",
+            "minac": 85,
+            "maxac": 109,
+            "durability": 30,
             "mind": 35,
             "maxd": 58,
             "rs": 109,
@@ -22020,6 +20780,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "ashd",
+            "lvl": "58",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Paladin Item",
@@ -22038,6 +20803,9 @@ let constants_diablo2_96 = {
             "elc": "pad",
             "iq": 2,
             "n": "Kurast Shield",
+            "minac": 90,
+            "maxac": 115,
+            "durability": 40,
             "mind": 10,
             "maxd": 82,
             "rs": 124,
@@ -22047,6 +20815,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 0,
+            "type": "ashd",
+            "lvl": "62",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Paladin Item",
@@ -22065,6 +20838,9 @@ let constants_diablo2_96 = {
             "elc": "pae",
             "iq": 2,
             "n": "Zakarum Shield",
+            "minac": 97,
+            "maxac": 122,
+            "durability": 50,
             "mind": 46,
             "maxd": 46,
             "rs": 142,
@@ -22074,6 +20850,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 0,
+            "type": "ashd",
+            "lvl": "65",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Paladin Item",
@@ -22092,6 +20873,9 @@ let constants_diablo2_96 = {
             "elc": "paf",
             "iq": 2,
             "n": "Vortex Shield",
+            "minac": 100,
+            "maxac": 125,
+            "durability": 60,
             "mind": 5,
             "maxd": 87,
             "rs": 148,
@@ -22101,6 +20885,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "ashd",
+            "lvl": "67",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Paladin Item",
@@ -22119,6 +20908,9 @@ let constants_diablo2_96 = {
             "elc": "neb",
             "iq": 2,
             "n": "Minion Skull",
+            "minac": 95,
+            "maxac": 139,
+            "durability": 20,
             "rs": 77,
             "hi": 1,
             "gt": 2,
@@ -22126,6 +20918,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "head",
+            "lvl": "56",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Necromancer Item",
@@ -22138,12 +20935,15 @@ let constants_diablo2_96 = {
                 "Class Specific"
             ]
         },
-        "neg": {
+        "nec": {
             "nc": "ne2",
             "exc": "ne7",
-            "elc": "neg",
+            "elc": "nec",
             "iq": 2,
             "n": "Hellspawn Skull",
+            "minac": 96,
+            "maxac": 141,
+            "durability": 20,
             "rs": 82,
             "hi": 1,
             "gt": 2,
@@ -22151,6 +20951,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "head",
+            "lvl": "58",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Necromancer Item",
@@ -22169,6 +20974,9 @@ let constants_diablo2_96 = {
             "elc": "ned",
             "iq": 2,
             "n": "Overseer Skull",
+            "minac": 98,
+            "maxac": 142,
+            "durability": 20,
             "rs": 91,
             "hi": 1,
             "gt": 2,
@@ -22176,6 +20984,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "head",
+            "lvl": "62",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Necromancer Item",
@@ -22194,6 +21007,9 @@ let constants_diablo2_96 = {
             "elc": "nee",
             "iq": 2,
             "n": "Succubus Skull",
+            "minac": 100,
+            "maxac": 146,
+            "durability": 20,
             "rs": 95,
             "hi": 1,
             "gt": 2,
@@ -22201,6 +21017,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "head",
+            "lvl": "65",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Necromancer Item",
@@ -22219,6 +21040,9 @@ let constants_diablo2_96 = {
             "elc": "nef",
             "iq": 2,
             "n": "Bloodlord Skull",
+            "minac": 103,
+            "maxac": 148,
+            "durability": 20,
             "rs": 106,
             "hi": 1,
             "gt": 2,
@@ -22226,6 +21050,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "head",
+            "lvl": "67",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "nodurability": 0,
             "ig": [],
             "eq1n": "Any Shield",
             "eq2n": "Necromancer Item",
@@ -22246,6 +21075,7 @@ let constants_diablo2_96 = {
             "elc": "7ha",
             "iq": 0,
             "n": "Hand Axe",
+            "durability": 28,
             "mind": 3,
             "maxd": 6,
             "hi": 1,
@@ -22256,6 +21086,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "3",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -22270,6 +21104,7 @@ let constants_diablo2_96 = {
             "elc": "7ax",
             "iq": 0,
             "n": "Axe",
+            "durability": 24,
             "mind": 4,
             "maxd": 11,
             "rs": 32,
@@ -22281,6 +21116,10 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "7",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -22295,6 +21134,7 @@ let constants_diablo2_96 = {
             "elc": "72a",
             "iq": 0,
             "n": "Double Axe",
+            "durability": 24,
             "mind": 5,
             "maxd": 13,
             "rs": 43,
@@ -22304,6 +21144,10 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "13",
+            "gemsockets": 5,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -22318,6 +21162,7 @@ let constants_diablo2_96 = {
             "elc": "7mp",
             "iq": 0,
             "n": "Military Pick",
+            "durability": 26,
             "mind": 7,
             "maxd": 11,
             "rs": 49,
@@ -22330,6 +21175,10 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "19",
+            "gemsockets": 6,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -22344,6 +21193,7 @@ let constants_diablo2_96 = {
             "elc": "7wa",
             "iq": 0,
             "n": "War Axe",
+            "durability": 26,
             "mind": 10,
             "maxd": 18,
             "rs": 67,
@@ -22353,6 +21203,10 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "25",
+            "gemsockets": 6,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -22367,6 +21221,7 @@ let constants_diablo2_96 = {
             "elc": "7la",
             "iq": 0,
             "n": "Large Axe",
+            "durability": 30,
             "min2d": 6,
             "max2d": 13,
             "rs": 35,
@@ -22376,6 +21231,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "6",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -22390,6 +21250,7 @@ let constants_diablo2_96 = {
             "elc": "7ba",
             "iq": 0,
             "n": "Broad Axe",
+            "durability": 35,
             "min2d": 10,
             "max2d": 18,
             "rs": 48,
@@ -22399,6 +21260,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "12",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -22413,6 +21279,7 @@ let constants_diablo2_96 = {
             "elc": "7bt",
             "iq": 0,
             "n": "Battle Axe",
+            "durability": 40,
             "min2d": 12,
             "max2d": 32,
             "rs": 54,
@@ -22424,6 +21291,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "17",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -22438,6 +21310,7 @@ let constants_diablo2_96 = {
             "elc": "7ga",
             "iq": 0,
             "n": "Great Axe",
+            "durability": 50,
             "min2d": 9,
             "max2d": 30,
             "rs": 63,
@@ -22450,6 +21323,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "axe",
+            "lvl": "23",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -22464,6 +21342,7 @@ let constants_diablo2_96 = {
             "elc": "7gi",
             "iq": 0,
             "n": "Giant Axe",
+            "durability": 50,
             "min2d": 22,
             "max2d": 45,
             "rs": 70,
@@ -22473,6 +21352,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "27",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -22487,9 +21371,9 @@ let constants_diablo2_96 = {
             "elc": "7wn",
             "iq": 0,
             "n": "Wand",
+            "durability": 15,
             "mind": 2,
             "maxd": 4,
-            "hi": 1,
             "gt": 0,
             "i": "invwnd",
             "ui": "invwndu",
@@ -22497,6 +21381,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 8,
+            "type": "wand",
+            "lvl": "2",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -22513,14 +21401,18 @@ let constants_diablo2_96 = {
             "elc": "7yw",
             "iq": 0,
             "n": "Yew Wand",
+            "durability": 15,
             "mind": 2,
             "maxd": 8,
-            "hi": 1,
             "gt": 0,
             "i": "invywn",
             "iw": 1,
             "ih": 2,
             "it": 8,
+            "type": "wand",
+            "lvl": "12",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -22537,9 +21429,9 @@ let constants_diablo2_96 = {
             "elc": "7bw",
             "iq": 0,
             "n": "Bone Wand",
+            "durability": 15,
             "mind": 3,
             "maxd": 7,
-            "hi": 1,
             "gt": 0,
             "i": "invbwn",
             "ui": "invbwnu",
@@ -22547,6 +21439,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 2,
+            "type": "wand",
+            "lvl": "18",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -22563,14 +21459,18 @@ let constants_diablo2_96 = {
             "elc": "7gw",
             "iq": 0,
             "n": "Grim Wand",
+            "durability": 15,
             "mind": 5,
             "maxd": 11,
-            "hi": 1,
             "gt": 0,
             "i": "invgwn",
             "iw": 1,
             "ih": 2,
             "it": 2,
+            "type": "wand",
+            "lvl": "26",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -22587,6 +21487,7 @@ let constants_diablo2_96 = {
             "elc": "7cl",
             "iq": 0,
             "n": "Club",
+            "durability": 24,
             "mind": 1,
             "maxd": 6,
             "hi": 1,
@@ -22597,6 +21498,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "club",
+            "lvl": "1",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -22612,6 +21517,7 @@ let constants_diablo2_96 = {
             "elc": "7sc",
             "iq": 0,
             "n": "Scepter",
+            "durability": 50,
             "mind": 6,
             "maxd": 11,
             "rs": 25,
@@ -22621,6 +21527,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "scep",
+            "lvl": "3",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -22637,6 +21547,7 @@ let constants_diablo2_96 = {
             "elc": "7qs",
             "iq": 0,
             "n": "Grand Scepter",
+            "durability": 60,
             "mind": 8,
             "maxd": 18,
             "rs": 37,
@@ -22646,6 +21557,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "scep",
+            "lvl": "15",
+            "gemsockets": 3,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -22662,6 +21577,7 @@ let constants_diablo2_96 = {
             "elc": "7ws",
             "iq": 0,
             "n": "War Scepter",
+            "durability": 70,
             "mind": 10,
             "maxd": 17,
             "rs": 55,
@@ -22671,6 +21587,10 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "scep",
+            "lvl": "21",
+            "gemsockets": 5,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -22687,6 +21607,7 @@ let constants_diablo2_96 = {
             "elc": "7sp",
             "iq": 0,
             "n": "Spiked Club",
+            "durability": 36,
             "mind": 5,
             "maxd": 8,
             "hi": 1,
@@ -22697,6 +21618,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "club",
+            "lvl": "4",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -22712,6 +21637,7 @@ let constants_diablo2_96 = {
             "elc": "7ma",
             "iq": 0,
             "n": "Mace",
+            "durability": 60,
             "mind": 3,
             "maxd": 10,
             "rs": 27,
@@ -22721,6 +21647,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "mace",
+            "lvl": "8",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -22736,6 +21666,7 @@ let constants_diablo2_96 = {
             "elc": "7mt",
             "iq": 0,
             "n": "Morning Star",
+            "durability": 72,
             "mind": 7,
             "maxd": 16,
             "rs": 36,
@@ -22747,6 +21678,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "mace",
+            "lvl": "13",
+            "gemsockets": 3,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -22762,6 +21697,7 @@ let constants_diablo2_96 = {
             "elc": "7fl",
             "iq": 0,
             "n": "Flail",
+            "durability": 30,
             "mind": 1,
             "maxd": 24,
             "rs": 41,
@@ -22772,6 +21708,10 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "mace",
+            "lvl": "19",
+            "gemsockets": 5,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -22787,6 +21727,7 @@ let constants_diablo2_96 = {
             "elc": "7wh",
             "iq": 0,
             "n": "War Hammer",
+            "durability": 55,
             "mind": 19,
             "maxd": 29,
             "rs": 53,
@@ -22796,6 +21737,10 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "hamm",
+            "lvl": "25",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -22811,6 +21756,7 @@ let constants_diablo2_96 = {
             "elc": "7m7",
             "iq": 0,
             "n": "Maul",
+            "durability": 60,
             "min2d": 30,
             "max2d": 43,
             "rs": 69,
@@ -22822,6 +21768,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "hamm",
+            "lvl": "21",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -22837,6 +21788,7 @@ let constants_diablo2_96 = {
             "elc": "7gm",
             "iq": 0,
             "n": "Great Maul",
+            "durability": 60,
             "min2d": 38,
             "max2d": 58,
             "rs": 99,
@@ -22848,6 +21800,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "hamm",
+            "lvl": "32",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -22863,6 +21820,7 @@ let constants_diablo2_96 = {
             "elc": "7ss",
             "iq": 0,
             "n": "Short Sword",
+            "durability": 24,
             "mind": 2,
             "maxd": 7,
             "hi": 1,
@@ -22871,6 +21829,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "swor",
+            "lvl": "1",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -22885,6 +21847,7 @@ let constants_diablo2_96 = {
             "elc": "7sm",
             "iq": 0,
             "n": "Scimitar",
+            "durability": 22,
             "mind": 2,
             "maxd": 6,
             "rd": 21,
@@ -22896,6 +21859,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "swor",
+            "lvl": "5",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -22910,6 +21877,7 @@ let constants_diablo2_96 = {
             "elc": "7sb",
             "iq": 0,
             "n": "Sabre",
+            "durability": 32,
             "mind": 3,
             "maxd": 8,
             "rs": 25,
@@ -22922,6 +21890,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "swor",
+            "lvl": "8",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -22936,6 +21908,7 @@ let constants_diablo2_96 = {
             "elc": "7fc",
             "iq": 0,
             "n": "Falchion",
+            "durability": 32,
             "mind": 9,
             "maxd": 17,
             "rs": 33,
@@ -22947,6 +21920,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "swor",
+            "lvl": "11",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -22961,6 +21938,7 @@ let constants_diablo2_96 = {
             "elc": "7cr",
             "iq": 0,
             "n": "Crystal Sword",
+            "durability": 20,
             "mind": 5,
             "maxd": 15,
             "rs": 43,
@@ -22972,6 +21950,10 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "swor",
+            "lvl": "11",
+            "gemsockets": 6,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -22986,6 +21968,7 @@ let constants_diablo2_96 = {
             "elc": "7bs",
             "iq": 0,
             "n": "Broad Sword",
+            "durability": 32,
             "mind": 7,
             "maxd": 14,
             "rs": 48,
@@ -22997,6 +21980,10 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "swor",
+            "lvl": "15",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -23011,6 +21998,7 @@ let constants_diablo2_96 = {
             "elc": "7ls",
             "iq": 0,
             "n": "Long Sword",
+            "durability": 44,
             "mind": 3,
             "maxd": 19,
             "rs": 55,
@@ -23023,6 +22011,10 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "swor",
+            "lvl": "20",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -23037,6 +22029,7 @@ let constants_diablo2_96 = {
             "elc": "7wd",
             "iq": 0,
             "n": "War Sword",
+            "durability": 44,
             "mind": 8,
             "maxd": 20,
             "rs": 71,
@@ -23047,6 +22040,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "swor",
+            "lvl": "27",
+            "gemsockets": 3,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -23061,6 +22058,7 @@ let constants_diablo2_96 = {
             "elc": "72h",
             "iq": 0,
             "n": "Two-Handed Sword",
+            "durability": 44,
             "mind": 2,
             "maxd": 9,
             "min2d": 8,
@@ -23075,6 +22073,12 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 4,
             "it": 2,
+            "type": "swor",
+            "lvl": "10",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "handed1or2": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -23089,6 +22093,7 @@ let constants_diablo2_96 = {
             "elc": "7cm",
             "iq": 0,
             "n": "Claymore",
+            "durability": 50,
             "mind": 5,
             "maxd": 12,
             "min2d": 13,
@@ -23100,6 +22105,12 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 4,
             "it": 2,
+            "type": "swor",
+            "lvl": "17",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed1or2": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -23114,6 +22125,7 @@ let constants_diablo2_96 = {
             "elc": "7gs",
             "iq": 0,
             "n": "Giant Sword",
+            "durability": 50,
             "mind": 3,
             "maxd": 16,
             "min2d": 9,
@@ -23128,6 +22140,12 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 4,
             "it": 2,
+            "type": "swor",
+            "lvl": "21",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed1or2": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -23142,6 +22160,7 @@ let constants_diablo2_96 = {
             "elc": "7b7",
             "iq": 0,
             "n": "Bastard Sword",
+            "durability": 40,
             "mind": 7,
             "maxd": 19,
             "min2d": 20,
@@ -23155,6 +22174,12 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 4,
             "it": 2,
+            "type": "swor",
+            "lvl": "24",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed1or2": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -23169,6 +22194,7 @@ let constants_diablo2_96 = {
             "elc": "7fb",
             "iq": 0,
             "n": "Flamberge",
+            "durability": 50,
             "mind": 9,
             "maxd": 15,
             "min2d": 13,
@@ -23181,6 +22207,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "swor",
+            "lvl": "27",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed1or2": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -23195,6 +22227,7 @@ let constants_diablo2_96 = {
             "elc": "7gd",
             "iq": 0,
             "n": "Great Sword",
+            "durability": 50,
             "mind": 12,
             "maxd": 20,
             "min2d": 25,
@@ -23209,6 +22242,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "swor",
+            "lvl": "33",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed1or2": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -23223,6 +22262,7 @@ let constants_diablo2_96 = {
             "elc": "7dg",
             "iq": 0,
             "n": "Dagger",
+            "durability": 16,
             "mind": 1,
             "maxd": 4,
             "hi": 1,
@@ -23231,6 +22271,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 2,
+            "type": "knif",
+            "lvl": "3",
+            "gemsockets": 1,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -23245,6 +22289,7 @@ let constants_diablo2_96 = {
             "elc": "7di",
             "iq": 0,
             "n": "Dirk",
+            "durability": 20,
             "mind": 3,
             "maxd": 9,
             "rd": 25,
@@ -23254,6 +22299,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 2,
+            "type": "knif",
+            "lvl": "9",
+            "gemsockets": 1,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -23268,6 +22317,7 @@ let constants_diablo2_96 = {
             "elc": "7kr",
             "iq": 0,
             "n": "Kris",
+            "durability": 24,
             "mind": 2,
             "maxd": 11,
             "rd": 45,
@@ -23279,6 +22329,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "knif",
+            "lvl": "17",
+            "gemsockets": 3,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -23293,6 +22347,7 @@ let constants_diablo2_96 = {
             "elc": "7bl",
             "iq": 0,
             "n": "Blade",
+            "durability": 24,
             "mind": 4,
             "maxd": 15,
             "rs": 35,
@@ -23303,6 +22358,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "knif",
+            "lvl": "23",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -23318,6 +22377,7 @@ let constants_diablo2_96 = {
             "iq": 0,
             "n": "Throwing Knife",
             "s": 1,
+            "durability": 4,
             "mind": 2,
             "maxd": 3,
             "minmd": 4,
@@ -23328,6 +22388,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 2,
+            "type": "tkni",
+            "lvl": "2",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Knife",
@@ -23350,6 +22414,7 @@ let constants_diablo2_96 = {
             "iq": 0,
             "n": "Throwing Axe",
             "s": 1,
+            "durability": 6,
             "mind": 4,
             "maxd": 7,
             "minmd": 8,
@@ -23360,6 +22425,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 2,
+            "type": "taxe",
+            "lvl": "7",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Axe",
@@ -23382,6 +22451,7 @@ let constants_diablo2_96 = {
             "iq": 0,
             "n": "Balanced Knife",
             "s": 1,
+            "durability": 8,
             "mind": 1,
             "maxd": 8,
             "minmd": 6,
@@ -23392,6 +22462,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 2,
+            "type": "tkni",
+            "lvl": "13",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Knife",
@@ -23414,6 +22488,7 @@ let constants_diablo2_96 = {
             "iq": 0,
             "n": "Balanced Axe",
             "s": 1,
+            "durability": 10,
             "mind": 5,
             "maxd": 10,
             "minmd": 12,
@@ -23424,6 +22499,10 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "taxe",
+            "lvl": "16",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Axe",
@@ -23446,6 +22525,7 @@ let constants_diablo2_96 = {
             "iq": 0,
             "n": "Javelin",
             "s": 1,
+            "durability": 2,
             "mind": 1,
             "maxd": 5,
             "minmd": 6,
@@ -23455,6 +22535,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 8,
+            "type": "jave",
+            "lvl": "1",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Spear",
@@ -23477,6 +22561,7 @@ let constants_diablo2_96 = {
             "iq": 0,
             "n": "Pilum",
             "s": 1,
+            "durability": 3,
             "mind": 4,
             "maxd": 9,
             "minmd": 7,
@@ -23487,6 +22572,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 8,
+            "type": "jave",
+            "lvl": "10",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Spear",
@@ -23509,6 +22598,7 @@ let constants_diablo2_96 = {
             "iq": 0,
             "n": "Short Spear",
             "s": 1,
+            "durability": 4,
             "mind": 2,
             "maxd": 13,
             "minmd": 10,
@@ -23520,6 +22610,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 8,
+            "type": "jave",
+            "lvl": "15",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Spear",
@@ -23542,6 +22636,7 @@ let constants_diablo2_96 = {
             "iq": 0,
             "n": "Glaive",
             "s": 1,
+            "durability": 5,
             "mind": 5,
             "maxd": 17,
             "minmd": 16,
@@ -23553,6 +22648,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 4,
             "it": 2,
+            "type": "jave",
+            "lvl": "23",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Spear",
@@ -23575,6 +22674,7 @@ let constants_diablo2_96 = {
             "iq": 0,
             "n": "Throwing Spear",
             "s": 1,
+            "durability": 6,
             "mind": 5,
             "maxd": 15,
             "minmd": 12,
@@ -23585,6 +22685,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 4,
             "it": 2,
+            "type": "jave",
+            "lvl": "29",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Spear",
@@ -23606,6 +22710,7 @@ let constants_diablo2_96 = {
             "elc": "7sr",
             "iq": 0,
             "n": "Spear",
+            "durability": 30,
             "min2d": 3,
             "max2d": 15,
             "rd": 20,
@@ -23615,6 +22720,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "spea",
+            "lvl": "5",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -23629,6 +22739,7 @@ let constants_diablo2_96 = {
             "elc": "7tr",
             "iq": 0,
             "n": "Trident",
+            "durability": 35,
             "min2d": 9,
             "max2d": 15,
             "rs": 38,
@@ -23641,6 +22752,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "spea",
+            "lvl": "9",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -23655,6 +22771,7 @@ let constants_diablo2_96 = {
             "elc": "7br",
             "iq": 0,
             "n": "Brandistock",
+            "durability": 28,
             "min2d": 7,
             "max2d": 17,
             "rs": 40,
@@ -23665,6 +22782,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "spea",
+            "lvl": "16",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -23679,6 +22801,7 @@ let constants_diablo2_96 = {
             "elc": "7st",
             "iq": 0,
             "n": "Spetum",
+            "durability": 28,
             "min2d": 15,
             "max2d": 23,
             "rs": 54,
@@ -23689,6 +22812,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "spea",
+            "lvl": "20",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -23703,6 +22831,7 @@ let constants_diablo2_96 = {
             "elc": "7p7",
             "iq": 0,
             "n": "Pike",
+            "durability": 25,
             "min2d": 14,
             "max2d": 63,
             "rs": 60,
@@ -23713,6 +22842,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "spea",
+            "lvl": "24",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -23724,9 +22858,10 @@ let constants_diablo2_96 = {
         "bar": {
             "nc": "bar",
             "exc": "9b7",
-            "elc": "7o7",
+            "elc": "7b7",
             "iq": 0,
             "n": "Bardiche",
+            "durability": 50,
             "min2d": 1,
             "max2d": 27,
             "rs": 40,
@@ -23736,6 +22871,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "pole",
+            "lvl": "5",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -23750,6 +22890,7 @@ let constants_diablo2_96 = {
             "elc": "7vo",
             "iq": 0,
             "n": "Voulge",
+            "durability": 50,
             "min2d": 6,
             "max2d": 21,
             "rs": 50,
@@ -23759,6 +22900,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "pole",
+            "lvl": "11",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -23773,6 +22919,7 @@ let constants_diablo2_96 = {
             "elc": "7s8",
             "iq": 0,
             "n": "Scythe",
+            "durability": 65,
             "min2d": 8,
             "max2d": 20,
             "rs": 41,
@@ -23785,6 +22932,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "pole",
+            "lvl": "15",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -23799,6 +22951,7 @@ let constants_diablo2_96 = {
             "elc": "7pa",
             "iq": 0,
             "n": "Poleaxe",
+            "durability": 65,
             "min2d": 18,
             "max2d": 39,
             "rs": 62,
@@ -23808,6 +22961,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "pole",
+            "lvl": "21",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -23822,6 +22980,7 @@ let constants_diablo2_96 = {
             "elc": "7h7",
             "iq": 0,
             "n": "Halberd",
+            "durability": 55,
             "min2d": 12,
             "max2d": 45,
             "rs": 75,
@@ -23832,6 +22991,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "pole",
+            "lvl": "29",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -23846,6 +23010,7 @@ let constants_diablo2_96 = {
             "elc": "7wc",
             "iq": 0,
             "n": "War Scythe",
+            "durability": 55,
             "min2d": 15,
             "max2d": 36,
             "rs": 80,
@@ -23856,6 +23021,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "pole",
+            "lvl": "34",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -23870,6 +23040,7 @@ let constants_diablo2_96 = {
             "elc": "6ss",
             "iq": 0,
             "n": "Short Staff",
+            "durability": 20,
             "min2d": 1,
             "max2d": 5,
             "hi": 1,
@@ -23878,6 +23049,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 8,
+            "type": "staf",
+            "lvl": "1",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -23894,6 +23070,7 @@ let constants_diablo2_96 = {
             "elc": "6ls",
             "iq": 0,
             "n": "Long Staff",
+            "durability": 30,
             "min2d": 2,
             "max2d": 8,
             "hi": 1,
@@ -23902,6 +23079,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 4,
             "it": 8,
+            "type": "staf",
+            "lvl": "8",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -23918,6 +23100,7 @@ let constants_diablo2_96 = {
             "elc": "6cs",
             "iq": 0,
             "n": "Gnarled Staff",
+            "durability": 35,
             "min2d": 4,
             "max2d": 12,
             "hi": 1,
@@ -23928,6 +23111,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 4,
             "it": 8,
+            "type": "staf",
+            "lvl": "12",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -23944,6 +23132,7 @@ let constants_diablo2_96 = {
             "elc": "6bs",
             "iq": 0,
             "n": "Battle Staff",
+            "durability": 40,
             "min2d": 6,
             "max2d": 13,
             "hi": 1,
@@ -23952,6 +23141,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 4,
             "it": 8,
+            "type": "staf",
+            "lvl": "17",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -23968,6 +23162,7 @@ let constants_diablo2_96 = {
             "elc": "6ws",
             "iq": 0,
             "n": "War Staff",
+            "durability": 50,
             "min2d": 12,
             "max2d": 28,
             "hi": 1,
@@ -23976,6 +23171,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "staf",
+            "lvl": "24",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -23992,6 +23192,7 @@ let constants_diablo2_96 = {
             "elc": "6sb",
             "iq": 0,
             "n": "Short Bow",
+            "durability": 20,
             "min2d": 1,
             "max2d": 4,
             "rd": 15,
@@ -24001,6 +23202,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "bow",
+            "lvl": "1",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -24015,6 +23222,7 @@ let constants_diablo2_96 = {
             "elc": "6hb",
             "iq": 0,
             "n": "Hunter's Bow",
+            "durability": 32,
             "min2d": 2,
             "max2d": 6,
             "rd": 28,
@@ -24024,6 +23232,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "bow",
+            "lvl": "5",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -24038,6 +23252,7 @@ let constants_diablo2_96 = {
             "elc": "6lb",
             "iq": 0,
             "n": "Long Bow",
+            "durability": 28,
             "min2d": 3,
             "max2d": 10,
             "rs": 22,
@@ -24048,6 +23263,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "bow",
+            "lvl": "8",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -24062,6 +23283,7 @@ let constants_diablo2_96 = {
             "elc": "6cb",
             "iq": 0,
             "n": "Composite Bow",
+            "durability": 36,
             "min2d": 4,
             "max2d": 8,
             "rs": 25,
@@ -24074,6 +23296,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "bow",
+            "lvl": "12",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -24088,6 +23316,7 @@ let constants_diablo2_96 = {
             "elc": "6s7",
             "iq": 0,
             "n": "Short Battle Bow",
+            "durability": 40,
             "min2d": 5,
             "max2d": 11,
             "rs": 30,
@@ -24100,6 +23329,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "bow",
+            "lvl": "18",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -24114,6 +23349,7 @@ let constants_diablo2_96 = {
             "elc": "6l7",
             "iq": 0,
             "n": "Long Battle Bow",
+            "durability": 44,
             "min2d": 3,
             "max2d": 18,
             "rs": 40,
@@ -24124,6 +23360,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "bow",
+            "lvl": "23",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -24138,6 +23380,7 @@ let constants_diablo2_96 = {
             "elc": "6sw",
             "iq": 0,
             "n": "Short War Bow",
+            "durability": 48,
             "min2d": 6,
             "max2d": 14,
             "rs": 35,
@@ -24150,6 +23393,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "bow",
+            "lvl": "27",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -24164,6 +23413,7 @@ let constants_diablo2_96 = {
             "elc": "6lw",
             "iq": 0,
             "n": "Long War Bow",
+            "durability": 55,
             "min2d": 3,
             "max2d": 23,
             "rs": 50,
@@ -24174,6 +23424,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "bow",
+            "lvl": "31",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -24188,6 +23444,7 @@ let constants_diablo2_96 = {
             "elc": "6lx",
             "iq": 0,
             "n": "Light Crossbow",
+            "durability": 30,
             "min2d": 6,
             "max2d": 9,
             "rs": 21,
@@ -24200,6 +23457,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "xbow",
+            "lvl": "6",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -24214,6 +23477,7 @@ let constants_diablo2_96 = {
             "elc": "6mx",
             "iq": 0,
             "n": "Crossbow",
+            "durability": 40,
             "min2d": 9,
             "max2d": 16,
             "rs": 40,
@@ -24226,6 +23490,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "xbow",
+            "lvl": "15",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -24240,6 +23510,7 @@ let constants_diablo2_96 = {
             "elc": "6hx",
             "iq": 0,
             "n": "Heavy Crossbow",
+            "durability": 50,
             "min2d": 14,
             "max2d": 26,
             "rs": 60,
@@ -24252,6 +23523,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "xbow",
+            "lvl": "24",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -24266,6 +23543,7 @@ let constants_diablo2_96 = {
             "elc": "6rx",
             "iq": 0,
             "n": "Repeating Crossbow",
+            "durability": 40,
             "min2d": 6,
             "max2d": 12,
             "rs": 40,
@@ -24278,6 +23556,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "xbow",
+            "lvl": "33",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -24293,12 +23577,18 @@ let constants_diablo2_96 = {
             "iq": 0,
             "n": "Rancid Gas Potion",
             "s": 1,
+            "durability": 2,
             "maxd": 1,
             "gt": 0,
             "i": "invgpl",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "tpot",
+            "lvl": "32",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Thrown Weapon",
             "c": [
@@ -24314,12 +23604,18 @@ let constants_diablo2_96 = {
             "iq": 0,
             "n": "Oil Potion",
             "s": 1,
+            "durability": 2,
             "maxd": 1,
             "gt": 0,
             "i": "invopl",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "tpot",
+            "lvl": "28",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Thrown Weapon",
             "c": [
@@ -24335,12 +23631,18 @@ let constants_diablo2_96 = {
             "iq": 0,
             "n": "Choking Gas Potion",
             "s": 1,
+            "durability": 2,
             "maxd": 1,
             "gt": 0,
             "i": "invgpm",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "tpot",
+            "lvl": "20",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Thrown Weapon",
             "c": [
@@ -24356,12 +23658,18 @@ let constants_diablo2_96 = {
             "iq": 0,
             "n": "Exploding Potion",
             "s": 1,
+            "durability": 2,
             "maxd": 1,
             "gt": 0,
             "i": "invopm",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "tpot",
+            "lvl": "16",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Thrown Weapon",
             "c": [
@@ -24377,12 +23685,18 @@ let constants_diablo2_96 = {
             "iq": 0,
             "n": "Strangling Gas Potion",
             "s": 1,
+            "durability": 2,
             "maxd": 1,
             "gt": 0,
             "i": "invgps",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "tpot",
+            "lvl": "8",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Thrown Weapon",
             "c": [
@@ -24398,12 +23712,18 @@ let constants_diablo2_96 = {
             "iq": 0,
             "n": "Fulminating Potion",
             "s": 1,
+            "durability": 2,
             "maxd": 1,
             "gt": 0,
             "i": "invops",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "tpot",
+            "lvl": "4",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Thrown Weapon",
             "c": [
@@ -24418,6 +23738,7 @@ let constants_diablo2_96 = {
             "elc": "",
             "iq": 0,
             "n": "Decoy Gidbinn",
+            "durability": 10,
             "mind": 1,
             "maxd": 2,
             "rs": 15,
@@ -24427,6 +23748,9 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 2,
+            "type": "knif",
+            "lvl": "0",
+            "gemsockets": 0,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -24441,6 +23765,7 @@ let constants_diablo2_96 = {
             "elc": "",
             "iq": 0,
             "n": "The Gidbinn",
+            "durability": 30,
             "mind": 3,
             "maxd": 7,
             "rs": 15,
@@ -24450,6 +23775,9 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 2,
+            "type": "knif",
+            "lvl": "0",
+            "gemsockets": 0,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -24464,6 +23792,7 @@ let constants_diablo2_96 = {
             "elc": "",
             "iq": 0,
             "n": "Wirt's Leg",
+            "durability": 66,
             "mind": 2,
             "maxd": 8,
             "hi": 1,
@@ -24472,6 +23801,9 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 8,
+            "type": "club",
+            "lvl": "0",
+            "gemsockets": 3,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -24487,6 +23819,7 @@ let constants_diablo2_96 = {
             "elc": "",
             "iq": 0,
             "n": "Horadric Malus",
+            "durability": 55,
             "mind": 6,
             "maxd": 15,
             "rs": 15,
@@ -24496,6 +23829,9 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 2,
+            "type": "hamm",
+            "lvl": "0",
+            "gemsockets": 0,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -24511,6 +23847,7 @@ let constants_diablo2_96 = {
             "elc": "",
             "iq": 0,
             "n": "Hell Forge Hammer",
+            "durability": 55,
             "mind": 6,
             "maxd": 15,
             "hi": 1,
@@ -24519,6 +23856,9 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "hamm",
+            "lvl": "0",
+            "gemsockets": 5,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -24534,6 +23874,7 @@ let constants_diablo2_96 = {
             "elc": "",
             "iq": 0,
             "n": "Horadric Staff",
+            "durability": 50,
             "min2d": 12,
             "max2d": 20,
             "rs": 30,
@@ -24542,6 +23883,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 4,
             "it": 8,
+            "type": "staf",
+            "lvl": "0",
+            "gemsockets": 0,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -24558,6 +23903,7 @@ let constants_diablo2_96 = {
             "elc": "",
             "iq": 0,
             "n": "Shaft of the Horadric Staff",
+            "durability": 45,
             "min2d": 10,
             "max2d": 15,
             "rs": 25,
@@ -24566,6 +23912,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 8,
+            "type": "staf",
+            "lvl": "0",
+            "gemsockets": 0,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -24582,6 +23932,7 @@ let constants_diablo2_96 = {
             "elc": "7ha",
             "iq": 1,
             "n": "Hatchet",
+            "durability": 28,
             "mind": 10,
             "maxd": 21,
             "rs": 25,
@@ -24594,6 +23945,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "31",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -24608,6 +23963,7 @@ let constants_diablo2_96 = {
             "elc": "7ax",
             "iq": 1,
             "n": "Cleaver",
+            "durability": 24,
             "mind": 10,
             "maxd": 33,
             "rs": 68,
@@ -24619,6 +23975,10 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "34",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -24633,6 +23993,7 @@ let constants_diablo2_96 = {
             "elc": "72a",
             "iq": 1,
             "n": "Twin Axe",
+            "durability": 24,
             "mind": 13,
             "maxd": 38,
             "rs": 85,
@@ -24642,6 +24003,10 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "39",
+            "gemsockets": 5,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -24656,6 +24021,7 @@ let constants_diablo2_96 = {
             "elc": "7mp",
             "iq": 1,
             "n": "Crowbill",
+            "durability": 26,
             "mind": 14,
             "maxd": 34,
             "rs": 94,
@@ -24668,6 +24034,10 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "43",
+            "gemsockets": 6,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -24682,6 +24052,7 @@ let constants_diablo2_96 = {
             "elc": "7wa",
             "iq": 1,
             "n": "Naga",
+            "durability": 26,
             "mind": 16,
             "maxd": 45,
             "rs": 121,
@@ -24691,6 +24062,10 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "48",
+            "gemsockets": 6,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -24705,6 +24080,7 @@ let constants_diablo2_96 = {
             "elc": "7la",
             "iq": 1,
             "n": "Military Axe",
+            "durability": 30,
             "min2d": 14,
             "max2d": 34,
             "rs": 73,
@@ -24714,6 +24090,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "34",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -24728,6 +24109,7 @@ let constants_diablo2_96 = {
             "elc": "7ba",
             "iq": 1,
             "n": "Bearded Axe",
+            "durability": 35,
             "min2d": 21,
             "max2d": 49,
             "rs": 92,
@@ -24737,6 +24119,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "38",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -24751,6 +24138,7 @@ let constants_diablo2_96 = {
             "elc": "7bt",
             "iq": 1,
             "n": "Tabar",
+            "durability": 40,
             "min2d": 24,
             "max2d": 77,
             "rs": 101,
@@ -24762,6 +24150,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "42",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -24776,6 +24169,7 @@ let constants_diablo2_96 = {
             "elc": "7ga",
             "iq": 1,
             "n": "Gothic Axe",
+            "durability": 50,
             "min2d": 18,
             "max2d": 70,
             "rs": 115,
@@ -24788,6 +24182,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "axe",
+            "lvl": "46",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -24802,6 +24201,7 @@ let constants_diablo2_96 = {
             "elc": "7gi",
             "iq": 1,
             "n": "Ancient Axe",
+            "durability": 50,
             "min2d": 43,
             "max2d": 85,
             "rs": 125,
@@ -24813,6 +24213,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "51",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -24827,15 +24232,19 @@ let constants_diablo2_96 = {
             "elc": "7wn",
             "iq": 1,
             "n": "Burnt Wand",
+            "durability": 15,
             "mind": 8,
             "maxd": 18,
             "rs": 25,
-            "hi": 1,
             "gt": 0,
             "i": "invwnd",
             "iw": 1,
             "ih": 2,
             "it": 8,
+            "type": "wand",
+            "lvl": "31",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -24852,15 +24261,19 @@ let constants_diablo2_96 = {
             "elc": "7yw",
             "iq": 1,
             "n": "Petrified Wand",
+            "durability": 15,
             "mind": 8,
             "maxd": 24,
             "rs": 25,
-            "hi": 1,
             "gt": 0,
             "i": "invywn",
             "iw": 1,
             "ih": 2,
             "it": 8,
+            "type": "wand",
+            "lvl": "38",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -24877,10 +24290,10 @@ let constants_diablo2_96 = {
             "elc": "7bw",
             "iq": 1,
             "n": "Tomb Wand",
+            "durability": 15,
             "mind": 10,
             "maxd": 22,
             "rs": 25,
-            "hi": 1,
             "gt": 0,
             "i": "invbwn",
             "ui": "invbwnu",
@@ -24888,6 +24301,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 2,
+            "type": "wand",
+            "lvl": "43",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -24904,10 +24321,10 @@ let constants_diablo2_96 = {
             "elc": "7gw",
             "iq": 1,
             "n": "Grave Wand",
+            "durability": 15,
             "mind": 13,
             "maxd": 29,
             "rs": 25,
-            "hi": 1,
             "gt": 0,
             "i": "invgwn",
             "ui": "inv9gwu",
@@ -24915,6 +24332,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 2,
+            "type": "wand",
+            "lvl": "49",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -24931,6 +24352,7 @@ let constants_diablo2_96 = {
             "elc": "7cl",
             "iq": 1,
             "n": "Cudgel",
+            "durability": 24,
             "mind": 6,
             "maxd": 21,
             "rs": 25,
@@ -24942,6 +24364,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "club",
+            "lvl": "30",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -24957,6 +24383,7 @@ let constants_diablo2_96 = {
             "elc": "7sc",
             "iq": 1,
             "n": "Rune Scepter",
+            "durability": 50,
             "mind": 13,
             "maxd": 24,
             "rs": 58,
@@ -24966,6 +24393,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "scep",
+            "lvl": "31",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -24982,6 +24413,7 @@ let constants_diablo2_96 = {
             "elc": "7qs",
             "iq": 1,
             "n": "Holy Water Sprinkler",
+            "durability": 60,
             "mind": 14,
             "maxd": 36,
             "rs": 76,
@@ -24991,6 +24423,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "scep",
+            "lvl": "40",
+            "gemsockets": 3,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -25007,6 +24443,7 @@ let constants_diablo2_96 = {
             "elc": "7ws",
             "iq": 1,
             "n": "Divine Scepter",
+            "durability": 70,
             "mind": 16,
             "maxd": 38,
             "rs": 103,
@@ -25016,6 +24453,10 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "scep",
+            "lvl": "45",
+            "gemsockets": 5,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -25032,6 +24473,7 @@ let constants_diablo2_96 = {
             "elc": "7sp",
             "iq": 1,
             "n": "Barbed Club",
+            "durability": 36,
             "mind": 13,
             "maxd": 25,
             "rs": 30,
@@ -25043,6 +24485,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "club",
+            "lvl": "32",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -25058,6 +24504,7 @@ let constants_diablo2_96 = {
             "elc": "7ma",
             "iq": 1,
             "n": "Flanged Mace",
+            "durability": 60,
             "mind": 15,
             "maxd": 23,
             "rs": 61,
@@ -25067,6 +24514,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "mace",
+            "lvl": "35",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -25082,6 +24533,7 @@ let constants_diablo2_96 = {
             "elc": "7mt",
             "iq": 1,
             "n": "Jagged Star",
+            "durability": 72,
             "mind": 20,
             "maxd": 31,
             "rs": 74,
@@ -25093,6 +24545,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "mace",
+            "lvl": "39",
+            "gemsockets": 3,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -25108,6 +24564,7 @@ let constants_diablo2_96 = {
             "elc": "7fl",
             "iq": 1,
             "n": "Knout",
+            "durability": 30,
             "mind": 13,
             "maxd": 35,
             "rs": 82,
@@ -25118,6 +24575,10 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "mace",
+            "lvl": "43",
+            "gemsockets": 5,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -25133,6 +24594,7 @@ let constants_diablo2_96 = {
             "elc": "7wh",
             "iq": 1,
             "n": "Battle Hammer",
+            "durability": 55,
             "mind": 35,
             "maxd": 58,
             "rs": 100,
@@ -25142,6 +24604,10 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "hamm",
+            "lvl": "48",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -25157,6 +24623,7 @@ let constants_diablo2_96 = {
             "elc": "7m7",
             "iq": 1,
             "n": "War Club",
+            "durability": 60,
             "min2d": 53,
             "max2d": 78,
             "rs": 124,
@@ -25166,6 +24633,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "hamm",
+            "lvl": "45",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -25181,6 +24653,7 @@ let constants_diablo2_96 = {
             "elc": "7gm",
             "iq": 1,
             "n": "Martel de Fer",
+            "durability": 60,
             "min2d": 61,
             "max2d": 99,
             "rs": 169,
@@ -25192,6 +24665,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "hamm",
+            "lvl": "53",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -25207,6 +24685,7 @@ let constants_diablo2_96 = {
             "elc": "7ss",
             "iq": 1,
             "n": "Gladius",
+            "durability": 24,
             "mind": 8,
             "maxd": 22,
             "rs": 25,
@@ -25216,6 +24695,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "swor",
+            "lvl": "30",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -25230,6 +24713,7 @@ let constants_diablo2_96 = {
             "elc": "7sm",
             "iq": 1,
             "n": "Cutlass",
+            "durability": 22,
             "mind": 8,
             "maxd": 21,
             "rs": 25,
@@ -25242,6 +24726,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "swor",
+            "lvl": "43",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -25256,6 +24744,7 @@ let constants_diablo2_96 = {
             "elc": "7sb",
             "iq": 1,
             "n": "Shamshir",
+            "durability": 32,
             "mind": 10,
             "maxd": 24,
             "rs": 58,
@@ -25268,6 +24757,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "swor",
+            "lvl": "35",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -25282,6 +24775,7 @@ let constants_diablo2_96 = {
             "elc": "7fc",
             "iq": 1,
             "n": "Tulwar",
+            "durability": 32,
             "mind": 16,
             "maxd": 35,
             "rs": 70,
@@ -25292,6 +24786,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "swor",
+            "lvl": "37",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -25306,6 +24804,7 @@ let constants_diablo2_96 = {
             "elc": "7cr",
             "iq": 1,
             "n": "Dimensional Blade",
+            "durability": 20,
             "mind": 13,
             "maxd": 35,
             "rs": 85,
@@ -25318,6 +24817,10 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "swor",
+            "lvl": "37",
+            "gemsockets": 6,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -25332,6 +24835,7 @@ let constants_diablo2_96 = {
             "elc": "7bs",
             "iq": 1,
             "n": "Battle Sword",
+            "durability": 32,
             "mind": 16,
             "maxd": 34,
             "rs": 92,
@@ -25342,6 +24846,10 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "swor",
+            "lvl": "40",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -25356,6 +24864,7 @@ let constants_diablo2_96 = {
             "elc": "7ls",
             "iq": 1,
             "n": "Rune Sword",
+            "durability": 44,
             "mind": 10,
             "maxd": 42,
             "rs": 103,
@@ -25368,6 +24877,10 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "swor",
+            "lvl": "44",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -25382,6 +24895,7 @@ let constants_diablo2_96 = {
             "elc": "7wd",
             "iq": 1,
             "n": "Ancient Sword",
+            "durability": 44,
             "mind": 18,
             "maxd": 43,
             "rs": 127,
@@ -25392,6 +24906,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "swor",
+            "lvl": "49",
+            "gemsockets": 3,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -25406,6 +24924,7 @@ let constants_diablo2_96 = {
             "elc": "72h",
             "iq": 1,
             "n": "Espandon",
+            "durability": 44,
             "mind": 8,
             "maxd": 26,
             "min2d": 18,
@@ -25420,6 +24939,12 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 4,
             "it": 2,
+            "type": "swor",
+            "lvl": "37",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "handed1or2": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -25434,6 +24959,7 @@ let constants_diablo2_96 = {
             "elc": "7cm",
             "iq": 1,
             "n": "Dacian Falx",
+            "durability": 50,
             "mind": 13,
             "maxd": 30,
             "min2d": 26,
@@ -25446,6 +24972,12 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 4,
             "it": 2,
+            "type": "swor",
+            "lvl": "42",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed1or2": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -25460,6 +24992,7 @@ let constants_diablo2_96 = {
             "elc": "7gs",
             "iq": 1,
             "n": "Tusk Sword",
+            "durability": 50,
             "mind": 10,
             "maxd": 37,
             "min2d": 19,
@@ -25474,6 +25007,12 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 4,
             "it": 2,
+            "type": "swor",
+            "lvl": "45",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed1or2": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -25488,6 +25027,7 @@ let constants_diablo2_96 = {
             "elc": "7b7",
             "iq": 1,
             "n": "Gothic Sword",
+            "durability": 40,
             "mind": 14,
             "maxd": 40,
             "min2d": 39,
@@ -25502,6 +25042,12 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 4,
             "it": 2,
+            "type": "swor",
+            "lvl": "48",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed1or2": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -25516,6 +25062,7 @@ let constants_diablo2_96 = {
             "elc": "7fb",
             "iq": 1,
             "n": "Zweihander",
+            "durability": 50,
             "mind": 19,
             "maxd": 35,
             "min2d": 29,
@@ -25530,6 +25077,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "swor",
+            "lvl": "49",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed1or2": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -25544,6 +25097,7 @@ let constants_diablo2_96 = {
             "elc": "7gd",
             "iq": 1,
             "n": "Executioner Sword",
+            "durability": 50,
             "mind": 24,
             "maxd": 40,
             "min2d": 47,
@@ -25558,6 +25112,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "swor",
+            "lvl": "54",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed1or2": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -25572,6 +25132,7 @@ let constants_diablo2_96 = {
             "elc": "7dg",
             "iq": 1,
             "n": "Poignard",
+            "durability": 16,
             "mind": 6,
             "maxd": 18,
             "rs": 25,
@@ -25581,6 +25142,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 2,
+            "type": "knif",
+            "lvl": "31",
+            "gemsockets": 1,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -25595,6 +25160,7 @@ let constants_diablo2_96 = {
             "elc": "7di",
             "iq": 1,
             "n": "Rondel",
+            "durability": 20,
             "mind": 10,
             "maxd": 26,
             "rs": 25,
@@ -25605,6 +25171,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 2,
+            "type": "knif",
+            "lvl": "36",
+            "gemsockets": 1,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -25619,6 +25189,7 @@ let constants_diablo2_96 = {
             "elc": "7kr",
             "iq": 1,
             "n": "Cinquedeas",
+            "durability": 24,
             "mind": 15,
             "maxd": 31,
             "rs": 25,
@@ -25631,6 +25202,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "knif",
+            "lvl": "42",
+            "gemsockets": 3,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -25645,6 +25220,7 @@ let constants_diablo2_96 = {
             "elc": "7bl",
             "iq": 1,
             "n": "Stiletto",
+            "durability": 24,
             "mind": 19,
             "maxd": 36,
             "rs": 47,
@@ -25657,6 +25233,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "knif",
+            "lvl": "46",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -25672,6 +25252,7 @@ let constants_diablo2_96 = {
             "iq": 1,
             "n": "Battle Dart",
             "s": 1,
+            "durability": 6,
             "mind": 8,
             "maxd": 16,
             "minmd": 11,
@@ -25683,6 +25264,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 2,
+            "type": "tkni",
+            "lvl": "31",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Knife",
@@ -25705,6 +25290,7 @@ let constants_diablo2_96 = {
             "iq": 1,
             "n": "Francisca",
             "s": 1,
+            "durability": 15,
             "mind": 11,
             "maxd": 22,
             "minmd": 18,
@@ -25716,6 +25302,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 2,
+            "type": "taxe",
+            "lvl": "34",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Axe",
@@ -25738,6 +25328,7 @@ let constants_diablo2_96 = {
             "iq": 1,
             "n": "War Dart",
             "s": 1,
+            "durability": 20,
             "mind": 6,
             "maxd": 24,
             "minmd": 14,
@@ -25749,6 +25340,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 2,
+            "type": "tkni",
+            "lvl": "39",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Knife",
@@ -25771,6 +25366,7 @@ let constants_diablo2_96 = {
             "iq": 1,
             "n": "Hurlbat",
             "s": 1,
+            "durability": 16,
             "mind": 13,
             "maxd": 27,
             "minmd": 24,
@@ -25782,6 +25378,10 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "taxe",
+            "lvl": "41",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Axe",
@@ -25804,6 +25404,7 @@ let constants_diablo2_96 = {
             "iq": 1,
             "n": "War Javelin",
             "s": 1,
+            "durability": 10,
             "mind": 6,
             "maxd": 19,
             "minmd": 14,
@@ -25815,6 +25416,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 8,
+            "type": "jave",
+            "lvl": "30",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Spear",
@@ -25837,6 +25442,7 @@ let constants_diablo2_96 = {
             "iq": 1,
             "n": "Great Pilum",
             "s": 1,
+            "durability": 12,
             "mind": 11,
             "maxd": 26,
             "minmd": 16,
@@ -25848,6 +25454,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 8,
+            "type": "jave",
+            "lvl": "37",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Spear",
@@ -25870,6 +25480,7 @@ let constants_diablo2_96 = {
             "iq": 1,
             "n": "Simbilan",
             "s": 1,
+            "durability": 14,
             "mind": 8,
             "maxd": 32,
             "minmd": 27,
@@ -25881,6 +25492,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 8,
+            "type": "jave",
+            "lvl": "40",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Spear",
@@ -25903,6 +25518,7 @@ let constants_diablo2_96 = {
             "iq": 1,
             "n": "Spiculum",
             "s": 1,
+            "durability": 16,
             "mind": 13,
             "maxd": 38,
             "minmd": 32,
@@ -25914,6 +25530,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 4,
             "it": 2,
+            "type": "jave",
+            "lvl": "46",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Spear",
@@ -25936,6 +25556,7 @@ let constants_diablo2_96 = {
             "iq": 1,
             "n": "Harpoon",
             "s": 1,
+            "durability": 18,
             "mind": 13,
             "maxd": 35,
             "minmd": 18,
@@ -25947,6 +25568,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 4,
             "it": 2,
+            "type": "jave",
+            "lvl": "51",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Spear",
@@ -25968,6 +25593,7 @@ let constants_diablo2_96 = {
             "elc": "7sr",
             "iq": 1,
             "n": "War Spear",
+            "durability": 30,
             "min2d": 10,
             "max2d": 37,
             "rs": 25,
@@ -25978,6 +25604,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "spea",
+            "lvl": "33",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -25992,6 +25623,7 @@ let constants_diablo2_96 = {
             "elc": "7tr",
             "iq": 1,
             "n": "Fuscina",
+            "durability": 35,
             "min2d": 19,
             "max2d": 37,
             "rs": 77,
@@ -26004,6 +25636,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "spea",
+            "lvl": "36",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -26018,6 +25655,7 @@ let constants_diablo2_96 = {
             "elc": "7br",
             "iq": 1,
             "n": "War Fork",
+            "durability": 28,
             "min2d": 16,
             "max2d": 40,
             "rs": 80,
@@ -26030,6 +25668,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "spea",
+            "lvl": "41",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -26044,6 +25687,7 @@ let constants_diablo2_96 = {
             "elc": "7st",
             "iq": 1,
             "n": "Yari",
+            "durability": 28,
             "min2d": 29,
             "max2d": 59,
             "rs": 101,
@@ -26053,6 +25697,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "spea",
+            "lvl": "44",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -26067,6 +25716,7 @@ let constants_diablo2_96 = {
             "elc": "7p7",
             "iq": 1,
             "n": "Lance",
+            "durability": 25,
             "min2d": 27,
             "max2d": 114,
             "rs": 110,
@@ -26077,6 +25727,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "spea",
+            "lvl": "47",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -26088,9 +25743,10 @@ let constants_diablo2_96 = {
         "9b7": {
             "nc": "bar",
             "exc": "9b7",
-            "elc": "7o7",
+            "elc": "7b7",
             "iq": 1,
             "n": "Lochaber Axe",
+            "durability": 50,
             "min2d": 6,
             "max2d": 58,
             "rs": 80,
@@ -26100,6 +25756,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "pole",
+            "lvl": "33",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -26114,6 +25775,7 @@ let constants_diablo2_96 = {
             "elc": "7vo",
             "iq": 1,
             "n": "Bill",
+            "durability": 50,
             "min2d": 14,
             "max2d": 53,
             "rs": 95,
@@ -26123,6 +25785,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "pole",
+            "lvl": "37",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -26137,6 +25804,7 @@ let constants_diablo2_96 = {
             "elc": "7s8",
             "iq": 1,
             "n": "Battle Scythe",
+            "durability": 65,
             "min2d": 18,
             "max2d": 45,
             "rs": 82,
@@ -26149,6 +25817,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "pole",
+            "lvl": "40",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -26163,6 +25836,7 @@ let constants_diablo2_96 = {
             "elc": "7pa",
             "iq": 1,
             "n": "Partizan",
+            "durability": 65,
             "min2d": 34,
             "max2d": 75,
             "rs": 113,
@@ -26173,6 +25847,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "pole",
+            "lvl": "35",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -26187,6 +25866,7 @@ let constants_diablo2_96 = {
             "elc": "7h7",
             "iq": 1,
             "n": "Bec-de-Corbin",
+            "durability": 55,
             "min2d": 13,
             "max2d": 85,
             "rs": 133,
@@ -26197,6 +25877,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "pole",
+            "lvl": "51",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -26211,6 +25896,7 @@ let constants_diablo2_96 = {
             "elc": "7wc",
             "iq": 1,
             "n": "Grim Scythe",
+            "durability": 55,
             "min2d": 30,
             "max2d": 70,
             "rs": 140,
@@ -26221,6 +25907,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "pole",
+            "lvl": "55",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -26235,6 +25926,7 @@ let constants_diablo2_96 = {
             "elc": "6ss",
             "iq": 1,
             "n": "Jo Staff",
+            "durability": 20,
             "min2d": 6,
             "max2d": 21,
             "rs": 25,
@@ -26244,6 +25936,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 8,
+            "type": "staf",
+            "lvl": "30",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -26260,6 +25957,7 @@ let constants_diablo2_96 = {
             "elc": "6ls",
             "iq": 1,
             "n": "Quarterstaff",
+            "durability": 30,
             "min2d": 8,
             "max2d": 26,
             "rs": 25,
@@ -26269,6 +25967,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 4,
             "it": 8,
+            "type": "staf",
+            "lvl": "35",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -26285,6 +25988,7 @@ let constants_diablo2_96 = {
             "elc": "6cs",
             "iq": 1,
             "n": "Cedar Staff",
+            "durability": 35,
             "min2d": 11,
             "max2d": 32,
             "rs": 25,
@@ -26296,6 +26000,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 4,
             "it": 8,
+            "type": "staf",
+            "lvl": "38",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -26312,6 +26021,7 @@ let constants_diablo2_96 = {
             "elc": "6bs",
             "iq": 1,
             "n": "Gothic Staff",
+            "durability": 40,
             "min2d": 14,
             "max2d": 34,
             "rs": 25,
@@ -26321,6 +26031,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 4,
             "it": 8,
+            "type": "staf",
+            "lvl": "42",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -26337,6 +26052,7 @@ let constants_diablo2_96 = {
             "elc": "6ws",
             "iq": 1,
             "n": "Rune Staff",
+            "durability": 50,
             "min2d": 24,
             "max2d": 58,
             "rs": 25,
@@ -26348,6 +26064,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "staf",
+            "lvl": "47",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -26364,6 +26085,7 @@ let constants_diablo2_96 = {
             "elc": "6sb",
             "iq": 1,
             "n": "Edge Bow",
+            "durability": 20,
             "min2d": 6,
             "max2d": 19,
             "rs": 25,
@@ -26374,6 +26096,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "bow",
+            "lvl": "30",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -26388,6 +26116,7 @@ let constants_diablo2_96 = {
             "elc": "6hb",
             "iq": 1,
             "n": "Razor Bow",
+            "durability": 32,
             "min2d": 8,
             "max2d": 22,
             "rs": 25,
@@ -26398,6 +26127,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "bow",
+            "lvl": "33",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -26412,6 +26147,7 @@ let constants_diablo2_96 = {
             "elc": "6lb",
             "iq": 1,
             "n": "Cedar Bow",
+            "durability": 28,
             "min2d": 10,
             "max2d": 29,
             "rs": 53,
@@ -26424,6 +26160,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "bow",
+            "lvl": "35",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -26438,6 +26180,7 @@ let constants_diablo2_96 = {
             "elc": "6cb",
             "iq": 1,
             "n": "Double Bow",
+            "durability": 36,
             "min2d": 11,
             "max2d": 26,
             "rs": 58,
@@ -26450,6 +26193,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "bow",
+            "lvl": "39",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -26464,6 +26213,7 @@ let constants_diablo2_96 = {
             "elc": "6s7",
             "iq": 1,
             "n": "Short Siege Bow",
+            "durability": 40,
             "min2d": 13,
             "max2d": 30,
             "rs": 65,
@@ -26476,6 +26226,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "bow",
+            "lvl": "43",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -26490,6 +26246,7 @@ let constants_diablo2_96 = {
             "elc": "6l7",
             "iq": 1,
             "n": "Large Siege Bow",
+            "durability": 44,
             "min2d": 10,
             "max2d": 42,
             "rs": 80,
@@ -26500,6 +26257,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "bow",
+            "lvl": "46",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -26514,6 +26277,7 @@ let constants_diablo2_96 = {
             "elc": "6sw",
             "iq": 1,
             "n": "Rune Bow",
+            "durability": 48,
             "min2d": 14,
             "max2d": 35,
             "rs": 73,
@@ -26526,6 +26290,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "bow",
+            "lvl": "49",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -26540,6 +26310,7 @@ let constants_diablo2_96 = {
             "elc": "6lw",
             "iq": 1,
             "n": "Gothic Bow",
+            "durability": 55,
             "min2d": 10,
             "max2d": 50,
             "rs": 95,
@@ -26550,6 +26321,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "bow",
+            "lvl": "52",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -26564,6 +26341,7 @@ let constants_diablo2_96 = {
             "elc": "6lx",
             "iq": 1,
             "n": "Arbalest",
+            "durability": 30,
             "min2d": 14,
             "max2d": 27,
             "rs": 52,
@@ -26576,6 +26354,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "xbow",
+            "lvl": "34",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -26590,6 +26374,7 @@ let constants_diablo2_96 = {
             "elc": "6mx",
             "iq": 1,
             "n": "Siege Crossbow",
+            "durability": 40,
             "min2d": 20,
             "max2d": 42,
             "rs": 80,
@@ -26602,6 +26387,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "xbow",
+            "lvl": "40",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -26616,6 +26407,7 @@ let constants_diablo2_96 = {
             "elc": "6hx",
             "iq": 1,
             "n": "Ballista",
+            "durability": 50,
             "min2d": 33,
             "max2d": 55,
             "rs": 110,
@@ -26628,6 +26420,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "xbow",
+            "lvl": "47",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -26642,6 +26440,7 @@ let constants_diablo2_96 = {
             "elc": "6rx",
             "iq": 1,
             "n": "Chu-Ko-Nu",
+            "durability": 40,
             "min2d": 14,
             "max2d": 32,
             "rs": 80,
@@ -26654,6 +26453,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "xbow",
+            "lvl": "54",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -26663,11 +26468,12 @@ let constants_diablo2_96 = {
             ]
         },
         "qf1": {
-            "nc": "qf1",
+            "nc": "fla",
             "exc": "",
             "elc": "",
             "iq": 0,
             "n": "Khalim's Flail",
+            "durability": 30,
             "mind": 1,
             "maxd": 15,
             "rs": 41,
@@ -26678,6 +26484,9 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "mace",
+            "lvl": "0",
+            "gemsockets": 3,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -26688,11 +26497,12 @@ let constants_diablo2_96 = {
             ]
         },
         "qf2": {
-            "nc": "qf2",
+            "nc": "fla",
             "exc": "",
             "elc": "",
             "iq": 0,
             "n": "Khalim's Will",
+            "durability": 30,
             "mind": 1,
             "maxd": 15,
             "hi": 1,
@@ -26701,6 +26511,9 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "mace",
+            "lvl": "0",
+            "gemsockets": 3,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -26716,6 +26529,7 @@ let constants_diablo2_96 = {
             "elc": "7ar",
             "iq": 0,
             "n": "Katar",
+            "durability": 24,
             "mind": 4,
             "maxd": 7,
             "rs": 20,
@@ -26726,6 +26540,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "h2h",
+            "lvl": "1",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "eq2n": "Assassin Item",
@@ -26743,16 +26561,21 @@ let constants_diablo2_96 = {
             "elc": "7wb",
             "iq": 0,
             "n": "Wrist Blade",
+            "durability": 28,
             "mind": 5,
             "maxd": 9,
-            "rs": 33,
-            "rd": 33,
+            "rs": 35,
+            "rd": 35,
             "hi": 1,
             "gt": 0,
             "i": "invktr",
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "h2h",
+            "lvl": "9",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "eq2n": "Assassin Item",
@@ -26770,10 +26593,11 @@ let constants_diablo2_96 = {
             "elc": "7xf",
             "iq": 0,
             "n": "Hatchet Hands",
+            "durability": 32,
             "mind": 2,
             "maxd": 15,
-            "rs": 37,
-            "rd": 37,
+            "rs": 40,
+            "rd": 40,
             "hi": 1,
             "gt": 0,
             "i": "invaxf",
@@ -26782,6 +26606,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "h2h",
+            "lvl": "12",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "eq2n": "Assassin Item",
@@ -26799,10 +26627,11 @@ let constants_diablo2_96 = {
             "elc": "7cs",
             "iq": 0,
             "n": "Cestus",
+            "durability": 36,
             "mind": 7,
             "maxd": 15,
-            "rs": 42,
-            "rd": 42,
+            "rs": 45,
+            "rd": 45,
             "hi": 1,
             "gt": 0,
             "i": "invaxf",
@@ -26811,6 +26640,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "h2h",
+            "lvl": "15",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "eq2n": "Assassin Item",
@@ -26828,16 +26661,21 @@ let constants_diablo2_96 = {
             "elc": "7lw",
             "iq": 0,
             "n": "Claws",
+            "durability": 26,
             "mind": 8,
             "maxd": 15,
-            "rs": 46,
-            "rd": 46,
+            "rs": 50,
+            "rd": 50,
             "hi": 1,
             "gt": 0,
             "i": "invclw",
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "h2h",
+            "lvl": "18",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "eq2n": "Assassin Item",
@@ -26855,16 +26693,21 @@ let constants_diablo2_96 = {
             "elc": "7tw",
             "iq": 0,
             "n": "Blade Talons",
+            "durability": 30,
             "mind": 10,
             "maxd": 14,
-            "rs": 50,
-            "rd": 50,
+            "rs": 55,
+            "rd": 55,
             "hi": 1,
             "gt": 0,
             "i": "invclw",
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "h2h",
+            "lvl": "21",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "eq2n": "Assassin Item",
@@ -26882,10 +26725,11 @@ let constants_diablo2_96 = {
             "elc": "7qr",
             "iq": 0,
             "n": "Scissors Katar",
+            "durability": 34,
             "mind": 9,
             "maxd": 17,
-            "rs": 55,
-            "rd": 55,
+            "rs": 60,
+            "rd": 60,
             "hi": 1,
             "gt": 0,
             "i": "invskr",
@@ -26894,6 +26738,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "h2h",
+            "lvl": "24",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "eq2n": "Assassin Item",
@@ -26911,16 +26759,21 @@ let constants_diablo2_96 = {
             "elc": "7ar",
             "iq": 1,
             "n": "Quhab",
+            "durability": 24,
             "mind": 11,
             "maxd": 24,
-            "rs": 57,
-            "rd": 57,
+            "rs": 65,
+            "rd": 65,
             "hi": 1,
             "gt": 0,
             "i": "invktr",
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "h2h",
+            "lvl": "26",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "eq2n": "Assassin Item",
@@ -26938,16 +26791,21 @@ let constants_diablo2_96 = {
             "elc": "7wb",
             "iq": 1,
             "n": "Wrist Spike",
+            "durability": 28,
             "mind": 13,
             "maxd": 27,
-            "rs": 66,
-            "rd": 66,
+            "rs": 73,
+            "rd": 73,
             "hi": 1,
             "gt": 0,
             "i": "invktr",
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "h2h",
+            "lvl": "32",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "eq2n": "Assassin Item",
@@ -26965,10 +26823,11 @@ let constants_diablo2_96 = {
             "elc": "7xf",
             "iq": 1,
             "n": "Fascia",
+            "durability": 32,
             "mind": 8,
             "maxd": 37,
-            "rs": 69,
-            "rd": 69,
+            "rs": 80,
+            "rd": 80,
             "hi": 1,
             "gt": 0,
             "i": "invaxf",
@@ -26977,6 +26836,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "h2h",
+            "lvl": "34",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "eq2n": "Assassin Item",
@@ -26994,10 +26857,11 @@ let constants_diablo2_96 = {
             "elc": "7cs",
             "iq": 1,
             "n": "Hand Scythe",
+            "durability": 36,
             "mind": 16,
             "maxd": 37,
-            "rs": 73,
-            "rd": 73,
+            "rs": 88,
+            "rd": 88,
             "hi": 1,
             "gt": 0,
             "i": "invaxf",
@@ -27006,6 +26870,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "h2h2",
+            "lvl": "36",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Hand to Hand",
             "c": [
@@ -27023,16 +26891,21 @@ let constants_diablo2_96 = {
             "elc": "7lw",
             "iq": 1,
             "n": "Greater Claws",
+            "durability": 26,
             "mind": 18,
             "maxd": 37,
-            "rs": 76,
-            "rd": 76,
+            "rs": 95,
+            "rd": 95,
             "hi": 1,
             "gt": 0,
             "i": "invclw",
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "h2h2",
+            "lvl": "39",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Hand to Hand",
             "c": [
@@ -27050,16 +26923,21 @@ let constants_diablo2_96 = {
             "elc": "7tw",
             "iq": 1,
             "n": "Greater Talons",
+            "durability": 30,
             "mind": 21,
             "maxd": 35,
-            "rs": 79,
-            "rd": 79,
+            "rs": 103,
+            "rd": 103,
             "hi": 1,
             "gt": 0,
             "i": "invclw",
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "h2h2",
+            "lvl": "41",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Hand to Hand",
             "c": [
@@ -27077,10 +26955,11 @@ let constants_diablo2_96 = {
             "elc": "7qr",
             "iq": 1,
             "n": "Scissors Quhab",
+            "durability": 34,
             "mind": 19,
             "maxd": 40,
-            "rs": 82,
-            "rd": 82,
+            "rs": 110,
+            "rd": 110,
             "hi": 1,
             "gt": 0,
             "i": "invskr",
@@ -27089,6 +26968,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "h2h2",
+            "lvl": "43",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Hand to Hand",
             "c": [
@@ -27106,16 +26989,21 @@ let constants_diablo2_96 = {
             "elc": "7ar",
             "iq": 2,
             "n": "Suwayyah",
-            "mind": 39,
-            "maxd": 52,
-            "rs": 99,
-            "rd": 99,
+            "durability": 24,
+            "mind": 17,
+            "maxd": 40,
+            "rs": 120,
+            "rd": 120,
             "hi": 1,
             "gt": 0,
             "i": "invktr",
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "h2h2",
+            "lvl": "54",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Hand to Hand",
             "c": [
@@ -27133,16 +27021,21 @@ let constants_diablo2_96 = {
             "elc": "7wb",
             "iq": 2,
             "n": "Wrist Sword",
-            "mind": 34,
-            "maxd": 45,
-            "rs": 105,
-            "rd": 105,
+            "durability": 28,
+            "mind": 19,
+            "maxd": 44,
+            "rs": 123,
+            "rd": 117,
             "hi": 1,
             "gt": 0,
             "i": "invktr",
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "h2h2",
+            "lvl": "59",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Hand to Hand",
             "c": [
@@ -27160,10 +27053,11 @@ let constants_diablo2_96 = {
             "elc": "7xf",
             "iq": 2,
             "n": "War Fist",
-            "mind": 44,
-            "maxd": 53,
-            "rs": 108,
-            "rd": 108,
+            "durability": 32,
+            "mind": 13,
+            "maxd": 56,
+            "rs": 126,
+            "rd": 122,
             "hi": 1,
             "gt": 0,
             "i": "invaxf",
@@ -27172,6 +27066,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "h2h2",
+            "lvl": "61",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Hand to Hand",
             "c": [
@@ -27189,10 +27087,11 @@ let constants_diablo2_96 = {
             "elc": "7cs",
             "iq": 2,
             "n": "Battle Cestus",
-            "mind": 36,
-            "maxd": 42,
-            "rs": 110,
-            "rd": 110,
+            "durability": 36,
+            "mind": 23,
+            "maxd": 56,
+            "rs": 113,
+            "rd": 129,
             "hi": 1,
             "gt": 0,
             "i": "invaxf",
@@ -27201,6 +27100,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "h2h2",
+            "lvl": "62",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Hand to Hand",
             "c": [
@@ -27218,16 +27121,21 @@ let constants_diablo2_96 = {
             "elc": "7lw",
             "iq": 2,
             "n": "Feral Claws",
-            "mind": 22,
-            "maxd": 53,
-            "rs": 113,
-            "rd": 113,
+            "durability": 26,
+            "mind": 25,
+            "maxd": 56,
+            "rs": 115,
+            "rd": 134,
             "hi": 1,
             "gt": 0,
             "i": "invclw",
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "h2h2",
+            "lvl": "64",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Hand to Hand",
             "c": [
@@ -27245,16 +27153,21 @@ let constants_diablo2_96 = {
             "elc": "7tw",
             "iq": 2,
             "n": "Runic Talons",
-            "mind": 24,
-            "maxd": 44,
-            "rs": 115,
-            "rd": 115,
+            "durability": 30,
+            "mind": 29,
+            "maxd": 54,
+            "rs": 105,
+            "rd": 140,
             "hi": 1,
             "gt": 0,
             "i": "invclw",
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "h2h2",
+            "lvl": "66",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Hand to Hand",
             "c": [
@@ -27272,10 +27185,11 @@ let constants_diablo2_96 = {
             "elc": "7qr",
             "iq": 2,
             "n": "Scissors Suwayyah",
-            "mind": 40,
-            "maxd": 51,
-            "rs": 118,
-            "rd": 118,
+            "durability": 34,
+            "mind": 27,
+            "maxd": 59,
+            "rs": 130,
+            "rd": 123,
             "hi": 1,
             "gt": 0,
             "i": "invskr",
@@ -27284,6 +27198,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "h2h2",
+            "lvl": "67",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Hand to Hand",
             "c": [
@@ -27301,10 +27219,11 @@ let constants_diablo2_96 = {
             "elc": "7ha",
             "iq": 2,
             "n": "Tomahawk",
-            "mind": 33,
-            "maxd": 58,
-            "rs": 125,
-            "rd": 67,
+            "durability": 28,
+            "mind": 18,
+            "maxd": 47,
+            "rs": 87,
+            "rd": 95,
             "hi": 1,
             "gt": 0,
             "i": "invhax",
@@ -27313,6 +27232,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "58",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -27327,9 +27250,10 @@ let constants_diablo2_96 = {
             "elc": "7ax",
             "iq": 2,
             "n": "Small Crescent",
-            "mind": 38,
-            "maxd": 60,
-            "rs": 115,
+            "durability": 24,
+            "mind": 22,
+            "maxd": 57,
+            "rs": 95,
             "rd": 83,
             "hi": 1,
             "gt": 0,
@@ -27339,6 +27263,10 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "61",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -27353,16 +27281,21 @@ let constants_diablo2_96 = {
             "elc": "72a",
             "iq": 2,
             "n": "Ettin Axe",
-            "mind": 33,
-            "maxd": 66,
-            "rs": 145,
-            "rd": 45,
+            "durability": 24,
+            "mind": 19,
+            "maxd": 60,
+            "rs": 121,
+            "rd": 69,
             "hi": 1,
             "gt": 0,
             "i": "inv2ax",
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "64",
+            "gemsockets": 5,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -27377,10 +27310,11 @@ let constants_diablo2_96 = {
             "elc": "7mp",
             "iq": 2,
             "n": "War Spike",
-            "mind": 30,
-            "maxd": 48,
-            "rs": 133,
-            "rd": 54,
+            "durability": 26,
+            "mind": 13,
+            "maxd": 46,
+            "rs": 144,
+            "rd": 55,
             "hi": 1,
             "gt": 0,
             "i": "invmpi",
@@ -27389,6 +27323,10 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "67",
+            "gemsockets": 6,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -27402,17 +27340,21 @@ let constants_diablo2_96 = {
             "exc": "9wa",
             "elc": "7wa",
             "iq": 2,
-            "n": "Berserker Axe",
-            "mind": 24,
-            "maxd": 71,
-            "rs": 138,
-            "rd": 59,
+            "n": "Beserker Axe",
+            "durability": 26,
+            "mind": 3,
+            "maxd": 64,
+            "rs": 149,
             "hi": 1,
             "gt": 0,
             "i": "invwax",
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "71",
+            "gemsockets": 6,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -27427,15 +27369,22 @@ let constants_diablo2_96 = {
             "elc": "7la",
             "iq": 2,
             "n": "Feral Axe",
-            "min2d": 25,
-            "max2d": 123,
-            "rs": 196,
+            "durability": 30,
+            "min2d": 10,
+            "max2d": 88,
+            "rs": 165,
+            "rd": 45,
             "hi": 1,
             "gt": 0,
             "i": "invlax",
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "61",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -27450,16 +27399,22 @@ let constants_diablo2_96 = {
             "elc": "7ba",
             "iq": 2,
             "n": "Silver-edged Axe",
-            "min2d": 62,
-            "max2d": 110,
-            "rs": 166,
-            "rd": 65,
+            "durability": 35,
+            "min2d": 39,
+            "max2d": 87,
+            "rs": 130,
+            "rd": 87,
             "hi": 1,
             "gt": 0,
             "i": "invbrx",
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "64",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -27474,10 +27429,10 @@ let constants_diablo2_96 = {
             "elc": "7bt",
             "iq": 2,
             "n": "Decapitator",
-            "min2d": 49,
-            "max2d": 137,
-            "rs": 189,
-            "rd": 33,
+            "durability": 40,
+            "min2d": 40,
+            "max2d": 107,
+            "rs": 175,
             "hi": 1,
             "gt": 0,
             "i": "invbtx",
@@ -27486,6 +27441,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "67",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -27500,10 +27460,11 @@ let constants_diablo2_96 = {
             "elc": "7ga",
             "iq": 2,
             "n": "Champion Axe",
-            "min2d": 59,
-            "max2d": 94,
-            "rs": 167,
-            "rd": 59,
+            "durability": 50,
+            "min2d": 26,
+            "max2d": 82,
+            "rs": 143,
+            "rd": 65,
             "hi": 1,
             "gt": 0,
             "i": "invgax",
@@ -27512,6 +27473,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "axe",
+            "lvl": "70",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -27526,16 +27492,22 @@ let constants_diablo2_96 = {
             "elc": "7gi",
             "iq": 2,
             "n": "Glorious Axe",
-            "min2d": 60,
-            "max2d": 124,
-            "rs": 164,
-            "rd": 55,
+            "durability": 50,
+            "min2d": 16,
+            "max2d": 132,
+            "rs": 155,
+            "rd": 73,
             "hi": 1,
             "gt": 0,
             "i": "invgix",
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "axe",
+            "lvl": "73",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -27550,15 +27522,20 @@ let constants_diablo2_96 = {
             "elc": "7wn",
             "iq": 2,
             "n": "Polished Wand",
+            "durability": 15,
             "mind": 18,
             "maxd": 33,
-            "rs": 25,
-            "hi": 1,
+            "rs": 35,
+            "rd": 61,
             "gt": 0,
             "i": "invwnd",
             "iw": 1,
             "ih": 2,
             "it": 8,
+            "type": "wand",
+            "lvl": "58",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -27575,15 +27552,20 @@ let constants_diablo2_96 = {
             "elc": "7yw",
             "iq": 2,
             "n": "Ghost Wand",
+            "durability": 15,
             "mind": 20,
-            "maxd": 40,
+            "maxd": 42,
             "rs": 25,
-            "hi": 1,
+            "rd": 75,
             "gt": 0,
             "i": "invywn",
             "iw": 1,
             "ih": 2,
             "it": 8,
+            "type": "wand",
+            "lvl": "64",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -27600,10 +27582,11 @@ let constants_diablo2_96 = {
             "elc": "7bw",
             "iq": 2,
             "n": "Lich Wand",
-            "mind": 10,
+            "durability": 15,
+            "mind": 9,
             "maxd": 31,
-            "rs": 25,
-            "hi": 1,
+            "rs": 33,
+            "rd": 67,
             "gt": 0,
             "i": "invbwn",
             "ui": "invbwnu",
@@ -27611,6 +27594,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 2,
+            "type": "wand",
+            "lvl": "67",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -27627,15 +27614,20 @@ let constants_diablo2_96 = {
             "elc": "7gw",
             "iq": 2,
             "n": "Unearthed Wand",
+            "durability": 15,
             "mind": 22,
             "maxd": 28,
-            "rs": 25,
-            "hi": 1,
+            "rs": 42,
+            "rd": 56,
             "gt": 0,
             "i": "invgwn",
             "iw": 1,
             "ih": 2,
             "it": 2,
+            "type": "wand",
+            "lvl": "72",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -27652,10 +27644,11 @@ let constants_diablo2_96 = {
             "elc": "7cl",
             "iq": 2,
             "n": "Truncheon",
-            "mind": 35,
-            "maxd": 43,
-            "rs": 88,
-            "rd": 43,
+            "durability": 29,
+            "mind": 14,
+            "maxd": 45,
+            "rs": 57,
+            "rd": 65,
             "hi": 1,
             "gt": 0,
             "i": "invclb",
@@ -27664,6 +27657,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "club",
+            "lvl": "58",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -27679,16 +27676,21 @@ let constants_diablo2_96 = {
             "elc": "7sc",
             "iq": 2,
             "n": "Mighty Scepter",
-            "mind": 40,
-            "maxd": 52,
-            "rs": 125,
-            "rd": 65,
+            "durability": 50,
+            "mind": 24,
+            "maxd": 47,
+            "rs": 158,
+            "rd": 76,
             "hi": 1,
             "gt": 0,
             "i": "invscp",
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "scep",
+            "lvl": "58",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -27705,16 +27707,21 @@ let constants_diablo2_96 = {
             "elc": "7qs",
             "iq": 2,
             "n": "Seraph Rod",
-            "mind": 45,
-            "maxd": 54,
-            "rs": 108,
-            "rd": 69,
+            "durability": 60,
+            "mind": 27,
+            "maxd": 51,
+            "rs": 123,
+            "rd": 105,
             "hi": 1,
             "gt": 0,
             "i": "invgsc",
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "scep",
+            "lvl": "65",
+            "gemsockets": 3,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -27731,16 +27738,21 @@ let constants_diablo2_96 = {
             "elc": "7ws",
             "iq": 2,
             "n": "Caduceus",
-            "mind": 37,
-            "maxd": 43,
-            "rs": 97,
-            "rd": 70,
+            "durability": 70,
+            "mind": 19,
+            "maxd": 40,
+            "rs": 117,
+            "rd": 117,
             "hi": 1,
             "gt": 0,
             "i": "invwsp",
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "scep",
+            "lvl": "69",
+            "gemsockets": 5,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -27757,9 +27769,11 @@ let constants_diablo2_96 = {
             "elc": "7sp",
             "iq": 2,
             "n": "Tyrant Club",
-            "mind": 32,
-            "maxd": 58,
-            "rs": 133,
+            "durability": 45,
+            "mind": 13,
+            "maxd": 52,
+            "rs": 103,
+            "rd": 52,
             "hi": 1,
             "gt": 0,
             "i": "invspc",
@@ -27768,6 +27782,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "club",
+            "lvl": "59",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -27783,10 +27801,11 @@ let constants_diablo2_96 = {
             "elc": "7ma",
             "iq": 2,
             "n": "Reinforced Mace",
-            "mind": 41,
-            "maxd": 49,
-            "rs": 145,
-            "rd": 46,
+            "durability": 60,
+            "mind": 22,
+            "maxd": 43,
+            "rs": 112,
+            "rd": 62,
             "hi": 1,
             "gt": 0,
             "i": "invmac",
@@ -27794,6 +27813,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "mace",
+            "lvl": "61",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -27809,10 +27832,11 @@ let constants_diablo2_96 = {
             "elc": "7mt",
             "iq": 2,
             "n": "Devil Star",
-            "mind": 43,
-            "maxd": 53,
-            "rs": 153,
-            "rd": 44,
+            "durability": 72,
+            "mind": 28,
+            "maxd": 52,
+            "rs": 97,
+            "rd": 85,
             "hi": 1,
             "gt": 0,
             "i": "invmst",
@@ -27821,6 +27845,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "mace",
+            "lvl": "64",
+            "gemsockets": 3,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -27836,16 +27864,21 @@ let constants_diablo2_96 = {
             "elc": "7fl",
             "iq": 2,
             "n": "Scourge",
+            "durability": 65,
             "mind": 3,
-            "maxd": 80,
-            "rs": 125,
-            "rd": 77,
+            "maxd": 57,
+            "rs": 88,
+            "rd": 122,
             "hi": 1,
             "gt": 0,
             "i": "invfla",
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "mace",
+            "lvl": "67",
+            "gemsockets": 5,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -27861,15 +27894,20 @@ let constants_diablo2_96 = {
             "elc": "7wh",
             "iq": 2,
             "n": "Legendary Mallet",
-            "mind": 50,
-            "maxd": 61,
-            "rs": 189,
+            "durability": 65,
+            "mind": 46,
+            "maxd": 53,
+            "rs": 145,
             "hi": 1,
             "gt": 0,
             "i": "invwhm",
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "hamm",
+            "lvl": "71",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -27885,15 +27923,21 @@ let constants_diablo2_96 = {
             "elc": "7m7",
             "iq": 2,
             "n": "Ogre Maul",
-            "min2d": 77,
-            "max2d": 106,
-            "rs": 225,
+            "durability": 60,
+            "min2d": 66,
+            "max2d": 91,
+            "rs": 176,
             "hi": 1,
             "gt": 0,
             "i": "invmau",
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "hamm",
+            "lvl": "69",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -27909,15 +27953,21 @@ let constants_diablo2_96 = {
             "elc": "7gm",
             "iq": 2,
             "n": "Thunder Maul",
-            "min2d": 33,
-            "max2d": 180,
-            "rs": 253,
+            "durability": 60,
+            "min2d": 9,
+            "max2d": 172,
+            "rs": 218,
             "hi": 1,
             "gt": 0,
             "i": "invgma",
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "hamm",
+            "lvl": "75",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Blunt",
             "c": [
@@ -27933,16 +27983,21 @@ let constants_diablo2_96 = {
             "elc": "7ss",
             "iq": 2,
             "n": "Falcata",
-            "mind": 31,
-            "maxd": 59,
-            "rs": 150,
-            "rd": 88,
+            "durability": 24,
+            "mind": 22,
+            "maxd": 42,
+            "rs": 95,
+            "rd": 143,
             "hi": 1,
             "gt": 0,
             "i": "invssd",
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "swor",
+            "lvl": "58",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -27957,10 +28012,11 @@ let constants_diablo2_96 = {
             "elc": "7sm",
             "iq": 2,
             "n": "Ataghan",
-            "mind": 26,
-            "maxd": 46,
-            "rs": 138,
-            "rd": 95,
+            "durability": 22,
+            "mind": 8,
+            "maxd": 38,
+            "rs": 102,
+            "rd": 137,
             "hi": 1,
             "gt": 0,
             "i": "invscm",
@@ -27969,6 +28025,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "swor",
+            "lvl": "67",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -27983,10 +28043,11 @@ let constants_diablo2_96 = {
             "elc": "7sb",
             "iq": 2,
             "n": "Elegant Blade",
-            "mind": 33,
-            "maxd": 45,
-            "rs": 109,
-            "rd": 122,
+            "durability": 32,
+            "mind": 12,
+            "maxd": 40,
+            "rs": 105,
+            "rd": 134,
             "hi": 1,
             "gt": 0,
             "i": "invsbr",
@@ -27995,6 +28056,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "swor",
+            "lvl": "61",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28009,16 +28074,21 @@ let constants_diablo2_96 = {
             "elc": "7fc",
             "iq": 2,
             "n": "Hydra Edge",
-            "mind": 28,
-            "maxd": 68,
-            "rs": 142,
-            "rd": 105,
+            "durability": 32,
+            "mind": 24,
+            "maxd": 63,
+            "rs": 112,
+            "rd": 119,
             "hi": 1,
             "gt": 0,
             "i": "invflc",
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "swor",
+            "lvl": "63",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28033,10 +28103,11 @@ let constants_diablo2_96 = {
             "elc": "7cr",
             "iq": 2,
             "n": "Phase Blade",
-            "mind": 31,
-            "maxd": 35,
-            "rs": 25,
-            "rd": 136,
+            "durability": 0,
+            "mind": 24,
+            "maxd": 27,
+            "rs": 106,
+            "rd": 145,
             "hi": 1,
             "gt": 0,
             "i": "invcrs",
@@ -28045,6 +28116,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "swor",
+            "lvl": "63",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28059,16 +28135,21 @@ let constants_diablo2_96 = {
             "elc": "7bs",
             "iq": 2,
             "n": "Conquest Sword",
-            "mind": 37,
-            "maxd": 53,
-            "rs": 142,
-            "rd": 112,
+            "durability": 32,
+            "mind": 18,
+            "maxd": 47,
+            "rs": 130,
+            "rd": 88,
             "hi": 1,
             "gt": 0,
             "i": "invbsd",
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "swor",
+            "lvl": "65",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28083,10 +28164,11 @@ let constants_diablo2_96 = {
             "elc": "7ls",
             "iq": 2,
             "n": "Cryptic Sword",
+            "durability": 44,
             "mind": 5,
-            "maxd": 77,
-            "rs": 99,
-            "rd": 109,
+            "maxd": 54,
+            "rs": 125,
+            "rd": 110,
             "hi": 1,
             "gt": 0,
             "i": "invlsd",
@@ -28095,6 +28177,10 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "swor",
+            "lvl": "68",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28109,16 +28195,21 @@ let constants_diablo2_96 = {
             "elc": "7wd",
             "iq": 2,
             "n": "Mythical Sword",
-            "mind": 40,
-            "maxd": 50,
-            "rs": 147,
-            "rd": 124,
+            "durability": 44,
+            "mind": 13,
+            "maxd": 52,
+            "rs": 157,
+            "rd": 40,
             "hi": 1,
             "gt": 0,
             "i": "invwsd",
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "swor",
+            "lvl": "72",
+            "gemsockets": 3,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28133,12 +28224,13 @@ let constants_diablo2_96 = {
             "elc": "72h",
             "iq": 2,
             "n": "Legend Sword",
-            "mind": 22,
-            "maxd": 56,
-            "min2d": 50,
-            "max2d": 94,
-            "rs": 175,
-            "rd": 100,
+            "durability": 44,
+            "mind": 20,
+            "maxd": 38,
+            "min2d": 40,
+            "max2d": 66,
+            "rs": 127,
+            "rd": 130,
             "hi": 1,
             "gt": 0,
             "i": "inv2hs",
@@ -28147,6 +28239,12 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 4,
             "it": 2,
+            "type": "swor",
+            "lvl": "63",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "handed1or2": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28161,18 +28259,25 @@ let constants_diablo2_96 = {
             "elc": "7cm",
             "iq": 2,
             "n": "Highland Blade",
-            "mind": 22,
-            "maxd": 62,
-            "min2d": 67,
-            "max2d": 96,
-            "rs": 171,
-            "rd": 104,
+            "durability": 50,
+            "mind": 23,
+            "maxd": 47,
+            "min2d": 47,
+            "max2d": 78,
+            "rs": 134,
+            "rd": 125,
             "hi": 1,
             "gt": 0,
             "i": "invclm",
             "iw": 1,
             "ih": 4,
             "it": 2,
+            "type": "swor",
+            "lvl": "67",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed1or2": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28187,12 +28292,13 @@ let constants_diablo2_96 = {
             "elc": "7gs",
             "iq": 2,
             "n": "Balrog Blade",
-            "mind": 15,
-            "maxd": 75,
-            "min2d": 55,
-            "max2d": 118,
-            "rs": 185,
-            "rd": 87,
+            "durability": 50,
+            "mind": 12,
+            "maxd": 58,
+            "min2d": 31,
+            "max2d": 94,
+            "rs": 142,
+            "rd": 119,
             "hi": 1,
             "gt": 0,
             "i": "invgis",
@@ -28201,6 +28307,12 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 4,
             "it": 2,
+            "type": "swor",
+            "lvl": "69",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed1or2": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28215,12 +28327,13 @@ let constants_diablo2_96 = {
             "elc": "7b7",
             "iq": 2,
             "n": "Champion Sword",
-            "mind": 24,
-            "maxd": 54,
-            "min2d": 71,
-            "max2d": 83,
-            "rs": 163,
-            "rd": 103,
+            "durability": 40,
+            "mind": 7,
+            "maxd": 51,
+            "min2d": 21,
+            "max2d": 84,
+            "rs": 156,
+            "rd": 107,
             "hi": 1,
             "gt": 0,
             "i": "invbsw",
@@ -28229,6 +28342,12 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 4,
             "it": 2,
+            "type": "swor",
+            "lvl": "71",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed1or2": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28243,18 +28362,25 @@ let constants_diablo2_96 = {
             "elc": "7fb",
             "iq": 2,
             "n": "Colossus Sword",
-            "mind": 26,
-            "maxd": 70,
-            "min2d": 61,
-            "max2d": 121,
-            "rs": 182,
-            "rd": 95,
+            "durability": 50,
+            "mind": 18,
+            "maxd": 64,
+            "min2d": 46,
+            "max2d": 98,
+            "rs": 170,
+            "rd": 91,
             "hi": 1,
             "gt": 0,
             "i": "invflb",
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "swor",
+            "lvl": "72",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed1or2": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28269,12 +28395,13 @@ let constants_diablo2_96 = {
             "elc": "7gd",
             "iq": 2,
             "n": "Colossus Blade",
-            "mind": 25,
-            "maxd": 65,
-            "min2d": 58,
-            "max2d": 115,
-            "rs": 189,
-            "rd": 110,
+            "durability": 50,
+            "mind": 16,
+            "maxd": 54,
+            "min2d": 17,
+            "max2d": 107,
+            "rs": 188,
+            "rd": 65,
             "hi": 1,
             "gt": 0,
             "i": "invgsd",
@@ -28283,6 +28410,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "swor",
+            "lvl": "76",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed1or2": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28297,9 +28430,10 @@ let constants_diablo2_96 = {
             "elc": "7dg",
             "iq": 2,
             "n": "Bone Knife",
-            "mind": 23,
-            "maxd": 49,
-            "rs": 38,
+            "durability": 16,
+            "mind": 11,
+            "maxd": 36,
+            "rs": 65,
             "rd": 75,
             "hi": 1,
             "gt": 0,
@@ -28307,6 +28441,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 2,
+            "type": "knif",
+            "lvl": "58",
+            "gemsockets": 1,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28321,9 +28459,10 @@ let constants_diablo2_96 = {
             "elc": "7di",
             "iq": 2,
             "n": "Mithril Point",
-            "mind": 37,
-            "maxd": 53,
-            "rs": 55,
+            "durability": 20,
+            "mind": 23,
+            "maxd": 43,
+            "rs": 50,
             "rd": 98,
             "hi": 1,
             "gt": 0,
@@ -28331,6 +28470,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 2,
+            "type": "knif",
+            "lvl": "62",
+            "gemsockets": 1,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28345,9 +28488,10 @@ let constants_diablo2_96 = {
             "elc": "7kr",
             "iq": 2,
             "n": "Fanged Knife",
-            "mind": 15,
-            "maxd": 57,
-            "rs": 42,
+            "durability": 24,
+            "mind": 4,
+            "maxd": 49,
+            "rs": 54,
             "rd": 86,
             "hi": 1,
             "gt": 0,
@@ -28357,6 +28501,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "knif",
+            "lvl": "67",
+            "gemsockets": 3,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28371,9 +28519,10 @@ let constants_diablo2_96 = {
             "elc": "7bl",
             "iq": 2,
             "n": "Legend Spike",
-            "mind": 31,
-            "maxd": 47,
-            "rs": 65,
+            "durability": 24,
+            "mind": 11,
+            "maxd": 48,
+            "rs": 76,
             "rd": 67,
             "hi": 1,
             "gt": 0,
@@ -28381,6 +28530,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "knif",
+            "lvl": "70",
+            "gemsockets": 2,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28396,17 +28549,22 @@ let constants_diablo2_96 = {
             "iq": 2,
             "n": "Flying Knife",
             "s": 1,
-            "mind": 23,
-            "maxd": 54,
-            "minmd": 23,
-            "maxmd": 54,
-            "rs": 48,
-            "rd": 141,
+            "durability": 6,
+            "mind": 22,
+            "maxd": 32,
+            "minmd": 16,
+            "maxmd": 76,
+            "rs": 50,
+            "rd": 104,
             "gt": 0,
             "i": "invtkn",
             "iw": 1,
             "ih": 2,
             "it": 2,
+            "type": "tkni",
+            "lvl": "58",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Knife",
@@ -28429,17 +28587,22 @@ let constants_diablo2_96 = {
             "iq": 2,
             "n": "Flying Axe",
             "s": 1,
+            "durability": 15,
             "mind": 17,
-            "maxd": 65,
-            "minmd": 15,
-            "maxmd": 66,
-            "rs": 88,
-            "rd": 108,
+            "maxd": 49,
+            "minmd": 25,
+            "maxmd": 85,
+            "rs": 50,
+            "rd": 129,
             "gt": 0,
             "i": "invtax",
             "iw": 1,
             "ih": 2,
             "it": 2,
+            "type": "taxe",
+            "lvl": "61",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Axe",
@@ -28462,18 +28625,22 @@ let constants_diablo2_96 = {
             "iq": 2,
             "n": "Winged Knife",
             "s": 1,
-            "mind": 27,
-            "maxd": 35,
-            "minmd": 23,
-            "maxmd": 39,
-            "rs": 45,
-            "rd": 142,
+            "durability": 20,
+            "mind": 5,
+            "maxd": 33,
+            "minmd": 3,
+            "maxmd": 67,
+            "rs": 50,
+            "rd": 136,
             "gt": 0,
             "i": "invbkf",
-            "ui": "invtk3",
             "iw": 1,
             "ih": 2,
             "it": 2,
+            "type": "tkni",
+            "lvl": "64",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Knife",
@@ -28496,17 +28663,22 @@ let constants_diablo2_96 = {
             "iq": 2,
             "n": "Winged Axe",
             "s": 1,
-            "mind": 11,
-            "maxd": 56,
+            "durability": 16,
+            "mind": 3,
+            "maxd": 40,
             "minmd": 7,
-            "maxmd": 60,
-            "rs": 96,
-            "rd": 122,
+            "maxmd": 68,
+            "rs": 50,
+            "rd": 142,
             "gt": 0,
             "i": "invbal",
             "iw": 2,
             "ih": 3,
             "it": 2,
+            "type": "taxe",
+            "lvl": "66",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Axe",
@@ -28529,17 +28701,22 @@ let constants_diablo2_96 = {
             "iq": 2,
             "n": "Hyperion Javelin",
             "s": 1,
-            "mind": 21,
-            "maxd": 57,
-            "minmd": 28,
-            "maxmd": 55,
-            "rs": 98,
-            "rd": 123,
+            "durability": 10,
+            "mind": 19,
+            "maxd": 26,
+            "minmd": 27,
+            "maxmd": 50,
+            "rs": 100,
+            "rd": 124,
             "gt": 0,
             "i": "invjav",
             "iw": 1,
             "ih": 3,
             "it": 8,
+            "type": "jave",
+            "lvl": "58",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Spear",
@@ -28562,17 +28739,22 @@ let constants_diablo2_96 = {
             "iq": 2,
             "n": "Stygian Pilum",
             "s": 1,
+            "durability": 12,
             "mind": 14,
-            "maxd": 64,
+            "maxd": 42,
             "minmd": 21,
-            "maxmd": 75,
-            "rs": 118,
-            "rd": 112,
+            "maxmd": 72,
+            "rs": 128,
+            "rd": 125,
             "gt": 0,
             "i": "invpil",
             "iw": 1,
             "ih": 3,
             "it": 8,
+            "type": "jave",
+            "lvl": "63",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Spear",
@@ -28595,17 +28777,22 @@ let constants_diablo2_96 = {
             "iq": 2,
             "n": "Balrog Spear",
             "s": 1,
-            "mind": 33,
-            "maxd": 63,
-            "minmd": 40,
-            "maxmd": 62,
-            "rs": 127,
-            "rd": 95,
+            "durability": 14,
+            "mind": 12,
+            "maxd": 50,
+            "minmd": 20,
+            "maxmd": 82,
+            "rs": 133,
+            "rd": 116,
             "gt": 0,
             "i": "invssp",
             "iw": 1,
             "ih": 3,
             "it": 8,
+            "type": "jave",
+            "lvl": "65",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Spear",
@@ -28628,17 +28815,22 @@ let constants_diablo2_96 = {
             "iq": 2,
             "n": "Ghost Glaive",
             "s": 1,
+            "durability": 16,
             "mind": 19,
-            "maxd": 60,
-            "minmd": 30,
-            "maxmd": 85,
-            "rs": 89,
-            "rd": 137,
+            "maxd": 64,
+            "minmd": 50,
+            "maxmd": 75,
+            "rs": 55,
+            "rd": 156,
             "gt": 0,
             "i": "invglv",
             "iw": 1,
             "ih": 4,
             "it": 2,
+            "type": "jave",
+            "lvl": "70",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Spear",
@@ -28661,17 +28853,22 @@ let constants_diablo2_96 = {
             "iq": 2,
             "n": "Winged Harpoon",
             "s": 1,
-            "mind": 27,
-            "maxd": 35,
-            "minmd": 11,
-            "maxmd": 77,
-            "rs": 76,
+            "durability": 18,
+            "mind": 21,
+            "maxd": 29,
+            "minmd": 18,
+            "maxmd": 67,
+            "rs": 75,
             "rd": 145,
             "gt": 0,
             "i": "invtsp",
             "iw": 1,
             "ih": 4,
             "it": 2,
+            "type": "jave",
+            "lvl": "73",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Combo Weapon",
             "eq2n": "Spear",
@@ -28693,8 +28890,9 @@ let constants_diablo2_96 = {
             "elc": "7sr",
             "iq": 2,
             "n": "Hyperion Spear",
-            "min2d": 35,
-            "max2d": 119,
+            "durability": 30,
+            "min2d": 54,
+            "max2d": 62,
             "rs": 155,
             "rd": 120,
             "hi": 1,
@@ -28703,6 +28901,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "spea",
+            "lvl": "60",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28717,8 +28920,9 @@ let constants_diablo2_96 = {
             "elc": "7tr",
             "iq": 2,
             "n": "Stygian Pike",
-            "min2d": 29,
-            "max2d": 144,
+            "durability": 35,
+            "min2d": 37,
+            "max2d": 89,
             "rs": 168,
             "rd": 97,
             "hi": 1,
@@ -28729,6 +28933,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "spea",
+            "lvl": "62",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28743,9 +28952,10 @@ let constants_diablo2_96 = {
             "elc": "7br",
             "iq": 2,
             "n": "Mancatcher",
-            "min2d": 42,
-            "max2d": 92,
-            "rs": 132,
+            "durability": 28,
+            "min2d": 26,
+            "max2d": 80,
+            "rs": 143,
             "rd": 134,
             "hi": 1,
             "gt": 0,
@@ -28753,6 +28963,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "spea",
+            "lvl": "66",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28767,8 +28982,9 @@ let constants_diablo2_96 = {
             "elc": "7st",
             "iq": 2,
             "n": "Ghost Spear",
-            "min2d": 18,
-            "max2d": 155,
+            "durability": 28,
+            "min2d": 40,
+            "max2d": 85,
             "rs": 122,
             "rd": 163,
             "hi": 1,
@@ -28777,6 +28993,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "spea",
+            "lvl": "68",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28791,16 +29012,22 @@ let constants_diablo2_96 = {
             "elc": "7p7",
             "iq": 2,
             "n": "War Pike",
-            "min2d": 33,
-            "max2d": 178,
+            "durability": 25,
+            "min2d": 54,
+            "max2d": 106,
             "rs": 165,
-            "rd": 106,
+            "rd": 105,
             "hi": 1,
             "gt": 0,
             "i": "invpik",
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "spea",
+            "lvl": "70",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28812,11 +29039,12 @@ let constants_diablo2_96 = {
         "7o7": {
             "nc": "bar",
             "exc": "9b7",
-            "elc": "7o7",
-            "iq": 2,
+            "elc": "7b7",
+            "iq": 0,
             "n": "Ogre Axe",
-            "min2d": 28,
-            "max2d": 145,
+            "durability": 50,
+            "min2d": 33,
+            "max2d": 113,
             "rs": 195,
             "rd": 75,
             "hi": 1,
@@ -28825,6 +29053,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "pole",
+            "lvl": "60",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28839,8 +29072,9 @@ let constants_diablo2_96 = {
             "elc": "7vo",
             "iq": 2,
             "n": "Colossus Voulge",
-            "min2d": 17,
-            "max2d": 165,
+            "durability": 50,
+            "min2d": 7,
+            "max2d": 119,
             "rs": 210,
             "rd": 55,
             "hi": 1,
@@ -28849,6 +29083,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "pole",
+            "lvl": "63",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28863,8 +29102,9 @@ let constants_diablo2_96 = {
             "elc": "7s8",
             "iq": 2,
             "n": "Thresher",
-            "min2d": 12,
-            "max2d": 141,
+            "durability": 65,
+            "min2d": 16,
+            "max2d": 91,
             "rs": 152,
             "rd": 118,
             "hi": 1,
@@ -28875,6 +29115,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "pole",
+            "lvl": "65",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28889,8 +29134,9 @@ let constants_diablo2_96 = {
             "elc": "7pa",
             "iq": 2,
             "n": "Cryptic Axe",
-            "min2d": 33,
-            "max2d": 150,
+            "durability": 65,
+            "min2d": 59,
+            "max2d": 98,
             "rs": 165,
             "rd": 103,
             "hi": 1,
@@ -28899,6 +29145,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "pole",
+            "lvl": "61",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28913,8 +29164,9 @@ let constants_diablo2_96 = {
             "elc": "7h7",
             "iq": 2,
             "n": "Great Poleaxe",
-            "min2d": 46,
-            "max2d": 127,
+            "durability": 55,
+            "min2d": 19,
+            "max2d": 107,
             "rs": 179,
             "rd": 99,
             "hi": 1,
@@ -28923,6 +29175,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "pole",
+            "lvl": "73",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28937,16 +29194,22 @@ let constants_diablo2_96 = {
             "elc": "7wc",
             "iq": 2,
             "n": "Giant Thresher",
-            "min2d": 40,
-            "max2d": 114,
+            "durability": 55,
+            "min2d": 20,
+            "max2d": 97,
             "rs": 188,
-            "rd": 140,
+            "rd": 88,
             "hi": 1,
             "gt": 0,
             "i": "invwsc",
             "iw": 2,
             "ih": 4,
             "it": 2,
+            "type": "pole",
+            "lvl": "76",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Melee Weapon",
             "c": [
@@ -28961,15 +29224,22 @@ let constants_diablo2_96 = {
             "elc": "6ss",
             "iq": 2,
             "n": "Walking Stick",
-            "min2d": 69,
-            "max2d": 85,
-            "rs": 25,
+            "durability": 20,
+            "min2d": 45,
+            "max2d": 52,
+            "rs": 50,
+            "rd": 35,
             "hi": 1,
             "gt": 0,
             "i": "invsst",
             "iw": 1,
             "ih": 3,
             "it": 8,
+            "type": "staf",
+            "lvl": "58",
+            "gemsockets": 2,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -28986,16 +29256,22 @@ let constants_diablo2_96 = {
             "elc": "6ls",
             "iq": 2,
             "n": "Stalagmite",
-            "min2d": 75,
-            "max2d": 107,
-            "rs": 63,
-            "rd": 35,
+            "durability": 30,
+            "min2d": 44,
+            "max2d": 61,
+            "rs": 50,
+            "rd": 42,
             "hi": 1,
             "gt": 0,
             "i": "invlst",
             "iw": 1,
             "ih": 4,
             "it": 8,
+            "type": "staf",
+            "lvl": "61",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -29012,9 +29288,10 @@ let constants_diablo2_96 = {
             "elc": "6cs",
             "iq": 2,
             "n": "Elder Staff",
-            "min2d": 80,
-            "max2d": 93,
-            "rs": 44,
+            "durability": 35,
+            "min2d": 56,
+            "max2d": 68,
+            "rs": 50,
             "rd": 37,
             "hi": 1,
             "gt": 0,
@@ -29024,6 +29301,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 4,
             "it": 8,
+            "type": "staf",
+            "lvl": "64",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -29040,16 +29322,22 @@ let constants_diablo2_96 = {
             "elc": "6bs",
             "iq": 2,
             "n": "Shillelagh",
-            "min2d": 65,
-            "max2d": 108,
-            "rs": 52,
-            "rd": 27,
+            "durability": 40,
+            "min2d": 23,
+            "max2d": 83,
+            "rs": 50,
+            "rd": 48,
             "hi": 1,
             "gt": 0,
             "i": "invbst",
             "iw": 1,
             "ih": 4,
             "it": 8,
+            "type": "staf",
+            "lvl": "67",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -29066,15 +29354,22 @@ let constants_diablo2_96 = {
             "elc": "6ws",
             "iq": 2,
             "n": "Archon Staff",
-            "min2d": 83,
-            "max2d": 99,
-            "rs": 34,
+            "durability": 50,
+            "min2d": 66,
+            "max2d": 77,
+            "rs": 50,
+            "rd": 32,
             "hi": 1,
             "gt": 0,
             "i": "invwst",
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "staf",
+            "lvl": "70",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Staves And Rods",
             "c": [
@@ -29091,16 +29386,23 @@ let constants_diablo2_96 = {
             "elc": "6sb",
             "iq": 2,
             "n": "Spider Bow",
-            "min2d": 23,
-            "max2d": 50,
-            "rs": 64,
-            "rd": 143,
+            "durability": 20,
+            "min2d": 21,
+            "max2d": 49,
+            "rs": 67,
+            "rd": 188,
             "hi": 1,
             "gt": 0,
             "i": "invsbw",
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "bow",
+            "lvl": "58",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -29115,16 +29417,23 @@ let constants_diablo2_96 = {
             "elc": "6hb",
             "iq": 2,
             "n": "Blade Bow",
-            "min2d": 21,
-            "max2d": 41,
+            "durability": 32,
+            "min2d": 14,
+            "max2d": 43,
             "rs": 76,
-            "rd": 119,
+            "rd": 181,
             "hi": 1,
             "gt": 0,
             "i": "invhbw",
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "bow",
+            "lvl": "60",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -29139,16 +29448,23 @@ let constants_diablo2_96 = {
             "elc": "6lb",
             "iq": 2,
             "n": "Shadow Bow",
-            "min2d": 15,
-            "max2d": 59,
-            "rs": 52,
-            "rd": 188,
+            "durability": 28,
+            "min2d": 13,
+            "max2d": 58,
+            "rs": 82,
+            "rd": 195,
             "hi": 1,
             "gt": 0,
             "i": "invlbw",
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "bow",
+            "lvl": "61",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -29163,10 +29479,11 @@ let constants_diablo2_96 = {
             "elc": "6cb",
             "iq": 2,
             "n": "Great Bow",
-            "min2d": 12,
-            "max2d": 52,
-            "rs": 121,
-            "rd": 107,
+            "durability": 36,
+            "min2d": 3,
+            "max2d": 54,
+            "rs": 89,
+            "rd": 165,
             "hi": 1,
             "gt": 0,
             "i": "invcbw",
@@ -29175,6 +29492,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "bow",
+            "lvl": "64",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -29189,10 +29512,11 @@ let constants_diablo2_96 = {
             "elc": "6s7",
             "iq": 2,
             "n": "Diamond Bow",
+            "durability": 40,
             "min2d": 33,
-            "max2d": 40,
-            "rs": 89,
-            "rd": 132,
+            "max2d": 38,
+            "rs": 77,
+            "rd": 172,
             "hi": 1,
             "gt": 0,
             "i": "invsbb",
@@ -29201,6 +29525,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "bow",
+            "lvl": "67",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -29215,16 +29545,23 @@ let constants_diablo2_96 = {
             "elc": "6l7",
             "iq": 2,
             "n": "Crusader Bow",
+            "durability": 44,
             "min2d": 15,
             "max2d": 63,
-            "rs": 97,
-            "rd": 121,
+            "rs": 116,
+            "rd": 134,
             "hi": 1,
             "gt": 0,
             "i": "invlbb",
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "bow",
+            "lvl": "70",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -29239,10 +29576,11 @@ let constants_diablo2_96 = {
             "elc": "6sw",
             "iq": 2,
             "n": "Ward Bow",
-            "min2d": 20,
+            "durability": 48,
+            "min2d": 18,
             "max2d": 53,
-            "rs": 72,
-            "rd": 146,
+            "rs": 107,
+            "rd": 143,
             "hi": 1,
             "gt": 0,
             "i": "invswb",
@@ -29251,6 +29589,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "bow",
+            "lvl": "72",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -29265,16 +29609,23 @@ let constants_diablo2_96 = {
             "elc": "6lw",
             "iq": 2,
             "n": "Hydra Bow",
+            "durability": 55,
             "min2d": 10,
             "max2d": 68,
             "rs": 134,
-            "rd": 167,
+            "rd": 161,
             "hi": 1,
             "gt": 0,
             "i": "invlwb",
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "bow",
+            "lvl": "74",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -29289,9 +29640,10 @@ let constants_diablo2_96 = {
             "elc": "6lx",
             "iq": 2,
             "n": "Pellet Bow",
-            "min2d": 28,
+            "durability": 30,
+            "min2d": 14,
             "max2d": 73,
-            "rs": 83,
+            "rs": 82,
             "rd": 155,
             "hi": 1,
             "gt": 0,
@@ -29301,6 +29653,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "xbow",
+            "lvl": "61",
+            "gemsockets": 3,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -29315,10 +29673,11 @@ let constants_diablo2_96 = {
             "elc": "6mx",
             "iq": 2,
             "n": "Gorgon Crossbow",
-            "min2d": 25,
+            "durability": 40,
+            "min2d": 15,
             "max2d": 87,
-            "rs": 117,
-            "rd": 105,
+            "rs": 116,
+            "rd": 103,
             "hi": 1,
             "gt": 0,
             "i": "invmxb",
@@ -29327,6 +29686,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "xbow",
+            "lvl": "65",
+            "gemsockets": 4,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -29341,9 +29706,10 @@ let constants_diablo2_96 = {
             "elc": "6hx",
             "iq": 2,
             "n": "Colossus Crossbow",
-            "min2d": 32,
+            "durability": 50,
+            "min2d": 28,
             "max2d": 91,
-            "rs": 163,
+            "rs": 152,
             "rd": 77,
             "hi": 1,
             "gt": 0,
@@ -29353,6 +29719,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "xbow",
+            "lvl": "70",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -29367,9 +29739,10 @@ let constants_diablo2_96 = {
             "elc": "6rx",
             "iq": 2,
             "n": "Demon Crossbow",
-            "min2d": 26,
-            "max2d": 40,
-            "rs": 141,
+            "durability": 40,
+            "min2d": 23,
+            "max2d": 30,
+            "rs": 121,
             "rd": 98,
             "hi": 1,
             "gt": 0,
@@ -29379,6 +29752,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 3,
             "it": 8,
+            "type": "xbow",
+            "lvl": "76",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile Weapon",
             "c": [
@@ -29393,6 +29772,7 @@ let constants_diablo2_96 = {
             "elc": "obb",
             "iq": 0,
             "n": "Eagle Orb",
+            "durability": 20,
             "mind": 2,
             "maxd": 5,
             "hi": 1,
@@ -29401,6 +29781,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 8,
+            "type": "orb",
+            "lvl": "1",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Weapon",
             "eq2n": "Sorceress Item",
@@ -29417,6 +29801,7 @@ let constants_diablo2_96 = {
             "elc": "obc",
             "iq": 0,
             "n": "Sacred Globe",
+            "durability": 30,
             "mind": 3,
             "maxd": 8,
             "hi": 1,
@@ -29425,6 +29810,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 8,
+            "type": "orb",
+            "lvl": "8",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Weapon",
             "eq2n": "Sorceress Item",
@@ -29441,6 +29830,7 @@ let constants_diablo2_96 = {
             "elc": "obd",
             "iq": 0,
             "n": "Smoked Sphere",
+            "durability": 35,
             "mind": 4,
             "maxd": 10,
             "hi": 1,
@@ -29449,6 +29839,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 8,
+            "type": "orb",
+            "lvl": "12",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Weapon",
             "eq2n": "Sorceress Item",
@@ -29465,6 +29859,7 @@ let constants_diablo2_96 = {
             "elc": "obe",
             "iq": 0,
             "n": "Clasped Orb",
+            "durability": 40,
             "mind": 5,
             "maxd": 12,
             "hi": 1,
@@ -29473,6 +29868,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 8,
+            "type": "orb",
+            "lvl": "17",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Weapon",
             "eq2n": "Sorceress Item",
@@ -29489,6 +29888,7 @@ let constants_diablo2_96 = {
             "elc": "obf",
             "iq": 0,
             "n": "Jared's Stone",
+            "durability": 50,
             "mind": 8,
             "maxd": 18,
             "hi": 1,
@@ -29497,6 +29897,10 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 8,
+            "type": "orb",
+            "lvl": "24",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Weapon",
             "eq2n": "Sorceress Item",
@@ -29513,10 +29917,11 @@ let constants_diablo2_96 = {
             "elc": "amb",
             "iq": 0,
             "n": "Stag Bow",
+            "durability": 48,
             "min2d": 7,
-            "max2d": 12,
-            "rs": 30,
-            "rd": 45,
+            "max2d": 13,
+            "rs": 35,
+            "rd": 55,
             "hi": 1,
             "gt": 0,
             "i": "invam1",
@@ -29525,6 +29930,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "abow",
+            "lvl": "18",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Bow",
             "eq2n": "Amazon Item",
@@ -29543,16 +29954,23 @@ let constants_diablo2_96 = {
             "elc": "amc",
             "iq": 0,
             "n": "Reflex Bow",
-            "min2d": 9,
-            "max2d": 19,
-            "rs": 35,
-            "rd": 60,
+            "durability": 55,
+            "min2d": 5,
+            "max2d": 22,
+            "rs": 50,
+            "rd": 65,
             "hi": 1,
             "gt": 0,
             "i": "invam2",
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "abow",
+            "lvl": "24",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Bow",
             "eq2n": "Amazon Item",
@@ -29571,16 +29989,22 @@ let constants_diablo2_96 = {
             "elc": "amd",
             "iq": 0,
             "n": "Maiden Spear",
+            "durability": 28,
             "min2d": 18,
-            "max2d": 24,
+            "max2d": 20,
             "rs": 54,
-            "rd": 40,
+            "rd": 35,
             "hi": 1,
             "gt": 0,
             "i": "invam3",
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "aspe",
+            "lvl": "18",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Spear",
             "eq2n": "Amazon Item",
@@ -29599,16 +30023,22 @@ let constants_diablo2_96 = {
             "elc": "ame",
             "iq": 0,
             "n": "Maiden Pike",
+            "durability": 25,
             "min2d": 23,
             "max2d": 55,
-            "rs": 63,
-            "rd": 52,
+            "rs": 60,
+            "rd": 45,
             "hi": 1,
             "gt": 0,
             "i": "invam4",
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "aspe",
+            "lvl": "24",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Spear",
             "eq2n": "Amazon Item",
@@ -29628,17 +30058,21 @@ let constants_diablo2_96 = {
             "iq": 0,
             "n": "Maiden Javelin",
             "s": 1,
-            "mind": 8,
+            "durability": 6,
+            "mind": 6,
             "maxd": 14,
-            "minmd": 6,
-            "maxmd": 22,
-            "rs": 33,
-            "rd": 47,
+            "minmd": 5,
+            "maxmd": 24,
+            "rd": 65,
             "gt": 0,
             "i": "invam5",
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "ajav",
+            "lvl": "24",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Javelin",
             "eq2n": "Amazon Item",
@@ -29663,14 +30097,21 @@ let constants_diablo2_96 = {
             "elc": "obb",
             "iq": 1,
             "n": "Glowing Orb",
+            "durability": 20,
             "mind": 8,
             "maxd": 21,
+            "rs": 20,
+            "rd": 20,
             "hi": 1,
             "gt": 0,
             "i": "invob1",
             "iw": 1,
             "ih": 2,
             "it": 8,
+            "type": "orb",
+            "lvl": "26",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Weapon",
             "eq2n": "Sorceress Item",
@@ -29687,14 +30128,21 @@ let constants_diablo2_96 = {
             "elc": "obc",
             "iq": 1,
             "n": "Crystalline Globe",
+            "durability": 30,
             "mind": 10,
             "maxd": 26,
+            "rs": 20,
+            "rd": 20,
             "hi": 1,
             "gt": 0,
             "i": "invob2",
             "iw": 1,
             "ih": 2,
             "it": 8,
+            "type": "orb",
+            "lvl": "31",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Weapon",
             "eq2n": "Sorceress Item",
@@ -29711,14 +30159,21 @@ let constants_diablo2_96 = {
             "elc": "obd",
             "iq": 1,
             "n": "Cloudy Sphere",
+            "durability": 35,
             "mind": 11,
             "maxd": 29,
+            "rs": 20,
+            "rd": 20,
             "hi": 1,
             "gt": 0,
             "i": "invob3",
             "iw": 1,
             "ih": 2,
             "it": 8,
+            "type": "orb",
+            "lvl": "34",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Weapon",
             "eq2n": "Sorceress Item",
@@ -29735,14 +30190,21 @@ let constants_diablo2_96 = {
             "elc": "obe",
             "iq": 1,
             "n": "Sparkling Ball",
+            "durability": 40,
             "mind": 13,
             "maxd": 32,
+            "rs": 20,
+            "rd": 20,
             "hi": 1,
             "gt": 0,
             "i": "invob4",
             "iw": 1,
             "ih": 2,
             "it": 8,
+            "type": "orb",
+            "lvl": "38",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Weapon",
             "eq2n": "Sorceress Item",
@@ -29759,14 +30221,21 @@ let constants_diablo2_96 = {
             "elc": "obf",
             "iq": 1,
             "n": "Swirling Crystal",
+            "durability": 50,
             "mind": 18,
             "maxd": 42,
+            "rs": 20,
+            "rd": 20,
             "hi": 1,
             "gt": 0,
             "i": "invob5",
             "iw": 1,
             "ih": 3,
             "it": 8,
+            "type": "orb",
+            "lvl": "43",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Weapon",
             "eq2n": "Sorceress Item",
@@ -29783,10 +30252,11 @@ let constants_diablo2_96 = {
             "elc": "amb",
             "iq": 1,
             "n": "Ashwood Bow",
+            "durability": 48,
             "min2d": 16,
-            "max2d": 29,
-            "rs": 56,
-            "rd": 77,
+            "max2d": 40,
+            "rs": 73,
+            "rd": 103,
             "hi": 1,
             "gt": 0,
             "i": "invam1",
@@ -29795,6 +30265,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "abow",
+            "lvl": "39",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Bow",
             "eq2n": "Amazon Item",
@@ -29813,16 +30289,23 @@ let constants_diablo2_96 = {
             "elc": "amc",
             "iq": 1,
             "n": "Ceremonial Bow",
-            "min2d": 19,
-            "max2d": 41,
-            "rs": 73,
-            "rd": 110,
+            "durability": 55,
+            "min2d": 13,
+            "max2d": 50,
+            "rs": 95,
+            "rd": 118,
             "hi": 1,
             "gt": 0,
             "i": "invam2",
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "abow",
+            "lvl": "43",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Bow",
             "eq2n": "Amazon Item",
@@ -29841,16 +30324,22 @@ let constants_diablo2_96 = {
             "elc": "amd",
             "iq": 1,
             "n": "Ceremonial Spear",
+            "durability": 28,
             "min2d": 34,
-            "max2d": 51,
+            "max2d": 45,
             "rs": 101,
-            "rd": 80,
+            "rd": 73,
             "hi": 1,
             "gt": 0,
             "i": "invam3",
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "aspe",
+            "lvl": "39",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Spear",
             "eq2n": "Amazon Item",
@@ -29869,16 +30358,22 @@ let constants_diablo2_96 = {
             "elc": "ame",
             "iq": 1,
             "n": "Ceremonial Pike",
+            "durability": 25,
             "min2d": 42,
             "max2d": 101,
-            "rs": 115,
-            "rd": 98,
+            "rs": 110,
+            "rd": 88,
             "hi": 1,
             "gt": 0,
             "i": "invam4",
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "aspe",
+            "lvl": "43",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Spear",
             "eq2n": "Amazon Item",
@@ -29898,17 +30393,21 @@ let constants_diablo2_96 = {
             "iq": 1,
             "n": "Ceremonial Javelin",
             "s": 1,
-            "mind": 18,
+            "durability": 6,
+            "mind": 14,
             "maxd": 35,
-            "minmd": 18,
-            "maxmd": 54,
-            "rs": 25,
-            "rd": 109,
+            "minmd": 12,
+            "maxmd": 43,
+            "rd": 118,
             "gt": 0,
             "i": "invam5",
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "ajav",
+            "lvl": "43",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Javelin",
             "eq2n": "Amazon Item",
@@ -29933,14 +30432,21 @@ let constants_diablo2_96 = {
             "elc": "obb",
             "iq": 2,
             "n": "Heavenly Stone",
-            "mind": 21,
+            "durability": 20,
+            "mind": 18,
             "maxd": 46,
+            "rs": 44,
+            "rd": 44,
             "hi": 1,
             "gt": 0,
             "i": "invob1",
             "iw": 1,
             "ih": 2,
             "it": 8,
+            "type": "orb",
+            "lvl": "54",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Weapon",
             "eq2n": "Sorceress Item",
@@ -29957,14 +30463,21 @@ let constants_diablo2_96 = {
             "elc": "obc",
             "iq": 2,
             "n": "Eldritch Orb",
-            "mind": 18,
-            "maxd": 50,
+            "durability": 30,
+            "mind": 20,
+            "maxd": 54,
+            "rs": 44,
+            "rd": 44,
             "hi": 1,
             "gt": 0,
             "i": "invob2",
             "iw": 1,
             "ih": 2,
             "it": 8,
+            "type": "orb",
+            "lvl": "58",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Weapon",
             "eq2n": "Sorceress Item",
@@ -29981,14 +30494,21 @@ let constants_diablo2_96 = {
             "elc": "obd",
             "iq": 2,
             "n": "Demon Heart",
+            "durability": 35,
             "mind": 23,
-            "maxd": 55,
+            "maxd": 59,
+            "rs": 44,
+            "rd": 44,
             "hi": 1,
             "gt": 0,
             "i": "invob3",
             "iw": 1,
             "ih": 2,
             "it": 8,
+            "type": "orb",
+            "lvl": "61",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Weapon",
             "eq2n": "Sorceress Item",
@@ -30005,14 +30525,21 @@ let constants_diablo2_96 = {
             "elc": "obe",
             "iq": 2,
             "n": "Vortex Orb",
-            "mind": 12,
-            "maxd": 66,
+            "durability": 40,
+            "mind": 25,
+            "maxd": 64,
+            "rs": 44,
+            "rd": 44,
             "hi": 1,
             "gt": 0,
             "i": "invob4",
             "iw": 1,
             "ih": 2,
             "it": 8,
+            "type": "orb",
+            "lvl": "63",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Weapon",
             "eq2n": "Sorceress Item",
@@ -30029,14 +30556,21 @@ let constants_diablo2_96 = {
             "elc": "obf",
             "iq": 2,
             "n": "Dimensional Shard",
-            "mind": 30,
-            "maxd": 53,
+            "durability": 50,
+            "mind": 33,
+            "maxd": 79,
+            "rs": 44,
+            "rd": 44,
             "hi": 1,
             "gt": 0,
             "i": "invob5",
             "iw": 1,
             "ih": 3,
             "it": 8,
+            "type": "orb",
+            "lvl": "67",
+            "gemsockets": 4,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Weapon",
             "eq2n": "Sorceress Item",
@@ -30053,9 +30587,10 @@ let constants_diablo2_96 = {
             "elc": "amb",
             "iq": 2,
             "n": "Matriarchal Bow",
-            "min2d": 20,
-            "max2d": 47,
-            "rs": 87,
+            "durability": 48,
+            "min2d": 18,
+            "max2d": 58,
+            "rs": 107,
             "rd": 187,
             "hi": 1,
             "gt": 0,
@@ -30065,6 +30600,12 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "abow",
+            "lvl": "64",
+            "gemsockets": 5,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Bow",
             "eq2n": "Amazon Item",
@@ -30083,16 +30624,23 @@ let constants_diablo2_96 = {
             "elc": "amc",
             "iq": 2,
             "n": "Grand Matron Bow",
+            "durability": 55,
             "min2d": 14,
-            "max2d": 72,
-            "rs": 108,
-            "rd": 152,
+            "max2d": 70,
+            "rs": 134,
+            "rd": 161,
             "hi": 1,
             "gt": 0,
             "i": "invam2",
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "abow",
+            "lvl": "67",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Bow",
             "eq2n": "Amazon Item",
@@ -30111,16 +30659,22 @@ let constants_diablo2_96 = {
             "elc": "amd",
             "iq": 2,
             "n": "Matriarchal Spear",
-            "min2d": 65,
-            "max2d": 95,
-            "rs": 114,
-            "rd": 142,
+            "durability": 28,
+            "min2d": 45,
+            "max2d": 87,
+            "rs": 141,
+            "rd": 145,
             "hi": 1,
             "gt": 0,
             "i": "invam3",
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "aspe",
+            "lvl": "64",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Spear",
             "eq2n": "Amazon Item",
@@ -30139,16 +30693,22 @@ let constants_diablo2_96 = {
             "elc": "ame",
             "iq": 2,
             "n": "Matriarchal Pike",
-            "min2d": 37,
-            "max2d": 153,
-            "rs": 132,
-            "rd": 149,
+            "durability": 25,
+            "min2d": 61,
+            "max2d": 116,
+            "rs": 152,
+            "rd": 125,
             "hi": 1,
             "gt": 0,
             "i": "invam4",
             "iw": 2,
             "ih": 4,
             "it": 8,
+            "type": "aspe",
+            "lvl": "67",
+            "gemsockets": 6,
+            "spawnable": 1,
+            "handed2": 1,
             "ig": [],
             "eq1n": "Spear",
             "eq2n": "Amazon Item",
@@ -30168,17 +30728,22 @@ let constants_diablo2_96 = {
             "iq": 2,
             "n": "Matriarchal Javelin",
             "s": 1,
-            "mind": 30,
-            "maxd": 54,
-            "minmd": 35,
-            "maxmd": 66,
+            "durability": 6,
+            "mind": 13,
+            "maxd": 44,
+            "minmd": 24,
+            "maxmd": 63,
             "rs": 107,
-            "rd": 151,
+            "rd": 161,
             "gt": 0,
             "i": "invam5",
             "iw": 1,
             "ih": 3,
             "it": 2,
+            "type": "ajav",
+            "lvl": "67",
+            "gemsockets": 0,
+            "spawnable": 1,
             "ig": [],
             "eq1n": "Javelin",
             "eq2n": "Amazon Item",
@@ -30208,6 +30773,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "elix",
+            "lvl": "21",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Miscellaneous",
             "c": [
@@ -30223,6 +30793,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "hpot",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Potion",
             "c": [
@@ -30239,6 +30814,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "mpot",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Potion",
             "c": [
@@ -30255,6 +30835,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "hpot",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Potion",
             "c": [
@@ -30271,6 +30856,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "mpot",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Potion",
             "c": [
@@ -30288,6 +30878,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "spot",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Potion",
             "c": [
@@ -30305,6 +30900,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "apot",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Potion",
             "c": [
@@ -30322,6 +30922,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rpot",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Healing Potion",
             "eq2n": "Mana Potion",
@@ -30344,6 +30949,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rpot",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Healing Potion",
             "eq2n": "Mana Potion",
@@ -30366,6 +30976,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "wpot",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Potion",
             "c": [
@@ -30384,6 +30999,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 0,
+            "type": "book",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Miscellaneous",
             "c": [
@@ -30401,6 +31021,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 0,
+            "type": "book",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Miscellaneous",
             "c": [
@@ -30417,6 +31042,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "amul",
+            "lvl": "1",
+            "gemsockets": 1,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [
                 "invamu1",
                 "invamu2",
@@ -30438,6 +31068,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "amul",
+            "lvl": "15",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [
                 "invamu1",
                 "invamu2",
@@ -30458,6 +31093,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "ring",
+            "lvl": "1",
+            "gemsockets": 1,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [
                 "invrin1",
                 "invrin2",
@@ -30481,6 +31121,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gold",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Miscellaneous",
             "c": [
@@ -30497,6 +31142,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "ques",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "c": [
                 "Quest"
@@ -30511,6 +31161,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "ques",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "c": [
                 "Quest"
@@ -30526,6 +31181,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 0,
+            "type": "bowq",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile",
             "c": [
@@ -30543,6 +31203,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 0,
+            "type": "torc",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Miscellaneous",
             "c": [
@@ -30560,6 +31225,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 0,
+            "type": "xboq",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Missile",
             "c": [
@@ -30577,6 +31247,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "scro",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Miscellaneous",
             "c": [
@@ -30593,6 +31268,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "scro",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Miscellaneous",
             "c": [
@@ -30609,6 +31289,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "body",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Miscellaneous",
             "c": [
@@ -30625,6 +31310,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "body",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Miscellaneous",
             "c": [
@@ -30641,6 +31331,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "body",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Miscellaneous",
             "c": [
@@ -30657,6 +31352,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "body",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Miscellaneous",
             "c": [
@@ -30673,6 +31373,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "body",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Miscellaneous",
             "c": [
@@ -30689,6 +31394,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "body",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Miscellaneous",
             "c": [
@@ -30703,8 +31413,13 @@ let constants_diablo2_96 = {
             "gt": 0,
             "i": "invflag",
             "iw": 1,
-            "ih": 1,
+            "ih": 2,
             "it": 0,
+            "type": "body",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Miscellaneous",
             "c": [
@@ -30721,6 +31436,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "body",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Miscellaneous",
             "c": [
@@ -30737,6 +31457,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "body",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Miscellaneous",
             "c": [
@@ -30753,6 +31478,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "body",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Miscellaneous",
             "c": [
@@ -30769,6 +31499,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "body",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Miscellaneous",
             "c": [
@@ -30785,6 +31520,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "body",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Miscellaneous",
             "c": [
@@ -30802,6 +31542,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "key",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Miscellaneous",
             "c": [
@@ -30818,6 +31563,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 0,
+            "type": "key",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Miscellaneous",
             "c": [
@@ -30834,6 +31584,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "ques",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "c": [
                 "Quest"
@@ -30848,6 +31603,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 0,
+            "type": "ques",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "c": [
                 "Quest"
@@ -30862,6 +31622,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 0,
+            "type": "ques",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "c": [
                 "Quest"
@@ -30876,6 +31641,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "ques",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "c": [
                 "Quest"
@@ -30890,6 +31660,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "ques",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "c": [
                 "Quest"
@@ -30904,6 +31679,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "ques",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "c": [
                 "Quest"
@@ -30918,6 +31698,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "ques",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "c": [
                 "Quest"
@@ -30932,6 +31717,11 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
+            "type": "ques",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "c": [
                 "Quest"
@@ -30946,6 +31736,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "ques",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "c": [
                 "Quest"
@@ -30960,6 +31755,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "ques",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "c": [
                 "Quest"
@@ -30974,6 +31774,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "ques",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "c": [
                 "Quest"
@@ -30988,6 +31793,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "play",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Miscellaneous",
             "c": [
@@ -31004,10 +31814,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Amethyst",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -31015,7 +31829,7 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "att",
+                        "prop": "att",
                         "p": 0,
                         "min": 40,
                         "max": 40
@@ -31023,7 +31837,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "str",
+                        "prop": "str",
                         "p": 0,
                         "min": 3,
                         "max": 3
@@ -31031,7 +31845,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "ac",
+                        "prop": "ac",
                         "p": 0,
                         "min": 8,
                         "max": 8
@@ -31048,10 +31862,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Amethyst",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -31059,7 +31877,7 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "att",
+                        "prop": "att",
                         "p": 0,
                         "min": 60,
                         "max": 60
@@ -31067,7 +31885,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "str",
+                        "prop": "str",
                         "p": 0,
                         "min": 4,
                         "max": 4
@@ -31075,7 +31893,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "ac",
+                        "prop": "ac",
                         "p": 0,
                         "min": 12,
                         "max": 12
@@ -31092,10 +31910,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Amethyst",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -31103,7 +31925,7 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "att",
+                        "prop": "att",
                         "p": 0,
                         "min": 80,
                         "max": 80
@@ -31111,7 +31933,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "str",
+                        "prop": "str",
                         "p": 0,
                         "min": 6,
                         "max": 6
@@ -31119,7 +31941,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "ac",
+                        "prop": "ac",
                         "p": 0,
                         "min": 18,
                         "max": 18
@@ -31136,10 +31958,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Amethyst",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -31147,7 +31973,7 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "att",
+                        "prop": "att",
                         "p": 0,
                         "min": 100,
                         "max": 100
@@ -31155,7 +31981,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "str",
+                        "prop": "str",
                         "p": 0,
                         "min": 8,
                         "max": 8
@@ -31163,7 +31989,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "ac",
+                        "prop": "ac",
                         "p": 0,
                         "min": 24,
                         "max": 24
@@ -31180,10 +32006,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Amethyst",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -31191,7 +32021,7 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "att",
+                        "prop": "att",
                         "p": 0,
                         "min": 150,
                         "max": 150
@@ -31199,7 +32029,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "str",
+                        "prop": "str",
                         "p": 0,
                         "min": 10,
                         "max": 10
@@ -31207,7 +32037,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "ac",
+                        "prop": "ac",
                         "p": 0,
                         "min": 30,
                         "max": 30
@@ -31224,10 +32054,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Topaz",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -31235,13 +32069,13 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "ltng-min",
+                        "prop": "ltng-min",
                         "p": 0,
                         "min": 1,
                         "max": 1
                     },
                     {
-                        "m": "ltng-max",
+                        "prop": "ltng-max",
                         "p": 0,
                         "min": 8,
                         "max": 8
@@ -31249,7 +32083,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "mag%",
+                        "prop": "mag%",
                         "p": 0,
                         "min": 9,
                         "max": 9
@@ -31257,7 +32091,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "res-ltng",
+                        "prop": "res-ltng",
                         "p": 0,
                         "min": 12,
                         "max": 12
@@ -31274,10 +32108,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Topaz",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -31285,13 +32123,13 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "ltng-min",
+                        "prop": "ltng-min",
                         "p": 0,
                         "min": 1,
                         "max": 1
                     },
                     {
-                        "m": "ltng-max",
+                        "prop": "ltng-max",
                         "p": 0,
                         "min": 14,
                         "max": 14
@@ -31299,7 +32137,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "mag%",
+                        "prop": "mag%",
                         "p": 0,
                         "min": 13,
                         "max": 13
@@ -31307,7 +32145,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "res-ltng",
+                        "prop": "res-ltng",
                         "p": 0,
                         "min": 16,
                         "max": 16
@@ -31324,10 +32162,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Topaz",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -31335,13 +32177,13 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "ltng-min",
+                        "prop": "ltng-min",
                         "p": 0,
                         "min": 1,
                         "max": 1
                     },
                     {
-                        "m": "ltng-max",
+                        "prop": "ltng-max",
                         "p": 0,
                         "min": 22,
                         "max": 22
@@ -31349,7 +32191,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "mag%",
+                        "prop": "mag%",
                         "p": 0,
                         "min": 16,
                         "max": 16
@@ -31357,7 +32199,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "res-ltng",
+                        "prop": "res-ltng",
                         "p": 0,
                         "min": 22,
                         "max": 22
@@ -31374,10 +32216,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Topaz",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -31385,13 +32231,13 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "ltng-min",
+                        "prop": "ltng-min",
                         "p": 0,
                         "min": 1,
                         "max": 1
                     },
                     {
-                        "m": "ltng-max",
+                        "prop": "ltng-max",
                         "p": 0,
                         "min": 30,
                         "max": 30
@@ -31399,7 +32245,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "mag%",
+                        "prop": "mag%",
                         "p": 0,
                         "min": 20,
                         "max": 20
@@ -31407,7 +32253,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "res-ltng",
+                        "prop": "res-ltng",
                         "p": 0,
                         "min": 28,
                         "max": 28
@@ -31424,10 +32270,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Topaz",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -31435,13 +32285,13 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "ltng-min",
+                        "prop": "ltng-min",
                         "p": 0,
                         "min": 1,
                         "max": 1
                     },
                     {
-                        "m": "ltng-max",
+                        "prop": "ltng-max",
                         "p": 0,
                         "min": 40,
                         "max": 40
@@ -31449,7 +32299,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "mag%",
+                        "prop": "mag%",
                         "p": 0,
                         "min": 24,
                         "max": 24
@@ -31457,7 +32307,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "res-ltng",
+                        "prop": "res-ltng",
                         "p": 0,
                         "min": 40,
                         "max": 40
@@ -31474,10 +32324,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Sapphire",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -31485,19 +32339,19 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "cold-min",
+                        "prop": "cold-min",
                         "p": 0,
                         "min": 1,
                         "max": 1
                     },
                     {
-                        "m": "cold-max",
+                        "prop": "cold-max",
                         "p": 0,
                         "min": 3,
                         "max": 3
                     },
                     {
-                        "m": "cold-len",
+                        "prop": "cold-len",
                         "p": 0,
                         "min": 25,
                         "max": 25
@@ -31505,7 +32359,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "mana",
+                        "prop": "mana",
                         "p": 0,
                         "min": 10,
                         "max": 10
@@ -31513,7 +32367,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "res-cold",
+                        "prop": "res-cold",
                         "p": 0,
                         "min": 12,
                         "max": 12
@@ -31530,10 +32384,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Sapphire",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -31541,19 +32399,19 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "cold-min",
+                        "prop": "cold-min",
                         "p": 0,
                         "min": 3,
                         "max": 3
                     },
                     {
-                        "m": "cold-max",
+                        "prop": "cold-max",
                         "p": 0,
                         "min": 5,
                         "max": 5
                     },
                     {
-                        "m": "cold-len",
+                        "prop": "cold-len",
                         "p": 0,
                         "min": 35,
                         "max": 35
@@ -31561,7 +32419,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "mana",
+                        "prop": "mana",
                         "p": 0,
                         "min": 17,
                         "max": 17
@@ -31569,7 +32427,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "res-cold",
+                        "prop": "res-cold",
                         "p": 0,
                         "min": 16,
                         "max": 16
@@ -31586,10 +32444,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Sapphire",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -31597,19 +32459,19 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "cold-min",
+                        "prop": "cold-min",
                         "p": 0,
                         "min": 4,
                         "max": 4
                     },
                     {
-                        "m": "cold-max",
+                        "prop": "cold-max",
                         "p": 0,
                         "min": 7,
                         "max": 7
                     },
                     {
-                        "m": "cold-len",
+                        "prop": "cold-len",
                         "p": 0,
                         "min": 50,
                         "max": 50
@@ -31617,7 +32479,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "mana",
+                        "prop": "mana",
                         "p": 0,
                         "min": 24,
                         "max": 24
@@ -31625,7 +32487,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "res-cold",
+                        "prop": "res-cold",
                         "p": 0,
                         "min": 22,
                         "max": 22
@@ -31642,10 +32504,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Sapphire",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -31653,19 +32519,19 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "cold-min",
+                        "prop": "cold-min",
                         "p": 0,
                         "min": 6,
                         "max": 6
                     },
                     {
-                        "m": "cold-max",
+                        "prop": "cold-max",
                         "p": 0,
                         "min": 10,
                         "max": 10
                     },
                     {
-                        "m": "cold-len",
+                        "prop": "cold-len",
                         "p": 0,
                         "min": 60,
                         "max": 60
@@ -31673,7 +32539,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "mana",
+                        "prop": "mana",
                         "p": 0,
                         "min": 31,
                         "max": 31
@@ -31681,7 +32547,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "res-cold",
+                        "prop": "res-cold",
                         "p": 0,
                         "min": 28,
                         "max": 28
@@ -31698,10 +32564,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Sapphire",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -31709,19 +32579,19 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "cold-min",
+                        "prop": "cold-min",
                         "p": 0,
                         "min": 10,
                         "max": 10
                     },
                     {
-                        "m": "cold-max",
+                        "prop": "cold-max",
                         "p": 0,
                         "min": 14,
                         "max": 14
                     },
                     {
-                        "m": "cold-len",
+                        "prop": "cold-len",
                         "p": 0,
                         "min": 75,
                         "max": 75
@@ -31729,7 +32599,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "mana",
+                        "prop": "mana",
                         "p": 0,
                         "min": 38,
                         "max": 38
@@ -31737,7 +32607,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "res-cold",
+                        "prop": "res-cold",
                         "p": 0,
                         "min": 40,
                         "max": 40
@@ -31754,10 +32624,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Emerald",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -31765,27 +32639,27 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "pois-min",
+                        "prop": "pois-min",
                         "p": 0,
-                        "min": 34,
-                        "max": 34
+                        "min": 60,
+                        "max": 60
                     },
                     {
-                        "m": "pois-max",
+                        "prop": "pois-max",
                         "p": 0,
-                        "min": 34,
-                        "max": 34
+                        "min": 60,
+                        "max": 60
                     },
                     {
-                        "m": "pois-len",
+                        "prop": "pois-len",
                         "p": 0,
-                        "min": 75,
-                        "max": 75
+                        "min": 25,
+                        "max": 25
                     }
                 ],
                 [
                     {
-                        "m": "dex",
+                        "prop": "dex",
                         "p": 0,
                         "min": 3,
                         "max": 3
@@ -31793,7 +32667,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "res-pois",
+                        "prop": "res-pois",
                         "p": 0,
                         "min": 12,
                         "max": 12
@@ -31810,10 +32684,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Emerald",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -31821,27 +32699,27 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "pois-min",
+                        "prop": "pois-min",
                         "p": 0,
-                        "min": 51,
-                        "max": 51
+                        "min": 120,
+                        "max": 120
                     },
                     {
-                        "m": "pois-max",
+                        "prop": "pois-max",
                         "p": 0,
-                        "min": 51,
-                        "max": 51
+                        "min": 120,
+                        "max": 120
                     },
                     {
-                        "m": "pois-len",
+                        "prop": "pois-len",
                         "p": 0,
-                        "min": 100,
-                        "max": 100
+                        "min": 25,
+                        "max": 25
                     }
                 ],
                 [
                     {
-                        "m": "dex",
+                        "prop": "dex",
                         "p": 0,
                         "min": 4,
                         "max": 4
@@ -31849,7 +32727,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "res-pois",
+                        "prop": "res-pois",
                         "p": 0,
                         "min": 16,
                         "max": 16
@@ -31866,10 +32744,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Emerald",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -31877,27 +32759,27 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "pois-min",
+                        "prop": "pois-min",
                         "p": 0,
-                        "min": 82,
-                        "max": 82
+                        "min": 180,
+                        "max": 180
                     },
                     {
-                        "m": "pois-max",
+                        "prop": "pois-max",
                         "p": 0,
-                        "min": 82,
-                        "max": 82
+                        "min": 180,
+                        "max": 180
                     },
                     {
-                        "m": "pois-len",
+                        "prop": "pois-len",
                         "p": 0,
-                        "min": 125,
-                        "max": 125
+                        "min": 25,
+                        "max": 25
                     }
                 ],
                 [
                     {
-                        "m": "dex",
+                        "prop": "dex",
                         "p": 0,
                         "min": 6,
                         "max": 6
@@ -31905,7 +32787,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "res-pois",
+                        "prop": "res-pois",
                         "p": 0,
                         "min": 22,
                         "max": 22
@@ -31922,10 +32804,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Emerald",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -31933,27 +32819,27 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "pois-min",
+                        "prop": "pois-min",
                         "p": 0,
-                        "min": 101,
-                        "max": 101
+                        "min": 240,
+                        "max": 240
                     },
                     {
-                        "m": "pois-max",
+                        "prop": "pois-max",
                         "p": 0,
-                        "min": 101,
-                        "max": 101
+                        "min": 240,
+                        "max": 240
                     },
                     {
-                        "m": "pois-len",
+                        "prop": "pois-len",
                         "p": 0,
-                        "min": 152,
-                        "max": 152
+                        "min": 25,
+                        "max": 25
                     }
                 ],
                 [
                     {
-                        "m": "dex",
+                        "prop": "dex",
                         "p": 0,
                         "min": 8,
                         "max": 8
@@ -31961,7 +32847,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "res-pois",
+                        "prop": "res-pois",
                         "p": 0,
                         "min": 28,
                         "max": 28
@@ -31978,10 +32864,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Emerald",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -31989,27 +32879,27 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "pois-min",
+                        "prop": "pois-min",
                         "p": 0,
-                        "min": 143,
-                        "max": 143
+                        "min": 300,
+                        "max": 300
                     },
                     {
-                        "m": "pois-max",
+                        "prop": "pois-max",
                         "p": 0,
-                        "min": 143,
-                        "max": 143
+                        "min": 300,
+                        "max": 300
                     },
                     {
-                        "m": "pois-len",
+                        "prop": "pois-len",
                         "p": 0,
-                        "min": 179,
-                        "max": 179
+                        "min": 25,
+                        "max": 25
                     }
                 ],
                 [
                     {
-                        "m": "dex",
+                        "prop": "dex",
                         "p": 0,
                         "min": 10,
                         "max": 10
@@ -32017,7 +32907,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "res-pois",
+                        "prop": "res-pois",
                         "p": 0,
                         "min": 40,
                         "max": 40
@@ -32034,10 +32924,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Ruby",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -32045,13 +32939,13 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "fire-min",
+                        "prop": "fire-min",
                         "p": 0,
                         "min": 3,
                         "max": 3
                     },
                     {
-                        "m": "fire-max",
+                        "prop": "fire-max",
                         "p": 0,
                         "min": 4,
                         "max": 4
@@ -32059,7 +32953,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "hp",
+                        "prop": "hp",
                         "p": 0,
                         "min": 10,
                         "max": 10
@@ -32067,7 +32961,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "res-fire",
+                        "prop": "res-fire",
                         "p": 0,
                         "min": 12,
                         "max": 12
@@ -32084,10 +32978,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Ruby",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -32095,13 +32993,13 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "fire-min",
+                        "prop": "fire-min",
                         "p": 0,
                         "min": 5,
                         "max": 5
                     },
                     {
-                        "m": "fire-max",
+                        "prop": "fire-max",
                         "p": 0,
                         "min": 8,
                         "max": 8
@@ -32109,7 +33007,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "hp",
+                        "prop": "hp",
                         "p": 0,
                         "min": 17,
                         "max": 17
@@ -32117,7 +33015,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "res-fire",
+                        "prop": "res-fire",
                         "p": 0,
                         "min": 16,
                         "max": 16
@@ -32134,10 +33032,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Ruby",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -32145,13 +33047,13 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "fire-min",
+                        "prop": "fire-min",
                         "p": 0,
                         "min": 8,
                         "max": 8
                     },
                     {
-                        "m": "fire-max",
+                        "prop": "fire-max",
                         "p": 0,
                         "min": 12,
                         "max": 12
@@ -32159,7 +33061,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "hp",
+                        "prop": "hp",
                         "p": 0,
                         "min": 24,
                         "max": 24
@@ -32167,7 +33069,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "res-fire",
+                        "prop": "res-fire",
                         "p": 0,
                         "min": 22,
                         "max": 22
@@ -32184,10 +33086,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Ruby",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -32195,13 +33101,13 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "fire-min",
+                        "prop": "fire-min",
                         "p": 0,
                         "min": 10,
                         "max": 10
                     },
                     {
-                        "m": "fire-max",
+                        "prop": "fire-max",
                         "p": 0,
                         "min": 16,
                         "max": 16
@@ -32209,7 +33115,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "hp",
+                        "prop": "hp",
                         "p": 0,
                         "min": 31,
                         "max": 31
@@ -32217,7 +33123,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "res-fire",
+                        "prop": "res-fire",
                         "p": 0,
                         "min": 28,
                         "max": 28
@@ -32234,10 +33140,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Ruby",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -32245,13 +33155,13 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "fire-min",
+                        "prop": "fire-min",
                         "p": 0,
                         "min": 15,
                         "max": 15
                     },
                     {
-                        "m": "fire-max",
+                        "prop": "fire-max",
                         "p": 0,
                         "min": 20,
                         "max": 20
@@ -32259,7 +33169,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "hp",
+                        "prop": "hp",
                         "p": 0,
                         "min": 38,
                         "max": 38
@@ -32267,7 +33177,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "res-fire",
+                        "prop": "res-fire",
                         "p": 0,
                         "min": 40,
                         "max": 40
@@ -32284,10 +33194,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Diamond",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -32295,7 +33209,7 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "dmg-undead",
+                        "prop": "dmg-undead",
                         "p": 0,
                         "min": 28,
                         "max": 28
@@ -32303,7 +33217,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "att",
+                        "prop": "att",
                         "p": 0,
                         "min": 20,
                         "max": 20
@@ -32311,7 +33225,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "res-all",
+                        "prop": "res-all",
                         "p": 0,
                         "min": 6,
                         "max": 6
@@ -32328,10 +33242,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Diamond",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -32339,7 +33257,7 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "dmg-undead",
+                        "prop": "dmg-undead",
                         "p": 0,
                         "min": 34,
                         "max": 34
@@ -32347,7 +33265,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "att",
+                        "prop": "att",
                         "p": 0,
                         "min": 40,
                         "max": 40
@@ -32355,7 +33273,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "res-all",
+                        "prop": "res-all",
                         "p": 0,
                         "min": 8,
                         "max": 8
@@ -32372,10 +33290,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Diamond",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -32383,7 +33305,7 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "dmg-undead",
+                        "prop": "dmg-undead",
                         "p": 0,
                         "min": 44,
                         "max": 44
@@ -32391,7 +33313,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "att",
+                        "prop": "att",
                         "p": 0,
                         "min": 60,
                         "max": 60
@@ -32399,7 +33321,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "res-all",
+                        "prop": "res-all",
                         "p": 0,
                         "min": 11,
                         "max": 11
@@ -32416,10 +33338,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Diamond",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -32427,7 +33353,7 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "dmg-undead",
+                        "prop": "dmg-undead",
                         "p": 0,
                         "min": 54,
                         "max": 54
@@ -32435,7 +33361,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "att",
+                        "prop": "att",
                         "p": 0,
                         "min": 80,
                         "max": 80
@@ -32443,7 +33369,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "res-all",
+                        "prop": "res-all",
                         "p": 0,
                         "min": 14,
                         "max": 14
@@ -32460,10 +33386,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Diamond",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -32471,7 +33401,7 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "dmg-undead",
+                        "prop": "dmg-undead",
                         "p": 0,
                         "min": 68,
                         "max": 68
@@ -32479,7 +33409,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "att",
+                        "prop": "att",
                         "p": 0,
                         "min": 100,
                         "max": 100
@@ -32487,7 +33417,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "res-all",
+                        "prop": "res-all",
                         "p": 0,
                         "min": 19,
                         "max": 19
@@ -32504,6 +33434,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "hpot",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Potion",
             "c": [
@@ -32521,6 +33456,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "hpot",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Potion",
             "c": [
@@ -32538,6 +33478,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "hpot",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Potion",
             "c": [
@@ -32555,6 +33500,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "hpot",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Potion",
             "c": [
@@ -32572,6 +33522,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "hpot",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Potion",
             "c": [
@@ -32589,6 +33544,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "mpot",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Potion",
             "c": [
@@ -32606,6 +33566,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "mpot",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Potion",
             "c": [
@@ -32623,6 +33588,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "mpot",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Potion",
             "c": [
@@ -32640,6 +33610,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "mpot",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Potion",
             "c": [
@@ -32657,6 +33632,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "mpot",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Potion",
             "c": [
@@ -32674,10 +33654,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Skull",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -32685,13 +33669,13 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "manasteal",
+                        "prop": "manasteal",
                         "p": 0,
                         "min": 1,
                         "max": 1
                     },
                     {
-                        "m": "lifesteal",
+                        "prop": "lifesteal",
                         "p": 0,
                         "min": 2,
                         "max": 2
@@ -32699,13 +33683,13 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "regen",
+                        "prop": "regen",
                         "p": 0,
                         "min": 2,
                         "max": 2
                     },
                     {
-                        "m": "regen-mana",
+                        "prop": "regen-mana",
                         "p": 0,
                         "min": 8,
                         "max": 8
@@ -32713,7 +33697,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "thorns",
+                        "prop": "thorns",
                         "p": 0,
                         "min": 4,
                         "max": 4
@@ -32730,10 +33714,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Skull",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -32741,13 +33729,13 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "manasteal",
+                        "prop": "manasteal",
                         "p": 0,
                         "min": 2,
                         "max": 2
                     },
                     {
-                        "m": "lifesteal",
+                        "prop": "lifesteal",
                         "p": 0,
                         "min": 2,
                         "max": 2
@@ -32755,13 +33743,13 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "regen",
+                        "prop": "regen",
                         "p": 0,
                         "min": 3,
                         "max": 3
                     },
                     {
-                        "m": "regen-mana",
+                        "prop": "regen-mana",
                         "p": 0,
                         "min": 8,
                         "max": 8
@@ -32769,7 +33757,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "thorns",
+                        "prop": "thorns",
                         "p": 0,
                         "min": 8,
                         "max": 8
@@ -32786,10 +33774,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Skull",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -32797,13 +33789,13 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "manasteal",
+                        "prop": "manasteal",
                         "p": 0,
                         "min": 2,
                         "max": 2
                     },
                     {
-                        "m": "lifesteal",
+                        "prop": "lifesteal",
                         "p": 0,
                         "min": 3,
                         "max": 3
@@ -32811,13 +33803,13 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "regen",
+                        "prop": "regen",
                         "p": 0,
                         "min": 3,
                         "max": 3
                     },
                     {
-                        "m": "regen-mana",
+                        "prop": "regen-mana",
                         "p": 0,
                         "min": 12,
                         "max": 12
@@ -32825,7 +33817,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "thorns",
+                        "prop": "thorns",
                         "p": 0,
                         "min": 12,
                         "max": 12
@@ -32842,10 +33834,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Skull",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -32853,13 +33849,13 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "manasteal",
+                        "prop": "manasteal",
                         "p": 0,
                         "min": 3,
                         "max": 3
                     },
                     {
-                        "m": "lifesteal",
+                        "prop": "lifesteal",
                         "p": 0,
                         "min": 3,
                         "max": 3
@@ -32867,13 +33863,13 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "regen",
+                        "prop": "regen",
                         "p": 0,
                         "min": 4,
                         "max": 4
                     },
                     {
-                        "m": "regen-mana",
+                        "prop": "regen-mana",
                         "p": 0,
                         "min": 12,
                         "max": 12
@@ -32881,7 +33877,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "thorns",
+                        "prop": "thorns",
                         "p": 0,
                         "min": 16,
                         "max": 16
@@ -32898,10 +33894,14 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "gem",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
-            "eq1n": "Gem",
+            "eq1n": "Socket Filler",
             "c": [
-                "Skull",
                 "Gem",
                 "Socket Filler",
                 "Miscellaneous"
@@ -32909,13 +33909,13 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "manasteal",
+                        "prop": "manasteal",
                         "p": 0,
                         "min": 3,
                         "max": 3
                     },
                     {
-                        "m": "lifesteal",
+                        "prop": "lifesteal",
                         "p": 0,
                         "min": 4,
                         "max": 4
@@ -32923,13 +33923,13 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "regen",
+                        "prop": "regen",
                         "p": 0,
                         "min": 5,
                         "max": 5
                     },
                     {
-                        "m": "regen-mana",
+                        "prop": "regen-mana",
                         "p": 0,
                         "min": 19,
                         "max": 19
@@ -32937,7 +33937,7 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "thorns",
+                        "prop": "thorns",
                         "p": 0,
                         "min": 20,
                         "max": 20
@@ -32954,6 +33954,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "herb",
+            "lvl": "3",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Miscellaneous",
             "c": [
@@ -32970,6 +33975,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "scha",
+            "lvl": "28",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [
                 "invch1",
                 "invch4",
@@ -32991,6 +34001,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 2,
             "it": 0,
+            "type": "mcha",
+            "lvl": "14",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [
                 "invch2",
                 "invch5",
@@ -33012,6 +34027,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 3,
             "it": 0,
+            "type": "lcha",
+            "lvl": "1",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [
                 "invch3",
                 "invch6",
@@ -33033,6 +34053,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "hpot",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Potion",
             "c": [
@@ -33050,6 +34075,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "hpot",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Potion",
             "c": [
@@ -33067,6 +34097,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "mpot",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Potion",
             "c": [
@@ -33084,6 +34119,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "mpot",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Potion",
             "c": [
@@ -33097,10 +34137,15 @@ let constants_diablo2_96 = {
             "n": "El Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrEl",
+            "i": "invrel",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "11",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -33111,36 +34156,36 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "light",
+                        "prop": "light",
                         "min": 1,
                         "max": 1
                     },
                     {
-                        "m": "att",
+                        "prop": "att",
                         "min": 50,
                         "max": 50
                     }
                 ],
                 [
                     {
-                        "m": "light",
+                        "prop": "light",
                         "min": 1,
                         "max": 1
                     },
                     {
-                        "m": "ac",
+                        "prop": "ac",
                         "min": 15,
                         "max": 15
                     }
                 ],
                 [
                     {
-                        "m": "light",
+                        "prop": "light",
                         "min": 1,
                         "max": 1
                     },
                     {
-                        "m": "ac",
+                        "prop": "ac",
                         "min": 15,
                         "max": 15
                     }
@@ -33152,10 +34197,15 @@ let constants_diablo2_96 = {
             "n": "Eld Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrEld",
+            "i": "invreld",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "11",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -33166,26 +34216,26 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "att-undead",
+                        "prop": "att-undead",
                         "min": 50,
                         "max": 50
                     },
                     {
-                        "m": "dmg-undead",
+                        "prop": "dmg-undead",
                         "min": 75,
                         "max": 75
                     }
                 ],
                 [
                     {
-                        "m": "stamdrain",
+                        "prop": "stamdrain",
                         "min": 15,
                         "max": 15
                     }
                 ],
                 [
                     {
-                        "m": "block",
+                        "prop": "block",
                         "min": 7,
                         "max": 7
                     }
@@ -33197,10 +34247,15 @@ let constants_diablo2_96 = {
             "n": "Tir Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrTir",
+            "i": "invrtir",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "13",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -33211,21 +34266,21 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "mana-kill",
+                        "prop": "mana-kill",
                         "min": 2,
                         "max": 2
                     }
                 ],
                 [
                     {
-                        "m": "mana-kill",
+                        "prop": "mana-kill",
                         "min": 2,
                         "max": 2
                     }
                 ],
                 [
                     {
-                        "m": "mana-kill",
+                        "prop": "mana-kill",
                         "min": 2,
                         "max": 2
                     }
@@ -33237,10 +34292,15 @@ let constants_diablo2_96 = {
             "n": "Nef Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrNef",
+            "i": "invrnef",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "13",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -33251,21 +34311,21 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "knock",
+                        "prop": "knock",
                         "min": 1,
                         "max": 1
                     }
                 ],
                 [
                     {
-                        "m": "ac-miss",
+                        "prop": "ac-miss",
                         "min": 30,
                         "max": 30
                     }
                 ],
                 [
                     {
-                        "m": "ac-miss",
+                        "prop": "ac-miss",
                         "min": 30,
                         "max": 30
                     }
@@ -33277,10 +34337,15 @@ let constants_diablo2_96 = {
             "n": "Eth Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrEth",
+            "i": "invreth",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "15",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -33291,21 +34356,21 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "reduce-ac",
-                        "min": 25,
-                        "max": 25
+                        "prop": "reduce-ac",
+                        "min": -25,
+                        "max": -25
                     }
                 ],
                 [
                     {
-                        "m": "regen-mana",
+                        "prop": "regen-mana",
                         "min": 15,
                         "max": 15
                     }
                 ],
                 [
                     {
-                        "m": "regen-mana",
+                        "prop": "regen-mana",
                         "min": 15,
                         "max": 15
                     }
@@ -33317,10 +34382,15 @@ let constants_diablo2_96 = {
             "n": "Ith Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrIth",
+            "i": "invrith",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "15",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -33331,21 +34401,21 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "dmg-max",
+                        "prop": "dmg-max",
                         "min": 9,
                         "max": 9
                     }
                 ],
                 [
                     {
-                        "m": "dmg-to-mana",
+                        "prop": "dmg-to-mana",
                         "min": 15,
                         "max": 15
                     }
                 ],
                 [
                     {
-                        "m": "dmg-to-mana",
+                        "prop": "dmg-to-mana",
                         "min": 15,
                         "max": 15
                     }
@@ -33357,10 +34427,15 @@ let constants_diablo2_96 = {
             "n": "Tal Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrTal",
+            "i": "invrtal",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "17",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -33371,24 +34446,24 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "dmg-pois",
-                        "p": 125,
-                        "min": 154,
-                        "max": 154
+                        "prop": "dmg-pois",
+                        "p": 25,
+                        "min": 200,
+                        "max": 200
                     }
                 ],
                 [
                     {
-                        "m": "res-pois",
+                        "prop": "res-pois",
                         "min": 30,
                         "max": 30
                     }
                 ],
                 [
                     {
-                        "m": "res-pois",
-                        "min": 35,
-                        "max": 35
+                        "prop": "res-pois",
+                        "min": 30,
+                        "max": 30
                     }
                 ]
             ]
@@ -33398,10 +34473,15 @@ let constants_diablo2_96 = {
             "n": "Ral Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrRal",
+            "i": "invrral",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "19",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -33412,23 +34492,23 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "dmg-fire",
+                        "prop": "dmg-fire",
                         "min": 5,
                         "max": 30
                     }
                 ],
                 [
                     {
-                        "m": "res-fire",
+                        "prop": "res-fire",
                         "min": 30,
                         "max": 30
                     }
                 ],
                 [
                     {
-                        "m": "res-fire",
-                        "min": 35,
-                        "max": 35
+                        "prop": "res-fire",
+                        "min": 30,
+                        "max": 30
                     }
                 ]
             ]
@@ -33438,10 +34518,15 @@ let constants_diablo2_96 = {
             "n": "Ort Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrOrt",
+            "i": "invrort",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "21",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -33452,23 +34537,23 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "dmg-ltng",
+                        "prop": "dmg-ltng",
                         "min": 1,
                         "max": 50
                     }
                 ],
                 [
                     {
-                        "m": "res-ltng",
+                        "prop": "res-ltng",
                         "min": 30,
                         "max": 30
                     }
                 ],
                 [
                     {
-                        "m": "res-ltng",
-                        "min": 35,
-                        "max": 35
+                        "prop": "res-ltng",
+                        "min": 30,
+                        "max": 30
                     }
                 ]
             ]
@@ -33478,10 +34563,15 @@ let constants_diablo2_96 = {
             "n": "Thul Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrThul",
+            "i": "invrthul",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "23",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -33492,7 +34582,7 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "dmg-cold",
+                        "prop": "dmg-cold",
                         "p": 75,
                         "min": 3,
                         "max": 14
@@ -33500,16 +34590,16 @@ let constants_diablo2_96 = {
                 ],
                 [
                     {
-                        "m": "res-cold",
+                        "prop": "res-cold",
                         "min": 30,
                         "max": 30
                     }
                 ],
                 [
                     {
-                        "m": "res-cold",
-                        "min": 35,
-                        "max": 35
+                        "prop": "res-cold",
+                        "min": 30,
+                        "max": 30
                     }
                 ]
             ]
@@ -33519,10 +34609,15 @@ let constants_diablo2_96 = {
             "n": "Amn Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrAmn",
+            "i": "invramn",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "25",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -33533,21 +34628,21 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "lifesteal",
+                        "prop": "lifesteal",
                         "min": 7,
                         "max": 7
                     }
                 ],
                 [
                     {
-                        "m": "thorns",
+                        "prop": "thorns",
                         "min": 14,
                         "max": 14
                     }
                 ],
                 [
                     {
-                        "m": "thorns",
+                        "prop": "thorns",
                         "min": 14,
                         "max": 14
                     }
@@ -33559,10 +34654,15 @@ let constants_diablo2_96 = {
             "n": "Sol Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrSol",
+            "i": "invrsol",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "27",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -33573,21 +34673,21 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "dmg-min",
+                        "prop": "dmg-min",
                         "min": 9,
                         "max": 9
                     }
                 ],
                 [
                     {
-                        "m": "red-dmg",
+                        "prop": "red-dmg",
                         "min": 7,
                         "max": 7
                     }
                 ],
                 [
                     {
-                        "m": "red-dmg",
+                        "prop": "red-dmg",
                         "min": 7,
                         "max": 7
                     }
@@ -33596,13 +34696,18 @@ let constants_diablo2_96 = {
         },
         "r13": {
             "iq": 0,
-            "n": "Shael Rune",
+            "n": "Shae Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrShae",
+            "i": "invrshae",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "29",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -33613,21 +34718,21 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "swing2",
+                        "prop": "swing2",
                         "min": 20,
                         "max": 20
                     }
                 ],
                 [
                     {
-                        "m": "balance2",
+                        "prop": "balance2",
                         "min": 20,
                         "max": 20
                     }
                 ],
                 [
                     {
-                        "m": "block2",
+                        "prop": "block2",
                         "min": 20,
                         "max": 20
                     }
@@ -33639,10 +34744,15 @@ let constants_diablo2_96 = {
             "n": "Dol Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrDol",
+            "i": "invrdol",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "31",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -33653,21 +34763,21 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "howl",
+                        "prop": "howl",
                         "min": 32,
                         "max": 32
                     }
                 ],
                 [
                     {
-                        "m": "regen",
+                        "prop": "regen",
                         "min": 7,
                         "max": 7
                     }
                 ],
                 [
                     {
-                        "m": "regen",
+                        "prop": "regen",
                         "min": 7,
                         "max": 7
                     }
@@ -33679,10 +34789,15 @@ let constants_diablo2_96 = {
             "n": "Hel Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrHel",
+            "i": "invrhel",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "33",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -33693,21 +34808,21 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "ease",
+                        "prop": "ease",
                         "min": -20,
                         "max": -20
                     }
                 ],
                 [
                     {
-                        "m": "ease",
+                        "prop": "ease",
                         "min": -15,
                         "max": -15
                     }
                 ],
                 [
                     {
-                        "m": "ease",
+                        "prop": "ease",
                         "min": -15,
                         "max": -15
                     }
@@ -33716,13 +34831,18 @@ let constants_diablo2_96 = {
         },
         "r16": {
             "iq": 0,
-            "n": "Io Rune",
+            "n": "Po Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrIo",
+            "i": "invrio",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "35",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -33733,21 +34853,21 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "vit",
+                        "prop": "vit",
                         "min": 10,
                         "max": 10
                     }
                 ],
                 [
                     {
-                        "m": "vit",
+                        "prop": "vit",
                         "min": 10,
                         "max": 10
                     }
                 ],
                 [
                     {
-                        "m": "vit",
+                        "prop": "vit",
                         "min": 10,
                         "max": 10
                     }
@@ -33759,10 +34879,15 @@ let constants_diablo2_96 = {
             "n": "Lum Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrLum",
+            "i": "invrlum",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "37",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -33773,21 +34898,21 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "enr",
+                        "prop": "enr",
                         "min": 10,
                         "max": 10
                     }
                 ],
                 [
                     {
-                        "m": "enr",
+                        "prop": "enr",
                         "min": 10,
                         "max": 10
                     }
                 ],
                 [
                     {
-                        "m": "enr",
+                        "prop": "enr",
                         "min": 10,
                         "max": 10
                     }
@@ -33799,10 +34924,15 @@ let constants_diablo2_96 = {
             "n": "Ko Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrKo",
+            "i": "invrko",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "39",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -33813,21 +34943,21 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "dex",
+                        "prop": "dex",
                         "min": 10,
                         "max": 10
                     }
                 ],
                 [
                     {
-                        "m": "dex",
+                        "prop": "dex",
                         "min": 10,
                         "max": 10
                     }
                 ],
                 [
                     {
-                        "m": "dex",
+                        "prop": "dex",
                         "min": 10,
                         "max": 10
                     }
@@ -33839,10 +34969,15 @@ let constants_diablo2_96 = {
             "n": "Fal Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrFal",
+            "i": "invrfal",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "41",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -33853,21 +34988,21 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "str",
+                        "prop": "str",
                         "min": 10,
                         "max": 10
                     }
                 ],
                 [
                     {
-                        "m": "str",
+                        "prop": "str",
                         "min": 10,
                         "max": 10
                     }
                 ],
                 [
                     {
-                        "m": "str",
+                        "prop": "str",
                         "min": 10,
                         "max": 10
                     }
@@ -33879,10 +35014,15 @@ let constants_diablo2_96 = {
             "n": "Lem Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrLem",
+            "i": "invrlem",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "43",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -33893,21 +35033,21 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "gold%",
+                        "prop": "gold%",
                         "min": 75,
                         "max": 75
                     }
                 ],
                 [
                     {
-                        "m": "gold%",
+                        "prop": "gold%",
                         "min": 50,
                         "max": 50
                     }
                 ],
                 [
                     {
-                        "m": "gold%",
+                        "prop": "gold%",
                         "min": 50,
                         "max": 50
                     }
@@ -33919,10 +35059,15 @@ let constants_diablo2_96 = {
             "n": "Pul Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrPul",
+            "i": "invrpul",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "45",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -33933,26 +35078,26 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "att-demon",
+                        "prop": "att-demon",
                         "min": 100,
                         "max": 100
                     },
                     {
-                        "m": "dmg-demon",
+                        "prop": "dmg-demon",
                         "min": 75,
                         "max": 75
                     }
                 ],
                 [
                     {
-                        "m": "ac%",
+                        "prop": "ac%",
                         "min": 30,
                         "max": 30
                     }
                 ],
                 [
                     {
-                        "m": "ac%",
+                        "prop": "ac%",
                         "min": 30,
                         "max": 30
                     }
@@ -33964,10 +35109,15 @@ let constants_diablo2_96 = {
             "n": "Um Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrUm",
+            "i": "invrum",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "47",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -33978,23 +35128,23 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "openwounds",
+                        "prop": "openwounds",
                         "min": 25,
                         "max": 25
                     }
                 ],
                 [
                     {
-                        "m": "res-all",
-                        "min": 15,
-                        "max": 15
+                        "prop": "res-all",
+                        "min": 10,
+                        "max": 10
                     }
                 ],
                 [
                     {
-                        "m": "res-all",
-                        "min": 22,
-                        "max": 22
+                        "prop": "res-all",
+                        "min": 20,
+                        "max": 20
                     }
                 ]
             ]
@@ -34004,10 +35154,15 @@ let constants_diablo2_96 = {
             "n": "Mal Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrMal",
+            "i": "invrmal",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "49",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -34018,21 +35173,21 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "noheal",
+                        "prop": "noheal",
                         "min": 1,
                         "max": 1
                     }
                 ],
                 [
                     {
-                        "m": "red-mag",
+                        "prop": "red-mag",
                         "min": 7,
                         "max": 7
                     }
                 ],
                 [
                     {
-                        "m": "red-mag",
+                        "prop": "red-mag",
                         "min": 7,
                         "max": 7
                     }
@@ -34044,10 +35199,15 @@ let constants_diablo2_96 = {
             "n": "Ist Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrIst",
+            "i": "invrist",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "51",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -34058,21 +35218,21 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "mag%",
+                        "prop": "mag%",
                         "min": 30,
                         "max": 30
                     }
                 ],
                 [
                     {
-                        "m": "mag%",
+                        "prop": "mag%",
                         "min": 25,
                         "max": 25
                     }
                 ],
                 [
                     {
-                        "m": "mag%",
+                        "prop": "mag%",
                         "min": 25,
                         "max": 25
                     }
@@ -34084,10 +35244,15 @@ let constants_diablo2_96 = {
             "n": "Gul Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrGul",
+            "i": "invrgul",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "53",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -34098,23 +35263,23 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "att%",
+                        "prop": "att%",
                         "min": 20,
                         "max": 20
                     }
                 ],
                 [
                     {
-                        "m": "res-pois-max",
-                        "min": 5,
-                        "max": 5
+                        "prop": "res-pois-max",
+                        "min": 3,
+                        "max": 3
                     }
                 ],
                 [
                     {
-                        "m": "res-pois-max",
-                        "min": 5,
-                        "max": 5
+                        "prop": "res-pois-max",
+                        "min": 3,
+                        "max": 3
                     }
                 ]
             ]
@@ -34124,10 +35289,15 @@ let constants_diablo2_96 = {
             "n": "Vex Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrVex",
+            "i": "invrvex",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "55",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -34138,23 +35308,23 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "manasteal",
+                        "prop": "manasteal",
                         "min": 7,
                         "max": 7
                     }
                 ],
                 [
                     {
-                        "m": "res-fire-max",
-                        "min": 5,
-                        "max": 5
+                        "prop": "res-fire-max",
+                        "min": 3,
+                        "max": 3
                     }
                 ],
                 [
                     {
-                        "m": "res-fire-max",
-                        "min": 5,
-                        "max": 5
+                        "prop": "res-fire-max",
+                        "min": 3,
+                        "max": 3
                     }
                 ]
             ]
@@ -34164,10 +35334,15 @@ let constants_diablo2_96 = {
             "n": "Ohm Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrOhm",
+            "i": "invrohm",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "57",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -34178,23 +35353,23 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "dmg%",
+                        "prop": "dmg%",
                         "min": 50,
                         "max": 50
                     }
                 ],
                 [
                     {
-                        "m": "res-cold-max",
-                        "min": 5,
-                        "max": 5
+                        "prop": "res-cold-max",
+                        "min": 3,
+                        "max": 3
                     }
                 ],
                 [
                     {
-                        "m": "res-cold-max",
-                        "min": 5,
-                        "max": 5
+                        "prop": "res-cold-max",
+                        "min": 3,
+                        "max": 3
                     }
                 ]
             ]
@@ -34204,10 +35379,15 @@ let constants_diablo2_96 = {
             "n": "Lo Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrLo",
+            "i": "invrlo",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "59",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -34218,23 +35398,23 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "deadly",
+                        "prop": "deadly",
                         "min": 20,
                         "max": 20
                     }
                 ],
                 [
                     {
-                        "m": "res-ltng-max",
-                        "min": 5,
-                        "max": 5
+                        "prop": "res-ltng-max",
+                        "min": 3,
+                        "max": 3
                     }
                 ],
                 [
                     {
-                        "m": "res-ltng-max",
-                        "min": 5,
-                        "max": 5
+                        "prop": "res-ltng-max",
+                        "min": 3,
+                        "max": 3
                     }
                 ]
             ]
@@ -34244,10 +35424,15 @@ let constants_diablo2_96 = {
             "n": "Sur Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrSur",
+            "i": "invrsur",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "61",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -34258,21 +35443,21 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "stupidity",
-                        "min": 1,
-                        "max": 1
+                        "prop": "stupidity",
+                        "min": 20,
+                        "max": 20
                     }
                 ],
                 [
                     {
-                        "m": "mana%",
+                        "prop": "mana%",
                         "min": 5,
                         "max": 5
                     }
                 ],
                 [
                     {
-                        "m": "mana",
+                        "prop": "mana",
                         "min": 50,
                         "max": 50
                     }
@@ -34284,10 +35469,15 @@ let constants_diablo2_96 = {
             "n": "Ber Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrBer",
+            "i": "invrber",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "63",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -34298,21 +35488,21 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "crush",
+                        "prop": "crush",
                         "min": 20,
                         "max": 20
                     }
                 ],
                 [
                     {
-                        "m": "red-dmg%",
+                        "prop": "red-dmg%",
                         "min": 8,
                         "max": 8
                     }
                 ],
                 [
                     {
-                        "m": "red-dmg%",
+                        "prop": "red-dmg%",
                         "min": 8,
                         "max": 8
                     }
@@ -34321,13 +35511,18 @@ let constants_diablo2_96 = {
         },
         "r31": {
             "iq": 0,
-            "n": "Jah Rune",
+            "n": "Jo Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrJo",
+            "i": "invrjo",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "65",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -34338,21 +35533,21 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "ignore-ac",
-                        "min": 1,
-                        "max": 1
+                        "prop": "slow",
+                        "min": 25,
+                        "max": 25
                     }
                 ],
                 [
                     {
-                        "m": "hp%",
+                        "prop": "hp%",
                         "min": 5,
                         "max": 5
                     }
                 ],
                 [
                     {
-                        "m": "hp",
+                        "prop": "hp",
                         "min": 50,
                         "max": 50
                     }
@@ -34364,10 +35559,15 @@ let constants_diablo2_96 = {
             "n": "Cham Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrCham",
+            "i": "invrcham",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "67",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -34378,21 +35578,22 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "freeze",
-                        "min": 3,
-                        "max": 3
+                        "prop": "freeze",
+                        "p": 16,
+                        "min": 50,
+                        "max": 0
                     }
                 ],
                 [
                     {
-                        "m": "nofreeze",
+                        "prop": "nofreeze",
                         "min": 1,
                         "max": 1
                     }
                 ],
                 [
                     {
-                        "m": "nofreeze",
+                        "prop": "nofreeze",
                         "min": 1,
                         "max": 1
                     }
@@ -34404,10 +35605,15 @@ let constants_diablo2_96 = {
             "n": "Zod Rune",
             "hi": 0,
             "gt": 0,
-            "i": "invrZod",
+            "i": "invrzod",
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "rune",
+            "lvl": "69",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Socket Filler",
             "c": [
@@ -34418,21 +35624,21 @@ let constants_diablo2_96 = {
             "m": [
                 [
                     {
-                        "m": "indestruct",
+                        "prop": "indestruct",
                         "min": 1,
                         "max": 1
                     }
                 ],
                 [
                     {
-                        "m": "indestruct",
+                        "prop": "indestruct",
                         "min": 1,
                         "max": 1
                     }
                 ],
                 [
                     {
-                        "m": "indestruct",
+                        "prop": "indestruct",
                         "min": 1,
                         "max": 1
                     }
@@ -34448,6 +35654,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "jewl",
+            "lvl": "1",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [
                 "invjw1",
                 "invjw2",
@@ -34472,6 +35683,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "ques",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "c": [
                 "Quest"
@@ -34486,6 +35702,11 @@ let constants_diablo2_96 = {
             "iw": 1,
             "ih": 1,
             "it": 0,
+            "type": "scro",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 1,
+            "nodurability": 1,
             "ig": [],
             "eq1n": "Miscellaneous",
             "c": [
@@ -34502,190 +35723,16 @@ let constants_diablo2_96 = {
             "iw": 2,
             "ih": 2,
             "it": 0,
-            "ig": [],
-            "c": [
-                "Quest"
-            ]
-        },
-        "pk1": {
-            "iq": 0,
-            "n": "Key of Terror",
-            "hi": 0,
-            "gt": 0,
-            "i": "invmph",
-            "iw": 1,
-            "ih": 2,
-            "it": 0,
-            "ig": [],
-            "c": [
-                "Quest"
-            ]
-        },
-        "pk2": {
-            "iq": 0,
-            "n": "Key of Hate",
-            "hi": 0,
-            "gt": 0,
-            "i": "invmph",
-            "iw": 1,
-            "ih": 2,
-            "it": 0,
-            "ig": [],
-            "c": [
-                "Quest"
-            ]
-        },
-        "pk3": {
-            "iq": 0,
-            "n": "Key of Destruction",
-            "hi": 0,
-            "gt": 0,
-            "i": "invmph",
-            "iw": 1,
-            "ih": 2,
-            "it": 0,
-            "ig": [],
-            "c": [
-                "Quest"
-            ]
-        },
-        "dhn": {
-            "iq": 0,
-            "n": "Diablo's Horn",
-            "hi": 0,
-            "gt": 0,
-            "i": "invfang",
-            "iw": 1,
-            "ih": 1,
-            "it": 0,
-            "ig": [],
-            "c": [
-                "Quest"
-            ]
-        },
-        "bey": {
-            "iq": 0,
-            "n": "Baal's Eye",
-            "hi": 0,
-            "gt": 0,
-            "i": "inveye",
-            "iw": 1,
-            "ih": 1,
-            "it": 0,
-            "ig": [],
-            "c": [
-                "Quest"
-            ]
-        },
-        "mbr": {
-            "iq": 0,
-            "n": "Mephisto's Brain",
-            "hi": 0,
-            "gt": 0,
-            "i": "invbrnz",
-            "iw": 1,
-            "ih": 1,
-            "it": 0,
-            "ig": [],
-            "c": [
-                "Quest"
-            ]
-        },
-        "toa": {
-            "iq": 0,
-            "n": "Right-click to reset Stat/Skill Points}Token of Absolution",
-            "hi": 0,
-            "gt": 0,
-            "i": "invtoa",
-            "iw": 1,
-            "ih": 1,
-            "it": 0,
-            "ig": [],
-            "c": [
-                "Quest"
-            ]
-        },
-        "tes": {
-            "iq": 0,
-            "n": "Twisted Essence of Suffering",
-            "hi": 0,
-            "gt": 0,
-            "i": "invtes",
-            "iw": 1,
-            "ih": 1,
-            "it": 0,
-            "ig": [],
-            "c": [
-                "Quest"
-            ]
-        },
-        "ceh": {
-            "iq": 0,
-            "n": "Charged Essence of Hatred",
-            "hi": 0,
-            "gt": 0,
-            "i": "invceh",
-            "iw": 1,
-            "ih": 1,
-            "it": 0,
-            "ig": [],
-            "c": [
-                "Quest"
-            ]
-        },
-        "bet": {
-            "iq": 0,
-            "n": "Burning Essence of Terror",
-            "hi": 0,
-            "gt": 0,
-            "i": "invbet",
-            "iw": 1,
-            "ih": 1,
-            "it": 0,
-            "ig": [],
-            "c": [
-                "Quest"
-            ]
-        },
-        "fed": {
-            "iq": 0,
-            "n": "Festering Essence of Destruction",
-            "hi": 0,
-            "gt": 0,
-            "i": "invfed",
-            "iw": 1,
-            "ih": 1,
-            "it": 0,
-            "ig": [],
-            "c": [
-                "Quest"
-            ]
-        },
-        "std": {
-            "iq": 0,
-            "n": "Standard of Heroes",
-            "hi": 0,
-            "gt": 0,
-            "i": "invflag",
-            "iw": 1,
-            "ih": 1,
-            "it": 0,
+            "type": "ques",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
             "ig": [],
             "c": [
                 "Quest"
             ]
         }
     },
-    "version": "constants_diablo2_96"
+    "version": "diablo2_constants_96"
 };
-
-constants_diablo2_96.runeword_fixes = {
-    22: 2692,
-};
-
-constants_diablo2_96.gold = {
-    "perCharLevel": 10000,
-    "bank": 2500000
-};
-
-export { constants_diablo2_96 };
