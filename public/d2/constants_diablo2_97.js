@@ -363,7 +363,7 @@ export let constants_diablo2_97 = {
         {
             "id": 28,
             "s": "Dopplezon",
-            "n": "Dopplezon",
+            "n": "Decoy",
             "c": "ama"
         },
         {
@@ -705,7 +705,7 @@ export let constants_diablo2_97 = {
         {
             "id": 85,
             "s": "BloodGolem",
-            "n": "BloodGolem",
+            "n": "Blood Golem",
             "c": "nec"
         },
         {
@@ -735,7 +735,7 @@ export let constants_diablo2_97 = {
         {
             "id": 90,
             "s": "IronGolem",
-            "n": "IronGolem",
+            "n": "Iron Golem",
             "c": "nec"
         },
         {
@@ -759,7 +759,7 @@ export let constants_diablo2_97 = {
         {
             "id": 94,
             "s": "FireGolem",
-            "n": "FireGolem",
+            "n": "Fire Golem",
             "c": "nec"
         },
         {
@@ -957,7 +957,7 @@ export let constants_diablo2_97 = {
         {
             "id": 127,
             "s": "Blade Mastery",
-            "n": "Blade Mastery",
+            "n": "Sword Mastery",
             "c": "bar"
         },
         {
@@ -1128,311 +1128,71 @@ export let constants_diablo2_97 = {
             "n": "Battle Command",
             "c": "bar"
         },
-        {
-            "id": 156,
-            "s": "Fire Hit",
-            "n": "Fire Hit"
-        },
-        {
-            "id": 157,
-            "s": "UnHolyBolt",
-            "n": "UnHolyBolt"
-        },
-        {
-            "id": 158,
-            "s": "SkeletonRaise",
-            "n": "SkeletonRaise"
-        },
-        {
-            "id": 159,
-            "s": "MaggotEgg",
-            "n": "MaggotEgg"
-        },
-        {
-            "id": 160,
-            "s": "ShamanFire",
-            "n": "ShamanFire"
-        },
-        {
-            "id": 161,
-            "s": "MagottUp",
-            "n": "MagottUp"
-        },
-        {
-            "id": 162,
-            "s": "MagottDown",
-            "n": "MagottDown"
-        },
-        {
-            "id": 163,
-            "s": "MagottLay",
-            "n": "MagottLay"
-        },
-        {
-            "id": 164,
-            "s": "AndrialSpray",
-            "n": "AndrialSpray"
-        },
-        {
-            "id": 165,
-            "s": "Jump",
-            "n": "Jump"
-        },
-        {
-            "id": 166,
-            "s": "Swarm Move",
-            "n": "Swarm Move"
-        },
-        {
-            "id": 167,
-            "s": "Nest",
-            "n": "Nest"
-        },
-        {
-            "id": 168,
-            "s": "Quick Strike",
-            "n": "Quick Strike"
-        },
-        {
-            "id": 169,
-            "s": "VampireFireball",
-            "n": "VampireFireball"
-        },
-        {
-            "id": 170,
-            "s": "VampireFirewall",
-            "n": "VampireFirewall"
-        },
-        {
-            "id": 171,
-            "s": "VampireMeteor",
-            "n": "VampireMeteor"
-        },
-        {
-            "id": 172,
-            "s": "GargoyleTrap",
-            "n": "GargoyleTrap"
-        },
-        {
-            "id": 173,
-            "s": "SpiderLay",
-            "n": "SpiderLay"
-        },
-        {
-            "id": 174,
-            "s": "VampireHeal",
-            "n": "VampireHeal"
-        },
-        {
-            "id": 175,
-            "s": "VampireRaise",
-            "n": "VampireRaise"
-        },
-        {
-            "id": 176,
-            "s": "Submerge",
-            "n": "Submerge"
-        },
-        {
-            "id": 177,
-            "s": "FetishAura",
-            "n": "FetishAura"
-        },
-        {
-            "id": 178,
-            "s": "FetishInferno",
-            "n": "FetishInferno"
-        },
-        {
-            "id": 179,
-            "s": "ZakarumHeal",
-            "n": "ZakarumHeal"
-        },
-        {
-            "id": 180,
-            "s": "Emerge",
-            "n": "Emerge"
-        },
-        {
-            "id": 181,
-            "s": "Resurrect",
-            "n": "Resurrect"
-        },
-        {
-            "id": 182,
-            "s": "Bestow",
-            "n": "Bestow"
-        },
-        {
-            "id": 183,
-            "s": "MissileSkill1",
-            "n": "MissileSkill1"
-        },
-        {
-            "id": 184,
-            "s": "MonTeleport",
-            "n": "MonTeleport"
-        },
-        {
-            "id": 185,
-            "s": "PrimeLightning",
-            "n": "PrimeLightning"
-        },
-        {
-            "id": 186,
-            "s": "PrimeBolt",
-            "n": "PrimeBolt"
-        },
-        {
-            "id": 187,
-            "s": "PrimeBlaze",
-            "n": "PrimeBlaze"
-        },
-        {
-            "id": 188,
-            "s": "PrimeFirewall",
-            "n": "PrimeFirewall"
-        },
-        {
-            "id": 189,
-            "s": "PrimeSpike",
-            "n": "PrimeSpike"
-        },
-        {
-            "id": 190,
-            "s": "PrimeIceNova",
-            "n": "PrimeIceNova"
-        },
-        {
-            "id": 191,
-            "s": "PrimePoisonball",
-            "n": "PrimePoisonball"
-        },
-        {
-            "id": 192,
-            "s": "PrimePoisonNova",
-            "n": "PrimePoisonNova"
-        },
-        {
-            "id": 193,
-            "s": "DiabLight",
-            "n": "DiabLight"
-        },
-        {
-            "id": 194,
-            "s": "DiabCold",
-            "n": "DiabCold"
-        },
-        {
-            "id": 195,
-            "s": "DiabFire",
-            "n": "DiabFire"
-        },
-        {
-            "id": 196,
-            "s": "FingerMageSpider",
-            "n": "FingerMageSpider"
-        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         {
             "id": 197,
             "s": "DiabWall",
-            "n": "DiabWall"
+            "n": "Firestorm"
         },
-        {
-            "id": 198,
-            "s": "DiabRun",
-            "n": "DiabRun"
-        },
-        {
-            "id": 199,
-            "s": "DiabPrison",
-            "n": "DiabPrison"
-        },
-        {
-            "id": 200,
-            "s": "PoisonBallTrap",
-            "n": "PoisonBallTrap"
-        },
-        {
-            "id": 201,
-            "s": "AndyPoisonBolt",
-            "n": "AndyPoisonBolt"
-        },
-        {
-            "id": 202,
-            "s": "HireableMissile",
-            "n": "HireableMissile"
-        },
-        {
-            "id": 203,
-            "s": "DesertTurret",
-            "n": "DesertTurret"
-        },
-        {
-            "id": 204,
-            "s": "ArcaneTower",
-            "n": "ArcaneTower"
-        },
-        {
-            "id": 205,
-            "s": "MonBlizzard",
-            "n": "MonBlizzard"
-        },
-        {
-            "id": 206,
-            "s": "Mosquito",
-            "n": "Mosquito"
-        },
-        {
-            "id": 207,
-            "s": "CursedBallTrapRight",
-            "n": "CursedBallTrapRight"
-        },
-        {
-            "id": 208,
-            "s": "CursedBallTrapLeft",
-            "n": "CursedBallTrapLeft"
-        },
-        {
-            "id": 209,
-            "s": "MonFrozenArmor",
-            "n": "MonFrozenArmor"
-        },
-        {
-            "id": 210,
-            "s": "MonBoneArmor",
-            "n": "MonBoneArmor"
-        },
-        {
-            "id": 211,
-            "s": "MonBoneSpirit",
-            "n": "MonBoneSpirit"
-        },
-        {
-            "id": 212,
-            "s": "MonCurseCast",
-            "n": "MonCurseCast"
-        },
-        {
-            "id": 213,
-            "s": "HellMeteor",
-            "n": "HellMeteor"
-        },
-        {
-            "id": 214,
-            "s": "RegurgitatorEat",
-            "n": "RegurgitatorEat"
-        },
-        {
-            "id": 215,
-            "s": "MonFrenzy",
-            "n": "MonFrenzy"
-        },
-        {
-            "id": 216,
-            "s": "QueenDeath",
-            "n": "QueenDeath"
-        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         {
             "id": 217,
             "s": "Scroll of Identify",
@@ -1441,7 +1201,7 @@ export let constants_diablo2_97 = {
         {
             "id": 218,
             "s": "Book of Identify",
-            "n": "Book of Identify"
+            "n": "Tome of Identify"
         },
         {
             "id": 219,
@@ -1451,7 +1211,7 @@ export let constants_diablo2_97 = {
         {
             "id": 220,
             "s": "Book of Townportal",
-            "n": "Book of Townportal"
+            "n": "Tome of Townportal"
         },
         {
             "id": 221,
@@ -1462,19 +1222,19 @@ export let constants_diablo2_97 = {
         {
             "id": 222,
             "s": "Plague Poppy",
-            "n": "Plague Poppy",
+            "n": "Poison Creeper",
             "c": "dru"
         },
         {
             "id": 223,
             "s": "Wearwolf",
-            "n": "Wearwolf",
+            "n": "Werewolf",
             "c": "dru"
         },
         {
             "id": 224,
             "s": "Shape Shifting",
-            "n": "Shape Shifting",
+            "n": "Lycanthropy",
             "c": "dru"
         },
         {
@@ -1498,7 +1258,7 @@ export let constants_diablo2_97 = {
         {
             "id": 228,
             "s": "Wearbear",
-            "n": "Wearbear",
+            "n": "Werebear",
             "c": "dru"
         },
         {
@@ -1516,7 +1276,7 @@ export let constants_diablo2_97 = {
         {
             "id": 231,
             "s": "Cycle of Life",
-            "n": "Cycle of Life",
+            "n": "Carrion Vine",
             "c": "dru"
         },
         {
@@ -1534,7 +1294,7 @@ export let constants_diablo2_97 = {
         {
             "id": 234,
             "s": "Eruption",
-            "n": "Eruption",
+            "n": "Fissure",
             "c": "dru"
         },
         {
@@ -1552,7 +1312,7 @@ export let constants_diablo2_97 = {
         {
             "id": 237,
             "s": "Summon Fenris",
-            "n": "Summon Fenris",
+            "n": "Summon Dire Wolf",
             "c": "dru"
         },
         {
@@ -1576,7 +1336,7 @@ export let constants_diablo2_97 = {
         {
             "id": 241,
             "s": "Vines",
-            "n": "Vines",
+            "n": "Solar Creeper",
             "c": "dru"
         },
         {
@@ -1636,7 +1396,7 @@ export let constants_diablo2_97 = {
         {
             "id": 251,
             "s": "Fire Trauma",
-            "n": "Fire Trauma",
+            "n": "Fire Blast",
             "c": "ass"
         },
         {
@@ -1666,7 +1426,7 @@ export let constants_diablo2_97 = {
         {
             "id": 256,
             "s": "Shock Field",
-            "n": "Shock Field",
+            "n": "Shock Web",
             "c": "ass"
         },
         {
@@ -1678,7 +1438,7 @@ export let constants_diablo2_97 = {
         {
             "id": 258,
             "s": "Quickness",
-            "n": "Quickness",
+            "n": "Burst of Speed",
             "c": "ass"
         },
         {
@@ -1702,7 +1462,7 @@ export let constants_diablo2_97 = {
         {
             "id": 262,
             "s": "Wake of Fire Sentry",
-            "n": "Wake of Fire Sentry",
+            "n": "Wake of Fire",
             "c": "ass"
         },
         {
@@ -1762,7 +1522,7 @@ export let constants_diablo2_97 = {
         {
             "id": 272,
             "s": "Inferno Sentry",
-            "n": "Inferno Sentry",
+            "n": "Wake of Inferno",
             "c": "ass"
         },
         {
@@ -1810,453 +1570,121 @@ export let constants_diablo2_97 = {
         {
             "id": 280,
             "s": "Royal Strike",
-            "n": "Royal Strike",
+            "n": "Phoenix Strike",
             "c": "ass"
         },
-        {
-            "id": 281,
-            "s": "Wake Of Destruction Sentry",
-            "n": "Wake Of Destruction Sentry"
-        },
-        {
-            "id": 282,
-            "s": "Imp Inferno",
-            "n": "Imp Inferno"
-        },
-        {
-            "id": 283,
-            "s": "Imp Fireball",
-            "n": "Imp Fireball"
-        },
-        {
-            "id": 284,
-            "s": "Baal Taunt",
-            "n": "Baal Taunt"
-        },
-        {
-            "id": 285,
-            "s": "Baal Corpse Explode",
-            "n": "Baal Corpse Explode"
-        },
-        {
-            "id": 286,
-            "s": "Baal Monster Spawn",
-            "n": "Baal Monster Spawn"
-        },
-        {
-            "id": 287,
-            "s": "Catapult Charged Ball",
-            "n": "Catapult Charged Ball"
-        },
-        {
-            "id": 288,
-            "s": "Catapult Spike Ball",
-            "n": "Catapult Spike Ball"
-        },
-        {
-            "id": 289,
-            "s": "Suck Blood",
-            "n": "Suck Blood"
-        },
-        {
-            "id": 290,
-            "s": "Cry Help",
-            "n": "Cry Help"
-        },
-        {
-            "id": 291,
-            "s": "Healing Vortex",
-            "n": "Healing Vortex"
-        },
-        {
-            "id": 292,
-            "s": "Teleport 2",
-            "n": "Teleport 2"
-        },
-        {
-            "id": 293,
-            "s": "Self-resurrect",
-            "n": "Self-resurrect"
-        },
-        {
-            "id": 294,
-            "s": "Vine Attack",
-            "n": "Vine Attack"
-        },
-        {
-            "id": 295,
-            "s": "Overseer Whip",
-            "n": "Overseer Whip"
-        },
-        {
-            "id": 296,
-            "s": "Barbs Aura",
-            "n": "Barbs Aura"
-        },
-        {
-            "id": 297,
-            "s": "Wolverine Aura",
-            "n": "Wolverine Aura"
-        },
-        {
-            "id": 298,
-            "s": "Oak Sage Aura",
-            "n": "Oak Sage Aura"
-        },
-        {
-            "id": 299,
-            "s": "Imp Fire Missile",
-            "n": "Imp Fire Missile"
-        },
-        {
-            "id": 300,
-            "s": "Impregnate",
-            "n": "Impregnate"
-        },
-        {
-            "id": 301,
-            "s": "Siege Beast Stomp",
-            "n": "Siege Beast Stomp"
-        },
-        {
-            "id": 302,
-            "s": "MinionSpawner",
-            "n": "MinionSpawner"
-        },
-        {
-            "id": 303,
-            "s": "CatapultBlizzard",
-            "n": "CatapultBlizzard"
-        },
-        {
-            "id": 304,
-            "s": "CatapultPlague",
-            "n": "CatapultPlague"
-        },
-        {
-            "id": 305,
-            "s": "CatapultMeteor",
-            "n": "CatapultMeteor"
-        },
-        {
-            "id": 306,
-            "s": "BoltSentry",
-            "n": "BoltSentry"
-        },
-        {
-            "id": 307,
-            "s": "CorpseCycler",
-            "n": "CorpseCycler"
-        },
-        {
-            "id": 308,
-            "s": "DeathMaul",
-            "n": "DeathMaul"
-        },
-        {
-            "id": 309,
-            "s": "Defense Curse",
-            "n": "Defense Curse"
-        },
-        {
-            "id": 310,
-            "s": "Blood Mana",
-            "n": "Blood Mana"
-        },
-        {
-            "id": 311,
-            "s": "mon inferno sentry",
-            "n": "mon inferno sentry"
-        },
-        {
-            "id": 312,
-            "s": "mon death sentry",
-            "n": "mon death sentry"
-        },
-        {
-            "id": 313,
-            "s": "sentry lightning",
-            "n": "sentry lightning"
-        },
-        {
-            "id": 314,
-            "s": "fenris rage",
-            "n": "fenris rage"
-        },
-        {
-            "id": 315,
-            "s": "Baal Tentacle",
-            "n": "Baal Tentacle"
-        },
-        {
-            "id": 316,
-            "s": "Baal Nova",
-            "n": "Baal Nova"
-        },
-        {
-            "id": 317,
-            "s": "Baal Inferno",
-            "n": "Baal Inferno"
-        },
-        {
-            "id": 318,
-            "s": "Baal Cold Missiles",
-            "n": "Baal Cold Missiles"
-        },
-        {
-            "id": 319,
-            "s": "MegademonInferno",
-            "n": "MegademonInferno"
-        },
-        {
-            "id": 320,
-            "s": "EvilHutSpawner",
-            "n": "EvilHutSpawner"
-        },
-        {
-            "id": 321,
-            "s": "CountessFirewall",
-            "n": "CountessFirewall"
-        },
-        {
-            "id": 322,
-            "s": "ImpBolt",
-            "n": "ImpBolt"
-        },
-        {
-            "id": 323,
-            "s": "Horror Arctic Blast",
-            "n": "Horror Arctic Blast"
-        },
-        {
-            "id": 324,
-            "s": "death sentry ltng",
-            "n": "death sentry ltng"
-        },
-        {
-            "id": 325,
-            "s": "VineCycler",
-            "n": "VineCycler"
-        },
-        {
-            "id": 326,
-            "s": "BearSmite",
-            "n": "BearSmite"
-        },
-        {
-            "id": 327,
-            "s": "Resurrect2",
-            "n": "Resurrect2"
-        },
-        {
-            "id": 328,
-            "s": "BloodLordFrenzy",
-            "n": "BloodLordFrenzy"
-        },
-        {
-            "id": 329,
-            "s": "Baal Teleport",
-            "n": "Baal Teleport"
-        },
-        {
-            "id": 330,
-            "s": "Imp Teleport",
-            "n": "Imp Teleport"
-        },
-        {
-            "id": 331,
-            "s": "Baal Clone Teleport",
-            "n": "Baal Clone Teleport"
-        },
-        {
-            "id": 332,
-            "s": "ZakarumLightning",
-            "n": "ZakarumLightning"
-        },
-        {
-            "id": 333,
-            "s": "VampireMissile",
-            "n": "VampireMissile"
-        },
-        {
-            "id": 334,
-            "s": "MephistoMissile",
-            "n": "MephistoMissile"
-        },
-        {
-            "id": 335,
-            "s": "DoomKnightMissile",
-            "n": "DoomKnightMissile"
-        },
-        {
-            "id": 336,
-            "s": "RogueMissile",
-            "n": "RogueMissile"
-        },
-        {
-            "id": 337,
-            "s": "HydraMissile",
-            "n": "HydraMissile"
-        },
-        {
-            "id": 338,
-            "s": "NecromageMissile",
-            "n": "NecromageMissile"
-        },
-        {
-            "id": 339,
-            "s": "MonBow",
-            "n": "MonBow"
-        },
-        {
-            "id": 340,
-            "s": "MonFireArrow",
-            "n": "MonFireArrow"
-        },
-        {
-            "id": 341,
-            "s": "MonColdArrow",
-            "n": "MonColdArrow"
-        },
-        {
-            "id": 342,
-            "s": "MonExplodingArrow",
-            "n": "MonExplodingArrow"
-        },
-        {
-            "id": 343,
-            "s": "MonFreezingArrow",
-            "n": "MonFreezingArrow"
-        },
-        {
-            "id": 344,
-            "s": "MonPowerStrike",
-            "n": "MonPowerStrike"
-        },
-        {
-            "id": 345,
-            "s": "SuccubusBolt",
-            "n": "SuccubusBolt"
-        },
-        {
-            "id": 346,
-            "s": "MephFrostNova",
-            "n": "MephFrostNova"
-        },
-        {
-            "id": 347,
-            "s": "MonIceSpear",
-            "n": "MonIceSpear"
-        },
-        {
-            "id": 348,
-            "s": "ShamanIce",
-            "n": "ShamanIce"
-        },
-        {
-            "id": 349,
-            "s": "Diablogeddon",
-            "n": "Diablogeddon"
-        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         {
             "id": 350,
             "s": "Delerium Change",
-            "n": "Delerium Change"
+            "n": "Delirium"
         },
-        {
-            "id": 351,
-            "s": "NihlathakCorpseExplosion",
-            "n": "NihlathakCorpseExplosion"
-        },
-        {
-            "id": 352,
-            "s": "SerpentCharge",
-            "n": "SerpentCharge"
-        },
-        {
-            "id": 353,
-            "s": "Trap Nova",
-            "n": "Trap Nova"
-        },
-        {
-            "id": 354,
-            "s": "UnHolyBoltEx",
-            "n": "UnHolyBoltEx"
-        },
-        {
-            "id": 355,
-            "s": "ShamanFireEx",
-            "n": "ShamanFireEx"
-        },
-        {
-            "id": 356,
-            "s": "Imp Fire Missile Ex",
-            "n": "Imp Fire Missile Ex"
-        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         {
             "id": 357,
-            "s": "Interact",
-            "n": "Interact"
+            "s": "Interact"
         },
         {
             "id": 358,
-            "s": "Loot",
-            "n": "Loot"
+            "s": "Loot"
         },
         {
             "id": 359,
             "s": "TownPortal",
-            "n": "TownPortal"
+            "n": "Scroll of Townportal"
         },
         {
             "id": 360,
-            "s": "EmoteWheel",
-            "n": "EmoteWheel"
+            "s": "EmoteWheel"
         },
         {
             "id": 361,
-            "s": "SwapWeapons",
-            "n": "SwapWeapons"
+            "s": "SwapWeapons"
         },
         {
             "id": 362,
-            "s": "Map",
-            "n": "Map"
+            "s": "Map"
         },
         {
             "id": 363,
-            "s": "ShowItems",
-            "n": "ShowItems"
+            "s": "ShowItems"
         },
         {
             "id": 364,
-            "s": "RunToggle",
-            "n": "RunToggle"
-        },
-        {
-            "id": 365,
-            "s": "MonHolyFreeze",
-            "n": "MonHolyFreeze"
-        },
-        {
-            "id": 366,
-            "s": "MonLeap",
-            "n": "MonLeap"
-        },
-        {
-            "id": 367,
-            "s": "MonLeapAttack",
-            "n": "MonLeapAttack"
-        },
-        {
-            "id": 368,
-            "s": "MonHolyFire",
-            "n": "MonHolyFire"
-        },
-        {
-            "id": 369,
-            "s": "MonHolyShock",
-            "n": "MonHolyShock"
+            "s": "RunToggle"
         }
     ],
     "rare_names": [
