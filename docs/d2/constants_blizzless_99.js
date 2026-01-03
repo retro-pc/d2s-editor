@@ -363,7 +363,7 @@ export let constants_blizzless_99 = {
         {
             "id": 28,
             "s": "Dopplezon",
-            "n": "Dopplezon",
+            "n": "Decoy",
             "c": "ama"
         },
         {
@@ -705,7 +705,7 @@ export let constants_blizzless_99 = {
         {
             "id": 85,
             "s": "BloodGolem",
-            "n": "BloodGolem",
+            "n": "Blood Golem",
             "c": "nec"
         },
         {
@@ -735,7 +735,7 @@ export let constants_blizzless_99 = {
         {
             "id": 90,
             "s": "IronGolem",
-            "n": "IronGolem",
+            "n": "Iron Golem",
             "c": "nec"
         },
         {
@@ -759,7 +759,7 @@ export let constants_blizzless_99 = {
         {
             "id": 94,
             "s": "FireGolem",
-            "n": "FireGolem",
+            "n": "Fire Golem",
             "c": "nec"
         },
         {
@@ -969,7 +969,7 @@ export let constants_blizzless_99 = {
         {
             "id": 129,
             "s": "Mace Mastery",
-            "n": "Mace Mastery",
+            "n": "Blunt Mastery",
             "c": "bar"
         },
         {
@@ -999,7 +999,7 @@ export let constants_blizzless_99 = {
         {
             "id": 134,
             "s": "Pole Arm Mastery",
-            "n": "Pole Arm Mastery",
+            "n": "Polearm Mastery",
             "c": "bar"
         },
         {
@@ -1011,7 +1011,7 @@ export let constants_blizzless_99 = {
         {
             "id": 136,
             "s": "Spear Mastery",
-            "n": "Spear Mastery",
+            "n": "Archery Mastery",
             "c": "bar"
         },
         {
@@ -1128,311 +1128,71 @@ export let constants_blizzless_99 = {
             "n": "Battle Command",
             "c": "bar"
         },
-        {
-            "id": 156,
-            "s": "Fire Hit",
-            "n": "Fire Hit"
-        },
-        {
-            "id": 157,
-            "s": "UnHolyBolt",
-            "n": "UnHolyBolt"
-        },
-        {
-            "id": 158,
-            "s": "SkeletonRaise",
-            "n": "SkeletonRaise"
-        },
-        {
-            "id": 159,
-            "s": "MaggotEgg",
-            "n": "MaggotEgg"
-        },
-        {
-            "id": 160,
-            "s": "ShamanFire",
-            "n": "ShamanFire"
-        },
-        {
-            "id": 161,
-            "s": "MagottUp",
-            "n": "MagottUp"
-        },
-        {
-            "id": 162,
-            "s": "MagottDown",
-            "n": "MagottDown"
-        },
-        {
-            "id": 163,
-            "s": "MagottLay",
-            "n": "MagottLay"
-        },
-        {
-            "id": 164,
-            "s": "AndrialSpray",
-            "n": "AndrialSpray"
-        },
-        {
-            "id": 165,
-            "s": "Jump",
-            "n": "Jump"
-        },
-        {
-            "id": 166,
-            "s": "Swarm Move",
-            "n": "Swarm Move"
-        },
-        {
-            "id": 167,
-            "s": "Nest",
-            "n": "Nest"
-        },
-        {
-            "id": 168,
-            "s": "Quick Strike",
-            "n": "Quick Strike"
-        },
-        {
-            "id": 169,
-            "s": "VampireFireball",
-            "n": "VampireFireball"
-        },
-        {
-            "id": 170,
-            "s": "VampireFirewall",
-            "n": "VampireFirewall"
-        },
-        {
-            "id": 171,
-            "s": "VampireMeteor",
-            "n": "VampireMeteor"
-        },
-        {
-            "id": 172,
-            "s": "GargoyleTrap",
-            "n": "GargoyleTrap"
-        },
-        {
-            "id": 173,
-            "s": "SpiderLay",
-            "n": "SpiderLay"
-        },
-        {
-            "id": 174,
-            "s": "VampireHeal",
-            "n": "VampireHeal"
-        },
-        {
-            "id": 175,
-            "s": "VampireRaise",
-            "n": "VampireRaise"
-        },
-        {
-            "id": 176,
-            "s": "Submerge",
-            "n": "Submerge"
-        },
-        {
-            "id": 177,
-            "s": "FetishAura",
-            "n": "FetishAura"
-        },
-        {
-            "id": 178,
-            "s": "FetishInferno",
-            "n": "FetishInferno"
-        },
-        {
-            "id": 179,
-            "s": "ZakarumHeal",
-            "n": "ZakarumHeal"
-        },
-        {
-            "id": 180,
-            "s": "Emerge",
-            "n": "Emerge"
-        },
-        {
-            "id": 181,
-            "s": "Resurrect",
-            "n": "Resurrect"
-        },
-        {
-            "id": 182,
-            "s": "Bestow",
-            "n": "Bestow"
-        },
-        {
-            "id": 183,
-            "s": "MissileSkill1",
-            "n": "MissileSkill1"
-        },
-        {
-            "id": 184,
-            "s": "MonTeleport",
-            "n": "MonTeleport"
-        },
-        {
-            "id": 185,
-            "s": "PrimeLightning",
-            "n": "PrimeLightning"
-        },
-        {
-            "id": 186,
-            "s": "PrimeBolt",
-            "n": "PrimeBolt"
-        },
-        {
-            "id": 187,
-            "s": "PrimeBlaze",
-            "n": "PrimeBlaze"
-        },
-        {
-            "id": 188,
-            "s": "PrimeFirewall",
-            "n": "PrimeFirewall"
-        },
-        {
-            "id": 189,
-            "s": "PrimeSpike",
-            "n": "PrimeSpike"
-        },
-        {
-            "id": 190,
-            "s": "PrimeIceNova",
-            "n": "PrimeIceNova"
-        },
-        {
-            "id": 191,
-            "s": "PrimePoisonball",
-            "n": "PrimePoisonball"
-        },
-        {
-            "id": 192,
-            "s": "PrimePoisonNova",
-            "n": "PrimePoisonNova"
-        },
-        {
-            "id": 193,
-            "s": "DiabLight",
-            "n": "DiabLight"
-        },
-        {
-            "id": 194,
-            "s": "DiabCold",
-            "n": "DiabCold"
-        },
-        {
-            "id": 195,
-            "s": "DiabFire",
-            "n": "DiabFire"
-        },
-        {
-            "id": 196,
-            "s": "FingerMageSpider",
-            "n": "FingerMageSpider"
-        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         {
             "id": 197,
             "s": "DiabWall",
-            "n": "DiabWall"
+            "n": "Firestorm"
         },
-        {
-            "id": 198,
-            "s": "DiabRun",
-            "n": "DiabRun"
-        },
-        {
-            "id": 199,
-            "s": "DiabPrison",
-            "n": "DiabPrison"
-        },
-        {
-            "id": 200,
-            "s": "PoisonBallTrap",
-            "n": "PoisonBallTrap"
-        },
-        {
-            "id": 201,
-            "s": "AndyPoisonBolt",
-            "n": "AndyPoisonBolt"
-        },
-        {
-            "id": 202,
-            "s": "HireableMissile",
-            "n": "HireableMissile"
-        },
-        {
-            "id": 203,
-            "s": "DesertTurret",
-            "n": "DesertTurret"
-        },
-        {
-            "id": 204,
-            "s": "ArcaneTower",
-            "n": "ArcaneTower"
-        },
-        {
-            "id": 205,
-            "s": "MonBlizzard",
-            "n": "MonBlizzard"
-        },
-        {
-            "id": 206,
-            "s": "Mosquito",
-            "n": "Mosquito"
-        },
-        {
-            "id": 207,
-            "s": "CursedBallTrapRight",
-            "n": "CursedBallTrapRight"
-        },
-        {
-            "id": 208,
-            "s": "CursedBallTrapLeft",
-            "n": "CursedBallTrapLeft"
-        },
-        {
-            "id": 209,
-            "s": "MonFrozenArmor",
-            "n": "MonFrozenArmor"
-        },
-        {
-            "id": 210,
-            "s": "MonBoneArmor",
-            "n": "MonBoneArmor"
-        },
-        {
-            "id": 211,
-            "s": "MonBoneSpirit",
-            "n": "MonBoneSpirit"
-        },
-        {
-            "id": 212,
-            "s": "MonCurseCast",
-            "n": "MonCurseCast"
-        },
-        {
-            "id": 213,
-            "s": "HellMeteor",
-            "n": "HellMeteor"
-        },
-        {
-            "id": 214,
-            "s": "RegurgitatorEat",
-            "n": "RegurgitatorEat"
-        },
-        {
-            "id": 215,
-            "s": "MonFrenzy",
-            "n": "MonFrenzy"
-        },
-        {
-            "id": 216,
-            "s": "QueenDeath",
-            "n": "QueenDeath"
-        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         {
             "id": 217,
             "s": "Scroll of Identify",
@@ -1441,17 +1201,17 @@ export let constants_blizzless_99 = {
         {
             "id": 218,
             "s": "Book of Identify",
-            "n": "Book of Identify"
+            "n": "Tome of Identify"
         },
         {
             "id": 219,
             "s": "Scroll of Townportal",
-            "n": "Scroll of Townportal"
+            "n": "Scroll of Town Portal"
         },
         {
             "id": 220,
             "s": "Book of Townportal",
-            "n": "Book of Townportal"
+            "n": "Tome of Town Portal"
         },
         {
             "id": 221,
@@ -1462,19 +1222,19 @@ export let constants_blizzless_99 = {
         {
             "id": 222,
             "s": "Plague Poppy",
-            "n": "Plague Poppy",
+            "n": "Poison Creeper",
             "c": "dru"
         },
         {
             "id": 223,
             "s": "Wearwolf",
-            "n": "Wearwolf",
+            "n": "Werewolf",
             "c": "dru"
         },
         {
             "id": 224,
             "s": "Shape Shifting",
-            "n": "Shape Shifting",
+            "n": "Lycanthropy",
             "c": "dru"
         },
         {
@@ -1498,7 +1258,7 @@ export let constants_blizzless_99 = {
         {
             "id": 228,
             "s": "Wearbear",
-            "n": "Wearbear",
+            "n": "Werebear",
             "c": "dru"
         },
         {
@@ -1516,7 +1276,7 @@ export let constants_blizzless_99 = {
         {
             "id": 231,
             "s": "Cycle of Life",
-            "n": "Cycle of Life",
+            "n": "Carrion Vine",
             "c": "dru"
         },
         {
@@ -1534,7 +1294,7 @@ export let constants_blizzless_99 = {
         {
             "id": 234,
             "s": "Eruption",
-            "n": "Eruption",
+            "n": "Fissure",
             "c": "dru"
         },
         {
@@ -1552,7 +1312,7 @@ export let constants_blizzless_99 = {
         {
             "id": 237,
             "s": "Summon Fenris",
-            "n": "Summon Fenris",
+            "n": "Summon Dire Wolf",
             "c": "dru"
         },
         {
@@ -1576,7 +1336,7 @@ export let constants_blizzless_99 = {
         {
             "id": 241,
             "s": "Vines",
-            "n": "Vines",
+            "n": "Solar Creeper",
             "c": "dru"
         },
         {
@@ -1636,7 +1396,7 @@ export let constants_blizzless_99 = {
         {
             "id": 251,
             "s": "Fire Trauma",
-            "n": "Fire Trauma",
+            "n": "Fire Blast",
             "c": "ass"
         },
         {
@@ -1666,7 +1426,7 @@ export let constants_blizzless_99 = {
         {
             "id": 256,
             "s": "Shock Field",
-            "n": "Shock Field",
+            "n": "Shock Web",
             "c": "ass"
         },
         {
@@ -1678,7 +1438,7 @@ export let constants_blizzless_99 = {
         {
             "id": 258,
             "s": "Quickness",
-            "n": "Quickness",
+            "n": "Burst of Speed",
             "c": "ass"
         },
         {
@@ -1702,7 +1462,7 @@ export let constants_blizzless_99 = {
         {
             "id": 262,
             "s": "Wake of Fire Sentry",
-            "n": "Wake of Fire Sentry",
+            "n": "Wake of Fire",
             "c": "ass"
         },
         {
@@ -1762,7 +1522,7 @@ export let constants_blizzless_99 = {
         {
             "id": 272,
             "s": "Inferno Sentry",
-            "n": "Inferno Sentry",
+            "n": "Wake of Inferno",
             "c": "ass"
         },
         {
@@ -1810,458 +1570,130 @@ export let constants_blizzless_99 = {
         {
             "id": 280,
             "s": "Royal Strike",
-            "n": "Royal Strike",
+            "n": "Phoenix Strike",
             "c": "ass"
         },
-        {
-            "id": 281,
-            "s": "Wake Of Destruction Sentry",
-            "n": "Wake Of Destruction Sentry"
-        },
-        {
-            "id": 282,
-            "s": "Imp Inferno",
-            "n": "Imp Inferno"
-        },
-        {
-            "id": 283,
-            "s": "Imp Fireball",
-            "n": "Imp Fireball"
-        },
-        {
-            "id": 284,
-            "s": "Baal Taunt",
-            "n": "Baal Taunt"
-        },
-        {
-            "id": 285,
-            "s": "Baal Corpse Explode",
-            "n": "Baal Corpse Explode"
-        },
-        {
-            "id": 286,
-            "s": "Baal Monster Spawn",
-            "n": "Baal Monster Spawn"
-        },
-        {
-            "id": 287,
-            "s": "Catapult Charged Ball",
-            "n": "Catapult Charged Ball"
-        },
-        {
-            "id": 288,
-            "s": "Catapult Spike Ball",
-            "n": "Catapult Spike Ball"
-        },
-        {
-            "id": 289,
-            "s": "Suck Blood",
-            "n": "Suck Blood"
-        },
-        {
-            "id": 290,
-            "s": "Cry Help",
-            "n": "Cry Help"
-        },
-        {
-            "id": 291,
-            "s": "Healing Vortex",
-            "n": "Healing Vortex"
-        },
-        {
-            "id": 292,
-            "s": "Teleport 2",
-            "n": "Teleport 2"
-        },
-        {
-            "id": 293,
-            "s": "Self-resurrect",
-            "n": "Self-resurrect"
-        },
-        {
-            "id": 294,
-            "s": "Vine Attack",
-            "n": "Vine Attack"
-        },
-        {
-            "id": 295,
-            "s": "Overseer Whip",
-            "n": "Overseer Whip"
-        },
-        {
-            "id": 296,
-            "s": "Barbs Aura",
-            "n": "Barbs Aura"
-        },
-        {
-            "id": 297,
-            "s": "Wolverine Aura",
-            "n": "Wolverine Aura"
-        },
-        {
-            "id": 298,
-            "s": "Oak Sage Aura",
-            "n": "Oak Sage Aura"
-        },
-        {
-            "id": 299,
-            "s": "Imp Fire Missile",
-            "n": "Imp Fire Missile"
-        },
-        {
-            "id": 300,
-            "s": "Impregnate",
-            "n": "Impregnate"
-        },
-        {
-            "id": 301,
-            "s": "Siege Beast Stomp",
-            "n": "Siege Beast Stomp"
-        },
-        {
-            "id": 302,
-            "s": "MinionSpawner",
-            "n": "MinionSpawner"
-        },
-        {
-            "id": 303,
-            "s": "CatapultBlizzard",
-            "n": "CatapultBlizzard"
-        },
-        {
-            "id": 304,
-            "s": "CatapultPlague",
-            "n": "CatapultPlague"
-        },
-        {
-            "id": 305,
-            "s": "CatapultMeteor",
-            "n": "CatapultMeteor"
-        },
-        {
-            "id": 306,
-            "s": "BoltSentry",
-            "n": "BoltSentry"
-        },
-        {
-            "id": 307,
-            "s": "CorpseCycler",
-            "n": "CorpseCycler"
-        },
-        {
-            "id": 308,
-            "s": "DeathMaul",
-            "n": "DeathMaul"
-        },
-        {
-            "id": 309,
-            "s": "Defense Curse",
-            "n": "Defense Curse"
-        },
-        {
-            "id": 310,
-            "s": "Blood Mana",
-            "n": "Blood Mana"
-        },
-        {
-            "id": 311,
-            "s": "mon inferno sentry",
-            "n": "mon inferno sentry"
-        },
-        {
-            "id": 312,
-            "s": "mon death sentry",
-            "n": "mon death sentry"
-        },
-        {
-            "id": 313,
-            "s": "sentry lightning",
-            "n": "sentry lightning"
-        },
-        {
-            "id": 314,
-            "s": "fenris rage",
-            "n": "fenris rage"
-        },
-        {
-            "id": 315,
-            "s": "Baal Tentacle",
-            "n": "Baal Tentacle"
-        },
-        {
-            "id": 316,
-            "s": "Baal Nova",
-            "n": "Baal Nova"
-        },
-        {
-            "id": 317,
-            "s": "Baal Inferno",
-            "n": "Baal Inferno"
-        },
-        {
-            "id": 318,
-            "s": "Baal Cold Missiles",
-            "n": "Baal Cold Missiles"
-        },
-        {
-            "id": 319,
-            "s": "MegademonInferno",
-            "n": "MegademonInferno"
-        },
-        {
-            "id": 320,
-            "s": "EvilHutSpawner",
-            "n": "EvilHutSpawner"
-        },
-        {
-            "id": 321,
-            "s": "CountessFirewall",
-            "n": "CountessFirewall"
-        },
-        {
-            "id": 322,
-            "s": "ImpBolt",
-            "n": "ImpBolt"
-        },
-        {
-            "id": 323,
-            "s": "Horror Arctic Blast",
-            "n": "Horror Arctic Blast"
-        },
-        {
-            "id": 324,
-            "s": "death sentry ltng",
-            "n": "death sentry ltng"
-        },
-        {
-            "id": 325,
-            "s": "VineCycler",
-            "n": "VineCycler"
-        },
-        {
-            "id": 326,
-            "s": "BearSmite",
-            "n": "BearSmite"
-        },
-        {
-            "id": 327,
-            "s": "Resurrect2",
-            "n": "Resurrect2"
-        },
-        {
-            "id": 328,
-            "s": "BloodLordFrenzy",
-            "n": "BloodLordFrenzy"
-        },
-        {
-            "id": 329,
-            "s": "Baal Teleport",
-            "n": "Baal Teleport"
-        },
-        {
-            "id": 330,
-            "s": "Imp Teleport",
-            "n": "Imp Teleport"
-        },
-        {
-            "id": 331,
-            "s": "Baal Clone Teleport",
-            "n": "Baal Clone Teleport"
-        },
-        {
-            "id": 332,
-            "s": "ZakarumLightning",
-            "n": "ZakarumLightning"
-        },
-        {
-            "id": 333,
-            "s": "VampireMissile",
-            "n": "VampireMissile"
-        },
-        {
-            "id": 334,
-            "s": "MephistoMissile",
-            "n": "MephistoMissile"
-        },
-        {
-            "id": 335,
-            "s": "DoomKnightMissile",
-            "n": "DoomKnightMissile"
-        },
-        {
-            "id": 336,
-            "s": "RogueMissile",
-            "n": "RogueMissile"
-        },
-        {
-            "id": 337,
-            "s": "HydraMissile",
-            "n": "HydraMissile"
-        },
-        {
-            "id": 338,
-            "s": "NecromageMissile",
-            "n": "NecromageMissile"
-        },
-        {
-            "id": 339,
-            "s": "MonBow",
-            "n": "MonBow"
-        },
-        {
-            "id": 340,
-            "s": "MonFireArrow",
-            "n": "MonFireArrow"
-        },
-        {
-            "id": 341,
-            "s": "MonColdArrow",
-            "n": "MonColdArrow"
-        },
-        {
-            "id": 342,
-            "s": "MonExplodingArrow",
-            "n": "MonExplodingArrow"
-        },
-        {
-            "id": 343,
-            "s": "MonFreezingArrow",
-            "n": "MonFreezingArrow"
-        },
-        {
-            "id": 344,
-            "s": "MonPowerStrike",
-            "n": "MonPowerStrike"
-        },
-        {
-            "id": 345,
-            "s": "SuccubusBolt",
-            "n": "SuccubusBolt"
-        },
-        {
-            "id": 346,
-            "s": "MephFrostNova",
-            "n": "MephFrostNova"
-        },
-        {
-            "id": 347,
-            "s": "MonIceSpear",
-            "n": "MonIceSpear"
-        },
-        {
-            "id": 348,
-            "s": "ShamanIce",
-            "n": "ShamanIce"
-        },
-        {
-            "id": 349,
-            "s": "Diablogeddon",
-            "n": "Diablogeddon"
-        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         {
             "id": 350,
             "s": "Delerium Change",
-            "n": "Delerium Change"
+            "n": "Delirium"
         },
-        {
-            "id": 351,
-            "s": "NihlathakCorpseExplosion",
-            "n": "NihlathakCorpseExplosion"
-        },
-        {
-            "id": 352,
-            "s": "SerpentCharge",
-            "n": "SerpentCharge"
-        },
-        {
-            "id": 353,
-            "s": "Trap Nova",
-            "n": "Trap Nova"
-        },
-        {
-            "id": 354,
-            "s": "UnHolyBoltEx",
-            "n": "UnHolyBoltEx"
-        },
-        {
-            "id": 355,
-            "s": "ShamanFireEx",
-            "n": "ShamanFireEx"
-        },
-        {
-            "id": 356,
-            "s": "Imp Fire Missile Ex",
-            "n": "Imp Fire Missile Ex"
-        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         {
             "id": 357,
-            "s": "Interact",
-            "n": "Interact"
+            "s": "Interact"
         },
         {
             "id": 358,
-            "s": "Loot",
-            "n": "Loot"
+            "s": "Loot"
         },
         {
             "id": 359,
             "s": "TownPortal",
-            "n": "TownPortal"
+            "n": "Scroll of Town Portal"
         },
         {
             "id": 360,
-            "s": "EmoteWheel",
-            "n": "EmoteWheel"
+            "s": "EmoteWheel"
         },
         {
             "id": 361,
-            "s": "SwapWeapons",
-            "n": "SwapWeapons"
+            "s": "SwapWeapons"
         },
         {
             "id": 362,
-            "s": "Map",
-            "n": "Map"
+            "s": "Map"
         },
         {
             "id": 363,
-            "s": "ShowItems",
-            "n": "ShowItems"
+            "s": "ShowItems"
         },
         {
             "id": 364,
-            "s": "RunToggle",
-            "n": "RunToggle"
+            "s": "RunToggle"
         },
-        {
-            "id": 365,
-            "s": "MonHolyFreeze",
-            "n": "MonHolyFreeze"
-        },
-        {
-            "id": 366,
-            "s": "MonLeap",
-            "n": "MonLeap"
-        },
-        {
-            "id": 367,
-            "s": "MonLeapAttack",
-            "n": "MonLeapAttack"
-        },
-        {
-            "id": 368,
-            "s": "MonHolyFire",
-            "n": "MonHolyFire"
-        },
-        {
-            "id": 369,
-            "s": "MonHolyShock",
-            "n": "MonHolyShock"
-        },
+        null,
+        null,
+        null,
+        null,
+        null,
         {
             "id": 370,
-            "s": "CubeLoot",
-            "n": "CubeLoot"
+            "s": "CubeLoot"
         },
         {
             "id": 371,
@@ -2273,65 +1705,48 @@ export let constants_blizzless_99 = {
             "s": "Mark of the Wolf",
             "n": "Mark of the Wolf"
         },
-        {
-            "id": 373,
-            "s": "Barbs Aura Add",
-            "n": "Barbs Aura Add"
-        },
-        {
-            "id": 374,
-            "s": "DiabCloneLight",
-            "n": "DiabCloneLight"
-        },
-        {
-            "id": 375,
-            "s": "DiabCloneCold",
-            "n": "DiabCloneCold"
-        },
+        null,
+        null,
+        null,
         {
             "id": 376,
             "s": "DiabCloneWall",
-            "n": "DiabCloneWall"
+            "n": "Firestorm"
         },
-        {
-            "id": 377,
-            "s": "PrimeCloneFirewall",
-            "n": "PrimeCloneFirewall"
-        },
-        {
-            "id": 378,
-            "s": "DiabloClonegeddon",
-            "n": "DiabloClonegeddon"
-        },
-        {
-            "id": 379,
-            "s": "DiabCloneFire",
-            "n": "DiabCloneFire"
-        },
+        null,
+        null,
+        null,
         {
             "id": 380,
             "s": "Merc Frost Nova",
-            "n": "Merc Frost Nova"
+            "n": "Frost Nova"
         },
-        {
-            "id": 381,
-            "s": "DiabCloneRun",
-            "n": "DiabCloneRun"
-        },
+        null,
         {
             "id": 382,
             "s": "Corpse Explosion CTC",
-            "n": "Corpse Explosion CTC"
+            "n": "Death Sentry"
         },
-        {
-            "id": 383,
-            "s": "Resurrect3",
-            "n": "Resurrect3"
-        },
+        null,
         {
             "id": 384,
             "s": "Poison Explosion CTC",
-            "n": "Poison Explosion CTC"
+            "n": "Poison Explosion"
+        },
+        {
+            "id": 385,
+            "s": "Clone Summon",
+            "n": "Diablo Clone"
+        },
+        {
+            "id": 386,
+            "s": "Teleport Town",
+            "n": "Infernal Shift"
+        },
+        {
+            "id": 387,
+            "s": "Wearcow",
+            "n": "His Beef Majesty"
         }
     ],
     "rare_names": [
@@ -6062,7 +5477,65 @@ export let constants_blizzless_99 = {
             "tc": "blac"
         },
         {
-            "id": 670
+            "id": 670,
+            "n": "Smoldering"
+        },
+        {
+            "id": 671,
+            "n": "Smoking"
+        },
+        {
+            "id": 672
+        },
+        {
+            "id": 673
+        },
+        {
+            "id": 674,
+            "n": "Shivering"
+        },
+        {
+            "id": 675,
+            "n": "Glacial"
+        },
+        {
+            "id": 676,
+            "n": "Static"
+        },
+        {
+            "id": 677,
+            "n": "Glowing"
+        },
+        {
+            "id": 678,
+            "n": "Arcing"
+        },
+        {
+            "id": 679,
+            "n": "Septic"
+        },
+        {
+            "id": 680,
+            "n": "Corrosive"
+        },
+        {
+            "id": 681,
+            "n": "Toxic"
+        },
+        {
+            "id": 682,
+            "n": "Oracular"
+        },
+        {
+            "id": 683,
+            "n": "Mystic"
+        },
+        {
+            "id": 684,
+            "n": "Arcane"
+        },
+        {
+            "id": 685
         }
     ],
     "magic_suffixes": [
@@ -9189,7 +8662,72 @@ export let constants_blizzless_99 = {
             "tc": "cred"
         },
         {
-            "id": 748
+            "id": 748,
+            "n": "of the Sun"
+        },
+        {
+            "id": 749,
+            "n": "of Regeneration"
+        },
+        {
+            "id": 750,
+            "n": "of Regrowth",
+            "tc": "cred"
+        },
+        {
+            "id": 751,
+            "n": "of Revivification",
+            "tc": "cred"
+        },
+        {
+            "id": 752,
+            "n": "of Accuracy"
+        },
+        {
+            "id": 753,
+            "n": "of Precision",
+            "tc": "dgld"
+        },
+        {
+            "id": 754,
+            "n": "of the Titan",
+            "tc": "dgld"
+        },
+        {
+            "id": 755,
+            "n": "of the Giant",
+            "tc": "dgld"
+        },
+        {
+            "id": 756,
+            "n": "of the Titan",
+            "tc": "dgld"
+        },
+        {
+            "id": 757,
+            "n": "of Slaying"
+        },
+        {
+            "id": 758,
+            "n": "of Gore"
+        },
+        {
+            "id": 759,
+            "n": "of Carnage",
+            "tc": "blac"
+        },
+        {
+            "id": 760,
+            "n": "of Slaughter",
+            "tc": "blac"
+        },
+        {
+            "id": 761,
+            "n": "of Butchery",
+            "tc": "blac"
+        },
+        {
+            "id": 762
         }
     ],
     "properties": {
@@ -9955,6 +9493,11 @@ export let constants_blizzless_99 = {
                 "type": "other",
                 "f": 21,
                 "val": 1
+            },
+            {
+                "s": "item_elemskill_fire",
+                "type": "all",
+                "f": 3
             }
         ],
         "allskills": [
@@ -11156,6 +10699,65 @@ export let constants_blizzless_99 = {
                 "f": 1
             }
         ],
+        "dur%_new": [
+            {
+                "s": "item_maxdurability_new",
+                "type": "other",
+                "f": 13
+            }
+        ],
+        "coldskill": [
+            {
+                "s": "item_elemskill",
+                "type": "other",
+                "f": 21,
+                "val": 4
+            },
+            {
+                "s": "item_elemskill_cold",
+                "type": "all",
+                "f": 3
+            }
+        ],
+        "lightningskill": [
+            {
+                "s": "item_elemskill",
+                "type": "other",
+                "f": 21,
+                "val": 2
+            },
+            {
+                "s": "item_elemskill_lightning",
+                "type": "all",
+                "f": 3
+            }
+        ],
+        "poisonskill": [
+            {
+                "s": "item_elemskill",
+                "type": "other",
+                "f": 21,
+                "val": 5
+            },
+            {
+                "s": "item_elemskill_poison",
+                "type": "all",
+                "f": 3
+            }
+        ],
+        "magicskill": [
+            {
+                "s": "item_elemskill",
+                "type": "other",
+                "f": 21,
+                "val": 3
+            },
+            {
+                "s": "item_elemskill_magic",
+                "type": "all",
+                "f": 3
+            }
+        ],
         "": []
     },
     "magical_properties": [
@@ -12251,7 +11853,8 @@ export let constants_blizzless_99 = {
             "sA": 100,
             "so": 18,
             "dF": 29,
-            "dP": "Poison Length Reduced by %d%%"
+            "dP": "Poison Length Reduced by %d%%",
+            "dN": "Poison Length Increased by %d%%"
         },
         {
             "id": 111,
@@ -12426,10 +12029,7 @@ export let constants_blizzless_99 = {
             "sB": 3,
             "sA": 0,
             "sP": 3,
-            "so": 157,
-            "dF": 19,
-            "dP": "%+d to Fire Skills",
-            "dN": "%+d to Fire Skills"
+            "so": 1
         },
         {
             "id": 127,
@@ -14900,14 +14500,89 @@ export let constants_blizzless_99 = {
             "sA": 100,
             "so": 131,
             "dF": 29,
-            "dP": "%d%% to Poison Duration of Poison Skills",
-            "dN": "%d%% to Poison Duration of Poison Skills"
+            "dP": "%+d%% Faster Poisoning by Skills",
+            "dN": "%+d%% Faster Poisoning by Skills"
         },
         {
             "id": 363,
             "s": "torch",
             "sB": 8,
             "sA": 0
+        },
+        {
+            "id": 364,
+            "s": "item_maxdurability_new",
+            "sS": 1,
+            "sB": 7,
+            "sA": 100,
+            "so": 200,
+            "dF": 19,
+            "dP": "ÿcUFailure",
+            "dN": "ÿcUFailure",
+            "o": 13,
+            "os": [
+                "maxdurability"
+            ]
+        },
+        {
+            "id": 365,
+            "s": "item_elemskill_cold",
+            "sS": 1,
+            "sB": 3,
+            "sA": 0,
+            "sP": 3,
+            "so": 157,
+            "dF": 19,
+            "dP": "%+d to Cold Skills",
+            "dN": "%+d to Cold Skills"
+        },
+        {
+            "id": 366,
+            "s": "item_elemskill_lightning",
+            "sS": 1,
+            "sB": 3,
+            "sA": 0,
+            "sP": 3,
+            "so": 157,
+            "dF": 19,
+            "dP": "%+d to Lightning Skills",
+            "dN": "%+d to Lightning Skills"
+        },
+        {
+            "id": 367,
+            "s": "item_elemskill_poison",
+            "sS": 1,
+            "sB": 3,
+            "sA": 0,
+            "sP": 3,
+            "so": 157,
+            "dF": 19,
+            "dP": "%+d to Poison Skills",
+            "dN": "%+d to Poison Skills"
+        },
+        {
+            "id": 368,
+            "s": "item_elemskill_fire",
+            "sS": 1,
+            "sB": 3,
+            "sA": 0,
+            "sP": 3,
+            "so": 157,
+            "dF": 19,
+            "dP": "%+d to Fire Skills",
+            "dN": "%+d to Fire Skills"
+        },
+        {
+            "id": 369,
+            "s": "item_elemskill_magic",
+            "sS": 1,
+            "sB": 3,
+            "sA": 0,
+            "sP": 3,
+            "so": 157,
+            "dF": 19,
+            "dP": "%+d to Magic Skills",
+            "dN": "%+d to Magic Skills"
         }
     ],
     "runewords": [
@@ -18366,9 +18041,9 @@ export let constants_blizzless_99 = {
                 },
                 {
                     "prop": "hit-skill",
-                    "p": 250,
-                    "min": 20,
-                    "max": 16
+                    "p": 55,
+                    "min": 32,
+                    "max": 42
                 },
                 {
                     "prop": "att-skill",
@@ -19779,6 +19454,7 @@ export let constants_blizzless_99 = {
         null,
         {
             "id": 325,
+            "n": "Nightfall",
             "types": [
                 "head"
             ],
@@ -19898,9 +19574,8 @@ export let constants_blizzless_99 = {
             "lvl": "13",
             "m": [
                 {
-                    "prop": "att",
-                    "min": 75,
-                    "max": 75
+                    "prop": "att/lvl",
+                    "p": 20
                 },
                 {
                     "prop": "dmg-max",
@@ -19908,8 +19583,9 @@ export let constants_blizzless_99 = {
                     "max": 23
                 },
                 {
-                    "prop": "dmg/lvl",
-                    "p": 8
+                    "prop": "dmg%",
+                    "min": 150,
+                    "max": 150
                 }
             ],
             "ms": []
@@ -20081,6 +19757,11 @@ export let constants_blizzless_99 = {
                     "prop": "res-pois-len",
                     "min": 75,
                     "max": 75
+                },
+                {
+                    "prop": "str",
+                    "min": 20,
+                    "max": 20
                 }
             ],
             "ms": [
@@ -20150,14 +19831,14 @@ export let constants_blizzless_99 = {
             "lvl": "21",
             "m": [
                 {
-                    "prop": "ac",
-                    "min": 25,
-                    "max": 25
+                    "prop": "swing2",
+                    "min": 10,
+                    "max": 10
                 },
                 {
-                    "prop": "dmg-min",
-                    "min": 5,
-                    "max": 5
+                    "prop": "vit",
+                    "min": 20,
+                    "max": 20
                 }
             ],
             "ms": [
@@ -20201,21 +19882,21 @@ export let constants_blizzless_99 = {
             "lvl": "11",
             "m": [
                 {
-                    "prop": "ac",
+                    "prop": "balance1",
                     "min": 40,
                     "max": 40
                 },
                 {
-                    "prop": "light-thorns",
-                    "min": 4,
-                    "max": 4
+                    "prop": "block1",
+                    "min": 50,
+                    "max": 50
                 }
             ],
             "ms": [
                 {
                     "prop": "res-all",
-                    "min": 8,
-                    "max": 8
+                    "min": 35,
+                    "max": 35
                 }
             ]
         },
@@ -20278,20 +19959,25 @@ export let constants_blizzless_99 = {
             "lvl": "19",
             "m": [
                 {
-                    "prop": "ltng-min",
-                    "min": 1,
-                    "max": 1
+                    "prop": "dmg/lvl",
+                    "p": 8
                 },
                 {
-                    "prop": "ltng-max",
-                    "min": 20,
-                    "max": 20
+                    "prop": "skilltab",
+                    "p": 1,
+                    "min": 2,
+                    "max": 2
                 }
             ],
             "ms": [
                 {
                     "prop": "att/lvl",
                     "p": 16
+                },
+                {
+                    "prop": "swing1",
+                    "min": 20,
+                    "max": 20
                 }
             ]
         },
@@ -20329,25 +20015,26 @@ export let constants_blizzless_99 = {
             "lvl": "19",
             "m": [
                 {
-                    "prop": "ac",
-                    "min": 50,
-                    "max": 50
+                    "prop": "res-all",
+                    "min": 22,
+                    "max": 22
                 },
                 {
-                    "prop": "dex",
-                    "min": 11,
-                    "max": 11
+                    "prop": "dmg-min",
+                    "min": 15,
+                    "max": 15
                 }
             ],
             "ms": [
                 {
-                    "prop": "res-fire",
-                    "min": 24,
-                    "max": 24
+                    "prop": "openwounds",
+                    "min": 35,
+                    "max": 35
                 },
                 {
-                    "prop": "ac/lvl",
-                    "p": 20
+                    "prop": "red-mag",
+                    "min": 12,
+                    "max": 12
                 }
             ]
         },
@@ -20422,13 +20109,13 @@ export let constants_blizzless_99 = {
                 },
                 {
                     "prop": "dmg%",
-                    "min": 50,
-                    "max": 50
+                    "min": 180,
+                    "max": 180
                 },
                 {
-                    "prop": "light",
-                    "min": 2,
-                    "max": 2
+                    "prop": "swing1",
+                    "min": 30,
+                    "max": 30
                 }
             ],
             "ms": []
@@ -20467,21 +20154,20 @@ export let constants_blizzless_99 = {
             "lvl": "23",
             "m": [
                 {
-                    "prop": "thorns",
-                    "min": 3,
-                    "max": 3
+                    "prop": "hp",
+                    "min": 60,
+                    "max": 60
                 },
                 {
                     "prop": "red-dmg",
-                    "min": 2,
-                    "max": 2
+                    "min": 12,
+                    "max": 12
                 }
             ],
             "ms": [
                 {
-                    "prop": "ac%",
-                    "min": 100,
-                    "max": 100
+                    "prop": "att/lvl",
+                    "p": 10
                 }
             ]
         },
@@ -20498,9 +20184,9 @@ export let constants_blizzless_99 = {
                     "max": 1
                 },
                 {
-                    "prop": "fire-max",
-                    "min": 10,
-                    "max": 10
+                    "prop": "dmg%",
+                    "min": 250,
+                    "max": 250
                 }
             ],
             "ms": [
@@ -20510,9 +20196,9 @@ export let constants_blizzless_99 = {
                     "max": 50
                 },
                 {
-                    "prop": "res-all",
-                    "min": 10,
-                    "max": 10
+                    "prop": "cast2",
+                    "min": 30,
+                    "max": 30
                 }
             ]
         },
@@ -20524,9 +20210,9 @@ export let constants_blizzless_99 = {
             "lvl": "15",
             "m": [
                 {
-                    "prop": "ac",
-                    "min": 15,
-                    "max": 15
+                    "prop": "move3",
+                    "min": 30,
+                    "max": 30
                 },
                 {
                     "prop": "ease",
@@ -20536,14 +20222,14 @@ export let constants_blizzless_99 = {
             ],
             "ms": [
                 {
-                    "prop": "thorns",
-                    "min": 5,
-                    "max": 5
+                    "prop": "swing2",
+                    "min": 20,
+                    "max": 20
                 },
                 {
-                    "prop": "res-fire",
-                    "min": 30,
-                    "max": 30
+                    "prop": "red-dmg",
+                    "min": 16,
+                    "max": 16
                 }
             ]
         },
@@ -20556,8 +20242,8 @@ export let constants_blizzless_99 = {
             "m": [
                 {
                     "prop": "mana",
-                    "min": 20,
-                    "max": 20
+                    "min": 60,
+                    "max": 60
                 },
                 {
                     "prop": "res-cold",
@@ -20567,7 +20253,7 @@ export let constants_blizzless_99 = {
             ],
             "ms": [
                 {
-                    "prop": "ac/lvl",
+                    "prop": "att/lvl",
                     "p": 16
                 }
             ]
@@ -20581,25 +20267,25 @@ export let constants_blizzless_99 = {
             "m": [
                 {
                     "prop": "balance1",
-                    "min": 10,
-                    "max": 10
+                    "min": 40,
+                    "max": 40
                 },
                 {
-                    "prop": "light-thorns",
-                    "min": 5,
-                    "max": 5
+                    "prop": "dmg-fire",
+                    "min": 63,
+                    "max": 127
                 }
             ],
             "ms": [
                 {
-                    "prop": "att",
-                    "min": 50,
-                    "max": 50
+                    "prop": "red-mag",
+                    "min": 12,
+                    "max": 12
                 },
                 {
-                    "prop": "mag%",
-                    "min": 25,
-                    "max": 25
+                    "prop": "fireskill",
+                    "min": 1,
+                    "max": 1
                 }
             ]
         },
@@ -20643,8 +20329,8 @@ export let constants_blizzless_99 = {
                 },
                 {
                     "prop": "dmg%",
-                    "min": 80,
-                    "max": 80
+                    "min": 160,
+                    "max": 160
                 }
             ],
             "ms": [
@@ -20693,12 +20379,12 @@ export let constants_blizzless_99 = {
             "lvl": "27",
             "m": [
                 {
-                    "prop": "regen-stam",
-                    "min": 25,
-                    "max": 25
+                    "prop": "str",
+                    "min": 20,
+                    "max": 20
                 },
                 {
-                    "prop": "dex",
+                    "prop": "dmg-min",
                     "min": 10,
                     "max": 10
                 }
@@ -20710,9 +20396,9 @@ export let constants_blizzless_99 = {
                     "max": 30
                 },
                 {
-                    "prop": "str",
-                    "min": 10,
-                    "max": 10
+                    "prop": "crush",
+                    "min": 30,
+                    "max": 30
                 }
             ]
         },
@@ -20725,25 +20411,24 @@ export let constants_blizzless_99 = {
             "m": [
                 {
                     "prop": "red-dmg",
-                    "min": 2,
-                    "max": 2
+                    "min": 8,
+                    "max": 8
                 },
                 {
                     "prop": "red-mag",
-                    "min": 1,
-                    "max": 1
+                    "min": 6,
+                    "max": 6
                 }
             ],
             "ms": [
                 {
                     "prop": "mag%",
-                    "min": 78,
-                    "max": 78
+                    "min": 100,
+                    "max": 100
                 },
                 {
-                    "prop": "att",
-                    "min": 60,
-                    "max": 60
+                    "prop": "att/lvl",
+                    "p": 10
                 }
             ]
         },
@@ -20946,8 +20631,8 @@ export let constants_blizzless_99 = {
             ],
             "ms": [
                 {
-                    "prop": "ac/lvl",
-                    "p": 16
+                    "prop": "att/lvl",
+                    "p": 20
                 }
             ]
         },
@@ -20959,20 +20644,20 @@ export let constants_blizzless_99 = {
             "lvl": "7",
             "m": [
                 {
-                    "prop": "dmg-min",
-                    "min": 8,
-                    "max": 8
+                    "prop": "regen",
+                    "min": -5,
+                    "max": -5
                 },
                 {
                     "prop": "nec",
-                    "min": 1,
-                    "max": 1
+                    "min": 2,
+                    "max": 2
                 }
             ],
             "ms": [
                 {
-                    "prop": "att/lvl",
-                    "p": 20
+                    "prop": "ac/lvl",
+                    "p": 16
                 }
             ]
         },
@@ -21040,14 +20725,19 @@ export let constants_blizzless_99 = {
             "lvl": "5",
             "m": [
                 {
-                    "prop": "red-mag",
-                    "min": 2,
-                    "max": 2
+                    "prop": "res-all",
+                    "min": 20,
+                    "max": 20
                 },
                 {
-                    "prop": "bar",
-                    "min": 1,
-                    "max": 1
+                    "prop": "dmg%",
+                    "min": 100,
+                    "max": 100
+                },
+                {
+                    "prop": "ac%",
+                    "min": 150,
+                    "max": 150
                 }
             ],
             "ms": [
@@ -21073,6 +20763,21 @@ export let constants_blizzless_99 = {
                     "prop": "manasteal",
                     "min": 5,
                     "max": 5
+                },
+                {
+                    "prop": "dmg%",
+                    "min": 150,
+                    "max": 150
+                },
+                {
+                    "prop": "lifesteal",
+                    "min": 5,
+                    "max": 5
+                },
+                {
+                    "prop": "regen",
+                    "min": -3,
+                    "max": -3
                 }
             ],
             "ms": [
@@ -21178,6 +20883,11 @@ export let constants_blizzless_99 = {
                     "prop": "dmg-undead",
                     "min": 250,
                     "max": 250
+                },
+                {
+                    "prop": "nofreeze",
+                    "min": 1,
+                    "max": 1
                 }
             ],
             "ms": [
@@ -21201,14 +20911,19 @@ export let constants_blizzless_99 = {
             "lvl": "17",
             "m": [
                 {
-                    "prop": "red-dmg",
-                    "min": 3,
-                    "max": 3
+                    "prop": "red-dmg%",
+                    "min": 8,
+                    "max": 8
                 },
                 {
                     "prop": "ac%",
                     "min": 40,
                     "max": 40
+                },
+                {
+                    "prop": "hp",
+                    "min": 30,
+                    "max": 30
                 }
             ],
             "ms": [
@@ -21293,14 +21008,18 @@ export let constants_blizzless_99 = {
             "lvl": "3",
             "m": [
                 {
-                    "prop": "att%",
-                    "min": 20,
-                    "max": 20
+                    "prop": "swing1",
+                    "min": 40,
+                    "max": 40
                 },
                 {
                     "prop": "dmg%",
                     "min": 50,
                     "max": 50
+                },
+                {
+                    "prop": "dmg/lvl",
+                    "p": 4
                 }
             ],
             "ms": [
@@ -21311,8 +21030,8 @@ export let constants_blizzless_99 = {
                 {
                     "prop": "dmg-cold",
                     "p": 75,
-                    "min": 20,
-                    "max": 30
+                    "min": 63,
+                    "max": 127
                 }
             ]
         },
@@ -21330,8 +21049,8 @@ export let constants_blizzless_99 = {
                 },
                 {
                     "prop": "res-all",
-                    "min": 10,
-                    "max": 10
+                    "min": 20,
+                    "max": 20
                 }
             ],
             "ms": [
@@ -21340,7 +21059,7 @@ export let constants_blizzless_99 = {
                     "p": 24
                 },
                 {
-                    "prop": "res-cold",
+                    "prop": "extra-cold",
                     "min": 15,
                     "max": 15
                 }
@@ -21359,9 +21078,9 @@ export let constants_blizzless_99 = {
                     "max": 40
                 },
                 {
-                    "prop": "ac",
-                    "min": 30,
-                    "max": 30
+                    "prop": "mana",
+                    "min": 50,
+                    "max": 50
                 }
             ],
             "ms": [
@@ -21371,9 +21090,9 @@ export let constants_blizzless_99 = {
                     "max": 40
                 },
                 {
-                    "prop": "res-cold",
-                    "min": 10,
-                    "max": 10
+                    "prop": "pierce",
+                    "min": 20,
+                    "max": 20
                 }
             ]
         },
@@ -21391,15 +21110,15 @@ export let constants_blizzless_99 = {
                 },
                 {
                     "prop": "swing1",
-                    "min": 10,
-                    "max": 10
+                    "min": 20,
+                    "max": 20
                 }
             ],
             "ms": [
                 {
                     "prop": "att",
-                    "min": 50,
-                    "max": 50
+                    "min": 250,
+                    "max": 250
                 },
                 {
                     "prop": "dex",
@@ -21417,25 +21136,30 @@ export let constants_blizzless_99 = {
             "m": [
                 {
                     "prop": "mana",
-                    "min": 15,
-                    "max": 15
-                },
-                {
-                    "prop": "regen-mana",
-                    "min": 20,
-                    "max": 20
-                }
-            ],
-            "ms": [
-                {
-                    "prop": "mag%",
                     "min": 50,
                     "max": 50
                 },
                 {
+                    "prop": "hp",
+                    "min": 30,
+                    "max": 30
+                },
+                {
+                    "prop": "res-cold",
+                    "min": 30,
+                    "max": 30
+                }
+            ],
+            "ms": [
+                {
                     "prop": "res-fire",
-                    "min": 20,
-                    "max": 20
+                    "min": 30,
+                    "max": 30
+                },
+                {
+                    "prop": "hp%",
+                    "min": 10,
+                    "max": 10
                 }
             ]
         },
@@ -21452,21 +21176,22 @@ export let constants_blizzless_99 = {
                     "max": 1
                 },
                 {
-                    "prop": "deadly",
-                    "min": 25,
-                    "max": 25
+                    "prop": "dmg-cold",
+                    "p": 150,
+                    "min": 63,
+                    "max": 127
                 }
             ],
             "ms": [
                 {
                     "prop": "mana",
-                    "min": 50,
-                    "max": 50
+                    "min": 100,
+                    "max": 100
                 },
                 {
-                    "prop": "regen-mana",
-                    "min": 5,
-                    "max": 5
+                    "prop": "cast1",
+                    "min": 20,
+                    "max": 20
                 }
             ]
         },
@@ -21483,20 +21208,21 @@ export let constants_blizzless_99 = {
                     "max": 4
                 },
                 {
-                    "prop": "thorns",
-                    "min": 2,
-                    "max": 2
+                    "prop": "res-ltng",
+                    "min": 30,
+                    "max": 30
                 }
             ],
             "ms": [
                 {
-                    "prop": "ac/lvl",
-                    "p": 24
+                    "prop": "res-pois",
+                    "min": 30,
+                    "max": 30
                 },
                 {
-                    "prop": "res-ltng",
-                    "min": 15,
-                    "max": 15
+                    "prop": "red-dmg",
+                    "min": 10,
+                    "max": 10
                 }
             ]
         },
@@ -21508,24 +21234,25 @@ export let constants_blizzless_99 = {
             "lvl": "20",
             "m": [
                 {
-                    "prop": "light",
-                    "min": 2,
-                    "max": 2
+                    "prop": "hp",
+                    "min": 30,
+                    "max": 30
                 },
                 {
-                    "prop": "red-dmg",
-                    "min": 3,
-                    "max": 3
+                    "prop": "res-all",
+                    "min": 10,
+                    "max": 10
                 }
             ],
             "ms": [
                 {
-                    "prop": "ac",
-                    "min": 100,
-                    "max": 100
+                    "prop": "oskill",
+                    "p": 37,
+                    "min": 3,
+                    "max": 3
                 },
                 {
-                    "prop": "enr",
+                    "prop": "cast1",
                     "min": 10,
                     "max": 10
                 }
@@ -22204,15 +21931,15 @@ export let constants_blizzless_99 = {
             ],
             "ms": [
                 {
+                    "prop": "mag%",
+                    "min": 25,
+                    "max": 25
+                },
+                {
                     "prop": "skilltab",
                     "p": 12,
                     "min": 2,
                     "max": 2
-                },
-                {
-                    "prop": "mag%",
-                    "min": 25,
-                    "max": 25
                 },
                 {
                     "prop": "ac",
@@ -23267,8 +22994,8 @@ export let constants_blizzless_99 = {
                 },
                 {
                     "prop": "allskills",
-                    "min": 1,
-                    "max": 1
+                    "min": 2,
+                    "max": 2
                 },
                 {
                     "prop": "res-cold",
@@ -23276,12 +23003,24 @@ export let constants_blizzless_99 = {
                     "max": 18
                 },
                 {
-                    "prop": "thorns",
-                    "min": 8,
-                    "max": 10
+                    "prop": "demon-heal",
+                    "min": 99,
+                    "max": 99
+                },
+                {
+                    "prop": "oskill",
+                    "p": 120,
+                    "min": 1,
+                    "max": 1
                 }
             ],
-            "ms": []
+            "ms": [
+                {
+                    "prop": "cast1",
+                    "min": 10,
+                    "max": 10
+                }
+            ]
         },
         {
             "id": 96,
@@ -23345,6 +23084,22 @@ export let constants_blizzless_99 = {
                     "prop": "stam",
                     "min": 15,
                     "max": 25
+                },
+                {
+                    "prop": "gethit-skill",
+                    "p": 273,
+                    "min": 25,
+                    "max": 20
+                },
+                {
+                    "prop": "dmg-to-mana",
+                    "min": 30,
+                    "max": 30
+                },
+                {
+                    "prop": "mana-kill",
+                    "min": 4,
+                    "max": 4
                 }
             ],
             "ms": []
@@ -23367,16 +23122,20 @@ export let constants_blizzless_99 = {
                     "max": 24
                 },
                 {
-                    "prop": "gethit-skill",
-                    "p": 48,
-                    "min": 25,
-                    "max": 3
+                    "prop": "res-ltng",
+                    "min": 24,
+                    "max": 24
                 },
                 {
-                    "prop": "dmg-pois",
-                    "p": 50,
-                    "min": 125,
-                    "max": 175
+                    "prop": "cast1",
+                    "min": 30,
+                    "max": 30
+                },
+                {
+                    "prop": "reanimate",
+                    "p": 237,
+                    "min": 10,
+                    "max": 10
                 }
             ],
             "ms": []
@@ -23407,6 +23166,11 @@ export let constants_blizzless_99 = {
                     "prop": "res-all",
                     "min": 15,
                     "max": 15
+                },
+                {
+                    "prop": "ease",
+                    "min": -30,
+                    "max": -30
                 }
             ],
             "ms": []
@@ -23427,15 +23191,14 @@ export let constants_blizzless_99 = {
                     "max": 40
                 },
                 {
-                    "prop": "hit-skill",
-                    "p": 44,
-                    "min": 10,
-                    "max": 3
+                    "prop": "freeze",
+                    "min": 1,
+                    "max": 1
                 },
                 {
                     "prop": "dmg-fire",
-                    "min": 20,
-                    "max": 30
+                    "min": 255,
+                    "max": 511
                 }
             ],
             "ms": []
@@ -23447,9 +23210,9 @@ export let constants_blizzless_99 = {
             "lvl": "55",
             "m": [
                 {
-                    "prop": "ac",
-                    "min": 50,
-                    "max": 50
+                    "prop": "red-dmg%",
+                    "min": 26,
+                    "max": 26
                 },
                 {
                     "prop": "mana",
@@ -23457,14 +23220,15 @@ export let constants_blizzless_99 = {
                     "max": 100
                 },
                 {
-                    "prop": "res-ltng",
+                    "prop": "res-all",
                     "min": 30,
                     "max": 30
                 },
                 {
-                    "prop": "thorns",
-                    "min": 30,
-                    "max": 30
+                    "prop": "aura",
+                    "p": 122,
+                    "min": 3,
+                    "max": 3
                 },
                 {
                     "prop": "indestruct",
@@ -23496,9 +23260,9 @@ export let constants_blizzless_99 = {
                     "max": 500
                 },
                 {
-                    "prop": "ac-miss",
-                    "min": 35,
-                    "max": 35
+                    "prop": "red-mag",
+                    "min": 20,
+                    "max": 20
                 },
                 {
                     "prop": "hp",
@@ -23506,9 +23270,9 @@ export let constants_blizzless_99 = {
                     "max": 75
                 },
                 {
-                    "prop": "ac-hth",
-                    "min": 40,
-                    "max": 40
+                    "prop": "red-dmg",
+                    "min": 20,
+                    "max": 20
                 },
                 {
                     "prop": "ease",
@@ -23526,8 +23290,8 @@ export let constants_blizzless_99 = {
             "m": [
                 {
                     "prop": "ac",
-                    "min": 50,
-                    "max": 50
+                    "min": 250,
+                    "max": 250
                 },
                 {
                     "prop": "ease",
@@ -23535,10 +23299,9 @@ export let constants_blizzless_99 = {
                     "max": -40
                 },
                 {
-                    "prop": "hit-skill",
-                    "p": 72,
-                    "min": 10,
-                    "max": 3
+                    "prop": "swing2",
+                    "min": 30,
+                    "max": 30
                 },
                 {
                     "prop": "str",
@@ -23611,14 +23374,19 @@ export let constants_blizzless_99 = {
                     "max": 5
                 },
                 {
-                    "prop": "res-cold",
-                    "min": 10,
-                    "max": 10
+                    "prop": "deadly",
+                    "min": 5,
+                    "max": 5
                 },
                 {
                     "prop": "lifesteal",
                     "min": 5,
                     "max": 5
+                },
+                {
+                    "prop": "dmg-min",
+                    "min": 15,
+                    "max": 15
                 }
             ],
             "ms": []
@@ -23637,8 +23405,8 @@ export let constants_blizzless_99 = {
                 },
                 {
                     "prop": "res-fire",
-                    "min": 15,
-                    "max": 15
+                    "min": 30,
+                    "max": 30
                 },
                 {
                     "prop": "swing2",
@@ -23646,14 +23414,19 @@ export let constants_blizzless_99 = {
                     "max": 20
                 },
                 {
-                    "prop": "light",
-                    "min": 3,
-                    "max": 3
+                    "prop": "dmg-undead",
+                    "min": 300,
+                    "max": 300
                 },
                 {
                     "prop": "att",
                     "min": 100,
                     "max": 100
+                },
+                {
+                    "prop": "deadly",
+                    "min": 5,
+                    "max": 5
                 }
             ],
             "ms": []
@@ -23686,9 +23459,9 @@ export let constants_blizzless_99 = {
                     "max": 1
                 },
                 {
-                    "prop": "light",
-                    "min": 5,
-                    "max": 5
+                    "prop": "dmg-max",
+                    "min": 25,
+                    "max": 25
                 }
             ],
             "ms": []
@@ -23700,9 +23473,9 @@ export let constants_blizzless_99 = {
             "lvl": "28",
             "m": [
                 {
-                    "prop": "regen",
-                    "min": 20,
-                    "max": 20
+                    "prop": "res-fire",
+                    "min": 37,
+                    "max": 37
                 },
                 {
                     "prop": "red-mag",
@@ -23729,7 +23502,7 @@ export let constants_blizzless_99 = {
             "lvl": "28",
             "m": [
                 {
-                    "prop": "ac",
+                    "prop": "ac%",
                     "min": 200,
                     "max": 200
                 },
@@ -23748,6 +23521,11 @@ export let constants_blizzless_99 = {
                     "p": 42,
                     "min": 10,
                     "max": 3
+                },
+                {
+                    "prop": "red-dmg%",
+                    "min": 12,
+                    "max": 12
                 }
             ],
             "ms": []
@@ -23760,8 +23538,8 @@ export let constants_blizzless_99 = {
             "m": [
                 {
                     "prop": "dmg-ltng",
-                    "min": 3,
-                    "max": 33
+                    "min": 1,
+                    "max": 198
                 },
                 {
                     "prop": "noheal",
@@ -23809,13 +23587,13 @@ export let constants_blizzless_99 = {
                 },
                 {
                     "prop": "dmg%",
-                    "min": 200,
-                    "max": 200
+                    "min": 400,
+                    "max": 400
                 },
                 {
-                    "prop": "dmg-ltng",
+                    "prop": "lifesteal",
                     "min": 5,
-                    "max": 25
+                    "max": 5
                 }
             ],
             "ms": []
@@ -23829,14 +23607,13 @@ export let constants_blizzless_99 = {
             "m": [
                 {
                     "prop": "dmg%",
-                    "min": 150,
-                    "max": 150
+                    "min": 340,
+                    "max": 340
                 },
                 {
-                    "prop": "dmg-cold",
-                    "p": 50,
-                    "min": 25,
-                    "max": 35
+                    "prop": "nofreeze",
+                    "min": 1,
+                    "max": 1
                 },
                 {
                     "prop": "swing3",
@@ -23845,8 +23622,8 @@ export let constants_blizzless_99 = {
                 },
                 {
                     "prop": "dmg-demon",
-                    "min": 318,
-                    "max": 318
+                    "min": 150,
+                    "max": 150
                 },
                 {
                     "prop": "indestruct",
@@ -23884,9 +23661,9 @@ export let constants_blizzless_99 = {
                     "max": 30
                 },
                 {
-                    "prop": "str",
-                    "min": 25,
-                    "max": 25
+                    "prop": "red-mag",
+                    "min": 14,
+                    "max": 14
                 },
                 {
                     "prop": "att-demon",
@@ -23897,6 +23674,11 @@ export let constants_blizzless_99 = {
                     "prop": "hp",
                     "min": 50,
                     "max": 75
+                },
+                {
+                    "prop": "red-dmg%",
+                    "min": 14,
+                    "max": 14
                 }
             ],
             "ms": []
@@ -23927,6 +23709,16 @@ export let constants_blizzless_99 = {
                     "prop": "res-ltng",
                     "min": 15,
                     "max": 20
+                },
+                {
+                    "prop": "ac-miss",
+                    "min": 350,
+                    "max": 350
+                },
+                {
+                    "prop": "cast1",
+                    "min": 10,
+                    "max": 10
                 }
             ],
             "ms": []
@@ -23950,13 +23742,13 @@ export let constants_blizzless_99 = {
                 },
                 {
                     "prop": "swing2",
-                    "min": 20,
-                    "max": 20
+                    "min": 40,
+                    "max": 40
                 },
                 {
                     "prop": "dmg%",
-                    "min": 200,
-                    "max": 200
+                    "min": 320,
+                    "max": 320
                 }
             ],
             "ms": []
@@ -23969,15 +23761,15 @@ export let constants_blizzless_99 = {
             "lvl": "50",
             "m": [
                 {
-                    "prop": "res-fire",
-                    "min": 50,
-                    "max": 50
+                    "prop": "res-all",
+                    "min": 30,
+                    "max": 30
                 },
                 {
                     "prop": "dmg-pois",
-                    "p": 50,
-                    "min": 255,
-                    "max": 255
+                    "p": 200,
+                    "min": 256,
+                    "max": 256
                 },
                 {
                     "prop": "swing2",
@@ -23986,13 +23778,23 @@ export let constants_blizzless_99 = {
                 },
                 {
                     "prop": "str",
-                    "min": 20,
-                    "max": 20
+                    "min": 42,
+                    "max": 42
                 },
                 {
                     "prop": "dmg%",
                     "min": 200,
                     "max": 200
+                },
+                {
+                    "prop": "slow",
+                    "min": 25,
+                    "max": 25
+                },
+                {
+                    "prop": "allskills",
+                    "min": 1,
+                    "max": 1
                 }
             ],
             "ms": []
@@ -24054,13 +23856,7 @@ export let constants_blizzless_99 = {
                     "max": 5
                 }
             ],
-            "ms": [
-                {
-                    "prop": "state",
-                    "min": 1,
-                    "max": 1
-                }
-            ]
+            "ms": []
         },
         {
             "id": 119,
@@ -24229,12 +24025,27 @@ export let constants_blizzless_99 = {
                 },
                 {
                     "prop": "thorns",
-                    "min": 8,
-                    "max": 8
+                    "min": 120,
+                    "max": 120
                 },
                 {
                     "prop": "ac/lvl",
                     "p": 8
+                },
+                {
+                    "prop": "nec",
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "prop": "aura",
+                    "p": 103,
+                    "min": 12,
+                    "max": 12
+                },
+                {
+                    "prop": "mana/lvl",
+                    "p": 16
                 }
             ],
             "ms": []
@@ -24310,8 +24121,8 @@ export let constants_blizzless_99 = {
                 {
                     "prop": "dmg%",
                     "p": 2,
-                    "min": 75,
-                    "max": 75
+                    "min": 300,
+                    "max": 300
                 },
                 {
                     "prop": "mana",
@@ -24325,8 +24136,8 @@ export let constants_blizzless_99 = {
                 },
                 {
                     "prop": "cast3",
-                    "min": 20,
-                    "max": 20
+                    "min": 30,
+                    "max": 30
                 },
                 {
                     "prop": "dmg-cold",
@@ -29113,6 +28924,7 @@ export let constants_blizzless_99 = {
         {
             "id": 117,
             "n": "Nokozan Relic",
+            "i": "invamu2",
             "c": "amu",
             "lvl": "14",
             "m": [
@@ -29146,6 +28958,7 @@ export let constants_blizzless_99 = {
         {
             "id": 118,
             "n": "The Eye of Etlich",
+            "i": "invamu",
             "c": "amu",
             "lvl": "20",
             "m": [
@@ -29189,6 +29002,7 @@ export let constants_blizzless_99 = {
         {
             "id": 119,
             "n": "The Mahim-Oak Curio",
+            "i": "invamu3",
             "c": "amu",
             "lvl": "34",
             "m": [
@@ -29237,6 +29051,7 @@ export let constants_blizzless_99 = {
         {
             "id": 120,
             "n": "Nagelring",
+            "i": "invrin1",
             "c": "rin",
             "lvl": "10",
             "m": [
@@ -29265,6 +29080,7 @@ export let constants_blizzless_99 = {
         {
             "id": 121,
             "n": "Manald Heal",
+            "i": "invrin2",
             "c": "rin",
             "lvl": "20",
             "m": [
@@ -29293,6 +29109,7 @@ export let constants_blizzless_99 = {
         {
             "id": 122,
             "n": "The Stone of Jordan",
+            "i": "invrin3",
             "c": "rin",
             "lvl": "39",
             "m": [
@@ -29326,6 +29143,7 @@ export let constants_blizzless_99 = {
         {
             "id": 123,
             "n": "Amulet of the Viper",
+            "i": "invamu2",
             "c": "vip",
             "lvl": "0",
             "m": [
@@ -32639,8 +32457,8 @@ export let constants_blizzless_99 = {
                 },
                 {
                     "prop": "dmg%",
-                    "min": 300,
-                    "max": 340
+                    "min": 260,
+                    "max": 300
                 },
                 {
                     "prop": "att/lvl",
@@ -33314,18 +33132,23 @@ export let constants_blizzless_99 = {
                 },
                 {
                     "prop": "red-dmg%",
-                    "min": 30,
-                    "max": 30
+                    "min": 42,
+                    "max": 42
                 },
                 {
                     "prop": "hp",
                     "min": 60,
-                    "max": 60
+                    "max": 100
                 },
                 {
                     "prop": "ac%",
                     "min": 180,
                     "max": 220
+                },
+                {
+                    "prop": "red-mag",
+                    "min": 9,
+                    "max": 13
                 }
             ]
         },
@@ -33419,6 +33242,11 @@ export let constants_blizzless_99 = {
                 {
                     "prop": "rep-dur",
                     "p": 20
+                },
+                {
+                    "prop": "red-dmg%",
+                    "min": 5,
+                    "max": 5
                 }
             ]
         },
@@ -33430,9 +33258,9 @@ export let constants_blizzless_99 = {
             "lvl": "53",
             "m": [
                 {
-                    "prop": "light",
-                    "min": 4,
-                    "max": 4
+                    "prop": "red-dmg%",
+                    "min": 10,
+                    "max": 15
                 },
                 {
                     "prop": "pal",
@@ -33455,8 +33283,8 @@ export let constants_blizzless_99 = {
                     "max": 15
                 },
                 {
-                    "prop": "att-dem/lvl",
-                    "p": 5
+                    "prop": "dmg-dem/lvl",
+                    "p": 12
                 },
                 {
                     "prop": "block",
@@ -33506,6 +33334,11 @@ export let constants_blizzless_99 = {
                     "prop": "dur",
                     "min": 15,
                     "max": 15
+                },
+                {
+                    "prop": "red-dmg%",
+                    "min": 12,
+                    "max": 12
                 }
             ]
         },
@@ -33526,9 +33359,9 @@ export let constants_blizzless_99 = {
                     "max": 10
                 },
                 {
-                    "prop": "mana%",
-                    "min": 15,
-                    "max": 15
+                    "prop": "hp%",
+                    "min": 25,
+                    "max": 40
                 },
                 {
                     "prop": "balance2",
@@ -33551,8 +33384,8 @@ export let constants_blizzless_99 = {
                 },
                 {
                     "prop": "mag%",
-                    "min": 20,
-                    "max": 20
+                    "min": 40,
+                    "max": 65
                 }
             ]
         },
@@ -33568,9 +33401,9 @@ export let constants_blizzless_99 = {
                     "max": -2
                 },
                 {
-                    "prop": "att-demon",
-                    "min": 200,
-                    "max": 250
+                    "prop": "dmg-demon",
+                    "min": 130,
+                    "max": 210
                 },
                 {
                     "prop": "half-freeze",
@@ -33583,13 +33416,13 @@ export let constants_blizzless_99 = {
                 },
                 {
                     "prop": "ac%",
-                    "min": 140,
-                    "max": 200
+                    "min": 100,
+                    "max": 140
                 },
                 {
-                    "prop": "dmg-demon",
-                    "min": 30,
-                    "max": 60
+                    "prop": "red-dmg%",
+                    "min": 25,
+                    "max": 25
                 }
             ]
         },
@@ -33602,25 +33435,15 @@ export let constants_blizzless_99 = {
             "lvl": "63",
             "m": [
                 {
-                    "prop": "str",
-                    "min": 8,
-                    "max": 8
-                },
-                {
-                    "prop": "vit",
-                    "min": 10,
-                    "max": 10
-                },
-                {
-                    "prop": "res-cold",
-                    "min": 35,
-                    "max": 35
+                    "prop": "res-all",
+                    "min": 20,
+                    "max": 30
                 },
                 {
                     "prop": "gethit-skill",
                     "p": 76,
-                    "min": 6,
-                    "max": 2
+                    "min": 25,
+                    "max": 15
                 },
                 {
                     "prop": "ac%",
@@ -33628,15 +33451,15 @@ export let constants_blizzless_99 = {
                     "max": 180
                 },
                 {
-                    "prop": "dmg-fire",
-                    "min": 12,
-                    "max": 36
+                    "prop": "red-dmg%",
+                    "min": 15,
+                    "max": 15
                 },
                 {
                     "prop": "charged",
                     "p": 74,
                     "min": 40,
-                    "max": 5
+                    "max": 20
                 }
             ]
         },
@@ -33876,12 +33699,12 @@ export let constants_blizzless_99 = {
             "m": [
                 {
                     "prop": "red-dmg",
-                    "min": 11,
+                    "min": 16,
                     "max": 16
                 },
                 {
                     "prop": "red-mag",
-                    "min": 14,
+                    "min": 18,
                     "max": 18
                 },
                 {
@@ -33908,6 +33731,11 @@ export let constants_blizzless_99 = {
                     "prop": "res-all",
                     "min": 20,
                     "max": 30
+                },
+                {
+                    "prop": "red-dmg%",
+                    "min": 12,
+                    "max": 12
                 }
             ]
         },
@@ -33919,10 +33747,9 @@ export let constants_blizzless_99 = {
             "lvl": "58",
             "m": [
                 {
-                    "prop": "dmg-pois",
-                    "p": 100,
-                    "min": 204,
-                    "max": 204
+                    "prop": "cast2",
+                    "min": 20,
+                    "max": 25
                 },
                 {
                     "prop": "gethit-skill",
@@ -33942,24 +33769,29 @@ export let constants_blizzless_99 = {
                 },
                 {
                     "prop": "block",
-                    "min": 20,
-                    "max": 20
+                    "min": 35,
+                    "max": 35
                 },
                 {
                     "prop": "block2",
-                    "min": 20,
-                    "max": 20
+                    "min": 45,
+                    "max": 45
                 },
                 {
                     "prop": "charged",
-                    "p": 83,
-                    "min": 40,
-                    "max": 6
+                    "p": 91,
+                    "min": 10,
+                    "max": 1
                 },
                 {
                     "prop": "dur",
                     "min": 20,
                     "max": 20
+                },
+                {
+                    "prop": "red-dmg%",
+                    "min": 10,
+                    "max": 10
                 }
             ]
         },
@@ -34870,7 +34702,7 @@ export let constants_blizzless_99 = {
                 },
                 {
                     "prop": "allskills",
-                    "min": 1,
+                    "min": 2,
                     "max": 2
                 },
                 {
@@ -34880,7 +34712,17 @@ export let constants_blizzless_99 = {
                 },
                 {
                     "prop": "vit/lvl",
-                    "p": 4
+                    "p": 8
+                },
+                {
+                    "prop": "ease",
+                    "min": -30,
+                    "max": -30
+                },
+                {
+                    "prop": "red-dmg%",
+                    "min": 10,
+                    "max": 10
                 }
             ]
         },
@@ -34978,9 +34820,9 @@ export let constants_blizzless_99 = {
                     "max": 60
                 },
                 {
-                    "prop": "light-thorns",
-                    "min": 10,
-                    "max": 10
+                    "prop": "ease",
+                    "min": -20,
+                    "max": -20
                 }
             ]
         },
@@ -35455,6 +35297,7 @@ export let constants_blizzless_99 = {
         {
             "id": 263,
             "n": "Constricting Ring",
+            "i": "invrin5",
             "c": "rin",
             "tc": "cblu",
             "lvl": "95",
@@ -35628,6 +35471,7 @@ export let constants_blizzless_99 = {
         {
             "id": 268,
             "n": "Bul-Kathos' Wedding Band",
+            "i": "invrin4",
             "c": "rin",
             "tc": "dpur",
             "lvl": "66",
@@ -35656,6 +35500,7 @@ export let constants_blizzless_99 = {
         {
             "id": 269,
             "n": "The Cat's Eye",
+            "i": "invamu1",
             "c": "amu",
             "tc": "oran",
             "lvl": "58",
@@ -35690,6 +35535,7 @@ export let constants_blizzless_99 = {
         {
             "id": 270,
             "n": "The Rising Sun",
+            "i": "invamu2",
             "c": "amu",
             "tc": "lgld",
             "lvl": "73",
@@ -35729,6 +35575,7 @@ export let constants_blizzless_99 = {
         {
             "id": 271,
             "n": "Crescent Moon",
+            "i": "invamu3",
             "c": "amu",
             "tc": "lblu",
             "lvl": "58",
@@ -35768,6 +35615,7 @@ export let constants_blizzless_99 = {
         {
             "id": 272,
             "n": "Mara's Kaleidoscope",
+            "i": "invamu1",
             "c": "amu",
             "tc": "oran",
             "lvl": "80",
@@ -35807,6 +35655,7 @@ export let constants_blizzless_99 = {
         {
             "id": 273,
             "n": "Atma's Scarab",
+            "i": "invamu3",
             "c": "amu",
             "tc": "cgrn",
             "lvl": "60",
@@ -35848,6 +35697,7 @@ export let constants_blizzless_99 = {
         {
             "id": 274,
             "n": "Dwarf Star",
+            "i": "invrin1",
             "c": "rin",
             "tc": "dgry",
             "lvl": "53",
@@ -35887,6 +35737,7 @@ export let constants_blizzless_99 = {
         {
             "id": 275,
             "n": "Raven Frost",
+            "i": "invrin2",
             "c": "rin",
             "tc": "cblu",
             "lvl": "53",
@@ -35927,6 +35778,7 @@ export let constants_blizzless_99 = {
         {
             "id": 276,
             "n": "Highlord's Wrath",
+            "i": "invamu2",
             "c": "amu",
             "tc": "bwht",
             "lvl": "73",
@@ -35965,6 +35817,7 @@ export let constants_blizzless_99 = {
         {
             "id": 277,
             "n": "Saracen's Chance",
+            "i": "invamu1",
             "c": "amu",
             "tc": "dpur",
             "lvl": "55",
@@ -36971,6 +36824,7 @@ export let constants_blizzless_99 = {
         {
             "id": 300,
             "n": "Nature's Peace",
+            "i": "invrin3",
             "c": "rin",
             "tc": "dgrn",
             "lvl": "77",
@@ -37595,8 +37449,8 @@ export let constants_blizzless_99 = {
                 },
                 {
                     "prop": "red-dmg%",
-                    "min": 15,
-                    "max": 25
+                    "min": 25,
+                    "max": 35
                 },
                 {
                     "prop": "str",
@@ -37607,6 +37461,11 @@ export let constants_blizzless_99 = {
                     "prop": "indestruct",
                     "min": 1,
                     "max": 1
+                },
+                {
+                    "prop": "red-dmg",
+                    "min": 15,
+                    "max": 18
                 }
             ]
         },
@@ -37619,6 +37478,7 @@ export let constants_blizzless_99 = {
         {
             "id": 319,
             "n": "Wisp Projector",
+            "i": "invrin3",
             "c": "rin",
             "tc": "bwht",
             "lvl": "84",
@@ -37815,7 +37675,7 @@ export let constants_blizzless_99 = {
                 },
                 {
                     "prop": "hit-skill",
-                    "p": 83,
+                    "p": 384,
                     "min": 15,
                     "max": 26
                 },
@@ -38815,9 +38675,9 @@ export let constants_blizzless_99 = {
                     "max": 14
                 },
                 {
-                    "prop": "res-cold",
-                    "min": 40,
-                    "max": 60
+                    "prop": "res-all",
+                    "min": 30,
+                    "max": 50
                 },
                 {
                     "prop": "regen-mana",
@@ -38829,10 +38689,9 @@ export let constants_blizzless_99 = {
                     "p": 5
                 },
                 {
-                    "prop": "gethit-skill",
-                    "p": 76,
-                    "min": 8,
-                    "max": 6
+                    "prop": "red-dmg%",
+                    "min": 30,
+                    "max": 30
                 }
             ]
         },
@@ -38857,24 +38716,29 @@ export let constants_blizzless_99 = {
                 {
                     "prop": "gethit-skill",
                     "p": 91,
-                    "min": 10,
-                    "max": 7
+                    "min": 25,
+                    "max": 15
                 },
                 {
-                    "prop": "lifesteal",
-                    "min": 5,
-                    "max": 9
+                    "prop": "res-all",
+                    "min": 15,
+                    "max": 25
                 },
                 {
                     "prop": "death-skill",
-                    "p": 48,
+                    "p": 92,
                     "min": 100,
                     "max": 44
                 },
                 {
-                    "prop": "res-cold",
-                    "min": 40,
-                    "max": 80
+                    "prop": "cast1",
+                    "min": 10,
+                    "max": 10
+                },
+                {
+                    "prop": "red-dmg%",
+                    "min": 20,
+                    "max": 20
                 }
             ]
         },
@@ -39126,9 +38990,9 @@ export let constants_blizzless_99 = {
                     "max": 180
                 },
                 {
-                    "prop": "abs-cold",
-                    "min": 6,
-                    "max": 11
+                    "prop": "red-dmg%",
+                    "min": 10,
+                    "max": 10
                 },
                 {
                     "prop": "res-all",
@@ -39137,8 +39001,8 @@ export let constants_blizzless_99 = {
                 },
                 {
                     "prop": "block",
-                    "min": 20,
-                    "max": 30
+                    "min": 50,
+                    "max": 50
                 },
                 {
                     "prop": "block2",
@@ -39148,7 +39012,7 @@ export let constants_blizzless_99 = {
                 {
                     "prop": "gethit-skill",
                     "p": 267,
-                    "min": 5,
+                    "min": 15,
                     "max": 8
                 }
             ]
@@ -39190,14 +39054,14 @@ export let constants_blizzless_99 = {
             "lvl": "83",
             "m": [
                 {
-                    "prop": "ac",
-                    "min": 10,
-                    "max": 20
+                    "prop": "ac%",
+                    "min": 150,
+                    "max": 180
                 },
                 {
                     "prop": "cast2",
-                    "min": 20,
-                    "max": 20
+                    "min": 25,
+                    "max": 25
                 },
                 {
                     "prop": "extra-fire",
@@ -39216,8 +39080,8 @@ export let constants_blizzless_99 = {
                 },
                 {
                     "prop": "regen-mana",
-                    "min": 10,
-                    "max": 15
+                    "min": 50,
+                    "max": 75
                 },
                 {
                     "prop": "skill-rand",
@@ -39366,8 +39230,9 @@ export let constants_blizzless_99 = {
                     "max": 150
                 },
                 {
-                    "prop": "thorns/lvl",
-                    "p": 11
+                    "prop": "crush",
+                    "min": 15,
+                    "max": 20
                 },
                 {
                     "prop": "dur",
@@ -39388,6 +39253,11 @@ export let constants_blizzless_99 = {
                     "prop": "sock",
                     "min": 1,
                     "max": 1
+                },
+                {
+                    "prop": "openwounds",
+                    "min": 20,
+                    "max": 30
                 }
             ]
         },
@@ -39497,24 +39367,24 @@ export let constants_blizzless_99 = {
                     "max": 20
                 },
                 {
-                    "prop": "ac-miss",
-                    "min": 250,
-                    "max": 300
+                    "prop": "red-dmg%",
+                    "min": 20,
+                    "max": 20
                 },
                 {
-                    "prop": "stam",
-                    "min": 40,
-                    "max": 50
+                    "prop": "dmg%",
+                    "min": 100,
+                    "max": 160
                 },
                 {
-                    "prop": "str",
-                    "min": 10,
-                    "max": 15
+                    "prop": "dex",
+                    "min": 30,
+                    "max": 45
                 },
                 {
                     "prop": "vit",
-                    "min": 10,
-                    "max": 15
+                    "min": 15,
+                    "max": 30
                 },
                 {
                     "prop": "skilltab",
@@ -39850,6 +39720,7 @@ export let constants_blizzless_99 = {
         {
             "id": 375,
             "n": "Metalgrid",
+            "i": "invamu1",
             "c": "amu",
             "lvl": "85",
             "m": [
@@ -39929,6 +39800,7 @@ export let constants_blizzless_99 = {
         {
             "id": 378,
             "n": "Carrion Wind",
+            "i": "invrin5",
             "c": "rin",
             "lvl": "68",
             "m": [
@@ -40467,13 +40339,13 @@ export let constants_blizzless_99 = {
                 },
                 {
                     "prop": "ac-miss",
-                    "min": 300,
-                    "max": 350
+                    "min": 500,
+                    "max": 500
                 },
                 {
-                    "prop": "res-pois",
-                    "min": 30,
-                    "max": 40
+                    "prop": "res-pois-len",
+                    "min": 75,
+                    "max": 75
                 },
                 {
                     "prop": "sock",
@@ -40481,14 +40353,19 @@ export let constants_blizzless_99 = {
                     "max": 3
                 },
                 {
-                    "prop": "res-fire",
+                    "prop": "res-all",
                     "min": 20,
                     "max": 30
                 },
                 {
-                    "prop": "heal-kill",
-                    "min": 5,
-                    "max": 7
+                    "prop": "abs-ltng",
+                    "min": 15,
+                    "max": 15
+                },
+                {
+                    "prop": "abs-fire",
+                    "min": 15,
+                    "max": 15
                 }
             ]
         },
@@ -41667,6 +41544,633 @@ export let constants_blizzless_99 = {
                     "prop": "Add_one",
                     "min": 0,
                     "max": 0
+                }
+            ]
+        },
+        {
+            "id": 460,
+            "n": "Diablo's Soulstone",
+            "i": "invmss",
+            "c": "cm5",
+            "tc": "cred",
+            "lvl": "1",
+            "m": []
+        },
+        {
+            "id": 461,
+            "n": "Shard of Terror",
+            "i": "invrin",
+            "c": "fin",
+            "lvl": "1",
+            "m": [
+                {
+                    "prop": "oskill",
+                    "p": 385,
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "prop": "cast1",
+                    "min": 150,
+                    "max": 150
+                },
+                {
+                    "prop": "oskill",
+                    "p": 386,
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "prop": "state",
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "prop": "addxp",
+                    "min": -50,
+                    "max": -50
+                },
+                {
+                    "prop": "move1",
+                    "min": 100,
+                    "max": 100
+                },
+                {
+                    "prop": "hp%",
+                    "min": 50,
+                    "max": 50
+                },
+                {
+                    "prop": "res-all",
+                    "min": 100,
+                    "max": 100
+                },
+                {
+                    "prop": "red-dmg%",
+                    "min": 100,
+                    "max": 100
+                }
+            ]
+        },
+        {
+            "id": 462,
+            "n": "Seraph's Hymn",
+            "i": "invamu1",
+            "c": "fmu",
+            "tc": "bwht",
+            "lvl": "73",
+            "m": [
+                {
+                    "prop": "allskills",
+                    "min": 2,
+                    "max": 2
+                },
+                {
+                    "prop": "skilltab",
+                    "p": 11,
+                    "min": 1,
+                    "max": 2
+                },
+                {
+                    "prop": "dmg-demon",
+                    "min": 25,
+                    "max": 50
+                },
+                {
+                    "prop": "dmg-undead",
+                    "min": 25,
+                    "max": 50
+                },
+                {
+                    "prop": "att-demon",
+                    "min": 150,
+                    "max": 250
+                },
+                {
+                    "prop": "att-undead",
+                    "min": 150,
+                    "max": 250
+                },
+                {
+                    "prop": "light",
+                    "min": 2,
+                    "max": 2
+                }
+            ]
+        },
+        {
+            "id": 463,
+            "n": "Bul-Kathos' Wedding Band",
+            "i": "invrin1",
+            "c": "fin",
+            "tc": "dpur",
+            "lvl": "66",
+            "m": [
+                {
+                    "prop": "hp/lvl",
+                    "p": 4
+                },
+                {
+                    "prop": "allskills",
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "prop": "lifesteal",
+                    "min": 3,
+                    "max": 5
+                },
+                {
+                    "prop": "stam",
+                    "min": 50,
+                    "max": 50
+                }
+            ]
+        },
+        {
+            "id": 464,
+            "n": "Highlord's Wrath",
+            "i": "invamu3",
+            "c": "fmu",
+            "tc": "bwht",
+            "lvl": "73",
+            "m": [
+                {
+                    "prop": "res-ltng",
+                    "min": 35,
+                    "max": 35
+                },
+                {
+                    "prop": "dmg-ltng",
+                    "min": 1,
+                    "max": 30
+                },
+                {
+                    "prop": "swing2",
+                    "min": 20,
+                    "max": 20
+                },
+                {
+                    "prop": "allskills",
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "prop": "deadly/lvl",
+                    "p": 3
+                },
+                {
+                    "prop": "light-thorns",
+                    "min": 15,
+                    "max": 15
+                }
+            ]
+        },
+        {
+            "id": 465,
+            "n": "Mara's Kaleidoscope",
+            "i": "invamu2",
+            "c": "fmu",
+            "tc": "oran",
+            "lvl": "80",
+            "m": [
+                {
+                    "prop": "allskills",
+                    "min": 2,
+                    "max": 2
+                },
+                {
+                    "prop": "res-all",
+                    "min": 20,
+                    "max": 30
+                },
+                {
+                    "prop": "str",
+                    "min": 5,
+                    "max": 5
+                },
+                {
+                    "prop": "dex",
+                    "min": 5,
+                    "max": 5
+                },
+                {
+                    "prop": "vit",
+                    "min": 5,
+                    "max": 5
+                },
+                {
+                    "prop": "enr",
+                    "min": 5,
+                    "max": 5
+                }
+            ]
+        },
+        {
+            "id": 466,
+            "n": "The Stone of Jordan",
+            "i": "invrin2",
+            "c": "fin",
+            "lvl": "39",
+            "m": [
+                {
+                    "prop": "mana",
+                    "min": 20,
+                    "max": 20
+                },
+                {
+                    "prop": "mana%",
+                    "min": 25,
+                    "max": 25
+                },
+                {
+                    "prop": "ltng-min",
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "prop": "allskills",
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "prop": "ltng-max",
+                    "min": 12,
+                    "max": 12
+                }
+            ]
+        },
+        {
+            "id": 467,
+            "n": "Raven Frost",
+            "i": "invrin3",
+            "c": "fin",
+            "tc": "cblu",
+            "lvl": "53",
+            "m": [
+                {
+                    "prop": "nofreeze",
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "prop": "dmg-cold",
+                    "p": 100,
+                    "min": 15,
+                    "max": 45
+                },
+                {
+                    "prop": "abs-cold%",
+                    "min": 20,
+                    "max": 20
+                },
+                {
+                    "prop": "mana",
+                    "min": 40,
+                    "max": 40
+                },
+                {
+                    "prop": "dex",
+                    "min": 15,
+                    "max": 20
+                },
+                {
+                    "prop": "att",
+                    "min": 150,
+                    "max": 250
+                }
+            ]
+        },
+        {
+            "id": 468,
+            "n": "Wisp Projector",
+            "i": "invrin4",
+            "c": "fin",
+            "tc": "bwht",
+            "lvl": "84",
+            "m": [
+                {
+                    "prop": "abs-ltng%",
+                    "min": 10,
+                    "max": 20
+                },
+                {
+                    "prop": "hit-skill",
+                    "p": 49,
+                    "min": 10,
+                    "max": 16
+                },
+                {
+                    "prop": "mag%",
+                    "min": 10,
+                    "max": 20
+                },
+                {
+                    "prop": "charged",
+                    "p": 226,
+                    "min": 15,
+                    "max": 2
+                },
+                {
+                    "prop": "charged",
+                    "p": 236,
+                    "min": 13,
+                    "max": 5
+                },
+                {
+                    "prop": "charged",
+                    "p": 246,
+                    "min": 11,
+                    "max": 7
+                }
+            ]
+        },
+        {
+            "id": 469,
+            "n": "Blacksmith Ingot",
+            "i": "invcr1",
+            "c": "bg1",
+            "lvl": "1",
+            "m": [
+                {
+                    "prop": "Add_one",
+                    "min": 0,
+                    "max": 0
+                }
+            ]
+        },
+        {
+            "id": 470,
+            "n": "Horadric Sphere",
+            "i": "invcr2",
+            "c": "bg1",
+            "lvl": "1",
+            "m": [
+                {
+                    "prop": "Add_one",
+                    "min": 0,
+                    "max": 0
+                }
+            ]
+        },
+        {
+            "id": 471,
+            "n": "Resplendent Spark",
+            "i": "invcr3",
+            "c": "bg1",
+            "lvl": "1",
+            "m": [
+                {
+                    "prop": "Add_one",
+                    "min": 0,
+                    "max": 0
+                }
+            ]
+        },
+        {
+            "id": 472,
+            "n": "Disenchanted Jewel",
+            "i": "invgswe",
+            "c": "bg1",
+            "lvl": "1",
+            "m": [
+                {
+                    "prop": "Add_one",
+                    "min": 0,
+                    "max": 0
+                }
+            ]
+        },
+        {
+            "id": 473,
+            "c": "p03",
+            "tc": "cgrn",
+            "lvl": "1",
+            "m": [
+                {
+                    "prop": "allskills",
+                    "min": 2,
+                    "max": 2
+                },
+                {
+                    "prop": "hp/lvl",
+                    "p": 12
+                },
+                {
+                    "prop": "mana/lvl",
+                    "p": 12
+                },
+                {
+                    "prop": "mag%",
+                    "min": 50,
+                    "max": 50
+                },
+                {
+                    "prop": "red-dmg%",
+                    "min": 10,
+                    "max": 10
+                },
+                {
+                    "prop": "str",
+                    "min": 2,
+                    "max": 2
+                },
+                {
+                    "prop": "dex",
+                    "min": 2,
+                    "max": 2
+                },
+                {
+                    "prop": "vit",
+                    "min": 2,
+                    "max": 2
+                },
+                {
+                    "prop": "enr",
+                    "min": 2,
+                    "max": 2
+                }
+            ]
+        },
+        {
+            "id": 474,
+            "c": "p02",
+            "tc": "lgry",
+            "lvl": "1",
+            "m": [
+                {
+                    "prop": "light",
+                    "min": 4,
+                    "max": 4
+                },
+                {
+                    "prop": "pal",
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "prop": "ac%",
+                    "min": 180,
+                    "max": 200
+                },
+                {
+                    "prop": "block2",
+                    "min": 30,
+                    "max": 30
+                },
+                {
+                    "prop": "res-all-max",
+                    "min": 15,
+                    "max": 15
+                },
+                {
+                    "prop": "att-dem/lvl",
+                    "p": 5
+                },
+                {
+                    "prop": "block",
+                    "min": 20,
+                    "max": 20
+                }
+            ]
+        },
+        {
+            "id": 475,
+            "i": "invkitu",
+            "c": "p01",
+            "lvl": "1",
+            "m": [
+                {
+                    "prop": "ac/lvl",
+                    "p": 30
+                },
+                {
+                    "prop": "red-dmg%",
+                    "min": 35,
+                    "max": 35
+                },
+                {
+                    "prop": "str",
+                    "min": 30,
+                    "max": 30
+                },
+                {
+                    "prop": "indestruct",
+                    "min": 1,
+                    "max": 1
+                },
+                {
+                    "prop": "block2",
+                    "min": 35,
+                    "max": 35
+                },
+                {
+                    "prop": "res-ltng",
+                    "min": 25,
+                    "max": 25
+                },
+                {
+                    "prop": "block",
+                    "min": 25,
+                    "max": 25
+                },
+                {
+                    "prop": "res-cold",
+                    "min": 60,
+                    "max": 60
+                },
+                {
+                    "prop": "light-thorns",
+                    "min": 10,
+                    "max": 10
+                }
+            ]
+        },
+        {
+            "id": 476,
+            "c": "p04",
+            "tc": "lblu",
+            "lvl": "1",
+            "m": [
+                {
+                    "prop": "hit-skill",
+                    "p": 42,
+                    "min": 20,
+                    "max": 10
+                },
+                {
+                    "prop": "hp/lvl",
+                    "p": 48
+                },
+                {
+                    "prop": "att/lvl",
+                    "p": 16
+                },
+                {
+                    "prop": "res-ltng",
+                    "min": 75,
+                    "max": 75
+                },
+                {
+                    "prop": "swing2",
+                    "min": 20,
+                    "max": 20
+                },
+                {
+                    "prop": "dmg/lvl",
+                    "p": 16
+                },
+                {
+                    "prop": "rep-dur",
+                    "min": 20,
+                    "max": 20
+                },
+                {
+                    "prop": "dmg%",
+                    "min": 230,
+                    "max": 280
+                },
+                {
+                    "prop": "crush/lvl",
+                    "p": 8
+                },
+                {
+                    "prop": "dmg-ltng",
+                    "min": 50,
+                    "max": 200
+                }
+            ]
+        },
+        {
+            "id": 477,
+            "c": "p05",
+            "tc": "dblu",
+            "lvl": "1",
+            "m": [
+                {
+                    "prop": "ac%",
+                    "min": 120,
+                    "max": 120
+                },
+                {
+                    "prop": "res-all",
+                    "min": 20,
+                    "max": 35
+                },
+                {
+                    "prop": "cast3",
+                    "min": 30,
+                    "max": 30
+                },
+                {
+                    "prop": "red-mag",
+                    "min": 9,
+                    "max": 13
+                },
+                {
+                    "prop": "allskills",
+                    "min": 1,
+                    "max": 1
                 }
             ]
         }
@@ -43527,7 +44031,7 @@ export let constants_blizzless_99 = {
             "it": 8,
             "type": "tors",
             "lvl": "40",
-            "gemsockets": 2,
+            "gemsockets": 3,
             "spawnable": 1,
             "nodurability": 0,
             "ig": [],
@@ -43604,7 +44108,7 @@ export let constants_blizzless_99 = {
             "minac": 198,
             "maxac": 213,
             "durability": 45,
-            "rs": 92,
+            "rs": 74,
             "rd": 0,
             "hi": 1,
             "gt": 1,
@@ -43663,7 +44167,7 @@ export let constants_blizzless_99 = {
             "minac": 225,
             "maxac": 243,
             "durability": 30,
-            "rs": 97,
+            "rs": 86,
             "rd": 0,
             "hi": 1,
             "gt": 1,
@@ -43692,7 +44196,7 @@ export let constants_blizzless_99 = {
             "minac": 252,
             "maxac": 274,
             "durability": 60,
-            "rs": 118,
+            "rs": 103,
             "rd": 0,
             "hi": 1,
             "gt": 1,
@@ -43721,7 +44225,7 @@ export let constants_blizzless_99 = {
             "minac": 242,
             "maxac": 258,
             "durability": 48,
-            "rs": 103,
+            "rs": 92,
             "rd": 0,
             "hi": 1,
             "gt": 1,
@@ -43750,7 +44254,7 @@ export let constants_blizzless_99 = {
             "minac": 282,
             "maxac": 303,
             "durability": 55,
-            "rs": 125,
+            "rs": 110,
             "rd": 0,
             "hi": 1,
             "gt": 1,
@@ -43779,7 +44283,7 @@ export let constants_blizzless_99 = {
             "minac": 315,
             "maxac": 342,
             "durability": 70,
-            "rs": 140,
+            "rs": 125,
             "rd": 0,
             "hi": 1,
             "gt": 1,
@@ -43808,7 +44312,7 @@ export let constants_blizzless_99 = {
             "minac": 417,
             "maxac": 450,
             "durability": 60,
-            "rs": 170,
+            "rs": 120,
             "rd": 0,
             "hi": 1,
             "gt": 1,
@@ -44010,7 +44514,7 @@ export let constants_blizzless_99 = {
             "durability": 72,
             "mind": 10,
             "maxd": 17,
-            "rs": 133,
+            "rs": 103,
             "rd": 0,
             "hi": 1,
             "gt": 2,
@@ -44045,7 +44549,7 @@ export let constants_blizzless_99 = {
             "durability": 80,
             "mind": 12,
             "maxd": 16,
-            "rs": 110,
+            "rs": 95,
             "rd": 0,
             "hi": 1,
             "gt": 2,
@@ -46176,7 +46680,7 @@ export let constants_blizzless_99 = {
             "durability": 86,
             "mind": 12,
             "maxd": 34,
-            "rs": 156,
+            "rs": 146,
             "rd": 0,
             "hi": 1,
             "gt": 2,
@@ -46211,7 +46715,7 @@ export let constants_blizzless_99 = {
             "durability": 92,
             "mind": 18,
             "maxd": 28,
-            "rs": 219,
+            "rs": 198,
             "rd": 0,
             "hi": 1,
             "gt": 2,
@@ -46246,7 +46750,7 @@ export let constants_blizzless_99 = {
             "durability": 100,
             "mind": 11,
             "maxd": 35,
-            "rs": 185,
+            "rs": 165,
             "rd": 0,
             "hi": 1,
             "gt": 2,
@@ -46792,7 +47296,7 @@ export let constants_blizzless_99 = {
             "durability": 83,
             "mind": 26,
             "maxd": 40,
-            "rs": 118,
+            "rs": 108,
             "rd": 0,
             "hi": 1,
             "gt": 2,
@@ -48174,6 +48678,128 @@ export let constants_blizzless_99 = {
                 "Second Hand",
                 "Necromancer Item",
                 "Class Specific"
+            ]
+        },
+        "p01": {
+            "nc": "p01",
+            "exc": "p01",
+            "elc": "p01",
+            "iq": 1,
+            "n": "Monarch",
+            "minac": 133,
+            "maxac": 148,
+            "durability": 86,
+            "mind": 12,
+            "maxd": 34,
+            "rs": 146,
+            "rd": 0,
+            "hi": 1,
+            "gt": 2,
+            "i": "invkit",
+            "ui": "invkitu",
+            "si": "invkitu",
+            "iw": 2,
+            "ih": 3,
+            "it": 2,
+            "type": "shie",
+            "lvl": "72",
+            "gemsockets": 4,
+            "spawnable": 0,
+            "nodurability": 0,
+            "ig": [],
+            "eq1n": "Any Shield",
+            "c": [
+                "Shield",
+                "Any Shield",
+                "Any Armor",
+                "Second Hand"
+            ]
+        },
+        "p02": {
+            "nc": "p02",
+            "exc": "p02",
+            "elc": "p02",
+            "iq": 1,
+            "n": "Templar Coat",
+            "minac": 252,
+            "maxac": 274,
+            "durability": 60,
+            "rs": 103,
+            "rd": 0,
+            "hi": 1,
+            "gt": 1,
+            "i": "invplt",
+            "iw": 2,
+            "ih": 3,
+            "it": 8,
+            "type": "tors",
+            "lvl": "52",
+            "gemsockets": 3,
+            "spawnable": 0,
+            "nodurability": 0,
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor"
+            ]
+        },
+        "p03": {
+            "nc": "p03",
+            "exc": "p03",
+            "elc": "p03",
+            "iq": 1,
+            "n": "Shako",
+            "minac": 98,
+            "maxac": 141,
+            "durability": 12,
+            "rs": 50,
+            "rd": 0,
+            "hi": 1,
+            "gt": 1,
+            "i": "invcap",
+            "iw": 2,
+            "ih": 2,
+            "it": 8,
+            "type": "helm",
+            "lvl": "58",
+            "gemsockets": 2,
+            "spawnable": 0,
+            "nodurability": 0,
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Helm",
+                "Any Armor"
+            ]
+        },
+        "p05": {
+            "nc": "p05",
+            "exc": "p05",
+            "elc": "p05",
+            "iq": 1,
+            "n": "Serpentskin Armor",
+            "minac": 111,
+            "maxac": 126,
+            "durability": 24,
+            "rs": 43,
+            "rd": 0,
+            "hi": 1,
+            "gt": 1,
+            "i": "invlea",
+            "iw": 2,
+            "ih": 3,
+            "it": 8,
+            "type": "tors",
+            "lvl": "36",
+            "gemsockets": 2,
+            "spawnable": 0,
+            "nodurability": 0,
+            "ig": [],
+            "eq1n": "Any Armor",
+            "c": [
+                "Armor",
+                "Any Armor"
             ]
         }
     },
@@ -54441,7 +55067,7 @@ export let constants_blizzless_99 = {
             "elc": "7ax",
             "iq": 2,
             "n": "Small Crescent",
-            "durability": 24,
+            "durability": 36,
             "mind": 38,
             "maxd": 60,
             "rs": 115,
@@ -54472,7 +55098,7 @@ export let constants_blizzless_99 = {
             "elc": "72a",
             "iq": 2,
             "n": "Ettin Axe",
-            "durability": 24,
+            "durability": 50,
             "mind": 33,
             "maxd": 66,
             "rs": 145,
@@ -54501,7 +55127,7 @@ export let constants_blizzless_99 = {
             "elc": "7mp",
             "iq": 2,
             "n": "War Spike",
-            "durability": 26,
+            "durability": 44,
             "mind": 30,
             "maxd": 48,
             "rs": 133,
@@ -54532,7 +55158,7 @@ export let constants_blizzless_99 = {
             "elc": "7wa",
             "iq": 2,
             "n": "Berserker Axe",
-            "durability": 26,
+            "durability": 38,
             "mind": 24,
             "maxd": 71,
             "rs": 138,
@@ -57977,6 +58603,35 @@ export let constants_blizzless_99 = {
                 "Weapon",
                 "Amazon Item",
                 "Class Specific"
+            ]
+        },
+        "p04": {
+            "nc": "p04",
+            "exc": "p04",
+            "elc": "p04",
+            "iq": 1,
+            "n": "Legendary Mallet",
+            "durability": 65,
+            "mind": 50,
+            "maxd": 61,
+            "rs": 189,
+            "hi": 1,
+            "gt": 0,
+            "i": "invwhm",
+            "iw": 2,
+            "ih": 3,
+            "it": 2,
+            "type": "hamm",
+            "lvl": "82",
+            "gemsockets": 4,
+            "spawnable": 0,
+            "ig": [],
+            "eq1n": "Blunt",
+            "c": [
+                "Hammer",
+                "Blunt",
+                "Melee Weapon",
+                "Weapon"
             ]
         }
     },
@@ -63434,6 +64089,160 @@ export let constants_blizzless_99 = {
                         "max": 1
                     }
                 ]
+            ]
+        },
+        "cm5": {
+            "iq": 0,
+            "n": "Small Charm",
+            "hi": 0,
+            "gt": 0,
+            "i": "invchm",
+            "iw": 1,
+            "ih": 1,
+            "it": 8,
+            "type": "scha",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
+            "ig": [
+                "invch1",
+                "invch4",
+                "invch7"
+            ],
+            "eq1n": "Charm",
+            "c": [
+                "Small Charm",
+                "Charm",
+                "Miscellaneous"
+            ]
+        },
+        "fin": {
+            "iq": 0,
+            "n": "Ring",
+            "hi": 1,
+            "gt": 1,
+            "i": "invrin",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "type": "ring",
+            "lvl": "1",
+            "gemsockets": 1,
+            "spawnable": 0,
+            "nodurability": 1,
+            "ig": [
+                "invrin1",
+                "invrin2",
+                "invrin3",
+                "invrin4",
+                "invrin5"
+            ],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Ring",
+                "Miscellaneous"
+            ]
+        },
+        "cr1": {
+            "iq": 0,
+            "n": "ÿcLBlacksmith Ingot",
+            "hi": 0,
+            "gt": 0,
+            "i": "invcr1",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "type": "misc",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
+            "ig": [],
+            "c": [
+                "Miscellaneous"
+            ]
+        },
+        "cr2": {
+            "iq": 0,
+            "n": "ÿcLHoradric Sphere",
+            "hi": 0,
+            "gt": 0,
+            "i": "invcr2",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "type": "misc",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
+            "ig": [],
+            "c": [
+                "Miscellaneous"
+            ]
+        },
+        "cr3": {
+            "iq": 0,
+            "n": "ÿcLResplendent Spark",
+            "hi": 0,
+            "gt": 0,
+            "i": "invcr3",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "type": "misc",
+            "lvl": "0",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
+            "ig": [],
+            "c": [
+                "Miscellaneous"
+            ]
+        },
+        "fmu": {
+            "iq": 0,
+            "n": "Amulet",
+            "hi": 1,
+            "gt": 1,
+            "i": "invamu",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "type": "amul",
+            "lvl": "1",
+            "gemsockets": 1,
+            "spawnable": 0,
+            "nodurability": 1,
+            "ig": [
+                "invamu1",
+                "invamu2",
+                "invamu3"
+            ],
+            "eq1n": "Miscellaneous",
+            "c": [
+                "Amulet",
+                "Miscellaneous"
+            ]
+        },
+        "jwd": {
+            "iq": 0,
+            "n": "ÿcLDisenchanted Jewel",
+            "hi": 0,
+            "gt": 0,
+            "i": "invgswe",
+            "iw": 1,
+            "ih": 1,
+            "it": 0,
+            "type": "ques",
+            "lvl": "1",
+            "gemsockets": 0,
+            "spawnable": 0,
+            "nodurability": 1,
+            "ig": [],
+            "c": [
+                "Quest"
             ]
         }
     },

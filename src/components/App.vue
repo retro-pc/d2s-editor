@@ -92,9 +92,8 @@
                           title="Workspace Version"
                           @change="changeMod()">
                           <!-- <option v-if="$work_mod.value == 'diablo2'" value="96">LOD 1.10-1.14d</option> -->
-                          <!-- <option v-if="$work_mod.value == 'diablo2'" value="97">D2R Alpha</option> -->
+                          <option v-if="$work_mod.value == 'diablo2'" value="97">D2R Alpha</option>
                           <!-- <option v-if="$work_mod.value == 'diablo2'" value="98">D2R 2.4</option> -->
-                          <!-- <option v-if="$work_mod.value == 'blizzless'" value="98">Beta</option> -->
                           <option value="99">D2R 2.5+</option>
                         </select>
                         <a-upload
@@ -767,7 +766,7 @@
         this.previewModel = {
           base64: utils.arrayBufferToBase64(event.target.result),
           mod: "diablo2",
-          version: 0x60,  //1.10-1.14d
+          version: 0x61,
         };
         this.setPreviewItem();
       },
@@ -932,7 +931,6 @@
         this.readBuffer(event.target.result, event.target.filename);
       },
       readBuffer(bytes, filename) {
-        //this.addItemsToItemPack();
         const byteLen = bytes && (bytes.byteLength ?? bytes.length ?? 0);
         if (filename) {
           const lower = filename.toLowerCase();
