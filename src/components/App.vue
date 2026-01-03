@@ -29,7 +29,7 @@
             <input style="display:none;" type="file" name="d2iFile" @change="onItemFileChange" id="d2iFile">
             <label for="d2iFile" class="mb-0 btn btn-primary">Load D2I</label>
             <button type="button" class="btn btn-primary" @click="loadBase64Item">Load Base64</button>
-            <button type="button" class="btn btn-primary" @click="loadItem">Load</button>
+            <button type="button" class="btn btn-primary" :disabled="!preview?.type" @click="loadItem">Load</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
@@ -92,9 +92,8 @@
                           title="Workspace Version"
                           @change="changeMod()">
                           <!-- <option v-if="$work_mod.value == 'diablo2'" value="96">LOD 1.10-1.14d</option> -->
-                          <!-- <option v-if="$work_mod.value == 'diablo2'" value="97">D2R Alpha</option> -->
+                          <option v-if="$work_mod.value == 'diablo2'" value="97">D2R Alpha</option>
                           <!-- <option v-if="$work_mod.value == 'diablo2'" value="98">D2R 2.4</option> -->
-                          <!-- <option v-if="$work_mod.value == 'blizzless'" value="98">Beta</option> -->
                           <option value="99">D2R 2.5+</option>
                         </select>
                         <a-upload
@@ -748,17 +747,18 @@
       async setPreviewItem() {
         this.baseOptions = null;
         this.baseModel = null;
+        this.preview = null;
         if (this.previewModel) {
           if (this.previewModel.base64) {
             let bytes = utils.b64ToArrayBuffer(this.previewModel.base64);
             this.preview = await this.$d2s.readItem(bytes, "diablo2", 0x63);
           } else if (this.previewModel.item) {
             this.preview = this.previewModel.item;
-            if (this.preview?.given_runeword) {
+            if (this.preview.given_runeword) {
               this.baseOptions = this.getBasesOptions(this.preview);
               return;
             }
-        }
+          }
           await this.resolveInventoryImage(this.preview);
         }
       },
@@ -766,7 +766,7 @@
         this.previewModel = {
           base64: utils.arrayBufferToBase64(event.target.result),
           mod: "diablo2",
-          version: 0x60,  //1.10-1.14d
+          version: 0x61,
         };
         this.setPreviewItem();
       },
@@ -790,7 +790,9 @@
         }
       },
       loadItem() {
-        this.paste(this.preview);
+        if (this.preview && this.preview.type) {
+          this.paste(this.preview);
+        }  
       },
       paste(item, position) {
         let copy = JSON.parse(JSON.stringify(item != null ? item : this.clipboard));
@@ -929,7 +931,6 @@
         this.readBuffer(event.target.result, event.target.filename);
       },
       readBuffer(bytes, filename) {
-        //this.addItemsToItemPack();
         const byteLen = bytes && (bytes.byteLength ?? bytes.length ?? 0);
         if (filename) {
           const lower = filename.toLowerCase();
@@ -1046,14 +1047,13 @@
       unlockQs() {
         const self = this;
         function update(difficulty, act, quest, attributes, amount) {
-          if (self.save.header[difficulty][act][quest].is_completed === false){
-            self.save.header[difficulty][act][quest].is_completed = true;
-            if (quest === "prison_of_ice"){
+          if (self.save.header[difficulty][act][quest].is_completed === false) {
+            if (quest === "prison_of_ice") {
               self.save.header[difficulty][act][quest].consumed_scroll = true;
-            } else {
-              for(let attribute of attributes) {
-                self.save.attributes[attribute] = (self.save.attributes[attribute] ?? 0) + amount;
-              }
+            }
+            self.save.header[difficulty][act][quest].is_completed = true;
+            for(let attribute of attributes) {
+              self.save.attributes[attribute] = (self.save.attributes[attribute] ?? 0) + amount;
             }
           }
         }
@@ -1063,7 +1063,8 @@
           update(diff, "act_iii", "lam_esens_tome", ["unused_stats"], 5);
           update(diff, "act_iii", "the_golden_bird", ["max_hp", "current_hp"], 20);
           update(diff, "act_iv", "the_fallen_angel", ["unused_skill_points"], 2);
-          update(diff, "act_v", "prison_of_ice", null, null);
+          update(diff, "act_v", "rescue_on_mount_arreat", [], null);
+          update(diff, "act_v", "prison_of_ice", [], null);
         }
       },
       unlockHell() {
