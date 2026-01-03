@@ -11442,3 +11442,5 @@ lilith_death_hd5	11439		vo/eax/boss-dialog_hd	monster\lilith\lilithdeath5.flac	0
 lilith_death_hd6	11440		vo/eax/boss-dialog_hd	monster\lilith\lilithdeath6.flac	0	0	0	0	0	175	175	100	100	0	0	0	0	0	1	0	0	0	1	25	120	100	0	0	1	0	0	-1	-1	-1	0	0	
 lilith_death_hd7	11441		vo/eax/boss-dialog_hd	monster\lilith\lilithdeath7.flac	0	0	0	0	0	175	175	100	100	0	0	0	0	0	1	0	0	0	1	25	120	100	0	0	1	0	0	-1	-1	-1	0	0	
 lilith_death_hd8	11442		vo/eax/boss-dialog_hd	monster\lilith\lilithdeath8.flac	0	0	0	0	0	175	175	100	100	0	0	0	0	0	1	0	0	0	1	25	120	100	0	0	1	0	0	-1	-1	-1	0	0	
+music_hall_of_fame	11443	music_hall_of_fame_hd	music_sd	act5\halloffame.flac	0	1	0	0	0	127	127	100	100	0	0	1	125	125	1	0	0	0	0	25	0	255	1	1	0	0	1	-1	-1	-1	0	0	
+music_hall_of_fame_hd	11444		music_hd	act5\halloffame_hd.flac	0	1	0	0	0	100	100	100	100	0	0	1	125	125	1	0	0	0	0	100	0	255	1	1	0	0	1	-1	-1	-1	0	0	

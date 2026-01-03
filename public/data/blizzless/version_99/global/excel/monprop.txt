@@ -15,3 +15,10 @@ druidhawk	stupidity			-1	-1																										stupidity			-1	-1										
 spiritofbarbsprop	aura		296	20	20																										aura		296	20	20																										aura		296	20	20																										0
 uber																																																													state		193	1	1																										0
 obelisk	state		192	1	1																										state		192	1	1																										state		192	1	1																										0
+playerpal	state		198	1	1																										state		198	1	1																										state		198	1	1																										0
+playersor	state		199	1	1																										state		199	1	1																										state		199	1	1																										0
+playerdru	state		200	1	1																										state		200	1	1																										state		200	1	1																										0
+playerass	state		201	1	1																										state		201	1	1																										state		201	1	1																										0
+playerbar	state		202	1	1																										state		202	1	1																										state		202	1	1																										0
+playernec	state		203	1	1																										state		203	1	1																										state		203	1	1																										0
+playerama	state		204	1	1																										state		204	1	1																										state		204	1	1																										0

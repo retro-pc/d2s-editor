@@ -44,3 +44,11 @@ shadowmaster		0	7cs	larm	3	7tw	larm	3	7qr	larm	3	0
 shadowmaster		0		tors	3							0
 shadowmaster		0		head	3							0
 *end*  do not remove												0
+player99hc1	1	0	p04	rarm	7							0
+player99hc1	1	0	p02	tors	7							0
+player99hc1	1	0	p03	head	7							0
+player99hc1	1	0	p01	larm	7							0
+player99sc1	1	0	oba	rarm	2							0
+player99sc1	1	0	p05	tors	7							0
+player99sc1	1	0	ci3	head	2							0
+player99sc1	1	0	p01	larm	2							0
