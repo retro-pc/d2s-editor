@@ -567,7 +567,7 @@ baalsportal	4x
 summitdoor	4u
 lastportal	pp
 onemorelastportal	pp
-zoo	ss 
+zoo	TD
 keeper	7z
 baalsportal2	4x
 fireplaceguy	7y

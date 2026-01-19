@@ -193,4 +193,15 @@ markbear	190	4																																					1				bloodlust_state									
 markwolf	191	5										1																											1				impregnated																														0
 obelisk	192																																										valkyrie																														0
 uber	193																												1	1																											100	73	255	255	255												0
-cowkingrset	194	3			1					1	1																												1									valkyriestart	valkyriestart													moo_neutral_1		1	743								0
+cowkingrset	194	3			1					1	1		1	1																											1										14											druid_morph	druid_morph	1	743								0
+diablotr	195	3			1					1	1																												1									fire_cast_2																1	243								0
+vengeance	196																																										multigleam																														0
+dummystate	197																																																																								0
+playerpalstate	198				1						1																																																					2	3								0
+playersorstate	199				1						1																																																					2	1								0
+playerdrustate	200				1						1																																																					2	5								0
+playerassstate	201				1						1																																																					2	6								0
+playerbarstate	202				1						1																																																					2	4								0
+playernecstate	203				1						1																																																					2	2								0
+playeramastate	204				1						1																																																					2	0								0
+rednew	205																																										charge																														0
