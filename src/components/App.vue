@@ -182,28 +182,65 @@
                         <div class="row mt-3">
                           <div class="col-auto equipment-inventory-col">
                             <div class="mb-3">
-                              <Equipped v-if="saveViewMod !== 'stash'" :items.sync="equipped" @item-selected="onSelect" @item-event="onEvent" @weapon-swap-changed="onWeaponSwapChanged"
+                              <Equipped v-if="saveViewMod !== 'stash'" :items.sync="equipped" :isItemDimmed="isItemDimmed" :isItemHighlighted="isItemHighlighted" @item-hover="onItemHover" @item-selected="onSelect" @item-event="onEvent" @weapon-swap-changed="onWeaponSwapChanged"
                                 :id="'Equipped'" :contextMenu="$refs.contextMenu" :gold="save?.attributes?.gold">
                               </Equipped>
                             </div>
                             <!-- <Grid v-if="activeTab == 1 || activeTab == 10" :width="grid.inv.w" :height="grid.inv.h" :page="1"
                               :items.sync="inventory" @item-selected="onSelect" @item-event="onEvent" :id="'InventoryGrid'" :contextMenu="$refs.contextMenu">
                             </Grid> -->
-                            <Stash :items.sync="stashWithMeta" :mode="saveViewMod" @item-selected="onSelect" @item-event="onEvent" :id="'Stash'"
+                            <Stash ref="stashRef" :items.sync="stashWithMeta" :mode="saveViewMod" :isItemDimmed="isItemDimmed" :isItemHighlighted="isItemHighlighted" @item-hover="onItemHover" @item-selected="onSelect" @item-event="onEvent" :id="'Stash'"
                               :contextMenu="$refs.contextMenu">
                             </Stash>
-                            <Mercenary v-if="saveViewMod !== 'stash'" :items.sync="mercenary" @item-selected="onSelect" @item-event="onEvent" :id="'Mercenary'"
+                            <Mercenary v-if="saveViewMod !== 'stash'" :items.sync="mercenary" :isItemDimmed="isItemDimmed" :isItemHighlighted="isItemHighlighted" @item-hover="onItemHover" @item-selected="onSelect" @item-event="onEvent" :id="'Mercenary'"
                               :contextMenu="$refs.contextMenu">
                             </Mercenary>
                             <div class="cube" v-if="saveViewMod !== 'stash'">
                               <Grid class="cube__grid" :width="grid.cube.w" :height="grid.cube.h" :page="8"
-                                :items.sync="cube" @item-selected="onSelect" @item-event="onEvent" :id="'CubeGrid'"
+                                :items.sync="cube" :isItemDimmed="isItemDimmed" :isItemHighlighted="isItemHighlighted" @item-hover="onItemHover" @item-selected="onSelect" @item-event="onEvent" :id="'CubeGrid'"
                                 :contextMenu="$refs.contextMenu">
                               </Grid>
                             </div>
                           </div>
                           <div class="col">
                             <div class="col">
+                              <div class="row mb-2 justify-content-end">
+                                <div class="col-12">
+                                  <div class="item-search">
+                                    <input
+                                      class="form-control"
+                                      type="text"
+                                      v-model="itemSearchQuery"
+                                      @keydown.esc.prevent="clearItemSearch"
+                                      placeholder="Search items by name or modifiers..." />
+                                    <button
+                                      v-if="itemSearchQuery"
+                                      type="button"
+                                      class="btn btn-sm btn-secondary item-search__clear"
+                                      @click="clearItemSearch">
+                                      Clear
+                                    </button>
+                                  </div>
+
+                                  <div v-if="itemSearchActive" class="item-search-results">
+                                    <div v-if="!itemSearchResults.length" class="text-muted text-sm mt-2">
+                                      No matches
+                                    </div>
+                                    <button
+                                      v-for="(r, idx) in itemSearchResults"
+                                      :key="idx"
+                                      type="button"
+                                      class="item-search-result"
+                                      @click="selectItemSearchResult(r.item)">
+                                      <img v-if="r.item && r.item.src" :src="r.item.src" class="item-search-result__img" alt="" />
+                                      <div class="item-search-result__text">
+                                        <div class="item-search-result__name">{{ r.title }}</div>
+                                        <div v-if="r.location" class="item-search-result__meta text-muted text-sm">{{ r.location }}</div>
+                                      </div>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
                               <div class="row mb-3 justify-content-end">
                                 <button type="button" class="btn btn-primary" :disabled="!clipboard"
                                   @click="paste()">Paste</button>
@@ -290,6 +327,8 @@
         baseModel: null,
         baseOptions: null,
         clipboard: null,
+        itemSearchQuery: '',
+        highlightedItem: null,
         load: null,
         grid: { inv: { w: 10, h: 4 }, cube: { w: 3, h: 4 } },
         location: {},
@@ -512,10 +551,237 @@
         );
       },
       mercenary() {
-        return this.save.merc_items || [];
+        return (this.save && this.save.merc_items) || [];
+      },
+      itemSearchActive() {
+        return this.normalizeItemSearchQuery(this.itemSearchQuery).length > 0;
+      },
+      itemSearchAllItems() {
+        const all = [];
+        if (this.save && Array.isArray(this.save.items)) {
+          all.push(...this.save.items);
+        }
+        if (this.save && Array.isArray(this.save.merc_items)) {
+          all.push(...this.save.merc_items);
+        }
+        if (this.stashData && Array.isArray(this.stashData.pages)) {
+          for (const p of this.stashData.pages) {
+            if (p && Array.isArray(p.items)) {
+              all.push(...p.items);
+            }
+          }
+        }
+
+        const uniq = [];
+        const seen = new Set();
+        for (const it of all) {
+          if (!it) continue;
+          if (seen.has(it)) continue;
+          seen.add(it);
+          uniq.push(it);
+        }
+        return uniq;
+      },
+      itemSearchMatches() {
+        if (!this.itemSearchActive) return [];
+        const q = this.normalizeItemSearchQuery(this.itemSearchQuery);
+        if (!q) return [];
+
+        const out = [];
+        for (const item of this.itemSearchAllItems) {
+          const text = this.itemSearchText(item);
+          if (text && text.includes(q)) {
+            out.push({
+              item,
+              title: this.itemSearchTitle(item),
+              location: this.itemSearchLocation(item),
+            });
+          }
+        }
+
+        return out;
+      },
+      itemSearchResults() {
+        // Keep the list snappy even for huge stashes.
+        return this.itemSearchMatches.slice(0, 200);
+      },
+      itemSearchMatchedSet() {
+        return new Set(this.itemSearchMatches.map(r => r.item));
       },
     },
     methods: {
+      normalizeItemSearchQuery(q) {
+        return (q || '')
+          .toString()
+          .toLowerCase()
+          .replace(/\s+/g, ' ')
+          .trim();
+      },
+      stripD2Markup(s) {
+        return (s || '')
+          .toString()
+          .replace(/\\(.*?);/gi, '')
+          .replace(/<[^>]*>/g, '')
+          .replace(/\s+/g, ' ')
+          .trim();
+      },
+      itemSearchTitle(item) {
+        try {
+          if (!item) return '';
+          const constants = this.$getWorkConstantData();
+          const personalizedName = item.personalized_name ? `${item.personalized_name}'s ` : '';
+
+          if (item.runeword_id) {
+            const rw = constants.runewords?.[item.runeword_id]?.n;
+            return (rw ? `${personalizedName}${rw}` : (item.runeword_name || item.type_name || '')).trim();
+          }
+          if (item.unique_id) {
+            const unq = constants.unq_items?.[item.unique_id]?.n;
+            return (unq ? `${personalizedName}${unq}` : (item.type_name || '')).trim();
+          }
+          if (item.set_id) {
+            const setName = constants.set_items?.[item.set_id]?.n;
+            return (setName ? `${personalizedName}${setName}` : (item.type_name || '')).trim();
+          }
+
+          let name = item.type_name || '';
+          if (item.rare_name_id) {
+            const n = constants.rare_names?.[item.rare_name_id]?.n;
+            if (n) name = `${n} ${name}`;
+          }
+          if (item.rare_name_id2) {
+            const n2 = constants.rare_names?.[item.rare_name_id2]?.n;
+            if (n2) name = `${name} ${n2}`;
+          }
+          if (item.magic_prefix) {
+            const p = constants.magic_prefixes?.[item.magic_prefix]?.n;
+            if (p) name = `${p} ${name}`;
+          }
+          if (item.magic_suffix) {
+            const s = constants.magic_suffixes?.[item.magic_suffix]?.n;
+            if (s) name = `${name} ${s}`;
+          }
+          if (item.personalized_name) {
+            name = `${item.personalized_name}'s ${name}`;
+          }
+          return name.trim();
+        } catch (_) {
+          return (item && item.type_name) ? item.type_name : '';
+        }
+      },
+      itemSearchLocation(item) {
+        if (!item) return '';
+        // A compact human label for the results list.
+        if (this.save && Array.isArray(this.save.merc_items) && this.save.merc_items.includes(item)) {
+          return 'Mercenary';
+        }
+        if (item.location_id === 1) {
+          return 'Equipped';
+        }
+        if (item.location_id === 0) {
+          if (item.alt_position_id === 1) return 'Inventory';
+          if (item.alt_position_id === 4) return 'Cube';
+          if (item.alt_position_id === 5) return 'Stash';
+          return 'Stash';
+        }
+        if (item.location_id === 5) {
+          return 'Stash';
+        }
+        return '';
+      },
+      itemSearchText(item) {
+        if (!item) return '';
+        const parts = [];
+        parts.push(this.itemSearchTitle(item));
+        if (item.type_name) parts.push(item.type_name);
+        if (item.runeword_name) parts.push(item.runeword_name);
+
+        const statDescs = [];
+        if (Array.isArray(item.displayed_combined_magic_attributes)) {
+          for (const st of item.displayed_combined_magic_attributes) {
+            if (st && st.description) statDescs.push(st.description);
+          }
+        }
+        if (Array.isArray(item.displayed_set_attributes)) {
+          for (const group of item.displayed_set_attributes) {
+            if (!Array.isArray(group)) continue;
+            for (const st of group) {
+              if (st && st.description) statDescs.push(st.description);
+            }
+          }
+        }
+        for (const d of statDescs) parts.push(this.stripD2Markup(d));
+
+        return this.normalizeItemSearchQuery(parts.join(' '));
+      },
+      isItemDimmed(item) {
+        if (!this.itemSearchActive) return false;
+        return !this.itemSearchMatchedSet.has(item);
+      },
+      isItemHighlighted(item) {
+        return !!this.highlightedItem && this.highlightedItem === item;
+      },
+      ensureItemDomId(item) {
+        if (!item) return null;
+        if (!item.__domId) {
+          item.__domId = utils.uuidv4();
+        }
+        return item.__domId;
+      },
+      scrollItemIntoView(item) {
+        const domId = this.ensureItemDomId(item);
+        if (!domId) return;
+        this.$nextTick(() => {
+          const el = document.querySelector(`[data-item-id="${domId}"]`);
+          if (el && typeof el.scrollIntoView === 'function') {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+          }
+        });
+      },
+      clearItemSearch() {
+        this.itemSearchQuery = '';
+      },
+      findStashPageIndexForItem(item) {
+        try {
+          const stash = this.stashWithMeta;
+          const pages = stash && Array.isArray(stash.pages) ? stash.pages : [];
+          for (let i = 0; i < pages.length; i++) {
+            const p = pages[i];
+            const items = p && Array.isArray(p.items) ? p.items : [];
+            if (items.includes(item)) return i;
+          }
+        } catch (_) {}
+        return null;
+      },
+      selectItemSearchResult(item) {
+        // Keep the highlight until user hovers that item.
+        this.highlightedItem = item;
+
+        const stashPageIndex = this.findStashPageIndexForItem(item);
+        if (stashPageIndex != null) {
+          // page 0 => personal stash; page >= 1 => shared stash
+          if (stashPageIndex >= 1) {
+            this.saveViewMod = 'stash';
+          } else {
+            this.saveViewMod = 'character';
+          }
+
+          const tab = stashPageIndex >= 1 ? stashPageIndex : 1;
+          this.$nextTick(() => {
+            this.$refs.stashRef && this.$refs.stashRef.setActiveTab && this.$refs.stashRef.setActiveTab(tab);
+            this.$nextTick(() => this.scrollItemIntoView(item));
+          });
+        } else {
+          this.scrollItemIntoView(item);
+        }
+
+        this.clearItemSearch();
+      },
+      onItemHover(item) {
+        if (this.highlightedItem && item === this.highlightedItem) {
+          this.highlightedItem = null;
+        }
+      },
       buildsFor(cls) {
         const mod = this.$work_mod?.value;
         if (!cls || !cls.builds) return [];
@@ -1372,5 +1638,51 @@
 .ant-input,
 .ant-input-number-input {
   text-align: left;
+}
+
+.item-search {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.item-search__clear {
+  white-space: nowrap;
+}
+
+.item-search-results {
+  margin-top: 8px;
+  max-height: 260px;
+  overflow: auto;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.item-search-result {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+}
+
+.item-search-result:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.item-search-result__img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.item-search-result__name {
+  line-height: 1.1;
 }
 </style>

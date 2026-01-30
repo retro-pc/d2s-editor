@@ -7,7 +7,7 @@
           v-on:dragleave="dragleave($event, w, h)" @contextmenu.prevent.stop="gridRC($event, w, h)">
       </div>
     </div>
-    <Item v-for="(item, idx) in items" :key="idx" :item.sync="item" @select="onSelect(item)" @contextmenu.prevent.stop="itemRC($event, item)"/>
+    <Item v-for="(item, idx) in items" :key="idx" :item.sync="item" :dimmed="isItemDimmed ? isItemDimmed(item) : false" :highlighted="isItemHighlighted ? isItemHighlighted(item) : false" @hover="onHover(item)" @select="onSelect(item)" @contextmenu.prevent.stop="itemRC($event, item)"/>
   </div>
 </template>
 
@@ -25,6 +25,8 @@
       page: Number,
       id: String,
       contextMenu: Object,
+      isItemDimmed: Function,
+      isItemHighlighted: Function,
     },
     computed: {
       gridClass() {
@@ -34,6 +36,9 @@
     methods: {
       onSelect(item) {
         this.$emit('item-selected', item);
+      },
+      onHover(item) {
+        this.$emit('item-hover', item);
       },
       dragover(event) {
         event.preventDefault();
