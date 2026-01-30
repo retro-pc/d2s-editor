@@ -9,7 +9,7 @@
         class="layer"
         :id="id + '-1'">
       </div>
-      <Item v-if="head" :item.sync="head" @click.native="onSelect(head)" @contextmenu.prevent.stop="itemRC($event, head)"/>
+      <Item v-if="head" :item.sync="head" :dimmed="isItemDimmed ? isItemDimmed(head) : false" :highlighted="isItemHighlighted ? isItemHighlighted(head) : false" @hover="onHover(head)" @click.native="onSelect(head)" @contextmenu.prevent.stop="itemRC($event, head)"/>
     </span>
     <span class="mercenary-torso"
       v-on:drop="drop($event, 3)"
@@ -20,13 +20,13 @@
         class="layer"
         :id="id + '-3'">
       </div>
-      <Item v-if="torso" :item.sync="torso" @click.native="onSelect(torso)" @contextmenu.prevent.stop="itemRC($event, torso)"/>
+      <Item v-if="torso" :item.sync="torso" :dimmed="isItemDimmed ? isItemDimmed(torso) : false" :highlighted="isItemHighlighted ? isItemHighlighted(torso) : false" @hover="onHover(torso)" @click.native="onSelect(torso)" @contextmenu.prevent.stop="itemRC($event, torso)"/>
     </span>
     <span class="mercenary-right-hand weapon">
-      <Item v-if="right_hand" :item.sync="right_hand" @click.native="onSelect(right_hand)" @contextmenu.prevent.stop="itemRC($event, right_hand)"/>
+      <Item v-if="right_hand" :item.sync="right_hand" :dimmed="isItemDimmed ? isItemDimmed(right_hand) : false" :highlighted="isItemHighlighted ? isItemHighlighted(right_hand) : false" @hover="onHover(right_hand)" @click.native="onSelect(right_hand)" @contextmenu.prevent.stop="itemRC($event, right_hand)"/>
     </span>
     <span class="mercenary-left-hand weapon">
-      <Item v-if="left_hand" :item.sync="left_hand" @click.native="onSelect(left_hand)" @contextmenu.prevent.stop="itemRC($event, left_hand)"/>
+      <Item v-if="left_hand" :item.sync="left_hand" :dimmed="isItemDimmed ? isItemDimmed(left_hand) : false" :highlighted="isItemHighlighted ? isItemHighlighted(left_hand) : false" @hover="onHover(left_hand)" @click.native="onSelect(left_hand)" @contextmenu.prevent.stop="itemRC($event, left_hand)"/>
     </span>
   </div>
 </template>
@@ -42,6 +42,8 @@
       items: Array,
       id: String,
       contextMenu: Object,
+      isItemDimmed: Function,
+      isItemHighlighted: Function,
     },
     computed: {
       head() { return this.items.find(e => e.equipped_id === 1); },
@@ -58,6 +60,9 @@
       alt_left_hand() { return this.items.find(e => e.equipped_id === 12); }
     },
     methods: {
+      onHover(item) {
+        this.$emit('item-hover', item);
+      },
       onEvent(e) {
         this.$emit('item-event', e);
       },
