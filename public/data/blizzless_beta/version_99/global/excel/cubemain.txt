@@ -1,0 +1,942 @@
+description	enabled	firstLadderSeason	lastLadderSeason	min diff	version	op	param	value	class	numinputs	input 1	input 2	input 3	input 4	input 5	input 6	input 7	output	lvl	plvl	ilvl	mod 1	mod 1 chance	mod 1 param	mod 1 min	mod 1 max	mod 2	mod 2 chance	mod 2 param	mod 2 min	mod 2 max	mod 3	mod 3 chance	mod 3 param	mod 3 min	mod 3 max	mod 4	mod 4 chance	mod 4 param	mod 4 min	mod 4 max	mod 5	mod 5 chance	mod 5 param	mod 5 min	mod 5 max	output b	b lvl	b plvl	b ilvl	b mod 1	b mod 1 chance	b mod 1 param	b mod 1 min	b mod 1 max	b mod 2	b mod 2 chance	b mod 2 param	b mod 2 min	b mod 2 max	b mod 3	b mod 3 chance	b mod 3 param	b mod 3 min	b mod 3 max	b mod 4	b mod 4 chance	b mod 4 param	b mod 4 min	b mod 4 max	b mod 5	b mod 5 chance	b mod 5 param	b mod 5 min	b mod 5 max	output c	c lvl	c plvl	c ilvl	c mod 1	c mod 1 chance	c mod 1 param	c mod 1 min	c mod 1 max	c mod 2	c mod 2 chance	c mod 2 param	c mod 2 min	c mod 2 max	c mod 3	c mod 3 chance	c mod 3 param	c mod 3 min	c mod 3 max	c mod 4	c mod 4 chance	c mod 4 param	c mod 4 min	c mod 4 max	c mod 5	c mod 5 chance	c mod 5 param	c mod 5 min	c mod 5 max	*eol
+Staff of Kings + Amulet of the Viper -> Horadric Staff	1				0	28				2	msf	vip						hst																																																																																							0
+Khalim's Flail + Khalim's Heart + Khalim's Eye + Khalim's Brain -> Khalim's Will	1				0	28				4	qf1	qhr	qey	qbr				qf2																																																																																							0
+Wirt's Leg + Tome of Town Portal -> Portal to The Secret Cow Level	1				0	28				2	leg	tbk						Cow Portal																																																																																							0
+3 Healing Potions (Any) + 3 Mana Potions (Any) + 1 Standard Gem (Any) -> Full Rejuvenation Potion	1				0					7	"hpot,qty=3"	"mpot,qty=3"	gem2					rvl																																																																																							0
+3 Healing Potions (Any) + 3 Mana Potions (Any)  + 1 Chipped Gem (Any) -> Rejuvenation Potion	1				0					7	"hpot,qty=3"	"mpot,qty=3"	gem0					rvs																																																																																							0
+3 Rejuvenation Potions -> Full Rejuvenation Potion	1				0					3	"rvs,qty=3"							rvl																																																																																							0
+6 Perfect Gems (1 of each type) + 1 Magic Amulet -> Prismatic Amulet	1				0					7	"amu,mag"	gpv	gpy	gpb	gpg	gpr	gpw	"amu,mag,pre=331"	50																																																																																						0
+1 Magic Ring + 1 Perfect Ruby + 1 Exploding Potion -> Garnet Ring	1				0					3	"rin,mag"	gpr	opm					"rin,mag,pre=372"	30																																																																																						0
+1 Magic Ring + 1 Perfect Sapphire + 1 Thawing Potion -> Cobalt Ring	1				0					3	"rin,mag"	gpb	wms					"rin,mag,pre=353"	30																																																																																						0
+1 Magic Ring + 1 Perfect Topaz + 1 Rejuvenation Potion -> Coral Ring	1				0					3	"rin,mag"	gpy	rvs					"rin,mag,pre=392"	30																																																																																						0
+1 Magic Ring + 1 Standard Emerald + 1 Antidote Potion -> Jade Ring	1				0					3	"rin,mag"	gpg	yps					"rin,mag,pre=412"	30																																																																																						0
+1 Axe (Any) + 1 Dagger (Any) -> Throwing Axe	1				0					2	axe	knif						"tax,nor"																																																																																							0
+1 Spear (Any) + 1 Arrows -> Javelins	1				0					2	spea	aqv						"jav,nor"																																																																																							0
+3 Magic Rings -> Magic Amulet	1				0					3	"rin,mag,qty=3"							"amu,mag"		75																																																																																					0
+3 Magic Amulets -> Magic Ring	1				0					3	"amu,mag,qty=3"							"rin,mag"		75																																																																																					0
+3 Standard Gems + 1 Socketed Weapon ->  Socketed Magic Weapon	1				0					4	"weap,sock"	"gem2,qty=3"						"usetype,mag"	30		60	sock			1	2																																																																															0
+3 Flawless Gems + 1 Magic Weapon -> Socketed Magic Weapon	1				0					4	"weap,mag"	"gem3,qty=3"						"usetype,mag"	30		60	sock			1	2																																																																															0
+1 Magic Shield + 1 Spiked Club + 2 Skulls (Any) -> Magic Shield of Spikes	1				0					4	"shld,mag"	"gemz,qty=2"	spc					"usetype,mag,suf=162"	30		60																																																																																				0
+4 Healing Potions (Any) + 1 Standard Ruby + 1 Magic Sword -> Sword of the Leech	1				0					6	"swor,mag"	gemr	"hpot,qty=4"					"usetype,mag,suf=352"	30		60																																																																																				0
+1 Diamond (Any) + 1 Kris + 1 Staff + 1 Belt -> Savage Polearm	1				0					4	kri	gemd	staf	belt				"pole,mag,pre=191"	50		60																																																																																				0
+1 Strangling Gas Potion + 1 Healing Potion (Any) -> Antidote Potion	1				0					2	gpl	hpot						yps																																																																																							0
+2 Arrows -> Bolts	1				0					2	"aqv,qty=2"							cqv																																																																																							0
+2 Bolts -> Arrows	1				0					2	"cqv,qty=2"							aqv																																																																																							0
+3 Chipped Amethysts -> Flawed Amethyst	1				0					3	"gcv,qty=3"							gfv																																																																																							0
+3 Flawed Amethysts -> Standard Amethyst	1				0					3	"gfv,qty=3"							gsv																																																																																							0
+3 Standard Amethysts -> Flawless Amethyst	1				0					3	"gsv,qty=3"							gzv																																																																																							0
+3 Flawless Amethysts -> Perfect Amethyst	1				0					3	"gzv,qty=3"							gpv																																																																																							0
+3 Chipped Rubies -> Flawed Ruby	1				0					3	"gcr,qty=3"							gfr																																																																																							0
+3 Flawed Rubies -> Standard Ruby	1				0					3	"gfr,qty=3"							gsr																																																																																							0
+3 Standard Rubies -> Flawless Ruby	1				0					3	"gsr,qty=3"							glr																																																																																							0
+3 Flawless Rubies -> Perfect Ruby	1				0					3	"glr,qty=3"							gpr																																																																																							0
+3 Chipped Sapphires -> Flawed Sapphire	1				0					3	"gcb,qty=3"							gfb																																																																																							0
+3 Flawed Sapphires -> Standard Sapphire	1				0					3	"gfb,qty=3"							gsb																																																																																							0
+3 Standard Sapphires -> Flawless Sapphire	1				0					3	"gsb,qty=3"							glb																																																																																							0
+3 Flawless Sapphires -> Perfect Sapphire	1				0					3	"glb,qty=3"							gpb																																																																																							0
+3 Chipped Topazes -> Flawed Topaz	1				0					3	"gcy,qty=3"							gfy																																																																																							0
+3 Flawed Topazes -> Standard Topaz	1				0					3	"gfy,qty=3"							gsy																																																																																							0
+3 Standard Topazes -> Flawless Topaz	1				0					3	"gsy,qty=3"							gly																																																																																							0
+3 Flawless Topazes -> Perfect Topaz	1				0					3	"gly,qty=3"							gpy																																																																																							0
+3 Chipped Emeralds -> Flawed Emerald	1				0					3	"gcg,qty=3"							gfg																																																																																							0
+3 Flawed Emeralds -> Standard Emerald	1				0					3	"gfg,qty=3"							gsg																																																																																							0
+3 Standard Emeralds -> Flawless Emerald	1				0					3	"gsg,qty=3"							glg																																																																																							0
+3 Flawless Emeralds -> Perfect Emerald	1				0					3	"glg,qty=3"							gpg																																																																																							0
+3 Chipped Diamonds -> Flawed Diamond	1				0					3	"gcw,qty=3"							gfw																																																																																							0
+3 Flawed Diamonds -> Standard Diamond	1				0					3	"gfw,qty=3"							gsw																																																																																							0
+3 Standard Diamonds -> Flawless Diamond	1				0					3	"gsw,qty=3"							glw																																																																																							0
+3 Flawless Diamonds -> Perfect Diamond	1				0					3	"glw,qty=3"							gpw																																																																																							0
+3 Chipped Skulls -> Flawed Skull	1				0					3	"skc,qty=3"							skf																																																																																							0
+3 Flawed Skulls -> Standard Skull	1				0					3	"skf,qty=3"							sku																																																																																							0
+3 Standard Skulls -> Flawless Skull	1				0					3	"sku,qty=3"							skl																																																																																							0
+3 Flawless Skulls -> Perfect Skull	1				0					3	"skl,qty=3"							skz																																																																																							0
+3 El Runes -> Eld Rune	1				100					3	"r01,qty=3"							r02																																																																																							0
+3 Eld Runes -> Tir Rune	1				100					3	"r02,qty=3"							r03																																																																																							0
+3 Tir Runes -> Nef Rune	1				100					3	"r03,qty=3"							r04																																																																																							0
+3 Nef Runes -> Eth Rune	1				100					3	"r04,qty=3"							r05																																																																																							0
+3 Eth Runes -> Ith Rune	1				100					3	"r05,qty=3"							r06																																																																																							0
+3 Ith Runes -> Tal Rune	1				100					3	"r06,qty=3"							r07																																																																																							0
+3 Tal Runes -> Ral Rune	1				100					3	"r07,qty=3"							r08																																																																																							0
+3 Ral Runes -> Ort Rune	1				100					3	"r08,qty=3"							r09																																																																																							0
+3 Ort Runes -> Thul Rune	1				100					3	"r09,qty=3"							r10																																																																																							0
+3 Perfect Gems (Any) + 1 Magic Item -> Re-rolled Magic Item	1				100					4	"any,mag"	"gem4,qty=3"						"usetype,mag"			100																																																																																				0
+6 Perfect Skulls + 1 Rare Item -> 1 Low Quality Rare Item	1				0					7	"any,rar"	"skz,qty=6"						"usetype,rar"		40	40																																																																																				0
+1 Perfect Skull + 1 Rare Item + 1 Stone of Jordan -> 1 High Quality Rare Item	1				0					3	"any,rar"	skz	The Stone of Jordan					"usetype,rar"		66	66																																																																																				0
+3 Perfect Skull + 1 Rare Item + 1 Stone of Jordan -> Add 1 Socket to Rare Item	1				0					5	"any,rar,nos"	"skz,qty=3"	The Stone of Jordan					"useitem,sock=1"																																																																																							0
+1 Ethereal Magic Full Helm + 1 Jewel + 1 Ith Rune + 1 Perfect Sapphire -> Hit Power Helm	1				100					4	"fhl,mag,upg,eth"	jew	r06	gpb				"usetype,crf,eth"		50	50	gethit-skill		44	5	4	thorns			3	7	ac-miss			25	50																																																																					0
+1 Ethereal Magic Chain Boots + 1 Jewel + 1 Ral Rune + 1 Perfect Sapphire -> Hit Power Boots	1				100					4	"mbt,mag,upg,eth"	jew	r08	gpb				"usetype,crf,eth"		50	50	gethit-skill		44	5	4	thorns			3	7	ac-hth			25	60																																																																					0
+1 Ethereal Magic Chain Gloves + 1 Jewel + 1 Ort Rune + 1 Perfect Sapphire -> Hit Power Gloves	1				100					4	"mgl,mag,upg,eth"	jew	r09	gpb				"usetype,crf,eth"		50	50	gethit-skill		44	5	4	thorns			3	7	knock			1	1																																																																					0
+1 Ethereal Magic Heavy Belt + 1 Jewel + 1 Tal Rune + 1 Perfect Sapphire -> Hit Power Belt	1				100					4	"tbl,mag,upg,eth"	jew	r07	gpb				"usetype,crf,eth"		50	50	gethit-skill		44	5	4	thorns			3	7	dmg-to-mana			5	10																																																																					0
+1 Ethereal Magic Gothic Shield + 1 Jewel + 1 Eth Rune + 1 Perfect Sapphire -> Hit Power Shield	1				100					4	"gts,mag,upg,eth"	jew	r05	gpb				"usetype,crf,eth"		50	50	gethit-skill		44	5	4	thorns			3	10	block			5	10																																																																					0
+1 Ethereal Magic Field Plate + 1 Jewel + 1 Nef Rune + 1 Perfect Sapphire -> Hit Power Body	1				100					4	"fld,mag,upg,eth"	jew	r04	gpb				"usetype,crf,eth"		50	50	gethit-skill		44	5	4	thorns			3	10	balance1			10	20																																																																					0
+1 Ethereal Magic Amulet + 1 Jewel + Thul Rune + 1 Perfect Sapphire -> Hit Power Amulet	1				100					4	"amul,mag,eth"	jew	r10	gpb				"usetype,crf,eth"		50	50	gethit-skill		44	5	4	thorns			3	10	howl			5	15																																																																					0
+1 Ethereal Magic Ring + 1 Jewel + 1 Amn Rune + 1 Perfect Sapphire -> Hit Power Ring	1				100					4	"ring,mag,eth"	jew	r11	gpb				"usetype,crf,eth"		50	50	gethit-skill		44	5	4	thorns			3	6	dex			1	5																																																																					0
+1 Ethereal Magic Blunt Weapon + 1 Jewel + 1 Tir Rune + 1 Perfect Sapphire -> Hit Power Weapon	1				100					4	"blun,mag,eth"	jew	r03	gpb				"usetype,crf,eth"		50	50	gethit-skill		44	5	4	thorns			3	7	dmg%			35	60																																																																					0
+1 Ethereal Magic Helm + 1 Jewel + 1 Ral Rune + 1 Perfect Ruby -> Blood Helm	1				100					4	"hlm,mag,upg,eth"	jew	r08	gpr				"usetype,crf,eth"		50	50	lifesteal			1	3	hp			10	20	deadly			5	10																																																																					0
+1 Ethereal Magic Light Plated Boots + 1 Jewel + 1 Eth Rune + 1 Perfect Ruby -> Blood Boots	1				100					4	"tbt,mag,upg,eth"	jew	r05	gpr				"usetype,crf,eth"		50	50	lifesteal			1	3	hp			10	20	regen			5	10																																																																					0
+1 Ethereal Magic Heavy Gloves + 1 Jewel + 1 Nef Rune + 1 Perfect Ruby -> Blood Gloves	1				100					4	"vgl,mag,upg,eth"	jew	r04	gpr				"usetype,crf,eth"		50	50	lifesteal			1	3	hp			10	20	crush			5	10																																																																					0
+1 Ethereal Magic Belt + 1 Jewel + 1 Tal Rune + 1 Perfect Ruby -> Blood Belt	1				100					4	"mbl,mag,upg,eth"	jew	r07	gpr				"usetype,crf,eth"		50	50	lifesteal			1	3	hp			10	20	openwounds			5	10																																																																					0
+1 Ethereal Magic Spiked Shield + 1 Jewel + 1 Ith Rune + 1 Perfect Ruby -> Blood Shield	1				100					4	"spk,mag,upg,eth"	jew	r06	gpr				"usetype,crf,eth"		50	50	lifesteal			1	3	hp			10	20	thorns			4	7																																																																					0
+1 Ethereal Magic Plate Mail + 1 Jewel + 1 Thul Rune + 1 Perfect Ruby -> Blood Body	1				100					4	"plt,mag,upg,eth"	jew	r10	gpr				"usetype,crf,eth"		50	50	lifesteal			1	3	hp			10	20	demon-heal			1	3																																																																					0
+1 Ethereal Magic Amulet + 1 Jewel + 1 Amn Rune + 1 Perfect Ruby -> Blood Amulet	1				100					4	"amul,mag,eth"	jew	r11	gpr				"usetype,crf,eth"		50	50	lifesteal			1	4	hp			10	20	move1			5	10																																																																					0
+1 Ethereal Magic Ring + 1 Jewel + 1 Sol Rune + 1 Perfect Ruby -> Blood Ring	1				100					4	"ring,mag,eth"	jew	r12	gpr				"usetype,crf,eth"		50	50	lifesteal			1	3	hp			10	20	str			1	5																																																																					0
+1 Ethereal Magic Axe + 1 Jewel + Ort Rune + 1 Perfect Ruby -> Blood Weapon	1				100					4	"axe,mag,eth"	jew	r09	gpr				"usetype,crf,eth"		50	50	lifesteal			1	4	hp			10	20	dmg%			35	60																																																																					0
+1 Ethereal Magic Mask + 1 Jewel + Nef Rune + 1 Perfect Amethyst -> Caster Helm	1				100					4	"msk,mag,upg,eth"	jew	r04	gpv				"usetype,crf,eth"		50	50	regen-mana			4	10	mana			10	20	manasteal			1	4																																																																					0
+1 Ethereal Magic Boots + 1 Jewel + Thul Rune + 1 Perfect Amethyst -> Caster Boots	1				100					4	"lbt,mag,upg,eth"	jew	r10	gpv				"usetype,crf,eth"		50	50	regen-mana			4	10	mana			10	20	mana%			2	5																																																																					0
+1 Ethereal Magic Leather Gloves + 1 Jewel + Ort Rune + 1 Perfect Amethyst -> Caster Gloves	1				100					4	"lgl,mag,upg,eth"	jew	r09	gpv				"usetype,crf,eth"		50	50	regen-mana			4	10	mana			10	20	mana-kill			1	3																																																																					0
+1 Ethereal Magic Light Belt + 1 Jewel + Ith Rune + 1 Perfect Amethyst -> Caster Belt	1				100					4	"vbl,mag,upg,eth"	jew	r06	gpv				"usetype,crf,eth"		50	50	regen-mana			4	10	mana			10	20	cast1			5	10																																																																					0
+1 Ethereal Magic Small Shield + 1 Jewel + 1 Eth Rune + 1 Perfect Amethyst -> Caster Shield	1				100					4	"sml,mag,upg,eth"	jew	r05	gpv				"usetype,crf,eth"		50	50	regen-mana			4	10	mana			10	20	block			5	10																																																																					0
+1 Ethereal Magic Light Plate + 1 Jewel + 1 Tal Rune + 1 Perfect Amethyst -> Caster Body	1				100					4	"ltp,mag,upg,eth"	jew	r07	gpv				"usetype,crf,eth"		50	50	regen-mana			4	10	mana			10	20	mana-kill			1	3																																																																					0
+1 Ethereal Magic Amulet + 1 Jewel + 1 Ral Rune + 1 Perfect Amethyst -> Caster Amulet	1				100					4	"amul,mag,eth"	jew	r08	gpv				"usetype,crf,eth"		50	50	regen-mana			4	10	mana			10	20	cast1			5	10																																																																					0
+1 Ethereal Magic Ring + 1 Jewel + 1 Amn Rune + 1 Perfect Amethyst -> Caster Ring	1				100					4	"ring,mag,eth"	jew	r11	gpv				"usetype,crf,eth"		50	50	regen-mana			4	10	mana			10	20	enr			1	5																																																																					0
+1 Ethereal Magic Rod + 1 Jewel + 1 Tir Rune + 1 Perfect Amethyst -> Caster Weapon	1				100					4	"rod,mag,eth"	jew	r03	gpv				"usetype,crf,eth"		50	50	regen-mana			4	10	mana			10	20	mana%			1	5																																																																					0
+1 Ethereal Magic Crown + 1 Jewel + 1 Ith Rune + 1 Perfect Emerald -> Safety Helm	1				100					4	"crn,mag,upg,eth"	jew	r06	gpg				"usetype,crf,eth"		50	50	red-dmg			1	4	red-mag			1	2	res-ltng			5	10	ac%			10	30																																																																0
+1 Ethereal Magic Plated Boots + 1 Jewel + 1 Ort Rune + 1 Perfect Emerald -> Safety Boots	1				100					4	"hbt,mag,upg,eth"	jew	r09	gpg				"usetype,crf,eth"		50	50	red-dmg			1	4	red-mag			1	2	res-fire			5	10	ac%			10	30																																																																0
+1 Ethereal Magic Gauntlets + 1 Jewel + 1 Ral Rune + 1 Perfect Emerald -> Safety Gloves	1				100					4	"hgl,mag,upg,eth"	jew	r08	gpg				"usetype,crf,eth"		50	50	red-dmg			1	4	red-mag			1	2	res-cold			5	10	ac%			10	30																																																																0
+1 Ethereal Magic Sash + 1 Jewel + 1 Tal Rune + 1 Perfect Emerald -> Safety Belt	1				100					4	"lbl,mag,upg,eth"	jew	r07	gpg				"usetype,crf,eth"		50	50	red-dmg			1	4	red-mag			1	2	res-pois			5	10	ac%			10	30																																																																0
+1 Ethereal Magic Kite Shield + 1 Jewel + 1 Nef Rune + 1 Perfect Emerald -> Safety Shield	1				100					4	"kit,mag,upg,eth"	jew	r04	gpg				"usetype,crf,eth"		50	50	red-dmg			1	4	red-mag			1	2	res-mag			5	10	ac%			10	30																																																																0
+1 Ethereal Magic Breast Plate + 1 Jewel + 1 Eth Rune + 1 Perfect Emerald -> Safety Body	1				100					4	"brs,mag,upg,eth"	jew	r05	gpg				"usetype,crf,eth"		50	50	red-dmg			1	4	red-mag			1	2	half-freeze			1	1	ac%			10	30																																																																0
+1 Ethereal Magic Amulet + 1 Jewel + 1 Thul Rune + 1 Perfect Emerald -> Safety Amulet	1				100					4	"amul,mag,eth"	jew	r10	gpg				"usetype,crf,eth"		50	50	red-dmg			1	4	red-mag			1	2	block			1	10																																																																					0
+1 Ethereal Magic Ring + 1 Jewel + 1 Amn Rune + 1 Perfect Emerald -> Safety Ring	1				100					4	"ring,mag,eth"	jew	r11	gpg				"usetype,crf,eth"		50	50	red-dmg			1	4	red-mag			1	2	vit			1	5																																																																					0
+1 Ethereal Magic Spear + 1 Jewel + 1 Sol Rune + 1 Perfect Emerald -> Safety Weapon	1				100					4	"spea,mag,eth"	jew	r12	gpg				"usetype,crf,eth"		50	50	red-dmg			1	4	red-mag			1	2	ac%			5	10																																																																					0
+1 Not Ethereal Magic Full Helm + 1 Jewel + 1 Ith Rune + 1 Perfect Sapphire -> Hit Power Helm	1				100					4	"fhl,mag,upg,noe"	jew	r06	gpb				"usetype,crf"		50	50	gethit-skill		44	5	4	thorns			3	7	ac-miss			25	50																																																																					0
+1 Not Ethereal Magic Chain Boots + 1 Jewel + 1 Ral Rune + 1 Perfect Sapphire -> Hit Power Boots	1				100					4	"mbt,mag,upg,noe"	jew	r08	gpb				"usetype,crf"		50	50	gethit-skill		44	5	4	thorns			3	7	ac-hth			25	60																																																																					0
+1 Not Ethereal Magic Chain Gloves + 1 Jewel + 1 Ort Rune + 1 Perfect Sapphire -> Hit Power Gloves	1				100					4	"mgl,mag,upg,noe"	jew	r09	gpb				"usetype,crf"		50	50	gethit-skill		44	5	4	thorns			3	7	knock			1	1																																																																					0
+1 Not Ethereal Magic Heavy Belt + 1 Jewel + 1 Tal Rune + 1 Perfect Sapphire -> Hit Power Belt	1				100					4	"tbl,mag,upg,noe"	jew	r07	gpb				"usetype,crf"		50	50	gethit-skill		44	5	4	thorns			3	7	dmg-to-mana			5	10																																																																					0
+1 Not Ethereal Magic Gothic Shield + 1 Jewel + 1 Eth Rune + 1 Perfect Sapphire -> Hit Power Shield	1				100					4	"gts,mag,upg,noe"	jew	r05	gpb				"usetype,crf"		50	50	gethit-skill		44	5	4	thorns			3	10	block			5	10																																																																					0
+1 Not Ethereal Magic Field Plate + 1 Jewel + 1 Nef Rune + 1 Perfect Sapphire -> Hit Power Body	1				100					4	"fld,mag,upg,noe"	jew	r04	gpb				"usetype,crf"		50	50	gethit-skill		44	5	4	thorns			3	10	balance1			10	20																																																																					0
+1 Not Ethereal Magic Amulet + 1 Jewel + Thul Rune + 1 Perfect Sapphire -> Hit Power Amulet	1				100					4	"amul,mag,noe"	jew	r10	gpb				"usetype,crf"		50	50	gethit-skill		44	5	4	thorns			3	10	howl			5	15																																																																					0
+1 Not Ethereal Magic Ring + 1 Jewel + 1 Amn Rune + 1 Perfect Sapphire -> Hit Power Ring	1				100					4	"ring,mag,noe"	jew	r11	gpb				"usetype,crf"		50	50	gethit-skill		44	5	4	thorns			3	6	dex			1	5																																																																					0
+1 Not Ethereal Magic Blunt Weapon + 1 Jewel + 1 Tir Rune + 1 Perfect Sapphire -> Hit Power Weapon	1				100					4	"blun,mag,noe"	jew	r03	gpb				"usetype,crf"		50	50	gethit-skill		44	5	4	thorns			3	7	dmg%			35	60																																																																					0
+1 Not Ethereal Magic Helm + 1 Jewel + 1 Ral Rune + 1 Perfect Ruby -> Blood Helm	1				100					4	"hlm,mag,upg,noe"	jew	r08	gpr				"usetype,crf"		50	50	lifesteal			1	3	hp			10	20	deadly			5	10																																																																					0
+1 Not Ethereal Magic Light Plated Boots + 1 Jewel + 1 Eth Rune + 1 Perfect Ruby -> Blood Boots	1				100					4	"tbt,mag,upg,noe"	jew	r05	gpr				"usetype,crf"		50	50	lifesteal			1	3	hp			10	20	regen			5	10																																																																					0
+1 Not Ethereal Magic Heavy Gloves + 1 Jewel + 1 Nef Rune + 1 Perfect Ruby -> Blood Gloves	1				100					4	"vgl,mag,upg,noe"	jew	r04	gpr				"usetype,crf"		50	50	lifesteal			1	3	hp			10	20	crush			5	10																																																																					0
+1 Not Ethereal Magic Belt + 1 Jewel + 1 Tal Rune + 1 Perfect Ruby -> Blood Belt	1				100					4	"mbl,mag,upg,noe"	jew	r07	gpr				"usetype,crf"		50	50	lifesteal			1	3	hp			10	20	openwounds			5	10																																																																					0
+1 Not Ethereal Magic Spiked Shield + 1 Jewel + 1 Ith Rune + 1 Perfect Ruby -> Blood Shield	1				100					4	"spk,mag,upg,noe"	jew	r06	gpr				"usetype,crf"		50	50	lifesteal			1	3	hp			10	20	thorns			4	7																																																																					0
+1 Not Ethereal Magic Plate Mail + 1 Jewel + 1 Thul Rune + 1 Perfect Ruby -> Blood Body	1				100					4	"plt,mag,upg,noe"	jew	r10	gpr				"usetype,crf"		50	50	lifesteal			1	3	hp			10	20	demon-heal			1	3																																																																					0
+1 Not Ethereal Magic Amulet + 1 Jewel + 1 Amn Rune + 1 Perfect Ruby -> Blood Amulet	1				100					4	"amul,mag,noe"	jew	r11	gpr				"usetype,crf"		50	50	lifesteal			1	4	hp			10	20	move1			5	10																																																																					0
+1 Not Ethereal Magic Ring + 1 Jewel + 1 Sol Rune + 1 Perfect Ruby -> Blood Ring	1				100					4	"ring,mag,noe"	jew	r12	gpr				"usetype,crf"		50	50	lifesteal			1	3	hp			10	20	str			1	5																																																																					0
+1 Not Ethereal Magic Axe + 1 Jewel + Ort Rune + 1 Perfect Ruby -> Blood Weapon	1				100					4	"axe,mag,noe"	jew	r09	gpr				"usetype,crf"		50	50	lifesteal			1	4	hp			10	20	dmg%			35	60																																																																					0
+1 Not Ethereal Magic Mask + 1 Jewel + Nef Rune + 1 Perfect Amethyst -> Caster Helm	1				100					4	"msk,mag,upg,noe"	jew	r04	gpv				"usetype,crf"		50	50	regen-mana			4	10	mana			10	20	manasteal			1	4																																																																					0
+1 Not Ethereal Magic Boots + 1 Jewel + Thul Rune + 1 Perfect Amethyst -> Caster Boots	1				100					4	"lbt,mag,upg,noe"	jew	r10	gpv				"usetype,crf"		50	50	regen-mana			4	10	mana			10	20	mana%			2	5																																																																					0
+1 Not Ethereal Magic Leather Gloves + 1 Jewel + Ort Rune + 1 Perfect Amethyst -> Caster Gloves	1				100					4	"lgl,mag,upg,noe"	jew	r09	gpv				"usetype,crf"		50	50	regen-mana			4	10	mana			10	20	mana-kill			1	3																																																																					0
+1 Not Ethereal Magic Light Belt + 1 Jewel + Ith Rune + 1 Perfect Amethyst -> Caster Belt	1				100					4	"vbl,mag,upg,noe"	jew	r06	gpv				"usetype,crf"		50	50	regen-mana			4	10	mana			10	20	cast1			5	10																																																																					0
+1 Not Ethereal Magic Small Shield + 1 Jewel + 1 Eth Rune + 1 Perfect Amethyst -> Caster Shield	1				100					4	"sml,mag,upg,noe"	jew	r05	gpv				"usetype,crf"		50	50	regen-mana			4	10	mana			10	20	block			5	10																																																																					0
+1 Not Ethereal Magic Light Plate + 1 Jewel + 1 Tal Rune + 1 Perfect Amethyst -> Caster Body	1				100					4	"ltp,mag,upg,noe"	jew	r07	gpv				"usetype,crf"		50	50	regen-mana			4	10	mana			10	20	mana-kill			1	3																																																																					0
+1 Not Ethereal Magic Amulet + 1 Jewel + 1 Ral Rune + 1 Perfect Amethyst -> Caster Amulet	1				100					4	"amul,mag,noe"	jew	r08	gpv				"usetype,crf"		50	50	regen-mana			4	10	mana			10	20	cast1			5	10																																																																					0
+1 Not Ethereal Magic Ring + 1 Jewel + 1 Amn Rune + 1 Perfect Amethyst -> Caster Ring	1				100					4	"ring,mag,noe"	jew	r11	gpv				"usetype,crf"		50	50	regen-mana			4	10	mana			10	20	enr			1	5																																																																					0
+1 Not Ethereal Magic Rod + 1 Jewel + 1 Tir Rune + 1 Perfect Amethyst -> Caster Weapon	1				100					4	"rod,mag,noe"	jew	r03	gpv				"usetype,crf"		50	50	regen-mana			4	10	mana			10	20	mana%			1	5																																																																					0
+1 Not Ethereal Magic Crown + 1 Jewel + 1 Ith Rune + 1 Perfect Emerald -> Safety Helm	1				100					4	"crn,mag,upg,noe"	jew	r06	gpg				"usetype,crf"		50	50	red-dmg			1	4	red-mag			1	2	res-ltng			5	10	ac%			10	30																																																																0
+1 Not Ethereal Magic Plated Boots + 1 Jewel + 1 Ort Rune + 1 Perfect Emerald -> Safety Boots	1				100					4	"hbt,mag,upg,noe"	jew	r09	gpg				"usetype,crf"		50	50	red-dmg			1	4	red-mag			1	2	res-fire			5	10	ac%			10	30																																																																0
+1 Not Ethereal Magic Gauntlets + 1 Jewel + 1 Ral Rune + 1 Perfect Emerald -> Safety Gloves	1				100					4	"hgl,mag,upg,noe"	jew	r08	gpg				"usetype,crf"		50	50	red-dmg			1	4	red-mag			1	2	res-cold			5	10	ac%			10	30																																																																0
+1 Not Ethereal Magic Sash + 1 Jewel + 1 Tal Rune + 1 Perfect Emerald -> Safety Belt	1				100					4	"lbl,mag,upg,noe"	jew	r07	gpg				"usetype,crf"		50	50	red-dmg			1	4	red-mag			1	2	res-pois			5	10	ac%			10	30																																																																0
+1 Not Ethereal Magic Kite Shield + 1 Jewel + 1 Nef Rune + 1 Perfect Emerald -> Safety Shield	1				100					4	"kit,mag,upg,noe"	jew	r04	gpg				"usetype,crf"		50	50	red-dmg			1	4	red-mag			1	2	res-mag			5	10	ac%			10	30																																																																0
+1 Not Ethereal Magic Breast Plate + 1 Jewel + 1 Eth Rune + 1 Perfect Emerald -> Safety Body	1				100					4	"brs,mag,upg,noe"	jew	r05	gpg				"usetype,crf"		50	50	red-dmg			1	4	red-mag			1	2	half-freeze			1	1	ac%			10	30																																																																0
+1 Not Ethereal Magic Amulet + 1 Jewel + 1 Thul Rune + 1 Perfect Emerald -> Safety Amulet	1				100					4	"amul,mag,noe"	jew	r10	gpg				"usetype,crf"		50	50	red-dmg			1	4	red-mag			1	2	block			1	10																																																																					0
+1 Not Ethereal Magic Ring + 1 Jewel + 1 Amn Rune + 1 Perfect Emerald -> Safety Ring	1				100					4	"ring,mag,noe"	jew	r11	gpg				"usetype,crf"		50	50	red-dmg			1	4	red-mag			1	2	vit			1	5																																																																					0
+1 Not Ethereal Magic Spear + 1 Jewel + 1 Sol Rune + 1 Perfect Emerald -> Safety Weapon	1				100					4	"spea,mag,noe"	jew	r12	gpg				"usetype,crf"		50	50	red-dmg			1	4	red-mag			1	2	ac%			5	10																																																																					0
+3 Thul Runes -> Amn Rune	1				100					3	"r10,qty=3"							r11																																																																																							0
+3 Amn Runes -> Sol Rune	1				100					3	"r11,qty=3"							r12																																																																																							0
+3 Sol Runes -> Shael Rune	1				100					3	"r12,qty=3"							r13																																																																																							0
+3 Shael Runes -> Dol Rune	1				100					3	"r13,qty=3"							r14																																																																																							0
+3 Dol Runes -> Hel Rune	1				100					3	"r14,qty=3"							r15																																																																																							0
+3 Hel Runes -> Io Rune	1				100					3	"r15,qty=3"							r16																																																																																							0
+3 Io Runes -> Lum Rune	1				100					3	"r16,qty=3"							r17																																																																																							0
+3 Lum Runes -> Ko Rune	1				100					3	"r17,qty=3"							r18																																																																																							0
+3 Ko Runes -> Fal Rune	1				100					3	"r18,qty=3"							r19																																																																																							0
+3 Fal Runes -> Lem Rune	1				100					3	"r19,qty=3"							r20																																																																																							0
+3 Lem Runes -> Pul Rune	1				100					3	"r20,qty=3"							r21																																																																																							0
+2 Pul Runes -> Um Rune	1				100					2	"r21,qty=2"							r22																																																																																							0
+2 Um Runes -> Mal Rune	1				100					2	"r22,qty=2"							r23																																																																																							0
+2 Mal Runes -> Ist Rune	1				100					2	"r23,qty=2"							r24																																																																																							0
+2 Ist Runes -> Gul Rune	1				100					2	"r24,qty=2"							r25																																																																																							0
+2 Gul Runes -> Vex Rune	1				100					2	"r25,qty=2"							r26																																																																																							0
+2 Vex Runes -> Ohm Rune	1				100					2	"r26,qty=2"							r27																																																																																							0
+2 Ohm Runes -> Lo Rune	1				100					2	"r27,qty=2"							r28																																																																																							0
+2 Lo Runes -> Sur Rune	1				100					2	"r28,qty=2"							r29																																																																																							0
+2 Sur Runes -> Ber Rune	1				100					2	"r29,qty=2"							r30																																																																																							0
+2 Ber Runes -> Jah Rune	1				100					2	"r30,qty=2"							r31																																																																																							0
+2 Jah Runes -> Cham Rune	1				100					2	"r31,qty=2"							r32																																																																																							0
+2 Cham Runes -> Zod Rune	1				100					2	"r32,qty=2"							r33																																																																																							0
+1 Tal Rune + 1 Thul Rune + 1 Perfect Topaz + 1 Normal Torso Armor -> Socketed Torso Armor	1				100					4	"tors,nor,nos"	r07	r10	gpy				useitem				sock			1	6																																																																															0
+1 Ral Rune + 1 Amn Rune + 1 Perfect Amethyst + 1 Normal Weapon -> Socketed Weapon	1				100					4	"weap,nor,nos"	r08	r11	gpv				useitem				sock			1	6																																																																															0
+1 Ral Rune + 1 Thul Rune + 1 Perfect Sapphire + 1 Normal Helm -> Socketed Helm	1				100					4	"helm,nor,nos"	r08	r10	gpb				useitem				sock			1	6																																																																															0
+1 Tal Rune + 1 Amn Rune + 1 Perfect Ruby + 1 Normal Shield -> Socketed Shield	1				100					4	"shld,nor,nos"	r07	r11	gpr				useitem				sock			1	6																																																																															0
+1 Eld Rune + 1 Chipped Gem (Any) + 1 Low Quality Weapon -> Normal Weapon	1				100					3	"weap,low"	r02	gem0					"usetype,nor"																																																																																							0
+1 El Rune + 1 Chipped Gem (Any) + 1 Low Quality Armor -> Normal Armor	1				100					3	"armo,low"	r01	gem0					"usetype,nor"																																																																																							0
+1 Ral Rune + 1 Sol Rune + 1 Perfect Emerald + 1 Normal Unique Weapon -> Exceptional Unique Weapon	1				100					4	"weap,bas,uni"	r08	r12	gpg				"useitem,mod,exc"				levelreq			5	5																																																																															0
+1 Tal Rune + 1 Shael Rune + 1 Perfect Diamond + 1 Normal Unique Armor -> Exceptional Unique Armor	1				100					4	"armo,bas,uni"	r07	r13	gpw				"useitem,mod,exc"				levelreq			5	5																																																																															0
+1 Lum Rune + 1 Pul Rune + 1 Perfect Emerald + 1 Exceptional Unique Weapon -> Elite Unique Weapon	1				100					4	"weap,exc,uni"	r17	r21	gpg				"useitem,mod,eli"				levelreq			7	7																																																																															0
+1 Ko Rune + 1 Lem Rune + 1 Perfect Diamond + 1 Exceptional Unique Armor -> Elite Unique Armor	1				100					4	"armo,exc,uni"	r18	r20	gpw				"useitem,mod,eli"				levelreq			7	7																																																																															0
+1 Ort Rune + 1 Amn Rune + 1 Perfect Sapphire + 1 Normal Rare Weapon -> Exceptional Rare Weapon	1				100					4	"weap,bas,rar"	r09	r11	gpb				"useitem,mod,exc"				levelreq			5	5																																																																															0
+1 Ral Rune + 1 Thul Rune + 1 Perfect Amethyst + 1 Normal Rare Armor -> Exceptional Rare Armor	1				100					4	"armo,bas,rar"	r08	r10	gpv				"useitem,mod,exc"				levelreq			5	5																																																																															0
+1 Fal Rune + 1 Um Rune + 1 Perfect Sapphire + 1 Exceptional Rare Weapon -> Elite Rare Weapon	1				100					4	"weap,exc,rar"	r19	r22	gpb				"useitem,mod,eli"				levelreq			7	7																																																																															0
+1 Ko Rune + 1 Pul Rune + 1 Perfect Amethyst + 1 Exceptional Rare Armor -> Elite Rare Armor	1				100					4	"armo,exc,rar"	r18	r21	gpv				"useitem,mod,eli"				levelreq			7	7																																																																															0
+1 Ort Rune + 1 Weapon -> Fully Repaired Weapon	1				100					2	"weap,noe"	r09						"useitem,rep,qty=255"																																																																																							0
+1 Ral Rune + 1 Armor -> Fully Repaired Armor	1				100					2	"armo,noe"	r08						"useitem,rep,qty=255"																																																																																							0
+1 Ort Rune + 1 Chipped Gem (Any) + 1 Weapon -> Fully Repaired and Recharged Weapon	1				100					3	"weap,noe"	r09	gem0					"useitem,rep,rch,qty=255"																																																																																							0
+1 Ral Rune + 1 Flawed Gem (Any) + 1 Armor -> Fully Repaired and Recharged Armor	1				100					3	"armo,noe"	r08	gem1					"useitem,rep,rch,qty=255"																																																																																							0
+1 Hel Rune + Scroll of Town Portal + 1 Socketed Item -> Clear Sockets on Item	1				100					3	"any,sock"	r15	tsc					"useitem,uns"																																																																																							0
+1 Ral Rune + 1 Jewel + 1 Superior Armor -> Tempered Armor					100					3	"armo,hiq,nos"	jew	r08					"useitem,tmp"																																																																																							0
+1 Ral Rune + 1 Jewel + 1 Superior Weapon -> Tempered Weapon					100					3	"weap,hiq,nos"	jew	r08					"useitem,tmp"																																																																																							0
+1 Ral Rune + 1 Jewel + Magic Ring -> Tempered Ring					100					3	"ring,mag"	jew	r08					"usetype,tmp"				levelreq			3	3																																																																															0
+1 Ral Rune + 1 Jewel + 1 Magic Amulet -> Tempered Amulet					100					3	"amu,mag"	jew	r08					"usetype,tmp"				levelreq			5	5																																																																															0
+1 El Rune + 1 Chipped Gem (Any) + 1 Tempered Weapon -> Weapon With Extra Attack Rating					100					3	"weap,tmp"	r01	gcv					useitem				levelreq			2	2	att			30	50																																																																										0
+3 Chipped Gems (Any) + 1 Magic Weapon -> Socketed Magic Weapon	1				0					4	"weap,mag"	"gem0,qty=3"						"usetype,mag"	25		50	sock			1	2																																																																															0
+1 Key of Terror + 1 Key of Hate + 1 Key of Destruction -> Portal to Matron's Den/Forgotten Sands/Furnace of Pain (Random)	1				100	28				3	pk1	pk2	pk3					Pandemonium Portal																																																																																							0
+1 Diablo's Horn + 1 Baal's Eye + 1 Mephisto's Brain -> Portal to Tristram (Pandemonium Finale)	1				100	28				3	dhn	bey	mbr					Pandemonium Finale Portal																																																																																							0
+1 Twisted Essence of Suffering + 1 Charged Essence of Hatred + 1 Burning Essence of Terror + 1 Festering Essence of Destruction -> Token of Absolution	1				100					4	tes	ceh	bet	fed				toa																																																																																							0
+1 Ral Rune + 1 Sol Rune + 1 Perfect Emerald + 1 Normal Set Weapon -> Exceptional Set Weapon	1				100					4	"weap,bas,set"	r08	r12	gpg				"useitem,mod,exc"				levelreq			5	5																																																																															0
+1 Tal Rune + 1 Shael Rune + 1 Perfect Diamond + 1 Normal Set Armor -> Exceptional Set Armor	1				100					4	"armo,bas,set"	r07	r13	gpw				"useitem,mod,exc"				levelreq			5	5																																																																															0
+1 Lum Rune + 1 Pul Rune + 1 Perfect Emerald + 1 Exceptional Set Weapon -> Elite Set Weapon	1				100					4	"weap,exc,set"	r17	r21	gpg				"useitem,mod,eli"				levelreq			7	7																																																																															0
+1 Ko Rune + 1 Lem Rune + 1 Perfect Diamond + 1 Exceptional Set Armor -> Elite Set Armor	1				100					4	"armo,exc,set"	r18	r20	gpw				"useitem,mod,eli"				levelreq			7	7																																																																															0
+1	1				100					1	r11							cont_cs	100	100	100	Add_one			1	1																																																																															0
+2	1				100					1	r30							cont_ct	100	100	100	Add_one			1	1																																																																															0
+3	1				100					1	r32							cont_cu	100	100	100	Add_one			1	1																																																																															0
+4	1				100					1	r14							cont_cv	100	100	100	Add_one			1	1																																																																															0
+5	1				100					1	r02							cont_cw	100	100	100	Add_one			1	1																																																																															0
+6	1				100					1	r01							cont_cx	100	100	100	Add_one			1	1																																																																															0
+7	1				100					1	r05							cont_cy	100	100	100	Add_one			1	1																																																																															0
+8	1				100					1	r19							cont_cz	100	100	100	Add_one			1	1																																																																															0
+9	1				100					1	r25							cont_da	100	100	100	Add_one			1	1																																																																															0
+10	1				100					1	r15							cont_db	100	100	100	Add_one			1	1																																																																															0
+11	1				100					1	r16							cont_dc	100	100	100	Add_one			1	1																																																																															0
+12	1				100					1	r24							cont_dd	100	100	100	Add_one			1	1																																																																															0
+13	1				100					1	r06							cont_de	100	100	100	Add_one			1	1																																																																															0
+14	1				100					1	r31							cont_df	100	100	100	Add_one			1	1																																																																															0
+15	1				100					1	r18							cont_dg	100	100	100	Add_one			1	1																																																																															0
+16	1				100					1	r20							cont_dh	100	100	100	Add_one			1	1																																																																															0
+17	1				100					1	r28							cont_di	100	100	100	Add_one			1	1																																																																															0
+18	1				100					1	r17							cont_dj	100	100	100	Add_one			1	1																																																																															0
+19	1				100					1	r23							cont_dk	100	100	100	Add_one			1	1																																																																															0
+20	1				100					1	r04							cont_dl	100	100	100	Add_one			1	1																																																																															0
+21	1				100					1	r27							cont_dn	100	100	100	Add_one			1	1																																																																															0
+22	1				100					1	r09							cont_do	100	100	100	Add_one			1	1																																																																															0
+23	1				100					1	r21							cont_dp	100	100	100	Add_one			1	1																																																																															0
+24	1				100					1	r08							cont_dq	100	100	100	Add_one			1	1																																																																															0
+25	1				100					1	r13							cont_dr	100	100	100	Add_one			1	1																																																																															0
+26	1				100					1	r12							cont_dt	100	100	100	Add_one			1	1																																																																															0
+27	1				100					1	r29							cont_du	100	100	100	Add_one			1	1																																																																															0
+28	1				100					1	r07							cont_dv	100	100	100	Add_one			1	1																																																																															0
+29	1				100					1	r10							cont_dw	100	100	100	Add_one			1	1																																																																															0
+30	1				100					1	r03							cont_dx	100	100	100	Add_one			1	1																																																																															0
+31	1				100					1	r22							cont_dy	100	100	100	Add_one			1	1																																																																															0
+32	1				100					1	r26							cont_dz	100	100	100	Add_one			1	1																																																																															0
+33	1				100					1	r33							cont_ea	100	100	100	Add_one			1	1																																																																															0
+34	1				100					1	gpb							cont_cf	100	100	100	Add_one			1	1																																																																															0
+35	1				100					1	gpg							cont_cg	100	100	100	Add_one			1	1																																																																															0
+36	1				100					1	gpr							cont_ch	100	100	100	Add_one			1	1																																																																															0
+37	1				100					1	gpv							cont_ci	100	100	100	Add_one			1	1																																																																															0
+38	1				100					1	gpw							cont_cj	100	100	100	Add_one			1	1																																																																															0
+39	1				100					1	gpy							cont_ck	100	100	100	Add_one			1	1																																																																															0
+40	1				100					1	skz							cont_ed	100	100	100	Add_one			1	1																																																																															0
+1	1				100	16	361	2036		2	cont_cs	r11						useitem	99	0	0	Add_one			1	1																																																																															0
+2	1				100	16	361	2036		2	cont_ct	r30						useitem	99	0	0	Add_one			1	1																																																																															0
+3	1				100	16	361	2036		2	cont_cu	r32						useitem	99	0	0	Add_one			1	1																																																																															0
+4	1				100	16	361	2036		2	cont_cv	r14						useitem	99	0	0	Add_one			1	1																																																																															0
+5	1				100	16	361	2036		2	cont_cw	r02						useitem	99	0	0	Add_one			1	1																																																																															0
+6	1				100	16	361	2036		2	cont_cx	r01						useitem	99	0	0	Add_one			1	1																																																																															0
+7	1				100	16	361	2036		2	cont_cy	r05						useitem	99	0	0	Add_one			1	1																																																																															0
+8	1				100	16	361	2036		2	cont_cz	r19						useitem	99	0	0	Add_one			1	1																																																																															0
+9	1				100	16	361	2036		2	cont_da	r25						useitem	99	0	0	Add_one			1	1																																																																															0
+10	1				100	16	361	2036		2	cont_db	r15						useitem	99	0	0	Add_one			1	1																																																																															0
+11	1				100	16	361	2036		2	cont_dc	r16						useitem	99	0	0	Add_one			1	1																																																																															0
+12	1				100	16	361	2036		2	cont_dd	r24						useitem	99	0	0	Add_one			1	1																																																																															0
+13	1				100	16	361	2036		2	cont_de	r06						useitem	99	0	0	Add_one			1	1																																																																															0
+14	1				100	16	361	2036		2	cont_df	r31						useitem	99	0	0	Add_one			1	1																																																																															0
+15	1				100	16	361	2036		2	cont_dg	r18						useitem	99	0	0	Add_one			1	1																																																																															0
+16	1				100	16	361	2036		2	cont_dh	r20						useitem	99	0	0	Add_one			1	1																																																																															0
+17	1				100	16	361	2036		2	cont_di	r28						useitem	99	0	0	Add_one			1	1																																																																															0
+18	1				100	16	361	2036		2	cont_dj	r17						useitem	99	0	0	Add_one			1	1																																																																															0
+19	1				100	16	361	2036		2	cont_dk	r23						useitem	99	0	0	Add_one			1	1																																																																															0
+20	1				100	16	361	2036		2	cont_dl	r04						useitem	99	0	0	Add_one			1	1																																																																															0
+21	1				100	16	361	2036		2	cont_dn	r27						useitem	99	0	0	Add_one			1	1																																																																															0
+22	1				100	16	361	2036		2	cont_do	r09						useitem	99	0	0	Add_one			1	1																																																																															0
+23	1				100	16	361	2036		2	cont_dp	r21						useitem	99	0	0	Add_one			1	1																																																																															0
+24	1				100	16	361	2036		2	cont_dq	r08						useitem	99	0	0	Add_one			1	1																																																																															0
+25	1				100	16	361	2036		2	cont_dr	r13						useitem	99	0	0	Add_one			1	1																																																																															0
+26	1				100	16	361	2036		2	cont_dt	r12						useitem	99	0	0	Add_one			1	1																																																																															0
+27	1				100	16	361	2036		2	cont_du	r29						useitem	99	0	0	Add_one			1	1																																																																															0
+28	1				100	16	361	2036		2	cont_dv	r07						useitem	99	0	0	Add_one			1	1																																																																															0
+29	1				100	16	361	2036		2	cont_dw	r10						useitem	99	0	0	Add_one			1	1																																																																															0
+30	1				100	16	361	2036		2	cont_dx	r03						useitem	99	0	0	Add_one			1	1																																																																															0
+31	1				100	16	361	2036		2	cont_dy	r22						useitem	99	0	0	Add_one			1	1																																																																															0
+32	1				100	16	361	2036		2	cont_dz	r26						useitem	99	0	0	Add_one			1	1																																																																															0
+33	1				100	16	361	2036		2	cont_ea	r33						useitem	99	0	0	Add_one			1	1																																																																															0
+34	1				100	16	361	2036		2	cont_cf	gpb						useitem	99	0	0	Add_one			1	1																																																																															0
+35	1				100	16	361	2036		2	cont_cg	gpg						useitem	99	0	0	Add_one			1	1																																																																															0
+36	1				100	16	361	2036		2	cont_ch	gpr						useitem	99	0	0	Add_one			1	1																																																																															0
+37	1				100	16	361	2036		2	cont_ci	gpv						useitem	99	0	0	Add_one			1	1																																																																															0
+38	1				100	16	361	2036		2	cont_cj	gpw						useitem	99	0	0	Add_one			1	1																																																																															0
+39	1				100	16	361	2036		2	cont_ck	gpy						useitem	99	0	0	Add_one			1	1																																																																															0
+40	1				100	16	361	2036		2	cont_ed	skz						useitem	99	0	0	Add_one			1	1																																																																															0
+1	1				100	15	361	2		1	cont_cs							useitem	99	0	0	Add_one			-1	-1																					r11																																																										0
+2	1				100	15	361	2		1	cont_ct							useitem	99	0	0	Add_one			-1	-1																					r30																																																										0
+3	1				100	15	361	2		1	cont_cu							useitem	99	0	0	Add_one			-1	-1																					r32																																																										0
+4	1				100	15	361	2		1	cont_cv							useitem	99	0	0	Add_one			-1	-1																					r14																																																										0
+5	1				100	15	361	2		1	cont_cw							useitem	99	0	0	Add_one			-1	-1																					r02																																																										0
+6	1				100	15	361	2		1	cont_cx							useitem	99	0	0	Add_one			-1	-1																					r01																																																										0
+7	1				100	15	361	2		1	cont_cy							useitem	99	0	0	Add_one			-1	-1																					r05																																																										0
+8	1				100	15	361	2		1	cont_cz							useitem	99	0	0	Add_one			-1	-1																					r19																																																										0
+9	1				100	15	361	2		1	cont_da							useitem	99	0	0	Add_one			-1	-1																					r25																																																										0
+10	1				100	15	361	2		1	cont_db							useitem	99	0	0	Add_one			-1	-1																					r15																																																										0
+11	1				100	15	361	2		1	cont_dc							useitem	99	0	0	Add_one			-1	-1																					r16																																																										0
+12	1				100	15	361	2		1	cont_dd							useitem	99	0	0	Add_one			-1	-1																					r24																																																										0
+13	1				100	15	361	2		1	cont_de							useitem	99	0	0	Add_one			-1	-1																					r06																																																										0
+14	1				100	15	361	2		1	cont_df							useitem	99	0	0	Add_one			-1	-1																					r31																																																										0
+15	1				100	15	361	2		1	cont_dg							useitem	99	0	0	Add_one			-1	-1																					r18																																																										0
+16	1				100	15	361	2		1	cont_dh							useitem	99	0	0	Add_one			-1	-1																					r20																																																										0
+17	1				100	15	361	2		1	cont_di							useitem	99	0	0	Add_one			-1	-1																					r28																																																										0
+18	1				100	15	361	2		1	cont_dj							useitem	99	0	0	Add_one			-1	-1																					r17																																																										0
+19	1				100	15	361	2		1	cont_dk							useitem	99	0	0	Add_one			-1	-1																					r23																																																										0
+20	1				100	15	361	2		1	cont_dl							useitem	99	0	0	Add_one			-1	-1																					r04																																																										0
+21	1				100	15	361	2		1	cont_dn							useitem	99	0	0	Add_one			-1	-1																					r27																																																										0
+22	1				100	15	361	2		1	cont_do							useitem	99	0	0	Add_one			-1	-1																					r09																																																										0
+23	1				100	15	361	2		1	cont_dp							useitem	99	0	0	Add_one			-1	-1																					r21																																																										0
+24	1				100	15	361	2		1	cont_dq							useitem	99	0	0	Add_one			-1	-1																					r08																																																										0
+25	1				100	15	361	2		1	cont_dr							useitem	99	0	0	Add_one			-1	-1																					r13																																																										0
+26	1				100	15	361	2		1	cont_dt							useitem	99	0	0	Add_one			-1	-1																					r12																																																										0
+27	1				100	15	361	2		1	cont_du							useitem	99	0	0	Add_one			-1	-1																					r29																																																										0
+28	1				100	15	361	2		1	cont_dv							useitem	99	0	0	Add_one			-1	-1																					r07																																																										0
+29	1				100	15	361	2		1	cont_dw							useitem	99	0	0	Add_one			-1	-1																					r10																																																										0
+30	1				100	15	361	2		1	cont_dx							useitem	99	0	0	Add_one			-1	-1																					r03																																																										0
+31	1				100	15	361	2		1	cont_dy							useitem	99	0	0	Add_one			-1	-1																					r22																																																										0
+32	1				100	15	361	2		1	cont_dz							useitem	99	0	0	Add_one			-1	-1																					r26																																																										0
+33	1				100	15	361	2		1	cont_ea							useitem	99	0	0	Add_one			-1	-1																					r33																																																										0
+34	1				100	15	361	2		1	cont_cf							useitem	99	0	0	Add_one			-1	-1																					gpb																																																										0
+35	1				100	15	361	2		1	cont_cg							useitem	99	0	0	Add_one			-1	-1																					gpg																																																										0
+36	1				100	15	361	2		1	cont_ch							useitem	99	0	0	Add_one			-1	-1																					gpr																																																										0
+37	1				100	15	361	2		1	cont_ci							useitem	99	0	0	Add_one			-1	-1																					gpv																																																										0
+38	1				100	15	361	2		1	cont_cj							useitem	99	0	0	Add_one			-1	-1																					gpw																																																										0
+39	1				100	15	361	2		1	cont_ck							useitem	99	0	0	Add_one			-1	-1																					gpy																																																										0
+40	1				100	15	361	2		1	cont_ed							useitem	99	0	0	Add_one			-1	-1																					skz																																																										0
+1	1				100	16	361	2035		3	cont_cs	"r11,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+2	1				100	16	361	2035		3	cont_ct	"r30,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+3	1				100	16	361	2035		3	cont_cu	"r32,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+4	1				100	16	361	2035		3	cont_cv	"r14,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+5	1				100	16	361	2035		3	cont_cw	"r02,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+6	1				100	16	361	2035		3	cont_cx	"r01,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+7	1				100	16	361	2035		3	cont_cy	"r05,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+8	1				100	16	361	2035		3	cont_cz	"r19,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+9	1				100	16	361	2035		3	cont_da	"r25,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+10	1				100	16	361	2035		3	cont_db	"r15,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+11	1				100	16	361	2035		3	cont_dc	"r16,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+12	1				100	16	361	2035		3	cont_dd	"r24,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+13	1				100	16	361	2035		3	cont_de	"r06,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+14	1				100	16	361	2035		3	cont_df	"r31,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+15	1				100	16	361	2035		3	cont_dg	"r18,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+16	1				100	16	361	2035		3	cont_dh	"r20,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+17	1				100	16	361	2035		3	cont_di	"r28,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+18	1				100	16	361	2035		3	cont_dj	"r17,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+19	1				100	16	361	2035		3	cont_dk	"r23,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+20	1				100	16	361	2035		3	cont_dl	"r04,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+21	1				100	16	361	2035		3	cont_dn	"r27,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+22	1				100	16	361	2035		3	cont_do	"r09,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+23	1				100	16	361	2035		3	cont_dp	"r21,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+24	1				100	16	361	2035		3	cont_dq	"r08,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+25	1				100	16	361	2035		3	cont_dr	"r13,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+26	1				100	16	361	2035		3	cont_dt	"r12,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+27	1				100	16	361	2035		3	cont_du	"r29,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+28	1				100	16	361	2035		3	cont_dv	"r07,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+29	1				100	16	361	2035		3	cont_dw	"r10,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+30	1				100	16	361	2035		3	cont_dx	"r03,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+31	1				100	16	361	2035		3	cont_dy	"r22,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+32	1				100	16	361	2035		3	cont_dz	"r26,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+33	1				100	16	361	2035		3	cont_ea	"r33,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+34	1				100	16	361	2035		3	cont_cf	"gpb,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+35	1				100	16	361	2035		3	cont_cg	"gpg,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+36	1				100	16	361	2035		3	cont_ch	"gpr,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+37	1				100	16	361	2035		3	cont_ci	"gpv,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+38	1				100	16	361	2035		3	cont_cj	"gpw,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+39	1				100	16	361	2035		3	cont_ck	"gpy,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+40	1				100	16	361	2035		3	cont_ed	"skz,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+1	1				100	16	361	2034		4	cont_cs	"r11,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+2	1				100	16	361	2034		4	cont_ct	"r30,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+3	1				100	16	361	2034		4	cont_cu	"r32,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+4	1				100	16	361	2034		4	cont_cv	"r14,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+5	1				100	16	361	2034		4	cont_cw	"r02,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+6	1				100	16	361	2034		4	cont_cx	"r01,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+7	1				100	16	361	2034		4	cont_cy	"r05,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+8	1				100	16	361	2034		4	cont_cz	"r19,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+9	1				100	16	361	2034		4	cont_da	"r25,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+10	1				100	16	361	2034		4	cont_db	"r15,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+11	1				100	16	361	2034		4	cont_dc	"r16,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+12	1				100	16	361	2034		4	cont_dd	"r24,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+13	1				100	16	361	2034		4	cont_de	"r06,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+14	1				100	16	361	2034		4	cont_df	"r31,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+15	1				100	16	361	2034		4	cont_dg	"r18,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+16	1				100	16	361	2034		4	cont_dh	"r20,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+17	1				100	16	361	2034		4	cont_di	"r28,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+18	1				100	16	361	2034		4	cont_dj	"r17,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+19	1				100	16	361	2034		4	cont_dk	"r23,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+20	1				100	16	361	2034		4	cont_dl	"r04,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+21	1				100	16	361	2034		4	cont_dn	"r27,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+22	1				100	16	361	2034		4	cont_do	"r09,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+23	1				100	16	361	2034		4	cont_dp	"r21,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+24	1				100	16	361	2034		4	cont_dq	"r08,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+25	1				100	16	361	2034		4	cont_dr	"r13,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+26	1				100	16	361	2034		4	cont_dt	"r12,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+27	1				100	16	361	2034		4	cont_du	"r29,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+28	1				100	16	361	2034		4	cont_dv	"r07,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+29	1				100	16	361	2034		4	cont_dw	"r10,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+30	1				100	16	361	2034		4	cont_dx	"r03,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+31	1				100	16	361	2034		4	cont_dy	"r22,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+32	1				100	16	361	2034		4	cont_dz	"r26,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+33	1				100	16	361	2034		4	cont_ea	"r33,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+34	1				100	16	361	2034		4	cont_cf	"gpb,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+35	1				100	16	361	2034		4	cont_cg	"gpg,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+36	1				100	16	361	2034		4	cont_ch	"gpr,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+37	1				100	16	361	2034		4	cont_ci	"gpv,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+38	1				100	16	361	2034		4	cont_cj	"gpw,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+39	1				100	16	361	2034		4	cont_ck	"gpy,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+40	1				100	16	361	2034		4	cont_ed	"skz,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+1	1				100	16	361	2033		5	cont_cs	"r11,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+2	1				100	16	361	2033		5	cont_ct	"r30,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+3	1				100	16	361	2033		5	cont_cu	"r32,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+4	1				100	16	361	2033		5	cont_cv	"r14,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+5	1				100	16	361	2033		5	cont_cw	"r02,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+6	1				100	16	361	2033		5	cont_cx	"r01,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+7	1				100	16	361	2033		5	cont_cy	"r05,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+8	1				100	16	361	2033		5	cont_cz	"r19,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+9	1				100	16	361	2033		5	cont_da	"r25,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+10	1				100	16	361	2033		5	cont_db	"r15,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+11	1				100	16	361	2033		5	cont_dc	"r16,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+12	1				100	16	361	2033		5	cont_dd	"r24,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+13	1				100	16	361	2033		5	cont_de	"r06,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+14	1				100	16	361	2033		5	cont_df	"r31,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+15	1				100	16	361	2033		5	cont_dg	"r18,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+16	1				100	16	361	2033		5	cont_dh	"r20,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+17	1				100	16	361	2033		5	cont_di	"r28,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+18	1				100	16	361	2033		5	cont_dj	"r17,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+19	1				100	16	361	2033		5	cont_dk	"r23,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+20	1				100	16	361	2033		5	cont_dl	"r04,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+21	1				100	16	361	2033		5	cont_dn	"r27,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+22	1				100	16	361	2033		5	cont_do	"r09,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+23	1				100	16	361	2033		5	cont_dp	"r21,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+24	1				100	16	361	2033		5	cont_dq	"r08,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+25	1				100	16	361	2033		5	cont_dr	"r13,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+26	1				100	16	361	2033		5	cont_dt	"r12,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+27	1				100	16	361	2033		5	cont_du	"r29,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+28	1				100	16	361	2033		5	cont_dv	"r07,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+29	1				100	16	361	2033		5	cont_dw	"r10,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+30	1				100	16	361	2033		5	cont_dx	"r03,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+31	1				100	16	361	2033		5	cont_dy	"r22,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+32	1				100	16	361	2033		5	cont_dz	"r26,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+33	1				100	16	361	2033		5	cont_ea	"r33,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+34	1				100	16	361	2033		5	cont_cf	"gpb,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+35	1				100	16	361	2033		5	cont_cg	"gpg,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+36	1				100	16	361	2033		5	cont_ch	"gpr,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+37	1				100	16	361	2033		5	cont_ci	"gpv,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+38	1				100	16	361	2033		5	cont_cj	"gpw,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+39	1				100	16	361	2033		5	cont_ck	"gpy,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+40	1				100	16	361	2033		5	cont_ed	"skz,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+1	1				100	16	361	2032		6	cont_cs	"r11,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+2	1				100	16	361	2032		6	cont_ct	"r30,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+3	1				100	16	361	2032		6	cont_cu	"r32,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+4	1				100	16	361	2032		6	cont_cv	"r14,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+5	1				100	16	361	2032		6	cont_cw	"r02,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+6	1				100	16	361	2032		6	cont_cx	"r01,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+7	1				100	16	361	2032		6	cont_cy	"r05,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+8	1				100	16	361	2032		6	cont_cz	"r19,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+9	1				100	16	361	2032		6	cont_da	"r25,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+10	1				100	16	361	2032		6	cont_db	"r15,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+11	1				100	16	361	2032		6	cont_dc	"r16,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+12	1				100	16	361	2032		6	cont_dd	"r24,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+13	1				100	16	361	2032		6	cont_de	"r06,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+14	1				100	16	361	2032		6	cont_df	"r31,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+15	1				100	16	361	2032		6	cont_dg	"r18,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+16	1				100	16	361	2032		6	cont_dh	"r20,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+17	1				100	16	361	2032		6	cont_di	"r28,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+18	1				100	16	361	2032		6	cont_dj	"r17,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+19	1				100	16	361	2032		6	cont_dk	"r23,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+20	1				100	16	361	2032		6	cont_dl	"r04,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+21	1				100	16	361	2032		6	cont_dn	"r27,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+22	1				100	16	361	2032		6	cont_do	"r09,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+23	1				100	16	361	2032		6	cont_dp	"r21,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+24	1				100	16	361	2032		6	cont_dq	"r08,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+25	1				100	16	361	2032		6	cont_dr	"r13,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+26	1				100	16	361	2032		6	cont_dt	"r12,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+27	1				100	16	361	2032		6	cont_du	"r29,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+28	1				100	16	361	2032		6	cont_dv	"r07,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+29	1				100	16	361	2032		6	cont_dw	"r10,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+30	1				100	16	361	2032		6	cont_dx	"r03,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+31	1				100	16	361	2032		6	cont_dy	"r22,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+32	1				100	16	361	2032		6	cont_dz	"r26,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+33	1				100	16	361	2032		6	cont_ea	"r33,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+34	1				100	16	361	2032		6	cont_cf	"gpb,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+35	1				100	16	361	2032		6	cont_cg	"gpg,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+36	1				100	16	361	2032		6	cont_ch	"gpr,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+37	1				100	16	361	2032		6	cont_ci	"gpv,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+38	1				100	16	361	2032		6	cont_cj	"gpw,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+39	1				100	16	361	2032		6	cont_ck	"gpy,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+40	1				100	16	361	2032		6	cont_ed	"skz,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+1	1				100	16	361	2031		7	cont_cs	"r11,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+2	1				100	16	361	2031		7	cont_ct	"r30,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+3	1				100	16	361	2031		7	cont_cu	"r32,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+4	1				100	16	361	2031		7	cont_cv	"r14,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+5	1				100	16	361	2031		7	cont_cw	"r02,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+6	1				100	16	361	2031		7	cont_cx	"r01,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+7	1				100	16	361	2031		7	cont_cy	"r05,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+8	1				100	16	361	2031		7	cont_cz	"r19,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+9	1				100	16	361	2031		7	cont_da	"r25,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+10	1				100	16	361	2031		7	cont_db	"r15,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+11	1				100	16	361	2031		7	cont_dc	"r16,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+12	1				100	16	361	2031		7	cont_dd	"r24,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+13	1				100	16	361	2031		7	cont_de	"r06,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+14	1				100	16	361	2031		7	cont_df	"r31,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+15	1				100	16	361	2031		7	cont_dg	"r18,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+16	1				100	16	361	2031		7	cont_dh	"r20,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+17	1				100	16	361	2031		7	cont_di	"r28,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+18	1				100	16	361	2031		7	cont_dj	"r17,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+19	1				100	16	361	2031		7	cont_dk	"r23,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+20	1				100	16	361	2031		7	cont_dl	"r04,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+21	1				100	16	361	2031		7	cont_dn	"r27,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+22	1				100	16	361	2031		7	cont_do	"r09,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+23	1				100	16	361	2031		7	cont_dp	"r21,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+24	1				100	16	361	2031		7	cont_dq	"r08,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+25	1				100	16	361	2031		7	cont_dr	"r13,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+26	1				100	16	361	2031		7	cont_dt	"r12,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+27	1				100	16	361	2031		7	cont_du	"r29,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+28	1				100	16	361	2031		7	cont_dv	"r07,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+29	1				100	16	361	2031		7	cont_dw	"r10,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+30	1				100	16	361	2031		7	cont_dx	"r03,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+31	1				100	16	361	2031		7	cont_dy	"r22,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+32	1				100	16	361	2031		7	cont_dz	"r26,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+33	1				100	16	361	2031		7	cont_ea	"r33,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+34	1				100	16	361	2031		7	cont_cf	"gpb,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+35	1				100	16	361	2031		7	cont_cg	"gpg,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+36	1				100	16	361	2031		7	cont_ch	"gpr,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+37	1				100	16	361	2031		7	cont_ci	"gpv,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+38	1				100	16	361	2031		7	cont_cj	"gpw,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+39	1				100	16	361	2031		7	cont_ck	"gpy,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+40	1				100	16	361	2031		7	cont_ed	"skz,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+1	1				100	16	361	2030		8	cont_cs	"r11,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+2	1				100	16	361	2030		8	cont_ct	"r30,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+3	1				100	16	361	2030		8	cont_cu	"r32,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+4	1				100	16	361	2030		8	cont_cv	"r14,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+5	1				100	16	361	2030		8	cont_cw	"r02,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+6	1				100	16	361	2030		8	cont_cx	"r01,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+7	1				100	16	361	2030		8	cont_cy	"r05,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+8	1				100	16	361	2030		8	cont_cz	"r19,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+9	1				100	16	361	2030		8	cont_da	"r25,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+10	1				100	16	361	2030		8	cont_db	"r15,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+11	1				100	16	361	2030		8	cont_dc	"r16,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+12	1				100	16	361	2030		8	cont_dd	"r24,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+13	1				100	16	361	2030		8	cont_de	"r06,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+14	1				100	16	361	2030		8	cont_df	"r31,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+15	1				100	16	361	2030		8	cont_dg	"r18,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+16	1				100	16	361	2030		8	cont_dh	"r20,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+17	1				100	16	361	2030		8	cont_di	"r28,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+18	1				100	16	361	2030		8	cont_dj	"r17,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+19	1				100	16	361	2030		8	cont_dk	"r23,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+20	1				100	16	361	2030		8	cont_dl	"r04,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+21	1				100	16	361	2030		8	cont_dn	"r27,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+22	1				100	16	361	2030		8	cont_do	"r09,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+23	1				100	16	361	2030		8	cont_dp	"r21,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+24	1				100	16	361	2030		8	cont_dq	"r08,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+25	1				100	16	361	2030		8	cont_dr	"r13,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+26	1				100	16	361	2030		8	cont_dt	"r12,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+27	1				100	16	361	2030		8	cont_du	"r29,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+28	1				100	16	361	2030		8	cont_dv	"r07,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+29	1				100	16	361	2030		8	cont_dw	"r10,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+30	1				100	16	361	2030		8	cont_dx	"r03,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+31	1				100	16	361	2030		8	cont_dy	"r22,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+32	1				100	16	361	2030		8	cont_dz	"r26,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+33	1				100	16	361	2030		8	cont_ea	"r33,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+34	1				100	16	361	2030		8	cont_cf	"gpb,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+35	1				100	16	361	2030		8	cont_cg	"gpg,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+36	1				100	16	361	2030		8	cont_ch	"gpr,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+37	1				100	16	361	2030		8	cont_ci	"gpv,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+38	1				100	16	361	2030		8	cont_cj	"gpw,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+39	1				100	16	361	2030		8	cont_ck	"gpy,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+40	1				100	16	361	2030		8	cont_ed	"skz,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+1	1				100	16	361	2029		9	cont_cs	"r11,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+2	1				100	16	361	2029		9	cont_ct	"r30,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+3	1				100	16	361	2029		9	cont_cu	"r32,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+4	1				100	16	361	2029		9	cont_cv	"r14,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+5	1				100	16	361	2029		9	cont_cw	"r02,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+6	1				100	16	361	2029		9	cont_cx	"r01,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+7	1				100	16	361	2029		9	cont_cy	"r05,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+8	1				100	16	361	2029		9	cont_cz	"r19,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+9	1				100	16	361	2029		9	cont_da	"r25,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+10	1				100	16	361	2029		9	cont_db	"r15,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+11	1				100	16	361	2029		9	cont_dc	"r16,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+12	1				100	16	361	2029		9	cont_dd	"r24,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+13	1				100	16	361	2029		9	cont_de	"r06,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+14	1				100	16	361	2029		9	cont_df	"r31,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+15	1				100	16	361	2029		9	cont_dg	"r18,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+16	1				100	16	361	2029		9	cont_dh	"r20,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+17	1				100	16	361	2029		9	cont_di	"r28,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+18	1				100	16	361	2029		9	cont_dj	"r17,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+19	1				100	16	361	2029		9	cont_dk	"r23,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+20	1				100	16	361	2029		9	cont_dl	"r04,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+21	1				100	16	361	2029		9	cont_dn	"r27,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+22	1				100	16	361	2029		9	cont_do	"r09,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+23	1				100	16	361	2029		9	cont_dp	"r21,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+24	1				100	16	361	2029		9	cont_dq	"r08,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+25	1				100	16	361	2029		9	cont_dr	"r13,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+26	1				100	16	361	2029		9	cont_dt	"r12,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+27	1				100	16	361	2029		9	cont_du	"r29,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+28	1				100	16	361	2029		9	cont_dv	"r07,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+29	1				100	16	361	2029		9	cont_dw	"r10,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+30	1				100	16	361	2029		9	cont_dx	"r03,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+31	1				100	16	361	2029		9	cont_dy	"r22,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+32	1				100	16	361	2029		9	cont_dz	"r26,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+33	1				100	16	361	2029		9	cont_ea	"r33,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+34	1				100	16	361	2029		9	cont_cf	"gpb,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+35	1				100	16	361	2029		9	cont_cg	"gpg,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+36	1				100	16	361	2029		9	cont_ch	"gpr,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+37	1				100	16	361	2029		9	cont_ci	"gpv,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+38	1				100	16	361	2029		9	cont_cj	"gpw,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+39	1				100	16	361	2029		9	cont_ck	"gpy,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+40	1				100	16	361	2029		9	cont_ed	"skz,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+1	1				100	16	361	2028		10	cont_cs	"r11,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+2	1				100	16	361	2028		10	cont_ct	"r30,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+3	1				100	16	361	2028		10	cont_cu	"r32,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+4	1				100	16	361	2028		10	cont_cv	"r14,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+5	1				100	16	361	2028		10	cont_cw	"r02,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+6	1				100	16	361	2028		10	cont_cx	"r01,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+7	1				100	16	361	2028		10	cont_cy	"r05,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+8	1				100	16	361	2028		10	cont_cz	"r19,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+9	1				100	16	361	2028		10	cont_da	"r25,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+10	1				100	16	361	2028		10	cont_db	"r15,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+11	1				100	16	361	2028		10	cont_dc	"r16,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+12	1				100	16	361	2028		10	cont_dd	"r24,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+13	1				100	16	361	2028		10	cont_de	"r06,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+14	1				100	16	361	2028		10	cont_df	"r31,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+15	1				100	16	361	2028		10	cont_dg	"r18,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+16	1				100	16	361	2028		10	cont_dh	"r20,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+17	1				100	16	361	2028		10	cont_di	"r28,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+18	1				100	16	361	2028		10	cont_dj	"r17,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+19	1				100	16	361	2028		10	cont_dk	"r23,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+20	1				100	16	361	2028		10	cont_dl	"r04,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+21	1				100	16	361	2028		10	cont_dn	"r27,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+22	1				100	16	361	2028		10	cont_do	"r09,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+23	1				100	16	361	2028		10	cont_dp	"r21,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+24	1				100	16	361	2028		10	cont_dq	"r08,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+25	1				100	16	361	2028		10	cont_dr	"r13,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+26	1				100	16	361	2028		10	cont_dt	"r12,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+27	1				100	16	361	2028		10	cont_du	"r29,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+28	1				100	16	361	2028		10	cont_dv	"r07,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+29	1				100	16	361	2028		10	cont_dw	"r10,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+30	1				100	16	361	2028		10	cont_dx	"r03,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+31	1				100	16	361	2028		10	cont_dy	"r22,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+32	1				100	16	361	2028		10	cont_dz	"r26,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+33	1				100	16	361	2028		10	cont_ea	"r33,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+34	1				100	16	361	2028		10	cont_cf	"gpb,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+35	1				100	16	361	2028		10	cont_cg	"gpg,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+36	1				100	16	361	2028		10	cont_ch	"gpr,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+37	1				100	16	361	2028		10	cont_ci	"gpv,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+38	1				100	16	361	2028		10	cont_cj	"gpw,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+39	1				100	16	361	2028		10	cont_ck	"gpy,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+40	1				100	16	361	2028		10	cont_ed	"skz,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+1	1				100	16	361	2027		11	cont_cs	"r11,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+2	1				100	16	361	2027		11	cont_ct	"r30,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+3	1				100	16	361	2027		11	cont_cu	"r32,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+4	1				100	16	361	2027		11	cont_cv	"r14,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+5	1				100	16	361	2027		11	cont_cw	"r02,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+6	1				100	16	361	2027		11	cont_cx	"r01,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+7	1				100	16	361	2027		11	cont_cy	"r05,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+8	1				100	16	361	2027		11	cont_cz	"r19,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+9	1				100	16	361	2027		11	cont_da	"r25,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+10	1				100	16	361	2027		11	cont_db	"r15,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+11	1				100	16	361	2027		11	cont_dc	"r16,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+12	1				100	16	361	2027		11	cont_dd	"r24,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+13	1				100	16	361	2027		11	cont_de	"r06,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+14	1				100	16	361	2027		11	cont_df	"r31,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+15	1				100	16	361	2027		11	cont_dg	"r18,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+16	1				100	16	361	2027		11	cont_dh	"r20,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+17	1				100	16	361	2027		11	cont_di	"r28,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+18	1				100	16	361	2027		11	cont_dj	"r17,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+19	1				100	16	361	2027		11	cont_dk	"r23,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+20	1				100	16	361	2027		11	cont_dl	"r04,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+21	1				100	16	361	2027		11	cont_dn	"r27,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+22	1				100	16	361	2027		11	cont_do	"r09,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+23	1				100	16	361	2027		11	cont_dp	"r21,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+24	1				100	16	361	2027		11	cont_dq	"r08,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+25	1				100	16	361	2027		11	cont_dr	"r13,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+26	1				100	16	361	2027		11	cont_dt	"r12,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+27	1				100	16	361	2027		11	cont_du	"r29,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+28	1				100	16	361	2027		11	cont_dv	"r07,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+29	1				100	16	361	2027		11	cont_dw	"r10,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+30	1				100	16	361	2027		11	cont_dx	"r03,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+31	1				100	16	361	2027		11	cont_dy	"r22,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+32	1				100	16	361	2027		11	cont_dz	"r26,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+33	1				100	16	361	2027		11	cont_ea	"r33,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+34	1				100	16	361	2027		11	cont_cf	"gpb,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+35	1				100	16	361	2027		11	cont_cg	"gpg,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+36	1				100	16	361	2027		11	cont_ch	"gpr,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+37	1				100	16	361	2027		11	cont_ci	"gpv,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+38	1				100	16	361	2027		11	cont_cj	"gpw,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+39	1				100	16	361	2027		11	cont_ck	"gpy,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+40	1				100	16	361	2027		11	cont_ed	"skz,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+1	1				100	16	361	2026		12	cont_cs	"r11,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+2	1				100	16	361	2026		12	cont_ct	"r30,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+3	1				100	16	361	2026		12	cont_cu	"r32,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+4	1				100	16	361	2026		12	cont_cv	"r14,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+5	1				100	16	361	2026		12	cont_cw	"r02,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+6	1				100	16	361	2026		12	cont_cx	"r01,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+7	1				100	16	361	2026		12	cont_cy	"r05,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+8	1				100	16	361	2026		12	cont_cz	"r19,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+9	1				100	16	361	2026		12	cont_da	"r25,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+10	1				100	16	361	2026		12	cont_db	"r15,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+11	1				100	16	361	2026		12	cont_dc	"r16,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+12	1				100	16	361	2026		12	cont_dd	"r24,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+13	1				100	16	361	2026		12	cont_de	"r06,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+14	1				100	16	361	2026		12	cont_df	"r31,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+15	1				100	16	361	2026		12	cont_dg	"r18,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+16	1				100	16	361	2026		12	cont_dh	"r20,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+17	1				100	16	361	2026		12	cont_di	"r28,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+18	1				100	16	361	2026		12	cont_dj	"r17,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+19	1				100	16	361	2026		12	cont_dk	"r23,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+20	1				100	16	361	2026		12	cont_dl	"r04,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+21	1				100	16	361	2026		12	cont_dn	"r27,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+22	1				100	16	361	2026		12	cont_do	"r09,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+23	1				100	16	361	2026		12	cont_dp	"r21,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+24	1				100	16	361	2026		12	cont_dq	"r08,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+25	1				100	16	361	2026		12	cont_dr	"r13,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+26	1				100	16	361	2026		12	cont_dt	"r12,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+27	1				100	16	361	2026		12	cont_du	"r29,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+28	1				100	16	361	2026		12	cont_dv	"r07,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+29	1				100	16	361	2026		12	cont_dw	"r10,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+30	1				100	16	361	2026		12	cont_dx	"r03,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+31	1				100	16	361	2026		12	cont_dy	"r22,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+32	1				100	16	361	2026		12	cont_dz	"r26,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+33	1				100	16	361	2026		12	cont_ea	"r33,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+34	1				100	16	361	2026		12	cont_cf	"gpb,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+35	1				100	16	361	2026		12	cont_cg	"gpg,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+36	1				100	16	361	2026		12	cont_ch	"gpr,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+37	1				100	16	361	2026		12	cont_ci	"gpv,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+38	1				100	16	361	2026		12	cont_cj	"gpw,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+39	1				100	16	361	2026		12	cont_ck	"gpy,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+40	1				100	16	361	2026		12	cont_ed	"skz,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+1	1				100					1	pk3							mephisto_sta	100	100	100	Add_one			1	1																																																																															0
+2	1				100					1	pk2							mephisto_stb	100	100	100	Add_one			1	1																																																																															0
+3	1				100					1	pk1							mephisto_stc	100	100	100	Add_one			1	1																																																																															0
+4	1				100					1	bet							cont_beot	100	100	100	Add_one			1	1																																																																															0
+5	1				100					1	mbr							cont_bra	100	100	100	Add_one			1	1																																																																															0
+6	1				100					1	ceh							cont_ceoh	100	100	100	Add_one			1	1																																																																															0
+7	1				100					1	bey							cont_eye	100	100	100	Add_one			1	1																																																																															0
+8	1				100					1	dhn							cont_fang	100	100	100	Add_one			1	1																																																																															0
+9	1				100					1	fed							cont_feod	100	100	100	Add_one			1	1																																																																															0
+10	1				100					1	rvl							cont_rvl	100	100	100	Add_one			1	1																																																																															0
+11	1				100					1	tes							cont_teos	100	100	100	Add_one			1	1																																																																															0
+12	1				100					1	toa							cont_toa	100	100	100	Add_one			1	1																																																																															0
+1	1				100	16	361	2036		2	mephisto_sta	pk3						useitem	99	0	0	Add_one			1	1																																																																															0
+2	1				100	16	361	2036		2	mephisto_stb	pk2						useitem	99	0	0	Add_one			1	1																																																																															0
+3	1				100	16	361	2036		2	mephisto_stc	pk1						useitem	99	0	0	Add_one			1	1																																																																															0
+4	1				100	16	361	2036		2	cont_beot	bet						useitem	99	0	0	Add_one			1	1																																																																															0
+5	1				100	16	361	2036		2	cont_bra	mbr						useitem	99	0	0	Add_one			1	1																																																																															0
+6	1				100	16	361	2036		2	cont_ceoh	ceh						useitem	99	0	0	Add_one			1	1																																																																															0
+7	1				100	16	361	2036		2	cont_eye	bey						useitem	99	0	0	Add_one			1	1																																																																															0
+8	1				100	16	361	2036		2	cont_fang	dhn						useitem	99	0	0	Add_one			1	1																																																																															0
+9	1				100	16	361	2036		2	cont_feod	fed						useitem	99	0	0	Add_one			1	1																																																																															0
+10	1				100	16	361	2036		2	cont_rvl	rvl						useitem	99	0	0	Add_one			1	1																																																																															0
+11	1				100	16	361	2036		2	cont_teos	tes						useitem	99	0	0	Add_one			1	1																																																																															0
+12	1				100	16	361	2036		2	cont_toa	toa						useitem	99	0	0	Add_one			1	1																																																																															0
+1	1				100	15	361	2		1	mephisto_sta							useitem	99	0	0	Add_one			-1	-1																					pk3																																																										0
+2	1				100	15	361	2		1	mephisto_stb							useitem	99	0	0	Add_one			-1	-1																					pk2																																																										0
+3	1				100	15	361	2		1	mephisto_stc							useitem	99	0	0	Add_one			-1	-1																					pk1																																																										0
+4	1				100	15	361	2		1	cont_beot							useitem	99	0	0	Add_one			-1	-1																					bet																																																										0
+5	1				100	15	361	2		1	cont_bra							useitem	99	0	0	Add_one			-1	-1																					mbr																																																										0
+6	1				100	15	361	2		1	cont_ceoh							useitem	99	0	0	Add_one			-1	-1																					ceh																																																										0
+7	1				100	15	361	2		1	cont_eye							useitem	99	0	0	Add_one			-1	-1																					bey																																																										0
+8	1				100	15	361	2		1	cont_fang							useitem	99	0	0	Add_one			-1	-1																					dhn																																																										0
+9	1				100	15	361	2		1	cont_feod							useitem	99	0	0	Add_one			-1	-1																					fed																																																										0
+10	1				100	15	361	2		1	cont_rvl							useitem	99	0	0	Add_one			-1	-1																					rvl																																																										0
+11	1				100	15	361	2		1	cont_teos							useitem	99	0	0	Add_one			-1	-1																					tes																																																										0
+12	1				100	15	361	2		1	cont_toa							useitem	99	0	0	Add_one			-1	-1																					toa																																																										0
+1	1				100	16	361	2035		3	mephisto_sta	"pk3,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+2	1				100	16	361	2035		3	mephisto_stb	"pk2,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+3	1				100	16	361	2035		3	mephisto_stc	"pk1,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+4	1				100	16	361	2035		3	cont_beot	"bet,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+5	1				100	16	361	2035		3	cont_bra	"mbr,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+6	1				100	16	361	2035		3	cont_ceoh	"ceh,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+7	1				100	16	361	2035		3	cont_eye	"bey,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+8	1				100	16	361	2035		3	cont_fang	"dhn,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+9	1				100	16	361	2035		3	cont_feod	"fed,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+10	1				100	16	361	2035		3	cont_rvl	"rvl,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+11	1				100	16	361	2035		3	cont_teos	"tes,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+12	1				100	16	361	2035		3	cont_toa	"toa,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+1	1				100	16	361	2034		4	mephisto_sta	"pk3,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+2	1				100	16	361	2034		4	mephisto_stb	"pk2,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+3	1				100	16	361	2034		4	mephisto_stc	"pk1,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+4	1				100	16	361	2034		4	cont_beot	"bet,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+5	1				100	16	361	2034		4	cont_bra	"mbr,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+6	1				100	16	361	2034		4	cont_ceoh	"ceh,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+7	1				100	16	361	2034		4	cont_eye	"bey,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+8	1				100	16	361	2034		4	cont_fang	"dhn,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+9	1				100	16	361	2034		4	cont_feod	"fed,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+10	1				100	16	361	2034		4	cont_rvl	"rvl,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+11	1				100	16	361	2034		4	cont_teos	"tes,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+12	1				100	16	361	2034		4	cont_toa	"toa,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+1	1				100	16	361	2033		5	mephisto_sta	"pk3,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+2	1				100	16	361	2033		5	mephisto_stb	"pk2,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+3	1				100	16	361	2033		5	mephisto_stc	"pk1,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+4	1				100	16	361	2033		5	cont_beot	"bet,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+5	1				100	16	361	2033		5	cont_bra	"mbr,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+6	1				100	16	361	2033		5	cont_ceoh	"ceh,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+7	1				100	16	361	2033		5	cont_eye	"bey,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+8	1				100	16	361	2033		5	cont_fang	"dhn,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+9	1				100	16	361	2033		5	cont_feod	"fed,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+10	1				100	16	361	2033		5	cont_rvl	"rvl,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+11	1				100	16	361	2033		5	cont_teos	"tes,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+12	1				100	16	361	2033		5	cont_toa	"toa,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+1	1				100	16	361	2032		6	mephisto_sta	"pk3,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+2	1				100	16	361	2032		6	mephisto_stb	"pk2,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+3	1				100	16	361	2032		6	mephisto_stc	"pk1,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+4	1				100	16	361	2032		6	cont_beot	"bet,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+5	1				100	16	361	2032		6	cont_bra	"mbr,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+6	1				100	16	361	2032		6	cont_ceoh	"ceh,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+7	1				100	16	361	2032		6	cont_eye	"bey,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+8	1				100	16	361	2032		6	cont_fang	"dhn,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+9	1				100	16	361	2032		6	cont_feod	"fed,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+10	1				100	16	361	2032		6	cont_rvl	"rvl,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+11	1				100	16	361	2032		6	cont_teos	"tes,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+12	1				100	16	361	2032		6	cont_toa	"toa,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+1	1				100	16	361	2031		7	mephisto_sta	"pk3,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+2	1				100	16	361	2031		7	mephisto_stb	"pk2,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+3	1				100	16	361	2031		7	mephisto_stc	"pk1,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+4	1				100	16	361	2031		7	cont_beot	"bet,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+5	1				100	16	361	2031		7	cont_bra	"mbr,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+6	1				100	16	361	2031		7	cont_ceoh	"ceh,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+7	1				100	16	361	2031		7	cont_eye	"bey,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+8	1				100	16	361	2031		7	cont_fang	"dhn,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+9	1				100	16	361	2031		7	cont_feod	"fed,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+10	1				100	16	361	2031		7	cont_rvl	"rvl,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+11	1				100	16	361	2031		7	cont_teos	"tes,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+12	1				100	16	361	2031		7	cont_toa	"toa,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+1	1				100	16	361	2030		8	mephisto_sta	"pk3,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+2	1				100	16	361	2030		8	mephisto_stb	"pk2,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+3	1				100	16	361	2030		8	mephisto_stc	"pk1,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+4	1				100	16	361	2030		8	cont_beot	"bet,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+5	1				100	16	361	2030		8	cont_bra	"mbr,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+6	1				100	16	361	2030		8	cont_ceoh	"ceh,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+7	1				100	16	361	2030		8	cont_eye	"bey,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+8	1				100	16	361	2030		8	cont_fang	"dhn,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+9	1				100	16	361	2030		8	cont_feod	"fed,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+10	1				100	16	361	2030		8	cont_rvl	"rvl,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+11	1				100	16	361	2030		8	cont_teos	"tes,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+12	1				100	16	361	2030		8	cont_toa	"toa,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+1	1				100	16	361	2029		9	mephisto_sta	"pk3,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+2	1				100	16	361	2029		9	mephisto_stb	"pk2,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+3	1				100	16	361	2029		9	mephisto_stc	"pk1,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+4	1				100	16	361	2029		9	cont_beot	"bet,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+5	1				100	16	361	2029		9	cont_bra	"mbr,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+6	1				100	16	361	2029		9	cont_ceoh	"ceh,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+7	1				100	16	361	2029		9	cont_eye	"bey,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+8	1				100	16	361	2029		9	cont_fang	"dhn,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+9	1				100	16	361	2029		9	cont_feod	"fed,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+10	1				100	16	361	2029		9	cont_rvl	"rvl,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+11	1				100	16	361	2029		9	cont_teos	"tes,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+12	1				100	16	361	2029		9	cont_toa	"toa,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+1	1				100	16	361	2028		10	mephisto_sta	"pk3,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+2	1				100	16	361	2028		10	mephisto_stb	"pk2,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+3	1				100	16	361	2028		10	mephisto_stc	"pk1,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+4	1				100	16	361	2028		10	cont_beot	"bet,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+5	1				100	16	361	2028		10	cont_bra	"mbr,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+6	1				100	16	361	2028		10	cont_ceoh	"ceh,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+7	1				100	16	361	2028		10	cont_eye	"bey,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+8	1				100	16	361	2028		10	cont_fang	"dhn,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+9	1				100	16	361	2028		10	cont_feod	"fed,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+10	1				100	16	361	2028		10	cont_rvl	"rvl,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+11	1				100	16	361	2028		10	cont_teos	"tes,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+12	1				100	16	361	2028		10	cont_toa	"toa,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+1	1				100	16	361	2027		11	mephisto_sta	"pk3,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+2	1				100	16	361	2027		11	mephisto_stb	"pk2,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+3	1				100	16	361	2027		11	mephisto_stc	"pk1,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+4	1				100	16	361	2027		11	cont_beot	"bet,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+5	1				100	16	361	2027		11	cont_bra	"mbr,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+6	1				100	16	361	2027		11	cont_ceoh	"ceh,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+7	1				100	16	361	2027		11	cont_eye	"bey,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+8	1				100	16	361	2027		11	cont_fang	"dhn,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+9	1				100	16	361	2027		11	cont_feod	"fed,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+10	1				100	16	361	2027		11	cont_rvl	"rvl,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+11	1				100	16	361	2027		11	cont_teos	"tes,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+12	1				100	16	361	2027		11	cont_toa	"toa,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+1	1				100	16	361	2026		12	mephisto_sta	"pk3,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+2	1				100	16	361	2026		12	mephisto_stb	"pk2,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+3	1				100	16	361	2026		12	mephisto_stc	"pk1,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+4	1				100	16	361	2026		12	cont_beot	"bet,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+5	1				100	16	361	2026		12	cont_bra	"mbr,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+6	1				100	16	361	2026		12	cont_ceoh	"ceh,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+7	1				100	16	361	2026		12	cont_eye	"bey,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+8	1				100	16	361	2026		12	cont_fang	"dhn,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+9	1				100	16	361	2026		12	cont_feod	"fed,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+10	1				100	16	361	2026		12	cont_rvl	"rvl,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+11	1				100	16	361	2026		12	cont_teos	"tes,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+12	1				100	16	361	2026		12	cont_toa	"toa,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+1	1				100					1	std							cont_std	100	100	100	Add_one			1	1																																																																															0
+1	1				100	16	361	2036		2	cont_std	std						useitem	99	0	0	Add_one			1	1																																																																															0
+1	1				100	15	361	2		1	cont_std							useitem	99	0	0	Add_one			-1	-1																					std																																																										0
+1	1				100	16	361	2035		3	cont_std	"std,qty=2"						useitem	99	0	0	Add_one			2	2																																																																															0
+1	1				100	16	361	2034		4	cont_std	"std,qty=3"						useitem	99	0	0	Add_one			3	3																																																																															0
+1	1				100	16	361	2033		5	cont_std	"std,qty=4"						useitem	99	0	0	Add_one			4	4																																																																															0
+1	1				100	16	361	2032		6	cont_std	"std,qty=5"						useitem	99	0	0	Add_one			5	5																																																																															0
+1	1				100	16	361	2031		7	cont_std	"std,qty=6"						useitem	99	0	0	Add_one			6	6																																																																															0
+1	1				100	16	361	2030		8	cont_std	"std,qty=7"						useitem	99	0	0	Add_one			7	7																																																																															0
+1	1				100	16	361	2029		9	cont_std	"std,qty=8"						useitem	99	0	0	Add_one			8	8																																																																															0
+1	1				100	16	361	2028		10	cont_std	"std,qty=9"						useitem	99	0	0	Add_one			9	9																																																																															0
+1	1				100	16	361	2027		11	cont_std	"std,qty=10"						useitem	99	0	0	Add_one			10	10																																																																															0
+1	1				100	16	361	2026		12	cont_std	"std,qty=11"						useitem	99	0	0	Add_one			11	11																																																																															0
+1	1				100	18	361	1		1	cont_cs							r11																																																																																							0
+2	1				100	18	361	1		1	cont_ct							r30																																																																																							0
+3	1				100	18	361	1		1	cont_cu							r32																																																																																							0
+4	1				100	18	361	1		1	cont_cv							r14																																																																																							0
+5	1				100	18	361	1		1	cont_cw							r02																																																																																							0
+6	1				100	18	361	1		1	cont_cx							r01																																																																																							0
+7	1				100	18	361	1		1	cont_cy							r05																																																																																							0
+8	1				100	18	361	1		1	cont_cz							r19																																																																																							0
+9	1				100	18	361	1		1	cont_da							r25																																																																																							0
+10	1				100	18	361	1		1	cont_db							r15																																																																																							0
+11	1				100	18	361	1		1	cont_dc							r16																																																																																							0
+12	1				100	18	361	1		1	cont_dd							r24																																																																																							0
+13	1				100	18	361	1		1	cont_de							r06																																																																																							0
+14	1				100	18	361	1		1	cont_df							r31																																																																																							0
+15	1				100	18	361	1		1	cont_dg							r18																																																																																							0
+16	1				100	18	361	1		1	cont_dh							r20																																																																																							0
+17	1				100	18	361	1		1	cont_di							r28																																																																																							0
+18	1				100	18	361	1		1	cont_dj							r17																																																																																							0
+19	1				100	18	361	1		1	cont_dk							r23																																																																																							0
+20	1				100	18	361	1		1	cont_dl							r04																																																																																							0
+21	1				100	18	361	1		1	cont_dn							r27																																																																																							0
+22	1				100	18	361	1		1	cont_do							r09																																																																																							0
+23	1				100	18	361	1		1	cont_dp							r21																																																																																							0
+24	1				100	18	361	1		1	cont_dq							r08																																																																																							0
+25	1				100	18	361	1		1	cont_dr							r13																																																																																							0
+26	1				100	18	361	1		1	cont_dt							r12																																																																																							0
+27	1				100	18	361	1		1	cont_du							r29																																																																																							0
+28	1				100	18	361	1		1	cont_dv							r07																																																																																							0
+29	1				100	18	361	1		1	cont_dw							r10																																																																																							0
+30	1				100	18	361	1		1	cont_dx							r03																																																																																							0
+31	1				100	18	361	1		1	cont_dy							r22																																																																																							0
+32	1				100	18	361	1		1	cont_dz							r26																																																																																							0
+33	1				100	18	361	1		1	cont_ea							r33																																																																																							0
+34	1				100	18	361	1		1	cont_cf							gpb																																																																																							0
+35	1				100	18	361	1		1	cont_cg							gpg																																																																																							0
+36	1				100	18	361	1		1	cont_ch							gpr																																																																																							0
+37	1				100	18	361	1		1	cont_ci							gpv																																																																																							0
+38	1				100	18	361	1		1	cont_cj							gpw																																																																																							0
+39	1				100	18	361	1		1	cont_ck							gpy																																																																																							0
+40	1				100	18	361	1		1	cont_ed							skz																																																																																							0
+1	1				100	18	361	1		1	mephisto_sta							pk3																																																																																							0
+2	1				100	18	361	1		1	mephisto_stb							pk2																																																																																							0
+3	1				100	18	361	1		1	mephisto_stc							pk1																																																																																							0
+4	1				100	18	361	1		1	cont_beot							bet																																																																																							0
+5	1				100	18	361	1		1	cont_bra							mbr																																																																																							0
+6	1				100	18	361	1		1	cont_ceoh							ceh																																																																																							0
+7	1				100	18	361	1		1	cont_eye							bey																																																																																							0
+8	1				100	18	361	1		1	cont_fang							dhn																																																																																							0
+9	1				100	18	361	1		1	cont_feod							fed																																																																																							0
+10	1				100	18	361	1		1	cont_rvl							rvl																																																																																							0
+11	1				100	18	361	1		1	cont_teos							tes																																																																																							0
+12	1				100	18	361	1		1	cont_toa							toa																																																																																							0
+1	1				100	18	361	1		1	cont_std							std																																																																																							0
+1 Ral Rune + 1 Sol Rune + 1 Perfect Ruby + 1 Normal Crafted Weapon -> Exceptional Crafted Weapon	1				100					4	"weap,bas,crf"	r08	r12	gpr				"useitem,mod,exc"																																																																																							0
+1 Ith Rune + 1 Dol Rune + 1 Perfect Topaz + 1 Normal Crafted Armor -> Exceptional Crafted Armor	1				100					4	"armo,bas,crf"	r06	r14	gpy				"useitem,mod,exc"																																																																																							0
+1 Io Rune + 1 Fal Rune + 1 Perfect Ruby + 1 Exceptional Crafted Weapon -> Elite Crafted Weapon	1				100					4	"weap,exc,crf"	r16	r19	gpr				"useitem,mod,eli"																																																																																							0
+1 Hel Rune + 1 Lem Rune + 1 Perfect Topaz + 1 Exceptional Crafted Armor -> Elite Crafted Armor	1				100					4	"armo,exc,crf"	r15	r20	gpy				"useitem,mod,eli"																																																																																							0
+	1				100	17	112	0		2	weap	tsc						useitem				howl			-1	-1																					tsc																																																										0
+	1				100	17	113	0		2	weap	yps						useitem				stupidity			-1	-1																					yps																																																										0
+	1				100	17	81	0		2	weap	vps						useitem				knock			-1	-1																					vps																																																										0
+	1				100	17	134	0		2	weap	wms						useitem				freeze			-1	-1																					wms																																																										0
