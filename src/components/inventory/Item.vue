@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div ref="itemRef" tabindex="0" :class="itemClass" v-on:dragstart="dragStart" @click="onClick" @mouseover="mouseOver" @mouseleave="mouseLeave">
+    <div ref="itemRef" tabindex="0" :data-item-id="itemDomId" :class="[itemClass, { 'is-dimmed': dimmed, 'is-highlighted': highlighted }]" v-on:dragstart="dragStart" @click="onClick" @mouseover="mouseOver" @mouseleave="mouseLeave">
       <div :class="innerClass">
         <img :src="item.src" :class="{ ethereal: item.ethereal}" />
         <div v-if="item.total_nr_of_sockets && over" class="sockets">
@@ -48,6 +48,7 @@
 
 <script>
   import tippy from 'tippy.js';
+  import utils from '../../utils.js';
 
   export default {
     name: 'Item',
@@ -62,12 +63,27 @@
     },
     props: {
       item: Object,
-      clazz: String
+      clazz: String,
+      dimmed: {
+        type: Boolean,
+        default: false
+      },
+      highlighted: {
+        type: Boolean,
+        default: false
+      }
     },
     async mounted() {
       this.createPopper();
     },
     computed: {
+      itemDomId() {
+        if (!this.item) return null;
+        if (!this.item.__domId) {
+          this.item.__domId = utils.uuidv4();
+        }
+        return this.item.__domId;
+      },
       itemClass() {
         let clazz = `${this.clazz ? this.clazz : 'item'} w-${this.item.inv_width} h-${this.item.inv_height}`;
         if (this.item.location_id !== 1 && !this.clazz) {
@@ -245,6 +261,7 @@
       },
       mouseOver() {
         this.over = true;
+        this.$emit('hover', this.item);
       },
       mouseLeave() {
         this.over = false;
@@ -252,3 +269,18 @@
     }
   };  
 </script>
+
+<style scoped>
+  .is-dimmed {
+    opacity: 0.25;
+    filter: grayscale(60%);
+  }
+
+  .is-highlighted {
+    opacity: 1;
+    filter: none;
+    outline: 2px solid rgba(255, 215, 0, 0.9);
+    outline-offset: 1px;
+    box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.25), 0 0 14px rgba(255, 215, 0, 0.35);
+  }
+</style>

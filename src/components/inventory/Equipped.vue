@@ -17,6 +17,9 @@
           class="d2p-slot-item"
           v-if="head"
           :item.sync="head"
+          :dimmed="isItemDimmed ? isItemDimmed(head) : false"
+          :highlighted="isItemHighlighted ? isItemHighlighted(head) : false"
+          @hover="onHover(head)"
           @click.native="onSelect(head)"
           @contextmenu.prevent.stop="itemRC($event, head)"/>
       </span>
@@ -32,6 +35,9 @@
       <Item
           v-if="neck"
           :item.sync="neck"
+          :dimmed="isItemDimmed ? isItemDimmed(neck) : false"
+          :highlighted="isItemHighlighted ? isItemHighlighted(neck) : false"
+          @hover="onHover(neck)"
           @click.native="onSelect(neck)"
           @contextmenu.prevent.stop="itemRC($event, neck)"/>
       </span>
@@ -47,6 +53,9 @@
         <Item
           v-if="torso"
           :item.sync="torso"
+          :dimmed="isItemDimmed ? isItemDimmed(torso) : false"
+          :highlighted="isItemHighlighted ? isItemHighlighted(torso) : false"
+          @hover="onHover(torso)"
           @click.native="onSelect(torso)"
           @contextmenu.prevent.stop="itemRC($event, torso)"/>
       </span>
@@ -79,6 +88,9 @@
         <Item
           v-if="right_hand"
           :item.sync="right_hand"
+          :dimmed="isItemDimmed ? isItemDimmed(right_hand) : false"
+          :highlighted="isItemHighlighted ? isItemHighlighted(right_hand) : false"
+          @hover="onHover(right_hand)"
           @click.native="onSelect(right_hand)"
           @contextmenu.prevent.stop.stop="itemRC($event, right_hand)"/>
       </span>
@@ -95,6 +107,9 @@
         <Item
           v-if="alt_right_hand"
           :item.sync="alt_right_hand"
+          :dimmed="isItemDimmed ? isItemDimmed(alt_right_hand) : false"
+          :highlighted="isItemHighlighted ? isItemHighlighted(alt_right_hand) : false"
+          @hover="onHover(alt_right_hand)"
           @click.native="onSelect(alt_right_hand)"
           @contextmenu.prevent.stop="itemRC($event, alt_right_hand)"/>
       </span>
@@ -126,6 +141,9 @@
         <Item
           v-if="left_hand"
           :item.sync="left_hand"
+          :dimmed="isItemDimmed ? isItemDimmed(left_hand) : false"
+          :highlighted="isItemHighlighted ? isItemHighlighted(left_hand) : false"
+          @hover="onHover(left_hand)"
           @click.native="onSelect(left_hand)"
           @contextmenu.prevent.stop="itemRC($event, left_hand)"/>
       </span>
@@ -141,6 +159,9 @@
         <Item
           v-if="alt_left_hand"
           :item.sync="alt_left_hand"
+          :dimmed="isItemDimmed ? isItemDimmed(alt_left_hand) : false"
+          :highlighted="isItemHighlighted ? isItemHighlighted(alt_left_hand) : false"
+          @hover="onHover(alt_left_hand)"
           @click.native="onSelect(alt_left_hand)"
           @contextmenu.prevent.stop="itemRC($event, alt_left_hand)"/>
       </span>
@@ -155,6 +176,9 @@
         <Item
           v-if="right_finger"
           :item.sync="right_finger"
+          :dimmed="isItemDimmed ? isItemDimmed(right_finger) : false"
+          :highlighted="isItemHighlighted ? isItemHighlighted(right_finger) : false"
+          @hover="onHover(right_finger)"
           @click.native="onSelect(right_finger)"
           @contextmenu.prevent.stop="itemRC($event, right_finger)"/>
       </span>
@@ -169,6 +193,9 @@
         <Item
           v-if="left_finger"
           :item.sync="left_finger"
+          :dimmed="isItemDimmed ? isItemDimmed(left_finger) : false"
+          :highlighted="isItemHighlighted ? isItemHighlighted(left_finger) : false"
+          @hover="onHover(left_finger)"
           @click.native="onSelect(left_finger)"
           @contextmenu.prevent.stop="itemRC($event, left_finger)"/>
       </span>
@@ -183,6 +210,9 @@
         <Item
           v-if="belt"
           :item.sync="belt"
+          :dimmed="isItemDimmed ? isItemDimmed(belt) : false"
+          :highlighted="isItemHighlighted ? isItemHighlighted(belt) : false"
+          @hover="onHover(belt)"
           @click.native="onSelect(belt)"
           @contextmenu.prevent.stop="itemRC($event, belt)"/>
       </span>
@@ -197,6 +227,9 @@
         <Item
           v-if="feet"
           :item.sync="feet"
+          :dimmed="isItemDimmed ? isItemDimmed(feet) : false"
+          :highlighted="isItemHighlighted ? isItemHighlighted(feet) : false"
+          @hover="onHover(feet)"
           @click.native="onSelect(feet)"
           @contextmenu.prevent.stop="itemRC($event, feet)"/>
       </span>
@@ -211,6 +244,9 @@
         <Item
           v-if="hands"
           :item.sync="hands"
+          :dimmed="isItemDimmed ? isItemDimmed(hands) : false"
+          :highlighted="isItemHighlighted ? isItemHighlighted(hands) : false"
+          @hover="onHover(hands)"
           @click.native="onSelect(hands)"
           @contextmenu.prevent.stop="itemRC($event, hands)"/>
       </span>
@@ -230,6 +266,9 @@
           :height="grid.inv.h"
           :page="1"
           :items.sync="inventory"
+          :isItemDimmed="isItemDimmed"
+          :isItemHighlighted="isItemHighlighted"
+          @item-hover="onHover"
           @item-selected="onSelect"
           @item-event="onEvent"
           :id="'InventoryGrid'"
@@ -320,8 +359,13 @@ export default {
     id: String,
     contextMenu: Object,
     gold: Number,
+    isItemDimmed: Function,
+    isItemHighlighted: Function,
   },
   methods: {
+    onHover(item) {
+      this.$emit('item-hover', item);
+    },
     onEvent(e) {
       this.$emit('item-event', e);
     },

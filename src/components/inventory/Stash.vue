@@ -24,6 +24,9 @@
         :height="stashGrid.h"
         :page="activeTab+4"
         :items.sync="stash(currentPageIndex)"
+        :isItemDimmed="isItemDimmed"
+        :isItemHighlighted="isItemHighlighted"
+        @item-hover="onHover"
         @item-selected="onSelect"
         @item-event="onEvent"
         :id="'StashGrid'"
@@ -53,6 +56,8 @@ export default {
     items: Object,
     id: String,
     contextMenu: Object,
+    isItemDimmed: Function,
+    isItemHighlighted: Function,
     mode: {
       type: String,
       default: 'character'
@@ -116,6 +121,14 @@ export default {
     }
   },
   methods: {
+    setActiveTab(tab) {
+      const n = Number(tab);
+      if (!Number.isFinite(n)) return;
+      this.activeTab = Math.max(1, Math.min(n, this.displayedPages.length || 1));
+    },
+    onHover(item) {
+      this.$emit('item-hover', item);
+    },
     onSelect(item) {
       this.$emit('item-selected', item);
     },
