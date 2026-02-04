@@ -183,7 +183,7 @@
                           <div class="col-auto equipment-inventory-col">
                             <div class="mb-3">
                               <Equipped v-if="saveViewMod !== 'stash'" :items.sync="equipped" :isItemDimmed="isItemDimmed" :isItemHighlighted="isItemHighlighted" @item-hover="onItemHover" @item-selected="onSelect" @item-event="onEvent" @weapon-swap-changed="onWeaponSwapChanged"
-                                :id="'Equipped'" :contextMenu="$refs.contextMenu" :gold="save?.attributes?.gold">
+                                :id="'Equipped'" :contextMenu="$refs.contextMenu" :gold="save?.attributes?.gold" :save="save">
                               </Equipped>
                             </div>
                             <!-- <Grid v-if="activeTab == 1 || activeTab == 10" :width="grid.inv.w" :height="grid.inv.h" :page="1"
@@ -193,7 +193,7 @@
                               :contextMenu="$refs.contextMenu">
                             </Stash>
                             <Mercenary v-if="saveViewMod !== 'stash'" :items.sync="mercenary" :isItemDimmed="isItemDimmed" :isItemHighlighted="isItemHighlighted" @item-hover="onItemHover" @item-selected="onSelect" @item-event="onEvent" :id="'Mercenary'"
-                              :contextMenu="$refs.contextMenu">
+                              :contextMenu="$refs.contextMenu" :save="save">
                             </Mercenary>
                             <div class="cube" v-if="saveViewMod !== 'stash'">
                               <Grid class="cube__grid" :width="grid.cube.w" :height="grid.cube.h" :page="8"
@@ -920,7 +920,7 @@
         } else if(e.type == 'copy') {
           this.clipboard = JSON.parse(JSON.stringify(e.item));
           navigator.clipboard.writeText(JSON.stringify(e.item));
-          this.notifications.push({ alert: "alert alert-info", message: `Item data copied to clipboard.` });
+          message.info('Item data copied to clipboard.');
         } else if(e.type == 'update') {
           this.$d2s.enhanceItems([e.item], this.$work_mod.value, this.$work_version.value);
           this.resolveInventoryImage(e.item);
@@ -938,10 +938,38 @@
         } else if (e.type == 'move') {
           let element = document.getElementById(e.id);
           element.style.backgroundColor = ""; element.style.width = ""; element.style.height = "";
-          //if (this.$uuid == e.uuid) 
+          //if (this.$uuid == e.uuid)
           {
             let idx = this.findIndex(this.save.items, e.item);
-            this.onMove(this.save.items[idx], e);
+            let isMercItem = false;
+            if (idx == -1) {
+              // Проверяем предметы наемника
+              idx = this.findIndex(this.save.merc_items, e.item);
+              isMercItem = idx != -1;
+            }
+
+            if (idx != -1) {
+              const targetIsMerc = e.location.location === 0 && e.location.equipped_location;
+
+              // Если предмет перемещается между персонажем и наемником
+              if (isMercItem && !targetIsMerc) {
+                // Перемещаем из наемника на персонажа
+                const item = this.save.merc_items.splice(idx, 1)[0];
+                this.onMove(item, e);
+                this.save.items.push(item);
+              } else if (!isMercItem && targetIsMerc) {
+                // Перемещаем с персонажа на наемника
+                const item = this.save.items.splice(idx, 1)[0];
+                this.onMoveMerc(item, e);
+                this.save.merc_items.push(item);
+              } else if (isMercItem) {
+                // Перемещаем внутри наемника
+                this.onMoveMerc(this.save.merc_items[idx], e);
+              } else {
+                // Перемещаем внутри персонажа
+                this.onMove(this.save.items[idx], e);
+              }
+            }
           // } else {
           //   //copy to another tab
           //   if (this.onMove(e.item, e)) {
@@ -999,6 +1027,17 @@
           item.equipped_id = e.location.equipped_location;
           item.position_x =  e.location.x;
           item.position_y = e.location.y;
+          item.alt_position_id = 0;
+        }
+        return true;
+      },
+      onMoveMerc(item, e) {
+        // Для предметов наемника устанавливаем equipped_id и сбрасываем позицию
+        if (e.location.equipped_location) {
+          item.equipped_id = e.location.equipped_location;
+          item.position_x = 0;
+          item.position_y = 0;
+          item.location_id = 0;
           item.alt_position_id = 0;
         }
         return true;
@@ -1332,6 +1371,25 @@
           update(diff, "act_v", "rescue_on_mount_arreat", [], null);
           update(diff, "act_v", "prison_of_ice", [], null);
         }
+
+        for (var i of ["quests_normal", "quests_nm", "quests_hell"]) {
+          for (var j of ["act_i", "act_ii", "act_iii", "act_iv", "act_v"]) {
+            this.save.header[i][j].introduced = true;
+            this.save.header[i][j].completed = true;
+          }
+          this.save.header[i].act_i.sisters_to_the_slaughter.is_completed = true;
+          this.save.header[i].act_ii.the_summoner.is_completed = true;
+          this.save.header[i].act_ii.tainted_sun.is_completed = true;
+          this.save.header[i].act_ii.the_horadric_staff.is_completed = true;
+          this.save.header[i].act_ii.arcane_sanctuary.is_completed = true;
+          this.save.header[i].act_ii.the_seven_tombs.is_completed = true;
+          this.save.header[i].act_iii.khalims_will.is_completed = true;
+          this.save.header[i].act_iii.the_blackened_temple.is_completed = true;
+          this.save.header[i].act_iii.the_guardian.is_completed = true;
+          this.save.header[i].act_iv.terrors_end.is_completed = true;
+          this.save.header[i].act_v.rite_of_passage.is_completed = true;
+          this.save.header[i].act_v.eve_of_destruction.is_completed = true;
+        }
       },
       unlockHell() {
         for (var i of ["quests_normal", "quests_nm", "quests_hell"]) {
@@ -1360,6 +1418,12 @@
           this.save.header.waypoints[i].act_v.harrogath = true;
         }
         this.save.header.progression = 15;
+        // Устанавливаем difficulty в Hell
+        if (this.save.header.difficulty) {
+          this.save.header.difficulty.Normal = 15;
+          this.save.header.difficulty.Nightmare = 15;
+          this.save.header.difficulty.Hell = 15;
+        }
       },
       unlockAllWPs() {
         for (var i of ["normal", "nm", "hell"]) {
@@ -1372,6 +1436,8 @@
       },
       setLvl99() {
         this.save.header.level = 99;
+        // Устанавливаем уровень наемника в 99 (через опыт)
+        this.save.header.merc_experience = (99 - 1) * 10000;
       },
       setAllSkills20() {
         for (var s of this.save.skills) {
