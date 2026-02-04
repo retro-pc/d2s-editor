@@ -1,4 +1,13 @@
 <template>
+  <div class="character-settings d-flex justify-content-start gap-3 mb-3">
+    <a-select v-model:value="characterClass" style="width: 150px" placeholder="Class">
+      <a-select-option v-for="cls in classes" :key="cls" :value="cls">{{ cls }}</a-select-option>
+    </a-select>
+    <a-input-number v-model:value="characterLevel" :min="1" :max="99" style="width: 60px" placeholder="Level" />
+    <a-select v-model:value="selectedDifficulty" style="width: 110px" placeholder="Difficulty">
+      <a-select-option v-for="diff in difficulties" :key="diff" :value="diff">{{ diff }}</a-select-option>
+    </a-select>
+  </div>
   <div class="inventory">
     <div class="equipped">
       <span
@@ -308,9 +317,65 @@ export default {
       // selected: null,
       alt_displayed: false,
       grid: {inv: {w: 10, h: 4}},
+      classes: ['Amazon', 'Assassin', 'Barbarian', 'Druid', 'Necromancer', 'Paladin', 'Sorceress'],
+      difficulties: ['Normal', 'Nightmare', 'Hell'],
     };
   },
   computed: {
+    characterClass: {
+      get() {
+        return this.save?.header?.class;
+      },
+      set(value) {
+        if (this.save && this.save.header) {
+          this.save.header.class = value;
+        }
+      }
+    },
+    characterLevel: {
+      get() {
+        return this.save?.header?.level;
+      },
+      set(value) {
+        if (this.save && this.save.header) {
+          this.save.header.level = value;
+        }
+      }
+    },
+    selectedDifficulty: {
+      get() {
+        // Определяем текущую сложность на основе progression или difficulty
+        if (!this.save?.header?.difficulty) return null;
+        const diff = this.save.header.difficulty;
+        // Если Hell открыт (значение > 0), то текущая сложность Hell
+        if (diff.Hell > 0) return 'Hell';
+        // Если Nightmare открыт, то Nightmare
+        if (diff.Nightmare > 0) return 'Nightmare';
+        // Иначе Normal
+        return 'Normal';
+      },
+      set(value) {
+        if (this.save && this.save.header && this.save.header.difficulty) {
+          // При изменении сложности обновляем соответствующие поля
+          if (value === 'Normal') {
+            this.save.header.difficulty.Normal = 15; // Act 5 пройден
+            this.save.header.difficulty.Nightmare = 0;
+            this.save.header.difficulty.Hell = 0;
+            this.save.header.progression = 5;
+          } else if (value === 'Nightmare') {
+            this.save.header.difficulty.Normal = 15;
+            this.save.header.difficulty.Nightmare = 15;
+            this.save.header.difficulty.Hell = 0;
+            this.save.header.progression = 10;
+          } else if (value === 'Hell') {
+            this.save.header.difficulty.Normal = 15;
+            this.save.header.difficulty.Nightmare = 15;
+            this.save.header.difficulty.Hell = 15;
+            this.save.header.progression = 15;
+          }
+        }
+      }
+    },
     gridClass() {
       return `w-${this.grid.inv.w} h-${this.grid.inv.h}`;
     },
@@ -361,6 +426,7 @@ export default {
     gold: Number,
     isItemDimmed: Function,
     isItemHighlighted: Function,
+    save: Object,
   },
   methods: {
     onHover(item) {

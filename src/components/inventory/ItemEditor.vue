@@ -77,7 +77,7 @@
 
     <div v-if="!item.simple_item" class="item-stats">
       <!-- v-if="item.magic_attributes" -->
-      <div class="item-magic-stats">
+      <div v-if="item.identified" class="item-magic-stats">
         <div>Item Stats</div>
         <ItemStatsEditor :id="id + 'Magic'" v-model:item-stats="item.magic_attributes" @stat-change="onEvent('update')" />
       </div>
@@ -92,7 +92,7 @@
             @stat-change="onEvent('update')" />
         </div>
       </div>  -->
-      <div v-if="item.set_attributes?.length" class="item-set-stats">
+      <div v-if="item.identified && item.set_attributes?.length" class="item-set-stats">
         <div>Set Stats</div>
         <div v-for="(set_attribute, idx) in item.set_attributes">
           <ItemStatsEditor :id="id + 'Set' + idx" v-model:item-stats="item.set_attributes[idx]" @stat-change="onEvent('update')" />
