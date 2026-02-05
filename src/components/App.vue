@@ -1436,8 +1436,10 @@
       },
       setLvl99() {
         this.save.header.level = 99;
-        // Устанавливаем уровень наемника в 99 (через опыт)
-        this.save.header.merc_experience = (99 - 1) * 10000;
+        // Устанавливаем уровень наемника в 99 (через опыт) 
+        //this.save.header.merc_experience = (99 - 1) * 10000;
+        //xp[mercLevel - 1 ] 
+        //this.save.attributes.experience = xp[values[idx] - 1];
       },
       setAllSkills20() {
         for (var s of this.save.skills) {
