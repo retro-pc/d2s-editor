@@ -195,6 +195,34 @@ export let constants_diablo2_99 = {
                 "stam": 95,
                 "hpadd": "30"
             }
+        },
+        {
+            "id": 7,
+            "n": "Warlock",
+            "c": "war",
+            "as": "%+d to Warlock Skill Levels",
+            "ts": [
+                "%+d to Warlock Skill Tree 1",
+                "%+d to Warlock Skill Tree 2",
+                "%+d to Warlock Skill Tree 3"
+            ],
+            "co": "(Warlock Only)",
+            "s": {
+                "lpl": 6,
+                "mpl": 8,
+                "spl": 4,
+                "lpv": 8,
+                "spv": 4,
+                "mpe": 8
+            },
+            "a": {
+                "str": 15,
+                "dex": 20,
+                "int": 30,
+                "vit": 15,
+                "stam": 80,
+                "hpadd": "30"
+            }
         }
     ],
     "skills": [

@@ -85,17 +85,6 @@
                           <option value="blizzless">Blizzless</option>
                           <option value="blizzless_beta">Blizzless Beta</option>
                         </select>
-                        <select
-                          id="work-version"
-                          v-model="$work_version.value"
-                          name="work-version"
-                          title="Workspace Version"
-                          @change="changeMod()">
-                          <!-- <option v-if="$work_mod.value == 'diablo2'" value="96">LOD 1.10-1.14d</option> -->
-                          <option v-if="$work_mod.value == 'diablo2'" value="97">D2R Alpha</option>
-                          <!-- <option v-if="$work_mod.value == 'diablo2'" value="98">D2R 2.4</option> -->
-                          <option value="99">D2R 2.5+</option>
-                        </select>
                         <a-upload
                           name="d2sFile"
                           :multiple="false"
@@ -458,6 +447,15 @@
                 { index: 15, title: 'Blizzard' }
               ]
             }
+          },
+          {
+            key: 'warlock',
+            title: 'Warlock',
+            baseIndex: 70,
+            builds: {
+              diablo2: [],
+              blizzless_beta: []
+            }
           }
         ]
       };
@@ -610,6 +608,13 @@
       },
     },
     methods: {
+      applyDetectedVersion(version) {
+        if (this.$work_version.value !== version) {
+          this.$work_version.value = version;
+          this.getPaletteData();
+          this.addItemsToItemPack();
+        }
+      },
       normalizeItemSearchQuery(q) {
         return (q || '')
           .toString()
@@ -1222,15 +1227,19 @@
         //this.resolveInventoryImages();  
       },     
       newChar(index) {
-        let bytes = [];
+        let b64 = '';
         if (this.$work_mod.value == 'diablo2') {
-          bytes = utils.b64ToArrayBuffer(CharPack.diablo2[index]);
+          b64 = CharPack.diablo2[index];
         } else if (this.$work_mod.value == 'blizzless') {
-          bytes = utils.b64ToArrayBuffer(CharPack.blizzless[index]);
+          b64 = CharPack.blizzless[index];
         } else if (this.$work_mod.value == 'blizzless_beta') {
-          bytes = utils.b64ToArrayBuffer(CharPack.blizzless_beta[index]);
+          b64 = CharPack.blizzless_beta[index];
         }
-        this.readBuffer(bytes);
+        if (!b64) {
+          message.error('No template available for this character.');
+          return;
+        }
+        this.readBuffer(utils.b64ToArrayBuffer(b64));
       },
       onFileLoad(event) {
         this.readBuffer(event.target.result, event.target.filename);
@@ -1246,6 +1255,7 @@
               this.save = response;
               this.save.header.name = filename.split('.')[0];
               this.saveViewMod = 'character';
+              this.applyDetectedVersion(response.header.version);
               this.resolveInventoryImages();
             })
           } else if (lower.endsWith(".d2i")) {
@@ -1273,6 +1283,7 @@
           .then(response => {
             that.save = response;
             that.saveViewMod = 'character';
+            that.applyDetectedVersion(response.header.version);
             that.resolveInventoryImages();
           });
         }
@@ -1326,6 +1337,7 @@
             const response = await this.$d2s.read(bytes, this.$work_mod.value);
             this.save = response;
             this.saveViewMod = 'character';
+            this.applyDetectedVersion(response.header.version);
             await this.resolveInventoryImages();
             message.info('Save loaded from clipboard.');
           } catch (e1) {
@@ -1436,8 +1448,10 @@
       },
       setLvl99() {
         this.save.header.level = 99;
-        // Устанавливаем уровень наемника в 99 (через опыт)
-        this.save.header.merc_experience = (99 - 1) * 10000;
+        // Устанавливаем уровень наемника в 99 (через опыт) 
+        //this.save.header.merc_experience = (99 - 1) * 10000;
+        //xp[mercLevel - 1 ] 
+        //this.save.attributes.experience = xp[values[idx] - 1];
       },
       setAllSkills20() {
         for (var s of this.save.skills) {

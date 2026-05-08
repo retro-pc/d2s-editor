@@ -105,6 +105,9 @@
           { value: 36, label: 'Barbarian (1H + Shield - Normal)' },
           { value: 37, label: 'Barbarian (1H + Shield - Nightmare)' },
           { value: 38, label: 'Barbarian (1H + Shield - Hell)' },
+          { value: 39, label: 'Barbarian (Dual Wield - Normal)' },
+          { value: 40, label: 'Barbarian (Dual Wield - Nightmare)' },
+          { value: 41, label: 'Barbarian (Dual Wield - Hell)' },
         ],
       };
     },
